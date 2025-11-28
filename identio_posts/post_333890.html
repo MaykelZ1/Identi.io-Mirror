@@ -1,0 +1,608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>MediaInfo, un programa muy útil - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Hola amigos de Identi! En esta ocasión les traigo MEDIAINFO, un programa que provee información técnica y de la etiqueta sobre un archivo de video o de audio. Les cuento brevemente como llegué a..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='ejZVSGJ1UExMOHRHSVNWVTJGc2RHVmtYMS9uRUFVeDkxeURLUGRvRjA2VzVZSnNQaWk0NW5GZ0I5S2dKd3YzcS84cmRwSThEbmQ2YU1xS2JNcElmUGZPQnI5SmRiKzk3VUFnYnc9PXNzbkY2YnhRZHVpYVB0UA==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761492280;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '72576f4aee1bb64b569cc96c9a11be61');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_1.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - MediaInfo, un programa muy útil" title="Identi - MediaInfo, un programa muy útil" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '4f7bc26f3641e1dc4080084f558cfbcb29bc44a5';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=martymcfly">martymcfly</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=martymcfly" title="Ir al Perfil de martymcfly"><img id="error_avatar" class="avatar" border="0" width="120" src="https://i.pinimg.com/originals/2d/83/4d/2d834d19cb064dd5d55ba0a64b7b6f6d.jpg"/></a>
+<div class=" rango_sidebar clearfix">Full User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/fulluser.png" title="Full User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1596459)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1596459');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">16</b> Seguidores</li>
+<li><b>180</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>6</b> Posts</li>
+<li><b>748</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">MediaInfo, un programa muy útil</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=333889';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=333891';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=25" alt="Software / Programas" title="Software / Programas">Software / Programas</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 11 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_995917">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><b><span style="color: #000000;"><font size="5" style="line-height: 1.3em;"><span style="text-decoration: underline;"><img id="img_post" src="http://i.minus.com/ibxdVB5S4x4JCa.gif" border="0"></span></font></span></b></div><br /><div align="center"><b><span style="color: #000000;"><font size="5" style="line-height: 1.3em;"></font></span></b></div><br /><div align="center"><b><span style="color: #000000;"><font size="5" style="line-height: 1.3em;"><span style="text-decoration: underline;">Hola amigos de Identi!</span></font></span></b></div><br /><div align="center"><b><span style="color: #000000;"></span></b></div><br /><div align="center"><b><span style="color: #3333cc;"><font size="5" style="line-height: 1.3em;">En esta ocasión les traigo MEDIAINFO, un programa que </font></span></b><span style="color: #3333cc;"><font size="5" style="line-height: 1.3em;"><b>provee información técnica y de la etiqueta sobre un archivo de video o de audio.</b></font></span><br /><b></b><font size="5" style="line-height: 1.3em;"><b></b></font></div><br /><div align="center"><font size="5" style="line-height: 1.3em;"><b></b></font><br /><font size="5" style="line-height: 1.3em;"><b></b></font></div><br /><div align="center"><font size="5" style="line-height: 1.3em;"><b></b></font><img id="img_post" src="http://i.minus.com/jGQIU3fbdOG6i.jpg" border="0"><br /><font size="5" style="line-height: 1.3em;"><b></b></font></div><br /><font size="5" style="line-height: 1.3em;"><b></b></font><b><span style="color: #111111;"></span></b><br /><font size="5" style="line-height: 1.3em;"><b></b></font><br /><span style="color: #000000;"><font size="5" style="line-height: 1.3em;"><b>Les cuento brevemente como llegué a conocer este programa: mi primo compró recientemente un LED 32 pulgadas marca NOBLEX y quisimos ver una peli que descargué aquí en Identi. La cuestión es que pasamos la peli a un pendrive y lo conectamos al LED, y se veía de lujo: 1080p HD, peroooo... no se escuchaba nada de nada!</b></font></span><br /><span style="color: #000000;"><font size="5" style="line-height: 1.3em;"><b>Investigando un poco en foros de la web acerca de los formatos de audio, di con este programa, ya que desconocía el formato del audio de la peli. </b></font></span><br /><font size="5" style="line-height: 1.3em;"><b><span style="color: #ff3333;">Para estos casos, en los que NECESITAS saber esos datos técnicos o cuando querés compartir una Pélicula en Identi, </span><span style="color: #333399;">MEDIAINFO </span><span style="color: #333399;"> </span><span style="color: #ff3333;">es</span></b></font><br /><span style="color: #ff3333;"><font size="5" style="line-height: 1.3em;"><b>super-útil.</b></font></span><br /><span style="color: #ff3333;"><font size="5" style="line-height: 1.3em;"></font></span><br /><span style="color: #ff3333;"><font size="5" style="line-height: 1.3em;"><b>Basta con descargar, instalar y cargar el archivo del que queremos conocer la data técnica y ya esta!</b></font></span><br /><span style="color: #000000;"><font size="5" style="line-height: 1.3em;"></font></span><br /><span style="color: #000000;"><font size="5" style="line-height: 1.3em;"><b>MediaInfo te canta todo!</b></font></span><br /><span style="color: #000000;"><font size="5" style="line-height: 1.3em;"></font></span><br /><span style="color: #000000;"><font size="5" style="line-height: 1.3em;"><b><img id="img_post" src="http://i.minus.com/jb0bfcjFtyH4gs.jpg" border="0"></b></font></span><br /><span style="color: #000000;"><font size="5" style="line-height: 1.3em;"></font></span><br /><b><font size="3" style="line-height: 1.3em;">¿Qué información puedo obtener con MediaInfo?</font></b><br /><b></b><br /><b><font size="3" style="line-height: 1.3em;">General: título, autor, director, álbum, número de pista, fecha, duración...</font></b><br /><b><font size="3" style="line-height: 1.3em;">Video: códec, aspecto, fps, bitrate...</font></b><br /><b><font size="3" style="line-height: 1.3em;">Audio: códec, frecuencia de muestreo, canales, lenguaje, bitrate...</font></b><br /><b><font size="3" style="line-height: 1.3em;">Texto: idioma de subtítulo</font></b><br /><b><font size="3" style="line-height: 1.3em;">Capítulos: número de capítulos, lista de capítulos</font></b><br /><b></b><br /><b><font size="3" style="line-height: 1.3em;">¿Qué formatos soporta MediaInfo?</font></b><br /><b></b><br /><b><font size="3" style="line-height: 1.3em;">Video: MKV, OGM, AVI, DivX, WMV, QuickTime, Real, MPEG-1, MPEG-2, MPEG-4, DVD (VOB)...</font></b><br /><b><font size="3" style="line-height: 1.3em;">(Códecs: DivX, XviD, MSMPEG4, ASP, H.264, AVC...)</font></b><br /><b><font size="3" style="line-height: 1.3em;">Audio: OGG, MP3, WAV, RA, AC3, DTS, AAC, M4A, AU, AIFF...</font></b><br /><b><font size="3" style="line-height: 1.3em;">Subtítulos: SRT, SSA, ASS, SAMI...</font></b><br /><b></b><br /><b><font size="3" style="line-height: 1.3em;">¿Qué puedo hacer con él?</font></b><br /><b></b><br /><b><font size="3" style="line-height: 1.3em;">Leer muchos formatos de archivos de audio y video</font></b><br /><b><font size="3" style="line-height: 1.3em;">Diferentes métodos de visualización de la información (texto, hoja de árbol, HTML ...)</font></b><br /><b><font size="3" style="line-height: 1.3em;">Puedes personalizar éstas vistas</font></b><br /><b><font size="3" style="line-height: 1.3em;">Exportar información como texto, CSV, HTML...</font></b><br /><b><font size="3" style="line-height: 1.3em;">Interfaz gráfica, o de línea de comandos, o de DLL</font></b><br /><b><font size="3" style="line-height: 1.3em;">Integración con MS-Windows shell (arrastrar y soltar; Menú contextual)</font></b><br /><b><font size="3" style="line-height: 1.3em;">Internacionalización: cualquier idioma de visualización en cualquier versión de su sistema operativo.</font></b><br /><br /><b></b><br /><b><font size="3" style="line-height: 1.3em;">Finalmente MEDIAINFO me informó que el formato de audio (era una peli 1080p, Dual, mkv) era A-C3 tanto el archivo en Inglés, como el archivo en Español Latino. El Manual del LED NOBLEX daba cuenta que AC3 era un formato soportado pero no lo leía. Un flaco que tuvo el mismo problema con la misma marca de LED me aconsejo lo siguiente:</font></b><br /><br /><span style="color: #000000;"><span style="font-family: Verdana, Helvetica, sans-serif;"><font size="4" style="line-height: 1.3em;"><b>&quot;El tv led NOBLEX no reconoce el audio en formato AC3. Así que Debes extraer el audio AC3 de la película MKV con MKVExtractGUI2, luego lo pasas al formato AAC con el TOTAL VIDEO CONVERTER HD y finalmente unes los archivos (pelicula MKV, audio AAC), eliminas los archivos innecesarios (audio AC3 que no me reconoce el tv led) e iniciás el multiplexado en un minuto y medio con el Mkvmerge GUI. Y listo!!! Ya tenés tus películas con imagen y audio excelentes para disfrutar en tu tv led.&quot;</b></font></span></span><br /><br /><br /><div align="center"><span style="color: #000000;"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://i.minus.com/jIwd1zFjvCQW2.jpg" border="0"></font></span></div><br /><br /><br /><br /><span style="color: #000000;"><font size="4" style="line-height: 1.3em;"><style>.myjdownloader{background: url(https://www.identi.io/images/jdownloader.png) no-repeat;}</style><div align="center"><div class="clearfix spoiler"><div class="spoiler_cont" id="hide"><a style="font-size:14px; display:block; color:#D0B310;" href="?topic=78787" target="_blank"><img style="vertical-align:middle; margin-right:10px;" src="https://www.identi.io/images/jdownloader.png" width="50" height="50"/><b>Tutorial para descargar con Jdownloder</b></a><div class="clearfix spoiler"><form action="http://127.0.0.1:9666/flash/addcrypted2" target="hidden" class="jd" method="POST"><input type="hidden" name="passwords" value="myPassword"/><input type="hidden" name="source" value="http://jdownloader.org/spielwiese" /><input type="hidden" name="jk" value="function f(){ return '31323334353636373730393837363534';}" /><input type="hidden" name="crypted" value="9v1K2HhbwLO5GPo21k95Pgc5ovGJL8P/WalZGzsuNpDKRUX1ju1rP2t13oWORav1jmyeR61yrTRWw8NObHwLr3UUUEhaplBoyeV8Q2mHPFw="><input type="SUBMIT" name="submit" style="padding-left: 45px !important;" class="spoiler-btn myjdownloader" id="decrypt" value="Agregar enlaces a Jdownloader" class="gestor_descargas"/></form></div></div></div></div></font></span><br /><br /><br /><b><span style="color: #3d699f;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX1+QWgEtPmc7OLTjCbDwuQuPqDnJ7o9jHAhHp5wZopY8i+duiY7gLCnhFIY6PW58ftdTe4jHF06gA6ExpyG1T3vqBrlkC2yxwnhrHD068twZKNjazrYeAWGe</div></div></div></span></font></span></b><br /><br /><br /><br /><br /><div align="center"><b><span style="color: #3d699f;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><img id="img_post" src="http://i.minus.com/jbxue5uyUrjbhU.jpg" border="0"></span></font></span></b></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">60</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 10/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1910</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">4</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(333890,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(333890,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(333890,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(333890,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(333890,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(333890,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(333890,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(333890,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(333890,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(333890,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="http://img96.xooimage.com/files/2/f/9/animal-43377f6.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1878025" title="perfil de Grouchland"> Grouchland</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1589125" title="perfil de Danjes"> Danjes</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://images.meteociel.fr/im/2676/WWW.IDENTICO.TK_mbq0.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1896145" title="perfil de privacid"> privacid</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=http:%2F%2Fmangadrawing.net%2Fusers%2Fimagecache%2Fdisplay%2Fadmin%2Fimage%2Fico-game-ico-yorda.22e20d4c9aa88294ec1f2dc286516ac1-13839.jpg&amp;sp=ca9c3c5bcc1faeeb671fc0298c4f73b5" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1547306" title="perfil de derto.ko"> derto.ko</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://fotos.subefotos.com/5fb01866296d22720bedfebd7ecb7682o.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1987037" title="perfil de juan2017"> juan2017</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://images2.imgbox.com/3c/34/nWTMnSYq_o.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1557750" title="perfil de javicho270"> javicho270</a>: <b>10 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(333890);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('333890');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=355035" title="Fidel Nadal Discografía Completa (21 discos)"> Fidel Nadal Discografía Completa (21 discos)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=302491" title="Reproductor Aimp v3.55.1338 Un fierro"> Reproductor Aimp v3.55.1338 Un fierro</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_94"></i>
+<a href="https://identi.io/index.php?topic=232878" title="Controla las temperaturas de tu PC o Notebook"> Controla las temperaturas de tu PC o Notebook</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_127"></i>
+<a href="https://identi.io/index.php?topic=188570" title="Animate a ser creativo chabón/a"> Animate a ser creativo chabón/a</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_127"></i>
+<a href="https://identi.io/index.php?topic=188290" title="Tutorial; pixelar por áreas o zonas"> Tutorial; pixelar por áreas o zonas</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">8</span> Comentarios</span>
+<span class="onpost"> MediaInfo, un programa muy útil</span>
+<div class="comentario"></div><div id="comment_3568384" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="epalada" href="?action=profile;user=epalada">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1560818" href="?action=profile;user=epalada">epalada</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1409086603" title="26/08/2014 a las 20:56 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3568437" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="T.Simpsons" href="?action=profile;user=T.Simpsons">
+<img id="error_avatar" src="http://www.aulaga.info/imagenes/Consumismo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1767796" href="?action=profile;user=T.Simpsons">T.Simpsons</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1409088300" title="26/08/2014 a las 21:25 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy bueno <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3568494" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Zulander" href="?action=profile;user=Zulander">
+<img id="error_avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr1Us-AMcgkfrPbhDtT1qL2SRxzi-6O3tv-Umpnd_MwkyFn8qoJ8BB6KhEqCppFLMyNBM&amp;usqp=CAU" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1559907" href="?action=profile;user=Zulander">Zulander</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1409089764" title="26/08/2014 a las 21:49 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+es portable?
+</div>
+</div>
+</div>
+</div><div id="comment_3568506" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Rogerlondo" href="?action=profile;user=Rogerlondo">
+<img id="error_avatar" src="https://cbdp6q.dm2302.livefilestore.com/y2pAgdRi5XmqlQ6WfXFM04UUfsHyTMIYThegL9p3Odc88AxbVAhKFeDsteroLgStWmJMEGQI1i8WHmp_lxCSkQZIlYDpjHn0VOUThuKyCZCau4/black_creature_256x256.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1649977" href="?action=profile;user=Rogerlondo">Rogerlondo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1409090169" title="26/08/2014 a las 21:56 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+puedo editar la info con este programa?
+</div>
+</div>
+</div>
+</div><div id="comment_3568603" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="benjamin91" href="?action=profile;user=benjamin91">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1852348" href="?action=profile;user=benjamin91">benjamin91</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1409092990" title="26/08/2014 a las 22:43 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Un minuto y medio si tenes en disco sata 3 ssd
+</div>
+</div>
+</div>
+</div><div id="comment_3568812" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="racsoi" href="?action=profile;user=racsoi">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1854546" href="?action=profile;user=racsoi">racsoi</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1409099186" title="27/08/2014 a las 0:26 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+excelente noticia, creo que lo probar?
+</div>
+</div>
+</div>
+</div><div id="comment_3568882" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Yagami2500" href="?action=profile;user=Yagami2500">
+<img id="error_avatar" src="http://orig02.deviantart.net/eee1/f/2013/358/a/1/homerori_stamp_of_aproval__wip__by_lee_the_deathfighter-d6z7fhj.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1884211" href="?action=profile;user=Yagami2500">Yagami2500</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1409100960" title="27/08/2014 a las 0:56 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3568931" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="_private" href="?action=profile;user=_private">
+<img id="error_avatar" src="http://imgfz.com/i/H2SesPO.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1757431" href="?action=profile;user=_private">_private</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1409102468" title="27/08/2014 a las 1:21 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias, imagino debe ser como GSpot
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_1.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994af63dfd65deaa',t:'MTc2MTQ5MjI3OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<style>
+.spoiler-btn {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+.info_bbc {
+    word-break: break-all;
+}
+.info_bbc a {
+    color: #096FDB !important;
+    font-weight: bold;
+}
+</style>
+<script>
+(function() {
+    'use strict';
+    
+    console.log('🔐 Sistema de desencriptación automática cargado');
+    
+    // Extraer la clave del HTML
+    let DECRYPT_KEY = null;
+    const scriptTags = document.getElementsByTagName('script');
+    for (let script of scriptTags) {
+        const content = script.textContent;
+        const hashMatch = content.match(/var\s+hash\s*=\s*['"]([a-f0-9]+)['"]/);
+        if (hashMatch) {
+            DECRYPT_KEY = hashMatch[1];
+            console.log('🔑 Clave encontrada');
+            break;
+        }
+    }
+    
+    if (!DECRYPT_KEY) {
+        console.warn('⚠️ No se encontró clave de desencriptación');
+        return;
+    }
+    
+    function decrypt(encryptedText, password) {
+        try {
+            const decrypted = CryptoJS.AES.decrypt(encryptedText, password);
+            return decrypted.toString(CryptoJS.enc.Utf8) || null;
+        } catch (error) {
+            console.error('❌ Error:', error);
+            return null;
+        }
+    }
+    
+    function handleDecryptClick(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const button = event.target;
+        const spoilerDiv = button.closest('.spoiler');
+        if (!spoilerDiv) return;
+        
+        const hiddenDiv = spoilerDiv.querySelector('.info_bbc');
+        if (!hiddenDiv) return;
+        
+        const encryptedText = hiddenDiv.textContent.trim();
+        const decryptedText = decrypt(encryptedText, DECRYPT_KEY);
+        
+        if (decryptedText && decryptedText.length > 0) {
+            hiddenDiv.innerHTML = `<a href="${decryptedText}" target="_blank" rel="noopener noreferrer">${decryptedText}</a>`;
+            hiddenDiv.style.display = 'block';
+            button.style.display = 'none';
+            console.log('✅ Enlace desencriptado');
+        } else {
+            alert('❌ Error al desencriptar');
+        }
+    }
+    
+    function init() {
+        const buttons = document.querySelectorAll('.spoiler-btn, input[value*="Ver Links"], input[value*="Descarga"]');
+        
+        buttons.forEach(button => {
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+            newButton.style.cursor = 'pointer';
+            newButton.style.pointerEvents = 'auto';
+            newButton.addEventListener('click', handleDecryptClick);
+        });
+        
+        console.log('🚀 Sistema listo');
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script>
+
+</body></html>
