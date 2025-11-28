@@ -1,0 +1,692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Audio Recording Wizard  (para captura de audio) - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Audio Recording Wizard  (para captura de audio) Audio Record Wizard hace fácil grabar sonidos en su PC desde un micrófono, un archivo o cualquier cosa que usted pueda con..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='UlBSYkxTbTFmQTBybTVaVTJGc2RHVmtYMStXSGtnVDV6U20vdGtLK20vblJQeXVsbUQ1Ti9rVHBvZjNlMXZ1U3RGbEZ1MmVHYlEzdVE4dUxGUlN6UEEwU2tIbWZpU2EwNE8wa2c9PVF4ck5EbFBYaERuYjlCdA==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761481985;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'a6081b4f590ab31eaf026cefa128aadf');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_4.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Audio Recording Wizard  (para captura de audio)" title="Identi - Audio Recording Wizard  (para captura de audio)" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '7cede7a57cbc23066f52b1b595f6f1d2c333e5e7';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Rizzo">Rizzo</a>
+<a title="Conectado" class="addtipsy_s online"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Rizzo" title="Ir al Perfil de Rizzo"><img id="error_avatar" class="avatar" border="0" width="120" src="https://images2.imgbox.com/8d/48/KQzUzaFh_o.jpg"/></a>
+<div class=" rango_sidebar clearfix">Geeko</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/geek.png" title="Geeko" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1659750)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1659750');" title="Enviar Mensaje Privado (Conectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">2110</b> Seguidores</li>
+<li><b>100118</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>1.089</b> Posts</li>
+<li><b>3017</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Audio Recording Wizard  (para captura de audio)</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=390964';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=390966';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=25" alt="Software / Programas" title="Software / Programas">Software / Programas</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 10 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1052993">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><b><span style="color: #244061;"><font size="5" style="line-height: 1.3em;">Audio Recording Wizard  (para captura de audio)</font></span></b><br /><br /><img id="img_post" src="/images/Separadori.png" border="0"><br /><img id="img_post" src="http://images.snoork.com/images/9256473782_Audio_Record_Wizard_v5_4_[www_sarzamindownload_com].jpg" border="0"><br /><br /><img id="img_post" src="/images/info1.png" border="0"><br /><span style="color: #3f3f3f;"><font size="2" style="line-height: 1.3em;"><br />Audio Record Wizard hace fácil grabar sonidos en su PC desde un micrófono, un archivo o cualquier cosa que usted pueda conectar a su tarjeta de sonido, como una unidad de cinta o TV. Es muy bueno para la grabar sesiones de chat, ya que puede grabar sonidos desde dos fuentes, como un micrófono e Internet, y luego guardar todo en un solo archivo en una variedad de formatos (MP3, OGG, WAV y FLAC). Puede convertir y combinar archivos de audio, administrar etiquetas MP3 y realizar otras tareas de edición de audio. Muchas de sus herramientas son particularmente adecuadas para la grabación de voz, como Activación de voz, Limitación de la longitud del archivo y Supresión de ruido. La versión 6,98 de Audio Record Wizard le permite probar de modo gratuito con un límite de grabación de dos minutos.<br /><br />La interfaz de usuario de Audio Record Wizard &#039;s se asemeja a un reproductor multimedia en el diseño, el estilo y el tamaño. Tiene un diseño lógico porque el programa también reproduce las grabaciones que realiza. El diseño familiar y los controles hacen que sea más fácil de aprender sobre los ins y outs de esta herramienta. Por ins, nos referimos a las entradas, es decir, fuente, que el programa muestra en un menú desplegable en la parte superior de la ventana, justo encima de la pantalla de archivos y controles de nivel. Por outs, nos referimos directorio de salida, tipo de archivo y así sucesivamente, como los controles del reproductor multimedia en el panel inferior. Pero no hay necesidad de adivinar, ya que Audio Record Wizard se abre con una guía paso a paso que se muestra en la ventana principal.<br /><br />Hicimos clic en &quot;Fuente&quot; y seleccionamos la salida de nuestra tarjeta de video. Reproducimos un video y luego hacemos clic en &quot;Grabar&quot;. Audio Record Wizard comenzó a grabar la alimentación de sonido en forma de MP3, que reproduce normalmente. Intentamos después la línea las alimentaciones adentro y del micrófono--también con éxito. Stereo Mix grabó el audio del controlador de audio de nuestra placa madre, pero Audio Record Wizard también reconoció las siete entradas de nuestra tarjeta de sonido Firewire externa, incluyendo fuentes analógicas (entrada de línea) y digitales (S/PDIF). Pero la función que queríamos probar era Computer Sound &amp; Voice input de NowSmart Audio, por lo que hemos pulsado &quot;Cómo usar&quot; en el menú Fuente, que abrió un tutorial basado en la web titulado &quot;Cómo grabar conversaciones en línea&quot;. Nuevamente, los resultados fueron excelentes. Le sugerimos que pruebe esta ingeniosa herramienta usted mismo.<br /><br /><br /> </font></span><br /><br /><br /><img id="img_post" src="/images/images1.png" border="0"><br /><img id="img_post" src="http://images.snoork.com/images/1535674673_2014-06-08-211425-987802.jpg" border="0"><br /><br /><br /><img id="img_post" src="http://images.snoork.com/images/5659213081_how-to-web-device.png" border="0"><br /><br /><style>.myjdownloader{background: url(https://www.identi.io/images/jdownloader.png) no-repeat;}</style><div align="center"><div class="clearfix spoiler"><div class="spoiler_cont" id="hide"><a style="font-size:14px; display:block; color:#D0B310;" href="?topic=78787" target="_blank"><img style="vertical-align:middle; margin-right:10px;" src="https://www.identi.io/images/jdownloader.png" width="50" height="50"/><b>Tutorial para descargar con Jdownloder</b></a><div class="clearfix spoiler"><form action="http://127.0.0.1:9666/flash/addcrypted2" target="hidden" class="jd" method="POST"><input type="hidden" name="passwords" value="myPassword"/><input type="hidden" name="source" value="http://jdownloader.org/spielwiese" /><input type="hidden" name="jk" value="function f(){ return '31323334353636373730393837363534';}" /><input type="hidden" name="crypted" value="Hq6p0QOxTtHDvoD+6nW49KuMdmPIpJy7CzzEhL5WxIJ1HgAA83BJmduCG3/ZBkct6RUG9IilAJTzTtsUkWsAOGIzBROPNCDXb8CTDOjQA+g="><input type="SUBMIT" name="submit" style="padding-left: 45px !important;" class="spoiler-btn myjdownloader" id="decrypt" value="Agregar enlaces a Jdownloader" class="gestor_descargas"/></form></div></div></div></div><br /><br /><img id="img_post" src="/images/pass.png" border="0"><br /><div class="post_pass">rizzo</div></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">55</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 7.9/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1713</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">9</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(390965,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(390965,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(390965,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(390965,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(390965,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(390965,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(390965,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(390965,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(390965,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(390965,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://s6.postimg.cc/ypajvuz8x/Mi_Logo.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1569502" title="perfil de Tortuga3"> Tortuga3</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://fc01.deviantart.net/fs70/f/2014/069/2/a/eyebrowfrogdanceplz_by_caly_boy-d79osag.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1541543" title="perfil de Rekojz"> Rekojz</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://ist5-1.filesor.com/pimpandhost.com/1/_/_/_/1/6/s/b/D/6sbDS/search-512.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1818155" title="perfil de FllorTV"> FllorTV</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://lh3.googleusercontent.com/-aEs36iD_qcY/UzxM0QLRpQI/AAAAAAABTWY/idWSyog4aW4/w161-h254/gif-asian-erotic-904963.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=48060" title="perfil de naguzani"> naguzani</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://funkyimg.com/i/2vLR9.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1749113" title="perfil de luis_f"> luis_f</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://farm9.staticflickr.com/8705/16345209953_e9e61c6023_m.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1885565" title="perfil de kike333"> kike333</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.imgur.com/SrN2Duk.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1889019" title="perfil de ricardo130"> ricardo130</a>: <b>10 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(390965);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('390965');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=676252" title="Sadako 3D Parte 2 1080p Latino-Japones"> Sadako 3D Parte 2 1080p Latino-Japones</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=676088" title="Sadako Capitulo Final 1080p Lat-Jap"> Sadako Capitulo Final 1080p Lat-Jap</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=676087" title="Sadako 3D 1080p Latino-Japones"> Sadako 3D 1080p Latino-Japones</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=675451" title="El Gran Dragon 1080p Lat-Chi [Doblaje Original] "> El Gran Dragon 1080p Lat-Chi [Doblaje Original] </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=675374" title="Operacion Panda 1080p Lat-Chino"> Operacion Panda 1080p Lat-Chino</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=674078" title="Cabin Fever 3 1080p Latino-Ingles"> Cabin Fever 3 1080p Latino-Ingles</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=674077" title="Clan De Las Dagas 2 1080p Lat-Chino"> Clan De Las Dagas 2 1080p Lat-Chino</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=674075" title="Soldados Universales 1080p Lat-Ing "> Soldados Universales 1080p Lat-Ing </a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">18</span> Comentarios</span>
+<span class="onpost"> Audio Recording Wizard  (para captura de audio)</span>
+<div class="comentario"></div><div id="comment_4206594" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Rekojz" href="?action=profile;user=Rekojz">
+<img id="error_avatar" src="http://fc01.deviantart.net/fs70/f/2014/069/2/a/eyebrowfrogdanceplz_by_caly_boy-d79osag.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1541543" href="?action=profile;user=Rekojz">Rekojz</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442969891" title="23/09/2015 a las 0:58 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Interesante. Me ayuda en mis proyectos. Va a fav y puntines! &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /><br />Saludos.
+</div>
+</div>
+</div>
+</div><div id="comment_4206613" class="comentario coment_id_2">
+<div class="clearfix comment-box is-staff ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="FllorTV" href="?action=profile;user=FllorTV">
+<img id="error_avatar" src="http://ist5-1.filesor.com/pimpandhost.com/1/_/_/_/1/6/s/b/D/6sbDS/search-512.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1818155" href="?action=profile;user=FllorTV">FllorTV</a> - Administrador<span> - <a rel="nofollow" class="addtipsy_s" ts="1442970448" title="23/09/2015 a las 1:07 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias, lo acabo de probar y esta muy bueno <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4206620" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="naguzani" href="?action=profile;user=naguzani">
+<img id="error_avatar" src="https://lh3.googleusercontent.com/-aEs36iD_qcY/UzxM0QLRpQI/AAAAAAABTWY/idWSyog4aW4/w161-h254/gif-asian-erotic-904963.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="48060" href="?action=profile;user=naguzani">naguzani</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442970820" title="23/09/2015 a las 1:13 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Est?
+</div>
+</div>
+</div>
+</div><div id="comment_4206621" class="comentario coment_id_4">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Rizzo" href="?action=profile;user=Rizzo">
+<img id="error_avatar" src="https://images2.imgbox.com/8d/48/KQzUzaFh_o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1659750" href="?action=profile;user=Rizzo">Rizzo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442970883" title="23/09/2015 a las 1:14 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="48060" href="https://identi.io/index.php?action=profile&user=naguzani" class="mensiones_identi">@naguzani</a> esta full
+</div>
+</div>
+</div>
+</div><div id="comment_4207233" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="tipazo10" href="?action=profile;user=tipazo10">
+<img id="error_avatar" src="http://thumbs.subefotos.com/78168791c1e4d2d0a3d0d3b9b9e650abo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1681778" href="?action=profile;user=tipazo10">tipazo10</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1443003620" title="23/09/2015 a las 10:20 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Eso que graba lo que sale dela tarjeta de sonido ?
+</div>
+</div>
+</div>
+</div><div id="comment_4207397" class="comentario coment_id_6">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Rizzo" href="?action=profile;user=Rizzo">
+<img id="error_avatar" src="https://images2.imgbox.com/8d/48/KQzUzaFh_o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1659750" href="?action=profile;user=Rizzo">Rizzo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1443018973" title="23/09/2015 a las 14:36 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1681778" href="https://identi.io/index.php?action=profile&user=tipazo10" class="mensiones_identi">@tipazo10</a> si
+</div>
+</div>
+</div>
+</div><div id="comment_4227152" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="kike333" href="?action=profile;user=kike333">
+<img id="error_avatar" src="https://farm9.staticflickr.com/8705/16345209953_e9e61c6023_m.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1885565" href="?action=profile;user=kike333">kike333</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1443865038" title="03/10/2015 a las 9:37 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4231258" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="aldrenna" href="?action=profile;user=aldrenna">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="57615" href="?action=profile;user=aldrenna">aldrenna</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1444078567" title="05/10/2015 a las 20:56 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Genial, Muchas Gracias <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4247079" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Fonsymon" href="?action=profile;user=Fonsymon">
+<img id="error_avatar" src="https://cdn.myanimelist.net/s/common/userimages/5b04cb7c-bea0-4fb7-a2a5-f7d1887531a9_225w?s=3c9800ddb5cb3963d8eca38b95f7be3e" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1584750" href="?action=profile;user=Fonsymon">Fonsymon</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1444770075" title="13/10/2015 a las 21:01 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+ohhhhh con esto me imagino que se puede grabar el audi de netflix no?
+</div>
+</div>
+</div>
+</div><div id="comment_4247155" class="comentario coment_id_10">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Rizzo" href="?action=profile;user=Rizzo">
+<img id="error_avatar" src="https://images2.imgbox.com/8d/48/KQzUzaFh_o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1659750" href="?action=profile;user=Rizzo">Rizzo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1444772362" title="13/10/2015 a las 21:39 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1584750" href="https://identi.io/index.php?action=profile&user=Fonsymon" class="mensiones_identi">@Fonsymon</a> claro netflix, clarovideo o cualquier otro strenming
+</div>
+</div>
+</div>
+</div><div id="comment_4250675" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Fonsymon" href="?action=profile;user=Fonsymon">
+<img id="error_avatar" src="https://cdn.myanimelist.net/s/common/userimages/5b04cb7c-bea0-4fb7-a2a5-f7d1887531a9_225w?s=3c9800ddb5cb3963d8eca38b95f7be3e" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1584750" href="?action=profile;user=Fonsymon">Fonsymon</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1444922241" title="15/10/2015 a las 15:17 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Genial entonces vere si grabo los audios de Castle de la 3 &nbsp;ya que la estube buscando y no encontre nada :S, <a usuario="1659750" href="https://identi.io/index.php?action=profile&user=Rizzo" class="mensiones_identi">@Rizzo</a> una pregunta que programa usas para unir el video y el audio, estaba usando el Vegas Pro 12, no se si haya uno mas facil de usar soy nuevo en esto hehehehhe
+</div>
+</div>
+</div>
+</div><div id="comment_4250846" class="comentario coment_id_12">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Rizzo" href="?action=profile;user=Rizzo">
+<img id="error_avatar" src="https://images2.imgbox.com/8d/48/KQzUzaFh_o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1659750" href="?action=profile;user=Rizzo">Rizzo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1444928146" title="15/10/2015 a las 16:55 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1584750" href="https://identi.io/index.php?action=profile&user=Fonsymon" class="mensiones_identi">@Fonsymon</a> par aunir facil y rapido los audios se utiliza este programa MKVmergue<br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/l9_c45E0Y_E" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div>
+</div>
+</div>
+</div>
+</div><div id="comment_4250880" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Fonsymon" href="?action=profile;user=Fonsymon">
+<img id="error_avatar" src="https://cdn.myanimelist.net/s/common/userimages/5b04cb7c-bea0-4fb7-a2a5-f7d1887531a9_225w?s=3c9800ddb5cb3963d8eca38b95f7be3e" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1584750" href="?action=profile;user=Fonsymon">Fonsymon</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1444929170" title="15/10/2015 a las 17:12 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+ahhh si uso ese pero a veces el audio no queda en algunas partes eso me paso con la de scorpion tuve que ajustarlo osea cortar a medias o en algunas partes para para que quedara justo ya que si le ponia delay a todo pues no quedaba parejo hehehehe a eso me referia hehehehhe
+</div>
+</div>
+</div>
+</div><div id="comment_4250898" class="comentario coment_id_14">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Rizzo" href="?action=profile;user=Rizzo">
+<img id="error_avatar" src="https://images2.imgbox.com/8d/48/KQzUzaFh_o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1659750" href="?action=profile;user=Rizzo">Rizzo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1444929634" title="15/10/2015 a las 17:20 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1584750" href="https://identi.io/index.php?action=profile&user=Fonsymon" class="mensiones_identi">@Fonsymon</a> es como me dijiste que era para unir y tu lo que te referias es para sincronizar yo la verdad ya no utlizo programas para sincronizar video y audio al mismo tiempo, yo lo que tengo es un metodo que es muy engorroso y muy lento pero me funciona bien. utilizo programas cool edit pro y mkvmergue al mismo tiempo pero es medio complicado de explicar.
+</div>
+</div>
+</div>
+</div><div id="comment_4250912" class="comentario coment_id_15">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Rizzo" href="?action=profile;user=Rizzo">
+<img id="error_avatar" src="https://images2.imgbox.com/8d/48/KQzUzaFh_o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1659750" href="?action=profile;user=Rizzo">Rizzo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1444930254" title="15/10/2015 a las 17:30 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1584750" href="https://identi.io/index.php?action=profile&user=Fonsymon" class="mensiones_identi">@Fonsymon</a> es como me dijiste que era para unir y tu lo que te referias es para sincronizar yo la verdad ya no utlizo programas para sincronizar video y audio al mismo tiempo, yo lo que tengo es un metodo que es muy engorroso y muy lento pero me funciona bien. utilizo programas cool edit pro y mkvmergue al mismo tiempo pero es medio complicado de explicar.
+</div>
+</div>
+</div>
+</div><div id="comment_4251413" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Fonsymon" href="?action=profile;user=Fonsymon">
+<img id="error_avatar" src="https://cdn.myanimelist.net/s/common/userimages/5b04cb7c-bea0-4fb7-a2a5-f7d1887531a9_225w?s=3c9800ddb5cb3963d8eca38b95f7be3e" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1584750" href="?action=profile;user=Fonsymon">Fonsymon</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1444945417" title="15/10/2015 a las 21:43 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+ahhhhhhhhhh sip pues uno se adecua a la forma de sincronizar heheheheh creo que como lo hago yo no esta tan mal hjejejejejej asi que uno usa el metodo que se le hace mas factible jejejejje, <a usuario="1659750" href="https://identi.io/index.php?action=profile&user=Rizzo" class="mensiones_identi">@Rizzo</a> cierto rizzo grabaras de nuevo el audio de flash que salio con ruido, ya que las estan repitiendo ?
+</div>
+</div>
+</div>
+</div><div id="comment_4251480" class="comentario coment_id_17">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Rizzo" href="?action=profile;user=Rizzo">
+<img id="error_avatar" src="https://images2.imgbox.com/8d/48/KQzUzaFh_o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1659750" href="?action=profile;user=Rizzo">Rizzo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1444947566" title="15/10/2015 a las 22:19 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1584750" href="https://identi.io/index.php?action=profile&user=Fonsymon" class="mensiones_identi">@Fonsymon</a> si claro mi metodo es lento pero me agrada mucho y ya me acostumbre. lo de flash no lo voy a capturar de nuevo por la Tv ya que en unos dia va estar disponible la temporada en netflix y posiblemente le encarge a alguien que lo capture.
+</div>
+</div>
+</div>
+</div><div id="comment_4269817" class="comentario coment_id_18">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ricardo130" href="?action=profile;user=ricardo130">
+<img id="error_avatar" src="https://i.imgur.com/SrN2Duk.jpeg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1889019" href="?action=profile;user=ricardo130">ricardo130</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1445760122" title="25/10/2015 a las 8:02 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias, ma?
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_4.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949faead847deaa',t:'MTc2MTQ4MTk4NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
