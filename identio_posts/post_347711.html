@@ -1,0 +1,974 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Megapost Juegos Linux - Mega - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="EDIT: Porfa, no dejen puntos, no me sirven para nada :S si quieren dejen algun comentario, es mas divertido, o me cuentan cual se llevan o cual buscaban y no encontraban. Asi de paso interactuamos un..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='amtaVXFBVG9GYUw4Y01uVTJGc2RHVmtYMS9MamluNUZmcFVZL2VUdU5Fc3FmYlNlYzA5dGF4VFFGME9OQmFTR1lwNTl2YnVYTk16dUh5QWF2eWpyMjdRTXNOeWNjVDRYY3ErOEE9PTRYdExlbDRYZ0pDWnhmTw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761491928;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '69b1277e55a675f504118de018ce4a90');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_7.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Megapost Juegos Linux - Mega" title="Identi - Megapost Juegos Linux - Mega" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '61cd06a1c17a3ea54bb377bfe28d9876b48cf702';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=REnsoSki">REnsoSki</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=REnsoSki" title="Ir al Perfil de REnsoSki"><img id="error_avatar" class="avatar" border="0" width="120" src="https://media.tumblr.com/5aabc7d12d5752791be65dfad88626d1/tumblr_inline_mkhs3dDZ3m1qz4rgp.gif" /></a>
+<div class=" rango_sidebar clearfix">Silver User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/silveruser.png" title="Silver User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1896301)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1896301');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">45</b> Seguidores</li>
+<li><b>1150</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>58</b> Posts</li>
+<li><b>157</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Megapost Juegos Linux - Mega</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=347710';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=347712';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=126" alt="Linux" title="Linux">Linux</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 10 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1009739">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script>EDIT: Porfa, no dejen puntos, no me sirven para nada :S si quieren dejen algun comentario, es mas divertido, o me cuentan cual se llevan o cual buscaban y no encontraban. Asi de paso interactuamos un poco. Saludos<br />Buenas tardes.Hace un tiempo que vengo haciendo posts de juegos, y aun me quedan muchos por postear, pero no ando con tiempo para hacerlo. Así que hago un post con todos los juegos que tengo por ahora.<br />No es lo mas prolijo, lo se, pero no tengo otra alternativa. Si alguien quiere postear los juegos individualmente con justo puedo pasar los link de nuevos juegos.<br />Gracias<br /><br /><br />El post funciona así.<br />Titulo del juego<br />Foto del Juego<br />Al final DESCARGA(un solo click para la lista completa de juegos, con los juegos en el orden publicado anteriormente)<br /><br />Espero que les guste, cualquier cosa me avisan. Saludos<br /><br /><div align="center"><span style="color: #33cccc;"><font size="6" style="line-height: 1.3em;"><span style="font-family: Arial Black;"><br />Atomic Zombie Smasher<br /><img id="img_post" src="http://media.indiedb.com/images/downloads/1/36/35196/atomzombiesmasher_2011-05-19_17-.png" border="0"><br />Bit Trip Runner<br /><img id="img_post" src="http://www.lgdb.org/sites/default/files/node_images/4439/6133.jpg" border="0"><br />Cortex Command<br /><img id="img_post" src="http://media.desura.com/cache/images/games/1/1/257/crop_940x705/cortex-command-1.png" border="0"><br />FLT Faster Than Light<br /><img id="img_post" src="http://www.otogami.com/uncroped/01/51/img15130.jpg" border="0"><br />Gemini Rue<br /><img id="img_post" src="http://media.desura.com/cache/images/games/1/16/15658/crop_640x480/gemini-rue-1.jpg" border="0"><br />Gish<br /><img id="img_post" src="http://www.fun-motion.com/images/gish-1.jpg" border="0"><br />Gsb - Gratuitous Space Battles<br /><img id="img_post" src="http://o.aolcdn.com/hss/storage/midas/9a7bf0fb93175027dc13c5c0a5a3e4c1/200475873/gsb2.jpg" border="0"><br />In spaace (malisimo)<br /><img id="img_post" src="http://media.desura.com/cache/images/games/1/31/30112/crop_940x452/38.jpg" border="0"><br />Limbo<br /><img id="img_post" src="http://img1.meristation.com/files/imagenes/juegos/ipd/platforms/limbo/limbo-ios-013.jpg" border="0"><br />Jasper&#039;s Journeys<br /><img id="img_post" src="http://www.lexaloffle.com/gfx/ssjas3.png" border="0"><br />Joe Danger 2<br /><img id="img_post" src="http://static.giantbomb.com/uploads/original/13/135472/2291105-jdtm_new_04.jpg" border="0"><br />McPixel<br /><img id="img_post" src="https://upload.wikimedia.org/wikipedia/en/1/10/McPixel_Steam.jpg" border="0"><br />NightSky<br /><img id="img_post" src="https://3.bp.blogspot.com/-2JKv1LS-KxI/U3Kll-uqSpI/AAAAAAAACrQ/FFOU3rT2v0Q/s1600/nighst.jpg" border="0"><br />Osada (super malo)</span></font></span></div><br /><div align="center"><span style="color: #33cccc;"><font size="6" style="line-height: 1.3em;"><span style="font-family: Arial Black;"><img id="img_post" src="http://amanita-design.net/img/games/osada-08.jpg" border="0"><br /><br />Prision Architect<br /><img id="img_post" src="http://cdn.akamai.steamstatic.com/steam/apps/233450/ss_8f18ce3a7a8ff514ee58b37bb443e48730f81850.1920x1080.jpg?t=1372692282" border="0"><br />Rim World Alpha<br /><img id="img_post" src="https://i.ytimg.com/vi/iBp-kl7xL-4/maxresdefault.jpg" border="0"><br />Samorost 2<br /><img id="img_post" src="http://www.doublegames.com/images/screenshots/samorost-2_1_big.jpg" border="0"><br />Shatter<br /><img id="img_post" src="http://i1-news.softpedia-static.com/images/news2/Shatter-for-Linux-Review-10.jpg" border="0"><br />Solar 2<br /><img id="img_post" src="https://lh6.ggpht.com/BAyAqS-F7HbVFqmtt5RQdbVipEwwYGH3V4_X7eZrcaQGwDKlaLvzsvg5cqDCFkEdudk=h900" border="0"><br />Super meat boy<br /><img id="img_post" src="http://media.pcgamer.com/files/2010/12/SuperMeatBoy-boss.jpg" border="0"><br />Wizorb<br /><img id="img_post" src="http://images.eurogamer.net/2012/articles//a/1/5/0/0/3/6/1/wizorb.gif" border="0"><br />World of Goo<br /><img id="img_post" src="https://i13c.3djuegos.com/juegos/2939/world_of_goo/fotos/maestras/world_of_goo-583917.jpg" border="0"><br />Zen Puzzle Garden<br /><img id="img_post" src="http://www.lexaloffle.com/img/sszen3.gif" border="0"></span></font></span><div class="clearfix spoiler"><span style="display:block; margin:10px 0 10px; font-size:20px; font-weight:bold; color:#096FDB;">Enlaces De Descarga</span><div><div class="spoiler_cont" id="hide"><div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">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</div></div></div></div></div></div><br /><span style="color: #33cccc;"><font size="6" style="line-height: 1.3em;"><span style="font-family: Arial Black;">Juegos ya posteados<br /><br /><br />Awesomenauts<br /><img id="img_post" src="http://ps3media.ign.com/ps3/image/article/122/1224120/Awesomenauts%601_1335903011.jpg" border="0"><br />Bad Hotel<br /><img id="img_post" src="https://yuq.me/users/25/982/F9Pp4cVYmt.png" border="0"><br />Bastion<br /><img id="img_post" src="http://media.indiedb.com/images/games/1/14/13692/Bastion_E32011_0004.jpg" border="0"><br />Cave Story<br /><img id="img_post" src="https://upload.wikimedia.org/wikipedia/en/0/06/Cave_Story_gameplay.gif" border="0"><br />Darwinia<br /><img id="img_post" src="http://static.giantbomb.com/uploads/original/0/993/424649-darwinia_screen3.jpg" border="0"><br />Dust Force<br /><img id="img_post" src="http://reviews.amhill.net/files/2012/09/Screenshot-from-2012-09-22-194231.png" border="0"><br />Fractal<br /><img id="img_post" src="https://media.tumblr.com/6a7d1d4b2e41cc22a23f07f9f73fb036/tumblr_inline_mokc26OGAN1qz4rgp.jpg" border="0"><br />Frozen Synapse<br /><img id="img_post" src="http://bulk2.destructoid.com/ul/208558-fro1.jpg" border="0"><br />Hero Academy<br /><img id="img_post" src="http://thejamesreview.com/wp-content/uploads/2012/02/Hero-Academy-another-wall.png" border="0"><br />Jack Lumber<br /><img id="img_post" src="http://wac.450f.edgecastcdn.net/80450F/arcadesushi.com/files/2012/08/Jack-Lumber-2.png" border="0"><br />Knight of pen and paper +1 Special Edition<br /><img id="img_post" src="https://lh4.ggpht.com/GsSA_rVaKSTLyVQ0OjK9lejdsnGfNGJvVaDAvrClbqqzQzmghtsG1EXiS38Lf1qtrP4=h900" border="0"><br />Lone Survivor<br /><img id="img_post" src="http://cdn.linuxaria.com/wp-content/uploads/2012/06/ls1.jpg" border="0"><br />Machinarium<br /><img id="img_post" src="http://amanita-design.net/img/wallpapers/machinarium/machinarium-wallpaper-plaza-1920x1200.jpg" border="0"><br />Osmos<br /><img id="img_post" src="https://lh4.ggpht.com/46c7XDVPEGKWkQTnS68ePQS0fq4Qw6gL1QS4itybUoGYugpXFU4YaeqgTpP6Emegfx8=h900" border="0"><br />Pixel Piracy<br /><img id="img_post" src="https://i.ytimg.com/vi/crRGiuANn7I/maxresdefault.jpg" border="0"><br />Riks of Rain<br /><img id="img_post" src="http://metadragon.de/wp-content/uploads/2013/11/RoR_Deathmessage.png" border="0"><br />Rochard 64 bits<br /><img id="img_post" src="http://www.ps3blog.net/wp-content/uploads/rochard_screenshot04.jpg" border="0"><br />Space pirates and Zombies<br /><img id="img_post" src="http://www.lgdb.org/sites/default/files/node_images/5213/6978.jpg" border="0"><br />Starbound<br /><img id="img_post" src="http://img3.wikia.nocookie.net/__cb20131208010220/starbound/es/images/a/a9/ForestPlanet-11.png" border="0"><br />Stealth Bastard Deluxe<br /><img id="img_post" src="http://bazifan.ir/wp-content/uploads/stealth_bastard_deluxe_screenshot_03.jpg" border="0"><br />Superbrothers: Swords and Sworcery<br /><img id="img_post" src="http://disainerds.cl/wp-content/uploads/2013/07/recordcover.png" border="0"><br />Torchlight 1<br /><img id="img_post" src="https://1.bp.blogspot.com/-Tc8awpEbDGw/T9N8lRfgGwI/AAAAAAAAEA0/lpfgpVfbvwM/s1600/Capturas+Torchlight+1+Espa%C3%B1ol+(JUEGO-PC)+ISO+Descargar+1+Link.By.Www.CompuGamesTV.Com.4.jpg" border="0"><br />Vessel<br /><img id="img_post" src="http://www.strangeloopgames.com/vessel/images/slideshow/vessel7.jpg" border="0"></span></font></span><br /><br /><div class="clearfix spoiler"><span style="display:block; margin:10px 0 10px; font-size:20px; font-weight:bold; color:#096FDB;">Enlaces De Descarga</span><div><div class="spoiler_cont" id="hide"><div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">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</div></div></div></div></div></div></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">30</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">5404</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">11</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(347711,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(347711,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(347711,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(347711,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(347711,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(347711,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(347711,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(347711,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(347711,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(347711,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1533336" title="perfil de superlogic"> superlogic</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1589125" title="perfil de Danjes"> Danjes</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.imgur.com/SrN2Duk.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1889019" title="perfil de ricardo130"> ricardo130</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://i.imgbox.com/7ABahmgn.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1567249" title="perfil de char4n"> char4n</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1856488" title="perfil de vezcuando"> vezcuando</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://k44.kn3.net/83FB2F467.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1535897" title="perfil de loot"> loot</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(347711);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('347711');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=423750" title="Creeper World 2 - Linux Juegos (Mega)"> Creeper World 2 - Linux Juegos (Mega)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=415257" title="Another World - Linux Juegos (Mega)"> Another World - Linux Juegos (Mega)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=353631" title="The Talos Principle - Linux Juegos (Mega)"> The Talos Principle - Linux Juegos (Mega)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=353438" title="Don't Starve - Linux Juegos (Mega)"> Don't Starve - Linux Juegos (Mega)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=353258" title="Gratuitous Space Battles - Linux Juegos ( Mega )"> Gratuitous Space Battles - Linux Juegos ( Mega )</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=353198" title="Joe Danger 2 The Movie - Linux Juegos ( Mega )"> Joe Danger 2 The Movie - Linux Juegos ( Mega )</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=353166" title="Gemini Rue - Linux Juegos ( Mega )"> Gemini Rue - Linux Juegos ( Mega )</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=353152" title="NightSky - Linux Juegos ( Mega )"> NightSky - Linux Juegos ( Mega )</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">29</span> Comentarios</span>
+<span class="onpost"> Megapost Juegos Linux - Mega</span>
+<div class="comentario"></div><div id="comment_3731426" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1416435176" title="19/11/2014 a las 22:12 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Excelente aporte para los &quot;jugadores&quot;. &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3731554" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ricardo130" href="?action=profile;user=ricardo130">
+<img id="error_avatar" src="https://i.imgur.com/SrN2Duk.jpeg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1889019" href="?action=profile;user=ricardo130">ricardo130</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1416439471" title="19/11/2014 a las 23:24 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias compa?
+</div>
+</div>
+</div>
+</div><div id="comment_3731574" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="char4n" href="?action=profile;user=char4n">
+<img id="error_avatar" src="http://i.imgbox.com/7ABahmgn.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1567249" href="?action=profile;user=char4n">char4n</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1416440181" title="19/11/2014 a las 23:36 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+zarpado loco, muchas gracias. te dejar?
+</div>
+</div>
+</div>
+</div><div id="comment_3731646" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jaac_3ac" href="?action=profile;user=jaac_3ac">
+<img id="error_avatar" src="https://lh3.googleusercontent.com/-vNul8q5OZA4/VO-r4jAWqkI/AAAAAAABaUY/O6Li00Y1l6M/w426-h302/15%2B-%2B1" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1832901" href="?action=profile;user=jaac_3ac">jaac_3ac</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1416442595" title="20/11/2014 a las 0:16 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Bastion y Machinarium son los mejores que he visto, los dem?
+</div>
+</div>
+</div>
+</div><div id="comment_3731738" class="comentario coment_id_5">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="REnsoSki" href="?action=profile;user=REnsoSki">
+<img id="error_avatar" src="https://media.tumblr.com/5aabc7d12d5752791be65dfad88626d1/tumblr_inline_mkhs3dDZ3m1qz4rgp.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1896301" href="?action=profile;user=REnsoSki">REnsoSki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1416444815" title="20/11/2014 a las 0:53 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1832901" href="https://identi.io/index.php?action=profile&user=jaac_3ac" class="mensiones_identi">@jaac_3ac</a> esa es la idea, los juegos como Risk of Rain, starboud, terraria, Superbrothers, knight of pend and paper y demas, tienen una onda retro, a mi en particular me gusto mucho. (son todos juegos nuevos los q nombre, del 2013 en adelante. (la mayoria de los indie tiene esas tramas)
+</div>
+</div>
+</div>
+</div><div id="comment_3764011" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Tifa789" href="?action=profile;user=Tifa789">
+<img id="error_avatar" src="http://www.suikofriend.com/finalreunion/gallery/spinoff/Itadaki08-Tifa2.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1876363" href="?action=profile;user=Tifa789">Tifa789</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1418134362" title="09/12/2014 a las 14:12 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Algunos se ven muy interesantes.
+</div>
+</div>
+</div>
+</div><div id="comment_3765723" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="saurienrik" href="?action=profile;user=saurienrik">
+<img id="error_avatar" src="http://a10.t26.net/avatares/5/7/9/3/120_579382.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1881395" href="?action=profile;user=saurienrik">saurienrik</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1418229985" title="10/12/2014 a las 16:46 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy buenos, algunos los estuve buscando por mucho tiempo y no funcionaban
+</div>
+</div>
+</div>
+</div><div id="comment_3765979" class="comentario coment_id_8">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="REnsoSki" href="?action=profile;user=REnsoSki">
+<img id="error_avatar" src="https://media.tumblr.com/5aabc7d12d5752791be65dfad88626d1/tumblr_inline_mkhs3dDZ3m1qz4rgp.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1896301" href="?action=profile;user=REnsoSki">REnsoSki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1418238925" title="10/12/2014 a las 19:15 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1881395" href="https://identi.io/index.php?action=profile&user=saurienrik" class="mensiones_identi">@saurienrik</a> me hubieras preguntado y te ahorrabas tiempo :S
+</div>
+</div>
+</div>
+</div><div id="comment_3766881" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="saurienrik" href="?action=profile;user=saurienrik">
+<img id="error_avatar" src="http://a10.t26.net/avatares/5/7/9/3/120_579382.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1881395" href="?action=profile;user=saurienrik">saurienrik</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1418276157" title="11/12/2014 a las 5:35 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1896301" href="https://identi.io/index.php?action=profile&user=REnsoSki" class="mensiones_identi">@REnsoSki</a> para ti, cuales son los mejores?
+</div>
+</div>
+</div>
+</div><div id="comment_3767072" class="comentario coment_id_10">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="REnsoSki" href="?action=profile;user=REnsoSki">
+<img id="error_avatar" src="https://media.tumblr.com/5aabc7d12d5752791be65dfad88626d1/tumblr_inline_mkhs3dDZ3m1qz4rgp.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1896301" href="?action=profile;user=REnsoSki">REnsoSki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1418302656" title="11/12/2014 a las 12:57 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1881395" href="https://identi.io/index.php?action=profile&user=saurienrik" class="mensiones_identi">@saurienrik</a> los que me gustaron fueron: La mayoria de estos los termine completos.<br />FTL,GSB, Prision ARchitect, Solar 2, world of goo, bastion, darwinia, Knight of pen and paper, osmos, risk of rain (hermoso pero muy dificil para mi), rochard, vessel.<br /><br />Hoy o ma?
+</div>
+</div>
+</div>
+</div><div id="comment_3769321" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="saurienrik" href="?action=profile;user=saurienrik">
+<img id="error_avatar" src="http://a10.t26.net/avatares/5/7/9/3/120_579382.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1881395" href="?action=profile;user=saurienrik">saurienrik</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1418414778" title="12/12/2014 a las 20:06 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1896301" href="https://identi.io/index.php?action=profile&user=REnsoSki" class="mensiones_identi">@REnsoSki</a> algunos juegos no funcionan, y otros del lanzador no los ejecuta, ni desde terminal, tengo que ir hasta la carpeta del juego y ejecutarlo, porque podr?
+</div>
+</div>
+</div>
+</div><div id="comment_3769558" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="char4n" href="?action=profile;user=char4n">
+<img id="error_avatar" src="http://i.imgbox.com/7ABahmgn.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1567249" href="?action=profile;user=char4n">char4n</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1418425582" title="12/12/2014 a las 23:06 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1881395" href="https://identi.io/index.php?action=profile&user=saurienrik" class="mensiones_identi">@saurienrik</a> ser?
+</div>
+</div>
+</div>
+</div><div id="comment_3769676" class="comentario coment_id_13">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="REnsoSki" href="?action=profile;user=REnsoSki">
+<img id="error_avatar" src="https://media.tumblr.com/5aabc7d12d5752791be65dfad88626d1/tumblr_inline_mkhs3dDZ3m1qz4rgp.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1896301" href="?action=profile;user=REnsoSki">REnsoSki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1418428982" title="13/12/2014 a las 0:03 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1881395" href="https://identi.io/index.php?action=profile&user=saurienrik" class="mensiones_identi">@saurienrik</a> muchos juegos, o casi todos, no sin instalables, solo los abres y listo.<br />ademas tienes que saber hacer o no ejecutables los juegos (chmod +x archivo)<br />comprobar permisos por las dudas (no deberia ser un problema)<br />la mayoria de los juegos son multiarquitectura, salvo que lo aclare como es el caso de rochard.<br />tambien tienes que saber si tienes o no las dependencias cumplidas de los juegos (si ejecutas el juego desde consola te saldra que libreria te hace falta)<br />saludos
+</div>
+</div>
+</div>
+</div><div id="comment_3769679" class="comentario coment_id_14">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="REnsoSki" href="?action=profile;user=REnsoSki">
+<img id="error_avatar" src="https://media.tumblr.com/5aabc7d12d5752791be65dfad88626d1/tumblr_inline_mkhs3dDZ3m1qz4rgp.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1896301" href="?action=profile;user=REnsoSki">REnsoSki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1418429055" title="13/12/2014 a las 0:04 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1881395" href="https://identi.io/index.php?action=profile&user=saurienrik" class="mensiones_identi">@saurienrik</a> otro detalle que me olvide, todos los juegos funcionan, porque son todos juegos que me interesaron en algun momento y todos fueron probrados.
+</div>
+</div>
+</div>
+</div><div id="comment_3770859" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="saurienrik" href="?action=profile;user=saurienrik">
+<img id="error_avatar" src="http://a10.t26.net/avatares/5/7/9/3/120_579382.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1881395" href="?action=profile;user=saurienrik">saurienrik</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1418495511" title="13/12/2014 a las 18:31 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1567249" href="https://identi.io/index.php?action=profile&user=char4n" class="mensiones_identi">@char4n</a> <a usuario="1896301" href="https://identi.io/index.php?action=profile&user=REnsoSki" class="mensiones_identi">@REnsoSki</a> Uso kali linux x64 y world of goo lo borr?
+</div>
+</div>
+</div>
+</div><div id="comment_3770963" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="char4n" href="?action=profile;user=char4n">
+<img id="error_avatar" src="http://i.imgbox.com/7ABahmgn.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1567249" href="?action=profile;user=char4n">char4n</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1418500011" title="13/12/2014 a las 19:46 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1881395" href="https://identi.io/index.php?action=profile&user=saurienrik" class="mensiones_identi">@saurienrik</a> buenas che. reci?
+</div>
+</div>
+</div>
+</div><div id="comment_3786874" class="comentario coment_id_17">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="nikojara" href="?action=profile;user=nikojara">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1759467" href="?action=profile;user=nikojara">nikojara</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1419380707" title="24/12/2014 a las 0:25 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+holaa gracias por el aporte amo linux, ahora disculpen mi ignorancia pero me podria explicar como instalarlos, soy nuevo en linux. uso ubuntu en mi maquina. desde ya gracias
+</div>
+</div>
+</div>
+</div><div id="comment_3786917" class="comentario coment_id_18">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="REnsoSki" href="?action=profile;user=REnsoSki">
+<img id="error_avatar" src="https://media.tumblr.com/5aabc7d12d5752791be65dfad88626d1/tumblr_inline_mkhs3dDZ3m1qz4rgp.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1896301" href="?action=profile;user=REnsoSki">REnsoSki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1419382400" title="24/12/2014 a las 0:53 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1759467" href="https://identi.io/index.php?action=profile&user=nikojara" class="mensiones_identi">@nikojara</a> hola, la mayoria de los juegos q subi, no son para instalar, solo los abres y listo. (algunos juegos con extencion sh, tienen un asistente para instalar).<br />cualquier cosa, si tienes una duda puntual preguntas. saludos
+</div>
+</div>
+</div>
+</div><div id="comment_3788742" class="comentario coment_id_19">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="YoCesar" href="?action=profile;user=YoCesar">
+<img id="error_avatar" src="http://i.imgbox.com/adlLAHLB.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1551468" href="?action=profile;user=YoCesar">YoCesar</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1419527457" title="25/12/2014 a las 17:10 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buen?
+</div>
+</div>
+</div>
+</div><div id="comment_3790443" class="comentario coment_id_20">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="REnsoSki" href="?action=profile;user=REnsoSki">
+<img id="error_avatar" src="https://media.tumblr.com/5aabc7d12d5752791be65dfad88626d1/tumblr_inline_mkhs3dDZ3m1qz4rgp.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1896301" href="?action=profile;user=REnsoSki">REnsoSki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1419634525" title="26/12/2014 a las 22:55 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1551468" href="https://identi.io/index.php?action=profile&user=YoCesar" class="mensiones_identi">@YoCesar</a> hola, como se llama el archivo?? prueba con ./archivo o sh archivo y me dices que t dice la consola
+</div>
+</div>
+</div>
+</div><div id="comment_3790537" class="comentario coment_id_21">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="YoCesar" href="?action=profile;user=YoCesar">
+<img id="error_avatar" src="http://i.imgbox.com/adlLAHLB.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1551468" href="?action=profile;user=YoCesar">YoCesar</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1419638837" title="27/12/2014 a las 0:07 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Pruebo dentro de la carpeta Machinarium ./Machinarium y me tira:<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">bash: ./Machinarium: No existe el archivo o el directorio</div></blockquote><br />Luego pongo sh Machinarium y dice:<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Machinarium: 1: Machinarium: Syntax error: &quot;(&quot; unexpected</div></blockquote><br />Saludos.
+</div>
+</div>
+</div>
+</div><div id="comment_3798800" class="comentario coment_id_22">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="saurienrik" href="?action=profile;user=saurienrik">
+<img id="error_avatar" src="http://a10.t26.net/avatares/5/7/9/3/120_579382.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1881395" href="?action=profile;user=saurienrik">saurienrik</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1420152049" title="01/01/2015 a las 22:40 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1567249" href="https://identi.io/index.php?action=profile&user=char4n" class="mensiones_identi">@char4n</a> lo que tuve que hacer para hacerlo funcionar fue crear un archivo que mandara llamar al bash, por que si entraba a la carpeta del juego, seguido pon?
+</div>
+</div>
+</div>
+</div><div id="comment_3798838" class="comentario coment_id_23">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="char4n" href="?action=profile;user=char4n">
+<img id="error_avatar" src="http://i.imgbox.com/7ABahmgn.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1567249" href="?action=profile;user=char4n">char4n</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1420154206" title="01/01/2015 a las 23:16 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1551468" href="https://identi.io/index.php?action=profile&user=YoCesar" class="mensiones_identi">@YoCesar</a> mmm, aun con chmod ?? Que raro. Con ./ tendr?
+</div>
+</div>
+</div>
+</div><div id="comment_3799335" class="comentario coment_id_24">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="saurienrik" href="?action=profile;user=saurienrik">
+<img id="error_avatar" src="http://a10.t26.net/avatares/5/7/9/3/120_579382.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1881395" href="?action=profile;user=saurienrik">saurienrik</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1420177898" title="02/01/2015 a las 5:51 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1567249" href="https://identi.io/index.php?action=profile&user=char4n" class="mensiones_identi">@char4n</a> algo asi, de hecho en /usr/local/bin cree un archivo que ejecuta una terminal, donde ejecuto 2 comandos<br /><br />El primer comando me manda a la carpeta en cuestion y el segundo ejecuta el juego, y bueno, asi funciona genial<br /><br />Pero ahora baje machinarium y cuando selecciono un item dentro del juego el mouse se mueve horriblemente y no puedo hacer nada, a alguien mas le pasa?
+</div>
+</div>
+</div>
+</div><div id="comment_3799480" class="comentario coment_id_25">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="REnsoSki" href="?action=profile;user=REnsoSki">
+<img id="error_avatar" src="https://media.tumblr.com/5aabc7d12d5752791be65dfad88626d1/tumblr_inline_mkhs3dDZ3m1qz4rgp.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1896301" href="?action=profile;user=REnsoSki">REnsoSki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1420200167" title="02/01/2015 a las 12:02 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1881395" href="https://identi.io/index.php?action=profile&user=saurienrik" class="mensiones_identi">@saurienrik</a> buenos dias, con respecto a machinarium, no sabr?
+</div>
+</div>
+</div>
+</div><div id="comment_3799545" class="comentario coment_id_26">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="char4n" href="?action=profile;user=char4n">
+<img id="error_avatar" src="http://i.imgbox.com/7ABahmgn.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1567249" href="?action=profile;user=char4n">char4n</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1420208057" title="02/01/2015 a las 14:14 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1881395" href="https://identi.io/index.php?action=profile&user=saurienrik" class="mensiones_identi">@saurienrik</a> yo creo que si lo instalar?
+</div>
+</div>
+</div>
+</div><div id="comment_3800076" class="comentario coment_id_27">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="saurienrik" href="?action=profile;user=saurienrik">
+<img id="error_avatar" src="http://a10.t26.net/avatares/5/7/9/3/120_579382.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1881395" href="?action=profile;user=saurienrik">saurienrik</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1420232165" title="02/01/2015 a las 20:56 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1896301" href="https://identi.io/index.php?action=profile&user=REnsoSki" class="mensiones_identi">@REnsoSki</a> <a usuario="1567249" href="https://identi.io/index.php?action=profile&user=char4n" class="mensiones_identi">@char4n</a> Gracias a los 2, y pues jugando un poco con mi linux pues si lo hice andar el nightsky ya que estoy con kali linux y de lo del machinarium probare lo que me comentas, ya que si es latoso el que se mueva a donde le pega la gana el mouse
+</div>
+</div>
+</div>
+</div><div id="comment_3802904" class="comentario coment_id_28">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="YoCesar" href="?action=profile;user=YoCesar">
+<img id="error_avatar" src="http://i.imgbox.com/adlLAHLB.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1551468" href="?action=profile;user=YoCesar">YoCesar</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1420402140" title="04/01/2015 a las 20:09 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1567249" href="https://identi.io/index.php?action=profile&user=char4n" class="mensiones_identi">@char4n</a> prob?
+</div>
+</div>
+</div>
+</div><div id="comment_3820196" class="comentario coment_id_29">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="char4n" href="?action=profile;user=char4n">
+<img id="error_avatar" src="http://i.imgbox.com/7ABahmgn.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1567249" href="?action=profile;user=char4n">char4n</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1421370142" title="16/01/2015 a las 1:02 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1551468" href="https://identi.io/index.php?action=profile&user=YoCesar" class="mensiones_identi">@YoCesar</a> mmm. lo ?
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_7.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994aeda66c83deaa',t:'MTc2MTQ5MTkyOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<style>
+.spoiler-btn {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+.info_bbc {
+    word-break: break-all;
+}
+.info_bbc a {
+    color: #096FDB !important;
+    font-weight: bold;
+}
+</style>
+<script>
+(function() {
+    'use strict';
+    
+    console.log('🔐 Sistema de desencriptación automática cargado');
+    
+    // Extraer la clave del HTML
+    let DECRYPT_KEY = null;
+    const scriptTags = document.getElementsByTagName('script');
+    for (let script of scriptTags) {
+        const content = script.textContent;
+        const hashMatch = content.match(/var\s+hash\s*=\s*['"]([a-f0-9]+)['"]/);
+        if (hashMatch) {
+            DECRYPT_KEY = hashMatch[1];
+            console.log('🔑 Clave encontrada');
+            break;
+        }
+    }
+    
+    if (!DECRYPT_KEY) {
+        console.warn('⚠️ No se encontró clave de desencriptación');
+        return;
+    }
+    
+    function decrypt(encryptedText, password) {
+        try {
+            const decrypted = CryptoJS.AES.decrypt(encryptedText, password);
+            return decrypted.toString(CryptoJS.enc.Utf8) || null;
+        } catch (error) {
+            console.error('❌ Error:', error);
+            return null;
+        }
+    }
+    
+    function handleDecryptClick(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const button = event.target;
+        const spoilerDiv = button.closest('.spoiler');
+        if (!spoilerDiv) return;
+        
+        const hiddenDiv = spoilerDiv.querySelector('.info_bbc');
+        if (!hiddenDiv) return;
+        
+        const encryptedText = hiddenDiv.textContent.trim();
+        const decryptedText = decrypt(encryptedText, DECRYPT_KEY);
+        
+        if (decryptedText && decryptedText.length > 0) {
+            hiddenDiv.innerHTML = `<a href="${decryptedText}" target="_blank" rel="noopener noreferrer">${decryptedText}</a>`;
+            hiddenDiv.style.display = 'block';
+            button.style.display = 'none';
+            console.log('✅ Enlace desencriptado');
+        } else {
+            alert('❌ Error al desencriptar');
+        }
+    }
+    
+    function init() {
+        const buttons = document.querySelectorAll('.spoiler-btn, input[value*="Ver Links"], input[value*="Descarga"]');
+        
+        buttons.forEach(button => {
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+            newButton.style.cursor = 'pointer';
+            newButton.style.pointerEvents = 'auto';
+            newButton.addEventListener('click', handleDecryptClick);
+        });
+        
+        console.log('🚀 Sistema listo');
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script>
+
+</body></html>
