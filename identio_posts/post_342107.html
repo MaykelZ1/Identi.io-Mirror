@@ -1,0 +1,743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Instalar y desinstalar programas en Linux - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Instalar y desinstalar programas en Linux Debian usando la consola de comandos. APT (Advanced Packaging Tool) es el gestor de paquetes usado por Linux Debian y las distribuciones basadas en Debian. Au..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='OHNFWDkyQ3RhcFlScUNqVTJGc2RHVmtYMTk3L0kzOHdCZjdkL0hVWE84UFpuYXFFVmJZcVZsTUZKYVNWZzZQRlR6TE10UDdxdVY1ekpvZ1ZFeS9DMFFueGNtaDh3b0ZHaC92REE9PW83MUF2QW16U3VpRVM4OQ==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761492066;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '8cce331eeec2b353484d2541d6a2c725');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_3.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Instalar y desinstalar programas en Linux" title="Identi - Instalar y desinstalar programas en Linux" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'f01fef973b1acc4ef42efd9831543e52c84278ad';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=GundamE">GundamE</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=GundamE" title="Ir al Perfil de GundamE"><img id="error_avatar" class="avatar" border="0" width="120" src="http://vignette1.wikia.nocookie.net/gundam/images/a/ab/Gundam_Epyon_EW.jpg"/></a>
+<div class=" rango_sidebar clearfix">Silver User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/silveruser.png" title="Silver User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1879035)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1879035');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">35</b> Seguidores</li>
+<li><b>1435</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>49</b> Posts</li>
+<li><b>359</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Instalar y desinstalar programas en Linux</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=342106';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=342108';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=126" alt="Linux" title="Linux">Linux</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 11 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1004135">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script>Instalar y desinstalar programas en Linux Debian usando la consola de comandos.<br /><br /><div align="center"><img id="img_post" src="http://img.genbeta.com/2011/02/terminal.png" border="0"></div><br /><br />APT (Advanced Packaging Tool) es el gestor de paquetes usado por Linux Debian y las distribuciones basadas en Debian.<br /><br />Aunque lo podemos usar sin conexión a Internet, apt está orientado para ser usado con conexión.<br /><br />Para usar apt, básicamente debemos:<br /><br />&nbsp;- Decirle que actualice la lista de paquetes disponibles.<br />&nbsp;- Decirle los paquetes que queremos Instalar/desinstalar.<br /><br />Entonces apt se encarga de:<br /><br />&nbsp;- Buscar los paquetes en Internet o localmente.<br />&nbsp;- Solucionar las dependencias (a veces para que un paquete funcione necesita que haya otros paquetes instalados previamente: se dice que ?depende de?)<br />&nbsp;- Descargar de Internet (cuando sea necesario) los paquetes y sus dependencias.<br />&nbsp;- Instalar y configurar en el orden correcto los paquetes y sus dependencias.<br /><br /><div align="center"><img id="img_post" src="http://i2.minus.com/jfNsmM1wBtg66.png" border="0"></div><br /><br />Usaremos la palabra paquete en lugar de programa, pues apt trabaja con paquetes y no con programas. Un paquete puede incluir varios programas y un programa se puede empaquetar en varios paquetes.<br /><br />Aptitude obtiene la lista de paquetes disponibles del repositorio de Linux, que es un conjunto de direcciones de Internet o locales donde están, tanto los listados de paquetes disponibles, como los propios paquetes.<br /><br />El programa aptitude se usa en modo línea de comando desde un terminal, en el que debe tener la condición de superusuario (root).<br /><br />Las principales formas de usar aptitude son:<br /><br /><font size="5" style="line-height: 1.3em;">Sintaxis general de aptitude</font><br /><br />- <span style="color: #333366;">aptitude [opciones] acción [paquetes]</span><br /><br /><font size="5" style="line-height: 1.3em;">Actualizar lista de paquetes</font><br /><br />- <span style="color: #333366;">aptitude update</span><br /><br />Se debe actualizar la lista antes de realizar cualquier otra acción con apt<br /><br /><div align="center"><img id="img_post" src="http://i2.minus.com/jfNsmM1wBtg66.png" border="0"></div><br /><br /><font size="5" style="line-height: 1.3em;">Buscar información de los paquetes</font><br /><br />Podemos buscar información de los paquetes que vamos a instalar usando los comandos:<br /><br />- <span style="color: #333366;">aptitude search palabra</span><br /><br />Busca palabra tanto en los nombres como en las descripciones de los paquetes.<br /><br />- <span style="color: #333366;">aptitude show paquete</span><br /><br />Muestra información sobre el paquete . Nos informa también sobre las dependencias del paquete, es decir, de qué paquetes depende.<br /><br /><div align="center"><img id="img_post" src="http://i2.minus.com/jfNsmM1wBtg66.png" border="0"></div><br /><br /><font size="5" style="line-height: 1.3em;">Instalar paquetes</font><br /><br />- <span style="color: #333366;">aptitude install paquete</span><br /><br />Observe que ponemos ?paquete? y no ponemos ?paquete.deb? ni ?paquete_1.0-4_i366.deb?<br /><br />Con la opción -d descarga el paquete pero no lo instala. Resulta de utilidad cuando queremos descargar paquetes para instalarlos en otro ordenador sin conexión a Internet<br /><br />- <span style="color: #333366;">aptitude -d install paquete</span><br /><br />La acción reinstall se usa cuando se daña algún paquete o cuando queremos instalar una versión más reciente del mismo:<br /><br />- <span style="color: #333366;">aptitude reinstall paquete</span><br /><br /><div align="center"><img id="img_post" src="http://i2.minus.com/jfNsmM1wBtg66.png" border="0"></div><br /><br /><font size="5" style="line-height: 1.3em;">Actualizar todos los paquetes</font><br /><br />Se pueden actualizar todos los paquetes mediante una sola orden:<br /><br />- <span style="color: #333366;">aptitude upgrade</span><br /><br />e incluso se puede actualizar toda la distribución a una nueva versión:<br /><br />- <span style="color: #333366;">aptitude dist-upgrade</span><br /><br />Precaución<br /><br />No use upgrade, a no ser que se considere un usuario bastante experimentado (puede provocar inestabilidad del sistema)<br /><br /><div align="center"><img id="img_post" src="http://i2.minus.com/jfNsmM1wBtg66.png" border="0"><br /></div><br /><font size="5" style="line-height: 1.3em;">Desinstalar paquetes</font><br /><br />La acción remove elimina (desinstala) el paquetes:<br /><br />- <span style="color: #333366;">aptitude remove paquete</span><br /><br />La acción purge elimina (desinstala) el paquetes y sus archivos de configuración:<br /><br />- <span style="color: #333366;">aptitude purge paquete</span><br /><br />También pueden utilizar<br /><br />- <span style="color: #333366;">apt-get remove --purge paquete</span><br /><div align="center"><img id="img_post" src="http://i2.minus.com/jfNsmM1wBtg66.png" border="0"></div><br /><br /><font size="5" style="line-height: 1.3em;">Eliminar paquetes de la caché</font><br /><br />Los paquetes una vez instalados ya no son necesarios. No obstante, se conservan en la caché: /var/cache/apt/archives. Si los borramos ahorramos espacio en disco, pero si necesitamos instalarlos de nuevo, apt tiene que volver a descargarlos. Para borrarlos, se suelen usar los comandos:<br /><br />- <span style="color: #333366;">aptitude autoclean</span><br /><br />Elimina los paqetes antiguos (aquellos de los que ya existe una nueva versión)<br /><br />- <span style="color: #333366;">aptitude clean</span><br /><br />Elimina todos los paqetes de la caché<br /><br /><div align="center"><img id="img_post" src="http://i2.minus.com/jfNsmM1wBtg66.png" border="0"></div><br /><br />Resumen de las opciones y las acciones de aptitude<br /><br />Si no se especifica ninguna, aptitude entrará en modo interactivo<br /><br />Opciones:<br /><br />-h               Este texto de ayuda<br />-s               Simula las acciones, pero en realidad no las realiza.<br />-d               Sólo descarga paquetes, no instala o desinstala nada.<br />-p               Siempre pide confirmación de las acciones<br />-y               Supone que la respuesta a preguntas simples del tipo sí­/no es «sí»<br />-F formato   Especifica el formato para mostrar los resultados de las búsquedas, lea el manual<br />-O orden     Especifica como se deben ordenar los resultados de la búsqueda, lea el manual<br />-w ancho     Especifica el ancho del visor para dar formato a los resultado de la búsqueda<br />-f                Trata de arreglar paquetes rotos de forma agresiva.<br />-V              Muestra la versión de los paquetes a instalar.<br />-D              Muestra las dependencias de los paquetes cambiados automáticamente.<br />-Z               Muestra el cambio del tamaño instalado de cada paquete.<br />-v                Muestra información extra (puede darse más de una vez)<br />-t [distrib]    Establece la distribución desde la que se instalan los paquetes<br />-q               No muestra los indicadores de progreso incrementales en el modo de línea de Órdenes.<br />-o opconf=val   Establecer directamente la opción de configuración llamada «opconf»<br />--with(out)-recommends, Especifica si se tratan o no las recomendaciones como dependencias fuertes<br />-S fnombre:  Lee la información de estado extendida de aptitude de fnombre.<br />-u                Descarga una nueva lista de paquetes al arrancar.<br />-i                 Realiza una instalación al arrancar.<br /><br /><div align="center"><img id="img_post" src="http://i2.minus.com/jfNsmM1wBtg66.png" border="0"></div><br /><br />Acciones:<br /><br />install           - instala/actualiza paquetes<br />remove         - elimina paquetes<br />purge           - elimina paquetes junto con sus ficheros de configuración<br />hold             - bloquea paquetes<br />unhold          - desbloquea un paquete<br />markauto      - marca paquetes como instalados manualmente<br />unmarkauto   - desmarca paquetes como instalados manualmente<br />forbid-version - prohíbe a aptitude actualizar a una versión específica de un paquete.<br />update           - descarga las listas de paquetes nuevos/actualizables<br />upgrade         - realiza una actualización segura<br />dist-upgrade   - realiza una actualización, posiblemente instalando y eliminando paquetes<br />forget-new      - olvida qué paquetes son &quot;nuevos&quot;<br />search           - busca un paquete por nombre y/o expresión<br />show             - muestra información detallada de un paquete<br />clean             - elimina los ficheros de paquetes descargados<br />autoclean       - elimina los ficheros de paquetes descargados obsoletos<br />changelog      - muestra el registro de cambios del paquete<br />download       - descarga los ficheros .deb para un paquete<br />reinstall         - descarga y (posiblemente) reinstala un paquete ya instalado<br /><br />También pueden escribir en la terminal, man comando. Por ejemplo man aptitude.<script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">21</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 4.2/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">2179</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">6</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(342107,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(342107,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(342107,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(342107,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(342107,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(342107,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(342107,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(342107,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(342107,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(342107,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1533336" title="perfil de superlogic"> superlogic</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://todosobrearbitraje.files.wordpress.com/2012/01/arbitraje-propiedad-intelec.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1893312" title="perfil de fat_bizkit"> fat_bizkit</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://i1.minus.com/jj70CcoHYqJP7_e.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1654158" title="perfil de Jim094"> Jim094</a>: <b>1 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1589125" title="perfil de Danjes"> Danjes</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.suikofriend.com/finalreunion/gallery/spinoff/Itadaki08-Tifa2.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1876363" title="perfil de Tifa789"> Tifa789</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(342107);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('342107');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=413515" title="Ready player one - Ernest Cline"> Ready player one - Ernest Cline</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=413506" title="Snow Crash de Neal Stephenson"> Snow Crash de Neal Stephenson</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=413497" title="Añoranzas y pesares (completo)"> Añoranzas y pesares (completo)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=413491" title="La rueda del tiempo (saga completa)"> La rueda del tiempo (saga completa)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=413404" title="El elfo oscuro R A Salvatore [completa]"> El elfo oscuro R A Salvatore [completa]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=413370" title="Entrenamiento mental de Alberto Coto"> Entrenamiento mental de Alberto Coto</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=413364" title="Dragonlance [completo]"> Dragonlance [completo]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=413337" title="Robert Howard [Megapost]"> Robert Howard [Megapost]</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">21</span> Comentarios</span>
+<span class="onpost"> Instalar y desinstalar programas en Linux</span>
+<div class="comentario"></div><div id="comment_3664879" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mardik9" href="?action=profile;user=mardik9">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1555873" href="?action=profile;user=mardik9">mardik9</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413425305" title="16/10/2014 a las 2:08 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+????????????????? WtF???????????????, mas alla de la falta de programas esta debe ser la razon por la cual no se masifica linux, complicado instalar cualquier guevonada!!!!!!!!!!!!
+</div>
+</div>
+</div>
+</div><div id="comment_3664937" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="fat_bizkit" href="?action=profile;user=fat_bizkit">
+<img id="error_avatar" src="http://todosobrearbitraje.files.wordpress.com/2012/01/arbitraje-propiedad-intelec.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1893312" href="?action=profile;user=fat_bizkit">fat_bizkit</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413426762" title="16/10/2014 a las 2:32 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buena info para los que apenas empezamos con Linuxc &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />.....<br /><br />aunque un poco tarde la info <img id="img_post" src="http://sia1.subirimagenes.net/img/2014/09/05/140905112143310691.gif" border="0"> porque ya me aprend?
+</div>
+</div>
+</div>
+</div><div id="comment_3664952" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="vezcuando" href="?action=profile;user=vezcuando">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1856488" href="?action=profile;user=vezcuando">vezcuando</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413427128" title="16/10/2014 a las 2:38 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+yo recien hoy uso linux &nbsp;unbutu elementary os y he estado usando el comando sudo se usa de manera similar, <a usuario="1555873" href="https://identi.io/index.php?action=profile&user=mardik9" class="mensiones_identi">@mardik9</a> parece complicado pero no lo es la instalacion es automatica &nbsp;ademas que los programas no vienen con versiones shareware con malware incluidas, no hay virus para linux (al menos no conozco ninguno) y es rapido en cualquier o casi cualquier pc, tal vez se me haga mas facil porque vengo de la epoca del DOS, pero no es dificil, gracias por la info &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3664965" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="meinfuhrer" href="?action=profile;user=meinfuhrer">
+<img id="error_avatar" src="http://imgtune.com.nu/?pt=5C3Z][IMG]http://imgtune.com.nu/?dt=5C3Z[/IMG][/URL]" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1550210" href="?action=profile;user=meinfuhrer">meinfuhrer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413427517" title="16/10/2014 a las 2:45 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buena info... <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3665225" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="galloleco" href="?action=profile;user=galloleco">
+<img id="error_avatar" src="http://s3.subirimagenes.com:81/otros/previo/thump_7785203avatar.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="23183" href="?action=profile;user=galloleco">galloleco</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413437123" title="16/10/2014 a las 5:25 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+la ignorancia en su maximo explendor con mardik9 jajaja<br /><br />Buena info compa?
+</div>
+</div>
+</div>
+</div><div id="comment_3665237" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="noname" href="?action=profile;user=noname">
+<img id="error_avatar" src="https://avatarfiles.alphacoders.com/102/102596.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2915" href="?action=profile;user=noname">noname</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413438105" title="16/10/2014 a las 5:41 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias por la info tan detallada! <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3665402" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="sominus" href="?action=profile;user=sominus">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1876152" href="?action=profile;user=sominus">sominus</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413461114" title="16/10/2014 a las 12:05 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita mardik9: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">????????????????? WtF???????????????, mas alla de la falta de programas esta debe ser la razon por la cual no se masifica linux, complicado instalar cualquier guevonada!!!!!!!!!!!!</div></blockquote>Como fan?
+</div>
+</div>
+</div>
+</div><div id="comment_3665466" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="infoadicta" href="?action=profile;user=infoadicta">
+<img id="error_avatar" src="https://64.media.tumblr.com/90745e74ce8cd00b89f7d03370c67f40/9e262ae8cfde02ea-c0/s500x750/e7afbc1acce301cc47f85ebe5a8dc84ed6d9d633.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1759628" href="?action=profile;user=infoadicta">infoadicta</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413465256" title="16/10/2014 a las 13:14 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> excelente info...se agradece... <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3665482" class="comentario coment_id_9">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GundamE" href="?action=profile;user=GundamE">
+<img id="error_avatar" src="http://vignette1.wikia.nocookie.net/gundam/images/a/ab/Gundam_Epyon_EW.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1879035" href="?action=profile;user=GundamE">GundamE</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413466489" title="16/10/2014 a las 13:34 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<b>A ver si se entiende! Esto tamb?</b>
+</div>
+</div>
+</div>
+</div><div id="comment_3665506" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="sominus" href="?action=profile;user=sominus">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1876152" href="?action=profile;user=sominus">sominus</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413468140" title="16/10/2014 a las 14:02 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Ya que estamos en un post de Linux, va una pregunta: <br />Alguien podr?
+</div>
+</div>
+</div>
+</div><div id="comment_3667061" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Informer" href="?action=profile;user=Informer">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1707264" href="?action=profile;user=Informer">Informer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413523204" title="17/10/2014 a las 5:20 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias. &nbsp;<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3668557" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mardik9" href="?action=profile;user=mardik9">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1555873" href="?action=profile;user=mardik9">mardik9</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413600779" title="18/10/2014 a las 2:52 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita vezcuando: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">yo recien hoy uso linux &nbsp;unbutu elementary os y he estado usando el comando sudo se usa de manera similar, <a usuario="1555873" href="https://identi.io/index.php?action=profile&user=mardik9" class="mensiones_identi">@mardik9</a> parece complicado pero no lo es la instalacion es automatica &nbsp;ademas que los programas no vienen con versiones shareware con malware incluidas, no hay virus para linux (al menos no conozco ninguno) y es rapido en cualquier o casi cualquier pc, tal vez se me haga mas facil porque vengo de la epoca del DOS, pero no es dificil, gracias por la info &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote><br /><blockquote><div class="cita">Cita galloleco: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">la ignorancia en su maximo explendor con mardik9 jajaja<br /><br />Buena info compa?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3668667" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="vezcuando" href="?action=profile;user=vezcuando">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1856488" href="?action=profile;user=vezcuando">vezcuando</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413605629" title="18/10/2014 a las 4:13 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+En eso tienes raz?
+</div>
+</div>
+</div>
+</div><div id="comment_3674569" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="tomaco91" href="?action=profile;user=tomaco91">
+<img id="error_avatar" src="http://loopable.files.wordpress.com/2007/09/bitdance.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1701833" href="?action=profile;user=tomaco91">tomaco91</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413892302" title="21/10/2014 a las 11:51 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+ubuntun es el equivalente windows 98 &nbsp;<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3677227" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414001839" title="22/10/2014 a las 18:17 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita sominus: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Ya que estamos en un post de Linux, va una pregunta: <br />Alguien podr?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3677247" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414002764" title="22/10/2014 a las 18:32 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1555873" href="https://identi.io/index.php?action=profile&user=mardik9" class="mensiones_identi">@mardik9</a> que muchos usuarios no est?
+</div>
+</div>
+</div>
+</div><div id="comment_3677814" class="comentario coment_id_17">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="sominus" href="?action=profile;user=sominus">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1876152" href="?action=profile;user=sominus">sominus</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414020868" title="22/10/2014 a las 23:34 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+O sea que poner el /home en una particion distinta ser?
+</div>
+</div>
+</div>
+</div><div id="comment_3678326" class="comentario coment_id_18">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="illukki" href="?action=profile;user=illukki">
+<img id="error_avatar" src="https://tranccuilo.files.wordpress.com/2012/10/mono.jpeg?w=60" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1547015" href="?action=profile;user=illukki">illukki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414033762" title="23/10/2014 a las 3:09 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">O sea que poner el /home en una particion distinta ser?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3678335" class="comentario coment_id_19">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="illukki" href="?action=profile;user=illukki">
+<img id="error_avatar" src="https://tranccuilo.files.wordpress.com/2012/10/mono.jpeg?w=60" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1547015" href="?action=profile;user=illukki">illukki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414034175" title="23/10/2014 a las 3:16 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Perdon mande el anterior sin querer,<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Mi idea es ver como correr un sistema contable (esos que te arma un programador local) hecho para windows, en un linux con wine. Entonces al hacerlos usar linux me evito que todos los meses llenen sus PC de toda clase de virus (me tienen podrido con eso).</div></blockquote>Ya que te lo hicieron a medida y si esta al alcance de tus posibilidades, por que no le pedis que lo porte a GNU/Linux?<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Lo que s?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3690877" class="comentario coment_id_20">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="huamancha" href="?action=profile;user=huamancha">
+<img id="error_avatar" src="https://t2.gstatic.com/images?q=tbn:ANd9GcQ9A0qFX4wPkev_3BJSN04l1_u6WsBEX1ybxSrOHYXtIDIqeqmshQ" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1729141" href="?action=profile;user=huamancha">huamancha</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414560120" title="29/10/2014 a las 5:22 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita mardik9: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">????????????????? WtF???????????????, mas alla de la falta de programas esta debe ser la razon por la cual no se masifica linux, complicado instalar cualquier guevonada!!!!!!!!!!!!</div></blockquote>Depende de la distro y de lo que quieras hacer con tu SO. Yo uso mint 17 y si no quiero nada complicado, entro al gestor de software y bajo CUALQUIER APLICACION GRATIS para realizar CUALQUIER tarea SIN USAR NI UNA VEZ LA CONSOLA.<br />Usando la consola, pones un solo script y tenes instalado apache, mysql y php5 instalado en 5 minutos (exagerando). Para realizar lo mismo en windows, se necesita 1/2 hora como m?
+</div>
+</div>
+</div>
+</div><div id="comment_3693861" class="comentario coment_id_21">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="aleks73" href="?action=profile;user=aleks73">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1542965" href="?action=profile;user=aleks73">aleks73</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414701776" title="30/10/2014 a las 20:42 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Tengo un a?
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_3.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994af1054f1edea5',t:'MTc2MTQ5MjA2Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
