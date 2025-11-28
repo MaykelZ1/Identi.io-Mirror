@@ -1,0 +1,660 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Nuevo método para compartir archivos sin subirlos - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="¿Estás cansado de descargar archivos a través de Mega? ¿Cansado de esperar a que tus archivos suban a la nube? ¡Aquí les traigo la solución! En realidad es un programa que ya tiene mucho tiempo..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='VkhRbDJRRko4MnZPY0IyVTJGc2RHVmtYMS9wbjRyajJCcWRhYnV6MUlHcTBvVzc2dTJqL1g2QVQxTllGZDI5TjFtSTIvZFpnR0toRlNQNGJpMVBxTW1mNXRSS0JiZ0orMzRCaHc9PU1VbEJYZ3dzV0l6b0JkWA==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761479154;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '09e33bbd274ff0b92232bb4a6c77691a');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_4.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Nuevo método para compartir archivos sin subirlos" title="Identi - Nuevo método para compartir archivos sin subirlos" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '22868a7597233d9ec0b1341c9f1bd6ea563075f6';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=AlkanVlogs">AlkanVlogs</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"Tutoriales para PC Básicos y Avanzados."
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=AlkanVlogs" title="Ir al Perfil de AlkanVlogs"><img id="error_avatar" class="avatar" border="0" width="120" src="https://yt3.ggpht.com/a/AGF-l7_VKnQV4S5vzofQe07J4MOlB-EtM4WZH_jsjQ=s900-c-k-c0xffffffff-no-rj-mo"/></a>
+<div class=" rango_sidebar clearfix">Gold User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/golduser.png" title="Gold User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1639360)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1639360');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">65</b> Seguidores</li>
+<li><b>1827</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>80</b> Posts</li>
+<li><b>30</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Nuevo método para compartir archivos sin subirlos</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=499575';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=499577';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 7 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1161607">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><img id="img_post" src="http://s5.postimg.org/j9dxci1nr/4825_EB6_F0.jpg" border="0"></div><div align="center"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Lato, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;"><font size="5" style="line-height: 1.3em;">¿Estás cansado de descargar archivos a través de Mega?</font></span></font></span><br /><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Lato, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;"><font size="5" style="line-height: 1.3em;">¿Cansado de esperar a que tus archivos suban a la nube?</font></span></font></span><br /><br /><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Lato, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;"><font size="5" style="line-height: 1.3em;">¡Aquí les traigo la solución!</font></span></font></span><br /><br /><img id="img_post" src="https://i.ytimg.com/vi/BTzlSK0IUWk/maxresdefault.jpg" border="0"><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Lato, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;"><font size="5" style="line-height: 1.3em;">En realidad es un programa que ya tiene mucho tiempo, sin embargo, con las nuevas políticas que muchos servidores han puesto tenemos que buscar nuevas soluciones y esta es una de ellas.</font></span></font></span></div><div align="center"><img id="img_post" src="http://www.identi.li/images/info1.png" border="0"></div><div align="center">O &amp; O FileDirect permite compartir una cantidad ilimitada de archivos sin tener que cargarlos en la nube. De esta forma, sus archivos confidenciales nunca estarán fuera de sus manos. Mantienes un control total sobre quién puede verlos.&nbsp;<br /><br />Usando una interfaz simple, indicas el archivo que debe ser compartido. O &amp; O FileDirect luego genera un enlace individual que usted envía al contacto. El destinatario no necesita instalar O &amp; O FileDirect para descargar el archivo. Lo único que se necesita es ejecutar un navegador actual en un dispositivo común.<br /><br />¿Y que ventajas tiene?<br />O &amp; O FileDirect facilita el intercambio de archivos y carpetas con un número ilimitado de destinatarios (Transferencia de archivos). Usted mantiene un control absoluto sobre a quién se le debe permitir acceder a estos archivos. No hay necesidad de servicios en la nube o preocuparse por el tamaño de los archivos adjuntos de correo electrónico. Sus archivos solo se compartirán entre la computadora donde se guardan los archivos y la computadora, tableta, computadora portátil, teléfono móvil del destinatario donde se descargarán los archivos.<br /><br /><br />El destinatario solo necesita el enlace que genera O &amp; O FileDirect y un navegador actual. O &amp; O FileDirect no requiere instalación. Comparta archivos de cualquier tamaño de forma rápida, fácil y, lo más importante, de forma segura.<br /><br />Ahora veamos un tutorial (hecho por mi) en donde muestro como utilizarlo:</div><br /><div align="center"><span style="color: #333333;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">[Ver en HD]</span></font></span></div><div align="center"><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/DbaZGMu8HR0" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div></div><br /><br /><div align="center"><img id="img_post" src="http://bygcrazyblog.files.wordpress.com/2010/12/0afb8f4a9.png" border="0"></div><br /><div align="center"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Lato, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;">Y con el apoyo de ustedes podremos difundir este método para que ya no existan problemas cuando queramos compartir archivos.</span></font></span></div><br /><div align="center"><img id="img_post" src="https://thumbs.dreamstime.com/b/hombre-feliz-joven-que-trabaja-en-la-pc-25232889.jpg" border="0"></div><div align="center"><img id="img_post" src="https://1.bp.blogspot.com/-skC_hPKk71Y/UAD4UhZEGOI/AAAAAAAAAXA/m09YiXoBb34/s1600/Fin+del+Post.png" border="0"></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">43</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 4.8/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">2439</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">3</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(499576,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(499576,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(499576,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(499576,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(499576,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(499576,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(499576,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(499576,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(499576,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(499576,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://i109.fastpic.ru/big/2019/0312/d3/6473b4e52855a66ada0b689b659355d3.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1794856" title="perfil de Rasta_"> Rasta_</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://avatar.xboxlive.com/avatar/x2theg/avatarpic-l.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=95080" title="perfil de carloari"> carloari</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://k41.kn3.net/taringa/4/7/4/0/9/6/3/metalivanz/C68.jpg?2525" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=18223" title="perfil de degeldeacuario"> degeldeacuario</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://ist6-3.filesor.com/pimpandhost.com/2/4/0/7/240741/a/Q/u/g/aQugM/30bf2550d270a06e0b8db06af32c9063.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=119485" title="perfil de kenoi"> kenoi</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-AwgIAaZ4d2M/VM3YWQv7rlI/AAAAAAAADJg/-liofc_HbPQ/s1600/pinguinito.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1948534" title="perfil de agordillo"> agordillo</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://images.profileengine.com/large/431077029/asociacin.de.amigos.de.ron.damon" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=147295" title="perfil de royocan"> royocan</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://i57.fastpic.ru/big/2013/1006/85/732758ed4af696a70d99e4d25a617d85.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1529292" title="perfil de akula1997"> akula1997</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://o2.argentinawarez.com/customprofilepics/profilepic1874234_1.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1575826" title="perfil de lember10"> lember10</a>: <b>3 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-0r296OGh12Q/UDK6H2YSTdI/AAAAAAAAAUQ/o6YT5gTBUcY/s1600/BetaAvatar.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1550437" title="perfil de Betancourt"> Betancourt</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(499576);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('499576');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_127"></i>
+<a href="https://identi.io/index.php?topic=561371" title="Wallpaper Fondo animado para PC | Windows"> Wallpaper Fondo animado para PC | Windows</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_127"></i>
+<a href="https://identi.io/index.php?topic=560865" title="Wallpapers 4D Holograma Fondos Animados en Android"> Wallpapers 4D Holograma Fondos Animados en Android</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_127"></i>
+<a href="https://identi.io/index.php?topic=555039" title="Test velocidad Chrome vs Opera vs Edge vs Firefox"> Test velocidad Chrome vs Opera vs Edge vs Firefox</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_127"></i>
+<a href="https://identi.io/index.php?topic=553337" title="Google Chrome reducir memoria ram y acelerarlo"> Google Chrome reducir memoria ram y acelerarlo</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_127"></i>
+<a href="https://identi.io/index.php?topic=552872" title="Personalizar Barra de Tareas Invisible Windows 10"> Personalizar Barra de Tareas Invisible Windows 10</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_127"></i>
+<a href="https://identi.io/index.php?topic=552036" title="Carpeta invisible para esconder archivos Windows"> Carpeta invisible para esconder archivos Windows</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_127"></i>
+<a href="https://identi.io/index.php?topic=551412" title="Remasterizar calidad y resolución de imagenes"> Remasterizar calidad y resolución de imagenes</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_127"></i>
+<a href="https://identi.io/index.php?topic=551342" title="Verifica si un archivo o página web tiene virus"> Verifica si un archivo o página web tiene virus</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">16</span> Comentarios</span>
+<span class="onpost"> Nuevo método para compartir archivos sin subirlos</span>
+<div class="comentario"></div><div id="comment_5198375" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="robeguzman" href="?action=profile;user=robeguzman">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1947246" href="?action=profile;user=robeguzman">robeguzman</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1517311987" title="30/01/2018 a las 11:33 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buen aporte estimado , me imagino que tu pc funcionara como la nube, la velocidad de transferencia dependera de la velocidad de internet que tengas , lo que me causa dudas es porque es gratis ?
+</div>
+</div>
+</div>
+</div><div id="comment_5198401" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carloari" href="?action=profile;user=carloari">
+<img id="error_avatar" src="http://avatar.xboxlive.com/avatar/x2theg/avatarpic-l.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="95080" href="?action=profile;user=carloari">carloari</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1517315027" title="30/01/2018 a las 12:23 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5198424" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="_xilensis" href="?action=profile;user=_xilensis">
+<img id="error_avatar" src="https://media.tenor.com/vPdy3tkHnDcAAAAM/walter-white-i-am-the-danger.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1883267" href="?action=profile;user=_xilensis">_xilensis</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1517320401" title="30/01/2018 a las 13:53 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+es como el mismo sistema de ftp, lo que no sirve a todos, yo en mi caso tengo 30 kbps de subida... es a esa velocidad que descargarian mis archivos... <img src="https://identi.io/Smileys/default/icon_confused.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_confused.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5198457" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="felirock" href="?action=profile;user=felirock">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-t_icNwGDuTg/Wl4QnhmzpUI/AAAAAAAAxto/LPX3hLx1UZgJOKxe6L5TTS2QaSJhh2dugCLcBGAs/s1600/Americadecali.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1571766" href="?action=profile;user=felirock">felirock</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1517323938" title="30/01/2018 a las 14:52 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+pero se te va estallar el pc por el rendimiento y el consumo de recursos, muchas personas bajando el mismo archivo <img src="https://identi.io/Smileys/default/icon_mrgreen.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5198483" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="kenoi" href="?action=profile;user=kenoi">
+<img id="error_avatar" src="https://ist6-3.filesor.com/pimpandhost.com/2/4/0/7/240741/a/Q/u/g/aQugM/30bf2550d270a06e0b8db06af32c9063.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="119485" href="?action=profile;user=kenoi">kenoi</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1517325497" title="30/01/2018 a las 15:18 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5198486" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="MrPunkskap" href="?action=profile;user=MrPunkskap">
+<img id="error_avatar" src="https://bp3.blogger.com/_2CnQWIZQ3NY/Rw7R-XWmYVI/AAAAAAAAAN4/B8dnuU2mxJc/s320/Adicts.bmp" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1553169" href="?action=profile;user=MrPunkskap">MrPunkskap</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1517325993" title="30/01/2018 a las 15:26 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+En ese caso me parece mejor un torrent
+</div>
+</div>
+</div>
+</div><div id="comment_5198502" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="picorico2" href="?action=profile;user=picorico2">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1821127" href="?action=profile;user=picorico2">picorico2</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1517327196" title="30/01/2018 a las 15:46 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Excelente programa mi bro, solo que al compatirlo y despues quererlo descargar me sale un error en aleman: &nbsp;Datenkanal kann nicht geöffnet werden<br />Fehlgeschlagen.
+</div>
+</div>
+</div>
+</div><div id="comment_5198577" class="comentario coment_id_8">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="AlkanVlogs" href="?action=profile;user=AlkanVlogs">
+<img id="error_avatar" src="https://yt3.ggpht.com/a/AGF-l7_VKnQV4S5vzofQe07J4MOlB-EtM4WZH_jsjQ=s900-c-k-c0xffffffff-no-rj-mo" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1639360" href="?action=profile;user=AlkanVlogs">AlkanVlogs</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1517334561" title="30/01/2018 a las 17:49 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita robeguzman: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Buen aporte estimado , me imagino que tu pc funcionara como la nube, la velocidad de transferencia dependera de la velocidad de internet que tengas , lo que me causa dudas es porque es gratis ?</div></blockquote><br />Si, la velocidad depende de tu conexión, y si, es gratis.
+</div>
+</div>
+</div>
+</div><div id="comment_5198581" class="comentario coment_id_9">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="AlkanVlogs" href="?action=profile;user=AlkanVlogs">
+<img id="error_avatar" src="https://yt3.ggpht.com/a/AGF-l7_VKnQV4S5vzofQe07J4MOlB-EtM4WZH_jsjQ=s900-c-k-c0xffffffff-no-rj-mo" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1639360" href="?action=profile;user=AlkanVlogs">AlkanVlogs</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1517334872" title="30/01/2018 a las 17:54 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita _xilensis: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">es como el mismo sistema de ftp, lo que no sirve a todos, yo en mi caso tengo 30 kbps de subida... es a esa velocidad que descargarian mis archivos... <img src="https://identi.io/Smileys/default/icon_confused.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_confused.png" alt="" border="0" /></div></blockquote>Tienes razón que no es para todos pero para quienes tienen una buena conexión estarán muy contentos con este programa porque no existe ese límite o restricciones como en muchos servidores. Y además existen muchos servidores que te limitan a velocidades muy bajas y vendría siendo muy similar.
+</div>
+</div>
+</div>
+</div><div id="comment_5198594" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="hellvin0" href="?action=profile;user=hellvin0">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="50759" href="?action=profile;user=hellvin0">hellvin0</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1517336475" title="30/01/2018 a las 18:21 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+no solo eso, algunas veces alguien tiene archivos que les sirven a los uploaders pero estas personas no tienen ni media idea de que es subir un archivo
+</div>
+</div>
+</div>
+</div><div id="comment_5198600" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Konnor" href="?action=profile;user=Konnor">
+<img id="error_avatar" src="http://pre01.deviantart.net/d103/th/pre/i/2012/285/f/2/assassin__s_creed_3_conner_kenway_by_jond7-d5hke5d.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1676353" href="?action=profile;user=Konnor">Konnor</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1517336995" title="30/01/2018 a las 18:29 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+esto es parecido al programa ares &nbsp;ese si era un buen sistema &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5198657" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="akula1997" href="?action=profile;user=akula1997">
+<img id="error_avatar" src="http://i57.fastpic.ru/big/2013/1006/85/732758ed4af696a70d99e4d25a617d85.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1529292" href="?action=profile;user=akula1997">akula1997</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1517343633" title="30/01/2018 a las 20:20 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+De acuerdo a la descripción del producto <br />&quot;O&amp;O FileDirect makes it possible to share an unlimited number of files without having to load them in the cloud. This way your confidential files are never out of your hands. You maintain complete control over who gets to see them.&quot; <br />este programa es para compartir archivos cuando la seguridad es lo que prima, por lo que me parece no es para compartir, digamos, series de TV, películas. Si quisiera compartir una película con 10 amigos, eso implicaría subirla 10 veces por medio de O&amp;O File Direct, una vez por cada amigo, con la consiguiente necesidad de un mayor requerimiento de Mbps, mientras que de utilizar Mega o Google Drive o Zippyshare necesitaría subirla una sola vez. Para uso de la oficina está bien, para compartir archivos grandes con 5 ó 10 ó 100 usuarios pues no parece que ése fuera su campo de aplicación.<br /><br /><blockquote><div class="cita">Cita felirock: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">pero se te va estallar el pc por el rendimiento y el consumo de recursos, muchas personas bajando el mismo archivo <img src="https://identi.io/Smileys/default/icon_mrgreen.png" alt="" border="0" /></div></blockquote> <br />precisamente, mientras más estén conectados, la velocidad de transferencia disminuirá en la misma proporción. Hasta compartir por torrent es más descansado parael que comparte, porque tú compartes a 1, éste le transfiere a 2, ese 2 a 3, el 3 a 4, y más o menos así sucesivamente ahorrando el recurso ancho de banda, por eso en ciertos casos del torrent cuando un solo leecher se conecta a un único seeder éste no transfiere nada, pero basta que sean 3 (ese truco a veces me ha funcionado) para que comience la actividad porque ya hay para compartir la carga (ancho de banda) <br /><br />O&amp;O File Direct es un programa muy interesante con muchas aplicaciones, muchas gracias x compartir &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5199085" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="crackvader" href="?action=profile;user=crackvader">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="15930" href="?action=profile;user=crackvader">crackvader</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1517383161" title="31/01/2018 a las 7:19 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Osea. Torrente con otro nombre y me pondra mi maquina superlenta, pues si tengo la ultima pelicula del momento y la posteo, 10, 100, 1000, 10000, maquinas la descargaran a la vez, con el consiguiente desgaste de mi tarjeta de red, procesador, disco duro y memoria. Te has puesto a pensar que eso es lo que sucedera, todo para poder decir que uso un sistema mas rapido que torrente, cuando me es mas sencillo poner archivos en dropbox o box y en la nube estara mi archivo compartido sin necesidad de gastar mi pc.<br />Gracias, pero no, gracias. &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /><br />Es bueno el dato pero nada que tenga que poner mi pc en la linea de fuego. Ya con los torrentes es bastante.<br />Este programa no esta inventando el agua caliente, lo siento pero paso. <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5232021" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Betancourt" href="?action=profile;user=Betancourt">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-0r296OGh12Q/UDK6H2YSTdI/AAAAAAAAAUQ/o6YT5gTBUcY/s1600/BetaAvatar.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1550437" href="?action=profile;user=Betancourt">Betancourt</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520950637" title="13/03/2018 a las 14:17 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias por el programa... lo que he buscado mucho es como pasar archivos de una PC a un portátil... los discos duros de mi PC están llenos y los de mis portátiles casi vacíos... he ido pasando a través de una memoria USB de 16 GB películas y archivos a los portátiles, pero debe haber una forma más eficiente y rápida de hacerlo... a través de la LAN, pero no he podido configurar los equipos para hacer uso de esa función.<br />Por favor, podrías indicarme un tutorial que sirva para este fin? Salu2 y muchas gracias!!! &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5232034" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="akula1997" href="?action=profile;user=akula1997">
+<img id="error_avatar" src="http://i57.fastpic.ru/big/2013/1006/85/732758ed4af696a70d99e4d25a617d85.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1529292" href="?action=profile;user=akula1997">akula1997</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520952693" title="13/03/2018 a las 14:51 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1550437" href="https://identi.io/index.php?action=profile&user=Betancourt" class="mensiones_identi">@Betancourt</a> compartir sin subir a la nube, sino en una LAN <br />puedes revisar <a href="https://www.tecnopeda.com/compartir-archivos-red-windows-10/ " target="_blank" rel="nofollow">aquí</a> y <a href="http://www.abueloinformatico.es/vertutoriales.php?id=1627&amp;titulo=compartir_unidades,_carpetas_y_archivos_en_windows_10&amp;cat=Windows%2010#tutorial" target="_blank" rel="nofollow">aquí </a><br />Google-ando y en youtube seguro encuentras mejores tutoriales que los 2 mencionados <br />Suerte <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5232055" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Betancourt" href="?action=profile;user=Betancourt">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-0r296OGh12Q/UDK6H2YSTdI/AAAAAAAAAUQ/o6YT5gTBUcY/s1600/BetaAvatar.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1550437" href="?action=profile;user=Betancourt">Betancourt</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520955901" title="13/03/2018 a las 15:45 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1529292" href="https://identi.io/index.php?action=profile&user=akula1997" class="mensiones_identi">@akula1997</a> Muchas gracias... he <i>Google-ando</i> y cuando trato de configurar los equipos no me funciona... tal vez no he mirado lo suficiente... Muchas gracias por contestar... Salu2 &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_4.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949b5cc6db3dea6',t:'MTc2MTQ3OTE1NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
