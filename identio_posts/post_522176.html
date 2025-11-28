@@ -1,0 +1,639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Aprendiendo Javascript - carlos Azaustre (pdf) - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Aprendiendo JavaScript - Carlos Azaustre Índice de Contenidos: 1 Sobre éste libro &nbsp; 2 Historia de JavaScript &nbsp; 3 Tipos de variables &nbsp; 4 Operadores &nbsp; 5 Condicionales &nbsp; 6 Clas..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='UEtBRzRlQWV4dXoxRHVaVTJGc2RHVmtYMS9VWlBQV2c4VkFORUJ4SU5lMUI1MlozSGlxVDdNdW5TRTZZRUtnMkhSc0xjU2xIb1M4ck1tcTArTTFZTGxERWJiV01LN0NqUXNFRFE9PVFESnY0VnJLYU95MlFBVw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761478601;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '4f5b46e3d5bbfc1aad9244649e70ec48');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_4.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Aprendiendo Javascript - carlos Azaustre (pdf)" title="Identi - Aprendiendo Javascript - carlos Azaustre (pdf)" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'f6b4b343729a1e4c932d0a4f004284f962cfa8ee';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=ken21177">ken21177</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"El conocimiento es para compartir, nunca para humillar"
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=ken21177" title="Ir al Perfil de ken21177"><img id="error_avatar" class="avatar" border="0" width="120" src="http://www.forodecostarica.com/attachments/176505d1326751376-sorry-maes-pero-la-liga-es-la-liga-lda.jpg"/></a>
+<div class=" rango_sidebar clearfix">Silver User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/cr.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/silveruser.png" title="Silver User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(138933)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('138933');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">20</b> Seguidores</li>
+<li><b>1118</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>24</b> Posts</li>
+<li><b>342</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="en_reciclaje clearfix">
+<span class="cols"><img class="floatL" src="https://identi.io/images/eliminado.png"  border="0" width="128" height="128"/></span>
+<span class="left cols">
+<span class="title">Oops.. Este post tiene los enlaces eliminados! </span>
+<p>Identi revisa las denuncias de los usuarios en busca de enlaces eliminados que no dejan descargar los archivos, este mensaje te informa que este post que estas viendo <b>tiene los enlaces eliminados.</b></p>
+</span>
+<span class="right cols" >
+<span class="title">Usa el Buscador</span>
+<p>Por favor, te recomendamos que uses el buscador para encontrar m&aacute;s alternativas.</p>
+<form class="search_here" action="https://identi.io/index.php?action=buscador" method="POST">
+<input type="text" class="text-inp" name="search"/> <input type="submit" value="Buscar"/>
+</form>
+</span>
+</div><div class="header_post clearfix" >
+<h1 class="title_post">Aprendiendo Javascript - carlos Azaustre (pdf)</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=522175';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=522177';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=124" alt="Reciclaje" title="Reciclaje">Reciclaje</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 6 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1184207">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><span style="color: #cccc33;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Montserrat,sans-serif;">Aprendiendo JavaScript - Carlos Azaustre</span></font></span><br /><br /><br /></div><div align="center"></div><div align="center"></div><div align="center"><img id="img_post" src="https://http2.mlstatic.com/aprendiendo-javascript-carlos-azaustre-libro-pdf-D_NQ_NP_877693-MPE26560408834_122017-F.jpg" border="0"></div><div align="center"><span style="color: #444444;"><span style="font-family: Montserrat,sans-serif;"><img id="img_post" src="http://data:image/jpeg;base64,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" border="0"></span></span></div><br /><div align="center"><span style="color: #444444;"><span style="font-family: Montserrat,sans-serif;"><img id="img_post" src="http://data:image/jpeg;base64,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" border="0"></span></span></div>Índice de Contenidos:<br /><br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">1 Sobre éste libro</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">2 Historia de JavaScript</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">3 Tipos de variables</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">4 Operadores</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">5 Condicionales</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">6 Clases Core y Módulos de JavaScript</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">7 Funciones</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">8 Bucles</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">9 JSON</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">10 AJAX</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">11 XMLHttpRequest</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">12 Fetch en ECMAScript6</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">13 Eventos</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">14 Manejando eventos</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">15 Propagación de eventos</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">15 Patrón PubSub</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">16 Websockets</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">17 Promesas</span></font><br />&nbsp;<br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana, sans-serif;">18 DOM Document Object Model</span></font><br /><br /><br /><div align="center"><img id="img_post" src="https://www.identi.li/imgpost/info1.png" border="0"></div><br /><div align="center"><span style="color: #262626;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma,sans-serif;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma,sans-serif;"><span style="color: #333333;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS;">Formato: Pdf</span></font></span></span></font></span></font></span></div><div align="center"><span style="color: #262626;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma,sans-serif;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma,sans-serif;"><span style="color: #333333;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS;">Idioma:Español</span></font></span></span></font></span></font></span></div><div align="center"><span style="color: #262626;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma,sans-serif;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma,sans-serif;"><span style="color: #333333;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS;">Tamaño: 3 mb</span></font></span></span></font></span></font></span></div><div align="center"><span style="color: #262626;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma,sans-serif;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma,sans-serif;"><span style="color: #333333;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS;">servidor: MEGA</span></font></span></span></font></span></font></span></div><br /><br /><div align="center"><img id="img_post" src="https://www.identi.li/imgpost/links1.png" border="0"></div><br /><style>.myjdownloader{background: url(https://www.identi.io/images/jdownloader.png) no-repeat;}</style><div align="center"><div class="clearfix spoiler"><div class="spoiler_cont" id="hide"><a style="font-size:14px; display:block; color:#D0B310;" href="?topic=78787" target="_blank"><img style="vertical-align:middle; margin-right:10px;" src="https://www.identi.io/images/jdownloader.png" width="50" height="50"/><b>Tutorial para descargar con Jdownloder</b></a><div class="clearfix spoiler"><form action="http://127.0.0.1:9666/flash/addcrypted2" target="hidden" class="jd" method="POST"><input type="hidden" name="passwords" value="myPassword"/><input type="hidden" name="source" value="http://jdownloader.org/spielwiese" /><input type="hidden" name="jk" value="function f(){ return '31323334353636373730393837363534';}" /><input type="hidden" name="crypted" value="Hq6p0QOxTtHDvoD+6nW49GV39DMWgitnBblBqWah/NlpZvajF4ySXVY7VNQDnYy4bSLyHDQFmkMiCz37Gb/5oxQxxsrl6TK4BwXr/N9lZJg="><input type="SUBMIT" name="submit" style="padding-left: 45px !important;" class="spoiler-btn myjdownloader" id="decrypt" value="Agregar enlaces a Jdownloader" class="gestor_descargas"/></form></div></div></div></div><br /><br /><div align="center"><i><span style="text-decoration: underline;"><span style="color: #cc33cc;"><b>Feliz Navidad </b></span></span></i></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">45</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5.6/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1969</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">5</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(522176,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(522176,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(522176,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(522176,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(522176,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(522176,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(522176,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(522176,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(522176,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(522176,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://i.ibb.co/MZBd1Gg/vegeta-ssj-blue.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1529808" title="perfil de william706"> william706</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-4F9RNJo7rgg/WAFV41vjtkI/AAAAAAAAACg/n0lsKDXrQUQzll3IloCq_0-zKbEpSWiNgCLcB/s1600/555.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1952959" title="perfil de 555."> 555.</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWlu9v9XDIRxJnutpDIz2X40d6hHpry3djhcqsqXo4dIKZ3xVdloNH9mnUVlVqsT4ttS2-mrRe4z2nBX8PMGWHOb-CWhlcJ-KDiWWC5RCZELF-d1sEDIJtzjtVbsXaqpO9INBgM-FKxI8cYBfLQjs4dOejNUz4d__hN-dJTLj8-spwwQekTtcZAT5J1zY/s998/Du" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1898424" title="perfil de Duliori_28"> Duliori_28</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://t01.deviantart.net/zskfiS4yeUdliyxkljLKsDn8Qnc=/fit-in/150x150/filters:no_upscale():origin()/pre00/94e9/th/pre/f/2012/362/0/3/slackware_badge_by_amai_biscuit-d5phf2e.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1951702" title="perfil de Mantikor"> Mantikor</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.gravatar.com/avatar/d4f45543fb684cc678d3c05762cedf40.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1639829" title="perfil de antoni2k6"> antoni2k6</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1684575" title="perfil de DeusEx."> DeusEx.</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://imgfz.com/i/H2SesPO.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1757431" title="perfil de _private"> _private</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1936101" title="perfil de josue_rs"> josue_rs</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(522176);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('522176');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=512573" title="certificacion windows Server 2012 - ediciones eni"> certificacion windows Server 2012 - ediciones eni</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=510339" title="De deudor a millonario pdf"> De deudor a millonario pdf</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=506359" title="calidad en el desarrollo de software - Alfaomega"> calidad en el desarrollo de software - Alfaomega</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=505666" title="Nunca tires la toalla - Donal Trump (pdf)"> Nunca tires la toalla - Donal Trump (pdf)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=505478" title="cree mas en ti  con pnl - David Molden"> cree mas en ti  con pnl - David Molden</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=505326" title="uBlock (Bloqueador de publicidad)"> uBlock (Bloqueador de publicidad)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=505292" title="pack libros pearson"> pack libros pearson</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=505270" title="Desarrollo software con NetBeans7 (Alfaomega)"> Desarrollo software con NetBeans7 (Alfaomega)</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">14</span> Comentarios</span>
+<span class="onpost"> Aprendiendo Javascript - carlos Azaustre (pdf)</span>
+<div class="comentario"></div><div id="comment_5379976" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="william706" href="?action=profile;user=william706">
+<img id="error_avatar" src="https://i.ibb.co/MZBd1Gg/vegeta-ssj-blue.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1529808" href="?action=profile;user=william706">william706</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545001398" title="16/12/2018 a las 23:03 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias!
+</div>
+</div>
+</div>
+</div><div id="comment_5379989" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="konztantin" href="?action=profile;user=konztantin">
+<img id="error_avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMwlE9bYJ7GCeNn5TR47cIZ-EkrnWsf93hyVmPNICS6Hz_dPo-lw" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1846072" href="?action=profile;user=konztantin">konztantin</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545004063" title="16/12/2018 a las 23:47 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /> GRACIAS
+</div>
+</div>
+</div>
+</div><div id="comment_5380029" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Duliori_28" href="?action=profile;user=Duliori_28">
+<img id="error_avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWlu9v9XDIRxJnutpDIz2X40d6hHpry3djhcqsqXo4dIKZ3xVdloNH9mnUVlVqsT4ttS2-mrRe4z2nBX8PMGWHOb-CWhlcJ-KDiWWC5RCZELF-d1sEDIJtzjtVbsXaqpO9INBgM-FKxI8cYBfLQjs4dOejNUz4d__hN-dJTLj8-spwwQekTtcZAT5J1zY/s998/Du" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1898424" href="?action=profile;user=Duliori_28">Duliori_28</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545008772" title="17/12/2018 a las 1:06 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5380061" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="_private" href="?action=profile;user=_private">
+<img id="error_avatar" src="http://imgfz.com/i/H2SesPO.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1757431" href="?action=profile;user=_private">_private</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545012315" title="17/12/2018 a las 2:05 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+no sale enlace<br />&nbsp;<img src="https://identi.io/Smileys/default/icon_sad.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5380092" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Mantikor" href="?action=profile;user=Mantikor">
+<img id="error_avatar" src="http://t01.deviantart.net/zskfiS4yeUdliyxkljLKsDn8Qnc=/fit-in/150x150/filters:no_upscale():origin()/pre00/94e9/th/pre/f/2012/362/0/3/slackware_badge_by_amai_biscuit-d5phf2e.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1951702" href="?action=profile;user=Mantikor">Mantikor</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545016406" title="17/12/2018 a las 3:13 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias!
+</div>
+</div>
+</div>
+</div><div id="comment_5380169" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mustachio6" href="?action=profile;user=mustachio6">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1602746" href="?action=profile;user=mustachio6">mustachio6</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545044236" title="17/12/2018 a las 10:57 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracielas°-°
+</div>
+</div>
+</div>
+</div><div id="comment_5380213" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="reformau" href="?action=profile;user=reformau">
+<img id="error_avatar" src="https://drive.google.com/file/d/1__UNS6yo-9h8LeX1jTfHcs3QtIJ8DiWQ/view?usp=sharing" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="16919" href="?action=profile;user=reformau">reformau</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545056989" title="17/12/2018 a las 14:29 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias por el aporte <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5380317" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="antoni2k6" href="?action=profile;user=antoni2k6">
+<img id="error_avatar" src="http://www.gravatar.com/avatar/d4f45543fb684cc678d3c05762cedf40.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1639829" href="?action=profile;user=antoni2k6">antoni2k6</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545079555" title="17/12/2018 a las 20:45 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5380357" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="_private" href="?action=profile;user=_private">
+<img id="error_avatar" src="http://imgfz.com/i/H2SesPO.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1757431" href="?action=profile;user=_private">_private</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545089807" title="17/12/2018 a las 23:36 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+disculpa la ignorancia, me puedes explicar como ver el enlace?
+</div>
+</div>
+</div>
+</div><div id="comment_5380438" class="comentario coment_id_10">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ken21177" href="?action=profile;user=ken21177">
+<img id="error_avatar" src="http://www.forodecostarica.com/attachments/176505d1326751376-sorry-maes-pero-la-liga-es-la-liga-lda.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="138933" href="?action=profile;user=ken21177">ken21177</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545103547" title="18/12/2018 a las 3:25 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1757431" href="https://identi.io/index.php?action=profile&user=_private" class="mensiones_identi">@_private</a> nesesitas tener el jdonwloader abierto y luego le das al boton &quot;agregar enlaces al jdownloader&quot;
+</div>
+</div>
+</div>
+</div><div id="comment_5380543" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="_private" href="?action=profile;user=_private">
+<img id="error_avatar" src="http://imgfz.com/i/H2SesPO.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1757431" href="?action=profile;user=_private">_private</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545146948" title="18/12/2018 a las 15:29 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita ken21177: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><a usuario="1757431" href="https://identi.io/index.php?action=profile&user=_private" class="mensiones_identi">@_private</a> nesesitas tener el jdonwloader abierto y luego le das al boton &quot;agregar enlaces al jdownloader&quot;</div></blockquote>Gracias , era firefox, me toco usar chrome
+</div>
+</div>
+</div>
+</div><div id="comment_5380734" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="DonatoM" href="?action=profile;user=DonatoM">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="112581" href="?action=profile;user=DonatoM">DonatoM</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545176229" title="18/12/2018 a las 23:37 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5380860" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="DonMuzza" href="?action=profile;user=DonMuzza">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1977710" href="?action=profile;user=DonMuzza">DonMuzza</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545221376" title="19/12/2018 a las 12:09 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias para compartir!!!
+</div>
+</div>
+</div>
+</div><div id="comment_5382939" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="deadmortal" href="?action=profile;user=deadmortal">
+<img id="error_avatar" src="https://i.postimg.cc/YjK26w5V/b6336x3.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1852611" href="?action=profile;user=deadmortal">deadmortal</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1545751582" title="25/12/2018 a las 15:26 ">hace m&aacute;s de 6 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas Gracias! Ya que estoy aprendiendo PHP y ahora Javascript.
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_4.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949a81acea6dea5',t:'MTc2MTQ3ODU5Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
