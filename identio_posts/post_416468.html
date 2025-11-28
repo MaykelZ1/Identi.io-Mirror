@@ -1,0 +1,655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Crea tu propio gif con photoshop cs6 (incluido) - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Buenas amigos, en esta oportunidad les traigo un pequeño tutorial de como crear tus propios gif personalizados. Sé que sobre esto se pueden encontrar muchos video-tutoriales en youtube donde aprende..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='YVM4aVBXcHVKVlR1TVBKVTJGc2RHVmtYMTlYcVd6bnBRK0tLTmV1c2ZuRmc5YkJxby9ka3gvYXo4bTVHYTFvT1NxWmxEN0ZiMnMveUNsOUNLNUFCeVZLVWZjenhwVkE1OU1Xbmc9PTJwNmdKTGZmMFJwcVl1MA==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761481318;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '9dd964f2e048b57dee16f5453332cba9');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_7.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Crea tu propio gif con photoshop cs6 (incluido)" title="Identi - Crea tu propio gif con photoshop cs6 (incluido)" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'fde4613a03bb4df0e57dbea687ee121d0727c5d5';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=matiepns">matiepns</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=matiepns" title="Ir al Perfil de matiepns"><img id="error_avatar" class="avatar" border="0" width="120" src="http://ximages.net/images/43100208831758174763.gif"/></a>
+<div class=" rango_sidebar clearfix">Gold User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/uy.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/golduser.png" title="Gold User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1889299)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1889299');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">45</b> Seguidores</li>
+<li><b>1802</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>23</b> Posts</li>
+<li><b>251</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Crea tu propio gif con photoshop cs6 (incluido)</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=416467';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=416469';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 9 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1078496">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><img id="img_post" src="http://ximages.net/images/23136169865380976207.gif" border="0"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><b><font size="4" style="line-height: 1.3em;">Buenas amigos, en esta oportunidad les traigo un pequeño tutorial de como crear tus propios gif personalizados. Sé que sobre esto se pueden encontrar muchos video-tutoriales en youtube donde aprender, pero estos obvian muchas cosas que, para los nuevos en esto, puede confundirlos. por esa razón me gustaría compartir la manera en la cual los hago yo.</font></b></div><br /><div align="center"><b><font size="4" style="line-height: 1.3em;">Tal vez no sea la manera más rápida y &quot;profecional&quot; de hacerla, pero para un principiante -como yo- puede serle de utilidad. Espero ser claro y lo más preciso posible, es mi primer tutorial así que espero que me tengan paciencia...jajaja. Sólo queda decir que cualquier problema que tengan o confusión me avisan  e intentamos solucionarlo.</font></b></div><br /><div align="center"><b><font size="4" style="line-height: 1.3em;">Sin mas, comencemos...</font></b><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><font size="4" style="line-height: 1.3em;">Comencemos creando un nuevo proyecto desde la pestaña archivo o presionando &quot;ctrl+N&quot;.</font><img id="img_post" src="http://ximages.net/images/80002849843117842711.jpg" border="0"></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /><div style="text-align: left;"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"></div><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><font size="4" style="line-height: 1.3em;">Creamos un espacio de trabajo, en mi caso de 1920 pixels de ancho por 1080 pixels de alto, y resolución 200. No necesariamente deben ser esas, ustedes pueden hacerlo como mejor les parezca.</font><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/20969435258663830772.jpg" border="0"></font><br /><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">Les quedará algo así:</font></div><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/69598611407093863017.jpg" border="0"></font></div><br /></div><br /><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><br /><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">Usando el bote de pintura, rellenamos la capa de fondo con el color que prefieran. En mi caso es un gris oscuro -Exactamente #252525-. </font></div><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/08167206483410872747.jpg" border="0"></font></div><br /></div><br /><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><br /><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><font size="4" style="line-height: 1.3em;">Creamos el texto que se verá de fondo, junto con tu firma. Los colores y las tipografía son a su total elección. Yo usé un verde -#99fa01-, un azul -#0c62bd-. Y las tipografías son: -Homestead- y -Goudy Old Style-.</font><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/93396130065264840355.jpg" border="0"></font><br /><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><br /><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">Duplicamos la capa de fondo y la arrastramos arriba de las demás capas.</font></div><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/70887775308489081003.jpg" border="0"><img id="img_post" src="http://ximages.net/images/82074316340102248562.jpg" border="0"></font></div><br /><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><br /><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><font size="4" style="line-height: 1.3em;">Con la herramienta rectángulo creamos uno, usamos el mismo color de relleno y trazado, en mi caso -#5a5a5a-, y lo ubicamos en la parte inferior de la última capa creada. </font><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/76410098036592185723.jpg" border="0"><img id="img_post" src="http://ximages.net/images/20203346155687878876.jpg" border="0"></font></div><br /><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><br /><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><div style="text-align: left;"><span style="color: #262626;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;">Seleccionamos la pestaña &quot;vista&quot; y corroboramos que estén palomeadas las opciones de extras, reglas, ajustar y las guías. Son muy importantes para facilitar el ajuste de las capas y los textos.</span></font></span></div><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/73098329628518680280.jpg" border="0"><img id="img_post" src="http://ximages.net/images/78019490528761755174.jpg" border="0"></font></div><br /><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><br /><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><div style="text-align: left;"><span style="color: #262626;"><span style="font-family: Tahoma, sans-serif;"><font size="4" style="line-height: 1.3em;">Seleccionamos el rectángulo y la capa superior utilizando &quot;ctrl&quot; y &quot;click primario&quot;. Luego &quot;click secundario&quot; y seleccionamos &quot;combinar capas&quot;.</font></span></span></div><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/13274841041225141421.jpg" border="0"></font></div><br /><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><br /><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><font size="4" style="line-height: 1.3em;">Movemos la combinación de capas creadas anteriormente y la ubicamos dejando visible nuestra firma. Desde regla, ubicada en la parte superior de la pantalla, bajamos una guía nueva y la ajustamos en el inferior de nuestra capa &quot;rectángulo 1&quot;, esto nos servirá para saber hasta donde ajustaremos la capa al momento de hacer la animación.</font><br /><font size="4" style="line-height: 1.3em;">También creamos un nuevo texto con la información que bajará y subirá al momento de hacer la animación. Utilizamos la misma combinación de tipografías y colores.</font><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/57433737398784073795.jpg" border="0"></font></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"></div><br /><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><div style="text-align: left;"><span style="color: #262626;"><span style="font-family: Tahoma, sans-serif;"><font size="4" style="line-height: 1.3em;">Seleccionamos la capa del último texto creado y la capa del segundo fondo &quot;rectángulo 1&quot; y las enlazamos. Esto nos permite mover las dos capas seleccionando solamente una. </font></span></span></div><br /><div style="text-align: left;"><span style="color: #262626;"><span style="font-family: Tahoma, sans-serif;"><font size="4" style="line-height: 1.3em;">También podemos combinarlas como hicimos anteriormente, pero si en algún momento necesitamos editar el texto, no podremos hacerlo.</font></span></span></div><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/34422397876004540076.jpg" border="0"></font></div><br /><font size="4" style="line-height: 1.3em;">Debe quedarnos así:<img id="img_post" src="http://ximages.net/images/46033304440467817897.jpg" border="0"></font><br /><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><div style="text-align: left;"><span style="color: #262626;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;">Seleccionamos las capas enlazadas y las movemos hacia arriba. Yo dejé un espacio para que quede visible una sección del fondo gris oscuro. Esos detalles cada uno los hace como más les convenza...</span></font></span></div><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/61192198957102344732.jpg" border="0"></font></div><br /><br /><div align="center"><font size="4" style="line-height: 1.3em;">También bajamos una guía para dejar marcado donde comenzaremos la animación, además, junto con las guías verticales evitarán que el diseño se mueva de maneras que no querremos. Es un poco tedioso pero verán que les facilitará mucho el trabajo mas adelante.</font></div><br /><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/50147227222588765937.jpg" border="0"></font></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"></div><br /><div align="center"><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">Entre la primer guía -debajo del rectángulo gris claro- y la segunda -arriba del texto de la firma-, completamos con mas guías, intentando que quede una separación lo más pareja posible entre guía y guía. Esta separación igual entre guía y guía nos permitirá crear una animación constante, sin diferencia de tiempos entre fotograma y fotograma.</font></div><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/98678970537492321510.jpg" border="0"></font></div><br /></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><div style="text-align: left;"><b><span style="text-decoration: underline;"><font size="4" style="line-height: 1.3em;">Comencemos con la animación:</font></span></b></div><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">Iremos a la pestaña &quot;ventana&quot; y corroboraremos que esté tildada la casilla &quot;línea de tiempo&quot;. </font></div><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;"><br /><img id="img_post" src="http://ximages.net/images/33438646599337807273.jpg" border="0"></font></div><br /><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">En la esquina inferior derecha seleccionaremos &quot;crear animación de fotogramas&quot;. </font></div><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/31997216439280887572.jpg" border="0"></font></div><br /></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><div style="text-align: left;"><span style="color: #262626;"><span style="font-family: Tahoma, sans-serif;"><font size="4" style="line-height: 1.3em;">Nos debe quedar así. Este será nuestro primer fotograma. Por defecto el primer fotograma nos quedará con un tiempo de 0 seg. Lo cambiaremos a 2 segundos que es el tiempo que nos quedará la imagen estática, antes de comenzar la animación.</font></span></span></div><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/59838886987363504578.jpg" border="0"></font></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><div style="text-align: left;"><span style="color: #262626;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;">En la sección marcada con rojo en la imagen, agregaremos un nuevo fotograma</span></font></span></div><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/57746054514938986907.jpg" border="0"></font></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><div style="text-align: left;"><span style="color: #262626;"><span style="font-family: Tahoma, sans-serif;"><font size="4" style="line-height: 1.3em;">Con el segundo fotograma seleccionado, mover las capas enlazadas hasta que queden alineadas a la segunda guía.</font></span></span></div><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/22388372296697080807.jpg" border="0"></font></div><br /><br /><div style="text-align: left;"><div align="center"><span style="color: #262626;"><span style="font-family: Tahoma, sans-serif;"><font size="4" style="line-height: 1.3em;">Luego, crear otro fotograma de la misma manera anterior.</font></span></span></div><br /></div><br /><div style="text-align: left;"><span style="color: #262626;"><span style="font-family: Tahoma, sans-serif;"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/56238027323559096284.jpg" border="0"></font></span></span></div><br /><div style="text-align: left;"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"></div><br /></div><br /><div align="center"><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><span style="color: #262626;"><span style="font-family: Tahoma, sans-serif;">Nuevamente mover las capas enlazadas hacia abajo, hasta alinearla a la siguiente guía</span></span><img id="img_post" src="http://ximages.net/images/01348952616061486409.jpg" border="0"></font></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">Repetir estos últimos dos procedimientos respectivamente hasta llegar a la última guía. a este último fotograma tendremos que cambiarle el tiempo a 2 segundos, como lo hicimos con el primer fotograma.</font></div><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">Luego repetir el procedimiento pero ahora hacia arriba, teniendo la precaución de que los fotogramas vuelvan a tener tiempos de 0 segundos<span style="color: #262626;"><span style="font-family: Tahoma, sans-serif;"><img id="img_post" src="http://ximages.net/images/05010598619919681273.jpg" border="0"></span></span></font></div><br /></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><span style="color: #262626;"><span style="font-family: Tahoma, sans-serif;">Al finalizar el proceso nos deben quedar unas 24 imagenes.</span></span><img id="img_post" src="http://ximages.net/images/25792205889728885845.jpg" border="0"></font></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><span style="color: #262626;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;">Para guardar seleccionamos &quot;archivo/ guardar para web&quot; o &quot;Alt+Mayúsculas+Ctrl+S&quot;.</span></font></span></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/55579476802891220672.jpg" border="0"></font></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><div style="text-align: left;"><span style="color: #262626;"><span style="font-family: Tahoma, sans-serif;"><font size="4" style="line-height: 1.3em;">En la esquina inferior izquierda, tenemos la opción de pre visualizar la imagen completa o en diferentes porcentajes.</font></span></span></div><br /><div style="text-align: left;">En la esquina inferior derecha, tenemos las opciones para reproducir la animación.</div><br /><div style="text-align: left;">Y con la opción de guardar, seleccionaremos el destino donde alojar el gif.</div><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/10935043767799062978.jpg" border="0"></font><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><span style="color: #262626;"><span style="font-family: Tahoma, sans-serif;">Solamente queda cambiarle el nombre y elegir la carpeta donde alojarlo.</span></span><img id="img_post" src="http://ximages.net/images/88965137492409628651.jpg" border="0"></font></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><font size="4" style="line-height: 1.3em;">Si completan todos los pasos les quedará algo así:</font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="http://ximages.net/images/23136169865380976207.gif" border="0"></font></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><font size="5" style="line-height: 1.3em;">Dejo algunos separadores que hice para que los utilicen o tomen de ejemplos:</font></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><img id="img_post" src="http://ximages.net/images/53415687713820075181.gif" border="0"><img id="img_post" src="http://ximages.net/images/08853720824224423518.gif" border="0"><img id="img_post" src="http://ximages.net/images/39838022875210562057.gif" border="0"><img id="img_post" src="http://ximages.net/images/79590030968923439965.gif" border="0"><img id="img_post" src="http://ximages.net/images/28010267156897565681.gif" border="0"><img id="img_post" src="http://ximages.net/images/24704692982872455864.gif" border="0"><img id="img_post" src="http://ximages.net/images/08706971068924338071.gif" border="0"><br /><div style="text-align: left;"><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><img id="img_post" src="http://ximages.net/images/49238461101526732021.gif" border="0"><img id="img_post" src="http://ximages.net/images/43898169580677079563.gif" border="0"><img id="img_post" src="http://ximages.net/images/87581258853352254658.gif" border="0"><img id="img_post" src="http://ximages.net/images/26439324790543307078.gif" border="0"><img id="img_post" src="http://ximages.net/images/54008367031291931670.gif" border="0"><img id="img_post" src="http://ximages.net/images/37886683565557165568.gif" border="0"></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><img id="img_post" src="http://ximages.net/images/25953224382650833797.gif" border="0"><img id="img_post" src="http://ximages.net/images/47762041042059793028.gif" border="0"><img id="img_post" src="http://ximages.net/images/51105391308099409456.gif" border="0"><img id="img_post" src="http://ximages.net/images/00004294195207879885.gif" border="0"><img id="img_post" src="http://ximages.net/images/95873198794851092468.gif" border="0"><img id="img_post" src="http://ximages.net/images/72126655720006017035.gif" border="0"></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><img id="img_post" src="http://ximages.net/images/85771739109165075799.gif" border="0"><img id="img_post" src="http://ximages.net/images/68086956083530018151.gif" border="0"><img id="img_post" src="http://ximages.net/images/30212913490516512146.gif" border="0"><img id="img_post" src="http://ximages.net/images/90011065642435191701.gif" border="0"><img id="img_post" src="http://ximages.net/images/31507040341112579886.gif" border="0"><img id="img_post" src="http://ximages.net/images/76174441015717707383.gif" border="0"><img id="img_post" src="http://ximages.net/images/34222726527359309944.gif" border="0"></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><img id="img_post" src="http://ximages.net/images/18041304915893636844.gif" border="0"><img id="img_post" src="http://ximages.net/images/99485755102810679817.gif" border="0"><img id="img_post" src="http://ximages.net/images/89223071751850350068.gif" border="0"><img id="img_post" src="http://ximages.net/images/01880693373754165780.gif" border="0"><img id="img_post" src="http://ximages.net/images/90837989768326433863.gif" border="0"><img id="img_post" src="http://ximages.net/images/68387141757989025532.gif" border="0"><img id="img_post" src="http://ximages.net/images/22082575938561309159.gif" border="0"></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><img id="img_post" src="http://ximages.net/images/62882182144627760829.gif" border="0"><img id="img_post" src="http://ximages.net/images/87267496435197563509.gif" border="0"><img id="img_post" src="http://ximages.net/images/07756681846841830871.gif" border="0"><img id="img_post" src="http://ximages.net/images/12952451616115912823.gif" border="0"><img id="img_post" src="http://ximages.net/images/57432971722113355385.gif" border="0"><img id="img_post" src="http://ximages.net/images/74474237344177822125.gif" border="0"></div><br /><div align="center"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><b><font size="5" style="line-height: 1.3em;">Photoshop, por si alguien lo necesita o tiene otra versión distinta.</font></b><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><span style="color: #262626;"><span style="font-family: Tahoma, sans-serif;"><style>.myjdownloader{background: url(https://www.identi.io/images/jdownloader.png) no-repeat;}</style><div align="center"><div class="clearfix spoiler"><div class="spoiler_cont" id="hide"><a style="font-size:14px; display:block; color:#D0B310;" href="?topic=78787" target="_blank"><img style="vertical-align:middle; margin-right:10px;" src="https://www.identi.io/images/jdownloader.png" width="50" height="50"/><b>Tutorial para descargar con Jdownloder</b></a><div class="clearfix spoiler"><form action="http://127.0.0.1:9666/flash/addcrypted2" target="hidden" class="jd" method="POST"><input type="hidden" name="passwords" value="myPassword"/><input type="hidden" name="source" value="http://jdownloader.org/spielwiese" /><input type="hidden" name="jk" value="function f(){ return '31323334353636373730393837363534';}" /><input type="hidden" name="crypted" value="Hq6p0QOxTtHDvoD+6nW49InAapiCOixNqu1H3TbHeUxfT46lANJ1ep7gPigTegUPlENlJhEzVhwU7LtiXjEd6wPjGoKx9bLFveEyoyFshKA="><input type="SUBMIT" name="submit" style="padding-left: 45px !important;" class="spoiler-btn myjdownloader" id="decrypt" value="Agregar enlaces a Jdownloader" class="gestor_descargas"/></form></div></div></div></div></span></span><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><b><font size="5" style="line-height: 1.3em;">Muchas gracias por pasar, me disculpo de antemano por cualquier error cometido, como dije antes, es mi primer tutorial. </font></b><b><font size="5" style="line-height: 1.3em;">Espero les sea de utilidad y se animen a crear sus propias imágenes, para hacer mas originales sus aportes...</font></b><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"></div><br /><div align="center"><img id="img_post" src="https://lh5.googleusercontent.com/-L5lYG-4unrw/Vt0uQApfEUI/AAAAAAAABhw/j1BVnT2UMgMpPkZFnnZWT98g7ONwxRMsA/w1044-h381-no/importante.jpg" border="0"><img id="img_post" src="https://lh6.googleusercontent.com/-OiDjtoX52Gs/VtkR22gkxqI/AAAAAAAABYU/34ggWcivS8o/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-2.jpg" border="0"><img id="img_post" src="https://lh4.googleusercontent.com/-Tshq_78vQUQ/VtkR2zLnoFI/AAAAAAAABYU/oTishfd-hcA/w1044-h63-no/Sin%2Bt%25C3%25ADtulo-21.jpg" border="0"><img id="img_post" src="https://lh4.googleusercontent.com/-zy29k-mUi50/VtvguDEDq3I/AAAAAAAABeQ/p30NJFVqdcskis7_EAWEaBD15WA-rW67Q/w1044-h418-no/2.gif" border="0"></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><br /></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">49</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 4.9/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1810</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">8</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(416468,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(416468,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(416468,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(416468,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(416468,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(416468,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(416468,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(416468,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(416468,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(416468,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://i.imgur.com/SrN2Duk.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1889019" title="perfil de ricardo130"> ricardo130</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-ZnQOoanfmpw/Vri1yddFiLI/AAAAAAAAAF4/2uDELkWWmWI/s1600/el%2Bque%2Bcalla%2Bno%2Bsiempre%2Botorga.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1752516" title="perfil de TRYUMPHF"> TRYUMPHF</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://4.bp.blogspot.com/-IN2nMuo42qY/WRxLd_Y0FRI/AAAAAAAACMU/K1tcgdNvXME7raaIJMTD9IUp1lIP0ztDACLcB/s320/456t45y5y.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1556129" title="perfil de menteinfec"> menteinfec</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://images2.imgbox.com/f9/17/T6XHK8bK_o.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=140613" title="perfil de fercho08"> fercho08</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://giffiles.alphacoders.com/381/3816.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1525211" title="perfil de eiffelx182"> eiffelx182</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://static1.wikia.nocookie.net/__cb20101015163337/familyguy/images/c/c2/Brian_as_Chewie.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1814653" title="perfil de AntonioLG"> AntonioLG</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://4.bp.blogspot.com/-J9dMYSE6giM/WO7sPo3BQFI/AAAAAAAAFag/rHlDAxQYzoEaSidr0O71ANZOFBbEFrnjwCLcB/s1600/Imagen10.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1930957" title="perfil de cjod99"> cjod99</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-MPY7sqpHpHI/VquaijzxoYI/AAAAAAAAAA0/JCnKOTpQvPc/s1600/av03.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1948690" title="perfil de dio.99"> dio.99</a>: <b>4 pts</b></span>  </li><li><img id="error_avatar" src="https://image.spreadshirtmedia.net/image-server/v1/compositions/T1459A839PA4459PT28D317481818W10000H10000/views/1,width=378,height=378,appearanceId=839,backgroundColor=FFFFFF,noPt=true/rocknroll-horror-punk-zombie-skull.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1551735" title="perfil de markus92"> markus92</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.subdivx.com/avatar/1802596.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1590606" title="perfil de steampunk"> steampunk</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(416468);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('416468');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=415794" title="Colección BrRip [2015] [720p] [1080p] [Latino]"> Colección BrRip [2015] [720p] [1080p] [Latino]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=415622" title="12 horas para sobrevivir [2014] [1080p] [BrRip]"> 12 horas para sobrevivir [2014] [1080p] [BrRip]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=415597" title="El último cazador de brujas [2015] [1080p] [BrRip]"> El último cazador de brujas [2015] [1080p] [BrRip]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=415352" title="Home [2015] [1080p] [BrRip] [Dual]"> Home [2015] [1080p] [BrRip] [Dual]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=415274" title="Sin escape [2015] [1080p] [BrRip] [Dual]"> Sin escape [2015] [1080p] [BrRip] [Dual]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=414975" title="Everest [2015] [1080p] [Dual]"> Everest [2015] [1080p] [Dual]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=414925" title="The ridiculous 6 [2015][BrRip][1080p][latino]"> The ridiculous 6 [2015][BrRip][1080p][latino]</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">16</span> Comentarios</span>
+<span class="onpost"> Crea tu propio gif con photoshop cs6 (incluido)</span>
+<div class="comentario"></div><div id="comment_4466893" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ricardo130" href="?action=profile;user=ricardo130">
+<img id="error_avatar" src="https://i.imgur.com/SrN2Duk.jpeg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1889019" href="?action=profile;user=ricardo130">ricardo130</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1457738949" title="11/03/2016 a las 23:29 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4466948" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="TRYUMPHF" href="?action=profile;user=TRYUMPHF">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-ZnQOoanfmpw/Vri1yddFiLI/AAAAAAAAAF4/2uDELkWWmWI/s1600/el%2Bque%2Bcalla%2Bno%2Bsiempre%2Botorga.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1752516" href="?action=profile;user=TRYUMPHF">TRYUMPHF</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1457741646" title="12/03/2016 a las 0:14 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Excelente Tutorial Amigo!!! lo voy a intentar en cuanto tenga un poco de tiempo!!!<br /><br />Muchas gracias por compartir!!! +5 <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4467057" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="fercho08" href="?action=profile;user=fercho08">
+<img id="error_avatar" src="http://images2.imgbox.com/f9/17/T6XHK8bK_o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="140613" href="?action=profile;user=fercho08">fercho08</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1457746517" title="12/03/2016 a las 1:35 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy buen tutorial amigo, bien explicado y las imagenes que has dejado de muestra te han quedado geniales.<br />Gracias por tu tiempo y por compartir tus conocimientos &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4467110" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="AntonioLG" href="?action=profile;user=AntonioLG">
+<img id="error_avatar" src="http://static1.wikia.nocookie.net/__cb20101015163337/familyguy/images/c/c2/Brian_as_Chewie.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1814653" href="?action=profile;user=AntonioLG">AntonioLG</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1457748701" title="12/03/2016 a las 2:11 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+GRACIAS &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4467174" class="comentario coment_id_5">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="matiepns" href="?action=profile;user=matiepns">
+<img id="error_avatar" src="http://ximages.net/images/43100208831758174763.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1889299" href="?action=profile;user=matiepns">matiepns</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1457751157" title="12/03/2016 a las 2:52 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1889019" href="https://identi.io/index.php?action=profile&user=ricardo130" class="mensiones_identi">@ricardo130</a> Gracias a vos por pasar...<br /><a usuario="1752516" href="https://identi.io/index.php?action=profile&user=TRYUMPHF" class="mensiones_identi">@TRYUMPHF</a> Int?
+</div>
+</div>
+</div>
+</div><div id="comment_4467421" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superju" href="?action=profile;user=superju">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-XyanTXLc4NI/VU2ZY-yaVDI/AAAAAAAAAB0/dFPg6omdX-M/s1600/k8.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="105347" href="?action=profile;user=superju">superju</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1457763464" title="12/03/2016 a las 6:17 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1889299" href="https://identi.io/index.php?action=profile&user=matiepns" class="mensiones_identi">@matiepns</a> Excelente, aunque me hubiera gustado en video, porque algunas imagenes no se me muestran. &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4467487" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="cjod99" href="?action=profile;user=cjod99">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-J9dMYSE6giM/WO7sPo3BQFI/AAAAAAAAFag/rHlDAxQYzoEaSidr0O71ANZOFBbEFrnjwCLcB/s1600/Imagen10.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1930957" href="?action=profile;user=cjod99">cjod99</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1457772220" title="12/03/2016 a las 8:43 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Definitivamente, un magnifico aporte amigo, sin duda mucha gente le servira este tutorial para perfeccionar sus trabajos y mejorar sus conocimientos en el dise?
+</div>
+</div>
+</div>
+</div><div id="comment_4467808" class="comentario coment_id_8">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="matiepns" href="?action=profile;user=matiepns">
+<img id="error_avatar" src="http://ximages.net/images/43100208831758174763.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1889299" href="?action=profile;user=matiepns">matiepns</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1457808113" title="12/03/2016 a las 18:41 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="105347" href="https://identi.io/index.php?action=profile&user=superju" class="mensiones_identi">@superju</a> Si, es verdad, es que identi tiene algunos problemas con las im?
+</div>
+</div>
+</div>
+</div><div id="comment_4470699" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="dio.99" href="?action=profile;user=dio.99">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-MPY7sqpHpHI/VquaijzxoYI/AAAAAAAAAA0/JCnKOTpQvPc/s1600/av03.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1948690" href="?action=profile;user=dio.99">dio.99</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1457977486" title="14/03/2016 a las 17:44 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias, buena gu?
+</div>
+</div>
+</div>
+</div><div id="comment_4470719" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="markus92" href="?action=profile;user=markus92">
+<img id="error_avatar" src="https://image.spreadshirtmedia.net/image-server/v1/compositions/T1459A839PA4459PT28D317481818W10000H10000/views/1,width=378,height=378,appearanceId=839,backgroundColor=FFFFFF,noPt=true/rocknroll-horror-punk-zombie-skull.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1551735" href="?action=profile;user=markus92">markus92</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1457978488" title="14/03/2016 a las 18:01 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+voy a usar unas de tus &nbsp;baner en post................. <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4472377" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="YoAns" href="?action=profile;user=YoAns">
+<img id="error_avatar" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.minitokyo.net%2Fdownloads%2F34%2F43%2F349684.jpg&amp;f=1" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1940739" href="?action=profile;user=YoAns">YoAns</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458074375" title="15/03/2016 a las 20:39 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+agradecido con el material amigo... <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /><br /><br />el photoshop es suleto &quot;solo&quot;???<br />o es portable, &nbsp;ya que busco uno instalable completo &nbsp;no portable... <img src="https://identi.io/Smileys/default/icon_vangry.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4472463" class="comentario coment_id_12">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="matiepns" href="?action=profile;user=matiepns">
+<img id="error_avatar" src="http://ximages.net/images/43100208831758174763.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1889299" href="?action=profile;user=matiepns">matiepns</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458079396" title="15/03/2016 a las 22:03 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1948690" href="https://identi.io/index.php?action=profile&user=dio.99" class="mensiones_identi">@dio.99</a> Buena idea, lo voy a intentar a ver si sale. An?
+</div>
+</div>
+</div>
+</div><div id="comment_4474313" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="steampunk" href="?action=profile;user=steampunk">
+<img id="error_avatar" src="http://www.subdivx.com/avatar/1802596.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1590606" href="?action=profile;user=steampunk">steampunk</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458183169" title="17/03/2016 a las 2:52 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Cual es la contrase?
+</div>
+</div>
+</div>
+</div><div id="comment_4474415" class="comentario coment_id_14">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="matiepns" href="?action=profile;user=matiepns">
+<img id="error_avatar" src="http://ximages.net/images/43100208831758174763.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1889299" href="?action=profile;user=matiepns">matiepns</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458186699" title="17/03/2016 a las 3:51 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1590606" href="https://identi.io/index.php?action=profile&user=steampunk" class="mensiones_identi">@steampunk</a> No coloqu?
+</div>
+</div>
+</div>
+</div><div id="comment_4475339" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="YoAns" href="?action=profile;user=YoAns">
+<img id="error_avatar" src="https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.minitokyo.net%2Fdownloads%2F34%2F43%2F349684.jpg&amp;f=1" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1940739" href="?action=profile;user=YoAns">YoAns</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458255935" title="17/03/2016 a las 23:05 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1889299" href="https://identi.io/index.php?action=profile&user=matiepns" class="mensiones_identi">@matiepns</a> &nbsp;muy bien gracias por aclararlo... <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4934252" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="MarsDeim" href="?action=profile;user=MarsDeim">
+<img id="error_avatar" src="https://i.ibb.co/Pwc9Bs8/mars.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="75481" href="?action=profile;user=MarsDeim">MarsDeim</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1495335169" title="21/05/2017 a las 2:52 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_7.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949ea9fef12dea5',t:'MTc2MTQ4MTMxOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
