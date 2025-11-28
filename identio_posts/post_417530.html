@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Curso hacking wifi desde cero ? técnicas de ataque - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="El Curso está enfocado para preparar a los alumnos a realizar test de penetración en su propia red wifi (inalámbrica) y lo mejor de todo es que todo está explicado paso a paso. Todo el curso perm..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='cW9WWVUxSWdBYmNYV2V2VTJGc2RHVmtYMTkwcU5wcXFzNEhyMGVJWVFoY2dKaWlDUkhDZG9WTW1FbU5oWXgvZUN0UnNlcytnaGoxMXdSbVVGTzJ5akF5aDZiKzdBOFArczZYRlE9PVU1OHY2RUJOMkp3NjB3Yg==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761481291;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '372c035cb1c90b536a45261faea3a01d');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_2.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Curso hacking wifi desde cero ? técnicas de ataque" title="Identi - Curso hacking wifi desde cero ? técnicas de ataque" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '2f75f337db1ece33100a98460431e48920af22db';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=PichoLetra">PichoLetra</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"A la Guerra"
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=PichoLetra" title="Ir al Perfil de PichoLetra"><img id="error_avatar" class="avatar" border="0" width="120" src="https://i.imgur.com/0qVncIn.png"/></a>
+<div class=" rango_sidebar clearfix">Gold User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/co.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/golduser.png" title="Gold User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1735443)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1735443');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">30</b> Seguidores</li>
+<li><b>1797</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>108</b> Posts</li>
+<li><b>90</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Curso hacking wifi desde cero ? técnicas de ataque</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=417529';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=417531';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 9 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1079558">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><img id="img_post" src="data:image/jpeg;base64,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" border="0"><br /><br />El Curso está enfocado para preparar a los alumnos a realizar test de penetración en su propia red wifi (inalámbrica) y lo mejor de todo es que todo está explicado paso a paso.<br />Todo el curso permitirá conocer el amplio grado de vulnerabilidades que pueden existir en las redes que se encuentran ofreciendo diversos servicios. El material incluye Videos donde se explica toda la parte práctica y técnica que se necesitan en este ambiente de trabajo y cada configuración y ejemplo es realizado en vivo.<br /><br />El Curso se estructura de tal manera que los que sigan el curso exploten todo el contenido de aprendizaje, ampliando sus conocimientos y realizando auditorias exactas.<br /><br />Este es el ÚNICO curso en ESPAÑOL que se basa en el HACKIG ETICO WIFI<br /><br />100% Recomendado.<br /><br />CONTENIDO DEL CURSO<br /><br />Sección 1: Introducción / Configuración de Dispositivos<br />Clase 1.-Modo Monitor / Tarjeta de Red Inalámbrica<br />Clase 2 .-Todo sobre Aireplay / funcionamiento<br /><br />Sección 2: Empezando los Primeros Ataques a Redes Wifi<br />Clase 3.-Test de Inyección / Paso a Paso<br />Clase 4.-Ataque de De autenticación<br />Clase 5.-Ataque de Falsa Autenticación<br />Clase 6.-Captura de Peticiones ARP / Wireshark en Acción<br />Sección 3: Análisis y Ataques Instantáneos<br />Clase 7.-Ataque de Fragmentación<br />Clase 8.-Ataque ChopChop Severo<br />Clase 9-Creación de Paquetes Encriptados<br /><br />Sección 4: Hacking WEP<br />Clase 10.-Cracking WEP / Ampliación ARP<br />Clase 11.-Cracking WEP / Clientes en Red 1<br />Clase 12.-Cracking WEP / Sin Clientes en la REd 1<br />Clase 13-Cracking WEP / Sin Clientes 2<br />Clase 14.-Cracking WEP / Clientes en Red 2<br /><br />Sección 5: Hacking WPA / WPA2<br />Clase 15.-Cracking WPA 1<br />Clase 16.-Cracking WPA 2<br />Clase 17.-Ataques a Redes WLAN<br /><br /><a href="https://mega.nz/#!nQBXWLpQ!rwdH7ay5cfUfUzAtBDCAVhKTUZr2ffjsMvjBivrXw0o" target="_blank" rel="nofollow">https://mega.nz/#!nQBXWLpQ!rwdH7ay5cfUfUzAtBDCAVhKTUZr2ffjsMvjBivrXw0o</a><br /><br /><div class="post_pass"><span style="color: #333333;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Lucida Grande, Lucida Sans, Trebuchet MS, Tahoma, Verdana, sans-serif;">discoduroweb</span></font></span><br /><br /><span style="color: #333333;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Lucida Grande, Lucida Sans, Trebuchet MS, Tahoma, Verdana, sans-serif;">La contraseña es la de ariba si no es que me equiboque <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /></span></font></span></div></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">55</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">4347</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">10</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(417530,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(417530,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(417530,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(417530,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(417530,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(417530,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(417530,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(417530,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(417530,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(417530,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://2.bp.blogspot.com/-IZonCiyfWLA/T9AJbdGZG2I/AAAAAAAAABk/tY_QDAK-Eic/s1600/tumblr_lrsvgdrcvJ1qlafm1.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=120893" title="perfil de naruzugui0"> naruzugui0</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-hicz1L2JfzM/TlQLVdmIKTI/AAAAAAAAAA8/IFKcN4PkExU/s1600/51Q-1MkOl%252BL._SS500_.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1951484" title="perfil de BOLLYWOOD_"> BOLLYWOOD_</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://i.minus.com/ihWl6wzSRsgGa.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=50372" title="perfil de ofdeath"> ofdeath</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://s6.postimg.cc/ypajvuz8x/Mi_Logo.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1569502" title="perfil de Tortuga3"> Tortuga3</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://subefotos.com/ver/?c35a36b842c01214775a4d46f35091f7o.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1938125" title="perfil de Maverick00"> Maverick00</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://todosobrearbitraje.files.wordpress.com/2012/01/arbitraje-propiedad-intelec.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1893312" title="perfil de fat_bizkit"> fat_bizkit</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://a.deviantart.net/avatars/h/a/ha7ak3.jpg?5" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=25320" title="perfil de ha7ak3"> ha7ak3</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://s-media-cache-ak0.pinimg.com/564x/88/08/a5/8808a560cf52c3c385eaa6fab24f0428.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1597868" title="perfil de armin_dani"> armin_dani</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://fotos.subefotos.com/74674e77678b65b93ee43d48a8f42238o.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=21861" title="perfil de fabri2788"> fabri2788</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-S-icon.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1939992" title="perfil de SeriesSubs"> SeriesSubs</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipjwZDGm-UGb2ceha_-Hms7gQ7DehjyKhoEoQXO2i-H5RKUfU0ECEijgKqBMumIute_Y2D55RKJeBIAonDiFZeRIDpiKX3Au0a-dnai8mstyX67MYaDZIM6teG6_g23EX7gp6XeiKKOQqLAJaheV44z-0dGTQY6jAGE6PxRZGi1T8rB0GWOovxIF1Lha1z/s400/" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1811632" title="perfil de starkedwar"> starkedwar</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(417530);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('417530');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_96"></i>
+<a href="https://identi.io/index.php?topic=549649" title="Framaroot APK 1.9.4"> Framaroot APK 1.9.4</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=520766" title="Internet Download Manager v6.32 Build 1 Full"> Internet Download Manager v6.32 Build 1 Full</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=492906" title="Bandicam 4,0,2,1352, Full + Crack por MEGA"> Bandicam 4,0,2,1352, Full + Crack por MEGA</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=484101" title="CyberGhost VPN 6,0,8,2959 Full multilenguaje"> CyberGhost VPN 6,0,8,2959 Full multilenguaje</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=482377" title="VEGAS Pro 15,0,0177"> VEGAS Pro 15,0,0177</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=481946" title="Kaspersky Reset Trial 5,1,0,41"> Kaspersky Reset Trial 5,1,0,41</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=481693" title="Wondershare Filmora 8,3,5,6"> Wondershare Filmora 8,3,5,6</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=481689" title="Acronis True Image 2018 Build 9207"> Acronis True Image 2018 Build 9207</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">11</span> Comentarios</span>
+<span class="onpost"> Curso hacking wifi desde cero ? técnicas de ataque</span>
+<div class="comentario"></div><div id="comment_4478123" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="JoseA" href="?action=profile;user=JoseA">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="33163" href="?action=profile;user=JoseA">JoseA</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458421095" title="19/03/2016 a las 20:58 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias que aportazo..amigo
+</div>
+</div>
+</div>
+</div><div id="comment_4478130" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="JoseA" href="?action=profile;user=JoseA">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="33163" href="?action=profile;user=JoseA">JoseA</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458421432" title="19/03/2016 a las 21:03 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Esta mal la clave &nbsp;para extraerlo con winrar. &nbsp;Cual es la passwords
+</div>
+</div>
+</div>
+</div><div id="comment_4478136" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="lab." href="?action=profile;user=lab.">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1830649" href="?action=profile;user=lab.">lab.</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458421882" title="19/03/2016 a las 21:11 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_confused.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_confused.png" alt="" border="0" /> algo parecido<br /><br /><a href="http://www.identi.li/topic/curso-hacking-wifi-desde-cero-tecnicas-de-ataque" target="_blank" rel="nofollow">http://www.identi.li/topic/curso-hacking-wifi-desde-cero-tecnicas-de-ataque</a>
+</div>
+</div>
+</div>
+</div><div id="comment_4478143" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="gza10" href="?action=profile;user=gza10">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="23821" href="?action=profile;user=gza10">gza10</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458422343" title="19/03/2016 a las 21:19 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+cual es la contrase?
+</div>
+</div>
+</div>
+</div><div id="comment_4478146" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ringooooo" href="?action=profile;user=ringooooo">
+<img id="error_avatar" src="https://drive.google.com/file/d/1-frf7gmY545t9E0wZQl06QhyvSn2AoqX/view?usp=sharing" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="118383" href="?action=profile;user=ringooooo">ringooooo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458422438" title="19/03/2016 a las 21:20 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias por el aporte, a ver que tal esta el curso, muchas gracias &nbsp;<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4478158" class="comentario coment_id_6">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="PichoLetra" href="?action=profile;user=PichoLetra">
+<img id="error_avatar" src="https://i.imgur.com/0qVncIn.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1735443" href="?action=profile;user=PichoLetra">PichoLetra</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458422916" title="19/03/2016 a las 21:28 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="33163" href="https://identi.io/index.php?action=profile&user=JoseA" class="mensiones_identi">@JoseA</a> <a usuario="1830649" href="https://identi.io/index.php?action=profile&user=lab." class="mensiones_identi">@lab.</a> <a usuario="23821" href="https://identi.io/index.php?action=profile&user=gza10" class="mensiones_identi">@gza10</a> <a usuario="118383" href="https://identi.io/index.php?action=profile&user=ringooooo" class="mensiones_identi">@ringooooo</a> &nbsp;Post arregaldo con al contrase?
+</div>
+</div>
+</div>
+</div><div id="comment_4478590" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="diegodeace" href="?action=profile;user=diegodeace">
+<img id="error_avatar" src="http://vignette3.wikia.nocookie.net/robocop/images/e/ef/Ed209.jpg/revision/latest?cb=20100116202642" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1942230" href="?action=profile;user=diegodeace">diegodeace</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458441969" title="20/03/2016 a las 2:46 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1830649" href="https://identi.io/index.php?action=profile&user=lab." class="mensiones_identi">@lab.</a> ser?
+</div>
+</div>
+</div>
+</div><div id="comment_4478778" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="lab." href="?action=profile;user=lab.">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1830649" href="?action=profile;user=lab.">lab.</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458450536" title="20/03/2016 a las 5:08 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita diegodeace: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><a usuario="1830649" href="https://identi.io/index.php?action=profile&user=lab." class="mensiones_identi">@lab.</a> ser?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4483467" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mateomax" href="?action=profile;user=mateomax">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-1-HZP_cZTFI/TenvRnieCtI/AAAAAAAAAAQ/kCip8T9llcw/s1600/Fringe+Division+logo.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="63182" href="?action=profile;user=mateomax">mateomax</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458729224" title="23/03/2016 a las 10:33 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4495608" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="joeldany" href="?action=profile;user=joeldany">
+<img id="error_avatar" src="https://t2.gstatic.com/images?q=tbn:ANd9GcSfV967TgF-vEJeOnvSbd3M9zC3NbDWMiOpJ9M1B_bBglV3OLxa" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="108780" href="?action=profile;user=joeldany">joeldany</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1459798296" title="04/04/2016 a las 19:31 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4518222" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Morrighan" href="?action=profile;user=Morrighan">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1934494" href="?action=profile;user=Morrighan">Morrighan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461536884" title="24/04/2016 a las 22:28 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias por compartir!
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_2.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949e9f73914dea6',t:'MTc2MTQ4MTI5MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
