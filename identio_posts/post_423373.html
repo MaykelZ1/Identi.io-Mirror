@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Como crear particiones y dar formato a los discos  - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Como particionar un disco duro o sea dividirlo en diferentes unidades con el objetivo de tener separados e independientes diferente tipo de contenido o inclusive poder instalar otro sistema operativo,..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='eklXYkJhS0ZzcVRqMUlnVTJGc2RHVmtYMThqNFArc2hWVUI5LzhORjZpVTBOOU5WWnZ4N0lualRzWGx0MjB2Vmp3M3ZvQjUvcXc3RitMUjZpTG82d1pVTmhvWU9ZYUNtMlhCWGc9PWJsOWoxOXA4eDB1ODRRVA==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761481126;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'be17df6f55d56e0999ba49ff5af231a3');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_7.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Como crear particiones y dar formato a los discos " title="Identi - Como crear particiones y dar formato a los discos " align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'b6ac82ef55ddecf0c50a3772f281330e2cf70327';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Maverick00">Maverick00</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Maverick00" title="Ir al Perfil de Maverick00"><img id="error_avatar" class="avatar" border="0" width="120" src="https://subefotos.com/ver/?c35a36b842c01214775a4d46f35091f7o.jpg"/></a>
+<div class=" rango_sidebar clearfix">Idento</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/idento.png" title="Idento" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1938125)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1938125');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">27</b> Seguidores</li>
+<li><b>642</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>22</b> Posts</li>
+<li><b>127</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Como crear particiones y dar formato a los discos </h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=423372';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=423374';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 9 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1085402">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Como particionar un disco duro o sea dividirlo en diferentes unidades con el objetivo de tener separados e independientes diferente tipo de contenido o inclusive poder instalar otro sistema operativo, como hacerlo sin afectar los datos e información que contienen. Como formatearlos o sea configurarlos con el sistema de archivo necesario. Diferentes formas y opciones para realizar estas tareas. Consejos y recomendaciones.</span></font></span><br /><div style="text-align: right;"><span style="color: #000000;"><span style="font-family: Segoe UI, Verdana;">Ejemplo de un disco dividido en cuatro particiones<br /><img id="img_post" src="https://norfipc.com/img/articulos/particiones-disco-duro.png" border="0"></span></span></div><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">En ocasiones oímos hablar y leemos de las ventajas de tener dividido un disco duro en varias particiones, pero no nos decidimos a afrontar la tarea, ya sea por temor a dañar la información o por no disponer del tiempo necesario.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Esta página ofrece los elementos necesarios a los que se animan a crear particiones en su disco ya sea este el único que posee el equipo o sea un disco adicional que disponemos para tener de esa forma más espacio, ordenado adecuadamente, gracias a las particiones que necesitamos crear.</span></font></span><br /><br /><br /><br /><span style="color: #000000;"><font size="5" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">¿Qué es una partición de disco?</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Particiones son diferentes secciones virtuales en las que se divide un disco duro, virtuales porque físicamente no existe tal división, los límites de cada espacio solo serán reflejados en la tabla de particiones que es un diminuto espacio que se encuentra al comienzo del disco y es leído por el sistema operativo para conocer la estructura de un disco.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">A cada partición existente Windows le asigna una letra diferente con el objetivo de identificarla de la siguiente forma:</span></font></span><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;"><i>? Las letras A y B se reservaban antiguamente y aún se mantiene para las unidades de discos 3.5 o floppy, muy usadas en los primeros sistemas ya que eran de estas desde donde se iniciaba el sistema.<br />? C siempre es la letra asignada a la unidad donde se encuentra el sistema operativo.<br />? A partir de la D y en adelante se asignan a las diferentes particiones, (E se utiliza generalmente para la primera unidad óptica, en caso de que exista más de una unidad de disco)</i></span></font></span><br /><br /><br /><br /><span style="color: #000000;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">¿Para qué crear particiones?</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Cuando se tiene solo un disco físico en un equipo, lo ideal es tenerlo dividido en dos o más particiones, de esta forma podemos lograr que todos los archivos del sistema operativo estén independientes en una misma lo que trae varias ventajas como son:</span></font></span><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">? Menos fragmentación del disco, esta ocurre cuando ocurren constantemente muchos procesos de copia y eliminación de archivos, es algo normal en el sistema operativo.<br />? En caso de deterioro del sistema podemos formatear la partición que lo contiene sin afectar al resto del contenido.<br />? Mayor rendimiento al tener la posibilidad de tener los archivos de paginación en una unidad diferente a la del sistema.<br />? Tenemos la posibilidad de instalar dos o más sistemas operativos diferentes en el equipo, aprovechando así las características y ventajas de cada uno de ellos.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Al tener el disco dividido en varias particiones podemos también tener separados contenidos diferentes como documentos y archivo multimedia como son, la música, videos, películas, flash, etc.</span></font></span><br /><br /><br /><br /><span style="color: #000000;"><font size="5" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Como crear particiones en los discos duros.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Existen diferentes formas de crear particiones en un disco duro en Windows, sin tener que recurrir a ningún software adicional:</span></font></span><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;"><font size="5" style="line-height: 1.3em;">?</font> Mediante el programa de instalación de Windows, se usa cuando solo se tiene un disco duro físico en el equipo, en ese caso el contenido del disco, si existe alguno es borrado totalmente. Se puede iniciar desde el disco de instalación del sistema operativo, o directamente de los archivos de instalación si se tienen en un disco duro o memoria flash, en ese caso se reiniciará el equipo automaticamente para efectuar la tarea.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;"><font size="5" style="line-height: 1.3em;">?</font> Desde el Administrador de discos incluido en Windows, permite crear y eliminar particiones en cualquier disco duro aunque se tenga solo uno en el equipo, esta opción solo está disponible si se utiliza Windows 7,8.1 y 10 en este caso sin perjudicar la información contenida en un disco, siempre que exista espacio libre disponible.</span></font></span><br /><br /><br /><br /><span style="color: #000000;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Como crear particiones desde el programa de instalación de Windows.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Para crear dos o más particiones en un disco duro desde el programa de instalación de Windows, sigue los siguientes pasos:</span></font></span><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">1- Inserta el disco original de instalación del sistema en la unidad óptica predeterminada o primaria de DVD, en caso de haber varias y reinicia el equipo.<br />2- Permite que el equipo inicie o arranque desde el disco, presiona cualquier tecla cuando se solicite.<br />3- Espera que se copien los archivos necesarios al equipo, en la pantalla que aparece da un clic en &quot;Siguiente&quot;, después &quot;Instalar ahora&quot;. <br />4- En los próximos pasos, Selecciona el sistema operativo Acepto los términos, Instalación Personalizada, hasta llegar a la ventana: <i>¿Dónde desea instalar Windows?</i><br />En esta ventana se muestran las unidades y discos duros disponibles en el equipo, por ejemplo<i>Disco 0 Particion 1</i>, es la primera partición del disco duro primario.<br />5- Selecciona el disco y da un clic en &quot;Opciones de unidad&quot;, aparecerán las siguientes opciones:<br /><b>Eliminar</b>: Elimina una partición.<br /><b>Nuevo</b>: Crea una nueva partición en el espacio no asignado (disponible).<br /><b>Formatear</b>: Le da formato a una partición creada.<br /><b>Extender</b>: Aumenta el tamaño a una partición existente (si hay espacio disponible).<br /><b>Actualizar</b>: Actualiza los cambios realizados.<br />Crea las particiones que desees y dale el formato necesario (NTFS recomendado)<br />Al terminar cierra la ventana y cancela el programa de instalación.</span></font></span><br /><br /><br /><br /><span style="color: #000000;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Como crear particiones desde el Administrador de discos de Windows</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">El Administrador de discos es una herramienta que incluye Windows para administrar los discos duros y los volúmenes o las particiones que contienen. Permite crear, eliminar, así como extender y reducir las particiones.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Cualquiera de estas tareas es un proceso en extremo delicado que puede poner en peligro la información contenida en un disco, por lo que siempre se debe realizar un backup o respaldo de los datos, antes de dar cualquier paso.</span></font></span><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Para abrir el Administrador de discos ejecuta su acceso directo que encontrarás en: <i>Mi PC, Administrar, Administración de discos</i>.<br />Para abrir dicha herramienta de otra forma introduce en el cuadro de Inicio o Ejecutar:<b>diskmgmt.msc</b> y presiona la tecla Enter.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Es una ventana dividida en dos secciones, en su parte superior aparecen listadas todas las unidades y en el panel inferior se muestran los discos duros físicos con las particiones o volúmenes que contienen, en caso que estén particionados.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">A continuación una imagen de cómo aparece el </span></font></span><i><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Administrador de discos de Windows</span></font></span></i><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">, en un equipo que solo tiene un disco duro físico, dividido en dos particiones nombradas en este ejemplo: DATOS y SYSTEM.</span></font></span><br /><img id="img_post" src="https://norfipc.com/img/articulos/administrador-discos-windows.jpeg" border="0"><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Al dar un clic derecho en cada unidad o disco estará disponible un menú con todas las acciones que se puedan realizar en cada caso, siempre asegúrate de seleccionar correctamente la unidad o disco, en ese caso resaltará sombreada con líneas.</span></font></span><br /><br /><br /><br /><br /><span style="color: #000000;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Crear particiones en un disco que no es del sistema.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Crear particiones en un disco duro donde no se encuentre el sistema operativo, en caso de que dispongamos de un disco adicional no es ningún problema. Hazlo de la siguiente forma:</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">? Si el disco duro es nuevo será necesario primero inicializarlo, para eso da un clic derecho en él y escoge: &quot;Inicializar&quot;.<br />? Para crear una partición da un clic derecho y escoge &quot;Crear partición&quot;, ingresa el tamaño que debe tener.<br /><i>El tamaño se tiene que especificar en MB (MegaByte), la relación que existe entre MB y GB (GigaByte) es la siguiente: <br />1 GigaByte = 1024 MegaByte<br />Por ejemplo si necesitas crear una partición de 10 GigaByte, tienes que introducir 10240 MegaByte.<br />Puedes utilizar el siguiente formulario para convertir de GigaByte a MegaByte.<br />GB<br /><br />MB<br /></i><br />? Para formatear la partición o sea escoger el sistema de archivos que se va a emplear, da un clic derecho y escoge &quot;Formatear&quot;.</span></font></span><br /><br /><span style="color: #000000;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">¿Qué formato utilizar, cual es la diferencia?</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">En Windows se puede utilizar varios formatos de archivo en los dispositivos de almacenamiento. Han ido evolucionando con el tiempo con nuevas características que lo hacen más eficientes, son ellos:</span></font></span><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">? FAT<br />? FAT16<br />? FAT32<br />? ExFAT<br />? NTFS</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">? EFS</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">En dispositivos con pocas prestaciones como son las memorias flash, tarjetas de memoria, pendrives, reproductores MP4, etc. se utilizan los cuatro primeros.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">En los discos duros se usan FAT32, EFS, pero preferentemente NTFS.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">FAT32 es necesario usarlo en los discos duros que incluyen algunos dispositivos multimedia para conectar a la TV. Este sistema aunque más sencillo tiene muchas limitaciones respecto a la cantidad de espacio y el tamaño de los archivos que admite.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Para usar un disco duro en una computadora moderna donde se piensa instalar Windows 7 u otros sistemas modernos, es necesario usar NTFS.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Otros sistemas operativos como Linux, Solaris o Mac, usan formatos de archivo diferentes en los discos.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;"><i>Al formatear un disco en NTFS, está disponible la opción &quot;Formato rápido&quot;, en este caso se reduce considerablemente el tiempo de formateo, el que puede ser hasta de horas en caso de discos muy grandes.<br />Cuando es necesario dar formato a discos ya usados, que han presentado errores en su funcionamiento, no se debe usar esta opción.</i></span></font></span><br /><br /><b><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">El formateo a bajo nivel</span></font></span></b><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Existe otro tipo de formato llamado &quot;Formato a bajo nivel&quot;, se usa para poder recuperar dispositivos que han sufrido mucho daño en su sistema de archivo y no aceptan el formateo tradicional.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Para eso es necesario auxiliarse de aplicaciones externas.</span></font></span><br /><hr width="50%"><span style="color: #000000;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">¿Cómo crear particiones en un disco duro, donde está instalado el sistema operativo?</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Crear particiones en un disco duro donde se encuentre instalado el sistema operativo siempre es un proceso riesgoso, pero necesario si solo se posee un disco físico como ocurre en casi todos los equipos pequeños como netbooks.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Para hacerlo se reduce una partición que tenga el espacio libre suficiente, o sea se toma parte de ella y en el espacio que queda sin asignar en el disco, se crea la nueva partición necesaria</span></font></span><br /><img id="img_post" src="https://norfipc.com/img/articulos/extender-particion.jpeg" border="0"><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Es imprescindible tener el doble de espacio libre en la partición a reducir, para facilitar el movimiento necesario de los archivos.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Por ejemplo si deseas crear una partición para instalar otro sistema operativo que requiere 10 GB, entonces será necesario tener 20 GB de espacio libre.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Para crear la partición sigue los siguientes pasos:</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">? Da un clic derecho en la partición a reducir, escoge &quot;Reducir volumen&quot;, espera que termine la <i>Consulta del espacio para la reducción</i>, en la ventana que aparece a continuación verás el espacio que hay disponible para la reducción, si es suficiente entonces introduce en el cuadro:<i>Tamaño del espacio</i> que se desea reducir<br />? Oprime el botón &quot;Reducir&quot;.<br />Ahora se dispondrá del espacio vacío en el disco necesario, el siguiente paso es crear una partición en ese espacio y formatearla.<br />? Da un clic derecho en la zona libre del disco que aparecerá sin utilizar con el borde superior negro con el estado <i>Sin asignar</i>, escoge: &quot;Crear partición&quot;.<br />? Da un clic derecho en la nueva partición creada y escoge: &quot;Formatear&quot;, selecciona el sistema de archivo necesario</span></font></span><br /><br /><hr width="50%"><span style="color: #000000;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">¿Cómo formatear un disco externo en FAT32?</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">En ocasiones es necesario darle formato a un disco para poder utilizarlo en dispositivos como un Media Player, una XBOX 360, una PS3 u otros dispositivos que solo admiten el formato FAT32.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Al formatear un disco en FAT32 usando la interface de Windows, nos encontraremos con la limitación de solo poder hacerlo en los primeros 32 GB.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Resulta frustrante este impedimento cuando en la actualidad son frecuentes los discos de más 500 GB de capacidad.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Hay dos formas de solucionarlo, hacerlo mediante la línea de comandos u usar una aplicación para esta tarea.</span></font></span><br /><br /><span style="color: #000000;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Formatear mediante la línea de comandos</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">El comando FORMAT permite darle formato a los discos y unidades con varias opciones disponibles.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Es posible usando este método darle formato a un disco de hasta 1000GB en FAT32.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Haz lo siguiente:</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">? Abre una ventana de la consola de CMD con privilegios de Administrador.<br />Para eso en la pantalla de inicio de Windows8, en el cuadro de Inicio en Windows 7 o en el comando ejecutar (Windows +R) escribe: CMD y presiona la tecla Enter.<br />En Windows 8 también es posible usar el menú que se abre con las teclas Windows + X.<br />? Escribe en la pantalla negra de la consola lo siguiente:<br /><span style="font-family: monospace;">FORMAT X: /FS:FAT32 /V:EXTERNO /Q</span><br />? Sustituye X por la letra asignada al disco en el explorador<br />? Sustituye EXTERNO por el nombre que tendrá la unidad<br />/Q indica que se usará un formato rápido.<br />? Presiona la tecla ENTER.</span></font></span><br /><br /><span style="color: #000000;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Formatear usando una aplicación</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Existen varias aplicaciones que se pueden usar para este propósito.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Siempre es aconsejable usar las que ofrecen los fabricantes de los discos.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">SwissKnife es una sencilla aplicación gratis para esta tarea. </span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Permite crear particiones y darle formato a discos conectados mediante USB, Firewire, PCMIA, SATA o SCSI.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">En caso de errores o cuelgues usando esta aplicación o que el resultado esté muy por debajo de la capacidad real del disco, es aconsejado primero formatear el disco en NTFS mediante Windows.</span></font></span><hr width="50%"><span style="color: #000000;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Las particiones especiales en las Laptops y Notebooks</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Muchos equipos pequeños que se venden con el sistema operativo pre instalado y solo admiten un solo disco duro, vienen con una partición especial o de seguridad adicional.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Contiene archivos de instalación como drivers y programas adicionales.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">El objetivo es incluir los archivos necesarios para en caso de que sea necesario formatear la partición principal, debido a daños por virus u otros motivos, el usuario tenga los archivos necesarios para instalar el sistema correctamente.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Los archivos en la partición suplen los discos que anteriormente acompañaban a estos equipos al ser vendidos.</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Se debe tener especial cuidado en estos equipos de no formatear dicha partición.</span></font></span><br /><hr width="50%"><span style="color: #000000;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Formatear discos y particiones en Windows para solucionar errores</span></font></span><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">En ocasiones es necesario darle de nuevo formato a discos o a particiones que ya lo tengan, puede ser a veces la única solución a conflictos y errores en el sistema de archivo, aunque siempre existe la posibilidad de recuperarlo usando la herramienta CHKDSK (Chequeador de discos).</span></font></span><br /><span style="color: #000000;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Para darle de nuevo formato a una partición o disco no es necesario utilizar el Administrador de discos, puede hacerse fácilmente desde el explorador de Windows o Mi PC, para eso solo es necesario dar un clic derecho en el icono de la unidad y escoger &quot;Formatear&quot;.</span></font></span><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">40</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1581</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">7</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(423373,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(423373,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(423373,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(423373,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(423373,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(423373,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(423373,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(423373,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(423373,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(423373,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="http://a06.t26.net/avatares/5/0/7/0/120_5070412.jpg?633670" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1652536" title="perfil de cozano20"> cozano20</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-lsnBac7njMs/UzJT_3ZddXI/AAAAAAAAAY8/f6dCWvdGK0w/s1600/cARLL1111.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1685456" title="perfil de libardomm"> libardomm</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://s6.postimg.cc/ypajvuz8x/Mi_Logo.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1569502" title="perfil de Tortuga3"> Tortuga3</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://4.bp.blogspot.com/-mys47GJddkk/VA0DDqSHXEI/AAAAAAAAA3Y/SWKMmTyUPao/s1600/avatarEvolutionpixv2.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1892321" title="perfil de user.xD"> user.xD</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://68.media.tumblr.com/c170455cc2085b446b4f46fa293344db/tumblr_mqp84zC5C01rz1p6so2_500.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1551772" title="perfil de Germlokura"> Germlokura</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://i103.fastpic.ru/big/2017/1210/a5/a501eed305652c98563edc140967f0a5.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1603237" title="perfil de hadesmarco"> hadesmarco</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-Kc1tbspdY8o/UP1-490573I/AAAAAAAAAJA/vP6ZkajTjUQ/s200/Foco.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1835226" title="perfil de EB2."> EB2.</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://fotos.subefotos.com/82d98ca1c0e2a43bdd1e4d0c2ebbd84ao.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=52847" title="perfil de socomix2"> socomix2</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(423373);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('423373');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=423389" title="Recopilacion de archivos batch para Windows"> Recopilacion de archivos batch para Windows</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=423322" title="Usar la consola de CMD"> Usar la consola de CMD</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414682" title="Usar la línea de comandos en Windows de la L-O"> Usar la línea de comandos en Windows de la L-O</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414649" title="Usar la línea de comandos en Windows de la F-I"> Usar la línea de comandos en Windows de la F-I</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414613" title="Usar la línea de comandos en Windows de la A-E"> Usar la línea de comandos en Windows de la A-E</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414598" title="Lista de todos los comandos rápidos en Windows"> Lista de todos los comandos rápidos en Windows</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414587" title="Códigos para crear aplicaciones, archivos batch"> Códigos para crear aplicaciones, archivos batch</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">6</span> Comentarios</span>
+<span class="onpost"> Como crear particiones y dar formato a los discos </span>
+<div class="comentario"></div><div id="comment_4542947" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="esmelida" href="?action=profile;user=esmelida">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="57420" href="?action=profile;user=esmelida">esmelida</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1463157496" title="13/05/2016 a las 16:38 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+amigo e leido tus tutoriales pero todavia o me gustria saber un comando que repare windows y lo vuelva a estado de fabrica por tu expreriencia como anonimos dime cual es
+</div>
+</div>
+</div>
+</div><div id="comment_4542952" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="kingeagle" href="?action=profile;user=kingeagle">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1948596" href="?action=profile;user=kingeagle">kingeagle</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1463157817" title="13/05/2016 a las 16:43 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buen tuto &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4542958" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="baphomei" href="?action=profile;user=baphomei">
+<img id="error_avatar" src="http://media02.hongkiat.com/geek-is-new-cool/geek.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="74333" href="?action=profile;user=baphomei">baphomei</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1463158069" title="13/05/2016 a las 16:47 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Yo hago las particiones y formato con gparted, lo booteo en una flash y listo
+</div>
+</div>
+</div>
+</div><div id="comment_4543141" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Germlokura" href="?action=profile;user=Germlokura">
+<img id="error_avatar" src="https://68.media.tumblr.com/c170455cc2085b446b4f46fa293344db/tumblr_mqp84zC5C01rz1p6so2_500.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1551772" href="?action=profile;user=Germlokura">Germlokura</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1463169904" title="13/05/2016 a las 20:05 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buen tutorial amigo, personalmente he usado algunos programas muy ?
+</div>
+</div>
+</div>
+</div><div id="comment_4544031" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="wiwiwoku" href="?action=profile;user=wiwiwoku">
+<img id="error_avatar" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS_NiCzU4eW1fQkTKQou0lb65iFzB7No5yEG9jJ7lGJ9LKoEp522w" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1641669" href="?action=profile;user=wiwiwoku">wiwiwoku</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1463222910" title="14/05/2016 a las 10:48 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> , de casualidad sabes como se le puede quitar a un HDD ( externo para usar con el play ) ese modo Hibernar o parecido. Saludos.
+</div>
+</div>
+</div>
+</div><div id="comment_4546071" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="socomix2" href="?action=profile;user=socomix2">
+<img id="error_avatar" src="https://fotos.subefotos.com/82d98ca1c0e2a43bdd1e4d0c2ebbd84ao.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="52847" href="?action=profile;user=socomix2">socomix2</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1463362811" title="16/05/2016 a las 1:40 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buen tutorial, muchas gracias &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_7.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949e5f27a98dea7',t:'MTc2MTQ4MTEyNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
