@@ -1,0 +1,558 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Funcion para pasar numero a texto EXCEL - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Buenas, para los que usan mucho la plataforma EXCEL espero que les sea de ayuda. Les dejo la formula sin monedas ni nada, contenido UNIVERSAL modificado por mi. Cita: Mostrar&#039;Funcion para pasar..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='S2RIMzZ1VHJwZ2x2SU1BVTJGc2RHVmtYMTh4RjY3UDFHKzhqN0xJOHYrNHYzTXhMenBXU2V4czlGUnhPTFFWb2pVYUV0TEF3N2J5SlRTUFpIeUdqZDhkYVgzemJWcW1UaUFaTUE9PXlRaWZUcU9mRmpvMGFHRg==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761491476;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '71dcb0c34a517eef63fc2c6ea99141a8');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_3.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Funcion para pasar numero a texto EXCEL" title="Identi - Funcion para pasar numero a texto EXCEL" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'a5fb2492829be7a1a3efe89a6a95a96fcc0799d8';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=joelitoup">joelitoup</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"..................."
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=joelitoup" title="Ir al Perfil de joelitoup"><img id="error_avatar" class="avatar" border="0" width="120" src="http://img2.wikia.nocookie.net/__cb20140318122453/scarface/en/images/7/75/Tony-Montana-Logo-Scarface-psd34856.png"/></a>
+<div class=" rango_sidebar clearfix">Silver User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/py.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/silveruser.png" title="Silver User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1854784)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1854784');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">29</b> Seguidores</li>
+<li><b>964</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>46</b> Posts</li>
+<li><b>82</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Funcion para pasar numero a texto EXCEL</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=366823';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=366825';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=127" alt="Hazlo tu mismo" title="Hazlo tu mismo">Hazlo tu mismo</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 10 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1028852">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><img id="img_post" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAACZFBMVEX////e5+/j4+P19fXn5+fv7+/p8Pfb3uKUnJ7S1dWor6/K09Xi6/TByM7x8fLFytK2vMD5//+7vcXN0trX3ub7//////oAAADz//9ubnTf39////P6//+kZkbm8P1USGqGiYjOj1pTiMn24dG74f+xsbGUtN///+P//+7Cq5n/7ay68P//+O00P2lgP0I8db+NVkv/9Mb/8uG11euPzf/a6v3J6P+bWjCnweTJ9P9IP1r/8LdVfrBkZWZzntRbcZprMz7Ou7R5e3vlz7ytzvZOTUs/VlJAWpC7im5RS3uxdlXj///S///Koop2Rk+n2f9pp+qscmD/0qFvUmnqw6V+Y29gAABiXX9dPl9yj8aZZ2bfvmpOcK6Ng3xYHTl+i5/+3sZlMlFAcZLmqXR1udnB0eipi4juqWsAJWt0JQDl0aipk4OtmqWBk7aLfoyqhXWcucuap8mjnq3LjkpQZHWLobedaTfsz4hBX6N+tu6+k2OExtOgvo1hOy1qobp0ZF1PNWaRyN7bwY7OnnY1VnFkQ0aXmGZzlbvIoFtJc4w9EiUhO3WMZjf/yYx4QSwiITLCe0lkk6d0Vzz03KSdho2bViaUglBDAABJIkyLVVZXmdBVPgHY38NMS1oAAC47Y5A7SojHsIB7RCl3fViQw6trWnlCNy4ADyYlKzt0dpppJiR4UGeloYVWdIRwb18AP5NgXztmPBv//7zgkE6whEbQsIRCAEVNEwBVQScvAC9+ejw2SlrHbycAAEl5PAD/wXtch4A0Z25nm4YAIkL/4ZRYSU9EBxcOQGeOMgA5JhV8WorY98j3A1ULAAAQuElEQVR4nO2djV9TR7rHH/ImsUAIkOMJgZDkEBIkKAkGQXlNQF7Ci2IoaHFJFdYVq6CAGLi8VXbBihZlq9VKsXpt1/ba7ard7W633Xavve29/afuzEnw5RAGOBFNcH4fPyFnZp6Z+Z55Zs5MPGcOxKybNEnS9ct89YK4dROoNOuX+eoFsRtd8MZGF2za6ILNG11opNkMG1sxlDDq9YIIOacgwKLiktMEYQzXxaXwcTKVeo35dz13wKVogt+tKnYF0+cJpT1ZAN7CkClt7zyh8GYJ4izXM6HH5erQg6NHO6BHIY+rm6uFZeumbzycQlV7cMtdu1K9BDKann5ncDb4DNlqskBXt2MF0+cJbd9/Vw9HTSBXgy0BEqSyBEamQHWSyRRg21+AUshlMg0Y2xMYuVymkeJIFKK+WM0y5YXQd1bx9SnpB8PIgruHCBlsJ0XxIJXK0dfszj5MaLuLCKWBcJSvAueqwF9BrggUYMOGgP+ogyWa+ER8jDo76yjOxr5/bDvAv4pXOFmLhIx7s9mcJNHWtLOIcOcOOFqsufSDYde/T/4+Hxr2G1qKeEJuv6Fx2D3z84kH137o+PWQa77SccXQ4UEVYMorwXpmAmXVN4opkiyFzOCFO+3yFtfYfY97T/9YMbjzb2JvY05bC6HmR+2IH9L98K+zrLvN0Jhz5JbaUt7EtRnKh3V1P7jyAXDWRSigcViNCsCJJqx1P5ws4LpuBpy2ARHaM4pW2YZcfHy8SnY35nYhIkznCfN2wGwpPBy1txXBW1MMIrQin3gwXo9SPPhrE9j0MDQxWO1BZP4A4aO9yBcb84N528tzmE1fX1Zb0ifc1R5fhuLZgmtMqOU1dX642G653QSPb9m35TTnWvNyYOv4zb/k4CSPL3jAcnACBdQbTTjR1lv293KeyQMTMi2ZqyS0SSSSGFuLc/DW0BPCJjBmIcKtn+2pquIJLTPoW38RJhwvAN+VqveHmU++MVmeIWTSpxZHEd+4B+DhcBrU+L0mjW9/3HOEfkB+zBPaR1Cu5z3GqRq/vbwenaLM3Z8u4E7/7jcmXyDAaAommvt0Qf884fVVEjJeg8HQIWlxMjUfHUDOo5t9Smgfr8enABHq9mE3hKPtiDAT/jkMs8NoOPs888xennCurch28ATKrIKHsX+eo0v6+rDakpfvNakXCStiAoR7AfXeur2Msd3SyDeMfWTSY8VNdgudmCF+aNFdakIlbq1F3SCYCAD7Cc7GudY25OXY7wT730zw+O/z/0D9sIn30stsxbaq+V7bm99WTW1qrKo6wc5tKX7w10zwfrNnfri5qqoadxNA0SVN0Lfl26qFhHK+nzCD31XdcMzMz59gve1qX1uA8JfAUF2HCG+xW1FBZ1nuNyhXNfPLdg3s/nvJeL5vrCoX5XARZc3yATBrAj4RirkQGNK/z7I3/u/H/Zm7a1fbD8NSM+qMz+ji1PLj2+P2NV4olslmscSjqx1Lw5MVOfQzchcsn9S3glOtUovZWG+v7XooWjbFymnWRTrJSi6RnLxZtqEFyo0uUGx0QfxGFyQuVWyIsFVqs3hTcxi2JNNQv5cmif9xUpUi2jQlWbRpjIoQCUt/JEaEon9gVqWINk1OFm2aoiJEUsIlmSUnkyBIhClkWyLhphSS6YskzP7JNVaWv3x2JMLseZdravmsSYTKK1rXgHPZaAJhXOpaCcviZOfai5aNJxIe0CsI3kEk1BaQTAmEN2vWTBgT9+sXlcvGEwmLRXupUtsr0kvdGWsnjPm1USThvKGD4OBkL71/snf56BdMGNddW7Bs/Lp5aZdYLx1bK2GrquLLLMWy8UTCMlV81/LRKxAuH0keabLXSKiMNRjyCWeTRIhtT4kbSzeZiddZ0tVirXMafo5EEIkwjmxMvB6S5yAvcU4TJ35OE5ecHMZUimAKqqVKChG2SoVjuk7FQsJSpYYIW6UkctGmMploUzmpxqF+upGI/11ILt5UGrIuq5NsjenDIZSKNqWEJFFCoSghQZSQIEpIEiUUihISRAkJihZC8abrRihZIlmqbGng6iRLFWspkfH/RIpU45DQ4k9mJLZhCNF+SBAlJOgVEnoHFOA+bhjgb4fMNvQqwHHc0Kv2Gk4H7vNoMJz2gDSbv9MpGgktNfdrndBgkuGbe5mvB1IvDdv29UoUD/4vJZ2/j/Zc2SaJGo68tx0fRCMhAIcJ25WB++2AedQ52BqfjBu0z6QGePD2sNIJjv2xUU7ImY/freePbI35Ryc3Xy1mvXdy8W2Qc7t6P6lW1E14o5wQAjfHItUdUD+8rPbVOm2yc1MegObceibvfjHbcBbHRiuhnpGA48qELVkj3XcANduCx7sgc8Lgz55Up2VbpnXk8iFt1X+fYqOT0Jo99rH21IxLe0/BjSuMW7SuKdtM/8gOy9uukQk4ZoLp3JkbiC1625CRyhPkUvShgaFRjTRBLlcAg4/k+EMqRQfytCcVjEbCZ1QhfGpkqaKccBWKxJl3qLWI6FVMOKbhiFRsSGjxJzMS2zCEXruZ91pECQmihCRRQqEoIUGUkCBKSBIlFIoSErTxCWXiCRPCmLUTCUM8z5b60p+gC1cSQlwo6DDa8BXpJXrpKxIlFIoSRp4ooVCUMPJECYWihJEnSijUBiOULlX0EUpCUCwK5EuV+qorvGZJQlAsKmT6l13BsPWa98MQooSRJ0ooFCWMPFFCoShh5IkSCkUJI09Ewo2/ttgQ60MZaX0YQlFIuMb0lDDyJJKQebeq5KMbLFPeBI7r+dy4nru2XYO3TvZdLfnphPrNyZL7BQA1W/wAvu//zPbx+5wj2a59OzZfCbbB3JKPTArrB5Nf+cFxtb/kHvtBFvBWs9/lg6/W3vLVlj2t9c3zJV+d1ev6fv4K7/7c/FPJ+QLuf/pLiuVnsOGxyZL+TONnWcDtv4nS/9haD+e28MX8kgXdGfqwCOdqi8C60w+NmeA4mM9l6LmxD/PBWGpJ9wOjTGsM7BVc82MZyzRcPcsa+V3AMWFbATRf8Hhznci88/EFj6XLcsavASW7Mwt4K+PkYbWvVQG7d9WDo7ESdH2m3dtydCo13nkfuDiujOW3K7eogN+f+Nxkq97R4gT774sALC1/mMK3znsnFY+yNGERTuPN4wcPs9efEJa9u+Axlu6uxU/PMI2Z/DhVU3qwwHbw3HOEmWA5s2OoE30fnNIdG0UoGfwDN5iwCVnNZtVNBAiLcAEAD2o96ef5++Sz38sH4MqcUo0VG0LeDpTeWDrUyRNuywFwlzky8GnS9fzHk/3mxREys8MCQneZ4kyp0X8xF+8zzRzr1w6weGv1vs7B4uYlhP6hYUzYztp6RiaacxcJj/WXDLCz/rnx+EXCy5hwvABqRkbxs3Desf4ibptW25uGDeH2pKvDY9zr+1AVJGQedUIdPnngu9a5WGORbfiWSYN3y04rr+T7ISZk52qvZm0dx6eO+SLopf7u9ln/RSHhpRzkb8gc19+XcXNbTpCQ99JZP2NsPR8gfAtv7/14AZ00x0hgx+yaG7yXYoaMIt5LjXuZo9XaIOGxb10f8fu129+uD5OQuzSR0Px+JcxeZgfbFYE2RANLFsyej+FOKsor5XIN3jzeMnPBEyT0y/FrI97usk1v1/hGJhLmcjOPlEqPHPYYD8dI/uhEIw1vNYuGnmO/CxA6do4mdF/xew9IvfNFYPttF3emk2t1yhUBw7wdKEvjXgT2uzie8OhCXIL7N/UvhBB8h1yuQ1/mMw2uDifYTiu402qw/LELUMDJLv6FHajrVFRCRRb4Tqm9hZDtcp3EtXS5enHToSNUhx7kZgANLheKD1p5KwG6T2jAcho33XGXFvW9bJcWuwZ3yNWrxjlMSXlDlKUrE79SpPuEAizvFOE8wJqNMkBHT/aBD+t66O5aLlkEiV7xhdpghCHuBIu+1RPpTrxQ6TdYG4YQJVyDbCfjVk4UvsIktOE3DCTrUpVKBUjRZwpwyhR+0uFQKuP4zxQNikHzfP4lTShaiaJT8ePtaMbCpMbxeegBZYHnnkwq+nTEgUQBjEzB4BxlMWjuIOdToHQ4R357g1T8iHwwLBW/DQpVxIkMUoQvAwuT0P7O1Y9jT9/8MPbQebU7Nza2sLul4w7ebMB3pyP2ntP3ZcfxL0vBe82khp14YwVvSyy6knuv4QeDZ7Msv/3LdrAOLZwpZqera/DsjHvzzyz0leJlg21fIdfWEVs4eAFNFPZ12qYXYq9WOy3pU38wpYHuyMJ/lemDYUx5Jpo2LKDS322NdQmv0WF76VY0cXZXs44vnG48I3xrgdWhM2pBKyuQq9NL0aruw3rv/fJ8SEeEljz+/Sjp9xGhva1IJ+nZDnPj9dbG+PIcBs9cubHyLLRcWCTEc1DmUiVwGQr3LdRYs6OoOEaGZjwznSBPC4bhNRw04Afm0XzXJrwl/AUQFoG7Nt5cpnGXxasUttuXU9S4+nheiNd4aCnR5N0+V+apQ4S7t+355qza2OlFhEfRkhm/sqj5Fgt5J8b1+AVBwN3r3lX0lPBukioG+kbV0ybN9CjK8HGZZ19/PO4FFX+biGOmO/kwlicsVqpY7thojEZQwRdDuCs2bwLcrZtPx4Ct4vaEGjccJswIErZbZ0pnEWHzrnrryMA91rsd8Gu2niFs08MsJmzVPzI9Jdw/YH5D012t31fIDAUJmYqd/ErKfbykaOhZwgUz8n/u+NjEuhBWs95q1h18hZ27TA92vv52vObxldd726F5/A4itKMFw+0f36/69LMD3dUQJERLyutJ5fX4NWuY0Nf4D0S4A2x5AS8Fa91/3sUrKXVwwWVtC6zN6vz8Gu7h5bQnXopzNAkaMXxCNBCg/mDZOeGuTkzsOnci/gw+x96feitaCo6U9FZcRSMNcsqhj/FIM1Q8hAcUFNCAeKwVPdUqS13pULF12tTQ6uEJwbulFM5p4z9pZ7mM3kSVFBq2lGrwSir+k/OZze3xxssecJxMyh7L4cMOZ8LnpxLf6CmOT+zqGaiYeeFtaEliwaZKY9wFtgqzuUtaYeb7CbjRAf+ZrOFfwWhJwlc/h9mMG0DW5TiIVkUWs9mcpEeferCazfhqYVMpELcTGyY5AWVmxlvemPUBUzM6BxXmJLww4szmlGfCzPFK9LXLhooTvh7yVV3xuXv6lRO9ENFZm1AbjDDUDgUvq2IvTC9xT4VXpNfcS0OIEkaeKKFQlDDyRAmFooSRJ0ooFCWMPL3mhPT/nqJCr7mXhhAljDxRQqEoYeSJEgpFCSNPlFAoShh5WvOeCoQnUCJTxGdmQj33RHiKaAWRHkBaQTLZ+hQbqlnpft4EbfydISkhQZSQJEooFCUkiBISRAlJooRCUUKCInFeGmI2vsHWFiFWVGGsD2UJok3l8jCKJcSFatYN5qUhREcagighQZSQJEooFCUkiBISRAlJooRCUUKCInFeGuq+NsJdYitIQnprD1ly8abEGoeCfjVe+qdN4ouNjn74J8Na6/lUUUEo1cZoRffEKCGEGK3YkqOFEFJcIh01agghVSvuchM9hAhRVOHRQ6iTJrnEtGLUEOrkMamJLhHG0UJoS4yZ17piRRhHC6FBmxibKMo4KgihxJCoMijFDabRQegyg0arNMSLsY2O1ROgk6PUdoi65q95TwXCDgUrKAxTXkpxGbzEPRUicQUcQvRXDIIoIUGUkCRKKBQlJCgCCf8fWOsUMi5Vc2gAAAAASUVORK5CYII=" border="0"><br /><br /><br />Buenas, para los que usan mucho la plataforma EXCEL espero que les sea de ayuda.<br />Les dejo la formula sin monedas ni nada, contenido UNIVERSAL modificado por mi.<br /><br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>&#039;Funcion para pasar numeros a letras </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Function NumLetras(Valor As Currency, Optional MonedaSingular As String = &quot;&quot;, Optional MonedaPlural As String = &quot;&quot;</i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i><img id="img_post" src="http://o1.t26.net/images/big2v5.gif" border="0"><img id="img_post" src="http://o1.t26.net/images/space.gif" border="0"></i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i> As String </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Dim lyCantidad As Currency, lyCentavos As Currency, lnDigito As Byte, lnPrimerDigito As Byte, lnSegundoDigito As Byte, lnTercerDigito As Byte, lcBloque As String, lnNumeroBloques As Byte, lnBloqueCero </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Dim laUnidades As Variant, laDecenas As Variant, laCentenas As Variant, I As Variant &#039;Si esta como Option Explicit</i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Dim ValorEntero As Long </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Valor = Round(Valor, 2) </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lyCantidad = Int(Valor) </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>ValorEntero = lyCantidad </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lyCentavos = (Valor - lyCantidad) * 100 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>laUnidades = Array(&quot;Un&quot;, &quot;Dos&quot;, &quot;Tres&quot;, &quot;Cuatro&quot;, &quot;Cinco&quot;, &quot;Seis&quot;, &quot;Siete&quot;, &quot;Ocho&quot;, &quot;Nueve&quot;, &quot;Diez&quot;, &quot;Once&quot;, &quot;Doce&quot;, &quot;Trece&quot;, &quot;Catorce&quot;, &quot;Quince&quot;, &quot;Dieciseis&quot;, &quot;Diecisiete&quot;, &quot;Dieciocho&quot;, &quot;Diecinueve&quot;, &quot;Veinte&quot;, &quot;Veintiun&quot;, &quot;Veintidos&quot;, &quot;Veintitres&quot;, &quot;Veinticuatro&quot;, &quot;Veinticinco&quot;, &quot;Veintiseis&quot;, &quot;Veintisiete&quot;, &quot;Veintiocho&quot;, &quot;Veintinueve&quot;</i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i><img id="img_post" src="http://o1.t26.net/images/big2v5.gif" border="0"><img id="img_post" src="http://o1.t26.net/images/space.gif" border="0"></i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i> </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>laDecenas = Array(&quot;Diez&quot;, &quot;Veinte&quot;, &quot;Treinta&quot;, &quot;Cuarenta&quot;, &quot;Cincuenta&quot;, &quot;Sesenta&quot;, &quot;Setenta&quot;, &quot;Ochenta&quot;, &quot;Noventa&quot;</i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i><img id="img_post" src="http://o1.t26.net/images/big2v5.gif" border="0"><img id="img_post" src="http://o1.t26.net/images/space.gif" border="0"></i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i> </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>laCentenas = Array(&quot;Ciento&quot;, &quot;Doscientos&quot;, &quot;Trescientos&quot;, &quot;Cuatrocientos&quot;, &quot;Quinientos&quot;, &quot;Seicientos&quot;, &quot;Setecientos&quot;, &quot;Ochocientos&quot;, &quot;Novecientos&quot;</i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i><img id="img_post" src="http://o1.t26.net/images/big2v5.gif" border="0"><img id="img_post" src="http://o1.t26.net/images/space.gif" border="0"></i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i> </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lnNumeroBloques = 1 </i></span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Do </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lnPrimerDigito = 0 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lnSegundoDigito = 0 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lnTercerDigito = 0 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lcBloque = &quot;&quot; </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lnBloqueCero = 0 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>For I = 1 To 3 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lnDigito = lyCantidad Mod 10 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>If lnDigito &lt;&gt; 0 Then </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Select Case I </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Case 1 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lcBloque = &quot; &quot; &amp; laUnidades(lnDigito - 1) </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lnPrimerDigito = lnDigito </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Case 2 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>If lnDigito &lt;= 2 Then </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lcBloque = &quot; &quot; &amp; laUnidades((lnDigito * 10) + lnPrimerDigito - 1) </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Else </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lcBloque = &quot; &quot; &amp; laDecenas(lnDigito - 1) &amp; IIf(lnPrimerDigito &lt;&gt; 0, &quot; Y&quot;, Null) &amp; lcBloque </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>End If </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lnSegundoDigito = lnDigito </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Case 3 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lcBloque = &quot; &quot; &amp; IIf(lnDigito = 1 And lnPrimerDigito = 0 And lnSegundoDigito = 0, &quot;Cien&quot;, laCentenas(lnDigito - 1)) &amp; lcBloque </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lnTercerDigito = lnDigito </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>End Select </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Else </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lnBloqueCero = lnBloqueCero + 1 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>End If </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lyCantidad = Int(lyCantidad / 10) </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>If lyCantidad = 0 Then </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Exit For </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>End If </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Next I </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Select Case lnNumeroBloques </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Case 1 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>NumLetras = lcBloque </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Case 2 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>NumLetras = lcBloque &amp; IIf(lnBloqueCero = 3, Null, &quot; Mil&quot;</i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i><img id="img_post" src="http://o1.t26.net/images/big2v5.gif" border="0"><img id="img_post" src="http://o1.t26.net/images/space.gif" border="0"></i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i> &amp; NumLetras </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Case 3 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>NumLetras = lcBloque &amp; IIf(lnPrimerDigito = 1 And lnSegundoDigito = 0 And lnTercerDigito = 0, &quot; Millon&quot;, &quot; Millones&quot;</i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i><img id="img_post" src="http://o1.t26.net/images/big2v5.gif" border="0"><img id="img_post" src="http://o1.t26.net/images/space.gif" border="0"></i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i> &amp; NumLetras </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>End Select </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>lnNumeroBloques = lnNumeroBloques + 1 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>Loop Until lyCantidad = 0 </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>NumLetras = NumLetras &amp; &quot;.&quot; &amp; Format(Str(lyCentavos), &quot; &quot;</i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i><img id="img_post" src="http://o1.t26.net/images/big2v5.gif" border="0"><img id="img_post" src="http://o1.t26.net/images/space.gif" border="0"></i></span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i> &amp; &quot; &quot; &amp; IIf(ValorEntero = 1, MonedaSingular, MonedaPlural) </i></span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"><i>End Function </i></span></font></span></div></blockquote><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">1 - Abrir el Excel </span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">2 - Presionar Shift + F11 </span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">3 - Menu Insertar Modulo </span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">4 - Pegar el código </span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">5 - Guardar modulo </span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">6 - Cerrar con X o Alt + Q el V.Basic </span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">7 - Darle guardar planilla con macro &quot;en tipo de archivo&quot; </span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">la formula sería para utilizar =numletras(x) dónde x es la celda. </span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Espero que les sirva.</span></font></span><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">12</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 4/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">2929</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">9</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(366824,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(366824,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(366824,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(366824,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(366824,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(366824,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(366824,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(366824,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(366824,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(366824,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="http://o2.argentinawarez.com/customprofilepics/profilepic1874234_1.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1575826" title="perfil de lember10"> lember10</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://fotos.subefotos.com/3438eab9d5374afc0176f2e304dab408o.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=16511" title="perfil de Wolfmaster3008"> Wolfmaster3008</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://pbs.twimg.com/profile_images/870748901174910978/mh3S-VRD.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=2012031" title="perfil de Amaury3008"> Amaury3008</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(366824);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('366824');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=621731" title="Kimetsu No Yaiba S03E11"> Kimetsu No Yaiba S03E11</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=617095" title="Vinland Saga Temporada 1 x265 1080p"> Vinland Saga Temporada 1 x265 1080p</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=564974" title="[MEGA] Shingeki No Kyojin Temp 4 Capitulo 5"> [MEGA] Shingeki No Kyojin Temp 4 Capitulo 5</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=564231" title="[MEGA] Shingeki No Kyojin Temp 4 Capitulo 4"> [MEGA] Shingeki No Kyojin Temp 4 Capitulo 4</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=563861" title="[MEGA] Shingeki No Kyojin Temp 4 Capitulo 3"> [MEGA] Shingeki No Kyojin Temp 4 Capitulo 3</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=563467" title="[MEGA] Shingeki No Kyojin Temp 4 Capitulo 2"> [MEGA] Shingeki No Kyojin Temp 4 Capitulo 2</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=563014" title="[MEGA] Shingeki No Kyojin Temp 4 Capitulo 1"> [MEGA] Shingeki No Kyojin Temp 4 Capitulo 1</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=464817" title="CorelDRAW Graphics Suite X8 [MEGA]"> CorelDRAW Graphics Suite X8 [MEGA]</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">10</span> Comentarios</span>
+<span class="onpost"> Funcion para pasar numero a texto EXCEL</span>
+<div class="comentario"></div><div id="comment_3950771" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Msnake" href="?action=profile;user=Msnake">
+<img id="error_avatar" src="http://k38.kn3.net/E343AF200.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1547670" href="?action=profile;user=Msnake">Msnake</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1427061610" title="22/03/2015 a las 22:00 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+no es &quot;Shift + F11&quot; es &quot;Alt + F11&quot;
+</div>
+</div>
+</div>
+</div><div id="comment_3951034" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="matt_1210" href="?action=profile;user=matt_1210">
+<img id="error_avatar" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/1390652_572233939513979_1304914952_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1832840" href="?action=profile;user=matt_1210">matt_1210</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1427068876" title="23/03/2015 a las 0:01 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3951886" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="sebacorp" href="?action=profile;user=sebacorp">
+<img id="error_avatar" src="https://cdn.myanimelist.net/images/characters/10/76897.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1784357" href="?action=profile;user=sebacorp">sebacorp</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1427085527" title="23/03/2015 a las 4:38 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+excelente
+</div>
+</div>
+</div>
+</div><div id="comment_3952260" class="comentario coment_id_4">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="joelitoup" href="?action=profile;user=joelitoup">
+<img id="error_avatar" src="http://img2.wikia.nocookie.net/__cb20140318122453/scarface/en/images/7/75/Tony-Montana-Logo-Scarface-psd34856.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1854784" href="?action=profile;user=joelitoup">joelitoup</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1427109610" title="23/03/2015 a las 11:20 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Seria interesante si dejan puntos jeje <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3952463" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Wolfmaster3008" href="?action=profile;user=Wolfmaster3008">
+<img id="error_avatar" src="https://fotos.subefotos.com/3438eab9d5374afc0176f2e304dab408o.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="16511" href="?action=profile;user=Wolfmaster3008">Wolfmaster3008</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1427122929" title="23/03/2015 a las 15:02 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+hay te dejo 5.. pero acomoda el post.. esta algo laaaargo... <img src="https://identi.io/Smileys/default/icon_wink.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3952648" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="acaudana56" href="?action=profile;user=acaudana56">
+<img id="error_avatar" src="http://i.telegraph.co.uk/multimedia/archive/02609/v_jpg_2609935b.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="39739" href="?action=profile;user=acaudana56">acaudana56</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1427129320" title="23/03/2015 a las 16:48 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+A probar, gracias por el aporte. Saludos. &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3953078" class="comentario coment_id_7">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="joelitoup" href="?action=profile;user=joelitoup">
+<img id="error_avatar" src="http://img2.wikia.nocookie.net/__cb20140318122453/scarface/en/images/7/75/Tony-Montana-Logo-Scarface-psd34856.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1854784" href="?action=profile;user=joelitoup">joelitoup</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1427141733" title="23/03/2015 a las 20:15 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Wolfmaster3008: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">hay te dejo 5.. pero acomoda el post.. esta algo laaaargo... <img src="https://identi.io/Smileys/default/icon_wink.png" alt="" border="0" /></div></blockquote>Esta dentro de un quote el codigo hermano <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3959729" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="kalifa" href="?action=profile;user=kalifa">
+<img id="error_avatar" src="https://64.media.tumblr.com/tumblr_m8bjxpVeJe1qa6lp8.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="91955" href="?action=profile;user=kalifa">kalifa</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1427356955" title="26/03/2015 a las 8:02 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+si arreglas el posteo seguro q te dejo 10 puntos
+</div>
+</div>
+</div>
+</div><div id="comment_3976344" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jagrasu" href="?action=profile;user=jagrasu">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="95353" href="?action=profile;user=jagrasu">jagrasu</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1427978082" title="02/04/2015 a las 12:34 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+sirve para usarla en access 2010?
+</div>
+</div>
+</div>
+</div><div id="comment_4016644" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jhurah" href="?action=profile;user=jhurah">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1587823" href="?action=profile;user=jhurah">jhurah</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1429463591" title="19/04/2015 a las 17:13 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+no entiendo &nbsp;ya le ingrese el texto al modulo y le pongo de nombre al modulo nuletras y no pasa nada en l ahoja de excel &nbsp;.podrian explicar mejor.que no entiendo como usarlo
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_3.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994ae29f6defdea7',t:'MTc2MTQ5MTQ3Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
