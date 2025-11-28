@@ -1,0 +1,724 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Multiplicar matrices en C [Codigo+EXE] - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Multiplicación de matrices en C¿Que es una matriz?En general, una matriz es un conjunto ordenado en una estructura de filas y columnas.Siempre que colocamos un elemento en filas y columnas hacemos u..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='UE5EU0ttOTM5QjN1T3BFVTJGc2RHVmtYMTlJS0hKaGJIRFgxMERUTFRTOFFkZWdva1BlRyt1SzRXTldIWVlpVlBMOHE1UCtDcnBDNVpDNmY2UEJmWTNnUFl4ckJCeEcxN3ZsZ0E9PWR0RFYwMHdYZDhGdkpsQw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761480730;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'ba7614e4cd1abc193733d670b259efbe');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_1.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Multiplicar matrices en C [Codigo+EXE]" title="Identi - Multiplicar matrices en C [Codigo+EXE]" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'd1ab20dc20c88e6b952ffc25c52f4ce95b5bea54';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Brezee">Brezee</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Brezee" title="Ir al Perfil de Brezee"><img id="error_avatar" class="avatar" border="0" width="120" src="https://wow.gamepedia.com/media/wow.gamepedia.com/thumb/1/1c/Arthas.jpg/300px-Arthas.jpg?version=de61955a592224b9138919b4ca628750"/></a>
+<div class=" rango_sidebar clearfix">New Full User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/cl.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/newfull.png" title="New Full User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1981467)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1981467');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">11</b> Seguidores</li>
+<li><b>153</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>5</b> Posts</li>
+<li><b>11</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Multiplicar matrices en C [Codigo+EXE]</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=438833';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=438835';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=25" alt="Software / Programas" title="Software / Programas">Software / Programas</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 9 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1100865">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><font size="4" style="line-height: 1.3em;">Multiplicación de matrices en C</font></div><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://1.bp.blogspot.com/-djgx9Vsb2sM/VrGPohca2VI/AAAAAAAAAGo/iHSj_QVeirw/s1600/Separadori.png" border="0"></font></div><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://3.bp.blogspot.com/-gLMMZH2RUOY/Uv1BslU4EnI/AAAAAAAAAQg/OG1FmRO2U5A/s1600/Bienvenidos.png" border="0"></font></div><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://1.bp.blogspot.com/-o4cwIs1oEZI/VrGPozs6gpI/AAAAAAAAAGs/x0Xl0Tx5RvE/s1600/info1.png" border="0"></font></div><div align="center"><b>¿Que es una matriz?</b></div><div align="center">En general, una matriz es un conjunto ordenado en una estructura de filas y columnas.</div><div align="center">Siempre que colocamos un elemento en filas y columnas hacemos uso de una estructura matricial.<br />Por ejemplo, cualquier espectáculo en el que las entradas estén numeradas hace uso de este tipo de estructuras.<br />Lo que se hace es dividir la Platea en filas y columnas. Si en nuestra entrada pone Fila 23 , asiento 12 nos está indicando<br />que la butaca está en la fila 23 y columna 12.<br /><img id="img_post" src="https://lh3.googleusercontent.com/rJkdqObfQfX4XL1fYyjDz9i0RuliMBmjgg6Kjuon0cWZFgwP3RPgbzqTpqx5b7D82sfSMKfsxLuh_i-t71R9YQAMt4UX9ntutZC6rReeTkAh4B0_fDvdC5a4yKCihubjX9PXqZ-X2_omyzgZgnowI8066m1CWIr0vwgbVEAEfkZvHZy5TzZy-Hr_ETh-QVHbbUGeBS30uzM_WYT0WjzQvjFR4Xeh2FEc5TUCRSESeDggOmpi3BGSPoppwKMMHqKJz_yKi8RuNZzXdysS3czFB6393A4J3ASl8Bpc9A85vge_h7m3leJZRHOiXJcwhSb-HbRLghLBDW7e1VRQ8NUw20byBHg4d0tF7XAeILFNzyazXEETGnAGeuzcusNK4N5p27pLTItOyRCT-4XwjzQilUlZW2ehSMbjlKlxw0ThmG2J0naf807Xm6_EfbwhEz2_DVamOEOuAkGSokVuNY6t7HgUcEN9er4vwylSDioqTdPuestNpSkjDHIczk_KMr-OnrWC1BfvU8Ic2xCTFI2JpKjzm086b5yaMS3n8turAjIjH2x6AouU_w-SU4VIOoX4aZz-Wuf6CSe8f8mkRL4I4_utMPQowXCBlvlyXTPXEVylBJ7l=w2818-h755-no" border="0"><br />La multiplicacion de matrices es un trabajo algo complicado por lo que he creado un programa para realizarlas, espero les sea de ayuda.<br /><img id="img_post" src="https://3.bp.blogspot.com/-Qr1ek5bNXUQ/VrGPooVg0uI/AAAAAAAAAGw/c1tCd8t_htA/s1600/images1.png" border="0"><br /><img id="img_post" src="https://lh3.googleusercontent.com/UEOteSFySdxhGCm1S2tB2v_5ypaOPwdyjlgKHPgTAkJTzBtui5dLju-Fl8Vo-CzqO3RURWEbuJ6YHI_xMd6gC5y3KakuA6AJBl0FFK6K6gGtminI-FG4wzLtUzIduhHz5LoliVyEvVhZe8odWKHXIz18aVBowgtJuqNUwKpe74wLSxkmaQVIZwSufCOTQx-aIK4ZvFNwNxz8140fjnUVS-cQ5e6N-SLLy0NsuniHj8K2GIaeSvILK4O7UQZl8FS74D2rPwvE66iIYT4gHsBAjXHJS5YGTbIz_dzMD6Hl_kvY4iU1KKPoLi3K2-XIcm2PiOz4eK4ntCUwVQRB9goWGH5n7179ExCDETT9VPhDobVAhjIJCrjI5Ar36AewORuW-HiBzYyBc40D6JacRTwmq6qlHo7EzhnpBbWuEypRszKVTbhwlmJxFKRqQSgGDreGRjZ3iaMBO1wrTNQ7oeuxgF7qoE9yYQ8a5qzesmP1JyPCSCCsXKVTBcsk_vlm8hZuE3TFGGVUzWrkSfrZniLAd5Y4zUclJeBdkHZo_HTgpgr_GuK3tZV_Np53NCroRQkHIqbezgZY60eIvEpiAQBmCU34R7Dbhbqz9FpBgUZU_gOsW7X7=w795-h499-no" border="0"><br /><img id="img_post" src="https://lh3.googleusercontent.com/VG0dqwU8Kr-TsUSnbcFP0BSQOeORe_tV6uQvEjBmP49bSn97S0S8FiwRYy-WU973M-0tC6wqCz0KO8L78Igc4y0vFf5_Ey73jpJWUCsPR8TylzJOcg8VHRJ3vwbhTQkMw0EOy0c7R2gTofQv_kIPJbPmIjCDCUOsVtGE4rK2vrq5cHUs2Z4RgGnnhs5UwomfvI86--7Sgx_4D2RFCivhCt9LPUAmQiWnyDVCjgnSUMlUwFEKpJ6-sJhKN4TiFRdyiHbMmq2XYzEqivIfDbMZ_KyDmEYmSJkP0lCVfSmTRsxvFbUd7fL-IwvN7qNpkxSEAqUMDO2qcdr-HPqv50_Csv4K8iiMw5RsQjuYT2ruf6V3KoS2h_A-80usa7BBKjGZvJn_ikGgv_dRCnClxGeLw2fp_2UrhN3orqwYZiCUIiFWpBW07Olf76nEtdjBDhjyHUZ98d41_cI2J4jgBBUEjh6QoncvPfv8CXuq1hQlw2Hssi_TFXWtaWp-0vNSKxnqFe7Ztb5laPPevYSe1Fdsrv8hochsBhAHFuVfuGV4UP7V_r4OKz1OHeLBXUVdc4DNoWkz9UirGc6xyqlUdFV6oIkNr-AKc4ytWoe3ux8Ql7u0-2-G=w796-h498-no" border="0"><br /><img id="img_post" src="https://lh3.googleusercontent.com/MQwtW0A75C4bXCphr9NEe9IDeCJB9bNpXNbjDK4hbeUvMP4jetEvge-5tLHfILUxmgTdyz4SJyOLWo-QTWX6lVGue4waYHWlak77nctl5mwK1EJJlPqR8jsLlAASyQtYZFQJPgvE2waUCOCM8T9ERFX4eTLvfbikUGIfTkFL55UtnciuYmtdYLexu6Fgnmw-xQZKIBPnwu2FP59Y6SfGyLGt8xB4E2Tzxa3UcqPB4XV0-wTSBdj4rw4S0yXlHpTDM9nk_q4Apb9-gF2LMMgUSmGA8_uHBv9NrWx7jzBJAivM8gPTm4j9KjeqcND5SYtqcacqV23pVnFT1io7-49Nx2RYo-Vh1dyiZfULJwQg_ZGj2IjROiU5oNsGWZkf9gf4PcEk51yATdgSwz6BzlYnwSJdWcNpsENeNea-oumuNEpUVsUQWjkaCaEGxixkQnYaEsSBmExICfXgmNGTKwk-NJW7xID_kp1xMzJGiG4GVFQzpo-3yCm7lYxhHza93zm4s7bdd1T1SWRaHx95KNn3qI1JZwenrZ-yL6Z8ardj01wW7QmyMut_mJAGbf_TG9jtmK6-rTh9nETtpvuGmQ6kdntoNfDNHAeallQAM5DBTmZvTFl6=w798-h497-no" border="0"><br /><img id="img_post" src="https://2.bp.blogspot.com/-G1LXyMD5lj0/VrGPpse10dI/AAAAAAAAAG0/7HoOwDLUvAI/s1600/links1.png" border="0"><br /><div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX18s84RCGSnX83J3oWTdtd4oXz837/FbAWY5oTvv88VWkkX8td7r2LAcjJE/lVZFloS5NTNGSUP1aOR1QUSw7fhrNKo7TWE2oJjh6elPFEdnP61tQByHicV1</div></div></div><br /><img id="img_post" src="https://1.bp.blogspot.com/-j8mM5hvCiVM/VrGPpqQJa_I/AAAAAAAAAG8/eWY0rQl8mYo/s1600/pass.png" border="0"><br /><b>Brezee</b><br /><br /><b><img id="img_post" src="https://victorhckinthefreeworld.files.wordpress.com/2012/03/gracias1.png" border="0"></b></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">43</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 8.6/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1266</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">2</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(438834,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(438834,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(438834,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(438834,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(438834,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(438834,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(438834,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(438834,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(438834,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(438834,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="http://vignette2.wikia.nocookie.net/dragonball/images/0/04/034ae.jpg/revision/latest?cb=20130831185234&amp;path-prefix=es" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1940903" title="perfil de EOC281107"> EOC281107</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://cccni.com/little-monkey-d-luffy/Wide-wallpaper-hd/little-monkey-d-luffy-wallpaper-hd" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=29261" title="perfil de zarot10"> zarot10</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://fotos.subefotos.com/a688e7bac8c32ffbf2310d3f73d0ad61o.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1940111" title="perfil de YBM07"> YBM07</a>: <b>3 pts</b></span>  </li><li><img id="error_avatar" src="http://images.wikia.com/sonicthehedgehoges/es/images/d/de/SonicBigAni.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=26763" title="perfil de sabueso08"> sabueso08</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://4.bp.blogspot.com/-mys47GJddkk/VA0DDqSHXEI/AAAAAAAAA3Y/SWKMmTyUPao/s1600/avatarEvolutionpixv2.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1892321" title="perfil de user.xD"> user.xD</a>: <b>10 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(438834);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('438834');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=490468" title="Algoritmo Flujo Máximo en C [código + EXE]"> Algoritmo Flujo Máximo en C [código + EXE]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=438775" title="Compilador Dev c++"> Compilador Dev c++</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=438772" title="Juego &quot;Tres en raya&quot; o &quot;Gato&quot; en C [Codigo+EXE]"> Juego &quot;Tres en raya&quot; o &quot;Gato&quot; en C [Codigo+EXE]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=438669" title="Juego ahorcado en C [Codigo+EXE]"> Juego ahorcado en C [Codigo+EXE]</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">15</span> Comentarios</span>
+<span class="onpost"> Multiplicar matrices en C [Codigo+EXE]</span>
+<div class="comentario"></div><div id="comment_4671934" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="deckRPI" href="?action=profile;user=deckRPI">
+<img id="error_avatar" src="https://ibb.co/ip2YLy" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="67504" href="?action=profile;user=deckRPI">deckRPI</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1477457934" title="26/10/2016 a las 4:58 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<b>Gracias! &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></b>
+</div>
+</div>
+</div>
+</div><div id="comment_4672051" class="comentario coment_id_2">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Brezee" href="?action=profile;user=Brezee">
+<img id="error_avatar" src="https://wow.gamepedia.com/media/wow.gamepedia.com/thumb/1/1c/Arthas.jpg/300px-Arthas.jpg?version=de61955a592224b9138919b4ca628750" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1981467" href="?action=profile;user=Brezee">Brezee</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1477479767" title="26/10/2016 a las 11:02 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita deckRPI: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><b>Gracias! &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></b></div></blockquote>Gracias a ti por comentar &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4672293" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="sabueso08" href="?action=profile;user=sabueso08">
+<img id="error_avatar" src="http://images.wikia.com/sonicthehedgehoges/es/images/d/de/SonicBigAni.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="26763" href="?action=profile;user=sabueso08">sabueso08</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1477498239" title="26/10/2016 a las 16:10 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias por el aporte, pero publica también el programa donde lo haces, gracias.
+</div>
+</div>
+</div>
+</div><div id="comment_4672296" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="sabueso08" href="?action=profile;user=sabueso08">
+<img id="error_avatar" src="http://images.wikia.com/sonicthehedgehoges/es/images/d/de/SonicBigAni.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="26763" href="?action=profile;user=sabueso08">sabueso08</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1477498280" title="26/10/2016 a las 16:11 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+perdon, ya lo vi
+</div>
+</div>
+</div>
+</div><div id="comment_4672316" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="marc80" href="?action=profile;user=marc80">
+<img id="error_avatar" src="https://www.identi.li/images/def/avatar_lazy.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1855567" href="?action=profile;user=marc80">marc80</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1477499172" title="26/10/2016 a las 16:26 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Incluis el codigo fuente? porque si no es asi no es necesario aclarar en que lenguaje esta hecho, ejemplo.. el explorador de windows esta hecho en c
+</div>
+</div>
+</div>
+</div><div id="comment_4672479" class="comentario coment_id_6">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Brezee" href="?action=profile;user=Brezee">
+<img id="error_avatar" src="https://wow.gamepedia.com/media/wow.gamepedia.com/thumb/1/1c/Arthas.jpg/300px-Arthas.jpg?version=de61955a592224b9138919b4ca628750" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1981467" href="?action=profile;user=Brezee">Brezee</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1477506471" title="26/10/2016 a las 18:27 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita marc80: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Incluis el codigo fuente? porque si no es asi no es necesario aclarar en que lenguaje esta hecho, ejemplo.. el explorador de windows esta hecho en c</div></blockquote>Si esta incluido &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4672506" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="marc80" href="?action=profile;user=marc80">
+<img id="error_avatar" src="https://www.identi.li/images/def/avatar_lazy.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1855567" href="?action=profile;user=marc80">marc80</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1477507958" title="26/10/2016 a las 18:52 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Brezee: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita marc80: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Incluis el codigo fuente? porque si no es asi no es necesario aclarar en que lenguaje esta hecho, ejemplo.. el explorador de windows esta hecho en c</div></blockquote>Si esta incluido &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote>No se si habias hecho otros post tambien, q decia el ahorcado en c, entonces los bajo, pero aclaralo (para programadores como yo (esta bueno saberlo <img src="https://identi.io/Smileys/default/icon_wink.png" alt="" border="0" />) ahi bajo todo jaja, cuando este mejor de salud hare post sobre las cosas que programo tambien, gracias!
+</div>
+</div>
+</div>
+</div><div id="comment_4672528" class="comentario coment_id_9">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Brezee" href="?action=profile;user=Brezee">
+<img id="error_avatar" src="https://wow.gamepedia.com/media/wow.gamepedia.com/thumb/1/1c/Arthas.jpg/300px-Arthas.jpg?version=de61955a592224b9138919b4ca628750" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1981467" href="?action=profile;user=Brezee">Brezee</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1477508974" title="26/10/2016 a las 19:09 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita marc80: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita Brezee: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita marc80: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Incluis el codigo fuente? porque si no es asi no es necesario aclarar en que lenguaje esta hecho, ejemplo.. el explorador de windows esta hecho en c</div></blockquote>Si esta incluido &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote>No se si habias hecho otros post tambien, q decia el ahorcado en c, entonces los bajo, pero aclaralo (para programadores como yo (esta bueno saberlo <img src="https://identi.io/Smileys/default/icon_wink.png" alt="" border="0" />) ahi bajo todo jaja, cuando este mejor de salud hare post sobre las cosas que programo tambien, gracias!</div></blockquote>Gracias por la sugerencia &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4673574" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="marc80" href="?action=profile;user=marc80">
+<img id="error_avatar" src="https://www.identi.li/images/def/avatar_lazy.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1855567" href="?action=profile;user=marc80">marc80</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1477575120" title="27/10/2016 a las 13:32 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Brezee: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita marc80: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita Brezee: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita marc80: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Incluis el codigo fuente? porque si no es asi no es necesario aclarar en que lenguaje esta hecho, ejemplo.. el explorador de windows esta hecho en c</div></blockquote>Si esta incluido &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote>No se si habias hecho otros post tambien, q decia el ahorcado en c, entonces los bajo, pero aclaralo (para programadores como yo (esta bueno saberlo <img src="https://identi.io/Smileys/default/icon_wink.png" alt="" border="0" />) ahi bajo todo jaja, cuando este mejor de salud hare post sobre las cosas que programo tambien, gracias!</div></blockquote>Gracias por la sugerencia &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote>De nada! todo sirve
+</div>
+</div>
+</div>
+</div><div id="comment_4674048" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ericc" href="?action=profile;user=ericc">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1983642" href="?action=profile;user=ericc">ericc</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1477597207" title="27/10/2016 a las 19:40 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+hola!, por qué no explicas el código dentro del mismo? Eso es importante para &quot;los no buen conocedores de este lenguaje&quot; Gracias por tu interés al respecto.
+</div>
+</div>
+</div>
+</div><div id="comment_4681388" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="user.xD" href="?action=profile;user=user.xD">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-mys47GJddkk/VA0DDqSHXEI/AAAAAAAAA3Y/SWKMmTyUPao/s1600/avatarEvolutionpixv2.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1892321" href="?action=profile;user=user.xD">user.xD</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1478053815" title="02/11/2016 a las 2:30 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+no veo las imagenes en ningunos de tus post
+</div>
+</div>
+</div>
+</div><div id="comment_4682532" class="comentario coment_id_13">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Brezee" href="?action=profile;user=Brezee">
+<img id="error_avatar" src="https://wow.gamepedia.com/media/wow.gamepedia.com/thumb/1/1c/Arthas.jpg/300px-Arthas.jpg?version=de61955a592224b9138919b4ca628750" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1981467" href="?action=profile;user=Brezee">Brezee</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1478131232" title="03/11/2016 a las 0:00 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita user.xD: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">no veo las imagenes en ningunos de tus post</div></blockquote>si no se que pasa, que servidor me recomiendas para subir las imagenes?
+</div>
+</div>
+</div>
+</div><div id="comment_4683466" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="user.xD" href="?action=profile;user=user.xD">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-mys47GJddkk/VA0DDqSHXEI/AAAAAAAAA3Y/SWKMmTyUPao/s1600/avatarEvolutionpixv2.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1892321" href="?action=profile;user=user.xD">user.xD</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1478203998" title="03/11/2016 a las 20:13 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1981467" href="https://identi.io/index.php?action=profile&user=Brezee" class="mensiones_identi">@Brezee</a> el mejor bolgger, no te borran nunca &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4683467" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="user.xD" href="?action=profile;user=user.xD">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-mys47GJddkk/VA0DDqSHXEI/AAAAAAAAA3Y/SWKMmTyUPao/s1600/avatarEvolutionpixv2.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1892321" href="?action=profile;user=user.xD">user.xD</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1478204026" title="03/11/2016 a las 20:13 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+blogger*
+</div>
+</div>
+</div>
+</div><div id="comment_4684010" class="comentario coment_id_16">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Brezee" href="?action=profile;user=Brezee">
+<img id="error_avatar" src="https://wow.gamepedia.com/media/wow.gamepedia.com/thumb/1/1c/Arthas.jpg/300px-Arthas.jpg?version=de61955a592224b9138919b4ca628750" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1981467" href="?action=profile;user=Brezee">Brezee</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1478225959" title="04/11/2016 a las 2:19 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita user.xD: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">blogger*</div></blockquote>gracias &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_1.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949dc43df4adea9',t:'MTc2MTQ4MDczMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<style>
+.spoiler-btn {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+.info_bbc {
+    word-break: break-all;
+}
+.info_bbc a {
+    color: #096FDB !important;
+    font-weight: bold;
+}
+</style>
+<script>
+(function() {
+    'use strict';
+    
+    console.log('🔐 Sistema de desencriptación automática cargado');
+    
+    // Extraer la clave del HTML
+    let DECRYPT_KEY = null;
+    const scriptTags = document.getElementsByTagName('script');
+    for (let script of scriptTags) {
+        const content = script.textContent;
+        const hashMatch = content.match(/var\s+hash\s*=\s*['"]([a-f0-9]+)['"]/);
+        if (hashMatch) {
+            DECRYPT_KEY = hashMatch[1];
+            console.log('🔑 Clave encontrada');
+            break;
+        }
+    }
+    
+    if (!DECRYPT_KEY) {
+        console.warn('⚠️ No se encontró clave de desencriptación');
+        return;
+    }
+    
+    function decrypt(encryptedText, password) {
+        try {
+            const decrypted = CryptoJS.AES.decrypt(encryptedText, password);
+            return decrypted.toString(CryptoJS.enc.Utf8) || null;
+        } catch (error) {
+            console.error('❌ Error:', error);
+            return null;
+        }
+    }
+    
+    function handleDecryptClick(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const button = event.target;
+        const spoilerDiv = button.closest('.spoiler');
+        if (!spoilerDiv) return;
+        
+        const hiddenDiv = spoilerDiv.querySelector('.info_bbc');
+        if (!hiddenDiv) return;
+        
+        const encryptedText = hiddenDiv.textContent.trim();
+        const decryptedText = decrypt(encryptedText, DECRYPT_KEY);
+        
+        if (decryptedText && decryptedText.length > 0) {
+            hiddenDiv.innerHTML = `<a href="${decryptedText}" target="_blank" rel="noopener noreferrer">${decryptedText}</a>`;
+            hiddenDiv.style.display = 'block';
+            button.style.display = 'none';
+            console.log('✅ Enlace desencriptado');
+        } else {
+            alert('❌ Error al desencriptar');
+        }
+    }
+    
+    function init() {
+        const buttons = document.querySelectorAll('.spoiler-btn, input[value*="Ver Links"], input[value*="Descarga"]');
+        
+        buttons.forEach(button => {
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+            newButton.style.cursor = 'pointer';
+            newButton.style.pointerEvents = 'auto';
+            newButton.addEventListener('click', handleDecryptClick);
+        });
+        
+        console.log('🚀 Sistema listo');
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script>
+
+</body></html>
