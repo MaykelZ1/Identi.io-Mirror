@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Formatos de Distribución de Películas en la web - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="No sabes como distinguir el tipos de calidades? descargas alguna película y se ve horriblemente mal? Por que pesa demasiado la película?? Que es es una película de cam, Hd, dvdrip, etc..?? Pues qu..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='MTVLb05IN0w5a2VVVThDVTJGc2RHVmtYMThiZFQyVmoyK3drTEc0K2tVaGR2NlBIQXZHZG9NcHpWOE9CdXFQT2Y0c0VsU0VnbGhhQmZNZkNGdmNWTlFvbzRNZUp1dlIrL1hLUHc9PTFRcTdOVVBXZlRJcmxGZw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761493094;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '6150b505a13143087636d2107d1d8c02');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_5.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Formatos de Distribución de Películas en la web" title="Identi - Formatos de Distribución de Películas en la web" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'b4c6641b178bd5d7cca55283eb9b60319707da19';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=JACZ19">JACZ19</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=JACZ19" title="Ir al Perfil de JACZ19"><img id="error_avatar" class="avatar" border="0" width="120" src="http://d1mxyp5ceukbya.cloudfront.net/images/arrow-10-reasons-best-oliver-stephen-amell-gifs-scientist-cw.jpg"/></a>
+<div class=" rango_sidebar clearfix">Mini Idento</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/minidento.png" title="Mini Idento" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1733041)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1733041');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">13</b> Seguidores</li>
+<li><b>434</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>10</b> Posts</li>
+<li><b>39</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Formatos de Distribución de Películas en la web</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=325861';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=325863';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 11 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_987889">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><span style="color: #33cc66;"><font size="3" style="line-height: 1.3em;"><img id="img_post" src="https://lh5.googleusercontent.com/-bzqTJznP8pU/TfkVGZfWDjI/AAAAAAAAACU/uDzBLrVOXWM/s576/Bienvenida.png" border="0"></font></span></div><br /><br /><br /><br /><div align="center"><span style="color: #33cc66;"><font size="3" style="line-height: 1.3em;">No sabes como distinguir el tipos de calidades?</font></span></div><br /><div align="center"><span style="color: #996633;"><font size="3" style="line-height: 1.3em;">descargas alguna película y se ve horriblemente mal?</font></span></div><br /><div align="center"><span style="color: #cc3333;"><font size="3" style="line-height: 1.3em;">Por que pesa demasiado la película??</font></span></div><br /><div align="center"><span style="color: #3333ff;"><font size="3" style="line-height: 1.3em;">Que es es una película de cam, Hd, dvdrip, etc..??</font></span></div><br /><font size="4" style="line-height: 1.3em;">Pues qui sabrás por que...</font><br /><br /><div align="center"><img id="img_post" src="https://3.bp.blogspot.com/-hIOwnDV3SPg/Uj3wwlHYMVI/AAAAAAAADsI/A9QG_o7nFTE/s1600/Calidad.png" border="0"></div><br /><br /><div align="center"><img id="img_post" src="https://4.bp.blogspot.com/_y1w5uc7K-b4/TNWkokqRerI/AAAAAAAAKV4/pFk-UW84wn0/s1600/TuneaT!.blogspot.com_Barras_Separadoras+(7).png" border="0"></div><br /> <br />Es habitual que cuando nos bajamos una película, en la web donde la encontramos se indique la calidad a través de una nomenclatura, que si bien no es oficial, puesto que pertenece al mundo ilegal warez, ya es un estándar aceptado. HDRip, DVDRIP, Screener, TC, etc. son algunas de estas definiciones de la calidad del video.<br /> <br />En este artículo veremos el significado de las más habituales. Suelen reflejar bastante bien la calidad del vídeo que obtendremos, pero como en todo, hay quien usa esta nomenclatura con poca seriedad y a veces lo que se publica como una película de alta calidad, podría no serlo tanto, pues el resultado depende en gran medida de la calidad de la fuente original y los códec usados, así como su configuración<br /> <br />La terminología usada hace referencia al origen de la película (cine, cámara, web, Dvd, Bluray, etc.) lo que en buena medida nos da una idea de la calidad obtenida final.<br /><br /><div style="text-align: justify;">OBTENIDAS ANTES DEL ESTRENO<br />Estas películas son obtenidas de copias destinadas a uso promocional, para mostrar a críticos de cine, pases a miembros del rodaje, academias de cine, etc. Son copias disponibles antes de que sean estrenadas en las salas de cine. Habitualmente son de buena calidad (cercana a DVD) y suelen mostrar mensajes, marcas de agua, escenas en blanco y negro o incluso escenas eliminadas o algunas escenas añadidas que no se mostrarán en la versión final.<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">SCR (Screener ? DVDscr ? BRscr ? BDscr)</font></span></div><br /><br />Obtenido de un DVD o de un Blu-ray de uso promocional. Suelen incorporar mensajes y/o marcas de agua indicando que es para uso promocional. En ocasiones, algunas escenas están en blanco y negro. Su calidad es casi de DVD o Blu-ray dependiendo de su origen. El audio suele ser el original en buena calidad, o como sucede con el R5, puede ser capturado de las salas de cine y posteriormente sincronizado con el video. En estas ocasiones el audio suele ser de calidad baja o media. Cuando el audio es capturado de fuentes externas, se le añade la etiqueta LiNE.<br /> <br />Screener también es el término usado para referirse a una película que aún no ha sido publicada en DVD o Blu-ray comercial.<br />Calidad del video: Buena a muy buena<br />Calidad del Audio: Bueno a muy Bueno (aunque en ocasiones es audio captado en cines de baja calidad)<br /><br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">VHS-Screener</font></span></div><br /><br />Lo mismo que un SCR, pero obtenida de una cinta VHS. Es habitual que este tipo de cintas se envíen a promotores y tiendas de alquiler para promoción. Suele incorporar mensajes que incorporan números de serie que la identifican, por lo que se tapan con bandas negras. Suelen ser colocadas en lugares molestos y a lo largo de toda la película, por lo que suelen ser inviables para pirateo. La calidad depende del estado en el que se encuentre la cinta original, pero no suele ser muy buena. Debido al desuso de este medio ya son prácticamente inexistentes.<br />Calidad del Video: Regular a Buena<br />Calidad del Audio: Regular a Bueno<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">TC (Telecine)</font></span></div><br /><br />Se obtiene por la transferencia del rollo analógico destinado a cines a un medio digital a través de una máquina destinada a este fin. Son formatos raros, pues la máquina que realiza la conversión es muy cara y grande, solo accesible a distribuidores y salas de cine. La calidad obtenida es cercana a DVD, aunque dado que las copias de los rollos suelen ser de inferior calidad, el resultado final suele ser inferior también.<br />Calidad del Video: Buena a muy Buena<br />Calidad del Audio: Bueno a muy Bueno<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">WP (Workprint)</font></span></div><br /><br />Son copias obtenidas de películas no terminadas. No son destinadas al público y son de uso interno para productores y editores, por eso son muy raras. Normalmente faltan escenas que se añadirán a la versión final, escenas sin editar, escenas que se eliminarán en las versiones finales, con marcas de agua, indicadores de tiempo en una esquina y faltan efectos especiales que se añadirán a las escenas finales. En definitiva, es una copia de trabajo.<br />Calidad del Video: Regular a muy Buena<br />Calidad del Audio: Regular a muy Bueno<br /><br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">OBTENIDAS EN CINES</font></span></div><br /><br />Son películas capturadas en los cines con una simple cámara de video doméstica. Suelen ser de baja calidad, aunque son apreciadas porque se publican rápidamente en internet y son accesibles al público antes de que se estrene en su ciudad. Si son capturadas en sesiones de preestreno, pueden estar disponibles en webs de descarga antes de su estreno oficial en cines.<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">CAM</font></span></div><br />Tanto el video como el audio son capturados en una sala de cine a través de una cámara de video doméstica. La calidad suele ser mala o pésima, aunque todo depende de la calidad de la cámara, la posición del que graba y lo atrevido que sea ocultándola. Es habitual que tenga desenfoques, movimientos bruscos, inclinaciones y no suele mostrar toda la pantalla y no es raro ver pasar gente enfrente a la cámara. Como el sonido es capturado en vivo directamente a través del micrófono de la cámara, el audio es el del ambiente, con risas, comentarios, gritos, etc.<br /> <br />Este es un formato de captura poco apreciado por la pésima calidad ofrecida. Algunos etiquetan estas copias erróneamente como Telesync, pero ya veremos a continuación que no son lo mismo.<br />Calidad del Video: Muy Mala a Regular<br />Calidad del Audio: Muy Mala a Regular<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">TS (Telesync ? TS Screener)</font></span></div><br /><br />El video es obtenido en las salas de cine al igual que las CAM, pero el audio es capturado a través de los conectores para audífonos que tienen algunos cines, por lo que su calidad es superior al CAM, a veces de excelente calidad. En ocasiones se captura el audio directamente del sistema principal de la sala de cine, alcanzando calidades de 6.1 ch., aunque no son muy habituales pues es difícil que el que captura tenga acceso a este sistema. Posteriormente se sincroniza con el video.<br /> <br />Como anécdota, diremos que en la India es popular en los mercadillos ambulantes un formato llamado PDVD (Pre-DVD), que no son más que copias CAM o Telesync grabadas en un disco DVD.<br />Calidad del Video: Muy Mala a Regular<br />Calidad del Audio: Bueno a Muy Bueno<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">TS-HQ (TelesyncHQ ? TS Screener HQ)</font></span></div><br /><br />Es lo mismo que un TS normal, pero grabado con una cámara de alta definición, por lo que la calidad es un poco mejor.<br />Calidad del Video: Regular a Buena<br />Calidad del Audio: Bueno a Muy Bueno<br /><br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">OBTENIDAS DE DISCOS Y CINTAS</font></span></div><br /><br />Son copias obtenidas de discos DVD, Blu-ray, LaserDisc, o cintas VHS, Beta, etc? comerciales. Son de excelente calidad algunas, casi idénticas al original, aunque todo depende de la habilidad del que hace la conversión y el formato y configuración de los códecs de audio/video utilizados. Como hay diferencias en las fechas de publicación comercial en los diferentes países, a veces el video es del disco original, y el audio de otras fuentes, aunque lo habitual es que se distribuyan en versión original con subtítulos independientes en formato SRT que pueden o no incluirse en las descargas obtenidas en internet.<br /> <br />Las copias pueden ser del disco completo o un rip de la película con una selección de audios y subtítulos integrados obtenidos del disco original, eliminando extras, menús , etc?<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">R5</font></span></div><br /><br />Es una copia de un DVD comercial con la versión final de la película. R5 es la región comercial de DVD perteneciente a África y gran parte de Asia, incluyendo Rusia y la India. En esta zona comercial se lanzan antes que en otras regiones, incluso antes del estreno en cines, porque el video no recibe un procesado de imagen posterior. Es un método usado por las distribuidoras para evitar la piratería en zonas donde es habitual, aunque personalmente no la entiendo, pues aunque los discos de Región 5 (R5) no se venden en otras zonas, no es obstáculo para su difusión a través de internet. Por eso las películas distribuidas antes del estreno en salas de cine suelen encontrarse en webs rusas? no es que sean mejores pirateros que los demás? es que disponen de copias comerciales antes que el resto.<br /> <br />El audio de estas copias suele ser el original, aunque muchas veces se captura el audio de otros idiomas desde diversas fuentes y se sincroniza con el video posteriormente. Cuando la copia pertenece al DVD antes de su estreno en cines, el audio es el original, cuando la película ya se emitió en cines, la imagen es del DVD y el audio capturado directamente del cine a través de un micrófono y suele ser de baja calidad. En otras ocasiones se captura el audio de la conexión que algunos cines tienen para audífonos y por lo tanto el audio es de mucha mejor calidad. En estos casos, a la etiqueta R5 se le añade la etiqueta LiNE<br />Calidad del video: Buena a muy buena (cercana al DVD)<br />Calidad del Audio: Bueno a muy Bueno (cercano al DVD aunque en ocasiones es audio captado en cines de baja calidad)<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">DVDFull (DVDR ? Full-Rip)</font></span></div><br /><br />Es una copia exacta del DVD original, con todos sus menús, extras, audios, subtítulos? La calidad es prácticamente la misma que la del DVD original cuando el origen es un DVD5 (una capa de 4.5 GB aprox.)<br /> <br />Cuando el origen es un DVD9 (8,5 GB aprox. con doble capa) algunos eliminan algunos extras o recomprimen el video o algunos elementos como las imágenes de los menús o el audio tratando de reducir su peso final, aunque en muchas ocasiones y dependiendo de la habilidad del que recomprime, suele ser inapreciable.<br />Calidad del Video: Muy buena (DVD)<br />Calidad del Audio: Muy Bueno<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">DVDRip</font></span></div><br /><br />Son copias donde se extrae la película y uno o dos audios y a veces también uno o dos pistas de subtítulos, eliminando todos los extras y menús para reducir su peso. Algunos mantienen la estructura DVD sin comprimir, aunque lo habitual es recomprimir todo en un contenedor de video como AVI, MP4, MKV, etc. lo que reduce su calidad, aunque suele ser inapreciable. Es el formato de distribución más habitual cuando hablamos de copias procedentes de un DVD.<br />Calidad del Video: Muy buena (DVD o casi DVD)<br />Calidad del Audio: Muy Bueno<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">VHSRip</font></span></div><br /><br />Es una copia de un VHS. No suele ser habitual hoy día, debido al desuso de este formato, pero hay algunas películas y documentales que no han sido publicadas en DVD o Blu-ray que ameritan usar este método. La calidad depende en gran medida del estado en la que se encuentre la cinta original, pero habitualmente no suele ser muy buena.<br />Calidad del Video: Regular a Buena<br />Calidad del Audio: Bueno a Muy Bueno<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">LaserDiscRip (LDRip LaserRip)</font></span></div><br /><br />Es un una copia de una película obtenida a partir de un Laser Disc. Debido a la baja difusión de este dispositivo y los pocos títulos publicados en este medio, no suele ser muy habitual. La calidad debería ser más o menos buena, pero las copias que he encontrado en internet suelen ser de baja calidad, casi como un VHS. Al igual que con el VHS, hay ciertos contenidos que solo salieron publicados en LaserDisc, un ejemplo puede ser la primera versión de la Guerra de las Galaxias, que solo se publicó en LaserDisc (en Alemania y USA) y en VHS.<br />Calidad del Video: Variable de Regular a Buena<br />Calidad del Audio: Bueno a Muy Bueno<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">HDRip</font></span></div><br /><br />Es igual a un DVDRip, pero el origen es una fuente de alta definición, como un Blu-ray, TVHD, HD-DVD, etc? La calidad tanto del video como del audio es excelente pues el origen también es de alta calidad. Es habitual que el audio sea multicanal (5.1 ch) AC3, ACC? Suelen incluir a veces varios idiomas.<br /> <br />Dependiendo del origen suelen renombrarse con diferentes nomenclaturas como veremos a continuación, nombrándose HDRip como forma general sin definir el origen exacto. Lo habitual, pero no siempre, es nombrarlas como HDRip cuando son copias de un HD-DVD o de una emisión de TV de alta definición.<br /> <br />Para que una película se pueda considerar HDRip, debe estar ripeada a 1280×720 como mínimo.<br />Cuando se ripean a 1280×720, se le añade la etiqueta 720p<br />Cuando se ripean a 1920×1080, se le añade la etiqueta 1080p<br />Calidad del Video: Muy buena a Excelente<br />Calidad del Audio: Muy Bueno a Excelente<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">BRRip (BDRip)</font></span></div><br /><br />Son HDRip obtenidos de un Blu-ray comercial. Suele capturarse el video y una o dos pistas de audio (a veces más) y a veces uno o dos subtítulos integrados, otras veces se añaden a las descargas un archivo de subtítulos SRT independiente.<br /> <br />Para que una película se pueda considerar BRRip o BDRip, debe estar ripeada a 1280×720 como mínimo.<br /> <br />Cuando se ripean a 1280×720, se la etiqueta como BRRip-720p<br />Cuando se ripean a 1920×1080, se la etiqueta como BRRip-1080p<br />Calidad del Video: Muy buena a Excelente<br />Calidad del Audio: Muy Bueno a Excelente<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">BRFull (BDFull)</font></span></div><br /><br />Es como un DVDFull, pero el origen es un Blu-ray. Suelen ser tremendamente pesados (más de 30 Gigas) y no son muy habituales por ese motivo.<br />Calidad del Video: Muy buena a Excelente (Blu-ray)<br />Calidad del Audio: Muy Bueno a Excelente (Blu-ray)<br /><br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">OBTENIDAS DE TV</font></span></div><br /><br />Son copias de programas, series o películas capturadas en el momento de su emisión por algún canal de televisión.<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">DVBRip</font></span></div><br /><br />Es la clasificación general de esta categoría. A continuación veremos las diferentes subclasificaciones:<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">HDTV</font></span></div><br /><br />Son capturas realizadas desde emisiones digitales de Alta Definición. Pueden ser capturas a 720p (lo más habitual) o 1080p.<br />Calidad: Excelente<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">DSRip</font></span></div><br /><br />Capturas de una señal de TV digital de satélite. La nitidez es ligeramente inferior a una captura HDTV al no ser señales de Alta Definición. Son habituales encontrarlas en calidad 720p.<br />Calidad: Muy Buena<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">TDRip</font></span></div><br /><br />Captura de una señal TDT (Televisión Digital Terrestre). La calidad es similar a la DSRip. Las capturas son habitualmente de señales SD (Estándar Definition), aunque últimamente ya se empiezan a realizar capturas HD. Lo normal es encontrarlas en calidad 720p, aunque ya se empiezan a encontrar en 1080p cuando son capturas HD y 576p (720×576) o 480p (720×480) cuando son SD.<br />Calidad: Muy Buena<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">PDTV (Satrip)</font></span></div><br /><br />Captura de una señal digital por satélite. Es muy similar al DSRip, pero con una calidad ligeramente inferior (casi DVD) pues aun siendo una señal digital, no es de Alta Definición. Suelen ser habituales en conexiones de TV sobre IP. Son señales que llegan a través de conexiones usadas habitualmente por internet de Alta Velocidad. También denominada WebTV<br />Calidad: Buena<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">TVRip</font></span></div><br /><br />Son capturas de señales de TV analógica, que puede ser de servicios de TV por cable o por antena terrestre analógica. La calidad depende mucho del dispositivo de captura usado, pero suele ser la que menos calidad ofrece dentro de esta categoría.<br />Calidad: Regular a Buena.<br /> <br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">WEBRip (WEB-DL)</font></span></div><br /><br />Es una captura hecha de emisiones realizadas a través de internet, como Youtube, Vimeo, BBC, TVE, etc. y su calidad depende de la calidad de origen. Suelen estar disponibles en MP4 y FLV.<br />Calidad: Variable de Muy Mala a Muy Buena<br /><br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">¿Qué es HD y SD?</font></span></div><br /><br />SD (Standar Definition, Definición Estándar), son señales digitales o analógicas de video, habitualmente asociada a señales de televisión que no pueden considerarse de Alta Definición (HDTV). Tienen una relación de aspecto 4:3 aunque a veces ofrecen 16:9. Su resolución es de 720×576 en el formato PAL (habitual en Europa) o de 720×480 en el formato NTSC (habitual en América). Como a toda señal que no es HDTV se la suele llamar SD, existe la confusión de denominar SD a señales EDTV (Definición Mejorada). Las señales no HD actuales son casi enteramente EDTV, usadas por DVD, TDT, TV por satélite, cámaras miniDV o videoconsolas, dejando las emisiones SDTV solo a emisiones analógicas. La señal es entrelazada (interleave) cuando son analógicas y progresivas cuando son digitales.<br /> <br />HD (High Definition, Alta Definición) son señales digitales que ofrecen una calidad superior a la ofrecida por el SD o ED y por supuesto muy superior a las señales analógicas. Como mínimo ofrece una resolución del doble de una señal SD o ED mostrando así mucho más detalle que una señal no HD. Al poder mostrar mucho más detalle, es ideal para pantallas de TV grandes y una relación de aspecto 16:9 a pantalla completa. Aunque soporta diferentes resoluciones, habitualmente nos encontraremos películas codificadas en 1280×720 o 1920×1080 ambos con señal progresiva.<br /><br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">¿Qué es entrelazado y progresivo y que significan 720p y 1080p?</font></span></div><br /><br />A veces vemos que se nos indica que una película tiene una calidad de resolución de 720p o 1080p. esos números hacen referencia al número de líneas verticales mostradas y la letra final nos indica si es señal entrelazada o progresiva. La p significa que es señal progresiva y es la que encontraremos casi siempre.<br /> <br />Entrelazado significa que los fotogramas son mostrados con la mitad de sus líneas verticales. Una vez las impares, y en el siguiente refresco de la imagen las pares. Suelen ser habituales en señales analógicas. Cuando se aprecia un parpadeo en la imagen, se dice que hay un error de sincronismo, esto es, que el tiempo transcurrido al mostrar las líneas pares y las impares es ligeramente diferente, dando esa sensación de parpadeo. En la nomenclatura de las películas que encontremos en internet, se añade una ?i? al final del número de resolución (ejemplo: 720i, 1080i).<br /> <br />Progresivo significa que las líneas de los fotogramas se muestran de forma progresiva, o sea, una tras otra hasta completarlas todas en cada refresco de fotograma. En este caso no hay error de sincronismo, pero sí de muestreo. Cuando la velocidad a la que se muestran las líneas no es correcta suele apreciarse una imagen denominada ?imagen fantasma?. En la nomenclatura de las películas que encontremos en internet, se añade una ?p? al final del número de resolución (ejemplo: 720p, 1080p). En sistemas digitales suele usarse el sistema de señal progresiva, pues ofrece mejor calidad.<br /> <br />720p y 1080p hacen referencia al número de líneas verticales que muestra cada fotograma. A mayor número de líneas, mayor calidad y definición de la imagen. El número que lo antecede hace referencia al número de pixeles por línea (ejemplo: 1280×720, significa que tiene 720 líneas verticales compuestas por 1280 pixeles cada una)<br />La resolución de un 720 es de 1280×720 píxeles, o sea, algo más de 0,9 Megapíxeles.<br />La resolución de un 1080 es de 1920×1080 píxeles, o sea, 2 Megapíxeles.<br /> <br />A veces nos encontramos con el término FullHD, esto hace referencia a la capacidad de almacenar secuencias digitales en alta definición sin pérdidas. Algunos contenedores de video como MKV, QuickTime y HD-DVD son capaces de almacenar FullHD.<br /> <br />Existen otras resoluciones, pero son menos habituales que estas dos. Como referencia mostramos algunas de ellas junto con su resolución completa:</div><br /><br /> <span style="color: #333333;"><b>96p (128×96)</b></span><br /><div style="text-align: justify;"></div><br /><div style="text-align: justify;"><span style="color: #333333;"><b>144p (176×144)</b></span></div><br /><div style="text-align: justify;"></div><br /><div style="text-align: justify;"><span style="color: #333333;"><b>240p (320×240)</b></span></div><br /><div style="text-align: justify;"></div><br /><div style="text-align: justify;"><span style="color: #333333;"><b>480p (720x480p)</b></span></div><br /><div style="text-align: justify;"></div><br /><div style="text-align: justify;"><span style="color: #333333;"><b>540p (720×540)</b></span></div><br /><div style="text-align: justify;"></div><br /><div style="text-align: justify;"><span style="color: #333333;"><b>576p (la resolución estándar es de 720×576, pero en los sistemas PAL la resolución es de 768×576 y en DVD de 1024×576, siendo todos ellos considerados 576p)</b></span></div><br /><div style="text-align: justify;"></div><br /><div style="text-align: justify;"><span style="color: #333333;"><b>2160p (3840×2160. También se le denomina 4K y se supone será el siguiente nivel en cuanto a evolución de resoluciones, la denominada UHDV (Ultra Alta Definición de Video). En Youtube podemos encontrar algunos ejemplos)</b></span></div><br /><div style="text-align: justify;"></div><br /><div style="text-align: justify;"><span style="color: #333333;"><b>4320p (7680 × 4320, también conocida como 8K y propuesta por NHK en Japón. La película de anime Dragon Ball Z: Battle of Gods es la primera película en proyectarse en Ulta Alta Definición con tecnología IMAX solo en Japón )</b></span></div><br /><br /><div align="center"><img id="img_post" src="http://i7.minus.com/ibkxcDIUzd38uk.png" border="0"></div><br /><br /><br /><br /><div align="center"><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;">¿Qué significa x264?</font></span></div><br /><br />Esta etiqueta hace referencia al códec usado para codificar una película. Es el único códec capaz de manejar flujos de video de alta definición ofreciendo bajo peso del video final sin una pérdida apreciable de calidad. En general es superior a códecs tradicionales como DivX o Xvid, que si bien ofrecen buena calidad, no manejan videos de alta resolución con la misma desenvoltura que lo hace el x264. Cuando vemos esta etiqueta en el nombre o descripción de la película, es casi un signo de que se ha usado alta calidad de codificación.<br /><br /><div align="center"><span style="color: #3333cc;"><font size="6" style="line-height: 1.3em;">y esto es nuevo:]</font></span></div><br /><div align="center"></div><br /><br /><span style="color: #333333;"><font size="6" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, Verdana, sans-serif;">¿Qué es la resolución Ultra HD 4K?</span></font></span><br /><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, Verdana, sans-serif;">Ultra HD 4K es la última palabra que debemos aprender en relación a la calidad de la imagen en los televisores. Desde la aparición de la televisión, la calidad de la imagen ha ido aumentando considerablemente con cada nueva tecnología hasta llegar a lo que actualmente se llama Ultra HD.</span></font></span><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, Verdana, sans-serif;"><span style="color: #ffffff;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, Verdana, sans-serif;">-</span></font></span></span></font></span><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Georgia, Times New Roman, Times, serif;"><img id="img_post" src="http://graffica.info/wp-content/uploads/2014/07/tablaresoluciones4k.png" border="0"></span></font></span><br /><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Georgia, Times New Roman, Times, serif;">La evolución de la resolución de las pantallas de los televisores desde 1926 hasta ahora ha sido realmente impresionante. Desde las 800 líneas de los primeros televisores SD, pasando por los primeros HD con 1080 px o la tecnología actual Full HD con 1920 px. Ahora con el 4K pasamos a casi 4.000 px.</span></font></span><br /><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Georgia, Times New Roman, Times, serif;"><b><span style="font-family: Georgia, Times New Roman, Times, serif;">Tecnología Ultra HD 4K</span></b><br />La tecnología Ultra HD 4K que se puede encontrar en los televisores más actuales supone una mejora en la resolución y calidad de la imagen que es 4 veces más que la que alcanzan los actuales televisores con definición HD, alcanzado los 3840×2160 píxeles. <b><span style="font-family: Georgia, Times New Roman, Times, serif;"><a href="http://www.lg.com/es/televisores-4K-ULTRA-HD" target="_blank" rel="nofollow"><span style="color: #224970;">Algunos como el caso de LG le otorgan el nombre de Ultra HD. </span></a></span></b></span></font></span><br /><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Georgia, Times New Roman, Times, serif;">Son televisores muy recomendados para disfrutar de los canales en alta resolución que ofrecen algunas plataformas por fibra óptica. Canales como Canal+ ya emiten en esta calidad y YouTube permite desde hace poco subir vídeos con esa resolución.</span></font></span><br /><br /><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Georgia, Times New Roman, Times, serif;"><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/0vrdgDdPApQ" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div></span></font></span><br /><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Georgia, Times New Roman, Times, serif;">El nombre de Ultra HD 4K (abreviatura de 4.000 píxeles) fue la gran novedad en la <a href="http://www.cesweb.org/" target="_blank" rel="nofollow"><span style="color: #224970;"><span style="font-family: Georgia, Times New Roman, Times, serif;">Consumer Electronic Show</span></span></a> en las Vegas donde las principales empresas presentaron monitores con precios muy ajustados, 500? frente a los 2.000? que valían los actuales.</span></font></span><br /><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Georgia, Times New Roman, Times, serif;">Algunas plataformas de televisión ya están creando contenidos con esta nueva resolución que algunos catalogan de hiperrealidad por su gran realismo, algo que sustituirá a la nada realista televisión 3D. El actual Mundial de Fútbol de Brasil 2014 ya se reproduce y distribuye en Ultra HD 4K.</span></font></span><br /><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Georgia, Times New Roman, Times, serif;"><a href="http://supercore.adm-vids.com//register_exvideo_visit?p=click&amp;pmo=f2d96f6b&amp;pmu=95db6a05" target="_blank" rel="nofollow"><span style="color: #224970;"><span style="font-family: Georgia, Times New Roman, Times, serif;"><img id="img_post" src="http://s3.af-14.co/offers/blog_image_1s/1400667456404506880/medium/OpcionB_4K.jpg" border="0"></span></span></a></span></font></span><br /><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Georgia, Times New Roman, Times, serif;">A pesar de que la calidad de imagen es mejor en los Plasma, parece que todo el mundo prefiere televisores LCD, que con esta tecnología da como resultado aparatos que son cada vez más reales y ultradelgados, por lo que la desaparición de los Plasma es inminente.</span></font></span><br /><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Georgia, Times New Roman, Times, serif;"><b><span style="font-family: Georgia, Times New Roman, Times, serif;">El futuro es 8K</span></b><br />Aunque la tecnología 4K supone un gran avance, todavía no supone el límite. El limite de percepción del ojo humano está en 8K. Si el 4K se convierte en una pantalla de 84 pulgadas a una resolución de 3.840 x 2.160 pixeles, la futura 8K supone una pantalla de 145 pulgadas (o sea que su diagonal es de 3,7 metros de largo), cuya resolución tiene 7.680×4.320 píxeles donde cada cuadro equivale a una imagen de 32 megapíxeles de una cámara fotográfica.</span></font></span><br /><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Georgia, Times New Roman, Times, serif;">Una tecnología que ya en 2012 el Sector de Normalización de las Telecomunicaciones (UIT-T), departamento de la Unión Internacional de Telecomunicaciones (UIT) dependiente de la ONU, aprobó el Super Hi-Vision 8K como un estándar de la industria de la televisión. Este organismo lleva normalizando las comunicaciones a nivel mundial desde 1865, dando el visto bueno a estándares como el protocolo de las máquinas de fax, el Protocolo de Internet (IP), las imágenes JPEG, el ADSL y la norma de codificación de vídeo H.264, entre muchos otros. Es decir, que el futuro será en 8K.</span></font></span><br /><span style="color: #333333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Georgia, Times New Roman, Times, serif;"><img id="img_post" src="http://graffica.info/wp-content/uploads/2014/07/tablaresoluciones-1346933300.png" border="0"></span></font></span><br /><br /><div align="center"><img id="img_post" src="http://public.bn1.livefilestore.com/y2pGd-0bi3xKnjpJHaQpKR7r1zwd0_Pr_ymz_gh0bt3AWRXrVL8qPqDqTyPW3x4QazRusVFYCaxmf2Vi5XfV9iwKDTiyc3GcmTdXOqZcqXEBPQ/Goku7copia.png?psid=1&amp;rdrts=79843219" border="0"></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">60</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">2518</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">12</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(325862,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(325862,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(325862,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(325862,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(325862,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(325862,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(325862,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(325862,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(325862,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(325862,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://3.bp.blogspot.com/-4pJhYoTND_w/VLhCesNm1WI/AAAAAAAAK1U/EMHVXBnpZ_k/s1600/120115-1708-2222222.png" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1856034" title="perfil de shinzen13"> shinzen13</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-K1gh5iWxDKM/VCww3atFW_I/AAAAAAAABiE/UtM-_mVi2sk/s1600/1398_naranja-optimista.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1574296" title="perfil de grp03"> grp03</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://sia1.subirimagenes.net/img/2014/07/03/14070305491113935.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1812740" title="perfil de zfh30"> zfh30</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://lh3.googleusercontent.com/-OXHraglb2Fg/UTDnh2dn_DI/AAAAAAAAAdQ/-e14XPn69l8/w497-h373/avatar.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1521071" title="perfil de Farkler"> Farkler</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://4.bp.blogspot.com/-USFVX_GxATQ/UP6Y7Z3dXNI/AAAAAAAAClk/KcXutQoUoUA/s1600/Alucard-Hellsing-Ultimate.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1550939" title="perfil de HELLSINGMA"> HELLSINGMA</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.imgur.com/76kkbS3.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1888078" title="perfil de Zulux91"> Zulux91</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://4.bp.blogspot.com/-mys47GJddkk/VA0DDqSHXEI/AAAAAAAAA3Y/SWKMmTyUPao/s1600/avatarEvolutionpixv2.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1892321" title="perfil de user.xD"> user.xD</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdJQ-FBFIHd7AIz3fUPPuSdxCQoiNWv1BKcDx3JFLbH6XvG2eYS-I00QeQHeuT1QhpjzBzVAXQMkYTLAFGmZbYOAMZ-jY6jv5fLccQ5bdAhYoWmELD4KDT6EutRjU94HxNQqQOcYa0o9il0PDo5pawm1ZkxYuB5KCSoVNWNNRNZL7AeT73O1sum1e04tY/s1600/" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=35616" title="perfil de ferboy007"> ferboy007</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://images2.imgbox.com/3c/34/nWTMnSYq_o.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1557750" title="perfil de javicho270"> javicho270</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTG9ZXAZP7DvtzgyNWkqUebQoTD9h4GVRZv8ueQLj6JQY28HDHA" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1539514" title="perfil de lopecito84"> lopecito84</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://m1.paperblog.com/i/65/657442/descarga-gratis-imagenes-tu-black-berry-messe-L-N7FkVe.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1831978" title="perfil de TuBlack"> TuBlack</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://upload.wikimedia.org/wikipedia/commons/7/79/Animated-Flag-Puerto_Rico.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1692571" title="perfil de Bori_4ever"> Bori_4ever</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(325862);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('325862');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_34"></i>
+<a href="https://identi.io/index.php?topic=359205" title="SPIDERMAN de regreso a MARVEL"> SPIDERMAN de regreso a MARVEL</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=327632" title="Naruto Manga 686 Online "> Naruto Manga 686 Online </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=326250" title="Naruto 685 Online y Descarga [Mega]"> Naruto 685 Online y Descarga [Mega]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=325173" title="Naruto Manga 684 (Español) + descarga (Mega)"> Naruto Manga 684 (Español) + descarga (Mega)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=325146" title="JDowmloader 2 +Portable + Data  9Jul Premiun Packz"> JDowmloader 2 +Portable + Data  9Jul Premiun Packz</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=325034" title="Navegadores y descarga oficial"> Navegadores y descarga oficial</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=324886" title="Naruto [1280x960] [Español Latino] (1-135)(Mega)"> Naruto [1280x960] [Español Latino] (1-135)(Mega)</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">11</span> Comentarios</span>
+<span class="onpost"> Formatos de Distribución de Películas en la web</span>
+<div class="comentario"></div><div id="comment_3475495" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="hectormb" href="?action=profile;user=hectormb">
+<img id="error_avatar" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTqBv7gLI7QA1iWyKWe8dfbg8gZ554HuIi0nwvSDMXNRImicd3w" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1823097" href="?action=profile;user=hectormb">hectormb</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405220684" title="13/07/2014 a las 3:04 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+buen post &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3475500" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlops" href="?action=profile;user=carlops">
+<img id="error_avatar" src="https://giantcdn-qu2qwwv2de7wv85rz.stackpathdns.com/remote/www.giant-bicycles.com/_upload_mx/bikes/models/xxl/TCR%20ADSL%202-KOM_Red.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="5987" href="?action=profile;user=carlops">carlops</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405220923" title="13/07/2014 a las 3:08 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+ojo que tambien podes bajar una avi con formato vob o una en mp4 con formato ts
+</div>
+</div>
+</div>
+</div><div id="comment_3475501" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="viksurf" href="?action=profile;user=viksurf">
+<img id="error_avatar" src="https://www.google.com/search?q=negan&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=2ahUKEwjM25S42fzoAhUJA6wKHU3eCsYQ_AUoAXoECBUQAw&amp;biw=1360&amp;bih=657#imgrc=B2YHcG08af0F1M" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="92596" href="?action=profile;user=viksurf">viksurf</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405220953" title="13/07/2014 a las 3:09 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+te falto explicar el formato mkv,buena la informacion a pesar de todo
+</div>
+</div>
+</div>
+</div><div id="comment_3475516" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="shinzen13" href="?action=profile;user=shinzen13">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-4pJhYoTND_w/VLhCesNm1WI/AAAAAAAAK1U/EMHVXBnpZ_k/s1600/120115-1708-2222222.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1856034" href="?action=profile;user=shinzen13">shinzen13</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405221473" title="13/07/2014 a las 3:17 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+si falto mkv tenia solo 5 puntos te los doy buena explicacion, ya que me he topado en variados lados subidores que ni saben lo que suben o ni la ven lo que ofrecen jajjaaj
+</div>
+</div>
+</div>
+</div><div id="comment_3475553" class="comentario coment_id_5">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="JACZ19" href="?action=profile;user=JACZ19">
+<img id="error_avatar" src="http://d1mxyp5ceukbya.cloudfront.net/images/arrow-10-reasons-best-oliver-stephen-amell-gifs-scientist-cw.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1733041" href="?action=profile;user=JACZ19">JACZ19</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405222701" title="13/07/2014 a las 3:38 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="5987" href="https://identi.io/index.php?action=profile&user=carlops" class="mensiones_identi">@carlops</a> <br /><br />Exactamente estas en lo cierto.. puede haber un mp4, mkv, avi..etc que puden ser un CAM, un ts etc...<br /><br /><a usuario="92596" href="https://identi.io/index.php?action=profile&user=viksurf" class="mensiones_identi">@viksurf</a> &nbsp;<a usuario="1856034" href="https://identi.io/index.php?action=profile&user=shinzen13" class="mensiones_identi">@shinzen13</a> <br />Lo que pasa es que habla de calidades y el mkv viene siendo un formato contenedor &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3475563" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="shinzen13" href="?action=profile;user=shinzen13">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-4pJhYoTND_w/VLhCesNm1WI/AAAAAAAAK1U/EMHVXBnpZ_k/s1600/120115-1708-2222222.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1856034" href="?action=profile;user=shinzen13">shinzen13</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405222860" title="13/07/2014 a las 3:41 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+eso si que es cierto hay mkv en multiples calidaddes buenas y muy malas jajaja, gracias al cielo que la mayoria de los mkv son doble audio de 720p o 1080p &nbsp;y obiamete hd, &nbsp;saludines
+</div>
+</div>
+</div>
+</div><div id="comment_3475569" class="comentario coment_id_7">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="JACZ19" href="?action=profile;user=JACZ19">
+<img id="error_avatar" src="http://d1mxyp5ceukbya.cloudfront.net/images/arrow-10-reasons-best-oliver-stephen-amell-gifs-scientist-cw.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1733041" href="?action=profile;user=JACZ19">JACZ19</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405223181" title="13/07/2014 a las 3:46 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita shinzen13: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">eso si que es cierto hay mkv en multiples calidaddes buenas y muy malas jajaja, gracias al cielo que la mayoria de los mkv son doble audio de 720p o 1080p &nbsp;y obiamete hd, &nbsp;saludines</div></blockquote><br />si la mayor parte viene siendo un 1080p ..es raro que encuentres un mkv que contnga mala calidad <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /><br /><br />checate la nueva calidad que agregue &nbsp;4k... y que se venga la 8K &nbsp;<img src="https://identi.io/Smileys/default/icon_baba.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_baba.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_baba.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_baba.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3475580" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="shinzen13" href="?action=profile;user=shinzen13">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-4pJhYoTND_w/VLhCesNm1WI/AAAAAAAAK1U/EMHVXBnpZ_k/s1600/120115-1708-2222222.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1856034" href="?action=profile;user=shinzen13">shinzen13</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405223352" title="13/07/2014 a las 3:49 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+oooooo que loco no llega mi pressupuesot a una tv de esas dimenciones, quizas algun dia
+</div>
+</div>
+</div>
+</div><div id="comment_3475803" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ferboy007" href="?action=profile;user=ferboy007">
+<img id="error_avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdJQ-FBFIHd7AIz3fUPPuSdxCQoiNWv1BKcDx3JFLbH6XvG2eYS-I00QeQHeuT1QhpjzBzVAXQMkYTLAFGmZbYOAMZ-jY6jv5fLccQ5bdAhYoWmELD4KDT6EutRjU94HxNQqQOcYa0o9il0PDo5pawm1ZkxYuB5KCSoVNWNNRNZL7AeT73O1sum1e04tY/s1600/" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="35616" href="?action=profile;user=ferboy007">ferboy007</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405232632" title="13/07/2014 a las 6:23 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_ojitos.png" alt="" border="0" /> buena infoo &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3476272" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mixipilix" href="?action=profile;user=mixipilix">
+<img id="error_avatar" src="http://cdn.blogs.revistagq.com/milmaneras/wp-content/uploads/2011/07/amywinehouse.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1700972" href="?action=profile;user=mixipilix">mixipilix</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405273528" title="13/07/2014 a las 17:45 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+muchas gracias maestro, me ha servido muchisimo <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3477515" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jbanios" href="?action=profile;user=jbanios">
+<img id="error_avatar" src="http://subefotos.com/ver/?e39a55e2b3901774fa220a0feae2fdc6o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1693220" href="?action=profile;user=jbanios">jbanios</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405318130" title="14/07/2014 a las 6:08 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> refrescando la memoria <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_5.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994b0a1ccf8cdea3',t:'MTc2MTQ5MzA5Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
