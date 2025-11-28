@@ -1,0 +1,583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Formatear y Recuperar Usb Con Diskpart Windows - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Diskpart es una “herramienta de gestión de discos” Si piensas que tu unidad de almacenamiento está fallando en su funcionamiento y piensas que podría ser un problema de software, puedes usar el..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='aHVpRkUwekRpOVZFUVR4VTJGc2RHVmtYMThUNkhqV3RsOFhjV0g1R3hNRHBGN2RHYXQ4TXBQdW81S1ZMZnlqblN1MXhndnhWRlBueU9kTjRnSUlWRUNvWmlXTTluVEZJcDJ0ZUE9PTI1aXVBSjhoQURYY3hVUw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761480358;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '0de4cd011078ac03c7570f9f97996d28');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_3.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Formatear y Recuperar Usb Con Diskpart Windows" title="Identi - Formatear y Recuperar Usb Con Diskpart Windows" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '9e332763e79ee28f70967e947d72f8db2372b250';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=DEVIAN">DEVIAN</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=DEVIAN" title="Ir al Perfil de DEVIAN"><img id="error_avatar" class="avatar" border="0" width="120" src="http://www.identi.li/images/def/avatar.png"/></a>
+<div class=" rango_sidebar clearfix">Novato</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/novato.png" title="Novato" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1977632)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1977632');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">1</b> Seguidores</li>
+<li><b>60</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>1</b> Posts</li>
+<li><b>46</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Formatear y Recuperar Usb Con Diskpart Windows</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=454588';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=454590';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 8 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1116619">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><b><span style="color: #000000;"><span style="font-family: Droid Sans, Arial, Verdana, sans-serif;">Diskpart es una “herramienta de gestión de discos”</span></span></b><span style="font-family: helvetica neue, helvetica, arial, sans-serif;"><br /><span style="color: #000000;"><span style="font-family: Droid Sans, Arial, Verdana, sans-serif;">Si piensas que tu <b>unidad de almacenamiento</b> está fallando en su funcionamiento y piensas que podría ser un problema de software, puedes usar el comando Diskpart de Windows para solucionarlo.</span></span><br /><br />¿Que es Diskpart?</span><br /><b><span style="color: #000000;"></span></b><br /><span style="color: #000000;"></span><br /><span style="color: #000000;"><span style="font-family: Droid Sans, Arial, Verdana, sans-serif;">Es una utilidad de línea de comandos que permite administrar discos. Algunos comandos sólo pueden ser accedidos a través de </span></span><b><span style="color: #000000;"><span style="font-family: Droid Sans, Arial, Verdana, sans-serif;">Diskpart</span></span></b><span style="color: #000000;"><span style="font-family: Droid Sans, Arial, Verdana, sans-serif;"> y no mediante el “Administrador de discos” de Windows. Esta es la razón de que sea una herramienta de gran alcance para ver ciertos discos que no aparecen en el “Administrador de discos”, convertir un disco básico en un disco dinámico, usar el comando “clean”, borrar toda la información del disco, administrar las particiones (crear, borrar, editar), asignar, modificar y borrar una letra del lector y formatear una partición con muchas posibilidades.</span></span><br /><span style="color: #000000;"></span><br /><span style="color: #000000;"><span style="font-family: helvetica neue, helvetica, arial, sans-serif;"><span style="font-family: Droid Sans, Arial, Verdana, sans-serif;">Puede ser una herramienta muy útil en algunos casos donde el “Administrador de discos” no puede realizar determinadas operaciones tan simples como formatear. Existen muchos comandos para <b>administrar tus discos</b>. Aquí mostrare los comandos para poder listar, seleccionar, limpiar, y formatear un disco. Esta herramienta está integrada a la mayoría de los modelos de Windows: XP, Vista, 7, 8, 8.1 y 10.</span><br /><br /><br /><span style="font-family: Droid Sans, Arial, Verdana, sans-serif;"><span style="font-family: Arial;"><b>IMPORTANTE</b>: Realizaremos un formateo lento que borrara toda la información de tu USB.</span></span><br /><br /><span style="font-family: Droid Sans, Arial, Verdana, sans-serif;"><span style="font-family: Arial;">Comenzamos:</span></span></span></span><br /><br /><span style="font-family: Arial;"><span style="color: #000000;">Ejecutar </span><b><span style="color: #000000;">CMD como Administrador</span></b><span style="color: #000000;"> (En la barra de búsqueda según tu versión de Windows)</span></span><br /><span style="color: #000000;"><span style="font-family: Arial;">escribir:</span></span><br /><span style="font-family: Arial;"><span style="color: #000000;"><b>CD/ </b>(Enter)<br /><b>diskpart</b> </span><span style="color: #000000;">(Enter)</span><span style="color: #000000;"> </span><br /><br /><span style="color: #000000;">escribir:</span></span><br /><span style="font-family: Arial;"><span style="color: #000000;"><b>list disk</b> </span><span style="color: #000000;">(Enter)</span><span style="color: #000000;"> </span></span><br /><br /><span style="font-family: Arial;"><span style="color: #000000;">Nos muestra una lista de los discos o unidades instaladas, posteriormente seleccionar el del USB </span><br /><br /><span style="color: #000000;">escribir:<br /><br /><b>select disk</b> # </span><span style="color: #000000;">(Enter)</span><span style="color: #000000;"> </span></span><br /><br /><span style="color: #000000;"><span style="font-family: Arial;">IMPORTANTE: Reemplazar y verificar que # es el número de nuestro USB a reparar generalmente es 1</span></span><br /><br /><span style="font-family: Arial;"><span style="color: #000000;">aparecerá</span><span style="color: #000000;">:</span></span><br /><br /><span style="font-family: Arial;"><span style="color: #000000;"><i>el disco # es ahora el disco seleccionado </i></span><br /><br /><span style="color: #000000;">escribir: </span></span><br /><br /><span style="font-family: Arial;"><span style="color: #000000;"><b>clean</b> </span><span style="color: #000000;">(Enter)</span></span><br /><br /><span style="font-family: Arial;">aparecerá:</span><br /><span style="font-family: Arial;"><br /><span style="color: #000000;"><i>diskpart ha limpiado el disco satisfactoriamente</i> </span><br /><br /><span style="color: #000000;">escribir: </span></span><br /><br /><span style="font-family: Arial;"><span style="color: #000000;"><b>create partition primary</b> </span><span style="color: #000000;">(Enter)</span></span><br /><span style="font-family: Arial;"><span style="color: #000000;">aparecerá</span><span style="color: #000000;">:</span></span><br /><br /><span style="font-family: Arial;"><span style="color: #000000;"><i>diskpart ha creado satisfactoriamente la partición especificada </i></span><br /><br /><span style="color: #000000;">escirbir: </span></span><br /><br /><span style="color: #000000;"><b><span style="font-family: Arial;">select partition # </span></b></span><br /><br /><span style="color: #000000;"><span style="font-family: Arial;">IMPORTANTE: Reemplazar y verificar que # es el número de nuestro USB a reparar generalmente es 1</span></span><br /><br /><span style="color: #000000;"><span style="font-family: Arial;">aparecera:</span></span><br /><br /><span style="font-family: Arial;"><span style="color: #000000;"><i>la particion # es ahora la seleccionada</i> </span><br /><br /><span style="color: #000000;">escribir: </span></span><br /><br /><span style="font-family: Arial;"><span style="color: #000000;"><b>active</b> </span><span style="color: #000000;">(Enter)</span></span><br /><br /><span style="font-family: Arial;">aparecerá:<br /><span style="color: #000000;"><i>diskpart marca la particion actual como activa </i></span><br /><br /><span style="color: #000000;">escribir:</span></span><br /><br /><span style="font-family: Arial;"><span style="color: #000000;"><b>format fs=FAT32 </b>(Enter)</span></span><br /><span style="color: #000000;"><span style="font-family: Arial;">IMPORTANTE: Reemplazar FAT32 por NTFS según desees el tipo de formateo, usualmente utilizaremos NTFS por la gran capacidad de las memorias actuales.</span></span><br /><br /><span style="color: #000000;"><span style="font-family: Arial;">Esperar hasta que aparezca:</span></span><br /><br /><span style="font-family: Arial;"><i><span style="color: #000000;">100 por ciento completado </span></i><span style="color: #000000;"><i>diskpat formateo el volumen correcto</i> </span></span><br /><span style="font-family: Arial;"><br /><span style="color: #000000;">escribir: </span></span><br /><br /><span style="color: #000000;"><span style="font-family: Arial;"><b>assign</b> (Enter)</span></span><br /><br /><span style="font-family: Arial;"><span style="color: #000000;">aparecerá</span><span style="color: #000000;">:</span></span><br /><span style="font-family: Arial;"><span style="color: #000000;"> </span><br /><span style="color: #000000;"><i>diskpart asigno correctamente una letra de unidad de montaje </i></span><br /><br /><span style="color: #000000;">escribir: </span></span><br /><br /><span style="color: #000000;"><span style="font-family: Arial;"><b>exit </b>(Enter)</span></span><br /><br /><span style="color: #000000;"><span style="font-family: Arial;">escribir: </span></span><br /><br /><span style="color: #000000;"><span style="font-family: Arial;"><b>exit</b> (Enter)</span></span><br /><br /><br /><span style="color: #000000;"><span style="font-family: helvetica neue, helvetica, arial, sans-serif;">Con ello saldremos hasta nuestro escritorio de Windows nuevamente y estaremos realizando un formateo más a fondo a nuestra memoria USB con lo cual la mayoría de las veces podremos reutilizarla nuevamente si </span></span><b><span style="color: #000000;"></span></b><span style="font-family: helvetica neue, helvetica, arial, sans-serif;"><span style="color: #000000;"><span style="font-family: Droid Sans, Arial, Verdana, sans-serif;">está fallando en su funcionamiento y piensas que podría ser un problema de software</span></span></span><br /><b><span style="color: #000000;"></span></b><span style="color: #000000;"><span style="font-family: helvetica neue, helvetica, arial, sans-serif;"> .</span></span><br /><br /><br /><span style="color: #000000;"><span style="font-family: helvetica neue, helvetica, arial, sans-serif;"><i>Nota: </i></span></span><br /><i><span style="color: #000000;"><span style="font-family: helvetica neue, helvetica, arial, sans-serif;">Es mi primer post y deseo obtener puntos así que si gustan apoyarme y no ponerse tan exigentes con un novato lo agradeceré</span></span><span style="color: #000000;"><span style="font-family: helvetica neue, helvetica, arial, sans-serif;">.</span></span></i><br /><br /><span style="color: #000000;"><span style="font-family: helvetica neue, helvetica, arial, sans-serif;">Saludos.</span></span><br /><br /><br /><br /><span style="color: #000000;"><span style="font-family: helvetica neue, helvetica, arial, sans-serif;"> </span></span></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">60</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">2844</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">12</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(454589,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(454589,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(454589,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(454589,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(454589,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(454589,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(454589,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(454589,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(454589,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(454589,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://farm9.staticflickr.com/8705/16345209953_e9e61c6023_m.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1885565" title="perfil de kike333"> kike333</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://pixvid.org/images/2025/09/15/UurmE.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1719747" title="perfil de Quamen"> Quamen</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://ist6-3.filesor.com/pimpandhost.com/2/4/0/7/240741/a/Q/u/g/aQugM/30bf2550d270a06e0b8db06af32c9063.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=119485" title="perfil de kenoi"> kenoi</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.postimg.cc/0N1QvDQ0/xfiles-mulder.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1794696" title="perfil de lobazo79"> lobazo79</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://thumbs.subefotos.com/0742903cd3a71610960eab9233137494o.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1940805" title="perfil de gambe_2"> gambe_2</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://fotos.subefotos.com/3438eab9d5374afc0176f2e304dab408o.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=16511" title="perfil de Wolfmaster3008"> Wolfmaster3008</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://photos.fife.usercontent.google.com/pw/AP1GczPukxdEu8YYdrOcd9nEXmgNboYS8BFre73Fbx8cWdCVTjM9X2lMzQyZ=w674-h619-s-no-gm?authuser=0" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=27566" title="perfil de MIREY1REY"> MIREY1REY</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.postimg.cc/5NVsZKfv/A6.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1941817" title="perfil de cesarbbcc"> cesarbbcc</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-GKk0f2-NvbA/XZwVPYLYdXI/AAAAAAAAANE/VilJPOjSHqsvPcY0VU8ppDw8wl3JGhmNgCLcBGAsYHQ/s1600/GIF4-min.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1949059" title="perfil de 05DYM"> 05DYM</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.postimg.cc/FHjFYbdW/36-C1546-DD.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1731961" title="perfil de WorldWarZ"> WorldWarZ</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=92679" title="perfil de alejanai"> alejanai</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://yonic69.blogspot.com/2024/09/fotofy.html" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1992187" title="perfil de Ahernandez"> Ahernandez</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(454589);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('454589');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<div>No se encontraron m&aacute;s posts</div></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">13</span> Comentarios</span>
+<span class="onpost"> Formatear y Recuperar Usb Con Diskpart Windows</span>
+<div class="comentario"></div><div id="comment_4801374" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Quamen" href="?action=profile;user=Quamen">
+<img id="error_avatar" src="https://pixvid.org/images/2025/09/15/UurmE.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1719747" href="?action=profile;user=Quamen">Quamen</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1486578202" title="08/02/2017 a las 18:23 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4801409" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="valken_1" href="?action=profile;user=valken_1">
+<img id="error_avatar" src="http://i252.photobucket.com/albums/hh40/cyberveritech/smslx3.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="137900" href="?action=profile;user=valken_1">valken_1</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1486580329" title="08/02/2017 a las 18:58 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4801450" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="kenoi" href="?action=profile;user=kenoi">
+<img id="error_avatar" src="https://ist6-3.filesor.com/pimpandhost.com/2/4/0/7/240741/a/Q/u/g/aQugM/30bf2550d270a06e0b8db06af32c9063.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="119485" href="?action=profile;user=kenoi">kenoi</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1486582102" title="08/02/2017 a las 19:28 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4801635" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="gambe_2" href="?action=profile;user=gambe_2">
+<img id="error_avatar" src="http://thumbs.subefotos.com/0742903cd3a71610960eab9233137494o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1940805" href="?action=profile;user=gambe_2">gambe_2</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1486593367" title="08/02/2017 a las 22:36 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+muy bueno, lo pongo en practica
+</div>
+</div>
+</div>
+</div><div id="comment_4801766" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Wolfmaster3008" href="?action=profile;user=Wolfmaster3008">
+<img id="error_avatar" src="https://fotos.subefotos.com/3438eab9d5374afc0176f2e304dab408o.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="16511" href="?action=profile;user=Wolfmaster3008">Wolfmaster3008</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1486599391" title="09/02/2017 a las 0:16 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4801913" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jose2712" href="?action=profile;user=jose2712">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1913870" href="?action=profile;user=jose2712">jose2712</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1486604601" title="09/02/2017 a las 1:43 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias hermano por el tutorial es de mucha ayuda......... <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4802002" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="MIREY1REY" href="?action=profile;user=MIREY1REY">
+<img id="error_avatar" src="https://photos.fife.usercontent.google.com/pw/AP1GczPukxdEu8YYdrOcd9nEXmgNboYS8BFre73Fbx8cWdCVTjM9X2lMzQyZ=w674-h619-s-no-gm?authuser=0" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="27566" href="?action=profile;user=MIREY1REY">MIREY1REY</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1486608728" title="09/02/2017 a las 2:52 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+lo mire en google esta solucion, lo hise y funciono, lo miro aqui y se que funcionara &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> &nbsp;+
+</div>
+</div>
+</div>
+</div><div id="comment_4802009" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="cesarbbcc" href="?action=profile;user=cesarbbcc">
+<img id="error_avatar" src="https://i.postimg.cc/5NVsZKfv/A6.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1941817" href="?action=profile;user=cesarbbcc">cesarbbcc</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1486609307" title="09/02/2017 a las 3:01 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1526450" href="https://identi.io/index.php?action=profile&user=gracias" class="mensiones_identi">@gracias</a>
+</div>
+</div>
+</div>
+</div><div id="comment_4802859" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="05DYM" href="?action=profile;user=05DYM">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-GKk0f2-NvbA/XZwVPYLYdXI/AAAAAAAAANE/VilJPOjSHqsvPcY0VU8ppDw8wl3JGhmNgCLcBGAsYHQ/s1600/GIF4-min.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1949059" href="?action=profile;user=05DYM">05DYM</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1486679786" title="09/02/2017 a las 22:36 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4803548" class="comentario coment_id_10">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="DEVIAN" href="?action=profile;user=DEVIAN">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1977632" href="?action=profile;user=DEVIAN">DEVIAN</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1486738113" title="10/02/2017 a las 14:48 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1719747" href="https://identi.io/index.php?action=profile&user=Quamen" class="mensiones_identi">@Quamen</a> <a usuario="137900" href="https://identi.io/index.php?action=profile&user=valken_1" class="mensiones_identi">@valken_1</a> <a usuario="119485" href="https://identi.io/index.php?action=profile&user=kenoi" class="mensiones_identi">@kenoi</a> <a usuario="1940805" href="https://identi.io/index.php?action=profile&user=gambe_2" class="mensiones_identi">@gambe_2</a> <a usuario="16511" href="https://identi.io/index.php?action=profile&user=Wolfmaster3008" class="mensiones_identi">@Wolfmaster3008</a> <a usuario="1913870" href="https://identi.io/index.php?action=profile&user=jose2712" class="mensiones_identi">@jose2712</a> <a usuario="27566" href="https://identi.io/index.php?action=profile&user=MIREY1REY" class="mensiones_identi">@MIREY1REY</a> <a usuario="1941817" href="https://identi.io/index.php?action=profile&user=cesarbbcc" class="mensiones_identi">@cesarbbcc</a> <a usuario="1949059" href="https://identi.io/index.php?action=profile&user=05DYM" class="mensiones_identi">@05DYM</a> <br /><br />¡Gracias por sus comentarios!
+</div>
+</div>
+</div>
+</div><div id="comment_4811124" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="alejanai" href="?action=profile;user=alejanai">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="92679" href="?action=profile;user=alejanai">alejanai</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1487297533" title="17/02/2017 a las 2:12 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4924365" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="karnactes" href="?action=profile;user=karnactes">
+<img id="error_avatar" src="https://lh3.googleusercontent.com/-OK2KybCfIDE/ZGbC29YvvpI/AAAAAAAABCo/V_cnBtwjAZYdYLoRxKwFZZtxmWMaRBJjQCNcBGAsYHQ/h120/El%2BInspector%2B-%2BBandido2.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1968421" href="?action=profile;user=karnactes">karnactes</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1494770118" title="14/05/2017 a las 13:55 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy buen aporte... Mucha gracias... &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5598832" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="globo1908" href="?action=profile;user=globo1908">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-pOkC_LBJJro/VHfX1eGT5lI/AAAAAAAAvcw/n5OuPeBWq1g/s1600/CAH.%2BEscudo%2BHuracan%2B-%2BContorno%2BRojo.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2028711" href="?action=profile;user=globo1908">globo1908</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1589120170" title="10/05/2020 a las 14:16 ">hace m&aacute;s de 5 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+ami no me sirve nada, tengo un pendrive con un virus, no me deja formatearlo si me deja borrar todo desde la carpeta exepto un video que tiene 0mb y me deja grabar y llenarlo, pero cuando termina lo saco y cuando lo vuelvo a poner TODA LA INFO NUEVA NO ESTA &nbsp;vuelven los archivos anteriores!!!!
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_3.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949d3317942dea6',t:'MTc2MTQ4MDM1OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
