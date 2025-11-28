@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>reproductor AIMP3 - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="AIMP3 AIMP es popular, entre otras cosas, por usar pocos recursos durante su ejecución, tener una interfaz de usuario sencilla y fácil de usar, además adoptar uso de carátulas o skins, mediante..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='MXJMYjRJQjRxRE1ySkltVTJGc2RHVmtYMS9hUzBqUVA0ZXBBVUl6L2JmMzZrcW9ERGxheW9uN25vQnFmRHRFSEhFcmszejBDMTFNRE8wRkt1TlpJN3AwVVQ2R0I0SFMxakZIQUE9PWhOUlJIN1JvYTNuNXY1cw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761491631;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '2bfd9ee84cc93bd73855d42392dff9e7');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_4.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - reproductor AIMP3" title="Identi - reproductor AIMP3" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'b1929e45a48a4d81b75725bc5a45841343cd234b';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=cala92">cala92</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=cala92" title="Ir al Perfil de cala92"><img id="error_avatar" class="avatar" border="0" width="120" src="http://i.minus.com/imsPV8LIKYNLT.gif"/></a>
+<div class=" rango_sidebar clearfix">New Full User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/co.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/newfull.png" title="New Full User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1900327)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1900327');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">0</b> Seguidores</li>
+<li><b>137</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>12</b> Posts</li>
+<li><b>7</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="en_reciclaje clearfix">
+<span class="cols"><img class="floatL" src="https://identi.io/images/eliminado.png"  border="0" width="128" height="128"/></span>
+<span class="left cols">
+<span class="title">Oops.. Este post tiene los enlaces eliminados! </span>
+<p>Identi revisa las denuncias de los usuarios en busca de enlaces eliminados que no dejan descargar los archivos, este mensaje te informa que este post que estas viendo <b>tiene los enlaces eliminados.</b></p>
+</span>
+<span class="right cols" >
+<span class="title">Usa el Buscador</span>
+<p>Por favor, te recomendamos que uses el buscador para encontrar m&aacute;s alternativas.</p>
+<form class="search_here" action="https://identi.io/index.php?action=buscador" method="POST">
+<input type="text" class="text-inp" name="search"/> <input type="submit" value="Buscar"/>
+</form>
+</span>
+</div><div class="header_post clearfix" >
+<h1 class="title_post">reproductor AIMP3</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=360509';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=360511';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=124" alt="Reciclaje" title="Reciclaje">Reciclaje</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 10 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1022538">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><span style="color: #333399;"><font size="6" style="line-height: 1.3em;">AIMP3</font></span><br /><br /><img id="img_post" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrNmKZsvqXQL3P6b0oOfHt3yH7Qg2Ndfq3HjN1lRI-1FymABSI" border="0"><br /><font size="2" style="line-height: 1.3em;"><span style="font-family: sans-serif;"><span style="color: #333366;">AIMP es popular, entre otras cosas, por usar pocos recursos durante su ejecución, tener una interfaz de usuario sencilla y fácil de usar, además adoptar uso de carátulas o skins, mediante las cuales es posible cambiar por completo la apariencia de la interfaz gráfica, y posee un potente ecualizador con el que se puede variar la forma del sonido con una considerable calidad. El programa en su versión oficial está en ruso, sin embargo incluye su traducción total al español y a muchos más idiomas. La actualización del programa es semiautomática, mostrando en la barra de tareas una notificación de la nueva versión y permitiendo elegir al usuario si desea descargarla e instalarla o no.</span></span></font><br /><font size="2" style="line-height: 1.3em;"><span style="font-family: sans-serif;"><span style="color: #333366;">Además de ser un reproductor gratuito de alta calidad, cuenta con un conversor de archivos de audio, el cual se descargaba aparte pero desde las últimas versiones, se descarga en forma conjunta con el Reproductor. Aunque por licenciamiento ya no incluye el codificador de MP3 (Lame), el cual tiene que ser descargado e instalado por cuenta del Usuario .</span></span></font><br /><br /><img id="img_post" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQQEhQUEBQVFBQUFRQUFBUVFRUVFBQVFBUWFhQVFBQYHCggGBolHBQUITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGzcmHiQ0NCwsLCw0LCwsLC8vLCwsLCwsNywtLy0vLCwsLDQvLCwsLCwsLCwsLCwsLCw0LCwsLP/AABEIAMMBAwMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAgUBAwQGB//EAEkQAAEDAgMEBgQLBQcEAwEAAAEAAhEDIQQSMQUiQVEGEzJhcZEjUoGhFBVCU1Rik7HR0vAzQ5LB03KCg6Kj4fEHJERjNJTCFv/EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/EAC4RAQEAAgAEAwYGAwEAAAAAAAABAhEDEiExQVGRImFxoeHwBEKBscHREzJSI//aAAwDAQACEQMRAD8A+cIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgLooYCrUE06NV45spveLWN2grnX07obiXNw9PK8MhnHjcm3mg+fHY+JGuGxH2Fb8qh8WV/mK32NT8q+wVMS8iOuZx4u+UCDE9ziPauUtv+0b4yY+5B8q+K6/zFf7Gp+VPiqv9Hr/Y1fyr6rAmOsb470fdK1vpNME1G3+s4RI4x5WQfLviuv8AMV/sav5Vj4sr/MV/san5V9WtwqUxFtSJ4zpdQzf+xvDiTqYvA4f8Sg+WDZlc6UK58KNT8qn8T4n6Nif/AK9b8q+oDFmk4FtQEjQtJ4j2HiQtjtuVHWLheJmbwZEmeaD5DWoOYYe1zDrD2lpjwcO4qC9N05rl76ZJk+kvzMtJPvXmUBERAREQEREBERAREQEREBERAREQERdmG2TXqjNTo1Xt9ZtNzh5gIONWnRnCMrVwyq3M3K45ZLZNgLgzxWh2yMQNaFX7N34Lr2Vh6tCoHvpvYIIlzS0cDEnwQe8PRnB/Q/8AVqnx/eLl/wD5TD/R/wDUqfmXKdrAT2TbgT+Gq9JsttF+HZUeLkOJOYjQu/AIKUdFsP8AMD7Sp+ZcNCp1NQ025WhkgBxgAAxEmea9PjaeHAaWTJfTHaBGVxANtRqfJeLxmIZTxtYDKGtc8DrGl7QJ0txQWB2ru8Ne6deUStHxmFWOqN+Dud1lOQ/9nHpTvC4+refYtGzqtPWo7Ww4ht7uLRvOtwGpOo1QehwtZ1QgNBM+H8yrTC7NdW32Oy03E5c5GfKDF2t42PHy0VPhdsspANO/AADha3EEE2dIF+8clrwvSkUKLWFudzQ7jAkmRf2lBf45uFoMzPqVHGXDKxzJJBIA7NhYgmeHsXnWbWAJPA24GJ7j4LzuO2m6q4uMCeAmB4SV1bB6t7yKz2saBm3i0TB7IzGOPuUyupurJu6ego7RcBIpuipmgxu5dTDraAGy1Hb9iANTm0GtvLRWtPaNBsZH0hlmN9hIzGXXniQqHaFOnPo6lEzJkvp7vvv5SvPw/wARzXVmnfPgcs3Lt2bLwrMWXdYxr8hd2pBAc8zBDvqjmrN3RvD/AEdkHTed4+sq7oCaRbiXVQCA4EXOkv0jVXnSR9ClSzUgQ7M0TmkQQbeOi9LzuB3R7DASaDI/tu/Muh2zcCdMGwHhv1Dx/tqlpbVLjLWTlEnS+nn/ALrFXbOUuaWAG02Fo5eauvFdPPdJ8PTp1yKTcjS1pygkgGXA6nuVUrjG4OtiXl9Km54AyyIiQSY171pGwMT8w/yH4qIrUVtW6M4tgJfh6gA1NvxVSgIiICIiAiIgIiICIiAvoHRXaIZh2NPC2rhqTGi+fq22VjA1kODiGuaSQ2YEn9RxQfTMDT69pezLAJaZc+SQFQdOmGlSbmy9qd1xNri/mqjZ/SM0mvphhLC9xnQgOFhl04Lk23tJ+LDaeUiTl1uXEiNdED43Y4vLjUJNMNbDma8A8x2dO9bdndJ3sptployCRIO9ck2kcz5d69HXbjn1qFZ2EpehYWBpLC0yInujgOF1wnZWN6l1L4NS3q3XZoZIvOQX7PDwsvLPxPnJ6xznE+9xV1+kFQjKA2A4OBJvYzqBfl4LRsdtPF40nFPNNrg6puFrSXh1mguBA4nTgvTPw+NNWrV+CUfS0uqywzK23aHf+AXm9mYWnTfUZjKVV7mkD0ZbZw7WaWmeCs4v+TGydL7rL+3k6cLOXKbnzbMFsnDPqYlrsQWspgik4hhLwZueBiADluZtC52YKgMH13W+lz/sYbMTliZzTG9OnDW6t8mC+jYnzp/01kU8F9GxHnT/AKaby874eHr6vRrHynj4+no4sZs7DMfhmtxGYVQBUdDYp6XsdDJG9cR5c20KGGp1qzOsc5oYTTc1rDLyAQ10WiZ09yuBTwf0av8A6X9NOrwn0at/pf01Jcp3t9CzG9pPVVYPo+arGvaaWVwkB1am13tF4KxitiCmQHZZid2sHCPFrDBsrU0sJ9Gq/wCl/TVfWosk5MPuzaQJjhMU9V1wyyt+mv5c8sZJ9fo4nbPp9w8agN/4BwlRw2FplxblDoE3flHsIN/BdfVN+j/r+BMg+YPv/Iurm5tk7VOHzta2Wv1AMG2aBOsX9wupY/blSszIW7oII4usTra5v7ljCYWo9zwyGtDmlzXODZiYFyDz05qyqUS0fsqLe8V3mJ7usXWcLK483h8L/ErpOHbN/wBuWhtkMaAGOFhJAFz4ytdbaAqaMqTeYEz71OHfU+0d+ZQbScDPo4iIDyB4zMq3j5XHlvb4LeNlceXwek6C4cvw9R0sEVHWdmnQG0Lb8csPqjnEyPevK7M2s/DtcxjM0kyZtpFo9vmp7Px3VtvScXcTAPsC54Yy3VunDK2TpNr/ABm2G5Hb8mCI/RXz5qutpYgPa4tY5s6yBx9qpQplNVZdxlERRRERAREQEREBERAVzsajNJwz1Ghx3gxmYHKbSZCplc7Bx9Gm0irTLzmmRUcy3KAfG6ldeDbMul18dz9li+nMzVrnM5rj6MXLOye1wXNtBhgb1SoXVA7K9uUOcREyDrwW3E7UwsblBwPfVc7yuFUYrFjKMtnN3gQ4kyLzCzI78biZTH/aXflcv5vvesPRXE8ME/2vb+Zaz0ZxQ1wZ/jb+dcTekuODiOtrzMESwmRwsxQq9Jsfxq1bmGyGxxkXbrZcd/iddOX1v9Pn/wDp7vmiaJBI6kAglpE6FpgjtcwVv6M7Kq4itVFN9OlkALg+SN5zogQfV/Uqmc6qSXObVLiS5xFjmJlx0teVqo1qjXuLetnIS/I5wLQHHeeWjQSNbXXbLm5enf5O2Gt+0+gu6F4lwn4RRgTcNI0B1gdx8loxHQzEM7WIp3mLPvGsWXk2bSrSR6ckHTrHmJFgd32rSdpYiLvrSSA05niZ0AEXlcbjx9dLHaZcDfWVZ4vDVKdR9N1VksIEy8Ay0Otu96x8FqWPWNvpBqQZvy8VUEvMmoyo907zjnm0CCS030WmoHkDLTeIsTDnSbH1beHevRjvU33cMtbuuy2xGenGZwEzHbk89R3rFCo54nrWtuRDi6bcbNVDWL29qW+II+8LV1p9b7/wVR6w4WqL5wfDOf8A8rTXxNRli5oJvdh8LS3uXnhiNIHLib2gjTib+5Sfnb2mOEZQZDxeJ4ixP/CCz2c4uzHKH8y7hDiOJXQaoBA6tkkwNOPtVNgusLR1Wb5Ux/aOpWqtWfJzEyDedZQek6o/Mt8x+Kg97W9qk3+ILz7Ma4A7zvYY4co5wtlarUgOdmiAQS4GxNo+5Bd7IqDK47wl2jW0yNPrmVN9MnUP86aocPjA1gEXMGZXTS2o2N6mDYfKdPitXLc0zMdXbtxmHIY4w69yTli3gqILqxWODrARMcSVyhZaZREQEREBERAREQEREBdez6LnSG35jzvquRbsHWLCS2AYiZE8eBOiLFk/BV/VvNtBeOc8lyY3D1mtJqtyi+pFjFv5rccc+1xr6zeWmvvXPjcS5zTmMi/FuscgULZ5O9uyDBDQ+xIaDTbJj1t6Qe66w/ZNSLNdm4A0mhpPyhObuPDgtWG2gGNDWHcBMFzRnjWSA9bnbUdbTV1smnf24nRYmN82dOY7JxHzX+UfrguV1BwJBIYWUyXAnLIDjLRzN9OKsnbVdbTQ3ycv8RcYxThUJaAczDm3bNbnu8QTlI5zae9au2o31nPYM2YDnlxBLnX01nifMqNYvy70FrLx8IaZsbtAd3cPBXr9oU2m/VXIEEPABvEQQb3txha/jGicgDqWaRxeS61gWzxtpqs+217DzR2jpd9o/ev0HD9clg7TN4LwTx61+vra34eS9QdqUSIBoyba1JBMxAnl46KI2pRdOXqibboL7gantWF1rqz0ePq4hz+04ujTM4mJ1iVBgzEARJIAuBr3r1dbHMJsWNsbBxixMm5J7vYtXw5nzjf4gnU6KgYe5htMZd6OtixBa0NJcJhzS7n7FjHB2R2ZzT2bis55JDQHQJIMkg92W1ldjGU5/aNN+ev/ADotW3sY19B4AYDLezMzYkXPcPNZ9rbXsqjB4GpWYBSbmiZgX7To/mh2XV9UeYUsDjOqYO+eAOjnd47l0P2sI3SZ72W8JD10YaqezngQRzmzDraxKY7Z1RlNz3NOWAZysHaM8O88Flu1ahFgzjrE2F9TKzj8cXUnAxJAmMkSHXgh06jlp3K83uXfuc9HB1KjAWxltYnjF7e1bqWyn/Kj77eYXPQxrqYAERAOrv5FZZjahnef/dvz/Xmoy27Swz2ZM51NrzoB3nuXMFux1VzsmY8TxJ4DW60hRWUREBERARIRBmEhdPVKwGwqnrUvtWfim2sccsu0U0JCufiKp61L7Rqw/Yrxxp+x4J8gpuLeFnOtl9FPC2YMAvAdliRMyDE3uOC7nbMcOLfP/ZV7dSLaaRfjxgqsx9Z23ith0Kj6b20CMsBtGlVc6XNtlxLHZAfKJuV8pxQOV0xodCTw8VrZhmgAbpvPHlMxliFPFdl1xodARw/shEXnRrZrcVicuJrUKdNpdUrVC+iGljYlrARcmQLWFzwg+n6R4bZWMoOqbLqYenVw8vcyOq65l5b6dozOGoIkHQ6gj55Wa0gjK9jcxlmYyBa0lnv71HqmAtLcwIJB3yZbewlkj/ZSdh0Cx0p8DHoDciLcF6foPWwlJmOq41lOoKeHpllNz2tNQF1Y1WU4IDictMQO5eXLmyLO04v4QbWYuTFU2OdL3OGWm4stmzPkgNcTEA33o9itH1LF7NwdPBYuthazHuq9UcODWYzEUQKnpKWvCXXjSZmJPz+o6rlpZs2TMMk1KcTFu8Rpew0XIMAwPBLyIuz/ALY3ntAN9g8+C2Gk0ZDIJJEgYd0tEbxOmeOX3IPf9C6TXYbFde2hUxAfTNFmLxDQxwBBcZaZAtM82hcv/UapSZhqHVmjTxDnPbXp4XEdbTDCXGmXDvDeQuXC8LxNbCUyWEvgidMM7jNr2Onv7lprYcNa50yXZMw6ksy2Fs8AD+djxQYbtSsNKrxodeWi+sdCsDs6vgaFTFtwtTEHOKjqrqfWbtR7WZg6o0jcDPEQe9fHFqfQBJJ+4fzQen6YU6NPH1m4djBTD2dX1L2imAaLIykFwBDySTPMW4czw85RWJNPrKQfNUObAgPmBoQee7BHeOCmyoCBkjeM+hbY5N4ZQ3g3ej296njaQFMkOJsz9xktk3Dn4SC4/WyyUH1PbOwdkYis0UauHwzMHUBxLW1GBleg6mKu4Zuc26SLjf45V5H/AKjjBH4HU2eylTbVouqPZTLSWklhYKjQTlcJcI7jyXj2YZvVssTZwsYtmJvZbKZpifRuuZ7en+VBBpEXBm+hAGlrQvV9L6eHGBwBw/Vh7sOTXDXsdUzjqsvWgCcwmoOHH2eXa6xh+Ub27LuXcIvp7F24GiDUbMuz1KWaS8tdNQAyC2CHa3PHnZWTd0sm7pwtpgxLmt3RrP8AIL6fsjZ2F+B4U4ajs3EVDT/7p2JxJY9tWBIAuRcusQIAHNfL650HAD8VqZQmSOPeBw7/AAUvRHqemODojFVfg3Utp0w1wFCoa1OT1bXBtQtbN3E8Y0VAAthqlgDQQcwyk8RBa7h3tCsMJsp1RuZppgabz2tNu4la1vWk3rurISFdfEFT1qX2rPxT4hqetS+0ar/jz8qnPj5qWEhWh2W4cW+Z/Bc1TD5TBi3LRYackIunqkQdbmwCfuVqdo0uNatbT0J5tHPk5x/u94XAsONijWNk7zfq9KNkVoBbUBBAN61Fut9Mx8VgbDrfOi3/AL6RjlG8g2RiXDKKbL5AN5utT9n8njChV2biQ3O5rAGtLi7MOwCWE9nSZC489/6n3+rhzXf+0+/1QqdG6h/eMPea1KfPMuE7CNFk1mUXEu1GInWbZW903W4vqHR1ME8ZN4mLZPFbsPs/FP3mNzNddrmtIadLhwpwRYK+1OuVmvh9Wt5S7tnp9Ve7C07+jpcI9K/32VVturTAcxtPKYmQXOBEHiRCu6+ArAnrMmYTILsrpN7tyqpxdG+SqdTDnNIJAjh3rpLL2b5tuOTqKpdvGKhFUE6XP6myy9zt2XE7zjHprH1rj9SrmvszC9YB1zYcA8lrYY3MOxZs27lq+L8MWuPWHcOgA3pcRYG5Hs0UmU0kqtJOnWGBpPXxpZwsuLEvAdvtzE0y1sueMri4w8XkkQbOte4XpHbOwst9KDmtMHcsO0P73foVSYljm1KgoHM0Unh5ECaIfvG/Ds6XV3FjJq0w7sggxAGIdukaycuht5arDnMhkWMgu9OYIAuNJbPPhounNWznK2oScuYdVSeYvlc0XAF3X4c1re55FMFlSJaWnqGAuOXch3yvBURfVp5YDRx/8kwORiL+78MVq1KDuAxFhiHnNpeIv52hdR66CMlQxqDh6ZIDpgj9c1oxOJqUwcweC4gt6yjTgxBJki58O6UHGyvS40Sf8Vwi5PLkQP7veoYmrTcNymWGfXLxEaQRzUMRXNQy6JiLNa0eTQBxWpB0ClBu9huZ3nXhskzGh7M81ZbKNN2Iw4DWicThLdY59i9stylsGLg8phVrMmYZc/at2Z03bc83uVl8MfRfTqVGvinWoVC2Kbcxp5XuEi98rY4c7hTLrKuPdx4yq5jnZCW+kq9kkaVHwLLhJV7s6nRrB7qpLSXEsaG5ic9R5PA6WXXU2VSIMNq6m/VkHUXEUzCuONmM2uXfbzlNpizJF771rCdDFtfaut9R1MB4sWFrgC2pDS19hcxAIy+zmrH4kperX/hd/SW2nsikTlcyuBA3m0pNj30wVZLvok79HNsJ+cimGNLiC7M8lrYjTNoFanYv1MN9qxc2ycHUDoZTeAJg1GubaOJLYn2K2NCvIIawEePGw+QtTXjLfv4UmvFw1dkOLSIw0/Jd1olvOOC68DgHMZldWY03kNcxw4cSR3rJpVm3hgk/WNwbmzFrPWyAHMGgDTN+QAdTWt8P/m+v0X2fK+v0bKzA3SuSeF26X+UCeQ/QWl0n964eDuWlgAthwuJDYiOZIMQO7JZcVTC1PqC8zn4eSzljZ11qJZYjWxNMx6Wo7/DdA9jh3lcUAk5S4jm4QdOS2NNh4LKzbtmRq6tFtRRRRc2RB4rKyg19UOb+H7x/DTisGgOb+X7R/wCK2opyxNRzfAm/W/ictrKUCA6oPCrUA8gVsRLNrZtqdQB1Lz41Hn+ag7CNPPXmfvXQsEKjW7Z31jprmco/F2u87+I3W6EhBq+LvrO/idZcVXZ7nudlDyGsdBbTqVA5wcYZLQYJBmTZWLrBZ2Rtp2HfmaBqZa5s68R3qXeuizv1cz8FUcew6LXNHFQ4cQQGkyPK+qg7BVYb6NxEzl6rE2kXkFkWPJWFDpC9k3YZntMkC87o4LFPpA5rHNzXcAA7eBaeJjQyCRfmm75Gp5uN2AqWOQk3k9VjLi9o6vQz+uMauzqjgRldMiCaOKsIuAck693HVWB6QuLMk09IzRvdoHX2R4ErfhulD2EXpGGvZca5+LjNyOClt12WSb7qEbGqcncf3GJ1kxpS0sD/AHu4rS/ZdYGBSqnvFKrH+ZoPuVy7bbjll7N1mS0DNcnM6NXX18FA7Yvqz2Zo+/7lplXjCVZ/+M4XJ/ZVoEty+MDtc58lsxGAq5SAx5u3SjiATDYJGYRJJv3tsuw7X/s8o3u/8VswG23Un5mkcN2DFi08QfV96ltk6LJLerj2VhnNLC7MxzHDdMtN3GJafYbr279v1oJFYzr/AOP92adJ93NeIo4oB8vaXiQXWMETovSVdp4Hfy4epGenkln7uW9bmt2ozR7Fjict1zY7/TbeHN+W6/XSwPSGqW7tV08Z6kDQ6DXVZ+P6hmKr79nMKQ5TN9dfcq87UwEmMPUjrbTTE9THG3blVtfa1HO/JQbkl2QOpS6Pk5isY8Ph38vyaufEn5vmv3dI3SfSVdbQ2k63sOv68OKttIVofVNUwGgkZQRNyA3xze5VlPatEluagAJ3iKNwOJbzKs243AepVPjhwI8leXh8O7mPpE5s85q5etcPXkxlJuOLiIIF+K4MVFUtnNbNxcNcvf3KwqbRw8nLQBEmCabgYm0gDVcVWu1zhkZlsZMROkTYd/musrnZpq6gc3/aP/FY+Dt+t/G78VuRattTbAELKIoCIiAsKWU8imU8igwsKWU8kynkgisplPJMvcgLCzlWcqDCwswkIMLNINneSEhBlrW8ZPn+CBrY/nBWITKgzkbGl/astaziOfP2KELMJoOrb7vesZW/qfwWYTKgxlb3e/8ABSYGg3WITKgi0KUpCQgSiQkICZkhIQETKeRTKUBFnKeSZTyKDCLOU8imU8j5IIrKzkPIogtSoFSKiUECoFTKgUECoOUyoFBAqBUyoFBAqBUyoFBGJUHLow2JdTJLYkgi9xe+niARyIB1AW6ttWo7XJZxfZoF3Ag3FxqYjSxEQEFeSoqyG2KgBEMuHNnIA4BxJIDhcakW0Fgo1NsVCWncBb1kAMAHpWhr5aLGwH3aWQVpKk2iS1zh2WFoceWacv3FdLdoPbV61uVr7xDRlGZpZZptoV10tsnK7NlzAUxTGUwQ0mc17mHG5MoKeVkKxG2qgEAMtlvBJ3Zi5N9eOq00ce5r3vAbNScwIlpBe2oRHAS0IOYLuqbJrMosrupOFGo7Kx5FnOvYDX5LuHBa6Vdj6rXV2nq5bnbSDWEtaACGCwaSBr3kr2L+nzKzXU8RhmijmoGkKMhzG4eoHMY7O7LGQFu6BqbXsHnMb0dxVCm6pWouZTY7I5xywHWEGD3hddHofjnZcuGqbzc47IOW14LraixuvQu/6g0nyyth31KLusqOplzb1TivhFOT6gADT4aLXienwrUurq0adR1QUG1jiGdbQ3aj6lVwpNdmjM9uUTbIOQQeRx+Aq4d5p12Gm8QS12sG4NrEeC0hek6dbTw+JqUXYfKXCnlqOY2oxm7AptaypoAAdBxXmws45c02tmrpMKQUAtgWkSCmFEKYQTCmFAKYQTCkFEKQQSlZWFlBgqBREECoFEQQcoOREECoFYRBEqBREESoOREESolYRBgrCIgwpBEQZCkERBIKQWUQSCmERBMKYWEQTC2NWEQbApBZRBMKQREEwiIg/9k=" border="0"><br /><img id="img_post" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRkazvGsha-_3GlmqyCwY_BmzBBBOi55lH6t7Y4QX4RsdE8WHTtkg" border="0"><br /><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/mjOQBsmS4CY" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/3MiNJt5KwK0" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/v57WNrfO7vI" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><b><span style="color: #3d699f;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX19+vAAZUxfZgV73m3Q8pR+avRRDls1rmmVNIM9sSEmPdkmTYICvhwUMiP9o71Bf8U6xd/ADrIyhHVtrz4+r6TJYKMa3RGnV6FPO04grQMnHxAjFGli1LKdN</div></div></div></span></font></span></b><br /><b><span style="color: #3d699f;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><style>.myjdownloader{background: url(https://www.identi.io/images/jdownloader.png) no-repeat;}</style><div align="center"><div class="clearfix spoiler"><div class="spoiler_cont" id="hide"><a style="font-size:14px; display:block; color:#D0B310;" href="?topic=78787" target="_blank"><img style="vertical-align:middle; margin-right:10px;" src="https://www.identi.io/images/jdownloader.png" width="50" height="50"/><b>Tutorial para descargar con Jdownloder</b></a><div class="clearfix spoiler"><form action="http://127.0.0.1:9666/flash/addcrypted2" target="hidden" class="jd" method="POST"><input type="hidden" name="passwords" value="myPassword"/><input type="hidden" name="source" value="http://jdownloader.org/spielwiese" /><input type="hidden" name="jk" value="function f(){ return '31323334353636373730393837363534';}" /><input type="hidden" name="crypted" value="fQHMbPtZdlEQbynZbT2tWIfwFOmtGttzJjSBDex2oa46SDqTgojWTkhBUc2NnWvl3YgxMo/y55zYdS6/j8JGqkRE6MreVuy/+3Op+PdH50E="><input type="SUBMIT" name="submit" style="padding-left: 45px !important;" class="spoiler-btn myjdownloader" id="decrypt" value="Agregar enlaces a Jdownloader" class="gestor_descargas"/></form></div></div></div></div></span></font></span></b><br /></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">5</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1062</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">0</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(360510,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(360510,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(360510,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(360510,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(360510,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(360510,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(360510,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(360510,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(360510,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(360510,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://i.ibb.co/3SgwtcY/avengers-endgame-a-logo.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1774775" title="perfil de OsmelsG"> OsmelsG</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(360510);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('360510');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=360409" title="Format Factory"> Format Factory</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=360381" title="Reproductor Gomplayer"> Reproductor Gomplayer</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=360305" title="Acelerador De Arranque DE Windows"> Acelerador De Arranque DE Windows</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=359749" title="MP3 Rocket pro"> MP3 Rocket pro</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=359727" title="Programas De Diseño"> Programas De Diseño</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=359496" title="Codecs Para Windows Media"> Codecs Para Windows Media</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=359483" title="Google Sketchup"> Google Sketchup</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=359299" title="Samplers DJ VIRTUAL"> Samplers DJ VIRTUAL</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">1</span> Comentarios</span>
+<span class="onpost"> reproductor AIMP3</span>
+<div class="comentario"></div><div id="comment_3879449" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="franky_82" href="?action=profile;user=franky_82">
+<img id="error_avatar" src="http://static.comicvine.com/uploads/original/11114/111142682/3566726-9067515872-bruce.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1893659" href="?action=profile;user=franky_82">franky_82</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424198841" title="17/02/2015 a las 18:47 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gran aporte ! Sabiais que con AIMP3 Puedes escuchar m?
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_4.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994ae6692878dea7',t:'MTc2MTQ5MTYzMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<style>
+.spoiler-btn {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+.info_bbc {
+    word-break: break-all;
+}
+.info_bbc a {
+    color: #096FDB !important;
+    font-weight: bold;
+}
+</style>
+<script>
+(function() {
+    'use strict';
+    
+    console.log('🔐 Sistema de desencriptación automática cargado');
+    
+    // Extraer la clave del HTML
+    let DECRYPT_KEY = null;
+    const scriptTags = document.getElementsByTagName('script');
+    for (let script of scriptTags) {
+        const content = script.textContent;
+        const hashMatch = content.match(/var\s+hash\s*=\s*['"]([a-f0-9]+)['"]/);
+        if (hashMatch) {
+            DECRYPT_KEY = hashMatch[1];
+            console.log('🔑 Clave encontrada');
+            break;
+        }
+    }
+    
+    if (!DECRYPT_KEY) {
+        console.warn('⚠️ No se encontró clave de desencriptación');
+        return;
+    }
+    
+    function decrypt(encryptedText, password) {
+        try {
+            const decrypted = CryptoJS.AES.decrypt(encryptedText, password);
+            return decrypted.toString(CryptoJS.enc.Utf8) || null;
+        } catch (error) {
+            console.error('❌ Error:', error);
+            return null;
+        }
+    }
+    
+    function handleDecryptClick(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const button = event.target;
+        const spoilerDiv = button.closest('.spoiler');
+        if (!spoilerDiv) return;
+        
+        const hiddenDiv = spoilerDiv.querySelector('.info_bbc');
+        if (!hiddenDiv) return;
+        
+        const encryptedText = hiddenDiv.textContent.trim();
+        const decryptedText = decrypt(encryptedText, DECRYPT_KEY);
+        
+        if (decryptedText && decryptedText.length > 0) {
+            hiddenDiv.innerHTML = `<a href="${decryptedText}" target="_blank" rel="noopener noreferrer">${decryptedText}</a>`;
+            hiddenDiv.style.display = 'block';
+            button.style.display = 'none';
+            console.log('✅ Enlace desencriptado');
+        } else {
+            alert('❌ Error al desencriptar');
+        }
+    }
+    
+    function init() {
+        const buttons = document.querySelectorAll('.spoiler-btn, input[value*="Ver Links"], input[value*="Descarga"]');
+        
+        buttons.forEach(button => {
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+            newButton.style.cursor = 'pointer';
+            newButton.style.pointerEvents = 'auto';
+            newButton.addEventListener('click', handleDecryptClick);
+        });
+        
+        console.log('🚀 Sistema listo');
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script>
+
+</body></html>
