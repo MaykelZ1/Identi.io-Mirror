@@ -1,0 +1,909 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Si, Eres Homofobico - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Tú, que dices respetar a las personas no heterosexuales pero estas contra para personas del mismo sexo porque hace peligrar a la familia tradicional. Tú, amigo heterosexual que publicó en Facebo..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='V2hpeXRrSmxBS3kxU1VLVTJGc2RHVmtYMSt6RDB6bDdKREZaK3B3N2JZN2d2SXBPUC9ucGsyWm9kVWFSbGljVnJVcEZPTXFwZFNBbHdrc2RkdDlDYloyc0pFblNTcFh0RVdiaVE9PVkzREdqSGlMb0pLZlVaWQ==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761481789;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'dd9d2661710f92e03ef97d6e467061ed');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_2.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Si, Eres Homofobico" title="Identi - Si, Eres Homofobico" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '20357ea8243fdd53cea5aaaaca2188bc89e1bce3';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Rodriq4.">Rodriq4.</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Rodriq4." title="Ir al Perfil de Rodriq4."><img id="error_avatar" class="avatar" border="0" width="120" src="http://r29.imgfast.net/users/2916/51/57/14/avatars/6-91.gif"/></a>
+<div class=" rango_sidebar clearfix">Novato</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/novato.png" title="Novato" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1941723)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1941723');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">0</b> Seguidores</li>
+<li><b>6</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>2</b> Posts</li>
+<li><b>1</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Si, Eres Homofobico</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=399037';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=399039';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=114" alt="Salud" title="Salud">Salud</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 9 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1061066">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><img id="img_post" src="http://s28.postimg.org/z5qllnxh9/Sin_t_tulo_3.jpg" border="0"></span></font></span></div><br /><br /><br /><b><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Tú, que dices respetar a las personas no heterosexuales pero estas contra para personas del mismo sexo porque hace peligrar a la <i>familia tradicional.</i> </span></font></span></span></font></span></b><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Tú, amigo heterosexual que publicó en Facebook que nos quieres, tienes amigos homosexuales (?hasta salgo con ellos?), pero que tenemos que respetar tu </span></font></span></font></span><i><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">libertad de opinar</span></font></span></span></font></span></i><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> que la homosexualidad es una desviación de la naturaleza. Tú, lesbiana que piensas que no deberíamos salir a marchar ni reclamar nuestros derechos </span></font></span></font></span><i><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">tan efusivamente</span></font></span></span></font></span></i><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> (?¡dejemos de ser escandalosos!?) porque así perpetuamos los prejuicios que nos tienen desde la sociedad conservadora? Sí, tú, eres homofóbico y te explico por qué. </span></font></span></font></span><br /><b><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">La palabra homofobia, si bien pareciera estar adherida al término fobia (miedos irracionales) se define típicamente como la consideración de que la homosexualidad es una transgresión de los roles genéricos masculinos y femeninos y de la naturaleza sexual humana.</span></font></span></span></font></span></b><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Pese a que el componente clave de la homofobia es la actitud de rechazo y odio irracional respecto de los no heterosexuales, no puede ser reducido solo a eso: es una manifestación arbitraria que consiste en señalar al otro como contrario, inferior o anormal. </span></font></span></font></span><a href="http://www.redalyc.org/articulo.oa?id=83625847006" target="_blank" rel="nofollow"><span style="color: #0773d8;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #2e96ec;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">(Cornejo, 2012)</span></font></span></span></font></span></a><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Además, </span></font></span></font></span><a href="http://www.familieslg.org/_comun/bibliografia/pdf/20080107_actitudes_ante_diversidad_sexual_Coslada_FELGT.pdf" target="_blank" rel="nofollow"><span style="color: #0773d8;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #2e96ec;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Pichardo y colaboradores</span></font></span></span></font></span></a><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> (2007) definen la homofobia como la actitud hostil que concibe y señala la orientación sexual no heterosexual como contraria, inferior, peor o </span></font></span></font></span><i><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">anormal</span></font></span></span></font></span></i><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">; y a las personas que la practican como pecadoras, enfermas, malas, delincuentes, criminales o desequilibradas, llegando incluso a despojarles de su condición de seres humanos. </span></font></span></font></span><br /><b><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">?Pero si yo tengo amigos homosexuales y los respeto?</span></font></span></span></font></span></b><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">?La homofobia se expresa en diferentes formas activas de violencia física y verbal, en un rechazo silencioso e institucionalizado de las personas identificadas como no heterosexuales, y en una limitación a su acceso a </span></font></span></font></span><i><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">derechos</span></font></span></span></font></span></i><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">, espacios, reconocimiento, prestigio o poder. En su forma más explícita, la homofobia incluye diferentes formas activas de violencia física o verbal y victimización; en su forma más sutil, supone el </span></font></span></font></span><i><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">rechazo silencioso</span></font></span></span></font></span></i><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> de los homosexuales?, explican estos autores. Más claro ni el agua, ¿no? </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Bajo esta definición, toda acción que sitúe a las personas no heterosexuales y no cisgénero como personas de categoría menor, o no merecedoras de un trato </span></font></span></font></span><i><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">igualitario</span></font></span></span></font></span></i><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> en derechos y en oportunidades, constituye una conducta homofóbica. O sea, violencia. </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Entiendo que para un homofóbico caleta, que se le diga </span></font></span></font></span><i><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">violento</span></font></span></span></font></span></i><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> puede resultarle exagerado? pero están manifestando una profunda ignorancia sobre el concepto de violencia. La violencia, dentro de sus muchas definiciones, incluye la ?obstaculización del desarrollo del ser humano, dado que impide que puedan desenvolver sus capacidades plenamente dentro de los contextos familiar, social, laboral, etcétera? (</span></font></span></font></span><a href="http://www.cdhezac.org.mx/pdfbiblio/La_violencia_familiar_y_los_derechos_humanos.pdf" target="_blank" rel="nofollow"><span style="color: #0773d8;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #2e96ec;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Ruiz, 1996</span></font></span></span></font></span></a><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">). </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Incluso, un </span></font></span></font></span><a href="http://www.mimp.gob.pe/files/programas_nacionales/pncvfs/mimdes_adultos_mayores_libros.pdf" target="_blank" rel="nofollow"><span style="color: #0773d8;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #2e96ec;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">documento del MINDES</span></font></span></span></font></span></a><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">, explica que la violencia ?se configura como un abuso de poder, de violación de los derechos fundamentales de las personas. Es la expresión de la intolerancia y de roles y estereotipos que justifican la inequidad?. Por lo tanto, la</span></font></span></font></span><a href="http://www.defensoria.gob.pe/temas.php?des=10" target="_blank" rel="nofollow"><span style="color: #0773d8;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #2e96ec;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">discriminación</span></font></span></span></font></span></a><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">, la invisibilización y la negación de los derechos son otras formas de violencia. </span></font></span></font></span><br /><b><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">¿Tu opinión te hace homofóbico? Sí</span></font></span></span></font></span></b><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">En la ciencia no hay opiniones, sino que se busca describir la realidad. La realidad es que las personas no heterosexuales EXISTIMOS? y no, no le hacemos daño a nadie ni nos hace menos capaces de ser felices. </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Es por eso que las personas trans, lesbianas, gays, los que </span></font></span></font></span><a href="http://www.zikepsicologia.com/2015/06/la-orientacion-sexual-que-rompe-con-lo.html" target="_blank" rel="nofollow"><span style="color: #0773d8;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #2e96ec;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">estamos en el medio del espectro de la orientación sexual</span></font></span></span></font></span></a><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> e identidad de género, asexuales e intersexuales NO TENEMOS UNA ENFERMEDAD. Funcionamos exactamente igual que una persona heterosexual cisgénero? Y no empiecen con lo de ?no pueden tener hijos? porque la tecnología (propia de nuestra especie homo sapiens) nos alejó hace mucho tiempo de las cosas imposibles. Y por si las dudas, </span></font></span></font></span><a href="http://www.zikepsicologia.com/2015/03/las-familias-homoparentales-la-ciencia.html" target="_blank" rel="nofollow"><span style="color: #0773d8;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #2e96ec;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">tampoco constituye un riesgo para un niñx crecer con padres del mismo sexo</span></font></span></span></font></span></a><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">. </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Estas afirmaciones, claro, avaladas por </span></font></span></font></span><a href="http://www.iguales.cl/la-homosexualidad-nunca-debio-haber-sido-incluida-en-las-clasificaciones-internacionales-de-las-enfermedades/" target="_blank" rel="nofollow"><span style="color: #0773d8;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #2e96ec;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">TODAS</span></font></span></span></font></span></a><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> las grandes instituciones de salud y salud mental del mundo, como la </span></font></span></font></span><a href="http://www.apa.org/centrodeapoyo/sexual.aspx?fb_ref=Default" target="_blank" rel="nofollow"><span style="color: #0773d8;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #2e96ec;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Asociación Psicológica Americana</span></font></span></span></font></span></a><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">, el Manual Diagnóstico y Estadístico de los Trastornos Mentales y la Organización Mundial de la Salud. </span></font></span></font></span><br /><b><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Entonces, si tienes los siguientes pensamientos:</span></font></span></span></font></span></b><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">?Acepto a los homosexuales, pero no deberían casarse? </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">?Estoy en contra de la homosexualidad pero no soy homofóbico? </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">?Pueden ser homosexuales pero no manifestarlo? </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">?Los niños no deberían verlos besándose? </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">?Los homosexuales deberían poder casarse, pero no deberían permitirles que tengan hijos? </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">?La homosexualidad va en contra de la naturaleza humana? </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">?No deberían llevar niños a las marchas, ellxs no deberían ver eso? </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">?Yo no soy homofóbico, es más, me dan pena y rezo por ellos? </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> </span></font></span></font></span><b><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">eres homofóbico.</span></font></span></span></font></span></b><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;"> </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Simple, ¿verdad? </span></font></span></font></span><br /><span style="color: #494d50;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Helvetica Neue, Arial, sans-sefif;">Tienes derecho a tu ?opinión?, pero debes saber que es una opinión que promueve las diferencias, es violenta e ignorante.</span></font></span></font></span><span style="color: #5b636a;"><font size="1" style="line-height: 1.3em;"><span style="font-family: Tahoma, sans-serif;"> </span></font></span><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">6</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 2/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">2679</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">0</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(399038,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(399038,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(399038,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(399038,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(399038,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(399038,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(399038,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(399038,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(399038,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(399038,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="http://fotos.subefotos.com/466d7597f7f225d9479fb141e1cb77b6o.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1937126" title="perfil de Jaker666"> Jaker666</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-qDPeKiwne8A/UUUYaZIRGFI/AAAAAAAAAA0/L59ExtoT_Ec/s200/saga3.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1635454" title="perfil de hserra"> hserra</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://fotos.subefotos.com/3438eab9d5374afc0176f2e304dab408o.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=16511" title="perfil de Wolfmaster3008"> Wolfmaster3008</a>: <b>2 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(399038);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('399038');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_114"></i>
+<a href="https://identi.io/index.php?topic=399484" title="Marcha Del Orgullo LGBTIQ Argentina"> Marcha Del Orgullo LGBTIQ Argentina</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">32</span> Comentarios</span>
+<span class="onpost"> Si, Eres Homofobico</span>
+<div class="comentario"></div><div id="comment_4287729" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Feisbulin" href="?action=profile;user=Feisbulin">
+<img id="error_avatar" src="https://www.google.com.mx/url?sa=i&amp;source=images&amp;cd=&amp;cad=rja&amp;docid=49hVW0IJaBednM&amp;tbnid=KtIQTkGZ9UOPRM:&amp;ved=&amp;url=http%3A%2F%2Fwww.betisweb.com%2Ffutbol-mundial-13%2Famano-partido-temporada-pasada-racing-hercules-148511%2Findex2." width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1794483" href="?action=profile;user=Feisbulin">Feisbulin</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446699049" title="05/11/2015 a las 4:50 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+jojojo
+</div>
+</div>
+</div>
+</div><div id="comment_4287736" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="duqueblanc" href="?action=profile;user=duqueblanc">
+<img id="error_avatar" src="https://lh3.googleusercontent.com/-fcISpREXMGc/AAAAAAAAAAI/AAAAAAAAADk/tuk6m5rDSMU/s120-c/photo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1612380" href="?action=profile;user=duqueblanc">duqueblanc</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446699310" title="05/11/2015 a las 4:55 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Borraste mi comentario. Te insult?
+</div>
+</div>
+</div>
+</div><div id="comment_4287741" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="domy7" href="?action=profile;user=domy7">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1561204" href="?action=profile;user=domy7">domy7</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446699466" title="05/11/2015 a las 4:57 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+?
+</div>
+</div>
+</div>
+</div><div id="comment_4287761" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="duqueblanc" href="?action=profile;user=duqueblanc">
+<img id="error_avatar" src="https://lh3.googleusercontent.com/-fcISpREXMGc/AAAAAAAAAAI/AAAAAAAAADk/tuk6m5rDSMU/s120-c/photo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1612380" href="?action=profile;user=duqueblanc">duqueblanc</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446699977" title="05/11/2015 a las 5:06 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Por supuesto que no respetan. Es solo una imposici?
+</div>
+</div>
+</div>
+</div><div id="comment_4287776" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="akula1997" href="?action=profile;user=akula1997">
+<img id="error_avatar" src="http://i57.fastpic.ru/big/2013/1006/85/732758ed4af696a70d99e4d25a617d85.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1529292" href="?action=profile;user=akula1997">akula1997</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446700420" title="05/11/2015 a las 5:13 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita duqueblanc: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Por supuesto que no respetan. Es solo una imposici?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4287777" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="toools" href="?action=profile;user=toools">
+<img id="error_avatar" src="https://30.media.tumblr.com/tumblr_l7vkzg6a3L1qdsoeoo1_400.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1940455" href="?action=profile;user=toools">toools</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446700447" title="05/11/2015 a las 5:14 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+vuelvo a comentar denuncia2
+</div>
+</div>
+</div>
+</div><div id="comment_4287792" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="bebox" href="?action=profile;user=bebox">
+<img id="error_avatar" src="http://static.zerochan.net/Caesar.Clown.full.1744956.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1641321" href="?action=profile;user=bebox">bebox</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446700795" title="05/11/2015 a las 5:19 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Mi Opini?
+</div>
+</div>
+</div>
+</div><div id="comment_4287794" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="KAMUI_MIDO" href="?action=profile;user=KAMUI_MIDO">
+<img id="error_avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Q3Go2i3LyQTeeriNlEquoxlEVZkKZaPLUg&amp;s" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1589374" href="?action=profile;user=KAMUI_MIDO">KAMUI_MIDO</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446700921" title="05/11/2015 a las 5:22 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+A mi una vez una chica me dijo homof?
+</div>
+</div>
+</div>
+</div><div id="comment_4287796" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="duqueblanc" href="?action=profile;user=duqueblanc">
+<img id="error_avatar" src="https://lh3.googleusercontent.com/-fcISpREXMGc/AAAAAAAAAAI/AAAAAAAAADk/tuk6m5rDSMU/s120-c/photo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1612380" href="?action=profile;user=duqueblanc">duqueblanc</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446701011" title="05/11/2015 a las 5:23 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita akula1997: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita duqueblanc: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Por supuesto que no respetan. Es solo una imposici?</div></blockquote></div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4287807" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="hserra" href="?action=profile;user=hserra">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-qDPeKiwne8A/UUUYaZIRGFI/AAAAAAAAAA0/L59ExtoT_Ec/s200/saga3.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1635454" href="?action=profile;user=hserra">hserra</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446701316" title="05/11/2015 a las 5:28 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita bebox: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Mi Opini?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4287813" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="toools" href="?action=profile;user=toools">
+<img id="error_avatar" src="https://30.media.tumblr.com/tumblr_l7vkzg6a3L1qdsoeoo1_400.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1940455" href="?action=profile;user=toools">toools</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446701769" title="05/11/2015 a las 5:36 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita hserra: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita bebox: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Mi Opini?</div></blockquote></div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4287815" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="hserra" href="?action=profile;user=hserra">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-qDPeKiwne8A/UUUYaZIRGFI/AAAAAAAAAA0/L59ExtoT_Ec/s200/saga3.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1635454" href="?action=profile;user=hserra">hserra</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446701882" title="05/11/2015 a las 5:38 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita duqueblanc: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita akula1997: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita duqueblanc: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Por supuesto que no respetan. Es solo una imposici?</div></blockquote></div></blockquote></div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4287823" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="bebox" href="?action=profile;user=bebox">
+<img id="error_avatar" src="http://static.zerochan.net/Caesar.Clown.full.1744956.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1641321" href="?action=profile;user=bebox">bebox</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446702205" title="05/11/2015 a las 5:43 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1635454" href="https://identi.io/index.php?action=profile&user=hserra" class="mensiones_identi">@hserra</a> Tal vez lo sea pero no quita el echo de que en esas marchas al menos las que observe estaban haciendo cochinadas en publico lo que esta mal por que es sexo no importa si es heterosexual o homosexual en presencia de menores no debe ser permitido. Conozco a 3 gays con 2 me llevo de maravilla pero con uno &nbsp;<img src="https://identi.io/Smileys/default/icon_mrgreen.png" alt="" border="0" /> &nbsp;y es por estar contando todo lo que hace con su cuerpo no me importa si es gay, lesbiana o hetero por favor no se exhiban. es como una amiga hetero &nbsp;<img src="https://identi.io/Smileys/default/icon_mrgreen.png" alt="" border="0" /> &nbsp;me da asco al igual que ese amigo gay y es por esas mismas cosas.
+</div>
+</div>
+</div>
+</div><div id="comment_4287843" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="duqueblanc" href="?action=profile;user=duqueblanc">
+<img id="error_avatar" src="https://lh3.googleusercontent.com/-fcISpREXMGc/AAAAAAAAAAI/AAAAAAAAADk/tuk6m5rDSMU/s120-c/photo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1612380" href="?action=profile;user=duqueblanc">duqueblanc</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446703056" title="05/11/2015 a las 5:57 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita hserra: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita duqueblanc: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita akula1997: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita duqueblanc: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Por supuesto que no respetan. Es solo una imposici?</div></blockquote></div></blockquote></div></blockquote></div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4287882" class="comentario coment_id_17">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="akula1997" href="?action=profile;user=akula1997">
+<img id="error_avatar" src="http://i57.fastpic.ru/big/2013/1006/85/732758ed4af696a70d99e4d25a617d85.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1529292" href="?action=profile;user=akula1997">akula1997</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446705135" title="05/11/2015 a las 6:32 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1612380" href="https://identi.io/index.php?action=profile&user=duqueblanc" class="mensiones_identi">@duqueblanc</a> &nbsp;el respetar al ser humano implica respetar sin distinci?
+</div>
+</div>
+</div>
+</div><div id="comment_4287908" class="comentario coment_id_18">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="toei79" href="?action=profile;user=toei79">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1528618" href="?action=profile;user=toei79">toei79</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446707440" title="05/11/2015 a las 7:10 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+tema dificil , yo he tratado con personas homosexuales en varios trabajos, por lo general son bien pero una vez me enocntre uno que me queria enamorar &nbsp;<img src="https://identi.io/Smileys/default/icon_mad.png" alt="" border="0" /> y el problema para desprenderse de ese tipo. asi quien no les tiene bronca? en otro trabajo conozco otro pero es buen tipo. <br /><br />otro punto es la adopcion de ni?
+</div>
+</div>
+</div>
+</div><div id="comment_4287914" class="comentario coment_id_19">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="trollcraya" href="?action=profile;user=trollcraya">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1627522" href="?action=profile;user=trollcraya">trollcraya</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446708162" title="05/11/2015 a las 7:22 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Sucedi?
+</div>
+</div>
+</div>
+</div><div id="comment_4287931" class="comentario coment_id_20">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="malabesf" href="?action=profile;user=malabesf">
+<img id="error_avatar" src="http://www.2120.cl/wp-content/uploads/2012/06/Lennon-McCartney.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1655377" href="?action=profile;user=malabesf">malabesf</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446710345" title="05/11/2015 a las 7:59 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+La conspiracion del mundo gay. El homosexual al igual que muchas personas se siente inadaptado y culpa a los demas de su frustraci?
+</div>
+</div>
+</div>
+</div><div id="comment_4287992" class="comentario coment_id_21">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jerrymh" href="?action=profile;user=jerrymh">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="82510" href="?action=profile;user=jerrymh">jerrymh</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446719223" title="05/11/2015 a las 10:27 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Maricon!!!!!!!!!!!
+</div>
+</div>
+</div>
+</div><div id="comment_4288008" class="comentario coment_id_22">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="RodrigoPy" href="?action=profile;user=RodrigoPy">
+<img id="error_avatar" src="https://i.postimg.cc/jqMVhCWF/Call-of-duty-MW-2.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1853371" href="?action=profile;user=RodrigoPy">RodrigoPy</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446722139" title="05/11/2015 a las 11:15 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+La homofobia no existe, porque voy a tenerle miedo a un puto o Gay???<br />Otra cosa ser?
+</div>
+</div>
+</div>
+</div><div id="comment_4288068" class="comentario coment_id_23">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="bragante" href="?action=profile;user=bragante">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1841692" href="?action=profile;user=bragante">bragante</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446726511" title="05/11/2015 a las 12:28 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+La propaganda gay extendi?
+</div>
+</div>
+</div>
+</div><div id="comment_4288070" class="comentario coment_id_24">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mhorkpheus" href="?action=profile;user=mhorkpheus">
+<img id="error_avatar" src="https://t2.gstatic.com/images?q=tbn:ANd9GcSbFx4i0Q8YoLFwl86H-3NhZPx9I6bLstcUG6O3Gfn1Cvb1od45Bg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1571349" href="?action=profile;user=mhorkpheus">mhorkpheus</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446726740" title="05/11/2015 a las 12:32 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+argentino tenia que ser este wequereque
+</div>
+</div>
+</div>
+</div><div id="comment_4288134" class="comentario coment_id_25">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="freddy644" href="?action=profile;user=freddy644">
+<img id="error_avatar" src="https://i.ibb.co/RTHhSKK/bean-2.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="40554" href="?action=profile;user=freddy644">freddy644</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446730420" title="05/11/2015 a las 13:33 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+ahora s?
+</div>
+</div>
+</div>
+</div><div id="comment_4288160" class="comentario coment_id_26">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="vladdrac" href="?action=profile;user=vladdrac">
+<img id="error_avatar" src="http://www.fantasy-illustration.com/fantasy_art/vampire_art/vlad_card_artdetail.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="58635" href="?action=profile;user=vladdrac">vladdrac</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446731371" title="05/11/2015 a las 13:49 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Me parece que el que escribio el post es un HETEROFOBICO, que no acepta que los demas piensen distinto. Hablan de tolerancia y son intolerantes, hablan de igualdad y quieren imponer sus ideas, hablan de normalidad cuando ellos mismos se definen con con &quot;gustos distintos&quot;<br /><br />Su doble estandar es un asco.
+</div>
+</div>
+</div>
+</div><div id="comment_4288242" class="comentario coment_id_27">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Booster" href="?action=profile;user=Booster">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_XyaO697glM8/SbAAJTOarCI/AAAAAAAAARc/72DvOxfzJ00/S1600-R/caballero%20templario.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="88892" href="?action=profile;user=Booster">Booster</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446734620" title="05/11/2015 a las 14:43 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+sos homosexual vos? &nbsp;<img src="https://identi.io/Smileys/default/icon_surprised.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4288277" class="comentario coment_id_28">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="eltotus" href="?action=profile;user=eltotus">
+<img id="error_avatar" src="http://www.ahiva.info/Gifs-Animados/Profesiones/Guitarristas/Profesiones-563.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="44724" href="?action=profile;user=eltotus">eltotus</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446735933" title="05/11/2015 a las 15:05 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+la homosexualidad tendr?
+</div>
+</div>
+</div>
+</div><div id="comment_4288442" class="comentario coment_id_29">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="hserra" href="?action=profile;user=hserra">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-qDPeKiwne8A/UUUYaZIRGFI/AAAAAAAAAA0/L59ExtoT_Ec/s200/saga3.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1635454" href="?action=profile;user=hserra">hserra</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446740006" title="05/11/2015 a las 16:13 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita duqueblanc: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita hserra: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita duqueblanc: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita akula1997: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita duqueblanc: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Por supuesto que no respetan. Es solo una imposici?</div></blockquote></div></blockquote></div></blockquote></div></blockquote></div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4288483" class="comentario coment_id_30">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="hserra" href="?action=profile;user=hserra">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-qDPeKiwne8A/UUUYaZIRGFI/AAAAAAAAAA0/L59ExtoT_Ec/s200/saga3.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1635454" href="?action=profile;user=hserra">hserra</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446740970" title="05/11/2015 a las 16:29 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita eltotus: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">la homosexualidad tendr?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4289029" class="comentario coment_id_31">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="freddy644" href="?action=profile;user=freddy644">
+<img id="error_avatar" src="https://i.ibb.co/RTHhSKK/bean-2.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="40554" href="?action=profile;user=freddy644">freddy644</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446757328" title="05/11/2015 a las 21:02 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita vladdrac: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Me parece que el que escribio el post es un HETEROFOBICO, que no acepta que los demas piensen distinto. Hablan de tolerancia y son intolerantes, hablan de igualdad y quieren imponer sus ideas, hablan de normalidad cuando ellos mismos se definen con con &quot;gustos distintos&quot;<br /><br />Su doble estandar es un asco.</div></blockquote><br />Totalmente de acuerdo &nbsp;<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4289035" class="comentario coment_id_32">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="piter1" href="?action=profile;user=piter1">
+<img id="error_avatar" src="http://static.vix.com/es/sites/default/files/btg/series.batanga.com/files/el-adios-a-futurama-con-los-mejores-gifs-de-la-serie-2.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1898562" href="?action=profile;user=piter1">piter1</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446757566" title="05/11/2015 a las 21:06 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+historia oculta del movimiento gay.indd 1 29/12/2011 12:04:54<br />Colecci?
+</div>
+</div>
+</div>
+</div><div id="comment_4289047" class="comentario coment_id_33">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="boster2012" href="?action=profile;user=boster2012">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_WI-VbFOhifo/TDLwgW0ENYI/AAAAAAAAAPk/okPG3kb42Uw/S1600-R/boca-escudo-nuevito.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1524634" href="?action=profile;user=boster2012">boster2012</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446757755" title="05/11/2015 a las 21:09 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita mhorkpheus: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">argentino tenia que ser este wequereque</div></blockquote>no todos los Argentinos pensamos igual, yo tengo amigos que con el pasar de los a?
+</div>
+</div>
+</div>
+</div><div id="comment_4290356" class="comentario coment_id_34">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mhorkpheus" href="?action=profile;user=mhorkpheus">
+<img id="error_avatar" src="https://t2.gstatic.com/images?q=tbn:ANd9GcSbFx4i0Q8YoLFwl86H-3NhZPx9I6bLstcUG6O3Gfn1Cvb1od45Bg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1571349" href="?action=profile;user=mhorkpheus">mhorkpheus</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1446813983" title="06/11/2015 a las 12:46 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="58635" href="https://identi.io/index.php?action=profile&user=vladdrac" class="mensiones_identi">@vladdrac</a> +1 a ese comentario, pensaba que era el unico que se habia dado cuenta!! pero ya veo que son varios. ese doble estandar que tienen los wecos de pedir tolerancia siendo los mas intolerantes.
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_2.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949f61e8dd7dea6',t:'MTc2MTQ4MTc4OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
