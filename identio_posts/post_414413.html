@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Como usar la consola de CMD - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Como usar la consola de CMD o Símbolo del sistema y los archivos batch Reglas elementales para utilizar la consola de comandos de Windows. Todas las formas de abrirla, iniciarla e introducir las órd..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='Q2dOOXNRYnBWSTFVNm1uVTJGc2RHVmtYMTlBMlZXYkpwSXN2bTFGdDFPOXFEWi9NM0ZMNE1lR05jTDdCb3IzeWdkUjRVUDZVTEtycjExc1g3VlZlbGhObkIzSzVESzU3Q3ZmckE9PVp3UGJEd3FiYThPYzFxNw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761481387;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '9d4d5c76cd21fd14b4963cc9203a1825');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_3.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Como usar la consola de CMD" title="Identi - Como usar la consola de CMD" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '23219a3bae7504a7cc62632e5662d2be68556549';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Maverick00">Maverick00</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Maverick00" title="Ir al Perfil de Maverick00"><img id="error_avatar" class="avatar" border="0" width="120" src="https://subefotos.com/ver/?c35a36b842c01214775a4d46f35091f7o.jpg"/></a>
+<div class=" rango_sidebar clearfix">Idento</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/idento.png" title="Idento" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1938125)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1938125');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">27</b> Seguidores</li>
+<li><b>642</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>22</b> Posts</li>
+<li><b>127</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Como usar la consola de CMD</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=414412';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=414414';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 9 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1076441">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><span style="color: #0c95c9;"><font size="5" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Como usar la consola de CMD o Símbolo del sistema y los archivos batch</span></font></span><br /><br /><br /><span style="color: #000000;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Segoe UI, Verdana;">Reglas elementales para utilizar la consola de comandos de Windows. Todas las formas de abrirla, iniciarla e introducir las órdenes. Trucos y ejemplos prácticos. Como crear los archivos batch, plantillas para facilitar dicha tarea. Diferencia entre archivos batch y BAT y sus usos prácticos en Windows.<br />En varias páginas se trata sobre el uso de los principales comandos disponibles en Windows, para ejecutar casi cualquier tarea y ayudarnos en nuestro desempeño usando este sistema operativo.<br />La principal herramienta para ejecutar estos comandos es la consola de CMD, por lo que casi todos estos articulo redireccionan a los usuarios que no tienen experiencia a esta página, para obtener las nociones elementales necesarias antes de experimentar con estos comandos.<br />Tratare de explicarlo todo de forma clara para que pueda ser asimilado por cualquier persona sin conocimientos avanzados, incluyendo los que sienten pánico hacia la famosa ventana negra de MSDOS.<br /><br /><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">¿Qué es la consola de CMD?</span></font><br />La consola de CMD, ventana del intérprete de comandos de Windows o Símbolo del sistema, (se le conoce y se puede llamar por cualquiera de los nombres anteriores), es la famosa ventana negra mediante la cual se puede enviar cualquier tipo de orden al sistema operativo.<br />La inicia &quot;cmd.exe&quot; una aplicación de 16 bits que se encuentra en C:WindowsSystem32, que traduce e interpreta los comandos u órdenes transmitidos al sistema operativo.<br />Dichos comandos están escritos en el antiguo lenguaje de Windows MSDOS.<br />Mediante la consola de CMD se puede realizar tareas en el equipo sin usar la interfaz gráfica de Windows, ya que las instrucciones recibidas van directamente al núcleo del sistema.<br />Con las órdenes que se introduzcan y se ejecuten en ella, se puede realizar prácticamente cualquier tipo de acción en Windows.<br /><img id="img_post" src="https://norfipc.com/img/articulos/consola-comandos-windows.png" border="0"><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">¿Cómo usar la consola de CMD o Símbolo del sistema?</span></font><br />La consola de CMD se usa de forma idéntica a como se hacía en los primeros sistemas operativos.<br />Se escribe una orden o secuencia y se presiona la tecla Enter para ejecutarla.<br />Por supuesto que este método es algo engorroso y complejo, solo propio de profesionales.<br />Las versiones modernas de Cmd.exe permiten otras opciones:<br />Ahora es posible copiar o pegar texto en la consola, solo dando un clic con el ratón, esta opción se llama &quot;Edición rápida&quot; y es necesario habilitarla en las preferencias.<br /><br /><br /><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Como habilitar la edición rápida en la consola de CMD</span></font><br />Para habilitar la Modalidad de edición rápida haz lo siguiente:<br />? Accede a la configuración de la consola dando un clic derecho en la esquina superior de la ventana y selecciona: Propiedades -&gt; Opciones.<br />? Marca las casillas: &quot;Modalidad de edición rápida&quot; y &quot;Modalidad de inserción&quot;.<br />? Guarda los cambios.<br />La consola también se puede personalizar es decir cambiar el tamaño de la ventana, la posición el tamaño del texto, el color, etc.<br />Lee en otro artículo como hacerlo: <a href="http://norfipc.com/comandos/consola-cmd-configurar.html" target="_blank" rel="nofollow"><span style="color: #064f78;">Como configurar la consola de CMD</span></a> <br />Otra forma de usar la consola es hacerlo indirectamente utilizando un archivo batch.<br />Consiste en escribir las instrucciones o comandos en un archivo de texto que se guarda con la extensión de archivo CMD.<br />Al dar dos clics en dicho archivo Windows abre la consola y ejecuta las órdenes que contiene.<br /><br /><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">¿Cómo abrir o iniciar la consola de CMD?</span></font><br />La consola se puede iniciar de distintas formas, escoge la que más fácil te resulte.<br /><b>En Windows 7</b><br />? Busca en la lista de <i>Todos los programas -&gt; Accesorios</i>: Símbolo del sistema.<br />? Escribe en la herramienta Ejecutar que se abre usando las teclas Windows + R: <b>CMD</b> y presiona la tecla Enter.<br />? Escribe en el cuadro de inicio (tecla Windows) CMD: y presiona la tecla Enter.<br /><b>En Windows 8</b><br />? Escribe en la pantalla de inicio: CMD y presiona la tecla Enter.<br />? Escribe en Ejecutar: CMD y presiona la tecla Enter.<br />? Abre el menú Win-X (teclas Windows + X) y escoge: &quot;Símbolo del sistema&quot;.<br /><img id="img_post" src="https://norfipc.com/img/otros2/abrir-consola-cmd-windows-8.jpeg" border="0"><br /><b>En los dos sistemas operativos:</b><br />? Crea un nuevo acceso directo en el Escritorio, cuando se te pregunte la ruta, escribe: &quot;cmd.exe&quot;<br />? En el menú contextual del ratón, es decir, al dar clic con el botón derecho con la tecla Shift presionada, selecciona: &quot;Iniciar Ventana de comandos aquí&quot;.<br /><br /><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">¿Cómo abrir la consola de CMD con permisos de Administrador?</span></font><br />Algunos comandos en Windows 7 y Windows 8 requieren que se inicie la consola con permisos de administrador.<br />Si no es así se mostrará un mensaje similar al siguiente:<br />&quot;El comando no puede ejecutarse porque el usuario no cuenta con los privilegios necesarios para realizar esta operación&quot;.<br /><img id="img_post" src="https://norfipc.com/img/otros2/mensaje-error-consola-cmd.jpeg" border="0"><br />¿Cómo solucionarlo?<br />Hay varias formas, usa una de las siguientes:<br />? Crea un acceso directo en el escritorio como se indicó anteriormente y ejecútalo como administrador (Clic derecho -&gt; Ejecutar como Administrador).<br />? En Windows 8 en el menú Win-X escoge la opción: &quot;Símbolo del sistema (administrador)&quot;<br />? Descarga a tu equipo y agrega la siguiente clave al Registro, que creará un botón en el menú contextual para abrir directamente la consola de CMD con permisos de Administrador.<br /><br /><a href="https://norfipc.com/ftp/registro/AbrirCMD.zip" target="_blank" rel="nofollow"><span style="color: #064f78;"><img id="img_post" src="https://norfipc.com/img/icon/reg.png" border="0"> Descargar clave del Registro para iniciar la consola con permisos de Administrador</span></a> <br /><br />De forma adicional estará disponible la opción de abrir la consola en el menú del ratón, al dar un clic derecho en cualquier directorio o carpeta del equipo.<br /><br /><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Trucos para usar la consola de CMD o Símbolo del sistema</span></font><br />La consola no es tan rígida para usar como algunos piensan.<br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Como pegar texto en la consola</span></font>Para pegar cualquier texto, por ejemplo una instrucción copiada de una página web, solo da un clic derecho con el ratón, así de simple.<br />Ojo, es necesario haber habilitado la Modalidad de edición rápida.<br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Como copiar texto en la consola</span></font>Para copiar cualquier texto en la consola, por ejemplo la ayuda de un comando, arrastra el ratón para seleccionar toda el área del texto y da un clic derecho.<br />Abre un documento y presiona Control + V.<br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Introducir la ruta a un archivo o carpeta en la consola</span></font>Si se necesita ejecutar una instrucción en una carpeta o directorio cuya ruta es larga o complicada, solo abre la carpeta, arrástrala y suéltala encima de la consola.<br />Lee más información útil en otro artículo: <a href="http://norfipc.com/utiles/tutorialbatch1.html" target="_blank" rel="nofollow"><span style="color: #064f78;">Ejemplos prácticos en la consola de CMD</span></a> <br /></span></font></span><hr width="50%"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Como crear los archivos batch para ejecutar ordenes en la consola</span></font><br />Los archivos batch, antiguamente conocidos como BAT, son pequeños archivos de texto que se pueden hacer con cualquier editor de texto, por ejemplo con el Bloc de notas, pero es necesario cambiarle la extensión de archivo original .txt por .cmd o .bat, funcionan igual las dos.<br />Al dar dos clics en ellos Windows traslada las instrucciones que tengan escritas a la consola de comandos y se ejecutan en esta secuencialmente, es decir línea por línea.<br />Por ejemplo si se escribe en el archivo de texto: COPY C:/test D:/ y se guarda como un batch, al dar dos clic en él, Windows copiará la carpeta test situada en el disco C a la unidad D.<br />La primera línea del archivo debe ser: @echo off.<br /><br /><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Crear el primer archivo batch</span></font><br /><br /><font size="3" style="line-height: 1.3em;"><span style="font-family: monospace;">@echo off<br /><br />echo Fecha actual %DATE% <br />echo Hora actual %TIME% <br />echo Nombre del PC %COMPUTERNAME% <br />echo Nombre del usuario %USERNAME% <br />echo Directorio raiz del HD %SYSTEMROOT% <br />echo Directorio en que te encuentras %CD%<br />echo Numero de procesadores %NUMBER_OF_PROCESSORS% <br />pause&gt;nul</span></font><br />Al ejecutarlo mostrara la fecha, hora, nombre del equipo, del usuario y aún más información.<br />La siguiente infografía muestra cómo hacer todo de forma detallada. <br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Infografía: Crear un archivo batch de prueba con el Bloc de notas</span></font><img id="img_post" src="https://norfipc.com/img/infografia/crear-archivo-batch-prueba-2.jpeg" border="0"><br /><br /><font size="3" style="line-height: 1.3em;"><b>Crear una plantilla para crear un archivo batch desde el menú contextual</b><br />Si vas a hacer archivos batch a menudo, puedes crearte una plantilla, es algo fácil.<br />Para eso descarga el siguiente script del registro, descomprímelo y ejecútelo, agregará una entrada en tu menú contextual donde podrás elegir: Nuevo -&gt; Archivo batch.<br />Creará en el lugar que escojas un nuevo archivo, el cual ya tendrá la extensión .cmd y el encabezado necesario, solo tendrás que insertarle las líneas de código que necesitas ejecutar. <br /><br /><a href="https://norfipc.com/ftp/registro/nuevo_reg_cmd.zip" target="_blank" rel="nofollow"><span style="color: #064f78;"><img id="img_post" src="https://norfipc.com/img/icon/reg.png" border="0">Script para agregar al submenu Nuevo del menu contextual Nuevo archivo CMD</span></a></font><br /><br /><font size="3" style="line-height: 1.3em;"><b>Plantilla para hacer un archivo batch, copiando el contenido al Bloc de notas</b><br />Da un clic en el siguiente cuadro de texto, copia el contenido y pégalo en el Bloc de notas.<br /><br />En la línea &quot;mode con&quot;, se especifica las dimensiones con las que se abrirá la consola, cambia los valores a tu gusto.</font><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Como guardar el resultado que devuelve la consola como texto</span></font><br />Para salvar la información que aparece en la consola, ya sea el resultado de un comando, una petición de búsqueda, el contenido de la ayuda, etc. en un archivo de texto, hazlo de la siguiente forma:<br />Utiliza el comando, el carácter &gt; y a continuación el nombre y la ubicación del archivo a crear.<br />Por ejemplo:<br />Guardar en un archivo de texto en el escritorio, el contenido que devuelve la ayuda para el comando ROBOCOPY:<br /><b>ROBOCOPY /? &gt; %userprofile%Desktopayuda.txt</b><br />Puedes usar distintas extensiones de archivo, .doc para abrirlo con Microsoft Word, .xls para abrirlo con Excel, etc.<br />Para seguir escribiendo información adicional en el mismo archivo anterior, utiliza dos símbolos &gt;&gt; consecutivos, por ejemplo:<br /><b>XCOPY /? &gt;&gt;%userprofile%Desktopayuda.txt</b><br /><hr width="50%"><font size="4" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Georgia, Times New Roman, Times, serif;">Diferencias entre los archivos .BAT y .CMD</span></font><br />En sistemas operativos anteriores, los archivos batch (se conocían como archivos de procesamiento por lotes) tenían la extensión de archivo .bat.<br />Eran ejecutados por command.com, alcanzaron muy mala fama, incluso para muchos los BAT eran archivos que podían o destruirte tu sistema operativo o infestarte de virus, verdaderamente se usaron mucho con este propósito. <br />En la actualidad, con los modernos sistemas operativos con que contamos y los sistemas de seguridad que estos poseen, un virus arcaico realizado en un archivo batch no tiene ningún efecto dañino.<br />A partir de la salida de Windows NT el antiguo command.com (procesador de comandos de 16-bits) parte de los sistemas operativos anteriores, se convierte en cmd.exe (procesador de comandos de 32-bits), una aplicación independiente, los batch adoptan la extensión de archivo .cmd, pero la consola sigue ejecutando por compatibilidad de igual manera los que poseen la extensión de archivo .bat.<br />[/font][/size][/color]<script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">12</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 4/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1728</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">12</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(414413,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(414413,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(414413,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(414413,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(414413,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(414413,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(414413,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(414413,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(414413,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(414413,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="http://i.telegraph.co.uk/multimedia/archive/02609/v_jpg_2609935b.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=39739" title="perfil de acaudana56"> acaudana56</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.imgur.com/KnSWvRp.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1944658" title="perfil de Cainn"> Cainn</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/_ierSNQX-XaE/SUUTV7QLbTI/AAAAAAAAAHo/mcjAJfly6xo/s320/Ryu.PNG" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1616246" title="perfil de Hadoken1"> Hadoken1</a>: <b>2 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(414413);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('414413');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=423389" title="Recopilacion de archivos batch para Windows"> Recopilacion de archivos batch para Windows</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=423373" title="Como crear particiones y dar formato a los discos "> Como crear particiones y dar formato a los discos </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=423322" title="Usar la consola de CMD"> Usar la consola de CMD</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414682" title="Usar la línea de comandos en Windows de la L-O"> Usar la línea de comandos en Windows de la L-O</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414649" title="Usar la línea de comandos en Windows de la F-I"> Usar la línea de comandos en Windows de la F-I</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414613" title="Usar la línea de comandos en Windows de la A-E"> Usar la línea de comandos en Windows de la A-E</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414598" title="Lista de todos los comandos rápidos en Windows"> Lista de todos los comandos rápidos en Windows</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=414587" title="Códigos para crear aplicaciones, archivos batch"> Códigos para crear aplicaciones, archivos batch</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">3</span> Comentarios</span>
+<span class="onpost"> Como usar la consola de CMD</span>
+<div class="comentario"></div><div id="comment_4445934" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="acaudana56" href="?action=profile;user=acaudana56">
+<img id="error_avatar" src="http://i.telegraph.co.uk/multimedia/archive/02609/v_jpg_2609935b.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="39739" href="?action=profile;user=acaudana56">acaudana56</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1456516141" title="26/02/2016 a las 19:49 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias por el post. Muy ?
+</div>
+</div>
+</div>
+</div><div id="comment_4445945" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jalifa1923" href="?action=profile;user=jalifa1923">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1947438" href="?action=profile;user=jalifa1923">jalifa1923</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1456516561" title="26/02/2016 a las 19:56 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+GRACIAS
+</div>
+</div>
+</div>
+</div><div id="comment_4446047" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="marcenikki" href="?action=profile;user=marcenikki">
+<img id="error_avatar" src="https://upload.wikimedia.org/wikipedia/ang/d/d7/Ergo_proxy.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1819189" href="?action=profile;user=marcenikki">marcenikki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1456519194" title="26/02/2016 a las 20:39 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_ojitos.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_3.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949ec4ccd8adea9',t:'MTc2MTQ4MTM4Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
