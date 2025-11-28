@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Crear instaladores personalizados juegos de PC - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Este tutorial es para crear instaladores personalizados para sus juegos de pc o cualquier programa tambien funcionan los mismos pasos, el tutorial repito va enfocado para juegos de pc. se preguintara..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='dkM3SmM3MUR4RXFxRlBlVTJGc2RHVmtYMThaMjRsUUxiclVJT05MVHlNbnh6VXpyVGpCQm9ZVTRwNVRBQmpTVC9uZEt6OHNHRTNyRWdUbXFjZk54eUZ1TGV1L0wybFNPbkovNUE9PXlTWFhXZHVWYUFMVllHWg==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761491886;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'c0ba107de34c00c9ff3b6dd6e7b5927e');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_7.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Crear instaladores personalizados juegos de PC" title="Identi - Crear instaladores personalizados juegos de PC" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'c6e96e08b07a5e953798dfa9bffb5065a0bdd7fb';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=alexis0105">alexis0105</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=alexis0105" title="Ir al Perfil de alexis0105"><img id="error_avatar" class="avatar" border="0" width="120" src="https://3.bp.blogspot.com/-XIJPQJUVJ9c/XElGtaiIrqI/AAAAAAAAAAk/YMK0L9OX62AakpoRialz9ttpCXUCx-6OACLcBGAs/s200/453.jpg"/></a>
+<div class=" rango_sidebar clearfix">Gold User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/golduser.png" title="Gold User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1841970)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1841970');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">48</b> Seguidores</li>
+<li><b>2059</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>66</b> Posts</li>
+<li><b>143</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Crear instaladores personalizados juegos de PC</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=349604';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=349606';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 10 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1011633">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><div style="text-align: justify;"><span style="color: #3333ff;"><font size="2" style="line-height: 1.3em;"><img id="img_post" src="http://www.programagratis.com/fotos/i/n/inno-setup_1.png" border="0"></font></span><br /><span style="color: #3333ff;"><font size="2" style="line-height: 1.3em;"><br /></font></span><span style="color: #3333ff;"><font size="2" style="line-height: 1.3em;">Este tutorial es para crear instaladores personalizados para sus juegos de pc o cualquier programa </font></span><span style="color: #3333ff;"><font size="2" style="line-height: 1.3em;">tambien funcionan los mismos pasos, el tutorial repito va enfocado para juegos de pc.</font></span><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;">se preguintaran</span><span style="color: #3333ff;">¿Para que quiero crear un setup si mi juego ya trae uno?</span></font><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;">bueno la razon es simple hay juegos que no traen un instalador como es el caso de Fifa 15</span></font><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;">o que por extrañas razones tenemos instaldo un juego en nuestra PC y por razones desconocidas</span></font><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;">perdimos su instalador y no queremos bajarnos el juego, bueno pues esto te ayudara a recrearlo o crear uno para uno que no tiene.</span></font><br /><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><br /><br /><span style="color: #ff3333;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Arial Black;"><b>Programas requeridos:</b></span></font></span><br /><span style="color: #33cc66;"><br /><span style="color: #3333ff;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">-Inno setup<br />-Innoide </span></font></span></span><br /><br /><span style="color: #ff3333;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">(Los encuentras al final de post)</span></font></span><br /><br /><br /><font size="5" style="line-height: 1.3em;"><span style="font-family: Arial Black;"><b><i>Pasos para instalar los programas</i></b></span></font><br /><br /><b><span style="color: #ff3333;"><span style="font-family: Arial Black;"><font size="3" style="line-height: 1.3em;">Instalamos Inno setup</font> </span></span></b><br />1: Elejimos idioma español o el de su preferencia <br />2: Damos clic a siguiente<br />3: Marcamos la casilla acepto acuerdo y damos en siguiente<br />4: Siguiente / siguiente<br />5: Desmarcamos la casilla que dice install Inno setup Preprocessor y damos siguiente<br />6: Seleccionamos las 2 casillas que dicen crear icono en el escritorio y y asosciar archivos con extencion .iss<br />7: siguiente y damos por ultimo en instalar <br />8: Una vez terminado desmarcamos la casilla ejecutar Inno Setup y damos en finalizar<br /><br /><br /><font size="3" style="line-height: 1.3em;"><span style="font-family: Arial Black;"><b><span style="color: #ff3333;">Instalamos Innoide</span></b></span></font><br /><br />1: Elejimos idioma español o el de su preferencia <br />2: Damos clic a siguiente<br />3: Marcamos la casilla acepto acuerdo y damos en siguiente<br />4: Siguiente / siguiente<br />5: Marcamos lña casilla crear un icono en el eescritorio y damos en siguiente<br />6: Clic en instalar <br />7: Una vez terminado desmarcamos la casilla ejecutar Innoide y damos en finalizar<br /><br /><br /><font size="3" style="line-height: 1.3em;">1:</font> Abrimos Inno setup y cerramos la ventana que dice WELCOME ya sea dar clic en cancelar o en la X<br /><br /><img id="img_post" src="https://3.bp.blogspot.com/-abk--1q_is4/VH9dV-BV-PI/AAAAAAAAATc/AMm-X97MGPw/s1600/1.jpg" border="0"><br /><br />2: Clic en FILE / NEW<br /><br /><img id="img_post" src="https://3.bp.blogspot.com/-BYsj5JLXCf4/VH9dXsbviRI/AAAAAAAAATk/J07ymqtnp_Q/s1600/2.jpg" border="0"><br /><br />3: Clic en siguiente <br /><br /><img id="img_post" src="https://1.bp.blogspot.com/-8w36atKYeOs/VH9daeqdZtI/AAAAAAAAATs/xaFCShBUh6s/s1600/3.jpg" border="0"><br /><br />4: Ponemos el nombre de nuestro juego y version de la aplicacion y damos en siguiente<br /><br /><img id="img_post" src="https://3.bp.blogspot.com/-3bahvxmwq0s/VH9deGaaw8I/AAAAAAAAAT0/xZXUh_uU4jA/s1600/4.jpg" border="0"><br /><br />5: dejamos la siguiente ventana como esta y damos en siguiente<br /><br /><img id="img_post" src="https://1.bp.blogspot.com/-qq5ZAmZ1z5U/VH9dfh3BH-I/AAAAAAAAAT8/bv-Aodg0AFU/s1600/5.jpg" border="0"><br /><br />6: en el boton Browser buscamos el .AXE ejecutable de nuestro juego y damos clic en abrir<br /><br />7: Nos vamos mas abajo y damos clic a ADD FOLDER en la que seleccionamos la carepta de instalacion del juego que por lo general se encuentra en el disco local C / archivos de programa <br />una vez seleccionada damos clic en ACEPTAR y SIGUIENTE<br /><br /><img id="img_post" src="https://4.bp.blogspot.com/-PgJs4eLFky8/VH9diKl_eHI/AAAAAAAAAUE/RULI-TSL5yI/s1600/6.jpg" border="0"><br /><br />8: Ponemos el nombre del juego nuevamente en donde dice My Program <br />9: seleccionamos las casillas 4 y 5 y damos en siguiente<br /><br /><img id="img_post" src="https://1.bp.blogspot.com/-nPjR4iCmppw/VH9dkT2KK3I/AAAAAAAAAUM/e394K7uSWL0/s1600/7.jpg" border="0"><br /><br />10: En esta ventana añadimos una licencia o requisitos del juego los podemos escribir con bloc de notas y despues buscarlo con el boton BROWSER (opcional) y damos en siguiente <br /><br /><img id="img_post" src="https://1.bp.blogspot.com/-XGXUDwN1Bn4/VH9dlgsoyVI/AAAAAAAAAUU/fu80CoPrfjM/s1600/8.jpg" border="0"><br /><br />11: Elejimos los idiomas que tendra nuestro instalador y damos siguiente (Recomiendo solo Español e Ingles)<br /><br /><img id="img_post" src="https://2.bp.blogspot.com/-ndeP2X_eTas/VH9dnOaaL3I/AAAAAAAAAUc/ieohpu0F_co/s1600/10.jpg" border="0"><br /><br />12: En esta ventanas elejimos primero el lugar donde se guardara nuestro instalador una vez terminado (Recomiendo crear una carpeta nueva con el nombre del juego para guardarlo alli)</span></font><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;">13: Donde dice setup cambiamos el nombre por el de nuestro juego</span></font></span></font><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><br />14: Donde dice Custom Setup Icon file Buscamos Un icono Y lo seleccionamos y despues damos<br />en siguiente<br /> <br /> </span></font></span></font><img id="img_post" src="https://2.bp.blogspot.com/-m5BtfuboUsc/VH9gb5MVdnI/AAAAAAAAAUo/r2ae0xtrYig/s1600/11.jpg" border="0"><br /><br /> 14: Donde dice Custom Setup Icon file Buscamos Un icono Y lo seleccionamos y despues damos en siguiente <br /><br /><img id="img_post" src="https://1.bp.blogspot.com/-PYzsWBNDLvw/VH9gdo52qJI/AAAAAAAAAUw/fWLRtBk0JbY/s1600/12.jpg" border="0"></span></font><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;">15: damos clic a Finish y luego a NO </span></font><img id="img_post" src="https://1.bp.blogspot.com/-HchN_oV6M8o/VH9geU0XGjI/AAAAAAAAAU4/-ox1Plrre5k/s1600/13.jpg" border="0"><br /><br /><span style="color: #ff3333;">16:</span> Vamos a la pestaña FILE / SAVE y guardamos nuestro Proyecto con el nombre que querramos y de prefencia en el escritorio<br /><span style="color: #ff3333;">17:</span> una vez guardado cerramos el Inno setup<br /><br /><img id="img_post" src="https://2.bp.blogspot.com/-5_wVNl9DqFs/VH9gjmfS81I/AAAAAAAAAVA/vGSb-ImNmRs/s1600/14.jpg" border="0"><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Arial Black;"><b>Pasamos al programa Innoide</b></span></font> 1: Nos centramos en el archivo que nos creo Inno Setup y damos clic derecho sobre el y abrir con...<br /><br /><img id="img_post" src="https://4.bp.blogspot.com/-ZieIHJ-KkVw/VH9gkYyRmKI/AAAAAAAAAVI/mQYM9aZaKRw/s1600/15.jpg" border="0"><br /><br />2: Buscamos el programa Innoide si no esta en la lista desmarcamos la casilla usar siempre el programa seleccionado y damos clic en Examinar<br />3: Buscamos la carepta Innoide, la abrimos y seleccionamos la aplicacion por ultimo damos clic a aceptar<br /><br /><img id="img_post" src="https://3.bp.blogspot.com/-h53tNRnyfJ8/VH9gmcTWf_I/AAAAAAAAAVQ/gJ74heZG_Ag/s1600/16.jpg" border="0"><br /><br />4: Ya abierto nuestro archivo nos vamos a la pestaña Settings/ Appearance <br /><br /><img id="img_post" src="https://1.bp.blogspot.com/-kgpR3x0-9Lg/VH9goio22wI/AAAAAAAAAVY/bXVLR4kCLMY/s1600/17.jpg" border="0"><br /><br />5: y en donde dice Normal Image buscamos una imagen de nuestro juego con las siguientes medidas y el formato BMP <br />6: Para la casilla Small imagen creamos una imagen de nuestro juego con las siguientes medidas y la seleccioanmso <br />7: y en instalation Icon podemos utilizar el mismo icono que utilizamos anteriormente en Inno setup <br /><br /><img id="img_post" src="https://1.bp.blogspot.com/-3Wc0geR0Xgw/VH9gtqyAl9I/AAAAAAAAAVg/7yUy98eThAU/s1600/18.jpg" border="0"><br /><br />8: Ahora pasamos a la casilla DISK SPANNING y marcamos la casilla de arriba <br />9: Don de dice Presets... cambiamos a DVD 8.5 GB (Dual Layer) y damos clic finalmente a OK <br /><br /><img id="img_post" src="https://2.bp.blogspot.com/-D1CD1QaANRY/VH9gwLXa-XI/AAAAAAAAAVs/G1DjyIeX6ww/s1600/19.jpg" border="0"><br /><br />10: Por ultimo damos clic al Icono que dice Compile para que comienze a crearse nuestro setup <br /><br /><img id="img_post" src="https://1.bp.blogspot.com/-pODrV-BX6AY/VH9gv3cOfXI/AAAAAAAAAVo/rTiERgJFAX0/s1600/20.jpg" border="0"><br /><br />11: Ya terminado nos quedara el setup guardado en la carpeta que elejimos con el nombre del juego y esto es todo<br />12: El tiempo de proceso de creacion de Setup depende del tamaño de juego <br /><br /><br /><img id="img_post" src="https://3.bp.blogspot.com/-dmEsJgE4zHg/VH9gx77OQBI/AAAAAAAAAV4/U2Kqn4nIdu8/s1600/21.jpg" border="0"><br /><br />Ejemplo final de como queda (instalador que hice para el pes 2015)<br /><br /><img id="img_post" src="https://1.bp.blogspot.com/-B7ohM8iznaA/VH9x7nRNI9I/AAAAAAAAAWI/wjjkqzuXGts/s1600/ejemplo.jpg" border="0"><br /><br /><br /><span style="color: #ff6633;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;"><i><b>Bueno eso fue todo espero les sirva y recuerden Probar el instalador para que vean que funciona bien.</b></i></span></font></span><br /><br /></span></font><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><span style="color: #ff3333;"><font size="5" style="line-height: 1.3em;"><span style="font-family: Arial Black;"><b>LINKS </b></span></font></span></span></font><br /><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><font size="3" style="line-height: 1.3em;">Pagina web para crear Iconos con cualquier imagen no importa el tamaño la reduce hasta ajustalar</font></span></font><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><a href="http://imagen.online-convert.com/es/convertir-a-ico" target="_blank" rel="nofollow"><font size="3" style="line-height: 1.3em;"><span style="font-family: Arial Black;"><b>Cick aqui para ir a la pagina </b></span></font></a></span></font><br /><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><span style="font-family: Arial Black;"><b><font size="3" style="line-height: 1.3em;">Innoide e Inno Setup</font></b></span></span></font><br /><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><a href="http://www.4shared.com/rar/jvAKwM6xce/Inno_setup_e___innoide.html" target="_blank" rel="nofollow"><span style="color: #33ccff;">4SHARED </span></a></span></font><br /><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><span style="color: #ff9933;"><font size="3" style="line-height: 1.3em;">zippyshared</font></span></span></font>... link pronto<br /><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><span style="color: #ff3333;">MEGA</span></span></font>... link pronto <br /><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Arial Black;">Imagenes con las medidas para el instalador </span></font></span></font><br /><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><a href="http://www.4shared.com/rar/RzkVcbQcce/Medidas_y_ejemplos.html" target="_blank" rel="nofollow"><span style="color: #33ccff;">4SHARED</span></a></span></font><br /><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><span style="color: #ff9933;"><font size="3" style="line-height: 1.3em;">zippyshared</font></span></span></font>.... link pronto<br /><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><span style="color: #ff3333;">MEGA</span></span></font>.... link pronto<br /><br /><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><font size="4" style="line-height: 1.3em;"><b><span style="color: #ff3333;">CONTRASEÑA:</span> alexis0105</b></font></span></font><br /><font size="2" style="line-height: 1.3em;"><span style="color: #3333ff;"><br /><br />Nota: todas la imagenes, link y tutorial fueron hechos por mi<br /><br /><br /><span style="color: #ff3333;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Ahora si quieres saber como grabar tus juegos de pc en varios DVD 5 y hacer que te pida un disco para continuar con la instalacion y despues otro asi hasta finalizar, espera este tutorial pronto en los proximos dias. </span></font></span><br /></span></font></div><br /></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">37</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 4.6/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">2122</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">14</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(349605,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(349605,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(349605,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(349605,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(349605,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(349605,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(349605,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(349605,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(349605,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(349605,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://media.giphy.com/media/39l4yY2weAXo8KJpR4/giphy.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1877060" title="perfil de espectorx"> espectorx</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.ibb.co/MM21gp8/Shinobido-Avatar-Original.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=115536" title="perfil de shinobido"> shinobido</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i109.fastpic.ru/big/2019/0312/d3/6473b4e52855a66ada0b689b659355d3.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1794856" title="perfil de Rasta_"> Rasta_</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1896425" title="perfil de adrian654"> adrian654</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://image.noelshack.com/fichiers/2015/16/1428941872-ermac-mortal-kombat-x-by-flavioluccisano-d8gnyfm.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1884837" title="perfil de Serafiel"> Serafiel</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://cs10997.vk.me/u165850341/a_62e67ab6.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1809489" title="perfil de topcom"> topcom</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-UuZIEl37mXI/TyClYDdqsLI/AAAAAAAAiNE/KLSiJw65OnU/s1600/Ilusion%252Boptica-25-751622.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1528091" title="perfil de sudakita"> sudakita</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://4.bp.blogspot.com/-t0hvFyVDt_Q/WSk6iDN55hI/AAAAAAAAAA8/lRzDlH7yNj4uVUfkwlvWLTf-XdoqaSM2ACLcB/s1600/Perfil-2.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1666120" title="perfil de El_Cuervo"> El_Cuervo</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(349605);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('349605');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=562004" title="My Hero Academia solo Audio latino Cap 1"> My Hero Academia solo Audio latino Cap 1</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=523665" title="Bring Me The Horizon Amo [320 kbps] [GD]"> Bring Me The Horizon Amo [320 kbps] [GD]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_428"></i>
+<a href="https://identi.io/index.php?topic=486464" title="Ya se pueden cargar Backups de juegos en ps4"> Ya se pueden cargar Backups de juegos en ps4</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=485601" title="Las organizaciones: comportamiento, estructura PDF"> Las organizaciones: comportamiento, estructura PDF</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=483739" title="Dream State Consequences Album [MG]"> Dream State Consequences Album [MG]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_96"></i>
+<a href="https://identi.io/index.php?topic=460365" title="Super Mario Run [APK][MEGA]"> Super Mario Run [APK][MEGA]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=437952" title="Elfen Lied Capitulo 01 [Audio Latino Original]"> Elfen Lied Capitulo 01 [Audio Latino Original]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=431716" title="Dragon Ball Super Bluray Box 1 [MG][SUB ESP]"> Dragon Ball Super Bluray Box 1 [MG][SUB ESP]</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">3</span> Comentarios</span>
+<span class="onpost"> Crear instaladores personalizados juegos de PC</span>
+<div class="comentario"></div><div id="comment_3754709" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="wwwjavier" href="?action=profile;user=wwwjavier">
+<img id="error_avatar" src="http://i.minus.com/i4Ars3zLAOBCZ.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="119821" href="?action=profile;user=wwwjavier">wwwjavier</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1417638439" title="03/12/2014 a las 20:27 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy Interesante luego le pego una leida?
+</div>
+</div>
+</div>
+</div><div id="comment_3755032" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="luferfue" href="?action=profile;user=luferfue">
+<img id="error_avatar" src="https://www.pxfuel.com/en/desktop-wallpaper-ifvfs" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="137827" href="?action=profile;user=luferfue">luferfue</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1417649482" title="03/12/2014 a las 23:31 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+buena info. gracias
+</div>
+</div>
+</div>
+</div><div id="comment_3804921" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="serpiente69" href="?action=profile;user=serpiente69">
+<img id="error_avatar" src="https://pbs.twimg.com/media/CM9gS8uWwAAJj9z.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="21412" href="?action=profile;user=serpiente69">serpiente69</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1420508009" title="06/01/2015 a las 1:33 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+necesitaba un tutorial de esta magnitud, gracias por compartir tus conocimientos &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_7.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994aeca07f70deaa',t:'MTc2MTQ5MTg4Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
