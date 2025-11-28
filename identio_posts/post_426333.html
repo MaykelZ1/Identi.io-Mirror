@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>¿Como hacer un blog de manera anonima? - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="¿COMO HACER UN BLOG DE MANERA ANONIMA? Hice esta guía práctica poniéndome en la piel de un funcionario cuya intención es sacar a la luz informaciones sobre un escándalo del cual es testigo, en u..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='dnRQSzBoZ3lIWFZqSDFpVTJGc2RHVmtYMThSV2JtWlZOaHZkZnR0U1c0TDlXSXBWVklUbHovSk1HQkhmVDhWL1VIV3AwNUswYjZtOFh5OFcyVGJYblBKclFiaEQvS2hVOTdLbUE9PUhFNnVMcTJReDU0ODNQVA==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761481047;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'b9e5416be4cc1d2b69562fbef9584f23');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_4.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - ¿Como hacer un blog de manera anonima?" title="Identi - ¿Como hacer un blog de manera anonima?" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'aace429c472ab7ac438e790a277298315c743107';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Cespinosa">Cespinosa</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Cespinosa" title="Ir al Perfil de Cespinosa"><img id="error_avatar" class="avatar" border="0" width="120" src="http://www.identi.li/images/def/avatar.png"/></a>
+<div class=" rango_sidebar clearfix">Starter</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/co.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/starter.png" title="Starter" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1977483)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1977483');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">0</b> Seguidores</li>
+<li><b>68</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>4</b> Posts</li>
+<li><b>2</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">¿Como hacer un blog de manera anonima?</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=426332';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=426334';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=427" alt="Apuntes y Educación" title="Apuntes y Educación">Apuntes y Educación</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 9 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1088363">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center">¿COMO HACER UN BLOG DE MANERA ANONIMA?<br /><br />Hice esta guía práctica poniéndome en la piel de un funcionario cuya intención es sacar a la luz informaciones sobre un escándalo del cual es testigo, en un país dónde puede ser peligroso hacerlo. Estos consejos no se destinan a expertos en criptograma, más bien a personas que viven en países donde no se respeta la libertad de expresión y que temen por su seguridad y quieren proteger su vida privada. Un artículo de la EFF (Electronic Frontier Foundation), una organisación norteamericana de defensa de las ciberlibertades “How to blog safely” (<a href="https://www.eff.org/Privacy/Anonymity/blog-anonymously.php" target="_blank" rel="nofollow">http://www.eff.org/Privacy/Anonymity/blog-anonymously.php</a>), da informaciones prácticas<br />complementarias sobre este tema.<br /><br />INDICE<br /><br />Presentamos a Sarah<br />Primera etapa: los seudonimos<br />Segunda etapa: ordenadores públicos<br />Tercera etapa: los proxis<br />Cuarta etapa: ¡Ahora si que es confidencial!<br />Quinta etapa: el “onion routing”, con Tor<br />Sexta etapa: MixMaster, Invisiblog y GPG<br />¿Que podemos decir? ¿Dónde está el límite?<br /><br /><br />PRESENTAMOS A SARAH<br /><br />Sarah trabaja como contable en los servicios del Estado. Se da cuenta de que su jefe, un ministro, se apropia de fondos públicos. Quiere que esto salga a luz, pero teme perder su puesto. Si lo habla con el ministro, siempre que obtenga una entrevista, será despedida. Habla con un periodista que trabaja para un periódico local, pero le contesta que no puede trabajar sobre este asunto con las escasas informaciones que ella tiene, y que necesita documentos para demostrarlo que afirma.<br /><br />Sarah decide montar un blog, para desvelar lo que pasa en el ministerio. Para protejerse, quiere asegurarse de que nadie pueda descubrir su identidad a partir de su blog. Debe crear un blog anónimo.&nbsp;<br />Existen dos maneras de descubrir la identidad de un bloger. La primera, cuando él mismo revela su identidad en el contenido. Por ejemplo, si Sarah dice “Soy la asistenta contable del Ministro de Minas”, será muy fácil deducir su identidad. La otra manera de descubrir su identidad es explotar las informaciones entregadas por los navegadores, o los programas de<br />correo electrónico. Un ordenador (Lat.América: computadora) conectado a la red (internet) tiene o comparte una dirección IP: cuarto números entre 0 y 255, separados por puntos. Por ejemplo: 213.24.124.38. Cuando Sarah utiliza su navegador para poner un comentario en el blog del ministerio, la dirección IP aparece en su mensaje.<br /><br />Investigando, los informáticos del ministerio encontrarán la identidad de Sarah con esta dirección IP. Si Sarah se conecta desde su casa, con un PAI (Proveedor de Acceso Internet), éste podrá establecer el vínculo entre la dirección IP que utiliza y su número de telefono. En ciertos países el ministro necesitará la autorización del juez para obtener estas informaciones. En otros, y particularmente en los países dónde los proveedores de acceso son propiedad del Estado, el gobierno podrá obtener estas informaciones facilmente y Sarah acabará en una situación desagradable.<br /><br />Sarah tiene varias maneras de esconder su identidad en la red. El grado de protección depende de los esfuerzos que esté dispuesta a hacer para esconderse. Cualquiera que desee hacer un blog de manera anónima tienen que decidir hasta qué punto quieren ir para proteger su identidad. Veremos a continuación que algunos de los medios empleados para proteger la identidad de un internauta necesitan amplios conocimientos técnicos y mucho trabajo.<br /><br />PRIMERA ETAPA: LOS SEUDONIMOS<br />Una manera sencilla para Sarah de esconder su identidad es utilizar una cuenta de correo electrónico así como herramientas de blog gratuitas, ubicados en el extranjero (utilizando una cuenta de pago para el correo electrónico o el blog no puede ser, ya que las transacciones desvelarán una carta de crédito, una cuenta corriente o una cuenta paypal, y la identidad del bloger).<br />Sarah puede crear una falsa identidad, un seudonimo, que utilizará para estas cuentas. Cuando el ministerio encuentre su blog, descubrirá que pertenece a “A.N.O.Nimo” cuya dirección es <a href="/cdn-cgi/l/email-protection#3c5d525352455159125e50535b5b594e7c545348515d5550125f5351"><span class="__cf_email__" data-cfemail="e4858a8b8a9d8981ca86888b83838196a48c8b9089858d88ca878b89">[email&#160;protected]</span></a><br />Algunos proveedores de cuentas mail gratuitas:<br />Hotmail<br />Yahoo<br />Hushmail: cuentas gratuitas con encriptación<br />Algunas herramientas de blog:<br />Blogsome: herramienta de blog de Worldpress<br />Traducción de Cedric Sagne<br />Blogger<br />SEO Blog<br />Esta estrategia tiene un problema: cuando Sarah crea una cuenta mail o un blog, el proveedor de acceso registra su dirección IP. Si esta dirección esta asociada con el domicilio o el trabajo de Sarah, y si la empresa que gestiona el servicio de correo electrónico tiene la obligación de facilitar esta información, el ministerio podrá descubrir a Sarah. No es fácil obligar a los proveedores de servicios Web a entregar este tipo de información. Por ejemplo, para que Hotmail reconozca que Sarah tiene un contrato con ellos, el ministerio tendrá que obtener un mandato del juez, en colaboración con la agencia estadounidense de aplicación de leyes.<br /><br />Pero Sarah no quiere correr el riesgo de que su gobierno consiga convencer a su proveedor de correo electronico de que desvele su identidad.<br /><br /><br />SEGUNDA ETAPA: LOS ORDENADORES PUBLICOS<br /><br />Sarah puede también pensar en utilizar ordenadores públicos, es decir utilizados por muchas personas, para gestionar su blog. En vez de crear su blog o su cuenta de correo electónico desde casa o desde el trabajo, puede hacerlo a partir de una biblioteca o de un café de Internet. Cuando el ministerio averigüe la dirección IP utilizada para escribir los mensajes en el blog, descubrirá que se hizó desde un cibercafé, donde los ordenadores los utilizan muchas personas.&nbsp;<br />Esta estrategia tiene desventajas. Si el cibercafé o el laboratorio de informática de la universidad tiene un registro de la identidad y de las horas de uso, entonces la identidad de Sarah está en peligro.Igualmente, deberá abstenerse de poner mensajes en mitad de la noche, cuando esté sola en el laboratorio de informática, ya que el empleado podrá acordarse de ella. Le será necesario cambiar de café de Internet a menudo, ya que si el ministerio se percata de que todos los mensajes proceden del “Café La Esquina”, es posible que envíen a alguien para averiguar quién coloca estos mensajes.<br /><br /><br />TERCERA ETAPA: LOS PROXIS ANONIMOS<br /><br />Sarah no quiere tener que ir al “Café La Esquina” cada vez que quiere poner su blog al día. Con un vecino, efectúa un sistema que le permite acceder a Internet desde su propio ordenador, utilizando un proxi anónimo. Ahora, cuando utiliza su correo electrónico o su blog, la dirección que aparece es la del proxi, y ya no la de su ordenador.<br />El ministerio tendrá más dificultades para encontrarla. Primero, obtiene una lista de proxis del internet con las palabras “servidor proxi” en Google. Por ejemplo, desde la lista en publicproxer.com, optando por proxis de categoría “High anonymity”. Apunta la dirección del proxi así como el puerto (ver el artículo “Como pasar la censura” para el uso de proxis).&nbsp;<br /><br />Entonces en las “preferencias” de su navegador, en “General”, “Red” o “Seguridad”, encontrará una opción que le permita entrar en la dirección y el puerto del proxi para el acceso a<br />Internet (en el Firefox que utilizo, ésto se encuentra en “Preferencias”, “General”, “Parametros de conexión”).<br />Mete la dirección IP del proxi y el puerto en las secciones “proxy http” y “proxi SSL”, y los confirma. Después de cerrar el navegador, ahora navega por Internet con este proxi anónimo.&nbsp;<br /><br />La conexión es un poco más lenta. Esto se debe a que cada página que ve en pantalla tiene que pasar por un desvío. En vez de conectarse directamente a<br />Hotmail.com, primero conecta con el proxi, y es el proxi el que conecta con Hotmail. Cuando Hotmail envía datos, los recibe el proxi, y el proxi los envía a Sarah. También es posible que encuentre algunos problemas con ciertos sitio Web, en particular con los que exijen identificarse. Pero al menos su dirección IP ya no la registra su herramienta de blog.<br /><br />Algo divertido con los proxis: en noreply.org (un sitio de reenvío muy popular). El sitio le da la bienvenida con su dirección de IP “Buenas pool-151-203-182-212.wma.east.verizon.net 151.203.182.212”.<br />Ahora, conectése en anomyser.com, un servicio Web que le permite aceder a (ciertas) páginas Web desde un proxi anónimo. En el campo arriba y a la derecha de la página principal de anomyser, entre en esta dirección: <a href="http://www.noreply.org" target="_blank" rel="nofollow">http://www.noreply.org</a><br />(o haga clic aquí <a href="http://anon.free.anomyzer.com/http://www.noreply.org" target="_blank" rel="nofollow">http://anon.free.anomyzer.com/http://www.noreply.org</a> ). Ahora puede ver que noreply.com piensa que viene de vortex.anomyzer.com (Anomyzer es un buen método para poner a prueba los proxis sin cambiar los parametros del navegador, pero no funcciona con los servicios Web más elaborados, como los correos electrónicos o los servidores de blog.<br /><br />Por fin, configure su navegador utilizando un proxi anónimo con las instrucciones dadas anteriormente, y entre en noreply.com para encontrar si sabe de dónde viene.<br /><br />Desafortunadamente los proxis no son perfectos. De hecho, muchos países bloquean el acceso a los proxis más populares, para prohibir a los internautas el acceso a páginas prohibidas. Los internautas deben cambiar de proxi cuando acaban bloqueados por las autoridades. Estos cambios de configuración pueden ser una pérdida de tiempo.<br /><br />Si Sarah es la única persona en su país que utiliza un proxi determinado, puede aparecer otro problema. Si el blog solamente contiene datos relativos a un solo servidor proxi, si el ministerio tiene acceso a los datos de todos los proveedores de acceso a Internet del país, podría acabar descubriendo que el ordenador de Sarah es el único que se ha conectado con este proxi. No pueden demostrar que Sarah utilizó el proxi para conectarse al blog, pero sí averiguar que es la única que utilizar este proxi y deducir que es ella la que pone el blog al día.<br /><br />Por lo tanto, Sarah tiene que utilizar proxis muy concurridos en la zona donde vive, y cambiar a menudo.<br /><br /><br />CUARTA ETAPA: ¡AHORA SI ES CONFIDENCIAL!<br /><br />Sarah tiene dudas sobre lo que ocurrirá si los servidores de proxi que utiliza están en peligro. Si el ministerio consigue convencer al operador de un proxi mediante la ley, o corrompiendole, para que conserve el registro de todos los usuarios y de las páginas que visitan. Cuenta con que el administrador del proxi la protegerá pero ¡nisiquiera sabe quién es!<br />(De hecho, el administrador del proxi podría ni saber que ella pasa por su intermedio para conectarse a Internet,por haber dejado el proxi abierto por accidente).<br /><br />Afortunadamente, Sarah tiene un amigo que vive en Cánada (un país dónde censurar Internet no es práctica corriente) que podría quizás estar de acuerdo en ayudarla a conservar su blog y seguir siendo anónima. Sarah le llama y le pide que instale “Circumventor “ (<a href="http://www.peacefire.org/circumventor/simple-circumventorinstructions" target="_blank" rel="nofollow">http://www.peacefire.org/circumventor/simple-circumventorinstructions</a>.<br />html) en su ordenador. Circumventor es un software que permite convertir a un ordenador en un proxi, para que pueda ser utilizado como tal por otros internautas.<br />Jim, el amigo de Sarah, baja Circumventor en peacefire.org y lo instala en Windows. No es facil instalarlo. Tendrá que instalar primero Pearl, y luego OpenSA para poder instalar Circumventor. Luego tiene que dejar su ordenador encendido constantemente para permitir que Sarah lo utilice como proxi sin tener que pedirle que se conecte cada vez que quiera conectarse a Internet. Lo hace, llama a Sarah con su móvil y le entrega una URL que ella puede utilizar para navegar en Internet, o conectarse a su blog desde su propia casa o desde un café internet sin tener que<br />cambiar nada en su configuración. Aunque Sarah se lo agradezca mucho a Jim, esta solución tiene un problema importante. El ordenador de Jim, que utiliza Windows, arranca bastante a menudo. Cada vez, su proveedor de acceso le da una nueva dirección IP, y cada vez, Sarah no puede utilizar su proxi sin conocer la nueva dirección.<br /><br />Cada vez, Jim puede contactar a Sarah para dársela, pero cuesta dinero y es incómodo. Sarah teme además que si utiliza la misma dirección IP demasiado a menudo, su proveedor de acceso ceda a la presión de su gobierno y la acabe prohíbiendo.<br /><br />QUINTA ETAPA: EL “ONION ROUTING”, CON EL SOFTWARE TOR<br /><br />Jim le sugiere a Sarah probar Tor, un software reciente para conservar su anonimato en Internet. El “onion routing” funciona de la misma manera que los servidores proxi, es decir que Sarah se conecta a Internet pasando por otro ordenador como intermediario, pero va más lejos.&nbsp;<br />Cada conexión a un grupo de “onion routing” utiliza entre 2 y 20 ordenadores. Es muy difícil en estas condiciones saber cuál es el ordenador que inició la petición. El gobierno tendrá muchas más dificultades para encontrar a Sarah, ya que además las transmisiones están cifradas.&nbsp;<br /><br />Además de esto, cada ordenador en esta cadena solamente conoce a sus vecinos inmediatos. En otras palabras, el servidor B sabe que el servidor A le envió una petición para una página web, y se la transmite al servidor C. Pero la petición está cifrada. El servidor B no sabe cuál es la página que le pide, y tampoco cuál es el servidor que accederá a la página. Dado lo complejo de está tecnología, a Sarah le sorprende lo fácil que fue instalarla (<a href="https://tor.eff.org/cvs/tor/doc/tor-docwin32.html" target="_blank" rel="nofollow">http://tor.eff.org/cvs/tor/doc/tor-docwin32.html</a> ).&nbsp;<br /><br />Luego, baja e instala Privoxy, un proxi que funciona con Tor y que quita la publicidad de las páginas web que Sarah visita. Tras instalarlo y después de arrancar su ordenador,<br />Sarah visita noreply.com y descubre que está “cubierta” por Tor. Noreply.com piensa que se conecta desde la universidad de Harvard. Lo intenta de nuevo, y noreply piensa que está en Alemania. Deduce que Tor cambia su identidad con cada petición, lo cual le ayuda a proteger su anonimato.<br />Ocurren algunas cosas raras. Cuando visita Google con Tor, ¡cambia de idioma todo el tiempo! Una búsquedad en inglés, otra en japonés, luego alemán, danés, y holandés. Sarah aprovecha la oportunidad para aprender nuevos idiomas, pero algunas consecuencias le molestan un poco más. A Sarah le gustaría contribuir al diccionario colaborativo Wikipedia, pero se da cuenta de que éste bloquea sus intentos de edición de artículos cuando pasa por<br />Tor.&nbsp;<br />Tor parece tener los mismos problemas que los proxis que Sarah utilizó. Navegar en Internet es más lento en comparación con quien no usa proxi. Acaba utilizando Tor unicamente cuando accede a páginas cuyo contenido es<br />delicado, o para crear entradas en su blog. Tiene otra desventaja, no puede instalarlo en un ordenador público y solamente puede utilizarlo desde su casa. Lo que más le molesta a Sarah es que Tor a veces deja de funcionar. De hecho, el proveedor de aceso de Sarah bloquea ciertos servidores de enlace que Tor utiliza y cuando Tor intenta utilizar alguno de ellos, Sarah tiene que esperar mucho tiempo y a veces no consigue nunca la página que pidió.<br /><br />SEXTA ETAPA: MIXMASTER, INVISIBLOG Y GPG<br /><br />Sarah se pregunta si existe una solución para tener un blog sin utilizar un servidor proxi. Tras pasar algo de tiempo con un técnico a quien conoce, empieza a explorar una opción nueva: Invisiblog. en un grupo de australianos anónimos, llamados “vigilant.tv”, que gestionan este web, destinado a los paranoicos. No puedes llegar a Invisiblog mediante el Web, como haces con la mayor parte de las demás herramientas de blog. Lo haces con un correo electrónico de formato específico, cuya firma cifrada la crea un sistema de remailer: Mixmaster Sarah tuvo dificultades para entender esta frase. Acaba instalando el GPG, una versión GNU de Pretty Good<br />Privacy, un sistema de criptado con clave pública. En dos palabras, el criptado con clave pública es una técnica que permite enviar mensajes estando seguro de que será la única en poder leerlos, sin que tenga que compartir una clave secreta contigo (lo cual le permitiría leer los mensajes que recibe de otras personas). El criptado con clave pública permite “firmar” documentos utilizando una firma numérica casi irreproducible. Crea un par de claves que<br />Sarah podrá utilizar para colocar mensajes en el blog, firmándolos con su “clave privada”. Invisiblog utilizará la “clave pública” de Sarah para asegurarse que el mensaje viene de ella, antes de colocarlo en su blog. (para más información sobre el criptado de correos electrónicos, ver el capítulo “Como proteger la confidencialidad de vuestros correos electrónicos”).<br /><br />Sarah instala MixMaster, un sistema de mensajería que permite encubrir el origen de un correo electrónico. MixMster utiliza una cadena de remailers anónimos, es decir programas que destruyen todas las informaciones que permiten identificar un correo electrónico, antes de enviarlo a su destinatario con total seguridad. Utilizando una cadena entre 2 y 20 de ellos, es muy difícil encontrar el origen de un mensaje, incluso si uno o más están al descubierto, u obtener informaciones sobre el remitente. Sarah tiene que “construir” MixMaster compilando el<br />código fuente, un proyecto para el cual necesita el ayuda de técnicos a quién conoce. Envía un primer mensaje MixMaster a Invisiblog con su clave pública. Invisiblog la utiliza para crear un buevo blog llamado “invisiblog.com/ac4589d7001ac238”; esta serie de números son los últimos 16 bytes de su clave GPG.&nbsp;<br /><br />A partir de este momento, los mensajes que envíe a Invisiblog contendrán un texto firmado con su clave pública, y serán enviados mediante MixMaster. No es tan rápido como un blog normal. Debido a que MixMaster reenvía los correos electrónicos, puede tardar entre dos horas y dos días hasta que su mensaje llegue al servidor. Es importante que no visite el blog demasiado a menudo, ya que si el blog recuerda su dirección IP podría delatar que es ella la autora del blog. Ahora bien puede estar tranquila ya que Invisiblog no tiene ni idea de quién puede ser. El mayor<br />problema con Invisiblog es que resulta demasiado difícil de instalar para la mayor parte de la gente, y no saben como utilizar claves públicas y privadas. La mayor parte de las herramientas de encriptado fáciles de usar, como Ciphire, han sido creadas para ayudar a los que menos sabemos de técnica, pero incluso esas acaban siendo difíciles de utilizar. Así que muy pocas personas, incluso las que más lo necesitamos, utilizamos el encifrado.<br />Hay que decir que MixMaster es un desafío para la mayor parte de la gente. Los que utilizan Windows solamente pueden utilizar una versión en DOS. Lo intenté, pero o bien no funciona o mi correo sigue siendo enviado entre los remailers. Si alguien desea utilizarlo en Linux o Mac tiene que compilar el programa él mismo, una tarea delicada incluso para un experto. Invisiblog sería muchísimo más útil si fuese posible aceptar los mensajes de los remailers<br />disponibles en Internet, tipo riot.eu.org. De momento, no es muy práctico para que lo use la gente que más lo necesita. El criptado plantea otro problema en los países en que el gobierno tiene una política represiva. Si el gobierno confisca el ordenador de Sarah y encuentra en él su clave privada, tendrá pruebas de que ella es el autor<br />del blog. Y en países donde el criptado no se utiliza de manera frecuente, el mero hecho de enviar mensajes con MixMaster puede ser suficiente para que las autoridades empiecen a controlar lo que Sarah hace cuando se conecta a Internet.<br /><br />¿QUÉ DECIR? ¿CUÁL ES EL LIMITE?<br /><br />Sarah eligió aprender las bases de criptado y de Mixmaster. ¿Es la solución que más le conviene? ¿O será suficiente el anonimato de las etapas 1 a 5? Hay varias respuestas. Cuando eliges ser anónimo, tienes que tener en cuenta las condiciones del país en que estás, tus propios conocimientos técnicos y tu nivel de paranoia. Si tienes motivos para pensar que lo que haces podría ponerte en peligro, y eres capaz de instalar Tor, ¡adelante!<br /><br />Ultimo consejo, no te olvides de firmar con un seudónimo.<br /><br /><br />GRACIAS..<br />APOYEN!!!</div><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">6</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 2/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">741</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">4</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(426333,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(426333,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(426333,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(426333,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(426333,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(426333,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(426333,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(426333,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(426333,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(426333,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="http://fotos.subefotos.com/0631c795ce154e40d50ed9d8ab535893o.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1779695" title="perfil de loko004"> loko004</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://upload.wikimedia.org/wikipedia/ang/d/d7/Ergo_proxy.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1819189" title="perfil de marcenikki"> marcenikki</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://s.gravatar.com/avatar/7bc49e3353a7f5ce4e9368f14e328a4e?s=80" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1640267" title="perfil de dexterlabs"> dexterlabs</a>: <b>2 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(426333);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('426333');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=427170" title="Mp3 Audio - Black Sabbath - Paranoid"> Mp3 Audio - Black Sabbath - Paranoid</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=427159" title="Mp3 Audio - Pink Floyd - The Dark Side Of The Moon"> Mp3 Audio - Pink Floyd - The Dark Side Of The Moon</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_95"></i>
+<a href="https://identi.io/index.php?topic=426978" title="Plantillas Para Memes"> Plantillas Para Memes</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">6</span> Comentarios</span>
+<span class="onpost"> ¿Como hacer un blog de manera anonima?</span>
+<div class="comentario"></div><div id="comment_4568043" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="vazkou" href="?action=profile;user=vazkou">
+<img id="error_avatar" src="https://photos1.blogger.com/blogger/3674/702/1600/VIRIATO.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="45167" href="?action=profile;user=vazkou">vazkou</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1468293077" title="12/07/2016 a las 3:11 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_surprised.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4571779" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="illukki" href="?action=profile;user=illukki">
+<img id="error_avatar" src="https://tranccuilo.files.wordpress.com/2012/10/mono.jpeg?w=60" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1547015" href="?action=profile;user=illukki">illukki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1468535278" title="14/07/2016 a las 22:27 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+interesante! &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4618946" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="luis012016" href="?action=profile;user=luis012016">
+<img id="error_avatar" src="https://3.bp.blogspot.com/_Z7kGkBJLZds/TNtDJH01GCI/AAAAAAAAAFY/hMU-JwuVGpQ/S760/Nevergiveup.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1978133" href="?action=profile;user=luis012016">luis012016</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1473958279" title="15/09/2016 a las 16:51 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy buena informacion Gracias !!!!
+</div>
+</div>
+</div>
+</div><div id="comment_4622188" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="loko004" href="?action=profile;user=loko004">
+<img id="error_avatar" src="http://fotos.subefotos.com/0631c795ce154e40d50ed9d8ab535893o.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1779695" href="?action=profile;user=loko004">loko004</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474210173" title="18/09/2016 a las 14:49 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> Leí hasta la última palabra. Esta es una información muy interesante.
+</div>
+</div>
+</div>
+</div><div id="comment_4653487" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="marcenikki" href="?action=profile;user=marcenikki">
+<img id="error_avatar" src="https://upload.wikimedia.org/wikipedia/ang/d/d7/Ergo_proxy.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1819189" href="?action=profile;user=marcenikki">marcenikki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1476243464" title="12/10/2016 a las 3:37 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_ojitos.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4687780" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mlugones" href="?action=profile;user=mlugones">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1570836" href="?action=profile;user=mlugones">mlugones</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1478465923" title="06/11/2016 a las 20:58 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+A tomar en cuenta. Muy buena informacion. Gracias 1000!!!!
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_4.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949e400db8fdea7',t:'MTc2MTQ4MTA0Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
