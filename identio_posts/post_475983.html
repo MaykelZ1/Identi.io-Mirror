@@ -1,0 +1,524 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Comandos de Linux | Parte 4 Final - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Comando:symlinks Cita: MostrarExamina en busca de vínculos y los clasifica en vínculos absolutos, colgantes (dangling), largos (lengthy), confusos (messy), otro_sa y relativos Comando:tail Cita: Mo..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='bGJPZzAydlhkVHphQWhhVTJGc2RHVmtYMS9YdnhCMW5aKzdZYU1GbnQxeU1XZTQ4QUVKMUpWeTBqKyt3VEJpNVpwbGIzZGFBOHBwMmQvdXlZYmR4TGlRT291VjZjWjJLRTVPV2c9PXpoYXpmeVNLQTBCUkF4RQ==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761479765;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '961d7a18ef0dbff76c4ada6fa0b1396a');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_1.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Comandos de Linux | Parte 4 Final" title="Identi - Comandos de Linux | Parte 4 Final" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '6e5bf832cbebf1754c9e57cf9cfbafac172b5154';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Xmegacs">Xmegacs</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"Lo importante es compartir"
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Xmegacs" title="Ir al Perfil de Xmegacs"><img id="error_avatar" class="avatar" border="0" width="120" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" /></a>
+<div class=" rango_sidebar clearfix">Gold User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/golduser.png" title="Gold User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1961335)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1961335');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">66</b> Seguidores</li>
+<li><b>1568</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>47</b> Posts</li>
+<li><b>121</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Comandos de Linux | Parte 4 Final</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=475982';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=475984';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=126" alt="Linux" title="Linux">Linux</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 8 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1138014">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><img id="img_post" src="http://imagenti.li/medium/Kvc.jpg" border="0"><br /><br /><img id="img_post" src="http://imagenti.li/medium/TCc.jpg" border="0"><br /><br /><img id="img_post" src="http://imagenti.li/medium/BBc.jpg" border="0"><br /><br /><b>Comando:</b>symlinks<br /><br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Examina en busca de vínculos y los clasifica en vínculos absolutos, colgantes (dangling), largos (lengthy), confusos (messy), otro_sa y relativos</div></blockquote><br /><br /><b>Comando:</b>tail <br /><br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Muestra la última parte de un archivo, por defecto 10 líneas<br /><br /><b>tail -n</b> = muestra las últimas n líneas del archivo<br /><b>tail +n</b> = comienza a mostrar el archivo en el renglón n<br /><b>tail -f</b> = /var/log/syslog muestra las últimas líneas de syslog en tiempo real<br /><b>tail -f</b> = /var/log/syslog | ccze ídem pero aquí lo muestra coloriado.<br /><br />Para realizar la misma función que con tail -f archivo con el comando less, visualizar el archivo con less y después pulsar la combinación de teclas Mayúsculas+f (Shift+f)</div></blockquote><br /><br /><b>Comando:</b>talk<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Conversar con otro usuario</div></blockquote><br /><br /><b>Comando:</b>tar <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Empaqueta desempaqueta archivos, opcionalmente llama a gzip para comprimirlos/descomprimirlos. Para comprimir es:<br /><br /><div class="code">tar [opciones]f [archivo ha generar] [Directorio/Archivo a empaquetar]</div><br />Para descomprimir es:<br /><br /><div class="code">tar [opciones]f [archivo empaquetad] [Directorio donde lo desempaquetara]</div><br /><b>-f </b> = siempre va de último esta opción, sino enviaría a la consola (salida estándar).<br /><b>-r </b> = Agrega archivos a un paquete existente. <br /><b>-t </b> = Muestra el contenido de un paquete. <br /><b>-u </b> = Agrega archivos al paquete, pero sólo si estos son más recientes que los existentes. <br /><b>-x </b> = Desempaqueta archivos de un paquete (extrae) <br /><b>-z </b> = Comprime con gzip el paquete generado.<br /><b>-v </b> = muestra lo que va realizando<br /><b>-A </b> = añade ficheros tar a un archivo <br /><b>-c </b> = crea un nuevo volumen<br /><br /><b>tar -xvf misdocuemntos.tar</b> desempaqueta el fichero misdocuemntos.tar <br /><br /><b>tar -cvzf misdocuemntos.tar.gz misdocuemntos/ </b>empaqueta el directorio <b>misdocuemntos</b> creando el archivo <b>paginas.tar.gz</b> todo con el contenido y luego comprime con <b>gzip</b> el paquete generado.<br /><br /><b>tar -tvf paginas.tar </b>ver el contenido del archivador<b> paginas.tar </b>sin extraerlo.<b>curl <a href="https://ftp.drupal.org/files/projects/token-6.x-1.13.tar.gz" target="_blank" rel="nofollow">http://ftp.drupal.org/files/projects/token-6.x-1.13.tar.gz</a> | tar xz </b>descargo y desempaqueto, todo en una solo linea, muy utilizado para los módulos de Drupal.</div></blockquote><br /><br /><b>Comando:</b>tasksel <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Instala por colecciones de programas, por ej. DNS server, Ubuntu desktop, etc.</div></blockquote><br /><br /><b>Comando:</b>tee <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Redirecciona la salida estándar de una orden a uno o a más archivos, como también a la salida estándar<br /><br /><b>cat pp.txt| tee qq |wc -l </b>envía la salida de cat al archivo qq y también a la orden wc<br /><br /><b>who | sort | tee listin | more </b>La lista de usuarios ordenada alfabéticamente, aparece por pantalla y se almacena en el fichero listin.</div></blockquote><br /><br /><b>Comando:</b>telinit<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Cambio entre los distintos niveles de ejecución <br /><br /><b>telinit 1 </b> = paso al modo mono-usuario<br /><b>telinit 5 </b> = paso al modo multi-usuario normal<br /><b>telinit 6 </b> = reinicia el sistema</div></blockquote><br /><br /><b>Comando:</b>test o [expr] <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Sirve para evaluar una expresión, condición, comprobar los atributos de ficheros y realizar comparaciones de cadenas y aritméticas. Devolviendo un valor de cero (true, verdadero o éxito) ó 1 (false, falso o fracaso). Generalmente cuando se usa en scripts usa la sintaxis [ expr ].<br /><br /><b>-b </b> = fichero verdad si fichero existe y es un fichero especial de bloques. <br /><b>-c </b> = fichero verdad si fichero existe y es un fichero especial de caracteres. <br /><b>-d </b> = fichero verdad si fichero existe y es un directorio. <br /><b>-e </b> = fichero verdad si fichero existe. <br /><b>-f </b> = fichero verdad si fichero existe y es un fichero regular. <br /><b>-g </b> = fichero verdad si fichero existe y tiene el bit SGID. <br /><b>-p </b> = fichero verdad si fichero existe y es una tubería con nombre (FIFO). <br /><b>-r </b> = fichero verdad si fichero existe y se puede leer. <br /><b>-s </b> = fichero verdad si fichero existe y tiene un tamaño mayor que cero. <br /><b>-t </b> = fd verdad si el descriptor de fichero fd está abierto y se refiere a una terminal. <br /><b>-u </b> = fichero verdad si fichero existe y tiene el bit SUID. <br /><b>-w </b> = fichero verdad si fichero existe y se puede modificar. <br /><b>-x </b> = fichero verdad si fichero existe y es ejecutable. <br /><b>-L </b> = fichero verdad si fichero existe y es un enlace simbólico o blando. <br /><b>-z </b> = cadena verdad si la longitud de cadena es cero. <br /><b>-n </b> = cadena verdad si la longitud de cadena no es cero. <br /><b>cad1 == cad2 </b> = verdad si las cadenas son iguales. También se puede emplear = en vez de ==<br /><b>cad1 != cad2 </b> = verdad si las cadenas no son iguales. <br /><b>! expr </b> = verdad si expr es falsa. <br /><b>expr1 -a expr2 </b> = verdad si expr1 y expr2 son ciertas. <br /><b>expr1 -o expr2 </b> = verdad si expr1 o expr2 son ciertas.<br /><br /><div class="code">arg1 OP arg2 OP es uno de -eq, -ne, -lt, -le, -gt, o -ge</div><br />Estos operadores aritméticos binarios devuelven verdadero si arg1 es igual a, distinto de, menor que, menor o igual a, mayor que, o mayor o igual a arg2, respectivamente. arg1 y arg2 pueden ser enteros positivos o negativos.</div></blockquote><br /><br /><b>Comando:</b>time<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Ejecuta un comando y despliega después en la salida estándar:<br /><br />• el tiempo real transcurrido entre la llamada y la finalización de orden <br />• el tiempo de usuario del procesador (tms_utime + tms_cutime)<br />• el tiempo de sistema del procesador (tms_stime + tms_cstime)</div></blockquote><br /><br /><b>Comando:</b>top <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Proporciona una visión continuada e interactiva de los procesos que más CPU consumen (Para una versión más moderna de este comando ver htop). Mientras se este ejecutando el comando top puede presionar la tecla: n pregunta el número de procesos que debe visualizar, luego se pulsa intro k pregunta el número el PID del proceso que se quiere terminar, luego se pulsa intro</div></blockquote><br /><br /><b>Comando:</b>touch <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Generalmente se usa para crear archivos. Actualiza los registros de fecha y hora, con la fecha y hora actual de los ficheros indicados en la línea de comandos. Si el fichero no existe, touch lo crear.</div></blockquote><br /><br /><b>Comando:</b>tr<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Transliterar los caracteres de su entrada<br /><br />Convierte de minúscula a mayúsculas<br /><br /><div class="code">tr [a-z] [A-Z]</div><br /><div class="code">cat pepe.txt | tr &#039;t&#039; &#039; &#039; | tr -s &#039; &#039; &#039; &#039; &gt; pepe2.txt</div><br />remplaza todos los tabuladores por espacios y luego los espacios repetidos por un solo espacio y lo guarda en pepe2.txt</div></blockquote><br /><br /><b>Comando:</b>traceroute <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Muestra la ruta que siguen los paquetes desde el origen hasta el destino; además nos da una idea de la rapidez de la ruta. Al mostrar la ruta se puede tener una idea de la estructura interna (routers, gateway, etc.) de la red a la que estamos conectados.<br /><br />traceroute <a href="https://www.google.com" target="_blank" rel="nofollow">www.google.com</a> <br />traceroute to <a href="https://www.google.com" target="_blank" rel="nofollow">www.google.com</a> (72.14.205.103), 30 hops max, 40 byte packets <br />&nbsp;1 172.25.208.1 (172.25.208.1) 11.582 ms * * <br />&nbsp;2 gatecvg.sede.cvg.com (172.25.208.200) 11.491 ms 11.457 ms 11.436 ms <br />&nbsp;3 * * * <br /><br />El número de salto, el nombre y la dirección IP del nodo por el que pasa y posteriormente viene los tres tiempos siguientes son el tiempo de respuesta para los paquetes enviados (un asterisco indica que no se obtuvo respuesta). </div></blockquote><br /><br /><b>Comando:</b>troff<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Permite reordenar líneas y dar márgenes</div></blockquote><br /><br /><b>Comando:</b>tty <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Muestra el nombre del fichero de la terminal conectada a la salida estándar.<br />$ tty <br />/dev/pts/2<br />$echo hola &gt; /dev/pts/2 escribe hola en el terminal asociado al tty2 </div></blockquote><br /><br /><b>Comando:</b>typeset<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Realiza idéntica función que el comando declare</div></blockquote><br /><br /><b>Comando:</b>ulimit<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Obtiene y modifica los límites de los recursos del usuario<br /><br />Muestra el número máximo de procesos que puede ejecutar el usuario<br /><br /><div class="code">ulimit -u</div></div></blockquote><br /><br /><b>Comando:</b>umask<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Actuá sobre los permisos predeterminados sobre los archivos que creemos. El valor predeterminado de umask es 022</div></blockquote><br /><br /><b>Comando:</b>umount<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Desmonta el dispositivo<br /><br />Desmonta un disco<br /><br /><div class="code">umount /dev/[dispositivo] </div><br /><br />fuerza a desmontar el dispositivo<br /><br /><div class="code">umount -l</div></div></blockquote><br /><br /><b>Comando:</b>unalias <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Elimina un alias, si fue incluido en .bashr no lo elimina, habrá que editarlo y sacar el alias<br /><br />Elimina los alias para la orden ls<br /><br /><div class="code">unalias ls </div><br />Elimina todos los alias de todas las órdenes.<br /><br /><div class="code">unalias -a </div></div></blockquote><br /><br /><b>Comando:</b>uname<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Muestra información del nodo <br /><br /><b>-s </b> = Muestra el nombre del sistema <br /><b>-n </b> = Muestra el nombre por el que se identifica el sistema en la red (el FQDN)<br /><b>-a </b> = Muestra toda la información sobre el tipo de sistema que se esta utilizando <br /><b>-m </b> = Muestra el tipo de arquitectura que se esta utilizando <br /><b>-p </b> = tipo de procesador <br /><b>-r </b> = versión del kernel <br /><b>-v </b> = versión del sistema operativo </div></blockquote><br /><br /><b>Comando:</b>uniq<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Excluye todos los grupos de renglones adyacentes duplicados menos uno.(sirve para detectar líneas repetidas de texto).<br /><br /><b>-d </b> = imprime solo renglones duplicados.<br /><b>-u </b> = elimina las lineas CONSECUTIVAS iguales.<br /><b>-c </b> = cuenta el número de ocurrencias de cada renglón.</div></blockquote><br /><br /><b>Comando:</b>unrar<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Permite descomprimir/comprimir archivos rar<br /><b>unrar e -r fichero.rar </b> = descomprime fichero.rar <br /><b>unrar x -r fichero.rar directorio_destino </b> = descomprime fichero.rar en carpeta <br /><b>unrar l fichero.rar </b> = ver el contenido fichero.rar <br /><b>unrar t fichero.rar </b> = chequea fichero.rar</div></blockquote><br /><br /><b>Comando:</b>unset <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Pone a cero el valor de las variables, si se consulta por ellas luego de setearlas a cero se mostrara una cadena nula (una línea en blanco). Por lo tanto una alternativa es asignarle explícitamente el valor nulo, dándole un valor vacío (variable= ) </div></blockquote><br /><br /><b>Comando:</b>update-rc.d<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Crea/borra enlaces simbólicos a los scripts de init <br /><br /><b>update-rc.d -f apache2 remove </b> = quito apache de mi proceso de arranque <br /><b>update-rc.d apache2 default </b> = apache se levantará cuando inicie el sistema; por defecto lo pone en S20 y en &quot;todos los runlevel&quot;<br /><b>update-rc.d apache2 default 99 2 </b> = arranca solo en el runlevel 2 y en la posición 99 </div></blockquote><br /><br /><b>Comando:</b>uptime <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Informa sobre el tiempo transcurrido desde que arrancó por última vez. También devuelve el promedio de carga que soporta el sistema (nº de procesos que puede ejecutar) y el número de usuarios conectados.</div></blockquote><br /><br /><b>Comando:</b>useradd <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Es el mismo comando que adduser</div></blockquote><br /><br /><b>Comando:</b>userdel<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Borrar cuentas de usuario<br /><br /><div class="code">userdel pepe elimina al usuario pepe del sistema.</div><br />Siempre es bueno revisar que no nos quedan restos de archivos de usuarios eliminados, con el comando:<br /><br /><div class="code">sudo find / -nouser 2&gt;/dev/null</div></div></blockquote><br /><br /><b>Comando:</b>usermod<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Modificar usuarios y grupos<br /><br /><b>usermod -d /home/profes/pepe -m </b> = cambia el directorio de inicio del usuario pepe para que sea /home/profes/pepe. La opción -m hace que mueva el contenido del antiguo directorio al nuevo emplazamiento. <br /><br /><b>usermod -g profes pepe </b> = cambia el grupo inicial del usuario pepe para que sea profes. <br /><br /><b>usermod -l juan pepe </b> = cambia el nombre del usuario pepe. El nuevo nombre es juan</div></blockquote><br /><br /><b>Comando:</b>vdir<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Véase ls</div></blockquote><br /><br /><b>Comando:</b>vi<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Editor de texto:<br /><br /><b>vi pepe.txt +n </b> = Empieza a editar pepe.txt comenzando por la línea n <br /><b>vi +/exp </b> = Empieza a editar el texto en la línea que satisfaga exp <br /><b>a </b> = Añade texto después de la letra en la que esta el cursor <br /><b>A </b> = Añade texto tras la última letra de la línea actual <br /><b>i </b> = Inserta delante de la letra en la que este el cursos <br /><b>I </b> = Inserta al principio de la línea actual <br /><b>o </b> = Abre una línea en blanco por debajo de la línea actual <br /><b>O </b> = Abre una línea en blanco por encima de la línea actual <br /><b>R </b> = Comienza a sobrescribir el texto <br /><b>s </b> = Remplaza caracteres individuales<br /><b>y2W </b> = Copia dos palabras, comenzando en la posición actual del cursor <br /><b>yy </b> = Copia la línea en curso <br /><b>5yy </b> = Copia 5 líneas siguientes <br /><b>p </b> = Pega el texto en la posición actual del cursor <br /><b>5p </b> = Pega 5 veces el texto <br /><b>1G </b> = Sitúa el cursor en la primer línea del archivo<br /><b>nG </b> = Sitúa al cursos en la línea n<br /><b>G </b> = Sitúa el cursor en la última línea del archivo<br /><b>/cadena </b> = busca cadena en el archivo (con n busca la sig. ocurrencia de cadena)<br /><b>Ctrl+G </b> = muestra la posición del cursor <br /><b>x </b> = Borra el carácter situado en la posición del cursor (nx borra n caracteres) <br /><b>dd </b> = Borra la línea en curso <br /><b>r </b> = Cambia el carácter actual situado en la pos. del cursor <br /><b>u </b> = Deshace la última modificación <br /><b>5u </b> = Deshace los últimos 5 cambios <br /><b>:q! </b> = Abandona sin guardar <br /><b>:w </b> = Guarda los cambios<br /><b>:w pepe.txt </b> = Guarda el bufer actual en pepe.txt<br /><b>:w !sudo tee % </b> = Guardar el archivo sin que se tengan los permisos necesarios <br /><b>:wq </b> = Guarda y sale <br /><b>:r pepe.txt </b> = inserta el contenido de pepe.txt en la posición del cursor <br /><b>:! orden </b> = Ejecuta una orden del shell <br /><b>:n </b> = pasa al siguiente archivo (con esto puedo copiar y pagar entre archivos)<br /><b>:n! </b> = pasa al archivo siguiente sin guardar<br /><b>:N </b> = pasa al anterior archivo (con esto puedo copiar y pagar entre archivos)<br /><b>:N! </b> = pasa al anterior archivo sin guardar<br /><b>shift+z+z </b> = Guarda y sale (ídem :wq)<br /><b>30 i hola escape </b> = escribe 30 veces hola</div></blockquote><br /><br /><b>Comando:</b>visudo<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Comando que abre y edita el archivo de configuración de sudo (/etc/sudoers).Para más detalles ver man sudoers</div></blockquote><br /><br /><b>Comando:</b>vncviewer <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Permite conectarse a escritorios remotamente (lo habilitado con: gksu vino-preferences)<br /><br />vncviewer IP:0 conecto al escritorio remoto de la IP</div></blockquote><br /><br /><b>Comando:</b>w<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Muestra los usuarios actuales en el sistema y que están haciendo. <br /><br /><b>w -f </b>mostrara los sistemas remotos desde los que los usuarios acceden.</div></blockquote><br /><br /><b>Comando:</b>wait<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Espera a que todos los procesos lanzados con &amp; terminen. Se puede interrumpir este comando presionando Ctrl+d</div></blockquote><br /><br /><b>Comando:</b>watch<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Ejecuta un comando cada 2 segundos (lo mantiene en ejecución), sirve para monitorizar un proceso o tarea.<br /><br /><b>watch ntpq -p</b> Se mantiene ejecutando el comando <b>ntpq -p</b></div></blockquote><br /><br /><b>Comando:</b>wbinfo <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Consulta la información de demonio winbind, <br /><br />wbinfo -u lista usuarios del dominio (ver también, getent passwd)<br />wbinfo -g lista grupos del dominio</div></blockquote><br /><br /><b>Comando:</b>wc<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Cuenta líneas, palabras y caracteres de los archivos indicados o de la entrada estándar. Si son varios los archivos, imprime una línea por cada uno y un total. <br /><br />-c sólo caracteres <br />-w sólo palabras <br />-l sólo líneas<br />Ej.: wc junk<br />&nbsp;2 5 26 junk<br />nº de líneas /de palabras/de caracteres/nombre </div></blockquote><br /><br /><b>Comando:</b>wget<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Descarga ficheros desde Internet en modo consola<br /><br /><b>-c </b> = continua la descarga<br /><b>--limit-rate=20k </b> = limita la velocidad a la que descarga a 20k<br /><b>-b </b> = continua la descarga ahun si salimos del terminal.<br /><b>-o $HOME/wget_log.txt </b> = crea un logs con la salida de wget.<br /><b>-p </b> = descargar todos los archivos que son necesarios para mostrar correctamente una determinada página HTML, incluyendo imagenes<br /><b>-e robots=off </b> = no descargar el archivo robots.txt<br /><b>-U </b> = toma la indentidad del navegador mozilla<br /><b>--random-wait </b> = espera un tiempo aleatorio entre descarga, para evitar entrar en la lista de negra.<br /><br />wget <a href="https://softonic.com/pp.tar.gz" target="_blank" rel="nofollow">http://softonic.com/pp.tar.gz</a> descarga el fichero pp.tar.gz<br /><br />wget -qO - &quot;<a href="https://ftp.drupal.org/files/projects/token-6.x-" target="_blank" rel="nofollow">http://ftp.drupal.org/files/projects/token-6.x-</a> 1.13.tar.gz&quot; | tar -xzf - descargo y desempaqueto todo en una linea aunque es más eficiente: curl <a href="https://ftp.drupal.org/files/projects/token-6.x-1.13.tar.gz" target="_blank" rel="nofollow">http://ftp.drupal.org/files/projects/token-6.x-1.13.tar.gz</a> | tar xz<br /><br />wget --random-wait -r -p -e robots=off -U mozilla <a href="http://www.example.com" target="_blank" rel="nofollow">http://www.example.com</a> descargamos todo el sitio <a href="http://www.example.com" target="_blank" rel="nofollow">http://www.example.com</a></div></blockquote><br /><br /><b>Comando:</b>whatis<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Muestra una descripción corta de los comandos similares al nombre que se da como argumento.</div></blockquote><br /><br /><b>Comando:</b>whereis <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Localiza comandos, páginas del manual y archivos fuentes<br /><br />whereis -b busca solo archivos binarios<br />whereis -m busca solo archivos de manual (man)</div></blockquote><br /><br /><b>Comando:</b>which<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Indica la ubicación del programa que ejecuta la shell, que estamos empleando cuando escribimos la orden. Por ejemplo para determinar la ubicación del comando<br /><br />dir ejecutamos:<br />$ which dir <br />/usr/bin/dir<br />Si which no encuentra la ubicación del comando, pruebe con whereis</div></blockquote><br /><br /><b>Comando:</b>who<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Quién está en el sistema. Muestra nombre de login, línea de terminal, hora de ingreso, nombre de máquina remota o display X.<br /><br /><b>who -H </b> = muestra encabezado de columnas <br /><b>who -u </b> = tiempo inactivo; &quot;old&quot; es &gt;24 horas; &quot;.&quot; activo reciente <br /><b>who -w </b> = si el usuario recibe (+) o no (-) mensajes <br /><b>who -m </b> = igual que ‘who am i’</div></blockquote><br /><br /><b>Comando:</b>who am i <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Muestra identificador del usuario actual. Si se ha usado su para adoptar otro usuario, who am i muestra el nombre asociado con el usuario adoptado</div></blockquote><br /><br /><b>Comando:</b>wordtrans<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Diccionario ingles-español en modo consola</div></blockquote><br /><br /><b>Comando:</b>write <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Envía un mensaje a otro usuario</div></blockquote><br /><br /><b>Comando:</b>x<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">La interfaz gráfica se divide en dos partes: X y GNOME. El servidor X es un elemento fundamental que asegura el funcionamiento de la tarjeta gráfica y del monitor proporcionando la base sobre la que se ejecuta GNOME. La configuración de las X se almacena en /etc/X11/xorg.conf Entrada Remota (Para activarlo ejecutar gksu /usr/sbin/gdmsetup ir a la pestaña &quot;remota&quot; y elija &quot;igual que la entada local&quot; en la lista desplegable)<br /><b>X :DISPLAY </b>Si no queremos arrancar ningún escritorio y queremos hacer uso de las X únicamente. Por defecto el primer DISPLAY es 0 (accedemos con Cntrl+Alt+F7)<br /><br /><b>X :3 </b>Arranca el cuarto servidor gráfico. La mayoría de los programas gráficos en GNU/Linux soportan la opción &quot;-display&quot; o &quot;--display&quot; con la que se le indica el servidor gráfico donde queremos que se ejecute. De haber arrancado las X en un display &quot;:3&quot; nos puede venir bien sacar una consola en el para poder ejecutar cosas como: gnome-terminal --display :3 Ahora ir al DISPLAY :3 mediante la combinación de teclas Cntrl+Alt+F10 veremos una Xterm donde poder ejecutar comandos, ya sea para arrancar un escritorio o bien otra aplicación como puede ser un juego. Si queremos arrancar las X junto con una consola podemos hacer uso del comando xinit, el cual por defecto arranca una Xterm.<br />X -query mi_IP crea una conexión remota a su servidor X actual.<br /><br />X :1 -query IP crea una conexión remota a otro servidor X.</div></blockquote><br /><br /><b>Comando:</b>xev<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Imprime el contenido de los eventos del servidor X. Podemos ver la identificación de cada tecla (keycode de las teclas), y comprobar si el servidor X captura correctamente la tecla.</div></blockquote><br /><br /><b>Comando:</b>xinit <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Arrancar las X junto con una consola, el cual por defecto arranca una Xterm. (ver también startx)<br /><br />xinit -- :1 arrancaría un segundo DISPLAY donde encontraremos un servidor gráfico X11 y una xterm. </div></blockquote><br /><br /><b>Comando:</b>xtraceroute<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Un traceroute en modo gráfico</div></blockquote><br /><br /><b>Comando:</b>ypbind<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Es el demonio del cliente NIS, encargado de contactar con el servidor NIS.<br /><br />ypbind Sin parámetro, busca servidores NIS haciendo un broadcast en la red local (se asume que el primero en responder es el más rápido, y es el utilizado en todas las consultas NIS subsiguientes). Para ello el nombre de dominio NIS/YP del sistema debe estar definido con el comando domainname</div></blockquote><br /><br /><b>Comando:</b>yum<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">yum (Yellow dog Updater, Modified) herramienta para instalar paquetes RPM, sin preocuparte por dejar el sistema inestable. Su archivo de configuración principal es /etc/yum.conf.<br /><br /><b>yum install mc </b> = instala el paquete mc<br /><b>yum remove mc </b> = desinstala el paquete mc<br /><b>yum search cadena </b> = busca paquetes que coincidan con la cadena dada, en el nombre del paquete, o en descripción, o en el resumen… del RPM. También se puede usar yum list | grep mc<br /><b>yum list </b> = lista todas las aplicaciones disponibles que existen en los repositorios<br /><b>yum list *kde* </b> = listará todos los paquetes que contengan la cadena kde<br /><b>yum list installed </b> = lista todos los paquetes instalados en el sistema<br /><b>yum list updates </b> = lista todos los paquetes disponibles para ser actualizados<br /><b>yum provides */kadmin </b> = encuentra que paquete proporciona el fichero kadmin y su ubicación de donde lo instala.<br /><b>yum info &lt;paquete&gt; </b> = muestra información sobre un determinado paquete, su descripción, resumen, etc. <br /><b>yum erase &lt;paquete&gt; </b> = elimina el paquete seleccionado, todos sus archivos de configuración y sus dependencias <br /><b>yum deplist nano </b> = listar las dependencias que necesita el paquete nano<br /><b>yum grouplist </b> = muestra la lista de grupos <br /><b>yum groupinfo </b> = obtiene información acerca de un grupo <br /><b>yum groupinstall &quot;KDE (K Desktop Enviroment)&quot; </b> = instalar un grupo (conjunto de aplicaciones determinadas). <br /><b>yum groupremove &quot;GNOME Desktop Environment&quot; </b> = Eliminar el entorno de escritorio gnome<br /><b>yum check-update </b> = revisará si existe alguna actualización disponible para alguno de los paquetes instalados.<br /><b>yum update </b> = Si no especificamos ningún paquete, actualizará todo el sistema (paquetes instalados), si especificamos paquetes solamente actualizará los definidos. <br /><b>yum repolist </b> = lista todos los repositorios habilitados<br /><b>yum repolist all </b> = lista todos los repositorios habilitados o no<br /><b>yum localinstall /home/usuario/programa.rpm </b> = Instala un archivo RPM que se encuentra en nuestro equipo.<br /><b>yum localinstall --nogpgcheck /home/usuario/programa.rpm </b> = si no se tiene la llave GPG registrada (si no esta firmado) en el sistema el paquete no podrá ser instalado. Para ignorar la comprobación de la firma usamos el parámetro --nogpgcheck</div></blockquote><br /><br /><b>Comando:</b>zcat<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Ídem. a cat pero visualiza los archivos comprimidos<br /><br />zcat /var/log/auth.log.*.gz | awk &#039;/sshd/ &amp;&amp; /Failed/ {gsub(/invalid user/,&quot;&quot;); printf &quot;%-12s %-16s %s-%s-%sn&quot;, $9, $11, $1, $2, $3}&#039; Muestra los intentos de acceso fallidos en los registros de log comprimidos (en caso de Fedora será /var/log/secure)</div></blockquote><br /><br /><b>Comando:</b>zenmap<br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Entorno visual de nmap</div></blockquote><br /><br /><b>Comando:</b>zgrep <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Idem. a grep pero visualiza los archivos comprimidos y los no comprimidos<br /><br />zgrep &quot;Failed password&quot; /var/log/auth.log* | awk &#039;/sshd/ &amp;&amp; /Failed/ {gsub(/invalid user/,&quot;&quot;); printf &quot;%-12s %-16s %s-%s-%sn&quot;, $9, $11, $1, $2, $3}&#039; | sort Muestra todos los intentos de acceso fallidos que se tenga registro, indicando usuario, fecha e IP de origen. </div></blockquote><br /><br /><b>Comando:</b>unzip <br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Permite descomprimir archivos zip<br /><br /><b>unzip fichero.zip </b> = descomprime fichero.zip en el directorio actual.<br /><b>unzip -d fichero.zip </b> = directorio_destino descomprime fichero.zip en el directorio directorio_destino<br /><b>unzip -v fichero.zip </b> = muestra el contenido de fichero.zip<br /><b>unzip -t fichero.zip </b> = chequea la integridad de fichero.zip</div></blockquote><br /><br /><b>Comando:</b>patch <br /><br /><br /><br /><b>Comando:</b><br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Toma un fichero de patch que contiene un listado de diferencias producidas por el programa diff y esas diferencias se aplica a uno o más archivos. Los nombres de los archivos para ser parcheado por lo general se toman del fichero de parche, pero si hay un solo archivo para ser parcheado puede ser especificado en la línea de comandos como originalfile<br /><br /><div class="code">patch [options] [originalfile] [patchfile]</div><br />patch -p0 &lt; node_search_php53_fix_1.patch aplica el patch (en modo interactivo, es decir le tenemos que especificar la ruta de cada uno de los archivos aplicar el patch) a los archivos especificados en node_search_php53_fix_1.patch <br />patch -p0 node.module node_search_php53_fix_1.patch aplica el patch a node.module</div></blockquote><br /><br /><img id="img_post" src="http://imagenti.li/medium/bDc.jpg" border="0"><br /><br /><img id="img_post" src="http://imagenti.li/medium/xBc.jpg" border="0"><br /><br /><div align="center">|<b>Formato:</b> PDF | <b>Peso:</b> 58 MB | <b>Servidor:</b> Mega | </div><br /><div align="center">|<b> Contraseña:</b> csoria |</div><br /><img id="img_post" src="http://imagenti.li/medium/CBc.jpg" border="0"><br /><br /><div align="center"><a href="https://mega.nz/#!A0AUQRoa!oNY8FkrYdJCm9amcadwuszELhFAcpOo_FCOGf0OO5wk" target="_blank" rel="nofollow"><img id="img_post" src="http://imagenti.li/medium/YV.gif" border="0"></a></div><br /><img id="img_post" src="http://imagenti.li/medium/yBc.jpg" border="0"><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">25</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1826</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">1</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(475983,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(475983,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(475983,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(475983,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(475983,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(475983,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(475983,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(475983,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(475983,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(475983,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://1.bp.blogspot.com/-99H6JkekhXo/Xi20do5oBcI/AAAAAAAAJR8/dbdhAVFfOVkxVRA81lMNCrs4lwn1zNFoACLcBGAsYHQ/s1600/a7c5b8d69402aeaa81c82b930aa51add.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1952204" title="perfil de LASZChile2"> LASZChile2</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-Czoi4ZTfpmQ/WTHEOmDOv1I/AAAAAAAAA9w/0DjVQ3HWSzEDG9j5S1RRy1TdNk3xRLSxwCLcB/s1600/imagewindows.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1837753" title="perfil de albrio"> albrio</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-60HoNVJKIos/VYwhyWFKuZI/AAAAAAAAMOg/jssUTnYQNF8/s1600/1.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1544342" title="perfil de draer"> draer</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://i85.fastpic.ru/big/2016/1028/0d/74f53558202f85ff957f6a1925def50d.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=18809" title="perfil de pancram"> pancram</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://img.photobucket.com/albums/v440/Santeclaus/Joe%2090/Jo90Logo.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=89131" title="perfil de bebop"> bebop</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(475983);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('475983');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=547569" title="Mangle - Queue Tree Mikrotik"> Mangle - Queue Tree Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=527410" title="Bloquear Youtube con Mikrotik"> Bloquear Youtube con Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=527397" title="Bloquear Netflix Mikrotik"> Bloquear Netflix Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=476589" title="7 Libros PDF Android | MEGA"> 7 Libros PDF Android | MEGA</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476086" title="Vim | Algunos comandos | Linux"> Vim | Algunos comandos | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476075" title="Abreviaturas Teclado | Linux"> Abreviaturas Teclado | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476063" title="Expresiones Regulares | Linux"> Expresiones Regulares | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=475994" title="Eliminar a todos tus contactos Facebook | 2017"> Eliminar a todos tus contactos Facebook | 2017</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">8</span> Comentarios</span>
+<span class="onpost"> Comandos de Linux | Parte 4 Final</span>
+<div class="comentario"></div><div id="comment_5000955" class="comentario coment_id_2">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Xmegacs" href="?action=profile;user=Xmegacs">
+<img id="error_avatar" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1961335" href="?action=profile;user=Xmegacs">Xmegacs</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1499887660" title="12/07/2017 a las 19:27 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1952204" href="https://identi.io/index.php?action=profile&user=LASZChile2" class="mensiones_identi">@LASZChile2</a> Te comento un error que estoy teniendo con este post, al inicio me aparece [ code ], lo cual me trae inconvenientes al visualizar las imágenes. Si lo borro al guardar los cambios me sigue apareciendo en el código, decidí cerrarlo [ / code] pero sigo con el inconveniente. Alguna sugerencia para arreglar este error?. Desde ya agradezco su tiempo. Saludos. &nbsp; (Sin los espacios dentro que tiene el codigo)
+</div>
+</div>
+</div>
+</div><div id="comment_5000966" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="LASZChile2" href="?action=profile;user=LASZChile2">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-99H6JkekhXo/Xi20do5oBcI/AAAAAAAAJR8/dbdhAVFfOVkxVRA81lMNCrs4lwn1zNFoACLcBGAsYHQ/s1600/a7c5b8d69402aeaa81c82b930aa51add.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1952204" href="?action=profile;user=LASZChile2">LASZChile2</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1499888123" title="12/07/2017 a las 19:35 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1961335" href="https://identi.io/index.php?action=profile&user=Xmegacs" class="mensiones_identi">@Xmegacs</a> revísalo. Quité el <b>code</b> inicial y había un code con corchete abierto en ambos extremos. &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5000968" class="comentario coment_id_5">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Xmegacs" href="?action=profile;user=Xmegacs">
+<img id="error_avatar" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1961335" href="?action=profile;user=Xmegacs">Xmegacs</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1499888218" title="12/07/2017 a las 19:36 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1952204" href="https://identi.io/index.php?action=profile&user=LASZChile2" class="mensiones_identi">@LASZChile2</a> Gracias por tu pronta y rápida respuesta. Quedo 10 puntos &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5001146" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="patowc" href="?action=profile;user=patowc">
+<img id="error_avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTghz7Vh23eREOef50c8fuV7lO9pUDHyCftZsreAO0Ebem4_bJBqL8qSBNvLLceVCgXKLM&amp;usqp=CAU" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1941940" href="?action=profile;user=patowc">patowc</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1499897266" title="12/07/2017 a las 22:07 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5001264" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="javier_s" href="?action=profile;user=javier_s">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1951014" href="?action=profile;user=javier_s">javier_s</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1499902679" title="12/07/2017 a las 23:37 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5001727" class="comentario coment_id_8">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Xmegacs" href="?action=profile;user=Xmegacs">
+<img id="error_avatar" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1961335" href="?action=profile;user=Xmegacs">Xmegacs</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1499943160" title="13/07/2017 a las 10:52 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1941940" href="https://identi.io/index.php?action=profile&user=patowc" class="mensiones_identi">@patowc</a> <a usuario="1951014" href="https://identi.io/index.php?action=profile&user=javier_s" class="mensiones_identi">@javier_s</a> Gracias colegas. Saludos. &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5003395" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="draer" href="?action=profile;user=draer">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-60HoNVJKIos/VYwhyWFKuZI/AAAAAAAAMOg/jssUTnYQNF8/s1600/1.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1544342" href="?action=profile;user=draer">draer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1500074930" title="14/07/2017 a las 23:28 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<b>Buen aporte, gracias por compartir.</b> &nbsp; <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5005120" class="comentario coment_id_10">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Xmegacs" href="?action=profile;user=Xmegacs">
+<img id="error_avatar" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1961335" href="?action=profile;user=Xmegacs">Xmegacs</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1500210231" title="16/07/2017 a las 13:03 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1544342" href="https://identi.io/index.php?action=profile&user=draer" class="mensiones_identi">@draer</a> Gracias por pasar. <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_1.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949c4b7bd1ddea7',t:'MTc2MTQ3OTc2NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
