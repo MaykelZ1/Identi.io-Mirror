@@ -1,0 +1,777 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Solucionar problemas de sobrecalentamiento. - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Solucionar problemas de sobrecalentamiento en un PC simplemente limpiando el ventilador de la CPU.  Es muy común encontrar en un servicio técnico averías relacionadas con el sobrecalentamiento d..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='T0ZvQ3NTUUYxVjYwamh2VTJGc2RHVmtYMThDVzhqNm1DQ045NkJuL2d6UUkwdFk3aGtCMjVJTVNJZ3ZyZHBCU3JldGhQOXp6eG5KYXBqRjl4VUtHbFBrK1UwSHBJSDZIVHFyNHc9PUtJNGtBekk0bUpLdnNtRg==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761492032;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'a24c4e2094491e9d19ca9961e41114fb');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_6.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Solucionar problemas de sobrecalentamiento." title="Identi - Solucionar problemas de sobrecalentamiento." align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '7593277266f345136ead11f420705554d25099e6';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=abadie">abadie</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=abadie" title="Ir al Perfil de abadie"><img id="error_avatar" class="avatar" border="0" width="120" src="http://media.giphy.com/media/Q4RnLcLyk7Fwk/giphy.gif"/></a>
+<div class=" rango_sidebar clearfix">Silver User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ot.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/silveruser.png" title="Silver User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(98145)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('98145');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">63</b> Seguidores</li>
+<li><b>1412</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>178</b> Posts</li>
+<li><b>204</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Solucionar problemas de sobrecalentamiento.</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=343608';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=343610';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 11 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1005637">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><img id="img_post" src="https://2.bp.blogspot.com/-7tGJMyqpdbo/VErtQWe8JCI/AAAAAAAAAd8/h2orQXyv_3c/s1600/cooler775.jpg" border="0"><br /><b>Solucionar problemas de sobrecalentamiento en un PC simplemente limpiando el ventilador de la CPU.  </b>Es muy común encontrar en un servicio técnico averías relacionadas con el sobrecalentamiento de un PC. Estas averías son provocadas por falta de mantenimiento (limpieza interna de componentes) y producidas por la acumulación de polvo en el disipador del procesador.<br /><br />Dentro del PC existe un ventilador muy importante que es el encargado de enfriar el disipador que a la vez disipa el calor del procesador. Este ventilador lo que hace es meter aire frio extraido del exterior del chasis y refrigerar el calor absorvido por el disipador. Pero el aire trae consigo partículas de polvo que se van acumulando con el paso del tiempo entre el ventilador y disipador, creando una capa densa de polvo que impide el buen refrigeramiento del procesador por lo cual se produce sobrecalentamiento lo que da lugar a diversas averías e nuestro equipo.<br /><br />-----------------------------------------------------------------------<br />-----------------------------------------------------------------------<br /><b><font size="3" style="line-height: 1.3em;">Las averías más comunes son:</font></b><br /><br />- <b>Bloqueos del equipo:</b> El equipo no obedece y se queda clavado en Windows.<br />- <b>Reinicios continuos:</b> La placa detecta el sobrecalentamiento del micro y reinicia el sistema.<br />- <b>El equipo se apaga:</b> La placa detecta el sobrecalentamiento del micro y apaga el equipo al poco tiempo de estar encendido.<br />- <b>Ventilador ruidoso:</b> La placa detecta el sobrecalentamiento del micro y acelera las revoluciones del ventilador para una mejor refrigeración aumentando la contaminación acustica (db).<br /><br /><br />----------------------------------------------------------------------<br />----------------------------------------------------------------------<br /><br />Existen una variedad de zócalos que da lugar a diversos tipos de disipadores y ventiladores. Pero en este caso solo voy a tratar y mostrar imágenes del más común de todos (LGA 775).<br /><br /><br /><br /><b>Mota de polvo acumulado entre el ventilador y el disipador del micro:</b><br /><br /><br /><br /><img id="img_post" src="https://2.bp.blogspot.com/-tp_CqZXXeJk/VErtUIH9fOI/AAAAAAAAAe4/oZGZ1McBqDE/s1600/disipador775.jpg" border="0"><br /><br /><br /><b><font size="5" style="line-height: 1.3em;">¿Como limpiar el ventilador de la CPU?</font></b><br /><br />1- Para comenzar tendremos que abrir el equipo extrayendo una de sus tapas laterales, en el cual localizamos el ventilador y procedemos a desconectar el cable que lo alimenta:<br /><br /><br /><img id="img_post" src="https://2.bp.blogspot.com/-b9fyVzb7-p4/VErtQmatiyI/AAAAAAAAAeE/CXCpqKgY-rY/s1600/cpu-fan.jpg" border="0"><br /><br /><br />2- Para extraer el ventilador junto con el disipador debe de aflojar con un destornillador plano las 4 patillas siguiendo el sentido de las flechas que se puede apreciar en la parte superior de las patas de anclaje:<br /><br /><br /><img id="img_post" src="https://3.bp.blogspot.com/-vt3p-ipN0gY/VErtUr83_6I/AAAAAAAAAfE/QmWI-iCbhn0/s1600/ventilador.jpg" border="0"><br /><br /><br />3- Una vez giradas en sentido de las flechas haga presión hacia arriba en cada una de ellas con el fin de que se liberen de la placa base.<br /><br />4- Para poder limpiarlo con facilidad es mejor separar las aspas que sujetan el ventilador al disipador, para ello, localice las pestañas de sujeción que se pueden ver por los laterales y presione hacia afuera:<br /><br /><br /><img id="img_post" src="https://1.bp.blogspot.com/-ncN29U-sLjM/VErtR1hmLWI/AAAAAAAAAeQ/L2wX7znrjo8/s1600/cpu31.jpg" border="0"><br /><br /><br />5- Para limpiar el polvo del disipador usaremos una brocha sacudiendo toda la parte superior.<br /><br /><img id="img_post" src="https://1.bp.blogspot.com/-THOLgc8cT1M/VErtTlGupPI/AAAAAAAAAew/50cyr8f5kO4/s1600/disipador775%2B(1).jpg" border="0"><br /><br /><br />6- Para el ventilador se puede usar brocha para eliminar el polvo y si tenemos a mano algún liquido limpiador de contactos alargaremos un poquitin más su vida y reduciremos su ruido.<br /><br /><img id="img_post" src="https://2.bp.blogspot.com/-nOOOuxzU3NQ/VErtUcxDUlI/AAAAAAAAAfA/ZT9lhYlXGs8/s1600/jelt.jpg" border="0"><br /><br /><br /><br />7- En este caso hemos tenido una avería por problemas de sobrecalentamiento asi que será mejor cambiar la pasta térmica. Limpia completamente la superficie del procesador y disipador para que no quede resto alguno.<br /><br /><br /><b>Que quede así de brillante:</b><br /><br /><img id="img_post" src="https://2.bp.blogspot.com/-tVsZEk-AQNg/VErtSoNpInI/AAAAAAAAAec/MhuFjUl5u_8/s1600/cpu5.jpg" border="0"><br /><br /><b>La parte inferior del disipador también:</b><br /><br /><br /><img id="img_post" src="https://4.bp.blogspot.com/-vvcYBfrIudg/VErtTChBwOI/AAAAAAAAAeo/vF9tL0GeOBE/s1600/cpu6.jpg" border="0"><br /><br />8- La pasta térmica se puede adquirir en cualquier tienda de informática, y es la que va a realizar las funciones de conductor térmico para facilitar la absorción del calor del micro por parte del disipador. Con poner tan solo un poco de pasta térmica en el centro del Micro y del tamaño de un grano de arroz es suficiente. Tenga en cuenta que poner mucha es casi igual como no poner.<br /><br />Se debe no expandir la pasta por la parte superior del micro, si lo sitúas en el centro cuando encajes de nuevo el disipador el sólo hará la función de expandirla.<br /><br /><br /><b>Nota:</b> Ponga un poquito más del tamaño de un grano de arroz, si pones más de lo adecuado es como si no pusieras nada.<br /><br /><img id="img_post" src="https://4.bp.blogspot.com/-ZQ6AWHmYNZs/VErtSC9Py3I/AAAAAAAAAeg/YsVpWP9Iikg/s1600/cpu4.jpg" border="0"><br /><br /><br /><b>Nota:</b> No hace falta expandirla ya que al poner el disipador encima con la presión se expandirá sola.<br /><br />9- Una vez limpio y brillando <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /> procedemos a poner todo en su sitio, para ello hay que volver a girar las patas pero esta vez en sentido contrario o a la ubicación original o sentido original. Sitúe el ventilador de forma que pueda encajar en los agujeros de la placa:<br /><br /><img id="img_post" src="https://4.bp.blogspot.com/-S-77mI4CZAo/VErtQ0nS_iI/AAAAAAAAAeA/0M_IPcW66Us/s1600/cpu-fan7.jpg" border="0"><br /><br /><br /><br />10- Una vez encajado presione hacia abajo hasta que quede acoplado:<br /><br /><br /><img id="img_post" src="https://1.bp.blogspot.com/-IouUifhFe4g/VErtRv9j0GI/AAAAAAAAAeM/eHZHUaPkYGo/s1600/cpu-fan8.jpg" border="0"><br /><br /><br /><br /><br />Saludos<br /><br />Aprender hoy es valido para mañana y que mejor en Identi<br /><br />atte Abadie<script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">46</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 4.6/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">3700</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">16</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(343609,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(343609,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(343609,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(343609,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(343609,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(343609,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(343609,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(343609,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(343609,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(343609,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="http://p1.pichost.me/i/16/1395532.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1693159" title="perfil de sebamonast"> sebamonast</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://cde.peru.com/ima/0/0/8/7/3/873393.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1629277" title="perfil de saitoh1986"> saitoh1986</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=76595" title="perfil de JDMV"> JDMV</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://tranccuilo.files.wordpress.com/2012/10/mono.jpeg?w=60" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1547015" title="perfil de illukki"> illukki</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1589125" title="perfil de Danjes"> Danjes</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.aulaga.info/imagenes/Consumismo.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1767796" title="perfil de T.Simpsons"> T.Simpsons</a>: <b>4 pts</b></span>  </li><li><img id="error_avatar" src="https://4.bp.blogspot.com/-QXBH7pgfUHc/UfB6EJV12HI/AAAAAAAADgg/Uncn4oPwPjE/s1600/sono2012.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=68733" title="perfil de sper91"> sper91</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://thumbs.subefotos.com/ffa9dd691a099264b23b882aa9e9eedbo.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=69959" title="perfil de gerard33"> gerard33</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.pinimg.com/originals/6e/42/b5/6e42b50b6939d861aa3a495781bfed52.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=19671" title="perfil de djjambao"> djjambao</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://3tuning.ru/image/cache/data/goods/music/061_DJ_inside-320x320.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=71976" title="perfil de serbarma"> serbarma</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(343609);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('343609');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=453803" title="Activador Adobe CC 2017 - Descarga"> Activador Adobe CC 2017 - Descarga</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_34"></i>
+<a href="https://identi.io/index.php?topic=425289" title="Windows Phone dice adiós al mercado"> Windows Phone dice adiós al mercado</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_34"></i>
+<a href="https://identi.io/index.php?topic=424648" title="Noticia para usuarios de Adobe"> Noticia para usuarios de Adobe</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=419621" title=" Pet Shop Boys ? Super (2016) (320kbps)">  Pet Shop Boys ? Super (2016) (320kbps)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=419437" title="Net Framework para windows 10 - Sigue mis pasos"> Net Framework para windows 10 - Sigue mis pasos</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_34"></i>
+<a href="https://identi.io/index.php?topic=383684" title="Fundación Mozilla, descontenta con Windows 10 "> Fundación Mozilla, descontenta con Windows 10 </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_22"></i>
+<a href="https://identi.io/index.php?topic=382657" title="Windows 10 KMS Client Setup Keys"> Windows 10 KMS Client Setup Keys</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=361119" title="Facil Y Rapido Cambio De Idioma Al Office 2013"> Facil Y Rapido Cambio De Idioma Al Office 2013</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">23</span> Comentarios</span>
+<span class="onpost"> Solucionar problemas de sobrecalentamiento.</span>
+<div class="comentario"></div><div id="comment_3682306" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="elkin82" href="?action=profile;user=elkin82">
+<img id="error_avatar" src="http://img5.uploadhouse.com/fileuploads/16389/1638920171cf5af246d17f7b09aac30c555077fa.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="101441" href="?action=profile;user=elkin82">elkin82</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414199492" title="25/10/2014 a las 1:11 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3682309" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="pacheco9" href="?action=profile;user=pacheco9">
+<img id="error_avatar" src="https://st-listas.20minutos.es/images/2013-09/368690/4165705_640px.jpg?1384607786" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1563497" href="?action=profile;user=pacheco9">pacheco9</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414199639" title="25/10/2014 a las 1:13 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3682324" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="illukki" href="?action=profile;user=illukki">
+<img id="error_avatar" src="https://tranccuilo.files.wordpress.com/2012/10/mono.jpeg?w=60" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1547015" href="?action=profile;user=illukki">illukki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414199835" title="25/10/2014 a las 1:17 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buena info! Si tuviese aunque sea un destornillador le haria la limpieza que despues de 7 a?
+</div>
+</div>
+</div>
+</div><div id="comment_3682332" class="comentario coment_id_4">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="abadie" href="?action=profile;user=abadie">
+<img id="error_avatar" src="http://media.giphy.com/media/Q4RnLcLyk7Fwk/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98145" href="?action=profile;user=abadie">abadie</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414200058" title="25/10/2014 a las 1:20 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita illukki: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Buena info! Si tuviese aunque sea un destornillador le haria la limpieza que despues de 7 a?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3682338" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="gerard33" href="?action=profile;user=gerard33">
+<img id="error_avatar" src="http://thumbs.subefotos.com/ffa9dd691a099264b23b882aa9e9eedbo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="69959" href="?action=profile;user=gerard33">gerard33</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414200265" title="25/10/2014 a las 1:24 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+muchas gracias es util la informacion <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3682341" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="LordMarce" href="?action=profile;user=LordMarce">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1614625" href="?action=profile;user=LordMarce">LordMarce</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414200357" title="25/10/2014 a las 1:25 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Como odio las patitas de los CPUFan se doblan de nada si no las colocas bien derecho &nbsp;<img src="https://identi.io/Smileys/default/icon_mad.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3682352" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="leo0037" href="?action=profile;user=leo0037">
+<img id="error_avatar" src="https://s17.directupload.net/images/190212/2z2t74vd.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="115213" href="?action=profile;user=leo0037">leo0037</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414200570" title="25/10/2014 a las 1:29 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+una pregunta ami se me traba la pc osea se congela y no me deja hacer nada ... ke podra ser <img src="https://identi.io/Smileys/default/icon_sad.png" alt="" border="0" /> ?????
+</div>
+</div>
+</div>
+</div><div id="comment_3682422" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="renzo1981" href="?action=profile;user=renzo1981">
+<img id="error_avatar" src="http://vignette4.wikia.nocookie.net/godofwar/images/b/b1/Perses_el_Titan.jpg/revision/latest?cb=20111004190544&amp;path-prefix=es" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1736668" href="?action=profile;user=renzo1981">renzo1981</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414202394" title="25/10/2014 a las 1:59 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Excelente,algun tutorial para limpiar los ram....
+</div>
+</div>
+</div>
+</div><div id="comment_3682430" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="lukaswalkr" href="?action=profile;user=lukaswalkr">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1895564" href="?action=profile;user=lukaswalkr">lukaswalkr</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414202814" title="25/10/2014 a las 2:06 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="115213" href="https://identi.io/index.php?action=profile&user=leo0037" class="mensiones_identi">@leo0037</a> seguro es una memoria quita una y deja una prueba y error suerte &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3682491" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="AsherB" href="?action=profile;user=AsherB">
+<img id="error_avatar" src="http://i.minus.com/iOZeZu8ySPRcx.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1807106" href="?action=profile;user=AsherB">AsherB</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414204792" title="25/10/2014 a las 2:39 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita leo0037: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">una pregunta ami se me traba la pc osea se congela y no me deja hacer nada ... ke podra ser <img src="https://identi.io/Smileys/default/icon_sad.png" alt="" border="0" /> ?????</div></blockquote>igual problemas ademas que la lectora de dvd que uso no reconoce discos dvd en blanco solo reconoce discos grabados<br />porque sera &nbsp;<img src="https://identi.io/Smileys/default/icon_confused.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3682927" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="djjambao" href="?action=profile;user=djjambao">
+<img id="error_avatar" src="https://i.pinimg.com/originals/6e/42/b5/6e42b50b6939d861aa3a495781bfed52.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="19671" href="?action=profile;user=djjambao">djjambao</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414219093" title="25/10/2014 a las 6:38 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+buena info guardado en favoritos y 5 puntos <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3683104" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="antonio90" href="?action=profile;user=antonio90">
+<img id="error_avatar" src="http://blog.hostalia.com/wp-content/themes/hostalia/images/Matthew-Divito-gif-blog-de-hostalia-hosting.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1875866" href="?action=profile;user=antonio90">antonio90</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414243632" title="25/10/2014 a las 13:27 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<b>Gracias por el tutorial muy bien explicado &nbsp;</b><img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_ojitos.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3683188" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Ruben754" href="?action=profile;user=Ruben754">
+<img id="error_avatar" src="https://i.postimg.cc/XvKdqkfC/ula-50first-dates.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1549131" href="?action=profile;user=Ruben754">Ruben754</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414248192" title="25/10/2014 a las 14:43 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a href="https://4.bp.blogspot.com/-ZQ6AWHmYNZs/VErtSC9Py3I/AAAAAAAAAeg/YsVpWP9Iikg/s1600/cpu4.jpg" target="_blank" rel="nofollow">http://4.bp.blogspot.com/-ZQ6AWHmYNZs/VErtSC9Py3I/AAAAAAAAAeg/YsVpWP9Iikg/s1600/cpu4.jpg</a><br /><br />buena info gracias &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3683235" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="blackifarf" href="?action=profile;user=blackifarf">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1819130" href="?action=profile;user=blackifarf">blackifarf</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414249535" title="25/10/2014 a las 15:05 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+thank?
+</div>
+</div>
+</div>
+</div><div id="comment_3683268" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Iam_Rock" href="?action=profile;user=Iam_Rock">
+<img id="error_avatar" src="http://i.picasion.com/resize44/447ca1944aba8f43322aea1db90f385f.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1634249" href="?action=profile;user=Iam_Rock">Iam_Rock</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414250667" title="25/10/2014 a las 15:24 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+a mi se me recalienta y hace ruido mi laptop &nbsp;cuando juego alguna solucion????
+</div>
+</div>
+</div>
+</div><div id="comment_3683284" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="serbarma" href="?action=profile;user=serbarma">
+<img id="error_avatar" src="http://3tuning.ru/image/cache/data/goods/music/061_DJ_inside-320x320.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="71976" href="?action=profile;user=serbarma">serbarma</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414251099" title="25/10/2014 a las 15:31 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias te doy puntos a cambio de algunas im?
+</div>
+</div>
+</div>
+</div><div id="comment_3683349" class="comentario coment_id_17">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="epalada" href="?action=profile;user=epalada">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1560818" href="?action=profile;user=epalada">epalada</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414253602" title="25/10/2014 a las 16:13 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3683475" class="comentario coment_id_18">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="sixfingo" href="?action=profile;user=sixfingo">
+<img id="error_avatar" src="https://24.media.tumblr.com/f6a4e63e367765768560876af2c1e38a/tumblr_minvhowf5u1rj9l40o1_500.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="101490" href="?action=profile;user=sixfingo">sixfingo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414259236" title="25/10/2014 a las 17:47 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy bueno &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3683821" class="comentario coment_id_19">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="4eveSrFrio" href="?action=profile;user=4eveSrFrio">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1698216" href="?action=profile;user=4eveSrFrio">4eveSrFrio</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414272464" title="25/10/2014 a las 21:27 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+ya se vienen los post ?
+</div>
+</div>
+</div>
+</div><div id="comment_3685107" class="comentario coment_id_20">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="chickaw31" href="?action=profile;user=chickaw31">
+<img id="error_avatar" src="https://i1.ytimg.com/vi/gEYHyQRKJ_A/maxresdefault.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1753236" href="?action=profile;user=chickaw31">chickaw31</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414336828" title="26/10/2014 a las 15:20 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+que buen trabajo..
+</div>
+</div>
+</div>
+</div><div id="comment_3685328" class="comentario coment_id_21">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Bori_4ever" href="?action=profile;user=Bori_4ever">
+<img id="error_avatar" src="https://upload.wikimedia.org/wikipedia/commons/7/79/Animated-Flag-Puerto_Rico.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1692571" href="?action=profile;user=Bori_4ever">Bori_4ever</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414345349" title="26/10/2014 a las 17:42 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita serbarma: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Gracias te doy puntos a cambio de algunas im?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3693533" class="comentario coment_id_22">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="kikan92" href="?action=profile;user=kikan92">
+<img id="error_avatar" src="https://25.media.tumblr.com/4d6f8f78d82d333048c48c004549d470/tumblr_mm7je0bYsP1r7xd5jo1_500.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1734719" href="?action=profile;user=kikan92">kikan92</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1414688649" title="30/10/2014 a las 17:04 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buen post, una pregunta mi pc tiene un procesador AMD FX 8350, es un gran procesador y de todo pero hay un gran inconveniente con el sobrecalentamiento, hasta llegar a tal punto de apagarse.<br /><br />El punto es que realice el debido proceso, se limpio el disipador, se le puso crema refrigerante pero sigue presentando el mismo problema; no se si este procesador es necesario un dispositivo refrigerante de agua (thermatek, colsair, etc) o si tiene una solucion ams economica<br /><br />&nbsp;<img src="https://identi.io/Smileys/default/icon_rolleyes.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_rolleyes.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_rolleyes.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_rolleyes.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3741885" class="comentario coment_id_23">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mabkyori" href="?action=profile;user=mabkyori">
+<img id="error_avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8DuguUfgPS1ZAyjDM47bY_T0ENPY32aFljr6Od4ik30ACKHg1qQ" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1729566" href="?action=profile;user=mabkyori">mabkyori</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1416935583" title="25/11/2014 a las 17:13 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<b>kikan92</b> te doy algunas recomendaciones extras, algo que puedes hacer es instalar primero el everest, con el revisas primero la temperatura del procesador, luego se le hace la respectiva limpieza al procesador y le aplicas pasta termica nueva, luego corres nuevamente el everest y miras si la temperatura del micro a disminuido, deberia hacerlo, tambien puedes si tu chasis lo permite instalar un buen ventilador en la parte trasera ojala de 12cm y de buenas marcas como Corsair, thermaltake, coolerMaster y vuelvo a repetir si tu chasis lo permite, tambien puedes instalar uno en la parte frontal pero obvio con la polaridad para que introduzca aire frio no como el trasero que lleva polaridad para sacar aire caliente, y como hablas de costos gastas mas o menos 40mil pesos en ambos ventiladores, espero que estas recomendaciones te ayuden de algo, un abrazo se cuida hermano. &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_6.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994af031ef78dea9',t:'MTc2MTQ5MjAzMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
