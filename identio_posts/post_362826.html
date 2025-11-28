@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>AirDroid control sobre tu Android - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Saludos compañeros!  Por falta de tiempo no he podido publicar como quisiera, sin embargo hoy he decidido aprovechar un rato libre y platicarles un poco sobre AirDroid.  AirDroid se trata de una ap..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='MTYyWTV0QnN5QVU4ZFZEVTJGc2RHVmtYMStnZXBrVk5wWTFRb2ZNMUttYVpzendpU1ZsTXMybHJONGsrcVM1SGpyNVo4aHBFYjNVK25nWHRadGhLRGx6NlczekM1bWFUYThFTlE9PXIxS0lMQ3FSU0pDM0VYdQ==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761491574;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '56a8caa819245f7d1df5c526046d32e9');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_1.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - AirDroid control sobre tu Android" title="Identi - AirDroid control sobre tu Android" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '6c7da146316ef141be43cfe9d4e3349d5972dd2a';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=ea24">ea24</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=ea24" title="Ir al Perfil de ea24"><img id="error_avatar" class="avatar" border="0" width="120" src="http://a06.t26.net/tmp/1/B/9/7/5/C/510x420_8B4.jpg"/></a>
+<div class=" rango_sidebar clearfix">New Full User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/newfull.png" title="New Full User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1901980)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1901980');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">3</b> Seguidores</li>
+<li><b>106</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>7</b> Posts</li>
+<li><b>32</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">AirDroid control sobre tu Android</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=362825';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=362827';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=113" alt="Ciencia y Tecnología	" title="Ciencia y Tecnología	">Ciencia y Tecnología	</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 10 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1024854">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Saludos compañeros! </span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Por falta de tiempo no he podido publicar como quisiera, sin embargo hoy he decidido aprovechar un rato libre y platicarles un poco sobre AirDroid. </span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">AirDroid se trata de una aplicación como el título y el propio nombre de la app sugieren para dispositivos Android, bastante útil si eres de los que como yo se la pasa adherido a la PC gran parte del día. </span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Básicamente funciona creando un servidor web en tu dispositivo que es accesible para otros dispositivos que se encuentran en la misma red (WiFi). Una vez que lo has descargado e instalado (buscarlo en Google Play) para acceder es necesario primero abrir AirDroid, donde mostrará una pantalla similar a la siguiente (varia según versión): </span></font></span><br /><br /><img id="img_post" src="https://lh5.googleusercontent.com/-z8XZrlSAwFE/VPJWUZbdjzI/AAAAAAAAABo/i71hhCFfxgk/s640/Screenshot_2015-02-28-17-08-46.png" border="0"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"> </span></font></span><br /><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">En esa captura se puede ver la URL que deberán escribir en su navegador, <a href="http://192.168.1.76:8888" target="_blank" rel="nofollow">http://192.168.1.76:8888</a> en este caso:&nbsp;</span></font></span><br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/-aQR2hnmsfmQ/VPJVcnfqRCI/AAAAAAAAABI/vpGTvHiGMGs/s596/url_airdroid.png" border="0"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"> </span></font></span><br /><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Luego se mostrará una leyenda como la siguiente en su navegador indicando que deben aceptar la petición en su dispositivo Android: </span></font></span><br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/-BDwXAo80h_Y/VPJVewVhk6I/AAAAAAAAABQ/sgrKhx4537Q/s1152/getting_connection.png" border="0"><br /><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Es entonces cuando deberán aceptar en su Android: </span></font></span><br /><br /><img id="img_post" src="https://lh6.googleusercontent.com/-2m3pLAb_awc/VPJWe2D8pWI/AAAAAAAAAB4/dNZJdueJWH8/s640/Screenshot_2015-02-28-17-09-57.png" border="0"><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"> </span></font></span><br /><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Hecho esto, deberían ver en su navegador algo como esto: </span></font></span><br /><br /><img id="img_post" src="https://lh4.googleusercontent.com/-mTIjmG_LRo0/VPJVjGJxrKI/AAAAAAAAABY/OaKyYEWvD-g/s1152/connected.png" border="0"><br /><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Ya estás conectado! </span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">En mi caso, utilizo AirDroid principalmente para transferir archivos, esto resulta bastante útil si no traes contigo un cable de datos o como yo eres tan perezoso que prefieres la vía fácil siempre <img src="https://identi.io/Smileys/default/icon_razz.png" alt="" border="0" /></span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Para la transferencia de archivos, es necesario en la pantalla hacer clic en el icono Files y dirigirse a la ruta deseada:</span></font></span><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;"> </span></font></span><br /><span style="color: #494d50;"><span style="font-family: Helvetica;"></span></span><br /><img id="img_post" src="https://lh3.googleusercontent.com/--tRoTBMA1yA/VPJY9umusEI/AAAAAAAAACI/IH89VUozClA/s1280/airdroid_files.png" border="0"><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Ahí bastará con arrastar archivos a la ventana para subirlos a nuestro Android o hacer clic en el botón Upload. </span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Y, cómo descargo cosas del móvil a mi PC? Buena pregunta.  </span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Estando en la carpeta deseada, simplemente hay que seleccionar el archivo (se puede hacer selección multiple) y hacer clic derecho y seleccionar Descargar o ir al botón que dice descargar: </span></font></span><br /><br /><img id="img_post" src="https://lh6.googleusercontent.com/-H3GJJUuRkuc/VPJY-L8LAmI/AAAAAAAAACM/DnBxrlBWyvY/s1280/airdroid_files2.png" border="0"><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Como podrán notar es muy simple de usar. </span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Desventajas? Únicamente le veo 2, la baja tasa de transferencia (considerar que se trata de transferencia de archivos en red) y el problema que representa cuando no se tiene el móvil conectado a la misma red que la PC (quizá por falta de la contraseña). </span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">En cualquier caso, siempre hay alternativas. Podemos registrarnos en la web de AirDroid y de esa manera podemos transferir archivos aunque el dispositivo no se encuentre en la misma red, pero cuidado! si el dispositivo está haciendo uso de la red móvil ya saben el gasto que les representará, será conveniente utilizarlo con red WiFi y mucha precaución. </span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Finalmente, una de mis opciones favoritas es la de localizar el móvil. Para ello sí es necesario contar con una cuenta en AirDroid y acceder al portal y la cuenta: </span></font></span><br /><br /><img id="img_post" src="https://lh4.googleusercontent.com/-ag0G7VVxTPk/VPJY_twn1MI/AAAAAAAAACU/wrpxcS8qAaU/s1280/web_airdroid.png" border="0"><br /><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Una vez que se ha iniciado basta con hacer clic en el icono Find Phone, y AirDroid hará el resto. La verdad es que asombra la presición alcanzada! </span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">  </span></font></span><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Sobra mencionar que es requerido tener el GPS activado, pero lo menciono igual. </span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">De momento es todo, ojalá les resulte tan útil como a mi, si hay dudas sólo mencionenlas <img src="https://identi.io/Smileys/default/icon_wink.png" alt="" border="0" /></span></font></span><br /><br /><span style="color: #494d50;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica;">Saludos!</span></font></span><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">14</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 2/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">3370</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">5</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(362826,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(362826,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(362826,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(362826,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(362826,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(362826,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(362826,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(362826,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(362826,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(362826,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://depor.com/resizer/BkGrpcbBXQm_iQu5NH2kdoMi7r8=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/NLTY3MJGEBBRBA63URZZFPRKOI.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1879930" title="perfil de gastongas"> gastongas</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/7c/7c45bb11861540a5083d5ed31f5ec39370034d71_full.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=125752" title="perfil de Gonzalosor"> Gonzalosor</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://lh5.googleusercontent.com/-2J-IkITqOXY/U9AS791JO1I/AAAAAAAAE3g/M2bOMXCZCm4/s275/5lq.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1764096" title="perfil de eljugon"> eljugon</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://imgur.com/1MnyV04" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=97403" title="perfil de pedroek"> pedroek</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://tranccuilo.files.wordpress.com/2012/10/mono.jpeg?w=60" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1547015" title="perfil de illukki"> illukki</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-lGiTadZgtqU/VocQgONKIVI/AAAAAAAAcSs/Duqm_MBNU6Y/s1600/chloe-grace-moretz-glamour-magazine-cover-mexico-january-2016-1.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1906531" title="perfil de Davian32"> Davian32</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-zhRHIVMzo3c/T7u8ThrqrbI/AAAAAAAAAWc/olVR5CRsY-w/s1600/10.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=110906" title="perfil de davidjsb"> davidjsb</a>: <b>2 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(362826);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('362826');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_427"></i>
+<a href="https://identi.io/index.php?topic=364282" title="Enviar correo JavaMail con texto html y adjunto"> Enviar correo JavaMail con texto html y adjunto</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_127"></i>
+<a href="https://identi.io/index.php?topic=363125" title="Eliminar Searchult/Navegaki Chrome"> Eliminar Searchult/Navegaki Chrome</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=362991" title="Conversor Multimedia - Mobile Media Converter"> Conversor Multimedia - Mobile Media Converter</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=360093" title="Validación de JTextField en Java"> Validación de JTextField en Java</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=359692" title="Colección La torre oscura - Stephen King [ePub]"> Colección La torre oscura - Stephen King [ePub]</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">8</span> Comentarios</span>
+<span class="onpost"> AirDroid control sobre tu Android</span>
+<div class="comentario"></div><div id="comment_3907047" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="gastongas" href="?action=profile;user=gastongas">
+<img id="error_avatar" src="https://depor.com/resizer/BkGrpcbBXQm_iQu5NH2kdoMi7r8=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/NLTY3MJGEBBRBA63URZZFPRKOI.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1879930" href="?action=profile;user=gastongas">gastongas</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1425171946" title="01/03/2015 a las 1:05 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias idolo lo voy a probar, te sigo, te reco y te dejo mis ultimos 2 p del dia, un abrazo.
+</div>
+</div>
+</div>
+</div><div id="comment_3907099" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="eljugon" href="?action=profile;user=eljugon">
+<img id="error_avatar" src="https://lh5.googleusercontent.com/-2J-IkITqOXY/U9AS791JO1I/AAAAAAAAE3g/M2bOMXCZCm4/s275/5lq.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1764096" href="?action=profile;user=eljugon">eljugon</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1425173284" title="01/03/2015 a las 1:28 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Pues le sigo sin ver la utilidad &nbsp;<img src="https://identi.io/Smileys/default/icon_neutral.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3907158" class="comentario coment_id_3">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ea24" href="?action=profile;user=ea24">
+<img id="error_avatar" src="http://a06.t26.net/tmp/1/B/9/7/5/C/510x420_8B4.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901980" href="?action=profile;user=ea24">ea24</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1425174817" title="01/03/2015 a las 1:53 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita gastongas: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Gracias idolo lo voy a probar, te sigo, te reco y te dejo mis ultimos 2 p del dia, un abrazo.</div></blockquote>De nada amigo, gracias por pasar &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /><br /><br /><blockquote><div class="cita">Cita eljugon: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Pues le sigo sin ver la utilidad &nbsp;<img src="https://identi.io/Smileys/default/icon_neutral.png" alt="" border="0" /></div></blockquote>Completamente v?
+</div>
+</div>
+</div>
+</div><div id="comment_3907722" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="pedroek" href="?action=profile;user=pedroek">
+<img id="error_avatar" src="https://imgur.com/1MnyV04" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="97403" href="?action=profile;user=pedroek">pedroek</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1425188836" title="01/03/2015 a las 5:47 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita eljugon: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Pues le sigo sin ver la utilidad &nbsp;<img src="https://identi.io/Smileys/default/icon_neutral.png" alt="" border="0" /></div></blockquote>pues vuelve a leer por que si es util es para que no necesites cables al momento de transferir de pc al celular o viceversa
+</div>
+</div>
+</div>
+</div><div id="comment_3907929" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="K@miK@ze" href="?action=profile;user=K@miK@ze">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-Zjx2TI1zAsE/ThNNqwkG7zI/AAAAAAAAABU/6p1MYP5aP1E/s1600/Toxic_Skull_GIF_Comp.GIF" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="108537" href="?action=profile;user=K@miK@ze">K@miK@ze</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1425210234" title="01/03/2015 a las 11:43 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3908569" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="illukki" href="?action=profile;user=illukki">
+<img id="error_avatar" src="https://tranccuilo.files.wordpress.com/2012/10/mono.jpeg?w=60" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1547015" href="?action=profile;user=illukki">illukki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1425238501" title="01/03/2015 a las 19:35 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Por ahora no lo voy a usar porque prefiero el cable pero veremos mas adelante. <br />Buen post! &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3909156" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Zetzo" href="?action=profile;user=Zetzo">
+<img id="error_avatar" src="https://imageshack.com/a/img4/3599/cviicloud2.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1907484" href="?action=profile;user=Zetzo">Zetzo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1425259584" title="02/03/2015 a las 1:26 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buena app, me ha servido mucho con mi INCO ya que no puedo conectarlo directamente a la PC (nada mas lo hago y me bota el pantallazo azul de la muerte XDDDD)<br /><br />Saludos.
+</div>
+</div>
+</div>
+</div><div id="comment_3909193" class="comentario coment_id_8">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ea24" href="?action=profile;user=ea24">
+<img id="error_avatar" src="http://a06.t26.net/tmp/1/B/9/7/5/C/510x420_8B4.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901980" href="?action=profile;user=ea24">ea24</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1425260383" title="02/03/2015 a las 1:39 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="97403" href="https://identi.io/index.php?action=profile&user=pedroek" class="mensiones_identi">@pedroek</a> <a usuario="108537" href="https://identi.io/index.php?action=profile&user=K@miK@ze" class="mensiones_identi">@K@miK@ze</a> gracias por pasar &nbsp;<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /><br /><a usuario="1547015" href="https://identi.io/index.php?action=profile&user=illukki" class="mensiones_identi">@illukki</a> Es un hecho que la transferencia por cable es m?
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_1.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994ae506cd3bdea5',t:'MTc2MTQ5MTU3NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
