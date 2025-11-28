@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Como usar Whatsapp en PC [con Pidgin] Linux  - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Hoy voy a enseñarles como hacer andar el Whasapp desde su computadora con el programa Pidgin y lo vamos a explicar para un sistema Gnu/Linux, Fedora 20 especificamente. ACLARACIONES: 1. Esto es para..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='VXRWZjZDTm9zYXJJODd6VTJGc2RHVmtYMS9SUnNTRDkydldLTTNUNWYxb2tobzdQUVUwcFZyeFBNZkZDMEt5eDk1OE9mTTB6L0RFQ0dWVHRpdVhMQkJKT25icHdBTC9Ic2hVaEE9PU90MnV3MWN0eU9ZeDJLUg==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761491882;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'ae36cf9e31d7178b65c300eb95e739a9');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_7.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Como usar Whatsapp en PC [con Pidgin] Linux " title="Identi - Como usar Whatsapp en PC [con Pidgin] Linux " align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'ba06391d41b7cf1a7b07d643d4f5b5963cf008ea';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=silvery">silvery</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=silvery" title="Ir al Perfil de silvery"><img id="error_avatar" class="avatar" border="0" width="120" src="http://i.minus.com/iTgspiTEzqcYT.png"/></a>
+<div class=" rango_sidebar clearfix">Mini Idento</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/do.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/minidento.png" title="Mini Idento" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1563300)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1563300');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">37</b> Seguidores</li>
+<li><b>598</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>23</b> Posts</li>
+<li><b>206</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Como usar Whatsapp en PC [con Pidgin] Linux </h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=349777';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=349779';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=126" alt="Linux" title="Linux">Linux</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 10 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1011806">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><img id="img_post" src="http://www.identi.li/images/Separadori.png" border="0"><br /><br /><img id="img_post" src="http://www.subeimagenes.com/img/juice2xd-38383.png" border="0"><br /><br /><br /><br /><br />Hoy voy a enseñarles como hacer andar el Whasapp desde su computadora con el programa Pidgin y lo vamos a explicar para un sistema Gnu/Linux, Fedora 20 especificamente.<br /><br /><br />ACLARACIONES:<br />1. Esto es para las personas que no estan ocupando el whatsapp en el celular ya que no he confirmado que se pueda usar la misma cuenta desde ambas plataformas (PC y celular) a la vez.<br /><br />Para que sirve??<br />Si  solo tienes plata para comprarte un :<br /><img id="img_post" src="http://i6.minus.com/jejOjSVaL3XP8.jpg" border="0"><br /> pero queres ocupar de todos modos whatsapp esta es tu opción<br /><br /><br />Empecemos<br />Primero intalar el Pidgin<br />#yum install pidgin <br /><img id="img_post" src="http://i.minus.com/jbgkKmx8iiOz8J.png" border="0"><br /><br /><br /><br />Usaremos ademas 2 programas: <br />1. Whatsapp purple: <a href="https://github.com/davidgfnet/whatsapp-purple" target="_blank" rel="nofollow">https://github.com/davidgfnet/whatsapp-purple</a><br />2. Yowsapp: <a href="https://github.com/tgalal/yowsup" target="_blank" rel="nofollow">https://github.com/tgalal/yowsup</a><br /><br />El primero es un plugin para que pidgin maneje el protocolo whatsapp, el segundo es un programa de consola que nos permitira registrar nuestro numero de telefono y obtener la clave para usar el whatsapp. <br /><br />Tenemos que instalar todo lo que necesitamos para compilar los programas, primero<br />#yum install git libpurple libpurple-devel python-dateutil python-argparse python libxml2 make gcc-c++<br /><br />[editado: si estas en Debian o derivados debes instalar: <br />&nbsp;aptitude install python2.7 python-dateutil python-argparse pidgin libglib2.0.0 libglib2.0-dev libpurple-dev git make g++<br />&nbsp;]<br /><br /><br />Descargamos los programas<br />$git clone <a href="https://github.com/davidgfnet/whatsapp-purple.git" target="_blank" rel="nofollow">https://github.com/davidgfnet/whatsapp-purple.git</a> whatsapp<br />$git clone <a href="https://github.com/tgalal/yowsup.git" target="_blank" rel="nofollow">https://github.com/tgalal/yowsup.git</a> yowsup<br /><br />Nos movemos al directorio de creado de whatsapp donde hemos guardado el programa whatsapp purple y :<br />$cd whatsapp<br />ejecutamos make ARCH=i686 o make ARCH=x86_64 segun tu sistema sea de 32 o 64 bits respectivamente<br />$make<br /><br />esto debe crear un archivo llamado libwhatsapp.so en la misma carpeta<br />[nota: Si sucede algun error durante la compilacion es porque falta algun programa, informarme el output del error por si me he olvidado de algo]<br /><br />Ese archivo libwhatsapp.so lo movemos al directorio /usr/lib/pidgin/<br />#cp ./libwhatsapp.so /usr/lib/pidgin/<br /><br />luego nos movemos al directorio yowsup y creamos un archivo de configuracion para el registro de nuestro numero<br />cd yowsup<br />le damos permisos de ejecucion al programa<br />#chmod +x yowsup-cli<br />creamos un archivo de configuracion llamado wsconfig:<br />$cat &lt;&lt; fin &gt;&gt; wsconfig<br />cc=54<br />phone=54xxxxxxxxxx<br />id=<br />password=<br />fin<br /><br />donde cc es el codigo del pais y phone es tu numero de telefono completo incluyendo codigo pais. para saber cual es el codigo de tu pais o prefijo telefonico internacional ver: <br /><a href="https://es.wikipedia.org/wiki/Anexo:Prefijos_telef%C3%B3nicos_mundiales" target="_blank" rel="nofollow">http://es.wikipedia.org/wiki/Anexo:Prefijos_telef%C3%B3nicos_mundiales</a><br />por ejemplo el codigo de EEUU y Canada es 1, para Mexico es 52, Argentina 54, Chile 56 etc <br /><br />luego ejecutamos<br />#./yowsup-cli registration -c ./wsconfig -r sms<br />status: sent<br />retry_after: xxxx<br />length: 6<br />method: sms<br /><br />Nos enviaran a nuestro telefono un codigo de seis digitos en el formato xxx-xxx que usaremos para terminar el registro.<br /><br />luego ejecutamos<br />#./yowsup-cli registration -c ./wsconfig --register xxx-xxx<br />donde xxx-xxx es el codigo de seis digitos que te han enviado a tu celular, te enviaran el password (pw) el password luce asi :<br />status: ok<br />kind: free<br />pw: SJKxG56HHHGiyku6Y/Bi9BJ/P0V=<br />price: $x.xx<br />price_expiration: xxxxxxxxxxxxx<br />currency: USD<br />cost: x.xx<br />expiration: xxxxxxxxxxxx<br />login: 54xxxxxxxxxx<br />type: new<br /><br />asegurate de copiar el password y guardarlo bien.<br /><br />Con el password solo resta abrir el pidgin y configurar la cuenta, elegimos protocolo whasapp, <br /><img id="img_post" src="http://programadorwebvalencia.com/wp-content/uploads/2013/07/whatsapp3.png" border="0"><br />nuestro numero de telefono completo en formato internacional es el usuario y copiamos y pegamos el password que recibimos.<br /><br />Si todo ha ido bien estaremos logeados en whasapp desde pidgin, para agregar contactos debe agregarse el numero de telefono completo en formato internacional incluyendo el codigo pais.<br /><br />[editado 2 <br />para los emoticons descargar desde <a href="https://github.com/stv0g/unicode-emoji" target="_blank" rel="nofollow">https://github.com/stv0g/unicode-emoji</a> y copiar las carpetas en ~/.purple/smileys<br />luego ir a Pidgin&gt;Tools&gt;Preferencias&gt;Temas&gt;Temas de emoticons&nbsp; y elegir un tema ]<br /><br />Saludos.<script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">30</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">4226</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">13</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(349778,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(349778,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(349778,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(349778,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(349778,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(349778,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(349778,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(349778,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(349778,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(349778,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://i.imgur.com/SrN2Duk.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1889019" title="perfil de ricardo130"> ricardo130</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://imagenti.li/pFl.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1529928" title="perfil de shaka33"> shaka33</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://imagenti.li/wtt.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1804557" title="perfil de lksmatt"> lksmatt</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1856488" title="perfil de vezcuando"> vezcuando</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://i.cubeupload.com/xKhq9F.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1672112" title="perfil de ErTorito"> ErTorito</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.fondosgratis.mx/archivos/items/th_1318128682_dragoneyejjpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1890602" title="perfil de Mentorr"> Mentorr</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(349778);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('349778');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=519840" title="Calamaro - Cargar La Suerte 2018"> Calamaro - Cargar La Suerte 2018</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=514196" title="Calamaro - Las otras caras de AS "> Calamaro - Las otras caras de AS </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=514189" title="Bunbury - Expectativas (FLAC)"> Bunbury - Expectativas (FLAC)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=489203" title="Coleccion Escaques, libros de ajedrez "> Coleccion Escaques, libros de ajedrez </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_437"></i>
+<a href="https://identi.io/index.php?topic=474809" title="Calamaro Obras Incompletas Imagenes Paganas DVD"> Calamaro Obras Incompletas Imagenes Paganas DVD</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=442241" title="Andres Calamaro - Lou Bizarro 10&quot; -1994"> Andres Calamaro - Lou Bizarro 10&quot; -1994</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=404663" title="Elimina la publicidad desde Hosts de modo seguro"> Elimina la publicidad desde Hosts de modo seguro</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=397292" title="Calamaro - El Salmon X dedo 6, Ineditos + Bonus "> Calamaro - El Salmon X dedo 6, Ineditos + Bonus </a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">9</span> Comentarios</span>
+<span class="onpost"> Como usar Whatsapp en PC [con Pidgin] Linux </span>
+<div class="comentario"></div><div id="comment_3757142" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="matt_1210" href="?action=profile;user=matt_1210">
+<img id="error_avatar" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/1390652_572233939513979_1304914952_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1832840" href="?action=profile;user=matt_1210">matt_1210</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1417747701" title="05/12/2014 a las 2:48 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+exelente info <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3757329" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="RodrigoPy" href="?action=profile;user=RodrigoPy">
+<img id="error_avatar" src="https://i.postimg.cc/jqMVhCWF/Call-of-duty-MW-2.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1853371" href="?action=profile;user=RodrigoPy">RodrigoPy</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1417754365" title="05/12/2014 a las 4:39 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Lo de peor de Linux es la instalaci?
+</div>
+</div>
+</div>
+</div><div id="comment_3757638" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Milonga_73" href="?action=profile;user=Milonga_73">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1891325" href="?action=profile;user=Milonga_73">Milonga_73</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1417788622" title="05/12/2014 a las 14:10 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita RodrigoPy: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Lo de peor de Linux es la instalaci?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3758086" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="lksmatt" href="?action=profile;user=lksmatt">
+<img id="error_avatar" src="http://imagenti.li/wtt.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1804557" href="?action=profile;user=lksmatt">lksmatt</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1417808578" title="05/12/2014 a las 19:42 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias
+</div>
+</div>
+</div>
+</div><div id="comment_3758422" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="headlins" href="?action=profile;user=headlins">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1552735" href="?action=profile;user=headlins">headlins</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1417822509" title="05/12/2014 a las 23:35 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+De una, hace como un a?
+</div>
+</div>
+</div>
+</div><div id="comment_3758461" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rz724" href="?action=profile;user=rz724">
+<img id="error_avatar" src="http://www.ohdios.net/img/t/l-261336.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="77476" href="?action=profile;user=rz724">rz724</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1417824497" title="06/12/2014 a las 0:08 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+funciona solo en linux o tamnien en windows
+</div>
+</div>
+</div>
+</div><div id="comment_3758706" class="comentario coment_id_7">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="silvery" href="?action=profile;user=silvery">
+<img id="error_avatar" src="http://i.minus.com/iTgspiTEzqcYT.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1563300" href="?action=profile;user=silvery">silvery</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1417832546" title="06/12/2014 a las 2:22 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="77476" href="https://identi.io/index.php?action=profile&user=rz724" class="mensiones_identi">@rz724</a> hay una forma para que funcione en windows, pero este tutorial es solo para linux
+</div>
+</div>
+</div>
+</div><div id="comment_3758790" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="vezcuando" href="?action=profile;user=vezcuando">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1856488" href="?action=profile;user=vezcuando">vezcuando</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1417835781" title="06/12/2014 a las 3:16 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Que bacan siempre me pregunte si habia manera de hacer eso y que chevere que la hay <img src="https://identi.io/Smileys/default/icon_surprised.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_surprised.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_surprised.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_surprised.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />, mas tarde por 25ava vez voy a tratar de instalar opensuse y si puedo , seguro lo uso muchas gracias &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3771968" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Alquimeric" href="?action=profile;user=Alquimeric">
+<img id="error_avatar" src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-frc1/399853_564532426911100_1297251134_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1734754" href="?action=profile;user=Alquimeric">Alquimeric</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1418555292" title="14/12/2014 a las 11:08 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias, luego veo si funciona ^-^
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_7.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994aec8a5b03deaa',t:'MTc2MTQ5MTg4Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
