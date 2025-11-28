@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Java: como hacer un menú con animación - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Java y NetBean, cómo hacer un menú personalizado con animación, mostrar ocultar un menú (JPanel). Hola que tal java developers, en esta oportunidad les mostraré como crear un menú con animació..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='VndBQ1N3VG5nVGc2TXZUVTJGc2RHVmtYMTlWeUN5bjhZNjBaTStQVm1udmJyWlVYSDNxMm5RZnZ3NVUvMUx0UDdCWUNGN0ZLK3IvQmpZSnB1WUIyN3ZUdHV4cVYwZDRtOUV4WHc9PTcwY3V2TVBKMVNSRVJUQw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761482065;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '7399992319dd3802b32d1bf28a2b94f3');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_3.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Java: como hacer un menú con animación" title="Identi - Java: como hacer un menú con animación" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'cd604354309ad53f25e799908fe0ad45b2c9d15b';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=rubinsky">rubinsky</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=rubinsky" title="Ir al Perfil de rubinsky"><img id="error_avatar" class="avatar" border="0" width="120" src="https://scontent-dfw1-1.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/10509506_1621281374822534_6073027962100201247_n.png?oh=db931b1592f001b3f589bde24b310807&amp;oe=5655D73C"/></a>
+<div class=" rango_sidebar clearfix">Mini Idento</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/minidento.png" title="Mini Idento" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1604462)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1604462');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">22</b> Seguidores</li>
+<li><b>313</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>29</b> Posts</li>
+<li><b>69</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Java: como hacer un menú con animación</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=388364';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=388366';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 10 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1050393">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><img id="img_post" src="https://3.bp.blogspot.com/-lAIv-Gstj0Y/VecHmivsQcI/AAAAAAAAA8I/VcEei-Z0124/s640/pinc.png" border="0"><br /><br />Java y NetBean, cómo hacer un menú personalizado con animación, mostrar ocultar un menú (JPanel).<br /><font size="4" style="line-height: 1.3em;">Hola que tal java developers, en esta oportunidad les mostraré como crear un menú con animación. La animación trata de mostrar / ocultar un contenedor, que en este caso será un Panel, que contendrá varios componentes (esto ya lo puedes modificar a tu gusto), entonces el Panel en un principio, estará oculto, para después haciendo clic en un botón, se realice la animación y ?baje? para que pueda ser visible. Bueno espero y les suene interesante</font><br /><br /><font size="4" style="line-height: 1.3em;"><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/Wed5DzxI5h0" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div></font><br /><br /><br /><br /><font size="4" style="line-height: 1.3em;">Link para librería: <a href="https://mega.nz/#!llIBBZCR!FjD1HtOLtzE0gyzUQRJPN5yt0VXKAb2cm0962VYDByo" target="_blank" rel="nofollow">Nef-Animacion</a></font><br /><font size="4" style="line-height: 1.3em;">Link para recursos: <a href="https://mega.nz/#!Y950GSpb!JIp_m8cP7JYSX97AWyJfYucsapVpBJlb9br1eBTTJJU" target="_blank" rel="nofollow">Iconos.</a></font><br /><br /><span style="color: #339966;"><font size="4" style="line-height: 1.3em;">Lo quieres escrito?</font></span><br /><br /><font size="4" style="line-height: 1.3em;">Teniendo los 2 archivos anteriores, ya podemos empezar a crear nuestro proyecto, entonces haciendo uso de NetBeans, creamos un nuevo proyecto:</font><br /><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://4.bp.blogspot.com/-5vwKGs9hzpQ/VecIrpZxz6I/AAAAAAAAA8Q/IK1UnnTzhZc/s640/1.png" border="0"></font><br /><br /><br /><font size="4" style="line-height: 1.3em;"><b><span style="color: #ff0000;">NOTA:</span></b> Marcamos la casilla ?Use dedicated folder for storing libraries? o ?Usar una carpeta dedicada para almacenar las bibliotecas? (en caso de que lo tengas en español). </font><br /><br /><font size="4" style="line-height: 1.3em;">Ahora le damos clic derecho al nuestro proyecto, y seleccionamos la opción ?Propiedades?, después en la ventana emergente, seleccionamos la opción ?Add Jar Folder?, para agregar nuestra librería de Nef-Animacion.</font><br /><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://1.bp.blogspot.com/-25juv2wblqw/VecK4GGKatI/AAAAAAAAA8c/AVSIiJTp8HA/s640/2.png" border="0"></font><br /><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://1.bp.blogspot.com/-oY2W2WDbttA/VecK4Y7jbmI/AAAAAAAAA8g/voLTo5s3utE/s640/3.png" border="0"></font><br /><br /><font size="4" style="line-height: 1.3em;">Buscamos la ruta donde guardamos la librería (no importa el lugar donde se encuentre, escritorio, descargas, etc.), y marcamos la opción de ?Copiar a la carpeta de bibliotecas?. Esto se hace con el fin de que cuando queramos generar nuestro Jar de la aplicación, este contenga todas las librerías y trabaje perfectamente, si no, después andas batallando por cuestión de las rutas relativas y absolutas (indicar la ruta como dirección de una carpeta local). </font><br /><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://3.bp.blogspot.com/-xmEb-30wzyY/VecK4qXMjyI/AAAAAAAAA8w/X_AIjjdiObY/s640/4.png" border="0"></font><br /><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://2.bp.blogspot.com/-sxbqVrawOR0/VecK5IMPEcI/AAAAAAAAA84/sjAMhMF9c98/s640/5.png" border="0"></font><br /><br /><span style="color: #ff0000;"><font size="4" style="line-height: 1.3em;"><b>NOTA:</b></font></span><font size="4" style="line-height: 1.3em;"> Esto lo puedes aplicar para tus demás proyectos donde utilices librerías, es una buena práctica. </font><br /><br /><font size="4" style="line-height: 1.3em;">Bien, ahora creamos un nuevo paquete, para almacenar los 2 recursos que usaremos, las imágenes y el frame. </font><br /><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://2.bp.blogspot.com/-Akvmd0GO_eE/VecaKhb2vII/AAAAAAAAA9E/LC90AywGLj0/s640/6.png" border="0"></font><br /><br /><font size="4" style="line-height: 1.3em;">Dentro de este paquete, creamos un nuevo JFrame, y le añadimos un Panel, este panel lo cambiamos de tamaño, de modo que cubra toda la superficie del frame, como si fuera un fondo de pantalla <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />.</font><br /><br /><font size="4" style="line-height: 1.3em;">A este panel, le cambiaremos su propiedad de ?Ajuste de distribución?, dando clic derecho sobre el panel, y elegimos la opción de ?Absolute layout? o ?Diseño absoluto?.</font><br /><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://3.bp.blogspot.com/-kLQZk1xbZvU/VeciWDADmGI/AAAAAAAAA9U/J3hRrZZL1o4/s640/7.png" border="0"></font><br /><br /><font size="4" style="line-height: 1.3em;">Ahora agregamos otro Panel, encima del anterior, le puedes cambiar el color para identificarlo, también cambia los nombres de los componentes para no confundirlos. Este nuevo panel lo hare de 580px de ancho y 110px de alto, de un color gris oscuro. Bien, después de esto, damos clic derecho al nuevo panel y seleccionamos ?Propiedades?, dentro de aquí bajamos hasta encontrar el encabezado ?Gestor de distribución?, en donde aparecen una X y una S. </font><br /><br /><font size="4" style="line-height: 1.3em;">X representa el eje de las X, y S representa el eje de las Y. Entonces, como el ejemplo trata de que mostrara y ocultara un menú (haciendo animación de arriba hacia abajo y viceversa) modificaremos la coordenada S, donde le pondremos un numero negativo (para que se valla hasta arriba, por encima del frame) para que no se vea. Podemos ver el tamaño (el alto es el segundo numero) viendo en ?Preferred Size?, de esta manera, deberás asignar ese mismo número pero en negativo, para la coordenada S o Y. </font><br /><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://4.bp.blogspot.com/-ZbWF1Ul2poE/Veci1p09XuI/AAAAAAAAA9c/acsLdI3CYY8/s640/8.png" border="0"></font><br /><br /><font size="4" style="line-height: 1.3em;">Como pueden ver en la imagen, se ve como el panel ha sido colocado hasta arriba del frame, por lo tanto el usuario no lo prodra ver cuando ejecute la aplicación. </font><br /><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://3.bp.blogspot.com/-7Pc19DxA7z0/VecjKu4fGkI/AAAAAAAAA9k/UacY8z7y2Fc/s640/9.png" border="0"></font><br /><br /><font size="4" style="line-height: 1.3em;">Colocamos nuestras imágenes (las que descargaron hace rato) y las copiamos al paquete del proyecto.</font><br /><br /><font size="4" style="line-height: 1.3em;">Ahora colocamos una etiqueta (JLabel) sobre el primer panel (el fondo, NO el menú) y la situamos más o menos a la mitad de todo frame (que se vea centrado pues). Después damos clic derecho a la etiqueta y en ?Propiedades? seleccionamos ?Icon?, y elegimos la imagen de ?Bajar? para que se muestre con el pico hacia abajo: </font><br /><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://4.bp.blogspot.com/-urtShhn81p4/Vecj4nV1CUI/AAAAAAAAA9w/2ALdTHbU2ko/s640/10.png" border="0"></font><br /><br /><br /><font size="4" style="line-height: 1.3em;">Y para no tener problemas, arrastramos la etiqueta encima del panel de menú (OJO arrastrarla en la pequeña ventana ?Navegador?, que se encuentra en la parte inferior izquierda de tu pantalla, esa en donde se listan los componentes) de tal manera que la nueva etiqueta quede por encima del menú (para que el menú no la tape cuando baje). </font><br /><br /><font size="4" style="line-height: 1.3em;">Seleccionamos nuestra etiqueta que tiene la imagen y damos clic derecho, seleccionamos la opción ?Eventos? --&gt; ?Mouse? --&gt; ?mouseReleased? </font><br /><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://2.bp.blogspot.com/-ytN-t1bmTbc/VeckULb-PuI/AAAAAAAAA94/6CwDLsxZDeo/s640/11.png" border="0"></font><br /><br /><font size="4" style="line-height: 1.3em;">Ahora este es el código que agregaremos: </font><br /><font size="4" style="line-height: 1.3em;"> Agregamos estas dos librerias (Una de ellas es la de Animción) que desacargamos antes y que colocamos en el proyecto. </font><br /><br /><div class="code"><br />import Animacion.Animacion;<br />import javax.swing.ImageIcon;</div><br /><font size="4" style="line-height: 1.3em;">Después, en el evento de la etiqueta (el mouseReleased de hace un momento) colocamos este código: </font><br /><div class="code"><br />int posicion = mi_etiqueta_icono.getY();<br />if(posicion &gt; 0){ //está abajo, ya bajó el menú, ahora hay que subirlo<br />&nbsp;   Animacion.subir(0, -110, 2, mi_panel_menu);<br />&nbsp;   Animacion.subir(95, 0, 2, mi_etiqueta_icono);<br />&nbsp;   img_down();<br />}else{ // está arriba, no ha bajado el menú<br />&nbsp;   Animacion.bajar(-110, 0, 2, mi_panel_menu);<br />&nbsp;   Animacion.bajar(0, 95, 2, mi_etiqueta_icono);<br />&nbsp;   img_up();<br />}</div><br /><font size="4" style="line-height: 1.3em;">Ahora añaden estos dos métodos (el img_up() y el img_down()):</font><br /><br /><div class="code"><br />public void img_up(){<br />&nbsp;       ImageIcon img = new ImageIcon(getClass().getResource(&quot;nombre_imagen_apuntaArriba.png&quot;));<br />&nbsp;       etq_icono.setIcon(img);<br />}<br />public void img_down(){<br />&nbsp;       ImageIcon img = new ImageIcon(getClass().getResource(&quot;nombre_imagen_apuntaAbajo.png&quot;));<br />&nbsp;       etq_icono.setIcon(img);<br />}</div><br /><font size="4" style="line-height: 1.3em;">Bueno, después de agregar el código, ya lo pueden ejecutar, y verán que al hacer clic sobre la etiqueta, se despliega el ?Menú? que es un jpanel sin nada.<br /><br />Pueden agregar componentes al panel Menú, para ello (porque se encuentra hasta arriba y no se ve) pueden dar doble clic al panel menú, dentro del listado de componentes: <br /><br /><img id="img_post" src="https://4.bp.blogspot.com/-J0p5Ua1Fgfc/VeckWVdfRwI/AAAAAAAAA-Y/UTaPMR_d2ZM/s640/14.png" border="0"><br /><br /><img id="img_post" src="https://3.bp.blogspot.com/-_ImuQ_wqtrs/VeckWm4zfYI/AAAAAAAAA-c/6BjXoscr23Y/s640/15.png" border="0"><br /><br />Bueno Java devs, espero que les guste, si tienen dudas, en algo no explique bien, o si siguieron todos los pasos y aún tienen errores, dejen un comentario, los responderé lo más rápido posible. <br />&nbsp;<br />&nbsp;Gracias, compartan con sus amigos <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /> </font><br /><a href="https://mega.nz/#!Y950GSpb!JIp_m8cP7JYSX97AWyJfYucsapVpBJlb9br1eBTTJJU" target="_blank" rel="nofollow"></a><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">45</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">3418</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">18</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(388365,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(388365,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(388365,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(388365,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(388365,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(388365,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(388365,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(388365,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(388365,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(388365,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://1.bp.blogspot.com/-3OtaniECMCQ/V5bCAWDLeaI/AAAAAAAAA-o/4suMmLPu_fMy7pYXEm9fP6EXxJYAlY1aQCLcB/s1600/rorschach.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1604084" title="perfil de Kev3.0"> Kev3.0</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://s.pikabu.ru/post_img/2013/03/19/4/1363669061_1597664048.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1561674" title="perfil de kipling011"> kipling011</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://spb.fotolog.com/photo/43/25/20/love_ysa_tam/1259838109103_f.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1544818" title="perfil de delujo12"> delujo12</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-fcPkulVFaGA/VXDGIsRMkpI/AAAAAAAAAkI/0WhdXc7I49w/s1600/Bungaku.Shoujo.476027.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=57568" title="perfil de inoue"> inoue</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://33.media.tumblr.com/tumblr_m3y1tmn8CS1qiqegzo1_500.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1594189" title="perfil de diemetal"> diemetal</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://aggressivecomix.com/wp-content/uploads/2015/01/deadpool.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1935485" title="perfil de Trazgul"> Trazgul</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://laeskinadepunkprophet.files.wordpress.com/2007/06/rasmus.thumbnail.jpg?w=460" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=11762" title="perfil de Tobi-Lukas"> Tobi-Lukas</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://t0.gstatic.com/images?q=tbn:ANd9GcQY5358sJSrnXixNFEAmH5MWaZ3tOnNGKqisS7Oka5S5Ft-A9HfGQ" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1899399" title="perfil de TomasCabj7"> TomasCabj7</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://fotos.subefotos.com/0f8bc1d405bc8431c0639a0dcde14e75o.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1613670" title="perfil de brayan_120"> brayan_120</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(388365);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('388365');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=401123" title="Java como mover frame undecorated"> Java como mover frame undecorated</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=397586" title="Java como hacer un menu tipo web"> Java como hacer un menu tipo web</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=392512" title="Java menú principal personalizado"> Java menú principal personalizado</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=386922" title="Java NetBeans: hacer un login personalizado (GUI)"> Java NetBeans: hacer un login personalizado (GUI)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=384985" title="Botones personalizados en Java con NetBeans"> Botones personalizados en Java con NetBeans</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=235584" title="DAEMON Tools Pro Advanced edition v5 español"> DAEMON Tools Pro Advanced edition v5 español</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=235581" title="Tema Pink &amp; Black para windows 7 "> Tema Pink &amp; Black para windows 7 </a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">9</span> Comentarios</span>
+<span class="onpost"> Java: como hacer un menú con animación</span>
+<div class="comentario"></div><div id="comment_4179676" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="diemetal" href="?action=profile;user=diemetal">
+<img id="error_avatar" src="https://33.media.tumblr.com/tumblr_m3y1tmn8CS1qiqegzo1_500.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1594189" href="?action=profile;user=diemetal">diemetal</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1441333297" title="04/09/2015 a las 2:21 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+interesante tutorial lo agrego a favoritos psra revisarlo mas tarde &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4179683" class="comentario coment_id_2">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rubinsky" href="?action=profile;user=rubinsky">
+<img id="error_avatar" src="https://scontent-dfw1-1.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/10509506_1621281374822534_6073027962100201247_n.png?oh=db931b1592f001b3f589bde24b310807&amp;oe=5655D73C" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1604462" href="?action=profile;user=rubinsky">rubinsky</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1441333497" title="04/09/2015 a las 2:24 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita diemetal: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">interesante tutorial lo agrego a favoritos psra revisarlo mas tarde &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> , gracias y espero te sea ?
+</div>
+</div>
+</div>
+</div><div id="comment_4179747" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Trazgul" href="?action=profile;user=Trazgul">
+<img id="error_avatar" src="http://aggressivecomix.com/wp-content/uploads/2015/01/deadpool.jpeg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1935485" href="?action=profile;user=Trazgul">Trazgul</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1441336120" title="04/09/2015 a las 3:08 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+si lo integro a mi proximo trabajo del instituto quedar?
+</div>
+</div>
+</div>
+</div><div id="comment_4179838" class="comentario coment_id_4">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rubinsky" href="?action=profile;user=rubinsky">
+<img id="error_avatar" src="https://scontent-dfw1-1.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/10509506_1621281374822534_6073027962100201247_n.png?oh=db931b1592f001b3f589bde24b310807&amp;oe=5655D73C" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1604462" href="?action=profile;user=rubinsky">rubinsky</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1441341682" title="04/09/2015 a las 4:41 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Trazgul: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">si lo integro a mi proximo trabajo del instituto quedar?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4179847" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="chelo80" href="?action=profile;user=chelo80">
+<img id="error_avatar" src="https://www.facebook.com/photo.php?fbid=10153104123208485&amp;l=08dd04ebd1" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1913638" href="?action=profile;user=chelo80">chelo80</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1441342067" title="04/09/2015 a las 4:47 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Consulta, estoy por comenzar con java.Esto es Java o Java script?<br /><br />Voy a comenzar a hacer aplicaciones para android, y es fundamental antes de aprender a programar en android studio, saber bastante de java, si tenes tutoriales para por ejemplo, hacer juego para celular, te lo agradeceria! (dudo que lo hagas, pido mucho a veces jaja)
+</div>
+</div>
+</div>
+</div><div id="comment_4179894" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="joart" href="?action=profile;user=joart">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-QmSMRMQcEHY/VpmqBmjYqtI/AAAAAAAAAKo/78f_WlfoEPU/s1600/1-wall_1024_02.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1574745" href="?action=profile;user=joart">joart</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1441345818" title="04/09/2015 a las 5:50 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+se ve interesante despues lo utilizo. <a usuario="1913638" href="https://identi.io/index.php?action=profile&user=chelo80" class="mensiones_identi">@chelo80</a> hola, soy tecnico en sistemas y aveces porgrama en java. Bueno te aclaro sobre tu primer pregunta: java y javaScript no son lo mismo javaScript es un lenguaje script para uso en navegadores web en enfocado a la misma, java por otra parte es un lenjuaje de programacion con propositos generales y tiene variantes como javaFX(aplicaciones para web y escritorio), javaME para celulares(los anteriores Nokia para que te des una idea nada que ver con android), JSP para paginas web. Como vez tiene nombres parecidos pero no son lo mismo. si realmente quieres hacer buenos programas en android tienes que saber la programaci?
+</div>
+</div>
+</div>
+</div><div id="comment_4180078" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="nekio" href="?action=profile;user=nekio">
+<img id="error_avatar" src="http://img03.deviantart.net/547a/i/2010/267/7/5/duke_from_java_by_reallyn00b-d2zdiy7.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1741863" href="?action=profile;user=nekio">nekio</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1441371135" title="04/09/2015 a las 12:52 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1574745" href="https://identi.io/index.php?action=profile&user=joart" class="mensiones_identi">@joart</a> apoyo tu consejo de ser lo menos dependiente posible de algun IDE. <br /><br /><a usuario="1913638" href="https://identi.io/index.php?action=profile&user=chelo80" class="mensiones_identi">@chelo80</a> si quieres aprender Android, lo primero ser?
+</div>
+</div>
+</div>
+</div><div id="comment_4181182" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="chelo80" href="?action=profile;user=chelo80">
+<img id="error_avatar" src="https://www.facebook.com/photo.php?fbid=10153104123208485&amp;l=08dd04ebd1" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1913638" href="?action=profile;user=chelo80">chelo80</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1441423580" title="05/09/2015 a las 3:26 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita nekio: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><a usuario="1574745" href="https://identi.io/index.php?action=profile&user=joart" class="mensiones_identi">@joart</a> apoyo tu consejo de ser lo menos dependiente posible de algun IDE. <br /><br /><a usuario="1913638" href="https://identi.io/index.php?action=profile&user=chelo80" class="mensiones_identi">@chelo80</a> si quieres aprender Android, lo primero ser?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4181192" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="chelo80" href="?action=profile;user=chelo80">
+<img id="error_avatar" src="https://www.facebook.com/photo.php?fbid=10153104123208485&amp;l=08dd04ebd1" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1913638" href="?action=profile;user=chelo80">chelo80</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1441423844" title="05/09/2015 a las 3:30 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita joart: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">se ve interesante despues lo utilizo. <a usuario="1913638" href="https://identi.io/index.php?action=profile&user=chelo80" class="mensiones_identi">@chelo80</a> hola, soy tecnico en sistemas y aveces porgrama en java. Bueno te aclaro sobre tu primer pregunta: java y javaScript no son lo mismo javaScript es un lenguaje script para uso en navegadores web en enfocado a la misma, java por otra parte es un lenjuaje de programacion con propositos generales y tiene variantes como javaFX(aplicaciones para web y escritorio), javaME para celulares(los anteriores Nokia para que te des una idea nada que ver con android), JSP para paginas web. Como vez tiene nombres parecidos pero no son lo mismo. si realmente quieres hacer buenos programas en android tienes que saber la programaci?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_3.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949fcda0cb6deaa',t:'MTc2MTQ4MjA2NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
