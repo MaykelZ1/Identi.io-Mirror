@@ -1,0 +1,760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Un caso práctico de GNU/Linux en una empresa - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="¿Tiene sentido Linux en la empresa? ¿Puede sustituir a Windows y hacerlo con éxito? Para responder a esta pregunta en MuyPymes decidimos llevar a cabo un experimento. Instalarnos una distribución..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='empuZXJKcU4yY2pybExQVTJGc2RHVmtYMStZbGdSKzdXUzFyRlk2bzBjZHQ3SXFtZGJjSmtNUEoxcjdSck5rUnAxNUdkak9OZlRYcUxVakN6VDNwb1NqRWRJUXlGcnY2djc5ZGc9PXpuY0FKQmJVS29DUzJMTA==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761492336;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '99cfbaf3fb004604833598cfb62937ab');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_1.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Un caso práctico de GNU/Linux en una empresa" title="Identi - Un caso práctico de GNU/Linux en una empresa" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'b7b37998a289d33fe8113253f9ba3885efa2fc63';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=superlogic">superlogic</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=superlogic" title="Ir al Perfil de superlogic"><img id="error_avatar" class="avatar" border="0" width="120" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" /></a>
+<div class=" rango_sidebar clearfix">Gold User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/golduser.png" title="Gold User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1533336)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1533336');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">67</b> Seguidores</li>
+<li><b>2029</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>174</b> Posts</li>
+<li><b>480</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Un caso práctico de GNU/Linux en una empresa</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=331330';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=331332';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=126" alt="Linux" title="Linux">Linux</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 11 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_993358">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><font size="3" style="line-height: 1.3em;">¿Tiene sentido Linux en la empresa? ¿Puede sustituir a Windows y hacerlo con éxito? Para responder a esta pregunta en MuyPymes decidimos llevar a cabo un experimento. <br /><br />Instalarnos una distribución de Linux y trabajar con ella durante un mes. ¿Las conclusiones? Como veréis a lo largo de este artículo, salvando algún pequeño escollo que podemos encontrar, son más que positivas.</font><br /><br /><div align="center"><img id="img_post" src="https://ci5.googleusercontent.com/proxy/XPb4cQWJRwL6kLhc94Wpm-vnYKDyYjh9mk1FARfEArJtl4pCyotvAkOcSrSYTGlw6-hzqagrwT99S6vdc98gLIc9IjMgrA5Mk-JLavq3yapRSj-TeMr0QlYNtA=s0-d-e1-ft#http://www.muypymes.com/wp-content/uploads/2013/12/open-suse-logo.png" border="0"></div><br /><br /><br />&nbsp;<span style="color: #993333;"><font size="3" style="line-height: 1.3em;"><b>La distribución elegida</b></font></span><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Muchos de los que empiezan en el mundo GNU/Linux, suelen hacerlo con Ubuntu, distribución que es conocida por su facilidad de uso y por ofrecer al usuario casi todo lo que necesita <i>?out of the box?</i>.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Sin embargo en nuestro caso nos decantamos por <a href="http://es.opensuse.org/Bienvenidos_a_openSUSE.org" target="_blank" rel="nofollow">OpenSuse.</a> <b><br />¿Los motivos?</b> su orientación al mundo de la empresa y sobre todo su perfecta integración con el escritorio KDE, que resulta mucho más familiar para los usuarios que provienen de un sistema operativo como <b>Windows 7</b>.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Tras la instalación (muy sencilla si no queremos entrar en parámetros avanzados) nos encontramos con un escritorio listo para funcionar, con casi todo lo que necesitamos para gestionar nuestra productividad. </font><br /><br /><font size="3" style="line-height: 1.3em;">¿Pero lo tiene todo? ¿Qué echamos de menos? ¿Qué es lo que nos ha gustado más? ¿En qué tiene que mejorar? De eso es lo que vamos hablar en el siguiente especial.</font><br /><br />&nbsp;<br /><br />&nbsp;<a href="http://www.muypymes.com/wp-content/uploads/2013/12/calligra_words_spring.jpg" target="_blank" rel="nofollow"><img id="img_post" src="https://ci4.googleusercontent.com/proxy/MpJJZXvmDy_VaKJcMW-GloOtj3uX0lNUGPGeu9PfCHTzvCArRbJqHLhla7s2ZfCwp2L15naKXnOcOL0LdLPq1yiGZKuikILx9-ao_VKJLS6O_ki-PlwrSz3ADBTdkOhQwPs=s0-d-e1-ft#http://www.muypymes.com/wp-content/uploads/2013/12/calligra_words_spring.jpg" border="0"></a> <br /><br /><br /><span style="color: #993333;"><font size="3" style="line-height: 1.3em;"><b>Ofimática</b></font></span><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Lo primero que le preocupa a la pyme (y en nuestro caso no somos una excepción) es contar con una suite ofimática que pueda sustiutir a <b>Microsoft Office.</b></font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Nos decantamos por supuesto por <a href="http://es.libreoffice.org/" target="_blank" rel="nofollow">LibreOffice 4.1,</a> que es la suite que viene instalada de serie. Por supuesto ya conocíamos LibreOffice en sus versiones para Windows y Mac y sabemos de la <b>calidad que tiene la suite</b>.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Para nuestras necesidades (realizar documentos de texto simples y presentaciones PowerPoint) cumple perfectamente y la única duda que nos queda, es si su hoja de cálculo podría sustituir en funciones y versatilidad a lo que necesitan los usuarios más avanzados de <b>Microsoft Excel</b>.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Pero como somos curiosos, decidimos probar también Calligra, una suite ofimática que va más allá de los clásicos (textos, hoja de cálculo, presentaciones) y que nos ofrece herramientras interesantes como un gestor de proyectos como <b>Plan</b> que tiene muy poco que envidiar a Microsoft Project o una herramienta como <b>Author</b>, orientada a la creación de libros electrónicos.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Sin embargo a la hora de escribir y como buena parte de nuestro trabajo está orientado a la web, escogemos un editor Mark Down como <a href="http://cloose.github.io/CuteMarkEd/" target="_blank" rel="nofollow"><b>CuteMarkEd</b></a> que nos asegura una edición muy rápida de nuestros textos aplicando estilos de forma instantánea.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">No queremos olvidarnos aquí de la gestión de correo electrónico. Nosotros somos usuarios intensivos de Gmail y normalmente <b>no solemos apostar por clientes de escritorio</b>. No obstante para esta prueba nos decantamos por <b>ThunderBird</b>, cliente que conocemos de sobra tras su uso en otros sistemas operativos.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Por último en este terreno no queríamos dejar de admirar el gran trabajo que han hecho los chicos de KDE con una aplicación como <b>Okular</b> (visor y editor de PDF y otros documentos) y de la que podría aprender la propia Adobe, cuyo Acrobat Reader da para muy poco.</font><br /><br />&nbsp;<br /><div align="center"><a href="http://www.muypymes.com/wp-content/uploads/2013/12/nitro.jpg" target="_blank" rel="nofollow"><img id="img_post" src="https://ci6.googleusercontent.com/proxy/gPxYrexhDtugRkrWbeEMZPkvZ4WA11OewT_msvSOOBhD-DrnPScNM4zd4cZI1SYI64njVOChCZmHDayfStZP5i5ov2n-C45w9-a70B4DEu4AEw=s0-d-e1-ft#http://www.muypymes.com/wp-content/uploads/2013/12/nitro.jpg" border="0"></a></div><br />&nbsp;<br /><br />&nbsp;<span style="color: #993333;"><font size="3" style="line-height: 1.3em;"><b>Productividad</b></font></span><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Una de las cosas que más nos interesaba a la hora de realizar este análisis, era determinar si en Linux tendríamos gestores de tareas que <b>mereciese la pena utilizar</b>. Tras investigar un poco el tema, nos decantamos por <b><a href="http://nitrotasks.com/" target="_blank" rel="nofollow">Nitro Tasks</a></b> un gestor que recuerda mucho a Things, el famoso gestor de tareas para Mac OS X.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Nos gusta el hecho de que tenga versión tanto para escritorio como on-line, sincronizándose perfectamente a través de DropBox, pero nos gusta menos que nos disponga de momento de apps para sistemas operativos móviles, lo cual limita su funcionalidad un poco.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">En este terreno acabamos optando por el clásico <b>Wunderlist</b>, ya que su versión para Google Chrome nos permite trabajar off-line y se integra perfectamente en nuestro escritorio de trabajo como <b>si fuese una aplicación más</b>.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Menos suerte tenemos a la hora de encontrar una forma de integrar Evernote en nuestro flujo productivo. Existen un par de clientes para Linux que prometen funcionar, pero a la hora de la verdad no conseguimos hacerlo.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;"><a href="http://nevernote.sourceforge.net/" target="_blank" rel="nofollow">Nevernote</a> es el intento más serio y aunque la interfaz no pinta mal, no conseguimos hacerlo funcionar. La otra opción (Everpad) está muy orientada al escritorio Unity de Ubuntu, por lo que no la probamos. Lo que sí hacemos es instalar <b>Wine</b>, que nos permite emular aplicaciones Windows en nuestro escritorio y probamos cómo funciona Evernote en este caso.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Para nuestra sorpresa, funciona casi perfectamente, con alguna distorsión en el renderizado de las fuentes y poco más. A pesar de ello, no nos encontramos tan a gusto con ella como con una versión nativa por lo que optamos por usar la versión web.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">A la hora de sincronizar nuestros archivos en la nube, contamos con DropBox, que dispone de <b>cliente oficial para nuestro sistema</b>. En el caso de Google Drive, descubrimos decepcionados que todavía no existe un cliente oficial para nuestro sistema. De las opciones desarrollados por terceros, la más sólida parece ser <a href="https://www.insynchq.com/" target="_blank" rel="nofollow">Insync</a>, que es de pago, pero desafortunadamente no parece tener versión para OpenSuse.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Como contrapartida, descubrimos un lector de feeds como <b>Akregator</b>, que nos hace por unos momentos olvidarnos de Feedly y que descubrimos que vamos a utilizar para leer únicamente algunas fuentes seleccionadas.</font><br /><br />&nbsp;<br /><br />&nbsp;<a href="http://www.muypymes.com/wp-content/uploads/2013/12/kde.png" target="_blank" rel="nofollow"><img id="img_post" src="https://ci4.googleusercontent.com/proxy/dUO3k0NKkCAEhJ7OBFXqlbfmbXhadMaRimmqoAjAE16g7SupNBDiejbOZg3XacJs-vq_upUM6Xiz_bQxEHhITAB-YGqaPhqyvNjyCgdmgTg=s0-d-e1-ft#http://www.muypymes.com/wp-content/uploads/2013/12/kde.png" border="0"></a> <br /><br /><br /><font size="3" style="line-height: 1.3em;"><b><span style="color: #993333;">Trabajo en el escritorio</span></b></font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Un sistema operativo es mucho más que sus aplicaciones. Así que en este apartado vamos a ver cómo se trabaja en el escritorio, cómo trabajamos con nuestro gestor de archivos, cómo cambiamos las áreas de trabajo, etc.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">En primer lugar, habría que destacar el buen trabajo que hace un gestor de archivos como <b>Dolphin</b>. El que nos permita <b>trabajar con pestañas</b>, dividr las vistas de una ventana, encontrar archivos en función de su categoría, explorar archivos con rangos de fechas, etc. lo convierten en una herramienta muy potente y en nuestra opinión bastante superior al explorador de archivos de Windows.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">En segundo lugar, también nos ha gustado la forma en la que podemos organizar nuestro trabajo utilizando varios escritorios, cómo cambiamos entre aplicaciones abiertas, o cómo podemos asignar atajos rápidos a aplicaciones minimizadas. Además también nos ha gustado el área de bandeja de sistema, con una <b>gran área de notificaciones</b> y con mucha más información a nuestra disposición de lo que encontramos en otros sistemas operativos.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">También apreciamos el poder modificar cualquier aspecto visual (iconos, ventanas, fuentes, etc.) a nuestro antojo el poder organizar nuestro escritorio utilizando varios modos inteligentes.</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Nos resulta en cambio más confuso el uso de menús como <b>?Actividades?</b> y algunos menús más avanzados de nuestro escritorio que al menos para nosotros, resultan difícil de entender, pero que consideramos que no son necesarios para la mayoría de los usuarios.</font><br /><font size="3" style="line-height: 1.3em;"><br /></font><br /><br />&nbsp;<span style="color: #993333;"><font size="3" style="line-height: 1.3em;"><b>Trabajo con periféricos</b></font></span><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Uno de los grandes problemas con los que se asocia Linux es la compatibilidad con los periféricos. Y aunque sus usuarios suelen esgrimir que la responsabilidad la tienen los fabricantes por no desarrollar drivers, lo cierto es que esto <b>no sirve de consuelo para el usuario final.</b></font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">En nuestro caso no obstante, <b>no hemos tenido ningún problema</b> en agregar la impresora que tenemos en nuestra oficina, que ha funcionado en red. De la misma forma nuestra distribución ha detectado de forma automática el resto de equipos que forma parte de nuestra red e incluso se ha comunicado sin problemas con nuestro NAS, <b>sin necesidad de instalar ningún driver ni software adicional</b>.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">No dudamos que pueden existir problemas con periféricos u otros dispositivos menos estándar, pero como comentamos no ha sido nuestro caso.</font><br /><br /><br />&nbsp;<br /><br />&nbsp;<span style="color: #993333;"><font size="3" style="line-height: 1.3em;"><b>Conclusiones: lo mejor y lo peor</b></font></span><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">A lo largo de este artículo hemos visto como GNU/Linux en general y OpenSuse en particular, pueden sustiuir a Windows o Mac OS X en la empresa.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Tanto por la calidad de sus aplicaciones, como por lo pulido del escritorio, no podemos sino que estar más que satisfechos, salvando contadas excepciones.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Eso no quiere decir que sea un sistema perfecto y que no haya cosas que <b>puedan desconcertar</b> por desconocimiento o que haya que mejorar.</font><br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Entre las principales, querríamos destacar la gestión de aplicaciones. Si bien en Ubuntu es muy sencillo, en distribuciones como OpenSuse la cosa se complica. Tenemos cierto es, los famosos repositorios, pero su uso es farragoso para el usuario que no sepa exactamente lo que está buscando.</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">El hecho de tener que buscar aplicaciones en otros sitios que no estén en los repositorios (como Nitro Tasks) y encontrar el paquete adecuado para nuestra distribución, también puede ser un reto, pero es algo que los usuarios de Windows perciben como normal.</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Por otro lado también queremos destacar que aunque el proceso de actualización de aplicaciones es muy sencillo, esto no implica que no nos podamos llevar sorpresas. Si no se quiere arriesgar la estabilidad del sistema, hay que realizar las actualizaciones ya testeadas y estables.</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Más allá de esto y contando con un administrador de sistemas que tenga cierta experiencia en GNU/Linux, no se nos ocurren razones por las que las empresas deberían seguir pagando su licencia de Windows.</font><br /><br /><br /><br /><a href="http://www.muypymes.com/2013/12/30/como-trabajo-con-linux-en-mi-empresa" target="_blank" rel="nofollow"><font size="4" style="line-height: 1.3em;"><b>&lt;fuente&gt;</b></font></a><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">8</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 4/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">2835</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">5</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(331331,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(331331,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(331331,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(331331,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(331331,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(331331,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(331331,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(331331,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(331331,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(331331,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Umbrella_Corporation_logo.svg/245px-Umbrella_Corporation_logo.svg.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1638629" title="perfil de wesker_x37"> wesker_x37</a>: <b>3 pts</b></span>  </li><li><img id="error_avatar" src="http://blog.tmcnet.com/blog/tom-keating/images/Hal-9000.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1637309" title="perfil de hora1101"> hora1101</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(331331);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('331331');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_22"></i>
+<a href="https://identi.io/index.php?topic=402136" title="El software de Microsoft es malware"> El software de Microsoft es malware</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=366759" title="Huayra 3, distro educativa con sello argentino"> Huayra 3, distro educativa con sello argentino</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_113"></i>
+<a href="https://identi.io/index.php?topic=365704" title="Pirate Bay: catálogo de la Biblioteca de Babel [2]"> Pirate Bay: catálogo de la Biblioteca de Babel [2]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_113"></i>
+<a href="https://identi.io/index.php?topic=365493" title="Pirate Bay: catálogo de la Biblioteca de Babel [1]"> Pirate Bay: catálogo de la Biblioteca de Babel [1]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_113"></i>
+<a href="https://identi.io/index.php?topic=364852" title="Google, imperialismo dospuntocero"> Google, imperialismo dospuntocero</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=364548" title="¿Por qué elegir openSUSE?"> ¿Por qué elegir openSUSE?</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=362530" title="El formato unificado de paquetes está por llegar"> El formato unificado de paquetes está por llegar</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=362364" title="K3b, grabación de CD y DVD"> K3b, grabación de CD y DVD</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">22</span> Comentarios</span>
+<span class="onpost"> Un caso práctico de GNU/Linux en una empresa</span>
+<div class="comentario"></div><div id="comment_3539402" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Joe_Dirt" href="?action=profile;user=Joe_Dirt">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-aGIARsvc-vQ/T7EhV4kYRfI/AAAAAAAACBE/I4P0HtY8w7M/s1600/joeDirt_240x260_112520080438.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1896614" href="?action=profile;user=Joe_Dirt">Joe_Dirt</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1407877924" title="12/08/2014 a las 21:12 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+El gran problema de hacer una migraci?
+</div>
+</div>
+</div>
+</div><div id="comment_3539450" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="seriketz" href="?action=profile;user=seriketz">
+<img id="error_avatar" src="http://s3.subirimagenes.com:81/privadas/previo/thump_1734601river-ate-avatar.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="63032" href="?action=profile;user=seriketz">seriketz</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1407879105" title="12/08/2014 a las 21:31 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Es verdad, la gente se resiste al cambio. En esa experience les fue bien porque dicen que gran parte del trabajo esta orientado a web, por lo que los usuarios son un poco m?
+</div>
+</div>
+</div>
+</div><div id="comment_3539493" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="krato" href="?action=profile;user=krato">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-4EkPUOwGpmU/VMV1fN_QWxI/AAAAAAAAAVU/GD1YvsBG1Ns/s1600/IMG_20150125_031036.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="51280" href="?action=profile;user=krato">krato</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1407880058" title="12/08/2014 a las 21:47 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1896614" href="https://identi.io/index.php?action=profile&user=Joe_Dirt" class="mensiones_identi">@Joe_Dirt</a> yo he usado algunas distribuciones linux, windows Xp, 7, y ahora el 8, lo malo con linux es que hay demasiadas distribuciones tantas que aveces agobian al usuario que quiere salirse de windows, no obstante puedes elegir entre 3 o 4 que ser?
+</div>
+</div>
+</div>
+</div><div id="comment_3539551" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="sominus" href="?action=profile;user=sominus">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1876152" href="?action=profile;user=sominus">sominus</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1407881903" title="12/08/2014 a las 22:18 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+No quiero entrar en el interminable debate de *por qu?
+</div>
+</div>
+</div>
+</div><div id="comment_3539906" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="illukki" href="?action=profile;user=illukki">
+<img id="error_avatar" src="https://tranccuilo.files.wordpress.com/2012/10/mono.jpeg?w=60" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1547015" href="?action=profile;user=illukki">illukki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1407889946" title="13/08/2014 a las 0:32 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Concuerdo con lo que dicen mas arriba pero, a ver, en las empresas, negocios y estamentos estatales, la respuesta a las quejas de los empleados debe ser: seran capacitados en su uso y a nadie le importa si les gusta o no, son empleados, si no les gusta se van y chau. Las organizaciones no se pueden estancar porque la gente -que si es rapida para usar FB, Tweeter o Whatssap- no quieren cambiar las herramientas que encima en la mayoria de los casos son exactamente iguales. <br /><blockquote><div class="cita">Cita krato: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">lo malo de linux es que encuentras:<br />Ubuntu: Lubuntu, Kubuntu, Xubuntu, etc.<br />Debian: Crunch bang, y Debian puro con otros entornos,<br />Fedora<br />Open suse<br />Manjaro<br />Arch linux<br />Puppie linux<br />Darwin Os</div></blockquote>No creo que la variedad sea mala, ademas como sabras ya que usaste GNU/Linux, la diferencia para el usuario final entre las distintas distros son los escritorios -los iconos, el lugar de las cosas, los nombres de las aplicaciones, etc- nada dificil de aprender en unas semanas.<br /><br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">De momento estoy usando W8 pero no me gusta la interfaz metro, as?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3540021" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="kikesofth" href="?action=profile;user=kikesofth">
+<img id="error_avatar" src="https://i.postimg.cc/BnTtdFBR/mevoyalcarajo.gif\'" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1555496" href="?action=profile;user=kikesofth">kikesofth</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1407892595" title="13/08/2014 a las 1:16 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Excelente tema y desglose del mismo, a favoritos para poner en practica una que otra recomendacion, excelente post amigo, saludos!!!! <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3541031" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="hora1101" href="?action=profile;user=hora1101">
+<img id="error_avatar" src="http://blog.tmcnet.com/blog/tom-keating/images/Hal-9000.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1637309" href="?action=profile;user=hora1101">hora1101</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1407943419" title="13/08/2014 a las 15:23 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+a veces me da la idea de cambiar mi maquina de trabajo a linux, actualmente tiene win7, para ver si puede funcionar, que dificultades salen, etc. Pero esta complicado porque hay que tener una maquina funcional para sacar la el trabajo de diario, no puedo excusarme de no tener mi trabajo listo por no tener mi maquina con un problema x porque decidi pasarme a linux. Pero este articulo me animo, voy a ver si me gestionan una maquina vieja de las que vamos retirando para probar en esa sin afectar mi maquina de trabajo.
+</div>
+</div>
+</div>
+</div><div id="comment_3542298" class="comentario coment_id_8">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1407982757" title="14/08/2014 a las 2:19 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1637309" href="https://identi.io/index.php?action=profile&user=hora1101" class="mensiones_identi">@hora1101</a> Primero hay que elegir una distribuci?
+</div>
+</div>
+</div>
+</div><div id="comment_3543007" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="hora1101" href="?action=profile;user=hora1101">
+<img id="error_avatar" src="http://blog.tmcnet.com/blog/tom-keating/images/Hal-9000.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1637309" href="?action=profile;user=hora1101">hora1101</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408026818" title="14/08/2014 a las 14:33 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1533336" href="https://identi.io/index.php?action=profile&user=superlogic" class="mensiones_identi">@superlogic</a> gracias, actualmente uso elementary os en mi computadora (la mia, de mi casa), tambien he usado ubuntu, mint, open suse, kubuntu y bodi. El dual boot no me agrada para nada, prefiero las maquinas virtuales, lo malo que en maquinas virtuales no puedes probar realmente como se comportara el sistema con el hardware de la maquina. Por eso mejor tener otra maquina, para tener nativos los dos sistemas, alguna distro que recomiendes?
+</div>
+</div>
+</div>
+</div><div id="comment_3543120" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="krato" href="?action=profile;user=krato">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-4EkPUOwGpmU/VMV1fN_QWxI/AAAAAAAAAVU/GD1YvsBG1Ns/s1600/IMG_20150125_031036.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="51280" href="?action=profile;user=krato">krato</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408030755" title="14/08/2014 a las 15:39 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1637309" href="https://identi.io/index.php?action=profile&user=hora1101" class="mensiones_identi">@hora1101</a> Usa otro disco o particionalo, no necesitar?
+</div>
+</div>
+</div>
+</div><div id="comment_3543258" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="krato" href="?action=profile;user=krato">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-4EkPUOwGpmU/VMV1fN_QWxI/AAAAAAAAAVU/GD1YvsBG1Ns/s1600/IMG_20150125_031036.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="51280" href="?action=profile;user=krato">krato</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408034353" title="14/08/2014 a las 16:39 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1547015" href="https://identi.io/index.php?action=profile&user=illukki" class="mensiones_identi">@illukki</a> Lo malo de tantas distribuciones es que un usuario que no sabe nada se agobia con tantas, a parte de estar acostumbrado a los instaladores gr?
+</div>
+</div>
+</div>
+</div><div id="comment_3543824" class="comentario coment_id_12">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408052732" title="14/08/2014 a las 21:45 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1637309" href="https://identi.io/index.php?action=profile&user=hora1101" class="mensiones_identi">@hora1101</a> Con las m?
+</div>
+</div>
+</div>
+</div><div id="comment_3543831" class="comentario coment_id_14">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408053031" title="14/08/2014 a las 21:50 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita krato: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><a usuario="1637309" href="https://identi.io/index.php?action=profile&user=hora1101" class="mensiones_identi">@hora1101</a> Usa otro disco o particionalo, no necesitar?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3543900" class="comentario coment_id_15">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408054849" title="14/08/2014 a las 22:20 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1896614" href="https://identi.io/index.php?action=profile&user=Joe_Dirt" class="mensiones_identi">@Joe_Dirt</a> <a usuario="63032" href="https://identi.io/index.php?action=profile&user=seriketz" class="mensiones_identi">@seriketz</a> <a usuario="1876152" href="https://identi.io/index.php?action=profile&user=sominus" class="mensiones_identi">@sominus</a> Los usuarios son una de las partes importantes en una migraci?
+</div>
+</div>
+</div>
+</div><div id="comment_3543905" class="comentario coment_id_16">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408054958" title="14/08/2014 a las 22:22 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita kikesofth: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Excelente tema y desglose del mismo, a favoritos para poner en practica una que otra recomendacion, excelente post amigo, saludos!!!! <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote>Gracias! &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3543917" class="comentario coment_id_17">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408055325" title="14/08/2014 a las 22:28 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita illukki: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Concuerdo con lo que dicen mas arriba pero, a ver, en las empresas, negocios y estamentos estatales, la respuesta a las quejas de los empleados debe ser: seran capacitados en su uso y a nadie le importa si les gusta o no, son empleados, si no les gusta se van y chau. Las organizaciones no se pueden estancar porque la gente -que si es rapida para usar FB, Tweeter o Whatssap- no quieren cambiar las herramientas que encima en la mayoria de los casos son exactamente iguales. </div></blockquote>Totalmente de acuerdo! &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /><br />Y como comentaba, la configuraci?
+</div>
+</div>
+</div>
+</div><div id="comment_3545212" class="comentario coment_id_18">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="krato" href="?action=profile;user=krato">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-4EkPUOwGpmU/VMV1fN_QWxI/AAAAAAAAAVU/GD1YvsBG1Ns/s1600/IMG_20150125_031036.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="51280" href="?action=profile;user=krato">krato</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408118478" title="15/08/2014 a las 16:01 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita superlogic: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Es una buena opci?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3545370" class="comentario coment_id_19">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="awap124" href="?action=profile;user=awap124">
+<img id="error_avatar" src="http://a08.t26.net/avatares/4/4/4/1/120_4441025.jpg?357615" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="19812" href="?action=profile;user=awap124">awap124</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408122769" title="15/08/2014 a las 17:12 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita krato: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><a usuario="1896614" href="https://identi.io/index.php?action=profile&user=Joe_Dirt" class="mensiones_identi">@Joe_Dirt</a> yo he usado algunas distribuciones linux, windows Xp, 7, y ahora el 8, lo malo con linux es que hay demasiadas distribuciones tantas que aveces agobian al usuario que quiere salirse de windows, no obstante puedes elegir entre 3 o 4 que ser?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3545464" class="comentario coment_id_20">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="zeuscorp" href="?action=profile;user=zeuscorp">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="76801" href="?action=profile;user=zeuscorp">zeuscorp</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408125550" title="15/08/2014 a las 17:59 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Excelente post, yo soy de la idea de que se puede migrar a Linux sin mayor complicaci?
+</div>
+</div>
+</div>
+</div><div id="comment_3546460" class="comentario coment_id_21">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408153540" title="16/08/2014 a las 1:45 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="51280" href="https://identi.io/index.php?action=profile&user=krato" class="mensiones_identi">@krato</a> Esos Ubuntu me simpatizaban, desde que pas?
+</div>
+</div>
+</div>
+</div><div id="comment_3546464" class="comentario coment_id_22">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408153683" title="16/08/2014 a las 1:48 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="76801" href="https://identi.io/index.php?action=profile&user=zeuscorp" class="mensiones_identi">@zeuscorp</a> Sin la buena voluntad del usuario se torna imposible, &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /><br />Les terminaste ganando igual, &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3547856" class="comentario coment_id_23">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="krato" href="?action=profile;user=krato">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-4EkPUOwGpmU/VMV1fN_QWxI/AAAAAAAAAVU/GD1YvsBG1Ns/s1600/IMG_20150125_031036.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="51280" href="?action=profile;user=krato">krato</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408220004" title="16/08/2014 a las 20:13 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita awap124: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Como instalaste openbox sobre windows si no existe tal versi?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_1.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994af79b3bacdeaa',t:'MTc2MTQ5MjMzNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
