@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Eliminar espacios de la información de mediainfo - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Supungo que muchos uploaders al copiar la información de un archivo de vídeo presentada por &nbsp;mediainfo y pegar y centralizar han notado que se hace una especie de reguero como la siguiente: Gen..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='T2Z4Yms2QkhYTTN4UDlwVTJGc2RHVmtYMStER0doQlp1ckhqcjdwc3R6Q05McGJ1U2g1T2NYdlBXRDREdzhhNXYzT09GUEpPSy9NTk5iOTJzM1ovNVVjNjY1T0hWMzYrOTNQZnc9PXJvZHhXT1IxaGNtQmxIdQ==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761479850;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '306b0f56ae43fc6ed63715c8d07df123');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_3.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Eliminar espacios de la información de mediainfo" title="Identi - Eliminar espacios de la información de mediainfo" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '951e35127743884ec1cea02c676e951fca95e4ba';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Espinal">Espinal</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"......"
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Espinal" title="Ir al Perfil de Espinal"><img id="error_avatar" class="avatar" border="0" width="120" src="https://1.bp.blogspot.com/-5dfb51110cw/WlZjhVidNEI/AAAAAAAAABc/2cwTE7Rk-WE9eLH0t-ZOlgFPtKHHBxfZwCLcBGAs/s1600/aaa.png"/></a>
+<div class=" rango_sidebar clearfix">Mustache</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/do.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/mustache.gif" title="Mustache" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1681490)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1681490');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">629</b> Seguidores</li>
+<li><b>48950</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>418</b> Posts</li>
+<li><b>4315</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="en_reciclaje clearfix">
+<span class="cols"><img class="floatL" src="https://identi.io/images/eliminado.png"  border="0" width="128" height="128"/></span>
+<span class="left cols">
+<span class="title">Oops.. Este post tiene los enlaces eliminados! </span>
+<p>Identi revisa las denuncias de los usuarios en busca de enlaces eliminados que no dejan descargar los archivos, este mensaje te informa que este post que estas viendo <b>tiene los enlaces eliminados.</b></p>
+</span>
+<span class="right cols" >
+<span class="title">Usa el Buscador</span>
+<p>Por favor, te recomendamos que uses el buscador para encontrar m&aacute;s alternativas.</p>
+<form class="search_here" action="https://identi.io/index.php?action=buscador" method="POST">
+<input type="text" class="text-inp" name="search"/> <input type="submit" value="Buscar"/>
+</form>
+</span>
+</div><div class="header_post clearfix" >
+<h1 class="title_post">Eliminar espacios de la información de mediainfo</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=473002';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=473004';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=124" alt="Reciclaje" title="Reciclaje">Reciclaje</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 8 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1135034">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><font size="4" style="line-height: 1.3em;"><span style="font-family: Serif;"><b><span style="color: #33cc33;">Supungo que muchos uploaders al copiar la información de un archivo de vídeo presentada por &nbsp;mediainfo y pegar y centralizar han notado que se hace una especie de reguero como la siguiente:</span></b><br /><br />General<br />Unique ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 195654210799690169329924443372771354482 (0x9331A15D77CAEABD80634A5422242772)<br />Complete name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: /home/onerquis/Escritorio/Cincuenta Sombras .mkv<br />Format &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : Matroska<br />Format version &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : Version 4 / Version 2<br />File size &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 1.24 GiB<br />Duration &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 2h 11mn<br />Overall bit rate &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 1 349 Kbps<br />Movie name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : <a href="http://www.identi.li/index.php?action=profile;user=ivanla12" target="_blank" rel="nofollow">http://www.identi.li/index.php?action=profile;user=ivanla12</a><br />Encoded date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : UTC 2017-04-25 12:43:00<br />Writing application &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: mkvmerge v8.3.0 (&#039;Over the Horizon&#039;) 64bit<br />Writing library &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: libebml v1.3.1 + libmatroska v1.4.2<br />DURATION &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 02:11:28.992000000<br />NUMBER_OF_FRAMES &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 246531<br />NUMBER_OF_BYTES &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 252447744<br />_STATISTICS_WRITING_APP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: mkvmerge v8.3.0 (&#039;Over the Horizon&#039;) 64bit<br />_STATISTICS_WRITING_DATE_UTC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 2017-04-25 12:43:00<br />_STATISTICS_TAGS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES<br /><br />Video<br />ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 1<br />Format &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : AVC<br />Format/Info &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Advanced Video Codec<br />Format profile &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eea6878986aea2dac0df">[email&#160;protected]</a><br />Format settings, CABAC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : Yes<br />Format settings, ReFrames &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 5 frames<br />Codec ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : V_MPEG4/ISO/AVC<br />Duration &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 2h 11mn<br />Nominal bit rate &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 1 027 Kbps<br />Width &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 1 280 pixels<br />Height &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 532 pixels<br />Display aspect ratio &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 2.40:1<br />Frame rate mode &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Constant<br />Frame rate &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 23.976 fps<br />Color space &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: YUV<br />Chroma subsampling &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 4:2:0<br />Bit depth &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 8 bits<br />Scan type &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Progressive<br />Bits/(Pixel*Frame) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 0.063<br />Title &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: <a href="http://www.identi.li/index.php?action=profile;user=ivanla12" target="_blank" rel="nofollow">http://www.identi.li/index.php?action=profile;user=ivanla12</a><br />Writing library &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: x264 core 133 r2334 a3ac64b<br />Encoding settings &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: cabac=1 / ref=5 / deblock=1:-1:-1 / analyse=0x3:0x113 / me=umh / subme=8 / psy=1 / psy_rd=1.00:0.00 / mixed_ref=1 / me_range=16 / chroma_me=1 / trellis=1 / 8x8dct=1 / cqm=0 / deadzone=21,11 / fast_pskip=1 / chroma_qp_offset=-2 / threads=48 / lookahead_threads=4 / sliced_threads=0 / nr=0 / decimate=1 / interlaced=0 / bluray_compat=0 / constrained_intra=0 / bframes=3 / b_pyramid=2 / b_adapt=2 / b_bias=0 / direct=3 / weightb=1 / open_gop=0 / weightp=2 / keyint=240 / keyint_min=23 / scenecut=40 / intra_refresh=0 / rc_lookahead=50 / rc=2pass / mbtree=1 / bitrate=1027 / ratetol=1.0 / qcomp=0.60 / qpmin=10 / qpmax=51 / qpstep=4 / cplxblur=20.0 / qblur=0.5 / vbv_maxrate=62500 / vbv_bufsize=78125 / nal_hrd=none / ip_ratio=1.40 / aq=1:1.00<br />Default &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Yes<br />Forced &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : No<br /><br />Audio #1<br />ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 2<br />Format &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : AC-3<br />Format/Info &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Audio Coding 3<br />Mode extension &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : CM (complete main)<br />Format settings, Endianness &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Big<br />Codec ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : A_AC3<br />Duration &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 2h 11mn<br />Bit rate mode &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Constant<br />Bit rate &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 256 Kbps<br />Channel(s) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 2 channels<br />Channel positions &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Front: L R<br />Sampling rate &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 48.0 KHz<br />Compression mode &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : Lossy<br />Stream size &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 241 MiB (19%)<br />Title &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Latino - <a href="http://www.identi.li/index.php?action=profile;user=ivanla12" target="_blank" rel="nofollow">http://www.identi.li/index.php?action=profile;user=ivanla12</a><br />Language &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : Spanish<br />Default &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Yes<br />Forced &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : No<br /><br />Audio #2<br />ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 3<br />Format &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : AAC<br />Format/Info &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Advanced Audio Codec<br />Format profile &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : HE-AAC / LC<br />Codec ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : A_AAC<br />Duration &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 2h 11mn<br />Channel(s) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 2 channels<br />Channel positions &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Front: L R<br />Sampling rate &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 48.0 KHz / 24.0 KHz<br />Compression mode &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : Lossy<br />Delay relative to video &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: 31ms<br />Title &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Ingles - <a href="http://www.identi.li/index.php?action=profile;user=ivanla12" target="_blank" rel="nofollow">http://www.identi.li/index.php?action=profile;user=ivanla12</a><br />Language &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : English<br />Default &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: No<br />Forced &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : No<br /><br />Text #1<br />ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 4<br />Format &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : UTF-8<br />Codec ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : S_TEXT/UTF8<br />Codec ID/Info &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: UTF-8 Plain Text<br />Title &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: FORZADOS - <a href="http://www.identi.li/index.php?action=profile;user=ivanla12" target="_blank" rel="nofollow">http://www.identi.li/index.php?action=profile;user=ivanla12</a><br />Language &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : Spanish<br />Default &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Yes<br />Forced &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : No<br /><br />Text #2<br />ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 5<br />Format &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : UTF-8<br />Codec ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : S_TEXT/UTF8<br />Codec ID/Info &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: UTF-8 Plain Text<br />Title &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: Español - <a href="http://www.identi.li/index.php?action=profile;user=ivanla12" target="_blank" rel="nofollow">http://www.identi.li/index.php?action=profile;user=ivanla12</a><br />Language &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : Spanish<br />Default &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: No<br />Forced &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : No<br /><br /><br /><span style="color: #3333ff;"><br /><b>Pues yo trabajando una pc con idioma inglés me vi tentado a traducir al español y observe lo siguiente:</b></span><br /><img id="img_post" src="https://1.bp.blogspot.com/-XOkhN1-BBTM/WUcdX5S1beI/AAAAAAAABpQ/xzlwCnY8QJAHOKE-YC9dT-Zgg2Cho9H5wCLcBGAs/s1600/A.png" border="0"><br /><br /><span style="color: #3333ff;"><b>Pues solo hay que copiar la información de mediainfo en Google traductor y traducir del Español al Español y los espacios serán eliminados.</b></span><br /><br /><span style="color: #ff3333;"><b><br />Así al centralizar la información de mediainfo se verá:</b></span><br /><br />General<br />ID única: 195654210799690169329924443372771354482 (0x9331A15D77CAEABD80634A5422242772)<br />Nombre completo: / home / onerquis / Escritorio / Cincuenta Sombras .mkv<br />Formato: Matroska<br />Versión del formato: Versión 4 / Versión 2<br />Tamaño de archivo: 1.24 GiB<br />Duración: 2h 11mn<br />Velocidad de bits global: 1 349 Kbps<br />Nombre de la película: <a href="http://www.identi.li/index.php?action=profile;user=ivanla12" target="_blank" rel="nofollow">http://www.identi.li/index.php?action=profile;user=ivanla12</a><br />Fecha codificada: UTC 2017-04-25 12:43:00<br />Aplicación de escritura: mkvmerge v8.3.0 (&#039;Over the Horizon&#039;) 64 bits<br />Librería de escritura: libebml v1.3.1 + libmatroska v1.4.2<br />DURACIÓN: 02: 11: 28.992000000<br />NUMBER_OF_FRAMES: 246531<br />NUMBER_OF_BYTES: 252447744<br />_STATISTICS_WRITING_APP: mkvmerge v8.3.0 (&#039;Sobre el Horizonte&#039;) 64 bits<br />_STATISTICS_WRITING_DATE_UTC: 2017-04-25 12:43:00<br />_STATISTICS_TAGS: BPS DURACIÓN NUMBER_OF_FRAMES NUMBER_OF_BYTES<br /><br />Vídeo<br />ID: 1<br />Formato: AVC<br />Formato / información: Advanced Video Codec<br />Perfil del formato: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="753d1c121d3539415b44">[email&#160;protected]</a><br />Configuración de formato, CABAC: Sí<br />Ajustes de formato, ReFrames: 5 marcos<br />Codec ID: V_MPEG4 / ISO / AVC<br />Duración: 2h 11mn<br />Velocidad binaria nominal: 1 027 Kbps<br />Anchura: 1 280 píxeles<br />Altura: 532 píxeles<br />Relación de aspecto de la pantalla: 2.40: 1<br />Modo de frecuencia de cuadros: Constante<br />Velocidad de fotogramas: 23.976 fps<br />Espacio de color: YUV<br />Subampleo de Chroma: 4: 2: 0<br />Profundidad de bits: 8 bits<br />Tipo de escaneo: progresivo<br />Bits / (Pixel * Frame): 0.063<br />Título: <a href="http://www.identi.li/index.php?action=profile;user=ivanla12" target="_blank" rel="nofollow">http://www.identi.li/index.php?action=profile;user=ivanla12</a><br />Biblioteca de escritura: x264 core 133 r2334 a3ac64b<br />Configuración de codificación: cabac = 1 / ref = 5 / deblock = 1: -1: -1 / analizar = 0x3: 0x113 / me = umh / subme = 8 / psy = 1 / psy_rd = 1,00: 0,00 / mixed_ref = 1 / me_range = 16 / chroma_me = 1 / trellis = 1 / 8x8dct = 1 / cqm = 0 / deadzone = 21,11 / fast_pskip = 1 / chroma_qp_offset = -2 / threads = 48 / lookahead_threads = 4 / sliced_threads = 0 / nr = 0 / / = 2 / b_adapt = 2 / b_bias = 0 / direct = 3 / weightb = 1 / open_gop = 0 / weightp = 2 / keyint = 240 / keyint_min = 23 / scenecut = 40 / intra_refresh = 0 / rc_lookahead = 50 / rc = 2pass / mbtree = 1 / tasa de bits = 1027 / ratetol = 1,0 / qcomp = 0,60 / qpmin = 10 / qpmax = 51 / qpstep = 4 / Cplxblur = 20.0 / qblur = 0.5 / vbv_maxrate = 62500 / vbv_bufsize = 78125 / nal_hrd = ninguno / ip_ratio = 1.40 / aq = 1: 1.00<br />Predeterminado: Sí<br />Forzado: No<br /><br />Audio # 1<br />ID: 2<br />Formato: AC-3<br />Formato / Información: Codificación de audio 3<br />Extensión de modo: CM (completo principal)<br />Ajustes de formato, Endianness: Big<br />Codec ID: A_AC3<br />Duración: 2h 11mn<br />Modo de velocidad de bits: Constante<br />Velocidad binaria: 256 Kbps<br />Canal (es): 2 canales<br />Posiciones del canal: Delantero: L R<br />Frecuencia de muestreo: 48.0 KHz<br />Modo de compresión: Lossy<br />Tamaño de la corriente: 241 MiB (19%)<br />Título: Latino - <a href="http://www.identi.li/index.php?action=profile;user=ivanla12" target="_blank" rel="nofollow">http://www.identi.li/index.php?action=profile;user=ivanla12</a><br />Idioma: Español<br />Predeterminado: Sí<br />Forzado: No<br /><br />Audio # 2<br />ID: 3<br />Formato: AAC<br />Formato / Información: Advanced Audio Codec<br />Formato de perfil: HE-AAC / LC<br />Codec ID: A_AAC<br />Duración: 2h 11mn<br />Canal (es): 2 canales<br />Posiciones del canal: Delantero: L R<br />Frecuencia de muestreo: 48.0 KHz / 24.0 KHz<br />Modo de compresión: Lossy<br />Retardo en relación con el vídeo: 31ms<br />Título: Ingles - <a href="http://www.identi.li/index.php?action=profile;user=ivanla12" target="_blank" rel="nofollow">http://www.identi.li/index.php?action=profile;user=ivanla12</a><br />Idioma<br /><br /><span style="color: #339933;"><br /><font size="5" style="line-height: 1.3em;"><b>Si tienes una alternativa más fácil y eficiente que esta compártela y citarme.</b></font></span><br /><br /><br /><br /><br /></span></font></div><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">16</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 2/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">938</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">1</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(473003,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(473003,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(473003,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(473003,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(473003,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(473003,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(473003,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(473003,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(473003,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(473003,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://s6.postimg.cc/ypajvuz8x/Mi_Logo.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1569502" title="perfil de Tortuga3"> Tortuga3</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-J31-bNWFBOA/WRjehM4qvFI/AAAAAAAANE0/CDPcxrFL8mMK7T3J_0WHq8swlGviD_BQQCLcB/s1600/GothamOswald_5331bd08929988.09398181.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1998826" title="perfil de lLanister"> lLanister</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-0r296OGh12Q/UDK6H2YSTdI/AAAAAAAAAUQ/o6YT5gTBUcY/s1600/BetaAvatar.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1550437" title="perfil de Betancourt"> Betancourt</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/7c/7c45bb11861540a5083d5ed31f5ec39370034d71_full.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=125752" title="perfil de Gonzalosor"> Gonzalosor</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="http://www4.pictures.zimbio.com/gi/Ignacio+Scocco+River+Plate+vs+Boca+Juniors+ORtOO2tzjpql.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1726690" title="perfil de Leopulga"> Leopulga</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/--79hH5UUqyI/YBuYLXqxi7I/AAAAAAAAAbM/3xUFLY-0UbkeRwT6NAVRT4qOks7e7Y3vwCLcBGAsYHQ/s416/perfect.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1557644" title="perfil de hooderbm"> hooderbm</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://i.postimg.cc/WpdJ7bx0/18136973-10207856010712306-93638568-n.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1951218" title="perfil de Jcarlosmm"> Jcarlosmm</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="http://media3.giphy.com/media/13EgsbsNCLHXJm/giphy.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=80222" title="perfil de rino"> rino</a>: <b>2 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(473003);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('473003');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=567789" title="Edición de Textos Científicos LaTEX (2021) Mega-G"> Edición de Textos Científicos LaTEX (2021) Mega-G</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=563030" title="Edición de Textos Científicos LaTEX (2017) Mega-G"> Edición de Textos Científicos LaTEX (2017) Mega-G</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=554526" title="Biblioteca filosófico-política Parte 2"> Biblioteca filosófico-política Parte 2</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=554525" title="Biblioteca filosófico-política Parte 1"> Biblioteca filosófico-política Parte 1</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=535996" title="Mi nombre es Khan (2010) | 1080p | Dual | Mega"> Mi nombre es Khan (2010) | 1080p | Dual | Mega</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=535747" title="Mi nombre es Khan (2010)|720p|Dual|GD-MEGA"> Mi nombre es Khan (2010)|720p|Dual|GD-MEGA</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=532171" title="El Rey de Najayo( 2012)|Latino|DVDrip|GD|Mega"> El Rey de Najayo( 2012)|Latino|DVDrip|GD|Mega</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=526989" title="Romeo Santos | Utopia (Album) (2019) |Mp3|320kbps"> Romeo Santos | Utopia (Album) (2019) |Mp3|320kbps</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">9</span> Comentarios</span>
+<span class="onpost"> Eliminar espacios de la información de mediainfo</span>
+<div class="comentario"></div><div id="comment_4971237" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Tortuga3" href="?action=profile;user=Tortuga3">
+<img id="error_avatar" src="https://s6.postimg.cc/ypajvuz8x/Mi_Logo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1569502" href="?action=profile;user=Tortuga3">Tortuga3</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1497834567" title="19/06/2017 a las 1:09 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> Gracias por el dato pero me da flojera hacerlo &nbsp;<img src="https://identi.io/Smileys/default/icon_razz.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_razz.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4971243" class="comentario coment_id_2">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Espinal" href="?action=profile;user=Espinal">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-5dfb51110cw/WlZjhVidNEI/AAAAAAAAABc/2cwTE7Rk-WE9eLH0t-ZOlgFPtKHHBxfZwCLcBGAs/s1600/aaa.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1681490" href="?action=profile;user=Espinal">Espinal</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1497835140" title="19/06/2017 a las 1:19 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1569502" href="https://identi.io/index.php?action=profile&user=Tortuga3" class="mensiones_identi">@Tortuga3</a> &nbsp;Vago &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4971246" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Eve1287" href="?action=profile;user=Eve1287">
+<img id="error_avatar" src="http://s0.hulkshare.com/song_images/original/9/9/3/9932f27c41b43a07a68d0aef1c702951.jpg?dd=-62169985172" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1992658" href="?action=profile;user=Eve1287">Eve1287</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1497835450" title="19/06/2017 a las 1:24 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+sabes que si da flojera, asi como el post de ivanla que ponga 249429049024mil veces su nombre y su usuario de identi, con que lo ponga una vez esta bien pero es tipico de gente asi tipo presumida
+</div>
+</div>
+</div>
+</div><div id="comment_4971622" class="comentario coment_id_4">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Espinal" href="?action=profile;user=Espinal">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-5dfb51110cw/WlZjhVidNEI/AAAAAAAAABc/2cwTE7Rk-WE9eLH0t-ZOlgFPtKHHBxfZwCLcBGAs/s1600/aaa.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1681490" href="?action=profile;user=Espinal">Espinal</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1497881405" title="19/06/2017 a las 14:10 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1992658" href="https://identi.io/index.php?action=profile&user=Eve1287" class="mensiones_identi">@Eve1287</a> No avía notado que tanta veces sale el usuario de Ivanla12, Pude verlo quitado , pero no tuve motivos , no lo pensé , Elegí una peli al azar para el ejemplo si hubiese sido tulla y tuviera tu datos en la información de vídeo tu nombre estuviera 249429049024mil veces en la información.
+</div>
+</div>
+</div>
+</div><div id="comment_4971950" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Eve1287" href="?action=profile;user=Eve1287">
+<img id="error_avatar" src="http://s0.hulkshare.com/song_images/original/9/9/3/9932f27c41b43a07a68d0aef1c702951.jpg?dd=-62169985172" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1992658" href="?action=profile;user=Eve1287">Eve1287</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1497901382" title="19/06/2017 a las 19:43 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1681490" href="https://identi.io/index.php?action=profile&user=Espinal" class="mensiones_identi">@Espinal</a> si sale demasiado, porque no mejor hace una pelicula con su nombre digo asi lo notariamos mas, si hubieras elegido la mia hubiera sido mejor que la que elegiste, porque no hubiera tenido publicidad, simplemente la informacion necesaria de la pelicula, no necesito ponerle mi nombre a la pelicula, la pelicula no es mia no la cree yo asi que no es inteligente ponerle nombres de nosotros a las pelis
+</div>
+</div>
+</div>
+</div><div id="comment_4971975" class="comentario coment_id_6">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Espinal" href="?action=profile;user=Espinal">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-5dfb51110cw/WlZjhVidNEI/AAAAAAAAABc/2cwTE7Rk-WE9eLH0t-ZOlgFPtKHHBxfZwCLcBGAs/s1600/aaa.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1681490" href="?action=profile;user=Espinal">Espinal</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1497903939" title="19/06/2017 a las 20:25 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">si sale demasiado, porque no mejor hace una pelicula con su nombre digo asi lo notariamos mas, si hubieras elegido la mia hubiera sido mejor que la que elegiste, porque no hubiera tenido publicidad, simplemente la informacion necesaria de la pelicula, no necesito ponerle mi nombre a la pelicula, la pelicula no es mia no la cree yo asi que no es inteligente ponerle nombres de nosotros a las pelis </div></blockquote><br /><b>Respeto tu posicíon &nbsp;</b> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4972176" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="JNEGRETE9" href="?action=profile;user=JNEGRETE9">
+<img id="error_avatar" src="https://25.media.tumblr.com/3f6226e250e3ffa426d379dffa7e6e18/tumblr_mf11v5roIl1r7tibko1_400.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1940570" href="?action=profile;user=JNEGRETE9">JNEGRETE9</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1497914824" title="19/06/2017 a las 23:27 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1681490" href="https://identi.io/index.php?action=profile&user=Espinal" class="mensiones_identi">@Espinal</a> Muy buen aporte y solución, aún con toda y la flojera que da la traducción, pero me perdí y estoy muy confundido en este paso y única instrucción:<br />¨Pues solo hay que copiar la información de mediainfo en Google traductor y traducir del Español al Español...¨ <br />Gracias de cualquier manera y saludos &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4972960" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Wallace_98" href="?action=profile;user=Wallace_98">
+<img id="error_avatar" src="http://www.ausmotive.com/images/Peugeot-908-HDi-05.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1994870" href="?action=profile;user=Wallace_98">Wallace_98</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1497965457" title="20/06/2017 a las 13:30 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias &nbsp;<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4973039" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="1980" href="?action=profile;user=1980">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1524146" href="?action=profile;user=1980">1980</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1497968305" title="20/06/2017 a las 14:18 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Jajajaj yo lo veo igual. Será porque navegó en celu?. Q pobreza la mia. &nbsp;<img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" />.... Y es de español a español. O de inglés a español?... Siempre ando rezagado. &nbsp;<img src="https://identi.io/Smileys/default/icon_ojitos.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_mad.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_3.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949c6ca8e6fdea9',t:'MTc2MTQ3OTg1MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
