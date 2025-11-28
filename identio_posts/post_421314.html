@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>¿Estamos preparados para guardar todo en la nube? - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Que tal queridos amigos de Identi, no publique esto en un tema de una comunidad, porque el contenido es algo mas largo y no se limita solo a la simple pregunta, es una pequeña reflexión sobre este..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='TjdsM29sTVk5d0pzYldhVTJGc2RHVmtYMTl3Nm5RQTZTV0hLV1NWSS9HbWxqRTRyVWJ6QTNNYmNpWDZnb216enpGcHIrMFJnVE9idXF0N3UwUXlZbHBndURKUVA2cnhTeTlCeUE9PWlmTWJFQm5RMjJneUpkRw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761481177;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '480be418117e31c3d729dbabf1016ffd');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_7.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - ¿Estamos preparados para guardar todo en la nube?" title="Identi - ¿Estamos preparados para guardar todo en la nube?" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '65cf55c5e6e6106613ae642be5efd01aba095855';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=YoBorg">YoBorg</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=YoBorg" title="Ir al Perfil de YoBorg"><img id="error_avatar" class="avatar" border="0" width="120" src="https://4.bp.blogspot.com/-VTM2NRve4CE/Vg7GC__AGII/AAAAAAAAAzs/ppwavRa8z90/s1600/images%2B%252841%2529.jpg" /></a>
+<div class=" rango_sidebar clearfix">New Full User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/es.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/newfull.png" title="New Full User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1943557)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1943557');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">5</b> Seguidores</li>
+<li><b>146</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>6</b> Posts</li>
+<li><b>66</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">¿Estamos preparados para guardar todo en la nube?</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=421313';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=421315';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=94" alt="Off-Topic" title="Off-Topic">Off-Topic</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 9 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1083343">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><img id="img_post" src="https://3.bp.blogspot.com/-DPd3hHnMhGE/VtMeWJa3MII/AAAAAAAAAsw/vELMwzCvrI4/s1600/Imagen25.jpg" border="0"></div><br /><div align="center"><img id="img_post" src="https://1.bp.blogspot.com/-8HMUDQ0A_UQ/Vx-OmL486dI/AAAAAAAAADk/moHVCCHZcqYzlWcw30MF8Aq06Xmn-gm2ACLcB/s1600/Imagen1.png" border="0"></div><br /><br /><div style="text-align: justify;"></div><br /><div align="center"><font size="3" style="line-height: 1.3em;"><img id="img_post" src="https://3.bp.blogspot.com/-WteJcSUDjk0/Vx-aoxnAUkI/AAAAAAAAAEI/ZArVO6dHX3IN6BgSEpo-fLHwCTC2oNlzQCLcB/s1600/Imagen5.jpg" border="0"></font></div><br /><div align="center"></div><br /><br /><div style="text-align: justify;"><font size="4" style="line-height: 1.3em;"><span style="font-family: Impact;">Que tal queridos amigos de Identi, no publique esto en un tema de una comunidad, porque el contenido es algo mas largo y no se limita solo a la simple pregunta, es una pequeña reflexión sobre este asunto que creo que gran importancia debido a los cambios que hemos notado últimamente con host como lolabits, mega y otros servicios de almacenamiento en la nube y me gustaria que podamos participar, cualquier opinión es bienvenida, gracias por su atención.</span></font></div><br /><div style="text-align: justify;"></div><br /><div style="text-align: justify;"></div><br /><div style="text-align: justify;"></div><br /><div style="text-align: justify;"></div><br /><div align="center"><font size="3" style="line-height: 1.3em;"><img id="img_post" src="https://2.bp.blogspot.com/-IORFWZwGdbo/Vx-aqsFrsVI/AAAAAAAAAEM/jHDearUr7qIY2AVwo7I7UfD76hXOpUr7gCLcB/s1600/Imagen6.jpg" border="0"></font></div><br /><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Arial;">Con la popularización de Internet y los servicios móviles, el almacenamiento en la nube está cada vez más presente en nuestra vida. Hoy en día no es para nada extraño que una persona tenga un smartphone, PC y tablet, y quiera mover sus archivos entre dispositivos sin dolores de cabeza.</span></font><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Arial;">La nube tiene grandes ventajas, pero también tiene sus inconvenientes, y por tanto será nuestra protagonista este post. ¿Ha evolucionado la nube lo suficiente como para que pueda ser nuestro almacenamiento principal? </span></font><br /><br /><div align="center"></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><span style="font-family: Arial;"><img id="img_post" src="https://2.bp.blogspot.com/-Y4QN2IguIyI/Vx-bABKhNeI/AAAAAAAAAEQ/9vkLEDhoXLU2g1ARvFjjo75_U2v2Mg8KQCLcB/s1600/Almacenamiento_Nube-630x450.jpg" border="0"></span></font></div><br /><div align="center"></div><br /><br /><font size="5" style="line-height: 1.3em;"><span style="font-family: Arial;"><b>¿es el momento de pasar a la nube?</b></span></font><br /><font size="5" style="line-height: 1.3em;"><span style="font-family: Arial;"></span></font><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Arial;">El almacenamiento en la nube es cada vez más barato y accesible al mundo. Si hace unos años teníamos en nuestras cuentas gratuitas un par de Gigabytes de almacenamiento gratuito, cada vez es más frecuente encontrarnos con servicios que nos permiten tener varios Gigabytes de datos.</span></font><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Arial;">En el tema de los dispositivos móviles, estamos comenzando a ver dispositivos como el <a href="http://www.elandroidelibre.com/2015/09/nextbit-robin-el-nuevo-smartphone-android-que-apuesta-todo-a-la-nube.html" target="_blank" rel="nofollow"><span style="color: #3366ff;">Nextbit Robin</span></a> que lo apuesta todo por la nube, pudiendo usarla como si se tratase de almacenamiento interno.</span></font><br /><br /><div align="center"><font size="4" style="line-height: 1.3em;"><span style="font-family: Arial;"><img id="img_post" src="https://3.bp.blogspot.com/-kJhCVuqvO7k/Vx-dHnCDayI/AAAAAAAAAEg/1r6RBbo7XSAS72t8a8e1kzU7rbAkJyINgCLcB/s1600/Imagen8.jpg" border="0"></span></font></div><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Arial;">La nube nos permite acceder a nuestros datos estemos donde estemos y cada vez es más accesible, pero tiene sus inconvenientes. Para empezar, si no disponemos de conexión a Internet no podremos acceder a nuestros datos, además de tener que utilizar muchas veces nuestros datos en emails y móviles para acceder a cualquiera de nuestros archivos.</span></font><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Arial;">Por otro lado, al guardar nuestros datos en un servidor externo, si la compañía quiere dejamos de ser dueños de los datos, como sucedió <a href="http://www.omicrono.com/2013/10/el-cierre-de-megaupload-elimino-mas-de-10-millones-de-archivos-legales/" target="_blank" rel="nofollow"><span style="color: #3366ff;">cuando el FBI obligó a cerrar Megaupload</span></a>. Imaginen que de un día para otro perdemos todos nuestros trabajos de la universidad porque deciden cerrar nuestra nube así por las buenas, no es algo que haga mucha gracia.</span></font><br /><br /><div align="center"><font size="4" style="line-height: 1.3em;"><span style="font-family: Arial;"><img id="img_post" src="https://3.bp.blogspot.com/-Nkwv6Jjf92o/Vx-dl1UOX1I/AAAAAAAAAEk/JLXNXrlmKY4kwNMRowFsVPyOV-E3hgF1wCLcB/s1600/Imagen9.jpg" border="0"></span></font></div><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Arial;">Muchos servicios de almacenamiento han surgido en los últimos años, algunos con cuentas gratuitas de varios GB, pero también así como surgen ya es una tendencia clarmente mas marcada que van desapareciendo con el tiempo, esto hace que tengamos que prepararnos mejor y tratar de anticipar estos cambios, a fin de evitar la pérdida de grandes cantidades de archivos que tenemos almacenado en algunos de estos servicios, precisamente por confiar en que los mismos puedan permanecer por mucho tiempo y no tengamos que hacer &quot;mudanzas masivas&quot; de archivos o otros servicios y volver adaptarnos a nuevas reglas y limitaciones de acuerdo a las características del nuevo servicio y peor, que dependamos del capricho de cualquier servicio gratuito que decida cerrar intespestivamente o limitar excesivamente el almacenaje, subidas y descargas a las cuentas free.</span></font><br /><br /><font size="4" style="line-height: 1.3em;"><span style="font-family: Arial;">Por eso es pertinente la pregunta ¿Han evolucionado los servicios en la nube lo suficiente como para que podamos prescindir del almacenamiento interno? ¿O por el contrario pensamos que la nube aún no está lista para imponerse como almacenamiento principal?</span></font><br /><br /><br /><br /><br /><br /><br /><div align="center"><font size="3" style="line-height: 1.3em;"><img id="img_post" src="https://4.bp.blogspot.com/-5HfSBHFbJBo/VtN80oupniI/AAAAAAAAAxM/H28aPIWLVVU/s1600/Imagen3.jpg" border="0"></font></div><br /><br /><br /><div align="center"><font size="3" style="line-height: 1.3em;"><img id="img_post" src="https://4.bp.blogspot.com/-FNXHAljSyLw/VtOBjzCZOPI/AAAAAAAAAxY/PBvbhrONMmE/s1600/YoBorg-final.jpg" border="0"></font></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">22</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 2/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1594</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">0</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(421314,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(421314,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(421314,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(421314,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(421314,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(421314,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(421314,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(421314,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(421314,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(421314,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://4.bp.blogspot.com/--2UU9eG24CY/T3YCBoMB7KI/AAAAAAAADf8/UnElQBeS3lE/s1600/tyris.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1635377" title="perfil de lamoncha"> lamoncha</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://s6.postimg.cc/ypajvuz8x/Mi_Logo.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1569502" title="perfil de Tortuga3"> Tortuga3</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://i1.wp.com/llgilopruebas.files.wordpress.com/2009/10/loro-02-96x96.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1738032" title="perfil de llgilo"> llgilo</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="http://imgfz.com/i/QXNKw3p.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1593733" title="perfil de mapodito"> mapodito</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://images2.imgbox.com/3c/34/nWTMnSYq_o.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1557750" title="perfil de javicho270"> javicho270</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://ibb.co/76RzC5R" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1807639" title="perfil de antuan6211"> antuan6211</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-hicz1L2JfzM/TlQLVdmIKTI/AAAAAAAAAA8/IFKcN4PkExU/s1600/51Q-1MkOl%252BL._SS500_.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1951484" title="perfil de BOLLYWOOD_"> BOLLYWOOD_</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-E08AsuoYcx0/VtWmYw8XJ6I/AAAAAAAAFpg/Y1mJl_d6P9w/s320/giphy.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1946829" title="perfil de Aldo009"> Aldo009</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="http://www.thegifcollector.com.ar/TgC_images_2501/comics/TgC_comic946.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1582580" title="perfil de bunburyzar"> bunburyzar</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://i.postimg.cc/5NVsZKfv/A6.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1941817" title="perfil de cesarbbcc"> cesarbbcc</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="http://a11.t26.net/avatares/1/9/1/9/120_1919544.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1575399" title="perfil de Ale6921"> Ale6921</a>: <b>2 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(421314);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('421314');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=424724" title="Revista Computer Hoy 459 Mayo 2016"> Revista Computer Hoy 459 Mayo 2016</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_34"></i>
+<a href="https://identi.io/index.php?topic=421034" title="Dudas sobre el futuro de Mega"> Dudas sobre el futuro de Mega</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_113"></i>
+<a href="https://identi.io/index.php?topic=414781" title="10 Aparatos electrónicos pioneros de la historia"> 10 Aparatos electrónicos pioneros de la historia</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_113"></i>
+<a href="https://identi.io/index.php?topic=413567" title="Neandertales y sapiens, una historia de amor  "> Neandertales y sapiens, una historia de amor  </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_34"></i>
+<a href="https://identi.io/index.php?topic=411091" title="La Tierra se compone de dos planetas fusionados "> La Tierra se compone de dos planetas fusionados </a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">12</span> Comentarios</span>
+<span class="onpost"> ¿Estamos preparados para guardar todo en la nube?</span>
+<div class="comentario"></div><div id="comment_4520775" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="KeviN_NeiL" href="?action=profile;user=KeviN_NeiL">
+<img id="error_avatar" src="http://ist3-1.filesor.com/pimpandhost.com/1/3/5/1/135123/3/f/l/4/3fl4X/1445098660130.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1559563" href="?action=profile;user=KeviN_NeiL">KeviN_NeiL</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461696994" title="26/04/2016 a las 18:56 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Depende del uso que le vas a dar a la nube, si es solo para almacenar tus archivos o para &quot;compartir&quot; con derechos de autor, si es para lo segundo pues es obvio que los servicios de nube mas usados para eso est?
+</div>
+</div>
+</div>
+</div><div id="comment_4520789" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="uzioso" href="?action=profile;user=uzioso">
+<img id="error_avatar" src="https://i.ibb.co/gZ1F26xz/985655068418890831.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="14852" href="?action=profile;user=uzioso">uzioso</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461697685" title="26/04/2016 a las 19:08 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1559563" href="https://identi.io/index.php?action=profile&user=KeviN_NeiL" class="mensiones_identi">@KeviN_NeiL</a> Totalmente de acuerdo con el comentario de los servicios en la nube, pero no podemos dejar de lado la vulnerabilidad que han presentado en seguridad algunas de las m?
+</div>
+</div>
+</div>
+</div><div id="comment_4520848" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="abrapy" href="?action=profile;user=abrapy">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-9LdhxDhyo14/VyKc48X_-hI/AAAAAAAAGBE/YnKXsK3ZmbE7XUyJO_T27adl9j7jJmTLgCLcB/s320/13000212_807560956014769_4201516770596441460_n%2B%25281%2529.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1726968" href="?action=profile;user=abrapy">abrapy</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461700459" title="26/04/2016 a las 19:54 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+mira que la nube soluciono el problema de muchos, de perder fotos y videos familiares siempre y que la vieja venga a cagarte a pedos jajaja &nbsp;<img src="https://identi.io/Smileys/default/icon_mad.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4520853" class="comentario coment_id_4">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="YoBorg" href="?action=profile;user=YoBorg">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-VTM2NRve4CE/Vg7GC__AGII/AAAAAAAAAzs/ppwavRa8z90/s1600/images%2B%252841%2529.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1943557" href="?action=profile;user=YoBorg">YoBorg</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461700848" title="26/04/2016 a las 20:00 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1559563" href="https://identi.io/index.php?action=profile&user=KeviN_NeiL" class="mensiones_identi">@KeviN_NeiL</a> <a usuario="14852" href="https://identi.io/index.php?action=profile&user=uzioso" class="mensiones_identi">@uzioso</a> Primero que todo, agradezco sus intervenciones, ambas, han sido valiosas y esclarecedoras, concuerdo con ambos, primero, es cierto, la nube se puede ver con dos objetivos: 1) para solo almacenar, 2) para compartir, tambi?
+</div>
+</div>
+</div>
+</div><div id="comment_4520902" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="KeviN_NeiL" href="?action=profile;user=KeviN_NeiL">
+<img id="error_avatar" src="http://ist3-1.filesor.com/pimpandhost.com/1/3/5/1/135123/3/f/l/4/3fl4X/1445098660130.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1559563" href="?action=profile;user=KeviN_NeiL">KeviN_NeiL</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461703749" title="26/04/2016 a las 20:49 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita uzioso: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><a usuario="1559563" href="https://identi.io/index.php?action=profile&user=KeviN_NeiL" class="mensiones_identi">@KeviN_NeiL</a> Totalmente de acuerdo con el comentario de los servicios en la nube, pero no podemos dejar de lado la vulnerabilidad que han presentado en seguridad algunas de las m?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4520914" class="comentario coment_id_6">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="YoBorg" href="?action=profile;user=YoBorg">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-VTM2NRve4CE/Vg7GC__AGII/AAAAAAAAAzs/ppwavRa8z90/s1600/images%2B%252841%2529.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1943557" href="?action=profile;user=YoBorg">YoBorg</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461704386" title="26/04/2016 a las 20:59 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1559563" href="https://identi.io/index.php?action=profile&user=KeviN_NeiL" class="mensiones_identi">@KeviN_NeiL</a> Asi es amigo, esa es una muy buena medida de precaucion a la hora de una mala noticia al respecto, aprecio tus comentarios, gracias &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4520918" class="comentario coment_id_7">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="YoBorg" href="?action=profile;user=YoBorg">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-VTM2NRve4CE/Vg7GC__AGII/AAAAAAAAAzs/ppwavRa8z90/s1600/images%2B%252841%2529.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1943557" href="?action=profile;user=YoBorg">YoBorg</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461704614" title="26/04/2016 a las 21:03 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1726968" href="https://identi.io/index.php?action=profile&user=abrapy" class="mensiones_identi">@abrapy</a> si amigo, es por eso que plantie este asunto, la nube se convertido en una interesnte alternativa a la hora que alguno de nuestros dispositivos fallen, pero al mismo tiempo no se puede dejar todo a la nube, al menos todavia creo que esta en una etapa primitiva con cierta inestabilidad y algunos riesgos que con el tiempo es posible se superen, gracias por tu valioso comentario. &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4520955" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mapodito" href="?action=profile;user=mapodito">
+<img id="error_avatar" src="http://imgfz.com/i/QXNKw3p.jpeg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1593733" href="?action=profile;user=mapodito">mapodito</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461706481" title="26/04/2016 a las 21:34 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+muy bonito tu post en cuanto a estetica te animo a que aporte mas para descarga saludos &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4521121" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="shamamoto" href="?action=profile;user=shamamoto">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-0FN_MpqtGxI/UXB4S5yan8I/AAAAAAAAOFI/qNIrvsfJBLo/s1600/1291405956_2c9bb98b39a6.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1649201" href="?action=profile;user=shamamoto">shamamoto</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461716018" title="27/04/2016 a las 0:13 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+este tema es interesante, y a partir de lo que se comento si usted sabe como o con que programa se puede encriptar de forma segura y facil, si es complicado un tuto no vendria mal. saludos &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4521180" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Rey_d_Nada" href="?action=profile;user=Rey_d_Nada">
+<img id="error_avatar" src="http://icons.iconarchive.com/icons/mattahan/ultrabuuf/256/Comics-Mask-icon.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1928207" href="?action=profile;user=Rey_d_Nada">Rey_d_Nada</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461718851" title="27/04/2016 a las 1:00 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Los que hablan de seguridad en los archivos, de que tienen que cifrar antes de subir, que es lo que suben? cosas ilegales? Sino para que tanto lio? Lo digo porque tengo mis archivos en la nube hace a?
+</div>
+</div>
+</div>
+</div><div id="comment_4521678" class="comentario coment_id_11">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="YoBorg" href="?action=profile;user=YoBorg">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-VTM2NRve4CE/Vg7GC__AGII/AAAAAAAAAzs/ppwavRa8z90/s1600/images%2B%252841%2529.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1943557" href="?action=profile;user=YoBorg">YoBorg</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461745250" title="27/04/2016 a las 8:20 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1593733" href="https://identi.io/index.php?action=profile&user=mapodito" class="mensiones_identi">@mapodito</a> Gracias por el consejo amigo, estoy preparando varias cosas, pero mi tiempo no es tan holgado como quisiera para intentarlo lo mas rapidamente posible, pero estoy en eso amigo, agradezco tu observaci?
+</div>
+</div>
+</div>
+</div><div id="comment_4552979" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Ale6921" href="?action=profile;user=Ale6921">
+<img id="error_avatar" src="http://a11.t26.net/avatares/1/9/1/9/120_1919544.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1575399" href="?action=profile;user=Ale6921">Ale6921</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1463804146" title="21/05/2016 a las 4:15 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+No conf?
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_7.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949e72c0a3bdeab',t:'MTc2MTQ4MTE3Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
