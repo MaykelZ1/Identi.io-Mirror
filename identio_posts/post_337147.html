@@ -1,0 +1,933 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Como hacer que W7 32bits reconosca mas de 4gb ram - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Bienvenidos a mi primer post Importante: Este software ha sido utilizado por mi en un portatil con Windows 7 Ultimate. Tenga en cuenta que se hacen algunos cambios en el núcleo del sistema, que en al..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='aUdlWkd0YXlSZkNZNk41VTJGc2RHVmtYMStvdDltVVRvT3U3L2tseTFiL1ZGN3JlOWxUbm4wN3YweWp1VGwzOVFyN1BZZHR3RnZqSnJxRXFmSWozbHFQNTM0WW1Hby9tK0M5Mnc9PTJOVmNTeGpkWHR4QmlSaQ==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761492191;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'ee8c925aab344658d2eabc8e0f8eaee8');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_7.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Como hacer que W7 32bits reconosca mas de 4gb ram" title="Identi - Como hacer que W7 32bits reconosca mas de 4gb ram" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '28c8e767bf3ad2d00ee3977ed71312625376d215';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Nemi133">Nemi133</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Nemi133" title="Ir al Perfil de Nemi133"><img id="error_avatar" class="avatar" border="0" width="120" src="https://scontent.fccp1-1.fna.fbcdn.net/v/t1.0-9/37562498_1972533829444766_5046557259648204800_n.jpg?_nc_cat=110&amp;_nc_oc=AQlAuhnw8JgAjCsuvZWux9EPah5YtUbOeP6F_vxhOK4LclN8HCIWzjb1oZWLf0utgY8&amp;_nc_ht=scontent.fccp1-1.fna&amp;oh=2038a58c0e796898461f66446"/></a>
+<div class=" rango_sidebar clearfix">Starter</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/cl.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/starter.png" title="Starter" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1816223)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1816223');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">2</b> Seguidores</li>
+<li><b>30</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>1</b> Posts</li>
+<li><b>105</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Como hacer que W7 32bits reconosca mas de 4gb ram</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=337146';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=337148';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=25" alt="Software / Programas" title="Software / Programas">Software / Programas</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 11 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_999174">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div style="text-align: justify;"><span style="font-family: Impact;"><i>Bienvenidos a mi primer post <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /></i></span><br /><b><br /><br />Importante</b>: Este software ha sido utilizado por mi en un portatil con Windows 7 Ultimate. Tenga en cuenta que se hacen algunos cambios en el núcleo del sistema, que en algunos casos puede provocar consecuencias impredecibles para el sistema operativo. Varios programas antivirus identifican la aplicación como una amenaza para su equipo.<br /><br />Toda la <b>responsabilidad</b> por las consecuencias de los riesgos de uso de este programa corren por cuenta del usuario.<br /><br /><b><span style="text-decoration: underline;">Muy Importante</span></b>: No instalar bajo ningún concepto en un SO diferente a Windows 7 y menos en Windows 7 de 64 bits.<br /></div><br /><div style="text-align: justify;">Seguir las instrucciones:<br /><br /><b>1</b>.- Inicie ReadyFor4GB.exe<br /><b>2</b>.- Haga clic en Check, a continuación, el botón Aplicar.<br /><b>3</b>.- Haga clic en Yes (Sí) para parchear ?ntkrnlpa.exe?<br /><b>4</b>.- Pulse el botón Aceptar para confirmar la ubicación para guardar el archivo ?ntkr128g.exe?<br /><b>5</b>.- Cierre la ventana ReadyFor4GB.<br /><b>6</b>.- Haga clic en el archivo ?AddBootMenu.cmd? y selecciona ?Ejecutar como administrador?<br /><b>7</b>.- Pulse el botón ?Y? para confirmar o presione ?Q? para salir y pulse Intro.<br /><b>8</b>.- Esperar hasta que el final de la secuencia de comandos y cerrar el programa.<br /><b>9</b>.- Haga clic en el archivo ?RemoveWatermarkX86.exe? y selecciona ?Ejecutar como administrador?<br /><b>10</b>.- Pulse el botón ?Y? para confirmar<br /><br />Copia de seguridad de ?user32.dll.mui? se guardará como Windows System32 es-ES user32.dll.mui.backup.<br />String ?en-US? depende del idioma de su sistema.<br /><br /><b>11</b>.- Espere a que el parche termine su secuencia y reinicie el equipo.<br /><b>12</b>.- El equipo se reinicia, se mostrará la entrada de inicio de Windows Boot Manager y cargaremos el Windows de 128 GB con ntkr128g.exe.<br /><br /><br />Si apareciera ? Version de evaluacion ? después del reinincio, entonces necesitas reconstruir la memoria caché de MUI. Para hacer esto:<br /><br /><b>a</b>.- Haga clic en el archivo ?RemoveWatermarkX86.exe? y selecciona ?Ejecutar como administrador? .<br /><b>b</b>.- Pulse el botón ?I? o ?Y? para confirmar.<br /><b>c</b>.- Espere a la reestructuración de la caché y, a continuación, reinicie el equipo.<br /><br />Link Del Programa:<br /><br /><b><div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX1/xl+8MnAsJuzZ8ThD4JlB+NbQvyOpSu0ifHxvj2bil5gWs2GPorrSFEIrCe3jsH8hxK5CacTutVpv4xcoToZiFzZ0jHIyBVik0mV6pFz5VrQL/ZdOcsa71</div></div></div></b><br /><br />una prueba de que funciona :v<br /><br /><img id="img_post" src="https://scontent-a-mia.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/s480x480/10309502_805306272834200_691547390728828455_n.jpg?oh=89261071f2712e44de863963ed1e74d5&amp;oe=5492EA6C" border="0"><br /></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">30</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 10/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">4995</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">12</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(337147,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(337147,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(337147,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(337147,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(337147,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(337147,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(337147,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(337147,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(337147,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(337147,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://3.bp.blogspot.com/-A1Ssuwya7Ek/VZi6aqoBjmI/AAAAAAAAHe8/JMujnIl0ca0/s1600/ZONA%2BANIME.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1851679" title="perfil de Celciusb"> Celciusb</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://fc06.deviantart.net/fs24/f/2009/254/0/d/One_Piece_Gif___108_by_ju5t_bl4z3.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1844131" title="perfil de asesase"> asesase</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://4.bp.blogspot.com/-ZaTzegMVXM4/T7l8Ku5HbLI/AAAAAAAACb8/N8_b_TmyIPA/s1600/joey-ramone-ya-know-album-cover-300x300.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1728994" title="perfil de Gunner120"> Gunner120</a>: <b>10 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(337147);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('337147');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<div>No se encontraron m&aacute;s posts</div></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">28</span> Comentarios</span>
+<span class="onpost"> Como hacer que W7 32bits reconosca mas de 4gb ram</span>
+<div class="comentario"></div><div id="comment_3605205" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Celciusb" href="?action=profile;user=Celciusb">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-A1Ssuwya7Ek/VZi6aqoBjmI/AAAAAAAAHe8/JMujnIl0ca0/s1600/ZONA%2BANIME.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1851679" href="?action=profile;user=Celciusb">Celciusb</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410672012" title="14/09/2014 a las 5:20 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+No entend?
+</div>
+</div>
+</div>
+</div><div id="comment_3605215" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Rogerlondo" href="?action=profile;user=Rogerlondo">
+<img id="error_avatar" src="https://cbdp6q.dm2302.livefilestore.com/y2pAgdRi5XmqlQ6WfXFM04UUfsHyTMIYThegL9p3Odc88AxbVAhKFeDsteroLgStWmJMEGQI1i8WHmp_lxCSkQZIlYDpjHn0VOUThuKyCZCau4/black_creature_256x256.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1649977" href="?action=profile;user=Rogerlondo">Rogerlondo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410672640" title="14/09/2014 a las 5:30 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Estos metodos no sirven yo ya he intentado de todo y no funciona solo te descompone la PC, te reconocera mas de 3 GB si instalas el SO de 64 bits, en 32 btis no es posible.
+</div>
+</div>
+</div>
+</div><div id="comment_3605232" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="wesker_x37" href="?action=profile;user=wesker_x37">
+<img id="error_avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Umbrella_Corporation_logo.svg/245px-Umbrella_Corporation_logo.svg.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1638629" href="?action=profile;user=wesker_x37">wesker_x37</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410673923" title="14/09/2014 a las 5:52 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Te recomiendo que no lo utilices. Te preguntaras el porque no??? Efectivamente te permite el uso de mas de 4gb, mas sin embargo los canales de comunicacion se veran afectador, esto es porque realizas cambios de registro entre otras cosas. Creo que el ejemplo mas claro para mostrarte seria que usaras Skype y chequea la videoconferencia notaras la diferencia. Simplemente si quieres mas de 4GB utiliza la version de 64bits, eso de que no es compatible eso murio eso quedo atras, hoy en dia han progresado para tener igualdad. Espero haber aclarado las dudas y/o inconvenientes que puedes tener. Saludes!!!
+</div>
+</div>
+</div>
+</div><div id="comment_3605246" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="santiale17" href="?action=profile;user=santiale17">
+<img id="error_avatar" src="http://a08.t26.net/avatares/6/0/1/7/120_601725.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1758569" href="?action=profile;user=santiale17">santiale17</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410674907" title="14/09/2014 a las 6:08 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+La capacidad de reconocimiento de memoria depende del SO pero mas alla de eso. De que te sirven tener mas de 4GBs si por mas que tengas mas de 4gbs no vas a usar aplicaciones de 62 bits. Primero que nada por que mas alla de que tengas mas RAM, las aplicaciones dependen del procesador y si no tenes un procesador de 64 bits de nada sirve por que no vas a poder aprobechar todas sus capacidades.<br />PD: Reconozca va con Z.
+</div>
+</div>
+</div>
+</div><div id="comment_3605247" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="catoira" href="?action=profile;user=catoira">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1687957" href="?action=profile;user=catoira">catoira</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410674951" title="14/09/2014 a las 6:09 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+no es mejor instalar un window 7 de 64 bits y listo
+</div>
+</div>
+</div>
+</div><div id="comment_3605250" class="comentario coment_id_6">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Nemi133" href="?action=profile;user=Nemi133">
+<img id="error_avatar" src="https://scontent.fccp1-1.fna.fbcdn.net/v/t1.0-9/37562498_1972533829444766_5046557259648204800_n.jpg?_nc_cat=110&amp;_nc_oc=AQlAuhnw8JgAjCsuvZWux9EPah5YtUbOeP6F_vxhOK4LclN8HCIWzjb1oZWLf0utgY8&amp;_nc_ht=scontent.fccp1-1.fna&amp;oh=2038a58c0e796898461f66446" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1816223" href="?action=profile;user=Nemi133">Nemi133</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410675213" title="14/09/2014 a las 6:13 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita catoira: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">no es mejor instalar un window 7 de 64 bits y listo</div></blockquote>esto es para los que no quieren formatear :v
+</div>
+</div>
+</div>
+</div><div id="comment_3605251" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mpfquilmes" href="?action=profile;user=mpfquilmes">
+<img id="error_avatar" src="https://cdn.pixabay.com/photo/2016/03/31/20/27/avatar-1295773_1280.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1714218" href="?action=profile;user=mpfquilmes">mpfquilmes</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410675246" title="14/09/2014 a las 6:14 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita catoira: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">no es mejor instalar un window 7 de 64 bits y listo</div></blockquote><br /><a usuario="1687957" href="https://identi.io/index.php?action=profile&user=catoira" class="mensiones_identi">@catoira</a> Me sacaste las palabras de la boca. &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3605256" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="MAXIUM" href="?action=profile;user=MAXIUM">
+<img id="error_avatar" src="http://www.antronio.com/data/avatars/l/14/14859.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1615053" href="?action=profile;user=MAXIUM">MAXIUM</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410675771" title="14/09/2014 a las 6:22 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Esto es ?
+</div>
+</div>
+</div>
+</div><div id="comment_3605260" class="comentario coment_id_9">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Nemi133" href="?action=profile;user=Nemi133">
+<img id="error_avatar" src="https://scontent.fccp1-1.fna.fbcdn.net/v/t1.0-9/37562498_1972533829444766_5046557259648204800_n.jpg?_nc_cat=110&amp;_nc_oc=AQlAuhnw8JgAjCsuvZWux9EPah5YtUbOeP6F_vxhOK4LclN8HCIWzjb1oZWLf0utgY8&amp;_nc_ht=scontent.fccp1-1.fna&amp;oh=2038a58c0e796898461f66446" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1816223" href="?action=profile;user=Nemi133">Nemi133</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410675963" title="14/09/2014 a las 6:26 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Rogerlondo: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Estos metodos no sirven yo ya he intentado de todo y no funciona solo te descompone la PC, te reconocera mas de 3 GB si instalas el SO de 64 bits, en 32 btis no es posible.</div></blockquote>pos yo lo acabo de hacer y me reconoce ahora los 6gb de ram que tengo :v (antes reconocia solo un poco mas de 3)
+</div>
+</div>
+</div>
+</div><div id="comment_3605328" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="4eveSrFrio" href="?action=profile;user=4eveSrFrio">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1698216" href="?action=profile;user=4eveSrFrio">4eveSrFrio</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410688425" title="14/09/2014 a las 9:53 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+es mas facil instalar win de 64, te metes a trastear el registro del de 32 y talvez &nbsp;se vuelva inestable, <br />NO ES RECOMENDABLE USAR ESTE SOFTWARE, post fail &nbsp; <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3605334" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mutter1978" href="?action=profile;user=mutter1978">
+<img id="error_avatar" src="http://thumbs.subefotos.com/dd267333a51e771db05a5cf16e299fddo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="115820" href="?action=profile;user=mutter1978">mutter1978</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410688686" title="14/09/2014 a las 9:58 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+A que muchachitos, esto no sirve de absolutamente nada. Un Kernel de 32 bits jamas va a poder manejar mas de 4,096 MB. de nada sirve que el sistema sepa que hay mas memoria, simplemente no puede hacer uso del excedente, La arquitectura no lo permite sin importar que sea, Windows, UNIX, BSD o Linux. Simplemente abran su monitor de sistema y estresen el sistema, ver?
+</div>
+</div>
+</div>
+</div><div id="comment_3605337" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="4eveSrFrio" href="?action=profile;user=4eveSrFrio">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1698216" href="?action=profile;user=4eveSrFrio">4eveSrFrio</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410690256" title="14/09/2014 a las 10:24 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita mutter1978: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">A que muchachitos, esto no sirve de absolutamente nada. Un Kernel de 32 bits jamas va a poder manejar mas de 4,096 MB. de nada sirve que el sistema sepa que hay mas memoria, simplemente no puede hacer uso del excedente, La arquitectura no lo permite sin importar que sea, Windows, UNIX, BSD o Linux. Simplemente abran su monitor de sistema y estresen el sistema, ver?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3605356" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Agartha" href="?action=profile;user=Agartha">
+<img id="error_avatar" src="http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/7d/7df8bb69fc7444ed4688d0593b8c61267805c104_full.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1708580" href="?action=profile;user=Agartha">Agartha</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410695551" title="14/09/2014 a las 11:52 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+esto es mal fail que un otako desvirgado como dijeron por hay la arquiectura de 32 bits jamas va a trabajar como una de 64 bits solo por loguica ademas nunca te pusistes a pensar que este programita solo cambia los numeritos del sistema y te hacer ver los que quieres ver &nbsp;<img src="https://identi.io/Smileys/default/icon_mrgreen.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> Otaco Virgo &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3605379" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="chidan" href="?action=profile;user=chidan">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="26912" href="?action=profile;user=chidan">chidan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410699919" title="14/09/2014 a las 13:05 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+NO LO USAEN
+</div>
+</div>
+</div>
+</div><div id="comment_3605380" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="chidan" href="?action=profile;user=chidan">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="26912" href="?action=profile;user=chidan">chidan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410700109" title="14/09/2014 a las 13:08 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Si quieres mas 4 MB instala un Windows de 64 BITS y ya
+</div>
+</div>
+</div>
+</div><div id="comment_3605387" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="nick_crazy" href="?action=profile;user=nick_crazy">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1615225" href="?action=profile;user=nick_crazy">nick_crazy</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410700906" title="14/09/2014 a las 13:21 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Y como hago para que detecte 32gb? &nbsp;<img src="https://identi.io/Smileys/default/icon_vangry.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3605394" class="comentario coment_id_17">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="asesase" href="?action=profile;user=asesase">
+<img id="error_avatar" src="http://fc06.deviantart.net/fs24/f/2009/254/0/d/One_Piece_Gif___108_by_ju5t_bl4z3.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1844131" href="?action=profile;user=asesase">asesase</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410701799" title="14/09/2014 a las 13:36 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+me hiciste reir....+10
+</div>
+</div>
+</div>
+</div><div id="comment_3605415" class="comentario coment_id_18">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="_private" href="?action=profile;user=_private">
+<img id="error_avatar" src="http://imgfz.com/i/H2SesPO.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1757431" href="?action=profile;user=_private">_private</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410703608" title="14/09/2014 a las 14:06 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+A parte de la mala horrograf?
+</div>
+</div>
+</div>
+</div><div id="comment_3605522" class="comentario coment_id_19">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="seya1508" href="?action=profile;user=seya1508">
+<img id="error_avatar" src="http://biomascotas.files.wordpress.com/2011/10/gatos20.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="3587" href="?action=profile;user=seya1508">seya1508</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410708566" title="14/09/2014 a las 15:29 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+las tarjetas madres y procesadores actuales baratos ya permiten instalar windows de 64 bits sin problema la cuestion es aventurarse al cambio y dejar atras los 32 bits yo tenia mi w7 con 32 bits y mis 8 gigas de memoria desperdiciada revise si mis componentes eran compatibles con 64 y listo corre bien y ya no existe el problema de compatibilidad al instalar programas pues el sistema los separa como programas de 32 y listo.<br />gracias por el aporte pues la intencion es lo que cuenta y que bien que siempre habra alguien que te avise y te explique porque no funciona &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3605526" class="comentario coment_id_20">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Miguel297" href="?action=profile;user=Miguel297">
+<img id="error_avatar" src="http://2.1m.yt/obrt_mH_z.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1823925" href="?action=profile;user=Miguel297">Miguel297</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410708650" title="14/09/2014 a las 15:30 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+una pregunta se que no viene al caso pero leyendo todos los comentarios me salpicaron algunas preguntillas jeje y disculpen la ignorancia <br />1 como se si mi procesador es de 64 bits?<br />2 todas las arquitectutas de 32 bits en los distintos sistemas operativo (windows xp,7,8, 8.1) solamente reconocen un poco mas aya de 3 gigas de ram y no mas o estoy en un error?<br />3 como saber que sistema operativo instalo en una pc? me dijeron que me guie x los ram que trae si es menos de 3 gigas que instale de 32 bits y si es mas de 4 que instale de 64 bits pero eso que lei que si el procesador no es de 64 bits de nada sirve instalar sistemas operativos de 64 bits xq no aprovechara toda tu ram , porque procesador y ram van de la mano (procesador de 32 bits aprovecha a los mas 3 gigas de ram asi sea en un sistema operativo de 64 bits y que reconosca mas de 3 gigas de ram ???)<br />ALGUIEN QUE QUIERA ACLARARME SOBRE EL TEMA LE ESTARE MUY AGARDECIDO &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /><br /><a usuario="1851679" href="https://identi.io/index.php?action=profile&user=Celciusb" class="mensiones_identi">@Celciusb</a> <a usuario="1649977" href="https://identi.io/index.php?action=profile&user=Rogerlondo" class="mensiones_identi">@Rogerlondo</a> <a usuario="1638629" href="https://identi.io/index.php?action=profile&user=wesker_x37" class="mensiones_identi">@wesker_x37</a> <a usuario="1758569" href="https://identi.io/index.php?action=profile&user=santiale17" class="mensiones_identi">@santiale17</a> <a usuario="1687957" href="https://identi.io/index.php?action=profile&user=catoira" class="mensiones_identi">@catoira</a> <a usuario="1816223" href="https://identi.io/index.php?action=profile&user=Nemi133" class="mensiones_identi">@Nemi133</a> <a usuario="1714218" href="https://identi.io/index.php?action=profile&user=mpfquilmes" class="mensiones_identi">@mpfquilmes</a> <a usuario="1615053" href="https://identi.io/index.php?action=profile&user=MAXIUM" class="mensiones_identi">@MAXIUM</a> @4eveSrFrio<br /><a usuario="115820" href="https://identi.io/index.php?action=profile&user=mutter1978" class="mensiones_identi">@mutter1978</a> <a usuario="1708580" href="https://identi.io/index.php?action=profile&user=Agartha" class="mensiones_identi">@Agartha</a> <a usuario="26912" href="https://identi.io/index.php?action=profile&user=chidan" class="mensiones_identi">@chidan</a> <a usuario="1615225" href="https://identi.io/index.php?action=profile&user=nick_crazy" class="mensiones_identi">@nick_crazy</a> <a usuario="1844131" href="https://identi.io/index.php?action=profile&user=asesase" class="mensiones_identi">@asesase</a> @_private<br />SALU2 A TODOS &nbsp;<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3605546" class="comentario coment_id_21">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Artmanz" href="?action=profile;user=Artmanz">
+<img id="error_avatar" src="http://i.imgur.com/YIXGq.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="76787" href="?action=profile;user=Artmanz">Artmanz</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410709424" title="14/09/2014 a las 15:43 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+no funciona, lo unico que te va a hacer es que la maquina te diga que tenes 4gb o las que tengas pero de ahi es mejor uno de x64 aprovechas mas la capacidad de tu sistema que esta pensado para usar mas memoria
+</div>
+</div>
+</div>
+</div><div id="comment_3605560" class="comentario coment_id_22">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Celciusb" href="?action=profile;user=Celciusb">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-A1Ssuwya7Ek/VZi6aqoBjmI/AAAAAAAAHe8/JMujnIl0ca0/s1600/ZONA%2BANIME.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1851679" href="?action=profile;user=Celciusb">Celciusb</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410710200" title="14/09/2014 a las 15:56 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Miguel297: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">una pregunta se que no viene al caso pero leyendo todos los comentarios me salpicaron algunas preguntillas jeje y disculpen la ignorancia <br />1 como se si mi procesador es de 64 bits?<br />2 todas las arquitectutas de 32 bits en los distintos sistemas operativo (windows xp,7,8, 8.1) solamente reconocen un poco mas aya de 3 gigas de ram y no mas o estoy en un error?<br />3 como saber que sistema operativo instalo en una pc? me dijeron que me guie x los ram que trae si es menos de 3 gigas que instale de 32 bits y si es mas de 4 que instale de 64 bits pero eso que lei que si el procesador no es de 64 bits de nada sirve instalar sistemas operativos de 64 bits xq no aprovechara toda tu ram , porque procesador y ram van de la mano (procesador de 32 bits aprovecha a los mas 3 gigas de ram asi sea en un sistema operativo de 64 bits y que reconosca mas de 3 gigas de ram ???)</div></blockquote><br />1) Eso lo puedes consultar directamente en la p?
+</div>
+</div>
+</div>
+</div><div id="comment_3605613" class="comentario coment_id_23">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="elandy666" href="?action=profile;user=elandy666">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1663396" href="?action=profile;user=elandy666">elandy666</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410712570" title="14/09/2014 a las 16:36 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Hola a todos,<br />Un sistema operativo de 32 bits puede manejar memoria ram hasta 3,2 gb aprox el resto no puede ser utilizado por el sistema, hubo un tiempo en Windows XP - Server 2003 que se podia utilizar mas mediante el comando /PAE (Physical Address Extension) en el boot.ini, pero luego de no recuerdo que Service pack lo retiraron de funcionamiento.<br />Esto lo que hacia era redireccionar las entradas de memoria, pero como consecuencia de esto hacia el funcionamiento del mismo mas lento y muchas veces con cuelgues porque el hardware no lo soportaba, fue algo mas orientado a Servers<br />Me imagino que el programa este estaria haciendo algo por el estilo, seria cuestion de probarlo pero no creo de ninguna manera que sea mejor que instalar un SO de 64bits para ultilizar toda la memoria de manera mas eficiente<br /><br />Por el tema del micro como preguntaban por ahi podes verlo sino con programas como el AIDA o buscas el modelo del mismo en internet.<br /><br />Saludos
+</div>
+</div>
+</div>
+</div><div id="comment_3605630" class="comentario coment_id_24">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="wesker_x37" href="?action=profile;user=wesker_x37">
+<img id="error_avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Umbrella_Corporation_logo.svg/245px-Umbrella_Corporation_logo.svg.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1638629" href="?action=profile;user=wesker_x37">wesker_x37</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410712970" title="14/09/2014 a las 16:42 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1823925" href="https://identi.io/index.php?action=profile&user=Miguel297" class="mensiones_identi">@Miguel297</a> solo chequea tu procesador en la pagina del fabricante si lo soporta, en la mayoria de los caso, un procesador que posea mas de 2 nucleos debe de soportar 64-bits. En cuanto a la memoria si tienes 4gb o mas y un sistema operativo de 32-bits (x86) en algunos modelos te reportaran 3.75GB, 3.25, 3.50, 3GB. Si quieres que reconozca mas de 4gb entonces un sistema operativo de 64-bits (x64) seria lo mas recomendable. En cuanto a la compatibilidad de 32-bits eso quedo en el pasado, hoy en dia puedes ejectuar aplicaciones de 32-bits en sistemas de 64-bits. Saludes!!!
+</div>
+</div>
+</div>
+</div><div id="comment_3605732" class="comentario coment_id_25">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="SkyNet09" href="?action=profile;user=SkyNet09">
+<img id="error_avatar" src="https://ibb.co/1TbvGc8" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="34463" href="?action=profile;user=SkyNet09">SkyNet09</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410716987" title="14/09/2014 a las 17:49 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+HOLA, ME PARECE PERFECTO QUE AYUDES PERO TAMBIEN ME PARECE MUY BOLUDO EL POST YA QUE ES IMPOSIBLE QUE UN SO x86 TOME MAS DE 4 GB DE RAM, PARA ESO ESTA EL SO x64. NO LO TOMES A MAL PERO NO SE PUEDE. UN SALUDO <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3605835" class="comentario coment_id_26">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="MAXIUM" href="?action=profile;user=MAXIUM">
+<img id="error_avatar" src="http://www.antronio.com/data/avatars/l/14/14859.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1615053" href="?action=profile;user=MAXIUM">MAXIUM</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410721209" title="14/09/2014 a las 19:00 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+En Windows Server de 32bits, puede reconocer m?
+</div>
+</div>
+</div>
+</div><div id="comment_3605884" class="comentario coment_id_27">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mutter1978" href="?action=profile;user=mutter1978">
+<img id="error_avatar" src="http://thumbs.subefotos.com/dd267333a51e771db05a5cf16e299fddo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="115820" href="?action=profile;user=mutter1978">mutter1978</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410722852" title="14/09/2014 a las 19:27 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita 4eveSrFrio: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita mutter1978: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">A que muchachitos, esto no sirve de absolutamente nada. Un Kernel de 32 bits jamas va a poder manejar mas de 4,096 MB. de nada sirve que el sistema sepa que hay mas memoria, simplemente no puede hacer uso del excedente, La arquitectura no lo permite sin importar que sea, Windows, UNIX, BSD o Linux. Simplemente abran su monitor de sistema y estresen el sistema, ver?</div></blockquote></div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3606254" class="comentario coment_id_28">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="nd4spd" href="?action=profile;user=nd4spd">
+<img id="error_avatar" src="http://www.veryicon.com/icon/png/Game/Mega%20Games%20Pack%2022/Need%20for%20Speed%20Most%20Wanted%205.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1594846" href="?action=profile;user=nd4spd">nd4spd</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410735733" title="14/09/2014 a las 23:02 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+jajajajajaa si claro como no!!! no sirve de nada ese programa!!! 2 dedos de frente !!!
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_7.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994af4142d3edea7',t:'MTc2MTQ5MjE5MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<style>
+.spoiler-btn {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+.info_bbc {
+    word-break: break-all;
+}
+.info_bbc a {
+    color: #096FDB !important;
+    font-weight: bold;
+}
+</style>
+<script>
+(function() {
+    'use strict';
+    
+    console.log('🔐 Sistema de desencriptación automática cargado');
+    
+    // Extraer la clave del HTML
+    let DECRYPT_KEY = null;
+    const scriptTags = document.getElementsByTagName('script');
+    for (let script of scriptTags) {
+        const content = script.textContent;
+        const hashMatch = content.match(/var\s+hash\s*=\s*['"]([a-f0-9]+)['"]/);
+        if (hashMatch) {
+            DECRYPT_KEY = hashMatch[1];
+            console.log('🔑 Clave encontrada');
+            break;
+        }
+    }
+    
+    if (!DECRYPT_KEY) {
+        console.warn('⚠️ No se encontró clave de desencriptación');
+        return;
+    }
+    
+    function decrypt(encryptedText, password) {
+        try {
+            const decrypted = CryptoJS.AES.decrypt(encryptedText, password);
+            return decrypted.toString(CryptoJS.enc.Utf8) || null;
+        } catch (error) {
+            console.error('❌ Error:', error);
+            return null;
+        }
+    }
+    
+    function handleDecryptClick(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const button = event.target;
+        const spoilerDiv = button.closest('.spoiler');
+        if (!spoilerDiv) return;
+        
+        const hiddenDiv = spoilerDiv.querySelector('.info_bbc');
+        if (!hiddenDiv) return;
+        
+        const encryptedText = hiddenDiv.textContent.trim();
+        const decryptedText = decrypt(encryptedText, DECRYPT_KEY);
+        
+        if (decryptedText && decryptedText.length > 0) {
+            hiddenDiv.innerHTML = `<a href="${decryptedText}" target="_blank" rel="noopener noreferrer">${decryptedText}</a>`;
+            hiddenDiv.style.display = 'block';
+            button.style.display = 'none';
+            console.log('✅ Enlace desencriptado');
+        } else {
+            alert('❌ Error al desencriptar');
+        }
+    }
+    
+    function init() {
+        const buttons = document.querySelectorAll('.spoiler-btn, input[value*="Ver Links"], input[value*="Descarga"]');
+        
+        buttons.forEach(button => {
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+            newButton.style.cursor = 'pointer';
+            newButton.style.pointerEvents = 'auto';
+            newButton.addEventListener('click', handleDecryptClick);
+        });
+        
+        console.log('🚀 Sistema listo');
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script>
+
+</body></html>
