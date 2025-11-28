@@ -1,0 +1,930 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>convertir videos a 60fps con megui - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Hola que tal amigos de  identi hago el siguiente tutorial  para explicar maso menos como es que se transforma  los  videos a 60 quiero aclarar que para los videos 2D como  caricaturas  o a..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='UjgyRUZjRXZRalZzenlyVTJGc2RHVmtYMSt2d2Zva3lod1BvOU5QZ3NHUk5qL0JxeWhTVUpVa1pIL1BWVmVxZFdZVWJSaWl0SFZoV1g0aktOUXBkRzd4a3NERVdkcFlkaVpKOWc9PUxFajFIaHFiSE9PZm1STw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761482029;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'a933bbbc794efc33ee1c98ced4756485');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_4.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - convertir videos a 60fps con megui" title="Identi - convertir videos a 60fps con megui" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '345ffb64ef7ce84925e8125ab99103ca3fdcf010';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=yano_">yano_</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=yano_" title="Ir al Perfil de yano_"><img id="error_avatar" class="avatar" border="0" width="120" src="https://media.giphy.com/media/TZWaepkgrB0wU/giphy.gif"/></a>
+<div class=" rango_sidebar clearfix">Idento</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/idento.png" title="Idento" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1633052)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1633052');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">51</b> Seguidores</li>
+<li><b>835</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>28</b> Posts</li>
+<li><b>192</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">convertir videos a 60fps con megui</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=389922';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=389924';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=127" alt="Hazlo tu mismo" title="Hazlo tu mismo">Hazlo tu mismo</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 10 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1051951">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><b>Hola que tal amigos de  identi hago el siguiente tutorial  para explicar maso menos como es que se transforma  los  videos a 60 quiero aclarar que para los videos 2D como  caricaturas  o anime no sirve del todo bien creo que hay otro tuto para esto la verdad e intentado hacerlo y si no se ve también que digamos.</b><br /><b>Ejemplo  de como se ve  =)</b><br /><b>Original</b><br /><b><a href="http://www.spirton.com/uploads/InterFrame/20110618-Sample-Original.mkv" target="_blank" rel="nofollow">http://www.spirton.com/uploads/InterFrame/20110618-Sample-Original.mkv</a></b><br /><b> 60fps</b><br /><b><a href="http://www.spirton.com/uploads/InterFrame/20110618-Sample-InterFrame.mkv" target="_blank" rel="nofollow">http://www.spirton.com/uploads/InterFrame/20110618-Sample-InterFrame.mkv</a></b><br /><br /><br /><b>PASO 1:</b><br /><br /><b>Primero tendrás que descargar los ficheros necesarios que encontrareis en este zip (6MB aprox).</b><br /><br /><b><a href="http://www.spirton.com/uploads/60FPS/Files-20150521.zip" target="_blank" rel="nofollow">http://www.spirton.com/uploads/60FPS/Files-20150521.zip</a></b><br /><br /><b>Ejecuta e instala AviSynth.exe.</b><br /><br /><b>Descarga e instala MeGUI, </b><br /><b><a href="http://sourceforge.net/projects/megui/files/megui-stable/0.3.5/MeGUI_0.3.5_x86_Installer_OfflinePackage.exe/download" target="_blank" rel="nofollow">http://sourceforge.net/projects/megui/files/megui-stable/0.3.5/MeGUI_0.3.5_x86_Installer_OfflinePackage.exe/download</a></b><br /><br /><br /><br /><b>Una vez instalado ejecútalo y actualiza todos sus componentes. Al finalizar la actualización y reiniciarse el programa, vuelve a comprobar que esta todo actualizado o, si te pide que actualices, tu dile que sí y repite el proceso hasta que todo este actualizado.</b><br /><br /><b>Cierra MeGUI y extrae tools (lo encontraras en el fichero zip) en la carpeta tools de MeGUI, en mi caso es C:Program Files (x86)MeGUItools pero eso es porque tengo un SO de 64bits. Si su SO es de 32bits la ruta debería ser C:Program FilesMeGUItools.</b><br /><br /><br /><b>PASO 2:</b><br /><b>Vas a necesitar códec, en caso de que no los tienes o de querer actualizar los existentes te recomiendo el K-Lite Mega Codec Pack.</b><br /><b>Pack</b><br /><br /><b><a href="http://www.codecguide.com/download_k-lite_codec_pack_mega.htm" target="_blank" rel="nofollow">http://www.codecguide.com/download_k-lite_codec_pack_mega.htm</a></b><br /><br /><br /><br /><b>Descarga e instala MKVToolnix.</b><br /><b>Cuando esté instalado ejecuta MKVMerge (MKVMerge GUI).</b><br /><br /><br /><b>PASO 3:</b><br /><b>Ejecuta MeGUI otra vez. Deberia salirte una ventana similar a la siguiente:</b><br /><b><img id="img_post" src="http://www.spirton.com/wp-content/uploads/2010/05/step3.png" border="0"></b><br /><br /><br /><br /><b>PASO 4:</b><br /><b>Ve a Tools -&gt; AVS Script Creator.(ctr+r)</b><br /><b>Deberia salirte una ventana similar a esta:</b><br /><b><img id="img_post" src="http://www.spirton.com/wp-content/uploads/2010/05/step4.png" border="0"></b><br /><br /><br /><br /><b>PASO 5:</b><br /><b>Haz click en el boton Config que hay al lado de Avisynth profile.</b><br /><b>Debería salirte esto:</b><br /><b><img id="img_post" src="http://www.spirton.com/wp-content/uploads/2010/05/Step3.jpg" border="0"></b><br /><br /><br /><b>PASO 6:</b><br /><b>En la parte inferior de esta nueva ventana haz click en el boton New y escribe 60FPS* de forma que te quede asi:</b><br /><br /><b><img id="img_post" src="http://www.spirton.com/wp-content/uploads/2010/05/Step5.jpg" border="0"></b><br /><br /><b>*Puedes ponerle el nombre que quieras, es para que tenga sentido.</b><br /><br /><br /><b>PASO 7:</b><br /><b>Ahora nos ocuparemos del script que se ocupara de realizar la conversión.</b><br /><b>Simplemente haz un copy/paste del siguiente codigo para reemplazar lo que tienes en la ventana.</b><br /><br /><br /><br /><br /><b>Setmemorymax(512)</b><br /><b>SetMTMode(3,4)</b><br /><b>PluginPath = &quot;C:Program Files (x86)MeGUItoolsavisynth_plugin&quot;</b><br /><b>LoadPlugin(PluginPath+&quot;svpflow1.dll&quot;)</b><br /><b>LoadPlugin(PluginPath+&quot;svpflow2.dll&quot;)</b><br /><b>Import(PluginPath+&quot;InterFrame2.avsi&quot;)</b><br /><b>&lt;input&gt;.ConvertToYV12()</b><br /><b>SetMTMode(2)</b><br /><b>&lt;deinterlace&gt;</b><br /><b>&lt;crop&gt;</b><br /><b>&lt;denoise&gt;</b><br /><b>&lt;resize&gt;</b><br /><b>InterFrame(Cores=4)</b><br /><br /><b>Nota #1: asegurate de que la dirección de PluginPath sea el correcto para tu caso, aqui es la direccion para un SO de 64bits.</b><br /><br /><b>Nota #2: en la linea InterFrame(Cores=4) deberías cambiar el 4 por el número de núcleos que tiene tu cpu.</b><br /><br /><b>Nota #3: si tienes una gpu reciente puedes agilizar este script agregando &quot;, GPU=true&quot; al script.</b><br /><b>Quedaria de esta manera: InterFrame(Cores=4, GPU=true)</b><br /><br /><b>Ahora tu ventana debería presentar este aspecto: (o similar)</b><br /><b><img id="img_post" src="http://www.spirton.com/wp-content/uploads/2010/05/step7.png" border="0"></b><br /><br /><b>PASO 8:</b><br /><b>Haz clic en la pestaña Extra Setup y asegurate de que la casilla &quot;Prefer DSS2 over DirectShowSource&quot; esta marcada.</b><br /><br /><b>Tambien puedes seleccionar el algoritmo de redimensionado que mas rabia te de, en este caso usaremos Spline64.</b><br /><br /><b>Quedaría asi:</b><br /><b><img id="img_post" src="http://www.spirton.com/wp-content/uploads/2010/05/Step7rev3.jpg" border="0"></b><br /><br /><b>Ahora haz click en Update y despues en OK.</b><br /><br /><br /><b>PASO 9:</b><br /><b>Ahora estamos de vuelta en la ventana AviSynth script creator y como tenemos seleccionada la plantilla de 60FPS solo nos queda seleccionar el video que queremos recodificar. Pulsa el botón ... que hay al lado de Video Input en la parte superior de la ventana y seleccionar tu video para abrirlo.</b><br /><b>Te aparecerá una ventana dandote 3 opciones, pulsa en &quot;DirectShowSource&quot;.</b><br /><b>Si te aparece una ventana pre visualizando el video que has seleccionado, ciérrala.</b><br /><b>Ahora tu ventana debería mostrar lo siguiente:</b><br /><b><img id="img_post" src="http://www.spirton.com/wp-content/uploads/2010/05/Step9.png" border="0"></b><br /><br /><br /><br /><b>PASO 10:</b><br /><b>Pulsa el boton Save. Si te vuelve a salir la ventana con la previsualizacion cierrala.</b><br /><br /><br /><b>PASO 11:</b><br /><b>Selecciona la calidad del video y del audio.</b><br /><b>Haz click en el boton Queue.</b><br /><br /><br /><b>PASO 12:</b><br /><b>Ve a la pestaña Queue y pulsa en el boton Start, te saldra una ventana nueva mostrandote el progreso de la conversion.</b><br /><b><img id="img_post" src="http://www.spirton.com/wp-content/uploads/2010/05/Step121.jpg" border="0"></b><br /><br /><br /><br /><br /><b>PASO 13:</b><br /><b>El último paso consiste en añadir las pistas de audio/subtitulos a la version de 60fps. Este proceso se realiza mediante muxing en vez de conversion por lo que no se produce ninguna perdida de calidad.</b><br /><b>Para esto usaremos el programa que hemos instalado previamente, MKVMerge.</b><br /><b>Ejecutalo y agrega el fichero original y el convertido. Hecho esto deberian salirte en la seccion de Tracks, chapters and tags las pistas de video y audio de ambos ficheros, obviamente debes deseleccionar la pista de video del fichero original pero puedes seleccionar las pistas de audio y/o subtitulos que desees.</b><br /><b>Aqui un ejemplo:</b><br /><b><img id="img_post" src="http://www.spirton.com/wp-content/uploads/2010/05/Step132.jpg" border="0"></b><br /><br /><br /><b>Finalmente, debes seleccionar donde quieres que se guarde el resultado y pulsando el boton Start muxing crearas el fichero final.</b><br /><br /><br /><b>como nota final n tras  varias pruebas recomiendo hacer el backup de los audios </b><br /><br /><b>fuente </b><br /><b><a href="http://www.spirton.com/convert-videos-to-60fps/" target="_blank" rel="nofollow">http://www.spirton.com/convert-videos-to-60fps/</a></b><br /><br /><b> ejepmlos echos por mi(ver en you tube)</b><br /><b><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/i2ayjWSWaCU" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div></b><br /><b><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/moud3Wr8UuI" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div></b><br /><b><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/wn5cKicusrE" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div></b><br /><b><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/gbLltXa1Dq0" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div></b><br /><b><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/ED6tp3iB7XI" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div></b><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">55</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">7615</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">20</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(389923,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(389923,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(389923,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(389923,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(389923,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(389923,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(389923,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(389923,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(389923,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(389923,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://1.bp.blogspot.com/-69blj31xqAA/XFl7PclkaRI/AAAAAAAAIbs/CUAUUL4jpZAIO0wVOmgWD-cLvPvKvZwzACLcBGAs/s0/blu-ray_1.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1898748" title="perfil de Papelillio"> Papelillio</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://lh5.googleusercontent.com/-S7fP-IzjXyo/UuEkVJxznQI/AAAAAAAAANI/e7YFXeTPYqM/s180/soolrak.png" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1758749" title="perfil de Soolrak"> Soolrak</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-GTOY5zfJVc8/VirjXBLQSII/AAAAAAAAAwo/PKSO9slDGck/s1600/SKID2.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1687855" title="perfil de Fixedgear"> Fixedgear</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-Nr9SsHucj60/WUG3icuAojI/AAAAAAAAABU/RtX7Px2zYEkZhiNT-jUkcvexh-6JIx37gCLcBGAs/s1600/Le37p.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=387" title="perfil de Le37p"> Le37p</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-59s7SdGdZuQ/U0hSMa3IX2I/AAAAAAAAAOM/CN2nK5lduMs/s1600/narutoBYgimel18.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1627242" title="perfil de gimel18"> gimel18</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/1962737_577695699000446_8671173201501167261_n.jpg?oh=0217eb8a6bbff1feda74753b03bee636&amp;oe=574BC522" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1734581" title="perfil de maritox777"> maritox777</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=13790" title="perfil de adamantium"> adamantium</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://imgfz.com/i/iW3ogA9.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1894423" title="perfil de kusanagySM"> kusanagySM</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://fotos.subefotos.com/0631c795ce154e40d50ed9d8ab535893o.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1779695" title="perfil de loko004"> loko004</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=129742" title="perfil de emizael"> emizael</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-jXdD2VGAlkI/Tkk4PPkvPkI/AAAAAAAABDg/10Lt5OZXG4k/s1600/il_fullxfull_242665376.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1978252" title="perfil de Grotewohl"> Grotewohl</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(389923);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('389923');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_94"></i>
+<a href="https://identi.io/index.php?topic=588572" title="clamp in wonderlan AI 1 y 2  HD 1080p 60fps"> clamp in wonderlan AI 1 y 2  HD 1080p 60fps</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=505117" title="Dragon ball Super cap 130 60fps 1080p"> Dragon ball Super cap 130 60fps 1080p</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=499291" title="Mundo Cool [1992] [Latino] [GD][1080]"> Mundo Cool [1992] [Latino] [GD][1080]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=497221" title="Dragon ball z El Poder Invencible 1080p 60fps GD"> Dragon ball z El Poder Invencible 1080p 60fps GD</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=492466" title="Dragon Ball Super  cap 116 1080p 60fps [GD]"> Dragon Ball Super  cap 116 1080p 60fps [GD]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=460603" title="Gorillaz new songs  + saturnz barz 1080p 60fps "> Gorillaz new songs  + saturnz barz 1080p 60fps </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=460008" title="mob psycho 100 2cap 1080p/60fps"> mob psycho 100 2cap 1080p/60fps</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_42"></i>
+<a href="https://identi.io/index.php?topic=458925" title="mob psycho 100  1cap 1080p/60fps "> mob psycho 100  1cap 1080p/60fps </a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">32</span> Comentarios</span>
+<span class="onpost"> convertir videos a 60fps con megui</span>
+<div class="comentario"></div><div id="comment_4195638" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mainfram3" href="?action=profile;user=mainfram3">
+<img id="error_avatar" src="http://fotos.subefotos.com/039f197d4e9142ff5ccaf1e768c65f1eo.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1554814" href="?action=profile;user=mainfram3">mainfram3</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442341205" title="15/09/2015 a las 18:20 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+primero ... muy buena guia copy paste.... &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />.... segundo yo ya prob?
+</div>
+</div>
+</div>
+</div><div id="comment_4195666" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="VILLOVJMIX" href="?action=profile;user=VILLOVJMIX">
+<img id="error_avatar" src="https://www.facebook.com/photo.php?fbid=10200585714276680&amp;set=a.1498077823271.2066432.1573904706&amp;type=1&amp;theater" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1678909" href="?action=profile;user=VILLOVJMIX">VILLOVJMIX</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442342312" title="15/09/2015 a las 18:38 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+no habra un reproductor? demasiada flojera copiar 4tb de videos entre pelis y series, naaaa y el splash pro ex es una mierda de programa, se quedo desactualizado con los nuevos codecs, no reproduce ciertos mkv, no reproduce ciertos mp4 no reproduce flv, el svp solo es para wmpc pero es mucho protocolo, ojala algun dia saquen una mezcla entre KODI Y SPLASH seria la persona mas feliz del mundo, pero esto es un asco tener q transformar tus formatos de vide oa 60 fps no vale la pena.. <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4195700" class="comentario coment_id_3">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="yano_" href="?action=profile;user=yano_">
+<img id="error_avatar" src="https://media.giphy.com/media/TZWaepkgrB0wU/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1633052" href="?action=profile;user=yano_">yano_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442343851" title="15/09/2015 a las 19:04 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita mainfram3: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">primero ... muy buena guia copy paste.... &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />.... segundo yo ya prob?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4195710" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="VILLOVJMIX" href="?action=profile;user=VILLOVJMIX">
+<img id="error_avatar" src="https://www.facebook.com/photo.php?fbid=10200585714276680&amp;set=a.1498077823271.2066432.1573904706&amp;type=1&amp;theater" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1678909" href="?action=profile;user=VILLOVJMIX">VILLOVJMIX</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442344314" title="15/09/2015 a las 19:11 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+y esto no altera el producto? osea en cuestion de peso? yo tengo 2 plasma de 21 en mi pc un daewoo y un selectron el daewoo lo uso como pantalla secundaria y el otro para pantalla principal, e visto lo q el splash puede hacer, pero el problema esta q al comienzo te maravillas x la calidad q te reproduce las pelis, y las series y anime, algo q no le quitare meritos, pero cuando vas mas alla, digamos, te topas con un formato que tenga el codec 2.65 el splash no lo reconoce, tengo muchos mkv q no los reproduce, la pantalla queda en negro, y sol ose oye el audio, pero cuando voy al kodi i lo reproduce pero no con la calidad q quisiera como en el splash, y agarrar esto q comparte para la transformacion a 60fps no vale la pena x el hecho de que el formato de la calidad de 60 fps no lo vas a reproducir en todos los reproductores habidos y x haber, almenos q tengan el avisync o la gpu de tu tarjeta grafica incorporado como lo hace el kodi pero no se ve el video en 60fps xq el video no esta asi
+</div>
+</div>
+</div>
+</div><div id="comment_4195719" class="comentario coment_id_5">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="yano_" href="?action=profile;user=yano_">
+<img id="error_avatar" src="https://media.giphy.com/media/TZWaepkgrB0wU/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1633052" href="?action=profile;user=yano_">yano_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442344756" title="15/09/2015 a las 19:19 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita VILLOVJMIX: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">y esto no altera el producto? osea en cuestion de peso? yo tengo 2 plasma de 21 en mi pc un daewoo y un selectron el daewoo lo uso como pantalla secundaria y el otro para pantalla principal, e visto lo q el splash puede hacer, pero el problema esta q al comienzo te maravillas x la calidad q te reproduce las pelis, y las series y anime, algo q no le quitare meritos, pero cuando vas mas alla, digamos, te topas con un formato que tenga el codec 2.65 el splash no lo reconoce, tengo muchos mkv q no los reproduce, la pantalla queda en negro, y sol ose oye el audio, pero cuando voy al kodi i lo reproduce pero no con la calidad q quisiera como en el splash, y agarrar esto q comparte para la transformacion a 60fps no vale la pena x el hecho de que el formato de la calidad de 60 fps no lo vas a reproducir en todos los reproductores habidos y x haber, almenos q tengan el avisync o la gpu de tu tarjeta grafica incorporado como lo hace el kodi pero no se ve el video en 60fps xq el video no esta asi</div></blockquote> de echo &nbsp;ese el problema de splash &nbsp;<img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> la unica opcion es bajar &nbsp;de nuevo el mkv con diferente formato &nbsp;o &nbsp;convertirlo al formato por ejemplo &nbsp;la serie Shingeki solo la e visto en H10i &nbsp;que por desgracia no acepta el mugroso splash &nbsp; hay otros user que suben pelis ya con este formato y se podria decir que usan masomenos el mismo metodo
+</div>
+</div>
+</div>
+</div><div id="comment_4195738" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="VILLOVJMIX" href="?action=profile;user=VILLOVJMIX">
+<img id="error_avatar" src="https://www.facebook.com/photo.php?fbid=10200585714276680&amp;set=a.1498077823271.2066432.1573904706&amp;type=1&amp;theater" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1678909" href="?action=profile;user=VILLOVJMIX">VILLOVJMIX</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442345540" title="15/09/2015 a las 19:32 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+exactamente x eso es q si me quejo del splash y es x esa razon esa gnt de mirilis lo a dejado abandonado, te recomiendo el kodi <div class="clearfix youtube"><embed src="https://www.youtube.com/embed/rhn7fWDYP88" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br />lo uso es xq me tiene bien ordenada mi biblioteca, y me da los resumenes que quiero de las pelis, si splash estuviese al dia con esto seria perfecto...
+</div>
+</div>
+</div>
+</div><div id="comment_4195791" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="dracon1234" href="?action=profile;user=dracon1234">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1647042" href="?action=profile;user=dracon1234">dracon1234</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442347810" title="15/09/2015 a las 20:10 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1678909" href="https://identi.io/index.php?action=profile&user=VILLOVJMIX" class="mensiones_identi">@VILLOVJMIX</a> AMIGO SI HABLAS DE UN REPRODUCTOR BUENO PARA LOS FORMATOS MKV Y MKV ENTRE OTROS, PRUEBA EL POTPLAYER. LO HE ESTADO PROBANDO Y SE VE MUY INTERESANTE Y ADEMAS ES GRATUITO. MIRALO Y ME DICES QUETAL...OK <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4195842" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="KeviN_NeiL" href="?action=profile;user=KeviN_NeiL">
+<img id="error_avatar" src="http://ist3-1.filesor.com/pimpandhost.com/1/3/5/1/135123/3/f/l/4/3fl4X/1445098660130.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1559563" href="?action=profile;user=KeviN_NeiL">KeviN_NeiL</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442350013" title="15/09/2015 a las 20:46 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buena info, solo s?
+</div>
+</div>
+</div>
+</div><div id="comment_4195948" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Nuts" href="?action=profile;user=Nuts">
+<img id="error_avatar" src="https://1.bp.blogspot.com/--LoRPXUMEEg/T3s_bEHL0gI/AAAAAAAAC_o/fJjdz7SyOvQ/s1600/Universo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="103785" href="?action=profile;user=Nuts">Nuts</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442355319" title="15/09/2015 a las 22:15 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Como que en el anime no se aprecio mucho 60 fps. Utilizo Kodi y es muy bueno, no tengo idea de como trabajen Splash o alguno de los mencionados pero el detalle de las actualizaciones es una problematica com?
+</div>
+</div>
+</div>
+</div><div id="comment_4196002" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="naranjos" href="?action=profile;user=naranjos">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="73663" href="?action=profile;user=naranjos">naranjos</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442357428" title="15/09/2015 a las 22:50 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita mainfram3: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">primero ... muy buena guia copy paste.... &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />.... segundo yo ya prob?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4327712" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="gimel18" href="?action=profile;user=gimel18">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-59s7SdGdZuQ/U0hSMa3IX2I/AAAAAAAAAOM/CN2nK5lduMs/s1600/narutoBYgimel18.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1627242" href="?action=profile;user=gimel18">gimel18</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1448848359" title="30/11/2015 a las 1:52 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Amigo teno el mismo problema la casilla Prefer DSS2 over DirectShowSource nose puede hablitar &nbsp;<img src="https://identi.io/Smileys/default/icon_rolleyes.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4327843" class="comentario coment_id_12">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="yano_" href="?action=profile;user=yano_">
+<img id="error_avatar" src="https://media.giphy.com/media/TZWaepkgrB0wU/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1633052" href="?action=profile;user=yano_">yano_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1448853278" title="30/11/2015 a las 3:14 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita gimel18: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Amigo teno el mismo problema la casilla Prefer DSS2 over DirectShowSource nose puede hablitar &nbsp;<img src="https://identi.io/Smileys/default/icon_rolleyes.png" alt="" border="0" /></div></blockquote>acabo de realizar &nbsp;un test sin activarlo y de igual manera funciona jejeje de echo justo hoy lo intente &nbsp;puedes hacer un peque?
+</div>
+</div>
+</div>
+</div><div id="comment_4329569" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="gimel18" href="?action=profile;user=gimel18">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-59s7SdGdZuQ/U0hSMa3IX2I/AAAAAAAAAOM/CN2nK5lduMs/s1600/narutoBYgimel18.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1627242" href="?action=profile;user=gimel18">gimel18</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1448952274" title="01/12/2015 a las 6:44 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1633052" href="https://identi.io/index.php?action=profile&user=yano_" class="mensiones_identi">@yano_</a> Gracias si lo logr?
+</div>
+</div>
+</div>
+</div><div id="comment_4388529" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ema96" href="?action=profile;user=ema96">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-KYtTSillgE0/VGp9dxBbQPI/AAAAAAAAA0Q/B75Se4Q6HAk/s0/gifgearladrian.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1602245" href="?action=profile;user=ema96">ema96</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1453126256" title="18/01/2016 a las 14:10 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+muy buena pero mi tv ya es 60fps se pone asi cuando pasas una pelicula al pendrive y la pones en la tv ya se ve a 60fps tengo una de 84 pulgadas 4k 3d samsung y otra de 40 que tambien se ve a 60fps
+</div>
+</div>
+</div>
+</div><div id="comment_4476377" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jovanhell" href="?action=profile;user=jovanhell">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1722261" href="?action=profile;user=jovanhell">jovanhell</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458327502" title="18/03/2016 a las 18:58 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+podr?
+</div>
+</div>
+</div>
+</div><div id="comment_4485403" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="MAGNIFIKO" href="?action=profile;user=MAGNIFIKO">
+<img id="error_avatar" src="https://static.wikia.nocookie.net/lotr/images/e/e7/Gandalf_the_Grey.jpg/revision/latest/scale-to-width-down/952?cb=20121110131754" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1952544" href="?action=profile;user=MAGNIFIKO">MAGNIFIKO</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458845900" title="24/03/2016 a las 18:58 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<b><i>Tremendo aportaso campeon,muchas gracias....<br />Mi unica duda es si sirve con peliculas....por ejemplo transformers 4 en MKV....<br />Saludos campeon....</i></b>
+</div>
+</div>
+</div>
+</div><div id="comment_4485775" class="comentario coment_id_17">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="yano_" href="?action=profile;user=yano_">
+<img id="error_avatar" src="https://media.giphy.com/media/TZWaepkgrB0wU/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1633052" href="?action=profile;user=yano_">yano_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458864800" title="25/03/2016 a las 0:13 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita MAGNIFIKO: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><b><i>Tremendo aportaso campeon,muchas gracias....<br />Mi unica duda es si sirve con peliculas....por ejemplo transformers 4 en MKV....<br />Saludos campeon....</i></b></div></blockquote> si se puede con mkv &nbsp;el mkv se crea apartir de la union de &nbsp;los mp4 con el oudio acc3 por lo general y los sub &nbsp;en este caso se recomienda sacar el video y convertir el video solamente &nbsp; &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4486598" class="comentario coment_id_18">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="MAGNIFIKO" href="?action=profile;user=MAGNIFIKO">
+<img id="error_avatar" src="https://static.wikia.nocookie.net/lotr/images/e/e7/Gandalf_the_Grey.jpg/revision/latest/scale-to-width-down/952?cb=20121110131754" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1952544" href="?action=profile;user=MAGNIFIKO">MAGNIFIKO</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458927802" title="25/03/2016 a las 17:43 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<b><i>buen dato...<br />Muchisimas gracias amigo....</i></b>
+</div>
+</div>
+</div>
+</div><div id="comment_4487127" class="comentario coment_id_19">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="yano_" href="?action=profile;user=yano_">
+<img id="error_avatar" src="https://media.giphy.com/media/TZWaepkgrB0wU/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1633052" href="?action=profile;user=yano_">yano_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458961218" title="26/03/2016 a las 3:00 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita MAGNIFIKO: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><b><i>buen dato...<br />Muchisimas gracias amigo....</i></b></div></blockquote>la otra semana tratare de hacer el tutorial para youtube =) <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4487386" class="comentario coment_id_20">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="MAGNIFIKO" href="?action=profile;user=MAGNIFIKO">
+<img id="error_avatar" src="https://static.wikia.nocookie.net/lotr/images/e/e7/Gandalf_the_Grey.jpg/revision/latest/scale-to-width-down/952?cb=20121110131754" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1952544" href="?action=profile;user=MAGNIFIKO">MAGNIFIKO</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458974940" title="26/03/2016 a las 6:49 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<b>Lo que se agradeceria a montones campeon,por lo menos yo entendi y lleve a la practica este tutorial y no me ha dado ningun drama al convertir peliculas...<br />Gran aporte bro...</b><i></i>
+</div>
+</div>
+</div>
+</div><div id="comment_4590633" class="comentario coment_id_21">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="yano_" href="?action=profile;user=yano_">
+<img id="error_avatar" src="https://media.giphy.com/media/TZWaepkgrB0wU/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1633052" href="?action=profile;user=yano_">yano_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1472060434" title="24/08/2016 a las 17:40 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita sUcIo2: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">hola ya habia visto esto pero cuando intento convertir me sale q falta advrcntr2.dll ya lo baje y lo instale en la carpeta y en la carpeta raiz del programa podrias ayudarme</div></blockquote>hola perdon por tardar lo mas seguro es por &nbsp;la direccion te debe de quedar a si &nbsp;<br />PluginPath = &quot;C:\Program Files (x86)\MeGUI\tools\avisynth_plugin\&quot;
+</div>
+</div>
+</div>
+</div><div id="comment_4591919" class="comentario coment_id_22">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="yano_" href="?action=profile;user=yano_">
+<img id="error_avatar" src="https://media.giphy.com/media/TZWaepkgrB0wU/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1633052" href="?action=profile;user=yano_">yano_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1472142838" title="25/08/2016 a las 16:33 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita sUcIo2: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita yano_: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita sUcIo2: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">hola ya habia visto esto pero cuando intento convertir me sale q falta advrcntr2.dll ya lo baje y lo instale en la carpeta y en la carpeta raiz del programa podrias ayudarme</div></blockquote>hola perdon por tardar lo mas seguro es por &nbsp;la direccion te debe de quedar a si &nbsp;<br />PluginPath = &quot;C:\\\\Program Files (x86)\\\\MeGUI\\\\tools\\\\avisynth_plugin\\\\&quot;</div></blockquote>mira ya lo solucione pero quisiera saber cuanto o como saber cuanto va a pesar lo que esta conviertiendo ya que quise convertit una pelicula y decia q 7p gbs nesesitava</div></blockquote> mm puedes configrurar el apartado de calidad hay deberia de amnter su peso &nbsp;aunque si es verdad que &nbsp;pesa &nbsp;un 25% mas del original &nbsp;o alemenos en las peliculas
+</div>
+</div>
+</div>
+</div><div id="comment_4979521" class="comentario coment_id_23">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="emizael" href="?action=profile;user=emizael">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="129742" href="?action=profile;user=emizael">emizael</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1498423174" title="25/06/2017 a las 20:39 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Alguna solución para convertir un video que sea x265? Es que cuando intento agregar el archivo me aparece la siguiente ventana <img id="img_post" src="http://imgur.com/qVN4oxd" border="0">
+</div>
+</div>
+</div>
+</div><div id="comment_4979530" class="comentario coment_id_24">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="emizael" href="?action=profile;user=emizael">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="129742" href="?action=profile;user=emizael">emizael</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1498423479" title="25/06/2017 a las 20:44 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+No se si se vea la imagen. Lo que dice el error es: &quot;AviSynth script error: DirectShowSource: RenderFile, the fliter graph manager won't talk to me&quot;
+</div>
+</div>
+</div>
+</div><div id="comment_4979568" class="comentario coment_id_25">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="yano_" href="?action=profile;user=yano_">
+<img id="error_avatar" src="https://media.giphy.com/media/TZWaepkgrB0wU/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1633052" href="?action=profile;user=yano_">yano_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1498426932" title="25/06/2017 a las 21:42 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita emizael: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Alguna solución para convertir un video que sea x265? Es que cuando intento agregar el archivo me aparece la siguiente ventana <img id="img_post" src="http://imgur.com/qVN4oxd" border="0"></div></blockquote>pasa una captura de tu script &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4979595" class="comentario coment_id_26">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="emizael" href="?action=profile;user=emizael">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="129742" href="?action=profile;user=emizael">emizael</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1498429040" title="25/06/2017 a las 22:17 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1633052" href="https://identi.io/index.php?action=profile&user=yano_" class="mensiones_identi">@yano_</a> Utilice el que colocaste en el post. Probe con unos videos en x264 y si funciona. Creo que es por lo del formato x265 que aun no reconoce.
+</div>
+</div>
+</div>
+</div><div id="comment_4979880" class="comentario coment_id_27">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="yano_" href="?action=profile;user=yano_">
+<img id="error_avatar" src="https://media.giphy.com/media/TZWaepkgrB0wU/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1633052" href="?action=profile;user=yano_">yano_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1498441543" title="26/06/2017 a las 1:45 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita emizael: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><a usuario="1633052" href="https://identi.io/index.php?action=profile&user=yano_" class="mensiones_identi">@yano_</a> Utilice el que colocaste en el post. Probe con unos videos en x264 y si funciona. Creo que es por lo del formato x265 que aun no reconoce.</div></blockquote>No creo que sea eso igual e trabajado con x265. pueden ser los codecs
+</div>
+</div>
+</div>
+</div><div id="comment_4980193" class="comentario coment_id_28">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="emizael" href="?action=profile;user=emizael">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="129742" href="?action=profile;user=emizael">emizael</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1498455995" title="26/06/2017 a las 5:46 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1633052" href="https://identi.io/index.php?action=profile&user=yano_" class="mensiones_identi">@yano_</a> Quizas sea eso entonces. Seguire intentando de todos modos. Mientras tanto ando con los x264 &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /><br />Me falto decir que es un excelente post. Gracias por toda esa info.
+</div>
+</div>
+</div>
+</div><div id="comment_4983352" class="comentario coment_id_29">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="yano_" href="?action=profile;user=yano_">
+<img id="error_avatar" src="https://media.giphy.com/media/TZWaepkgrB0wU/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1633052" href="?action=profile;user=yano_">yano_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1498656780" title="28/06/2017 a las 13:33 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita emizael: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><a usuario="1633052" href="https://identi.io/index.php?action=profile&user=yano_" class="mensiones_identi">@yano_</a> Quizas sea eso entonces. Seguire intentando de todos modos. Mientras tanto ando con los x264 &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /><br />Me falto decir que es un excelente post. Gracias por toda esa info.</div></blockquote> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> jajaja sigue intententando tengo otro post &nbsp;es solo bajar el megui ese te deberia de funcionar es el que uso. De todos modos vere si hay &nbsp;otra forma
+</div>
+</div>
+</div>
+</div><div id="comment_5068634" class="comentario coment_id_30">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="kaiserweb" href="?action=profile;user=kaiserweb">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-EX_zoRI8zIY/VWYn15qMp4I/AAAAAAAAA7M/SWL_OpIQrh0/s320/IMG_1258.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1555424" href="?action=profile;user=kaiserweb">kaiserweb</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1504779001" title="07/09/2017 a las 10:10 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+hola una pregunta sirve para windows 10? es que avisynth no se instala
+</div>
+</div>
+</div>
+</div><div id="comment_5074829" class="comentario coment_id_31">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="alviscure" href="?action=profile;user=alviscure">
+<img id="error_avatar" src="http://kultstudio.com/art/jim-morrison" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901162" href="?action=profile;user=alviscure">alviscure</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1505315340" title="13/09/2017 a las 15:09 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1633052" href="https://identi.io/index.php?action=profile&user=yano_" class="mensiones_identi">@yano_</a> amigo yano, yo ya hice todo paso a paso, pude instalar todo sin problemas, pero me dice que hay un problema en el script, llevo días intentandolo y nada <img id="img_post" src="https://mail.google.com/mail/u/0/#inbox/15e7bc523741fb94?projector=1" border="0">
+</div>
+</div>
+</div>
+</div><div id="comment_5117493" class="comentario coment_id_32">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="yano_" href="?action=profile;user=yano_">
+<img id="error_avatar" src="https://media.giphy.com/media/TZWaepkgrB0wU/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1633052" href="?action=profile;user=yano_">yano_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1508990677" title="26/10/2017 a las 4:04 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita alviscure: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><a usuario="1633052" href="https://identi.io/index.php?action=profile&user=yano_" class="mensiones_identi">@yano_</a> amigo yano, yo ya hice todo paso a paso, pude instalar todo sin problemas, pero me dice que hay un problema en el script, llevo días intentandolo y nada <img id="img_post" src="https://mail.google.com/mail/u/0/#inbox/15e7bc523741fb94?projector=1" border="0"></div></blockquote> no se cual sea tu error &nbsp;manda captura y el srcipt
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_4.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949fbfa1875dea6',t:'MTc2MTQ4MjAyOQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
