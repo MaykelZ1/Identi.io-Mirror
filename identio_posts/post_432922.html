@@ -1,0 +1,796 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Instalar Apricity OS dual boot  Windows sin UEFI - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="17525 17526 En lo personal, me encanta, estaba dudando si migrar o no de Fedora a Arch. Ya que llevo varios años casado con Gnome y Fedora, y no quiero o..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='UjlxblRLemU1OURTYkJzVTJGc2RHVmtYMTg5ZjFld0QxUUlPb2FmbVFPK0ZFeCtjWXZpSzVKN0Q5NGZMYlo2endKYjBKR3lRMHBUL1JTY0tDUlFZZ0dDV20vcmpnWmxweGl2Wmc9PUk4RWRqVnZmUkd3aVg5Zw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761480887;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '66bc07c9d54f3afff8c14c2ba6c92746');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_1.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Instalar Apricity OS dual boot  Windows sin UEFI" title="Identi - Instalar Apricity OS dual boot  Windows sin UEFI" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '86635e9476d97728abe68d7c365a90006ea6dc38';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=GussFer">GussFer</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"download it!.."
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=GussFer" title="Ir al Perfil de GussFer"><img id="error_avatar" class="avatar" border="0" width="120" src="http://imgfz.com/i/xUdoLrG.png"/></a>
+<div class=" rango_sidebar clearfix">Genuine</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/genuine.png" title="Genuine" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1938697)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1938697');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">205</b> Seguidores</li>
+<li><b>8979</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>141</b> Posts</li>
+<li><b>1170</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Instalar Apricity OS dual boot  Windows sin UEFI</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=432921';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=432923';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=22" alt="Sistemas Operativos" title="Sistemas Operativos">Sistemas Operativos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 9 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1094953">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><img src="http://imgfz.com/i/HRV7xcP.png" /></div><div align="center"><img id="img_post" src="https://4.bp.blogspot.com/-xXXhnoXquGo/V9x25H6sX2I/AAAAAAAADXw/BXZjMeQ2FF0YQ456vqP9lsNEuhtxIp9NgCLcB/s640/aprcity-win.png" border="0"></div><br /><br /><br /><div align="center"><img src="https://i.postimg.cc/yYcT5T76/denti-info.png" /></div><br /><div style="text-align: justify;"><font size="4" style="line-height: 1.3em;">En lo personal, me encanta, estaba dudando si migrar o no de Fedora a Arch. Ya que llevo varios años casado con Gnome y Fedora, y no quiero otro entorno de escritorio que no sea Gnome y más seguridad Selinux de Fedora y la robustez que ésta distro ofrece. Y para mi sorpresa, Apricity Os viene por default con Gnome. Esto significa que viene con las configuraciones a las que ya estoy a costumbrado, esto hizo entonces, algo mucho más fácil mi decisión de migrar.</font></div><br /><div align="center"><img src="http://imgfz.com/i/g1OlDfo.png" /></div><br /><div align="center"><span style="color: #336699;"><font size="6" style="line-height: 1.3em;">Apricity OS</font></span></div><br /><div align="center"><div style="text-align: justify;"><font size="4" style="line-height: 1.3em;">Apricity OS es una distribución Linux con base Arch pero con un toque propio, que incluye repositorio con paquetes sensibles, con una hermosa interfaz, es decír, un Artwork porpio basado en el Arc-Theme y llamado Artic Apricity, y con algunas configuraciones que le dan su identidad.</font></div><br /><div style="text-align: justify;"><font size="4" style="line-height: 1.3em;">Apricity OS lo trae todo en la ISO para una instalación offline, no obstante es una ISO con un tamaño de 1,2~2.3 GB. El instalador es el Calamares, muy usado actualmente por muchas distros, y que en mi caso no ha dado ningún fallo en la instalación (Además soy nuevo en Arch).</font></div><br /><div style="text-align: justify;"><font size="4" style="line-height: 1.3em;">Disponible, por ahora, sólo en 64 bits, pueden descargarla desde su propia página web <a href="https://apricityos.com/download" target="_blank" rel="nofollow">https://apricityos.com/download</a>, incluso trae por torrent. Por lo demás, al ser una basada en Arch, trae sus repos más el repo de la comunidad de usuarios, AUR.</font></div><br /><font size="4" style="line-height: 1.3em;"><b>Y ustedes dirán, y qué tan complejo es instalarlo dual boot con Windows?</b></font><br /><br /><div style="text-align: justify;"><font size="4" style="line-height: 1.3em;">Si ya han instalado al menos una vez una distro Linux dual boot con Windows, probablemente podría decir que es fácil, sin embargo, hay quienes no lo han hecho, y mucho menos instalar una distro Arch.</font></div><br /><div style="text-align: justify;"><font size="4" style="line-height: 1.3em;">Como sabrán, instalar archlinux como tal, es todo un show hacerlo, pero ahora las versiones como Apricity OS, Manjaro, Anterjos o Chakra lo permiten de una manera simple, pero a veces siempre es necesario seguir una guía.</font></div><br /><div style="text-align: justify;"><font size="5" style="line-height: 1.3em;"><b>Instalación de Apricity OS dual Boot Windows 7 en adelante</b></font></div><br /><div style="text-align: justify;"><font size="4" style="line-height: 1.3em;">Como lo dice en el Título, estos pasos son para instalarlo sin UEFI. Microsoft menciona que es más seguro, fiable, prevee soluciones a fallos, y no sé que otras &quot;características más&quot;. En lo personal he tenido problemas con UEFI, sobre todo en la virtualización, no sé si sea mi ignorancia al instalarlo, o quien sabe, pero pienso que restringue algunas características del hardware, además de esto, no es nada fácil bootear o iniciar desde una USB con dicha activación.</font></div><br /><div style="text-align: justify;"><font size="4" style="line-height: 1.3em;">Pero bueno, cada uno lo puede instalar a su gusto, los pasos descritos a continuación, se pueden generalizar para cualquier instalación de distros GNU/Linux. La pequeña diferencia estará en que si tienen activado o no UEFI.</font></div><br /><span style="color: #ff6633;"><font size="4" style="line-height: 1.3em;">ANTES DE SEGUIR, COMO SIEMPRE, ES 100% NECESARIO REALIZAR UN RESPALDO DE LA INFORMACIÓN IMPORTANTE.</font></span><br /><span style="color: #ff6633;"><font size="1" style="line-height: 1.3em;">Recordar que todo lo que ustedes realicen en sus equipos, es completamente bajo su responsabilidad.</font></span><br /><br /><div style="text-align: justify;"><font size="4" style="line-height: 1.3em;">1.- Recomiendo hacer una formateo completo de su equipo, de esta manera se aseguran de eliminar todo el software malintencionado de Windows. Yo siempre formateo un nuevo que viene de fábrica, y reinstalo únicamente lo que necesito, como ya sabrán los equipos nuevos, siempre traen software innecesario y que solo alentan Windows, como si Windows por sí solo no fuera ya suficiente. (No digo que no sea bueno, para los juegos, es perfecto...)</font></div><br /><div style="text-align: justify;"><font size="4" style="line-height: 1.3em;">2.- Una vez instalado o reinstalado Windows, procedemos a crear una partición en Windows para que sea utilizada por Apricity OS. En este ejemplo, utilizaré Windows 10x64bits la actualización de julio 2016.</font></div></div><br /><font size="4" style="line-height: 1.3em;">Para evitarse el proceso de crear una partición desde la propia instalación de cualquier distro linux, recomiendo mejor crear una partición desde Windows y una vez en la instalación seleccionar la partición creada específicamente para dicha distro.</font><br /><br /><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://2.bp.blogspot.com/-0X-43wESoAc/V5LX_yjyvyI/AAAAAAAADCA/_Zt0m6GwEj4_D-d04sbVcBOZrEwDBFn5gCLcB/s400/Captura%2Bde%2Bpantalla%2Bde%2B2016-07-22%2B18-37-55.png" border="0"></font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;">Ir al menú inicio, buscar Crear y formatear particiones disco duro</font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://4.bp.blogspot.com/-ozAkuy9HC9c/V5LX_T511cI/AAAAAAAADB8/JKuFANiNhEYef5pjHaZt_seErfJoZtkwwCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-07-22%2B18-39-07.png" border="0"></font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;">Abrirá la ventana siguiente, seleccionar el disco que se desea reducir, clic derecho y seleccionar Reducir Volumen</font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://4.bp.blogspot.com/-r50hpWrnMoM/V5LX_eQKK3I/AAAAAAAADB4/aD3vx1qqJIsglwCLVv85tB4SAmC7Vb9tQCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-07-22%2B18-39-45.png" border="0"></font></div><br /><br /><br /><div align="center"><font size="4" style="line-height: 1.3em;">Asignar el espacio que se desea para la nueva partición a crear.</font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://2.bp.blogspot.com/-p2NBCC2qThA/V5LYAF5gL5I/AAAAAAAADCE/ErPbJRfZKKoGct85H111P8F19Y-lnWnXgCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-07-22%2B18-40-01.png" border="0"></font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;">Una vez reducido y creada la partición, es necesario asignarle un formato.</font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://4.bp.blogspot.com/-g4mwp45Covc/V5LYAMLBMvI/AAAAAAAADCI/KMRK6rTgIS40WC4k3pWQRjVLOR1_Kv9iwCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-07-22%2B18-40-06.png" border="0"></font></div><br /><br /><div align="center"><font size="4" style="line-height: 1.3em;">Clic derecho sobre la partición, seleccionar Nuevo volumen simple.</font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://2.bp.blogspot.com/-fROh9VRyFRA/V5LYAa2eAII/AAAAAAAADCM/nE2OMpzyxcAzmwo_77U63fiMf8S3Zs-owCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-07-22%2B18-40-11.png" border="0"></font></div><br /><br /><div align="center"><font size="4" style="line-height: 1.3em;">Clic en la opción SIguente</font></div><br /><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://1.bp.blogspot.com/-WnwJqgCR8jI/V5LYAjauccI/AAAAAAAADCQ/HbtEbgI31YEDcNwYVwiMNHYTKwZ0wlbywCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-07-22%2B18-40-15.png" border="0"></font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;">Dejar todo por default y clic en siguiente.</font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://3.bp.blogspot.com/-FCiOnum-Ino/V5LYAvsdj2I/AAAAAAAADCU/Naj2LYCWCVAyuCgM6LpXPIpJcDmVGlj1ACLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-07-22%2B18-40-18.png" border="0"></font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;">Dejar todo por default y clic en siguiente.</font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://2.bp.blogspot.com/-0GXIimGeafE/V5LYA-fgarI/AAAAAAAADCY/yug21mEskk8NO0TKnVTgk_fIw30GbYy_QCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-07-22%2B18-40-30.png" border="0"></font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;">Asignar el nombre de Deepin o cualquier otro nombre a la nueva partición.</font></div><br /><div align="center"><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://4.bp.blogspot.com/-rIJa8EyD3Es/V5LYBIC7jaI/AAAAAAAADCc/OFXjM5FJFEslWKV48dQHennfWaXPz9wdQCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-07-22%2B18-40-39.png" border="0"></font></div><br /><br /><div align="center"><font size="4" style="line-height: 1.3em;">Y con eso se ha creado la partición que se utilizará a instalar.</font></div><br /><div align="center"><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">3.- Instalar el ISO de Apricity en USB o DVD, recomiendo USB.</font></div><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">Para instalar desde USB, descargamos unetbootin <a href="https://unetbootin.github.io/" target="_blank" rel="nofollow">https://unetbootin.github.io/</a> o cualquier otro con el que conozcan.</font></div><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">Se instala, insertar usb, iniciar unetbootin, seleccionar la USB, seleccionar el ISO y damos clic en Iniciar, ver imagen:</font></div><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://1.bp.blogspot.com/-UqWpRnPzG-s/V9yB2rwja8I/AAAAAAAADX8/fUFSBCINwzg3-3IA6kuRmj9chAS_MTEQwCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-09-16%2B18-34-05.png" border="0"></font><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">4.- Reiniciar el equipo desde la USB o DVD. Y a continuación seguiremos las instrucciones siguientes o propias del Asistente de Instalación de Apricity OS.<br /></font><div align="center"><font size="4" style="line-height: 1.3em;">Seleccionar &lt;Boot Apricity OS (x86_64)&gt;</font></div></div><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://3.bp.blogspot.com/--E2LfY3D2ZU/V9yH47kZ_7I/AAAAAAAADYE/pTD8EUxZOtUJpGt1AFQwTCY9cQ5WN-hswCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-09-16%2B18-50-59.png" border="0"></font><br /><font size="4" style="line-height: 1.3em;">Obviamente, buscar nuestro idioma.</font><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://1.bp.blogspot.com/-ZVDhy_W01dw/V9yH5s512PI/AAAAAAAADYI/Y_FtReQHLvY96cizicK7FVgy03jXK4fsACLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-09-16%2B18-53-13.png" border="0"></font><br /><font size="4" style="line-height: 1.3em;">Seleccionar la zona horaria correspondiente.</font><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://3.bp.blogspot.com/-tsd-XFzhdk4/V9yH6bQiLoI/AAAAAAAADYQ/N8YgrTImwfM2mskECYX6NrMOhbQd19bsQCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-09-16%2B18-53-19.png" border="0"></font><br /><font size="4" style="line-height: 1.3em;">Aquí es la parte más importante. Seleccionar la última opción, ya que esa nos permitirá particionar manualmente el disco que creamos anteriormente. También pueden seleccionar la primera opción, en esa les pide seleccionar el disco y redimiensionarlo, a veces esto causa algunos errores, por eso no me gusta hacerlo de ese modo, pero si no tienen nada que perder adelante.</font><br /><font size="4" style="line-height: 1.3em;">A continuación clic en Siguiente.</font><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://2.bp.blogspot.com/-SvgPMiffV40/V9yH6WLnD5I/AAAAAAAADYM/LS49bnZjztckykBohVxafUzsO7lj_ULsgCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-09-16%2B18-53-44.png" border="0"></font><br /><font size="4" style="line-height: 1.3em;">Aquí no les mostrará el nombre de la partición que se creó en Windows, pero como verán, la parte coloreada en azul y verde, nos marca que es Windows, por lo tanto nos queda la de color Amarillo suave.</font><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://1.bp.blogspot.com/-sRYYkLl_xPQ/V9yH6nsw47I/AAAAAAAADYU/XxHFCxXRjpUohgPB9nPY7L7fpL16SrxKQCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-09-16%2B18-53-53.png" border="0"></font><br /><font size="4" style="line-height: 1.3em;">Seleccionamos esa partición &nbsp;y la borramos.</font><br /><font size="4" style="line-height: 1.3em;">&nbsp;<img id="img_post" src="https://2.bp.blogspot.com/-IIg4m5bVpJM/V9yH7Ea-xOI/AAAAAAAADYY/vYVDrkyjevg_qMF0ybm3eHH-Ei7_4Zk2wCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-09-16%2B18-54-27.png" border="0"></font><br /><font size="4" style="line-height: 1.3em;">Luego de la que se borró creamos un punto de montaje llamado linuxswap, de 2gb o 1 si lo desean, damos clic en Ok.</font><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://3.bp.blogspot.com/-WD1asBrwnhc/V9yH7T4VbAI/AAAAAAAADYc/UTpNLHttklcaFwdFo9tbeMFzI1ozCRrEACLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-09-16%2B18-55-31.png" border="0"></font><br /><font size="4" style="line-height: 1.3em;">Creamos otro punto de montaje con el total de espacio seleccionado y este será &quot;/&quot;, tal cual se muestra en la imagen de abajo, clic en ok.</font><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://4.bp.blogspot.com/-d5_ehQ_2KSM/V9yH7iiRgMI/AAAAAAAADYg/dO8jtHvDTqoBK4IoCVemszfcmiQY-kYJQCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-09-16%2B18-55-46.png" border="0"></font><br /><font size="4" style="line-height: 1.3em;">Ahora ya hemos creado las particiones necesarias, podemos dar clic en siguiente.</font><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://3.bp.blogspot.com/-mTTxAuMTcVQ/V9yH8WfS9AI/AAAAAAAADYk/OQDqHITsJW0kAAwK9PNK4K23BZXW2f4VgCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-09-16%2B18-55-57.png" border="0"></font><br /><font size="4" style="line-height: 1.3em;">A continuación rellenamos los campos de nombres de usuarios y clic en siguiente.</font><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://3.bp.blogspot.com/-Ag8YEg69axU/V9yH88_EuyI/AAAAAAAADYo/dqUIF6J17gMti5tbzbDgtZNOx_D075m-QCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-09-16%2B18-56-16.png" border="0"></font><br /><font size="4" style="line-height: 1.3em;">Nos mostrará la ventana de resumen, clic en siguiente, y esperamos a que termine la instalación. Una vez terminado, marcamos la casilla Reiniciar ahora, retiramos el medio de instalación y listo. Ahora en nuestro menú de inicio podremos ver lo siguiente:</font><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://2.bp.blogspot.com/-n1xitd_Kn4o/V9yMhCw-mWI/AAAAAAAADYs/0l44Oqto7CIsRn9OPxC42mwGx7L-Lk2MwCLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-09-16%2B19-06-51.png" border="0"></font><br /><font size="4" style="line-height: 1.3em;">Y con eso hemos instalado Apricity OS dual Boot con Windows 10.</font><br /><font size="4" style="line-height: 1.3em;"><img id="img_post" src="https://4.bp.blogspot.com/-qpl4Wmut64o/V9yWgu7lVaI/AAAAAAAADY0/SHstoq4QekkjZ1XUNM-7z86ZAgEMnOApACLcB/s640/Captura%2Bde%2Bpantalla%2Bde%2B2016-09-16%2B20-03-03.png" border="0"></font><br /><br /></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">77</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 7.7/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">5238</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">16</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(432922,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(432922,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(432922,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(432922,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(432922,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(432922,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(432922,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(432922,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(432922,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(432922,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="http://i85.fastpic.ru/big/2016/1028/0d/74f53558202f85ff957f6a1925def50d.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=18809" title="perfil de pancram"> pancram</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://i.pinimg.com/originals/de/48/23/de482388ad3ea5060c4c83b82099b81b.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1952083" title="perfil de tiglla"> tiglla</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1758182" title="perfil de cacho12345"> cacho12345</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://www.picgifs.com/anime/naruto/gaara/anime-gaara-701874.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1753440" title="perfil de chalco"> chalco</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://imagenti.li/zZq.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1893535" title="perfil de rugal2015"> rugal2015</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://extraimage.com/images/2019/07/15/IMG_0258.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1940491" title="perfil de ChocoCrysp"> ChocoCrysp</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://i57.fastpic.ru/big/2013/1006/85/732758ed4af696a70d99e4d25a617d85.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1529292" title="perfil de akula1997"> akula1997</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-roxoQWd_-8M/V99jLhchtxI/AAAAAAAAASw/DFwCU_rybeg058S2xTSf97hoevc_IHHSQCLcB/s1600/WqEoqp.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1936426" title="perfil de alhubu"> alhubu</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-R3vnSn8TO48/WIoJbW5tBPI/AAAAAAAACEY/i-sEYK0BQpA3rZG3J0N1xtG8VJi8vkXvQCLcB/s320/giphy.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1840236" title="perfil de dnite"> dnite</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://lh5.googleusercontent.com/qEVLwPeC-sF2chyXtJvOU9Bzlk57FxpowB6O8NuQA7c=w276-h207-p-no" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=72341" title="perfil de nocua"> nocua</a>: <b>2 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(432922);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('432922');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=647548" title="Autodesk Autocad 2025 v25 x64 ESP [MG]"> Autodesk Autocad 2025 v25 x64 ESP [MG]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=647510" title="Autodesk Autocad 2025 v25 x64 ENG [MF]"> Autodesk Autocad 2025 v25 x64 ENG [MF]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=647429" title="CorelDraw v24 | x64 [MF]"> CorelDraw v24 | x64 [MF]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=629664" title="CivilCad 2023 x64 [MF]"> CivilCad 2023 x64 [MF]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=622430" title="Autodesk Civil 3D 2024 ENG x64 [FL]"> Autodesk Civil 3D 2024 ENG x64 [FL]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=622384" title="Autodesk AutoCAD Electrical 2024 ENG 64bits [FL]"> Autodesk AutoCAD Electrical 2024 ENG 64bits [FL]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=621835" title="Autocad 2024 Eng x64 [MF]"> Autocad 2024 Eng x64 [MF]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=621834" title="CivilCad 2024 [MF]"> CivilCad 2024 [MF]</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">24</span> Comentarios</span>
+<span class="onpost"> Instalar Apricity OS dual boot  Windows sin UEFI</span>
+<div class="comentario"></div><div id="comment_4620652" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="pancram" href="?action=profile;user=pancram">
+<img id="error_avatar" src="http://i85.fastpic.ru/big/2016/1028/0d/74f53558202f85ff957f6a1925def50d.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="18809" href="?action=profile;user=pancram">pancram</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474077002" title="17/09/2016 a las 1:50 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Tremendo post y muy bien explicado. Probé apricity en una máquina virtual y reconozco que está bonito, pero no hay caso, no me acostumbro a usar otro sistema de paquetes que no derive de Debian, así como el uso de la consola en debian y derivadas , es lo que siempre usé. Intenté con Manjaro, KaOS y otras distros, pero siempre vuelvo a los &quot;buntus&quot; o mint, coo uso ahora. &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4620664" class="comentario coment_id_2">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GussFer" href="?action=profile;user=GussFer">
+<img id="error_avatar" src="http://imgfz.com/i/xUdoLrG.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938697" href="?action=profile;user=GussFer">GussFer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474077500" title="17/09/2016 a las 1:58 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+así es <a usuario="18809" href="https://identi.io/index.php?action=profile&user=pancram" class="mensiones_identi">@pancram</a> .... es lo malo de acostumbrarse. en mi caso con gnome y fedora, adoro zsh, así que solo lo instalo y ya. lo que más extraño de fedora es selinux, selinux es realmente poderoso con la configuración por defecto, &nbsp;para no permitir ni siquiera ssh por default en fedora.<br /><br />gracias por pasar y comentar, gracias por los puntos.
+</div>
+</div>
+</div>
+</div><div id="comment_4620769" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="tiglla" href="?action=profile;user=tiglla">
+<img id="error_avatar" src="https://i.pinimg.com/originals/de/48/23/de482388ad3ea5060c4c83b82099b81b.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1952083" href="?action=profile;user=tiglla">tiglla</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474081853" title="17/09/2016 a las 3:10 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buen post! Gracias
+</div>
+</div>
+</div>
+</div><div id="comment_4620772" class="comentario coment_id_4">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GussFer" href="?action=profile;user=GussFer">
+<img id="error_avatar" src="http://imgfz.com/i/xUdoLrG.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938697" href="?action=profile;user=GussFer">GussFer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474082060" title="17/09/2016 a las 3:14 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+de nada <a usuario="1952083" href="https://identi.io/index.php?action=profile&user=tiglla" class="mensiones_identi">@tiglla</a> &nbsp;gracias a ti por pasar y comentar
+</div>
+</div>
+</div>
+</div><div id="comment_4620802" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="cacho12345" href="?action=profile;user=cacho12345">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1758182" href="?action=profile;user=cacho12345">cacho12345</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474084041" title="17/09/2016 a las 3:47 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <a usuario="1938697" href="https://identi.io/index.php?action=profile&user=GussFer" class="mensiones_identi">@GussFer</a> &nbsp;Gracias lo voy a instalar para Probarlo . Saludos &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4620805" class="comentario coment_id_6">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GussFer" href="?action=profile;user=GussFer">
+<img id="error_avatar" src="http://imgfz.com/i/xUdoLrG.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938697" href="?action=profile;user=GussFer">GussFer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474084256" title="17/09/2016 a las 3:50 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1758182" href="https://identi.io/index.php?action=profile&user=cacho12345" class="mensiones_identi">@cacho12345</a> me parecer muy bien<br /><br />gracias por los puntos
+</div>
+</div>
+</div>
+</div><div id="comment_4620828" class="comentario coment_id_7">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GussFer" href="?action=profile;user=GussFer">
+<img id="error_avatar" src="http://imgfz.com/i/xUdoLrG.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938697" href="?action=profile;user=GussFer">GussFer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474086325" title="17/09/2016 a las 4:25 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias por los puntos <a usuario="1753440" href="https://identi.io/index.php?action=profile&user=chalco" class="mensiones_identi">@chalco</a> &nbsp; &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4620835" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rugal2015" href="?action=profile;user=rugal2015">
+<img id="error_avatar" src="http://imagenti.li/zZq.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1893535" href="?action=profile;user=rugal2015">rugal2015</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474086693" title="17/09/2016 a las 4:31 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+hola <a usuario="1938697" href="https://identi.io/index.php?action=profile&user=GussFer" class="mensiones_identi">@GussFer</a> deberias poner como desactivar el uefi &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> por lo demas buen tutorial
+</div>
+</div>
+</div>
+</div><div id="comment_4620842" class="comentario coment_id_9">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GussFer" href="?action=profile;user=GussFer">
+<img id="error_avatar" src="http://imgfz.com/i/xUdoLrG.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938697" href="?action=profile;user=GussFer">GussFer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474087021" title="17/09/2016 a las 4:37 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Sí, eso sería perfecto, <a usuario="1893535" href="https://identi.io/index.php?action=profile&user=rugal2015" class="mensiones_identi">@rugal2015</a> &nbsp;y gracias por los puntos.<br /><br />lo estoy tratando de poner, el problema es que no encuentro cómo generalizarlo, para cada modelo de laptop, es diferente el acceso al setup del bios.<br /><br />Si sabes de alguna manera, sería perfecto publicarlo.
+</div>
+</div>
+</div>
+</div><div id="comment_4620873" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rugal2015" href="?action=profile;user=rugal2015">
+<img id="error_avatar" src="http://imagenti.li/zZq.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1893535" href="?action=profile;user=rugal2015">rugal2015</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474089272" title="17/09/2016 a las 5:14 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+pues en youtube hay tutos pero estan en ingles <a usuario="1938697" href="https://identi.io/index.php?action=profile&user=GussFer" class="mensiones_identi">@GussFer</a>
+</div>
+</div>
+</div>
+</div><div id="comment_4620891" class="comentario coment_id_11">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GussFer" href="?action=profile;user=GussFer">
+<img id="error_avatar" src="http://imgfz.com/i/xUdoLrG.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938697" href="?action=profile;user=GussFer">GussFer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474091736" title="17/09/2016 a las 5:55 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+sería cuestion de traducirlo entonces <a usuario="1893535" href="https://identi.io/index.php?action=profile&user=rugal2015" class="mensiones_identi">@rugal2015</a> &nbsp; deja reviso y posiblemente el finde suba algo al respecto...
+</div>
+</div>
+</div>
+</div><div id="comment_4621042" class="comentario coment_id_12">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GussFer" href="?action=profile;user=GussFer">
+<img id="error_avatar" src="http://imgfz.com/i/xUdoLrG.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938697" href="?action=profile;user=GussFer">GussFer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474122188" title="17/09/2016 a las 14:23 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias por los punticos @hocoCrysp
+</div>
+</div>
+</div>
+</div><div id="comment_4621077" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="darkscream" href="?action=profile;user=darkscream">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="140103" href="?action=profile;user=darkscream">darkscream</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474125901" title="17/09/2016 a las 15:25 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+pues de entrada gracias <a usuario="1938697" href="https://identi.io/index.php?action=profile&user=GussFer" class="mensiones_identi">@GussFer</a> por compartir, no soy de ambiente Linux pero desde hace un tiempo me esta llamando la atencion y creo que esta seria una buena opcion, por lo que menciona <a usuario="18809" href="https://identi.io/index.php?action=profile&user=pancram" class="mensiones_identi">@pancram</a> es posible entonces ponerla en una pc virtual, yo tengo Windows 7 y VMWare a la version 8 que no me da problemas, solo me queda la duda de saber si el proceso de instalacion es generico y solo me brinco la parte del Swapping para hacer el dual boot?? &nbsp;saludos a ambos por comentar y dejar informacion para los que no sabemos y queremos aprender
+</div>
+</div>
+</div>
+</div><div id="comment_4621087" class="comentario coment_id_14">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GussFer" href="?action=profile;user=GussFer">
+<img id="error_avatar" src="http://imgfz.com/i/xUdoLrG.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938697" href="?action=profile;user=GussFer">GussFer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474126453" title="17/09/2016 a las 15:34 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="140103" href="https://identi.io/index.php?action=profile&user=darkscream" class="mensiones_identi">@darkscream</a> de hecho sería más fácil, ni siquiera tendŕias que hacer el dual boot, si es que es virtual. o si quieres probarlo dualboot en vmware, sigue los pasos tal cual... <br /><br /><img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4621100" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="darkscream" href="?action=profile;user=darkscream">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="140103" href="?action=profile;user=darkscream">darkscream</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474127348" title="17/09/2016 a las 15:49 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita GussFer: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><a usuario="140103" href="https://identi.io/index.php?action=profile&user=darkscream" class="mensiones_identi">@darkscream</a> de hecho sería más fácil, ni siquiera tendŕias que hacer el dual boot, si es que es virtual. o si quieres probarlo dualboot en vmware, sigue los pasos tal cual... <br /><br /><img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote>gracias siempre si me decidi por la virtual, ya veremos como me va, como veo es distinto de PE a PA uno de otro sistema y es bueno de vez en cuando aprender nuevas cosas, por cierto estuve buscando los requerimientos para esta version para el caso de querer instalarla en una pc viejita pero no veo requerimientos aparte de 64 bits
+</div>
+</div>
+</div>
+</div><div id="comment_4621136" class="comentario coment_id_16">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GussFer" href="?action=profile;user=GussFer">
+<img id="error_avatar" src="http://imgfz.com/i/xUdoLrG.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938697" href="?action=profile;user=GussFer">GussFer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474129917" title="17/09/2016 a las 16:31 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+así es <a usuario="140103" href="https://identi.io/index.php?action=profile&user=darkscream" class="mensiones_identi">@darkscream</a> &nbsp;, como lo mencioné en el post, hasta solo está para 64 bits, posiblemente no arranque en pc muy antiguas, en cuando a ram 512mb es lo minimo, 8GB como mínimo en HDD y procesador, pues que solo sea de arquitectura de 64bits... pero sabes, es mucho mejor que lo pruebes, es modo live cd el iso, por lo tanto inicialo en la pc que desees, si lo inicia ya la hiciste...<br /><br />la mayoría de las distros linux son compatibles con pc's antiguas, así que no habría mucho problema.... lo peor que pudiera pasar es que no arranque...
+</div>
+</div>
+</div>
+</div><div id="comment_4621334" class="comentario coment_id_17">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="assassin" href="?action=profile;user=assassin">
+<img id="error_avatar" src="https://1.bp.blogspot.com/_RcHHrO2n-uc/SS7kyG1cF5I/AAAAAAAAAp0/-bo_95hcSdQ/s400/3x13.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="75529" href="?action=profile;user=assassin">assassin</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474143938" title="17/09/2016 a las 20:25 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Tremendos tus tutoriales.. Gracias hermano.. me convenciste, Voy a hacer Dual boot con Apricity OS.. me parece interesante. &nbsp;<br />Si tengo algun problema o duda.. acudire a ti. Saludos
+</div>
+</div>
+</div>
+</div><div id="comment_4621335" class="comentario coment_id_18">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GussFer" href="?action=profile;user=GussFer">
+<img id="error_avatar" src="http://imgfz.com/i/xUdoLrG.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938697" href="?action=profile;user=GussFer">GussFer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474144024" title="17/09/2016 a las 20:27 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+claroq ue sí. &nbsp;<a usuario="75529" href="https://identi.io/index.php?action=profile&user=assassin" class="mensiones_identi">@assassin</a> &nbsp;para eso estamos &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4621465" class="comentario coment_id_19">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="akula1997" href="?action=profile;user=akula1997">
+<img id="error_avatar" src="http://i57.fastpic.ru/big/2013/1006/85/732758ed4af696a70d99e4d25a617d85.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1529292" href="?action=profile;user=akula1997">akula1997</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474150279" title="17/09/2016 a las 22:11 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy buen post. A ver si la instalo en la netbook junto a Windows 7 x64 &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> &nbsp;Muchas gracias &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4621468" class="comentario coment_id_20">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GussFer" href="?action=profile;user=GussFer">
+<img id="error_avatar" src="http://imgfz.com/i/xUdoLrG.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938697" href="?action=profile;user=GussFer">GussFer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474150581" title="17/09/2016 a las 22:16 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+adelante <a usuario="1529292" href="https://identi.io/index.php?action=profile&user=akula1997" class="mensiones_identi">@akula1997</a> ... luego comentas lo que pase
+</div>
+</div>
+</div>
+</div><div id="comment_4622953" class="comentario coment_id_21">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="kikisiano" href="?action=profile;user=kikisiano">
+<img id="error_avatar" src="http://www.identi.li/images/rangos/novato.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1557963" href="?action=profile;user=kikisiano">kikisiano</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474253463" title="19/09/2016 a las 2:51 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias &nbsp; <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4622979" class="comentario coment_id_22">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GussFer" href="?action=profile;user=GussFer">
+<img id="error_avatar" src="http://imgfz.com/i/xUdoLrG.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938697" href="?action=profile;user=GussFer">GussFer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474255006" title="19/09/2016 a las 3:16 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+de nada <a usuario="1557963" href="https://identi.io/index.php?action=profile&user=kikisiano" class="mensiones_identi">@kikisiano</a>
+</div>
+</div>
+</div>
+</div><div id="comment_4625216" class="comentario coment_id_23">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ariosmar" href="?action=profile;user=ariosmar">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1852950" href="?action=profile;user=ariosmar">ariosmar</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474414406" title="20/09/2016 a las 23:33 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Sos un capo total, me encanta ese SO conste que soy nuevo en Linux y Apricity fue mi elección por la tremenda comodidad que tiene. Ni extraño Windows, y este post es el que buscaba.
+</div>
+</div>
+</div>
+</div><div id="comment_4625228" class="comentario coment_id_24">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GussFer" href="?action=profile;user=GussFer">
+<img id="error_avatar" src="http://imgfz.com/i/xUdoLrG.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1938697" href="?action=profile;user=GussFer">GussFer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1474414816" title="20/09/2016 a las 23:40 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Genial &nbsp; <a usuario="1852950" href="https://identi.io/index.php?action=profile&user=ariosmar" class="mensiones_identi">@ariosmar</a> &nbsp; &nbsp;ya sabes, tengo otros por ahí sobre personalizar gnome, puede que lo necesites... &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_1.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949e01aad09dea9',t:'MTc2MTQ4MDg4Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
