@@ -1,0 +1,1298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Cuenta Mega para JDownloader - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Cuenta Mega *Lamentablemente para unos o afortunadamente para otros que la aprovecharon ya se acabaron los más de 600gb que compartían en esta cuenta en solo 4 horas , esperemos encontrar más para..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='d1BYbktod09zUWxVTUEwVTJGc2RHVmtYMTlEYURLd0FTaU0rNnBDbFZza2UwQmNjZmo0OWxVb3NZdjE5NXN3dVJyRFR0VXZzOGo5R1ExMHYvM3ltM2hwRWdHc1VUc0JibS8yT0E9PTBQUUdMcThyZ1FoVjJPcg==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761479047;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'b0519d83d8587a6b0330371bf213d80b');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_1.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Cuenta Mega para JDownloader" title="Identi - Cuenta Mega para JDownloader" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '6ee69b08d50b13f8d643b1f21ab282bc183c05b5';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=CYPicazo">CYPicazo</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=CYPicazo" title="Ir al Perfil de CYPicazo"><img id="error_avatar" class="avatar" border="0" width="120" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png"/></a>
+<div class=" rango_sidebar clearfix">Illuminati</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/illuminati.png" title="Illuminati" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1901042)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1901042');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">213</b> Seguidores</li>
+<li><b>24701</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>248</b> Posts</li>
+<li><b>2506</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="en_reciclaje clearfix">
+<span class="cols"><img class="floatL" src="https://identi.io/images/eliminado.png"  border="0" width="128" height="128"/></span>
+<span class="left cols">
+<span class="title">Oops.. Este post tiene los enlaces eliminados! </span>
+<p>Identi revisa las denuncias de los usuarios en busca de enlaces eliminados que no dejan descargar los archivos, este mensaje te informa que este post que estas viendo <b>tiene los enlaces eliminados.</b></p>
+</span>
+<span class="right cols" >
+<span class="title">Usa el Buscador</span>
+<p>Por favor, te recomendamos que uses el buscador para encontrar m&aacute;s alternativas.</p>
+<form class="search_here" action="https://identi.io/index.php?action=buscador" method="POST">
+<input type="text" class="text-inp" name="search"/> <input type="submit" value="Buscar"/>
+</form>
+</span>
+</div><div class="header_post clearfix" >
+<h1 class="title_post">Cuenta Mega para JDownloader</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=504413';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=504415';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=124" alt="Reciclaje" title="Reciclaje">Reciclaje</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 7 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1166445">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var bbcode_captcha_0 = function(response){
+function sender_captcha_0(){
+	var formData = {
+	  "g-recaptcha-response": response
+	};
+	$.post('/dev/developstone.php?type=captcha_hash&topic=504414&id=0', formData).done(function(data){
+		if(data.error){
+			alert('Has ingresado incorrectamente el captcha');
+		}else{
+			console.log(data.captcha_token);
+			content=GibberishAES.dec('U2FsdGVkX1/g6u0YIuAfbNQwlGj4obvgxCJ7Nmfqf9EN+KQJyKBHlzJuQuqLawJpao8AxF57Tniz+UBfYBcjm0/FT1T9APIjFbCrejGD/VU=', data.captcha_token);
+			$('#bbcode_captcha_0').html('<br>'+linkify(content));
+		}
+	}).fail(function(data){
+		sender_captcha_0();
+	});
+}
+	sender_captcha_0();
+};
+var onloadCallback = function() {        grecaptcha.render('bbcode_captcha_0', {
+          'sitekey' : "6LeGKNAUAAAAAEp-eo2pGfrvtmyVJC_31jjNdWLA",
+          'callback' : bbcode_captcha_0        });
+	};</script><div align="center"><span style="color: #244061;"><font size="5" style="line-height: 1.3em;"><b>Cuenta Mega</b></font></span></div><br /><div align="center"><img id="img_post" src="https://1.bp.blogspot.com/-djgx9Vsb2sM/VrGPohca2VI/AAAAAAAAAGo/iHSj_QVeirw/s1600/Separadori.png" border="0"></div><br /><div align="center"><img id="img_post" src="https://2.bp.blogspot.com/-L9UcE91EdeM/Wgs5v7-0zqI/AAAAAAAADOg/aqMc00kqn4QrduMVoXvICmrh3Mwd-hyOQCLcBGAs/s1600/GokuWelcome.gif" border="0"></div><br /><br /><div align="center"><img id="img_post" src="https://3.bp.blogspot.com/-7q54S5QsI-A/WqNgndTDxlI/AAAAAAAADiU/wBCXXbLoX6UcdnU7Av3ORtrs1fG7hapVQCLcBGAs/s1600/Premium.jpg" border="0"></div><br /><div align="center"><img id="img_post" src="https://1.bp.blogspot.com/-o4cwIs1oEZI/VrGPozs6gpI/AAAAAAAAAGs/x0Xl0Tx5RvE/s1600/info1.png" border="0"></div><br /><br /><br /><br /><div align="center"><span style="color: #3333ff;"><font size="5" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">*Lamentablemente para unos o afortunadamente para otros que la aprovecharon ya se acabaron los más de 600gb que compartían en esta cuenta en solo 4 horas , esperemos encontrar más para seguir compartiendo. </span></font></span></div><div align="center"><span style="color: #3333ff;"></span></div><div align="center"><span style="color: #3333ff;"><font size="5" style="line-height: 1.3em;"><span style="font-family: Comic Sans MS;">Saludos</span></font></span></div><br /><br /><br /><div align="center"><img id="img_post" src="https://3.bp.blogspot.com/-Qr1ek5bNXUQ/VrGPooVg0uI/AAAAAAAAAGw/c1tCd8t_htA/s1600/images1.png" border="0"></div><div align="center"><img id="img_post" src="https://3.bp.blogspot.com/-8JO6SstNqP4/WqMqNxtqEBI/AAAAAAAADiE/3FUO0B9LIXY2IfKPrEf9zoJuLcRf1gwHQCLcBGAs/s1600/1.jpg" border="0"></div><br /><div align="center"><img id="img_post" src="https://4.bp.blogspot.com/-0URPIuUEntY/WqNlvew0XyI/AAAAAAAADik/H1QP7Rs3PBIiiVXMH46xNa6UgWDbb9k_ACLcBGAs/s1600/Ashampoo_Snap_viernes%252C%2B9%2Bde%2Bmarzo%2Bde%2B2018_22h53m05s_002_.png" border="0"></div><div align="center"><img id="img_post" src="https://2.bp.blogspot.com/-G1LXyMD5lj0/VrGPpse10dI/AAAAAAAAAG0/7HoOwDLUvAI/s1600/links1.png" border="0"></div><div align="center"><img id="img_post" src="https://4.bp.blogspot.com/-QncrlVtuNXY/V7yZYJ7HO2I/AAAAAAAABwU/6-sU1VIiFc8lKnaY0X0t3XmvdToVFcXOgCLcB/s200/ae6e1470045086c454b4ee5d795b2.gif" border="0"></div><div align="center"><img id="img_post" src="https://2.bp.blogspot.com/-Ye6tWINOgTU/WTdrrM9pztI/AAAAAAAAC3k/vpGe6lZ_SPwQexT1lqswqqmrWIjVkp4FgCLcB/s200/zippyshare-logo.png" border="0"></div><div align="center"><center><span style="display:block; margin:10px 0 10px; font-size:20px; font-weight:bold; color:#096FDB;">Enlaces De Descarga</span><div class="info_bbc" id="captcha_protect_0"><div id="bbcode_captcha_0"></div></div></center></div><br /><br /><div align="center"><img id="img_post" src="https://1.bp.blogspot.com/-j8mM5hvCiVM/VrGPpqQJa_I/AAAAAAAAAG8/eWY0rQl8mYo/s1600/pass.png" border="0"></div><div align="center"><div class="post_pass">&lt;CYP&gt;</div><br /><b><span style="color: #336633;">*</span><span style="color: #ff3333;"><span style="font-family: Comic Sans MS;">OjO</span></span><span style="font-family: Comic Sans MS;"> - <span style="color: #3333ff;">Usar winrar versión 5.0 ó superior para descomprimir el archivo y seguir las instrucciones para su instalación</span></span><span style="color: #336633;">*</span></b></div><br /><br /><div align="center"><img id="img_post" src="https://4.bp.blogspot.com/-E9dn29OJA-4/V4MO4N0appI/AAAAAAAABh4/pg47DcXcM_wEg3uZRjmxoYV1IyAKzJh0ACLcB/s1600/3DTextCommander.gif" border="0"></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">211</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 6.6/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">2135</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">6</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(504414,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(504414,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(504414,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(504414,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(504414,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(504414,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(504414,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(504414,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(504414,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(504414,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://i.postimg.cc/yxCRP74G/154311-10150099032520050-3142310-n.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1820219" title="perfil de LEYMARCIAL"> LEYMARCIAL</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1957671" title="perfil de felloman"> felloman</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.pinimg.com/736x/92/c1/98/92c198fce1c0e638c3522e82a9764e7d.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1821826" title="perfil de Vamplayer"> Vamplayer</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7a5a3db7-fb07-4532-aa4c-93f5a5d5d651/d84bw5s-dcdd129a-50ad-4377-84bc-fbb5f804c1b9.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=2000934" title="perfil de cipher"> cipher</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://k60.kn3.net/B0D204CA0.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=87016" title="perfil de educap"> educap</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://i.postimg.cc/65s0VmQL/2ec72ef67f8a715ad8b931789060260f-paramore-hayley-williams-hayley-paramore.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1901497" title="perfil de oKupas"> oKupas</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-jXdD2VGAlkI/Tkk4PPkvPkI/AAAAAAAABDg/10Lt5OZXG4k/s1600/il_fullxfull_242665376.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1978252" title="perfil de Grotewohl"> Grotewohl</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://fotos.subefotos.com/53306195c301d373c318ddd3a96c617bo.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1673752" title="perfil de mim3tic"> mim3tic</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://images2.imgbox.com/b0/ca/R8iHk1Le_o.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1824956" title="perfil de NmLCygni"> NmLCygni</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://imagenti.li/zZq.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1893535" title="perfil de rugal2015"> rugal2015</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://i.imgur.com/fjRRHwR.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1684048" title="perfil de USchiffer7"> USchiffer7</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1669985" title="perfil de saintsanty"> saintsanty</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1990020" title="perfil de Tke_Ens77"> Tke_Ens77</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=2011506" title="perfil de vicrick"> vicrick</a>: <b>3 pts</b></span>  </li><li><img id="error_avatar" src="http://fc04.deviantart.net/fs71/f/2011/174/7/1/salamander_natsu_by_wingwolf_wingd-d3jqx5m.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1535979" title="perfil de delko62"> delko62</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://i.gifer.com/46x7.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1901244" title="perfil de seintox"> seintox</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1977396" title="perfil de Cygnus."> Cygnus.</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i109.fastpic.ru/big/2019/0312/d3/6473b4e52855a66ada0b689b659355d3.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1794856" title="perfil de Rasta_"> Rasta_</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://photos1.blogger.com/x/blogger2/836/4479/240/z/146752/gse_multipart40719.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1841968" title="perfil de yeyu262"> yeyu262</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1982598" title="perfil de darup"> darup</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.postimg.cc/0N1QvDQ0/xfiles-mulder.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1794696" title="perfil de lobazo79"> lobazo79</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1977754" title="perfil de Wernher369"> Wernher369</a>: <b>1 pts</b></span>  </li><li><img id="error_avatar" src="https://images2.alphacoders.com/697/697790.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1846916" title="perfil de naitsirc93"> naitsirc93</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://imagenti.li/Xyd.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1853153" title="perfil de naruto1719"> naruto1719</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1766642" title="perfil de lecv140291"> lecv140291</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://i.imgur.com/ksqWBoY_d.jpg?maxwidth=520&amp;shape=thumb&amp;fidelity=high" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=23296" title="perfil de lefarocu"> lefarocu</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://s-media-cache-ak0.pinimg.com/originals/b6/0e/08/b60e089b00c7d0b2b68653e339ab241e.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1980572" title="perfil de josejuan7"> josejuan7</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://img.fenixzone.net/i/fqKVbsM.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=2011164" title="perfil de Bycarpeli"> Bycarpeli</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://imgfz.com/i/QXNKw3p.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1593733" title="perfil de mapodito"> mapodito</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.pinimg.com/564x/77/a0/12/77a01202c4a718f57a972d01e9dcb98c.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=2952" title="perfil de raruto_n"> raruto_n</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://pm1.narvii.com/6243/40cc3df111ae07069115e3bf41702a262c68a3dc_hq.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=2012071" title="perfil de Facukrat12"> Facukrat12</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://25.media.tumblr.com/tumblr_lhrkmiPTiG1qc92kqo1_500.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=58445" title="perfil de xosele"> xosele</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(504414);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('504414');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=676216" title="Folder Colorizer 2 (Dale color a tus carpetas)"> Folder Colorizer 2 (Dale color a tus carpetas)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=640290" title="Discografía completa de artistas en línea"> Discografía completa de artistas en línea</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=555636" title="Deezloader Remix v4,4,1 Descarga tu Música Favorit"> Deezloader Remix v4,4,1 Descarga tu Música Favorit</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=541856" title="FxSound Enhancer v13,028 Mejora el Audio de tu PC"> FxSound Enhancer v13,028 Mejora el Audio de tu PC</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=541486" title="Coolmuster Android Assistant v4,7,15"> Coolmuster Android Assistant v4,7,15</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=540525" title="Ashampoo Burning Studio 21 (Software de Grabación)"> Ashampoo Burning Studio 21 (Software de Grabación)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=540262" title="XYplorer 20,60,0200 (Gestor de archivos)"> XYplorer 20,60,0200 (Gestor de archivos)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=540247" title="Deezloader Remix v4,3,0 Descarga tu música favorit"> Deezloader Remix v4,3,0 Descarga tu música favorit</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">46</span> Comentarios</span>
+<span class="onpost"> Cuenta Mega para JDownloader</span>
+<div class="comentario"></div><div id="comment_5229635" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="LEYMARCIAL" href="?action=profile;user=LEYMARCIAL">
+<img id="error_avatar" src="https://i.postimg.cc/yxCRP74G/154311-10150099032520050-3142310-n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1820219" href="?action=profile;user=LEYMARCIAL">LEYMARCIAL</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520657912" title="10/03/2018 a las 4:58 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
++10 amigo grande
+</div>
+</div>
+</div>
+</div><div id="comment_5229641" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Vamplayer" href="?action=profile;user=Vamplayer">
+<img id="error_avatar" src="https://i.pinimg.com/736x/92/c1/98/92c198fce1c0e638c3522e82a9764e7d.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1821826" href="?action=profile;user=Vamplayer">Vamplayer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520658734" title="10/03/2018 a las 5:12 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_twisted.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229654" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="gopro1317" href="?action=profile;user=gopro1317">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-AGZenX1sFkE/VpawOwAms-I/AAAAAAAAEx0/aXqFernGEn0/s1600/tumblr_nxvbpcOAt71smqt6fo1_540.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1957092" href="?action=profile;user=gopro1317">gopro1317</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520659506" title="10/03/2018 a las 5:25 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229655" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="educap" href="?action=profile;user=educap">
+<img id="error_avatar" src="https://k60.kn3.net/B0D204CA0.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="87016" href="?action=profile;user=educap">educap</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520659554" title="10/03/2018 a las 5:25 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+parece que funciona, me figura cuenta pro lite, yo a veces compro estas clases de cuentas, y casi no las uso, si sabés el método para compartirlas comparto alguna
+</div>
+</div>
+</div>
+</div><div id="comment_5229657" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="marco31" href="?action=profile;user=marco31">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1981682" href="?action=profile;user=marco31">marco31</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520659796" title="10/03/2018 a las 5:29 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+como se instala
+</div>
+</div>
+</div>
+</div><div id="comment_5229659" class="comentario coment_id_6">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CYPicazo" href="?action=profile;user=CYPicazo">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901042" href="?action=profile;user=CYPicazo">CYPicazo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520660068" title="10/03/2018 a las 5:34 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="87016" href="https://identi.io/index.php?action=profile&user=educap" class="mensiones_identi">@educap</a> Hola, yo la ando probando y pues ya supere los 2.6gb así que creo si me esta funcionando correctamente, para compartirla la verdad desconozco como sacan una sola cuenta pero <a href="http://prntscr.com/ip7107" target="_blank" rel="nofollow">aka se alojan esos datos</a>. Saludos <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229660" class="comentario coment_id_7">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CYPicazo" href="?action=profile;user=CYPicazo">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901042" href="?action=profile;user=CYPicazo">CYPicazo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520660463" title="10/03/2018 a las 5:41 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1820219" href="https://identi.io/index.php?action=profile&user=LEYMARCIAL" class="mensiones_identi">@LEYMARCIAL</a> <a usuario="1957671" href="https://identi.io/index.php?action=profile&user=felloman" class="mensiones_identi">@felloman</a> <a usuario="1821826" href="https://identi.io/index.php?action=profile&user=Vamplayer" class="mensiones_identi">@Vamplayer</a> <a usuario="2000934" href="https://identi.io/index.php?action=profile&user=cipher" class="mensiones_identi">@cipher</a> <a usuario="87016" href="https://identi.io/index.php?action=profile&user=educap" class="mensiones_identi">@educap</a> <a usuario="1957092" href="https://identi.io/index.php?action=profile&user=gopro1317" class="mensiones_identi">@gopro1317</a> <a usuario="1981682" href="https://identi.io/index.php?action=profile&user=marco31" class="mensiones_identi">@marco31</a> Gracias por el apoyo y comentarios. Llevo <a href="http://prntscr.com/ip7281" target="_blank" rel="nofollow">3 gb descargados aprox de esa cuenta en este momento</a>, parece estar funcionando al momento, si alguien ya bajo mas de 5gb (sin usar la free), les agradecería nos confirmara que también le jala bien.<br /><a usuario="1981682" href="https://identi.io/index.php?action=profile&user=marco31" class="mensiones_identi">@marco31</a> en el archivo de descarga adjunte las instrucciones pero son muy sencillas, simplemente abre tu jdownloader y arrastra uno de los archivos contenidos, y permites agregar la cuenta &nbsp;<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229661" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="oKupas" href="?action=profile;user=oKupas">
+<img id="error_avatar" src="https://i.postimg.cc/65s0VmQL/2ec72ef67f8a715ad8b931789060260f-paramore-hayley-williams-hayley-paramore.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901497" href="?action=profile;user=oKupas">oKupas</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520660495" title="10/03/2018 a las 5:41 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy bueno &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> pero no tengo nada para descargar &nbsp; <img src="https://identi.io/Smileys/default/icon_rolleyes.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229662" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="barber53" href="?action=profile;user=barber53">
+<img id="error_avatar" src="http://image.noelshack.com/fichiers/2017/19/1494426197-845.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1998804" href="?action=profile;user=barber53">barber53</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520660655" title="10/03/2018 a las 5:44 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias
+</div>
+</div>
+</div>
+</div><div id="comment_5229663" class="comentario coment_id_10">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CYPicazo" href="?action=profile;user=CYPicazo">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901042" href="?action=profile;user=CYPicazo">CYPicazo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520660752" title="10/03/2018 a las 5:45 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1901497" href="https://identi.io/index.php?action=profile&user=oKupas" class="mensiones_identi">@oKupas</a> aprovecha y bajate unas películas &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /><br /><a usuario="1998804" href="https://identi.io/index.php?action=profile&user=barber53" class="mensiones_identi">@barber53</a> de nada, Saludos
+</div>
+</div>
+</div>
+</div><div id="comment_5229665" class="comentario coment_id_11">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CYPicazo" href="?action=profile;user=CYPicazo">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901042" href="?action=profile;user=CYPicazo">CYPicazo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520660902" title="10/03/2018 a las 5:48 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="87016" href="https://identi.io/index.php?action=profile&user=educap" class="mensiones_identi">@educap</a> oye compañero una ¿? ya que tu compras cuentas de mega,, ahi la cuenta marca 1TB, pero mi duda es si es diario o mensual el uso de ese TB?¿ <img src="https://identi.io/Smileys/default/icon_rolleyes.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229666" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Grotewohl" href="?action=profile;user=Grotewohl">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-jXdD2VGAlkI/Tkk4PPkvPkI/AAAAAAAABDg/10Lt5OZXG4k/s1600/il_fullxfull_242665376.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1978252" href="?action=profile;user=Grotewohl">Grotewohl</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520661339" title="10/03/2018 a las 5:55 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias viejo te dejo 5 lo unico que puedo dejar &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229667" class="comentario coment_id_13">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CYPicazo" href="?action=profile;user=CYPicazo">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901042" href="?action=profile;user=CYPicazo">CYPicazo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520661370" title="10/03/2018 a las 5:56 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1978252" href="https://identi.io/index.php?action=profile&user=Grotewohl" class="mensiones_identi">@Grotewohl</a> &nbsp;<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> Excelente, Un saludo
+</div>
+</div>
+</div>
+</div><div id="comment_5229673" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="educap" href="?action=profile;user=educap">
+<img id="error_avatar" src="https://k60.kn3.net/B0D204CA0.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="87016" href="?action=profile;user=educap">educap</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520662669" title="10/03/2018 a las 6:17 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita CYPicazo: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><a usuario="87016" href="https://identi.io/index.php?action=profile&user=educap" class="mensiones_identi">@educap</a> oye compañero una ¿? ya que tu compras cuentas de mega,, ahi la cuenta marca 1TB, pero mi duda es si es diario o mensual el uso de ese TB?¿ <img src="https://identi.io/Smileys/default/icon_rolleyes.png" alt="" border="0" /></div></blockquote>mensual, nunca llegué a usar eso ni en el mes, pero supongo que una vez que llegas se corta, como un plan de datos.
+</div>
+</div>
+</div>
+</div><div id="comment_5229675" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="educap" href="?action=profile;user=educap">
+<img id="error_avatar" src="https://k60.kn3.net/B0D204CA0.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="87016" href="?action=profile;user=educap">educap</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520662870" title="10/03/2018 a las 6:21 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+sí vi que esta cuenta anda por la mitad, depende cuántos la usen, y si son de descargar, en mi caso ya casi no descargo, un día se me da por descargar un archivo que supera el giga, y por ende no puedo con la gratis, y compro una que dura un mes, creo que anda por los 5 dolares, cien pesos argentinos
+</div>
+</div>
+</div>
+</div><div id="comment_5229678" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="NmLCygni" href="?action=profile;user=NmLCygni">
+<img id="error_avatar" src="https://images2.imgbox.com/b0/ca/R8iHk1Le_o.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1824956" href="?action=profile;user=NmLCygni">NmLCygni</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520663083" title="10/03/2018 a las 6:24 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+buena esto va para el top <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229680" class="comentario coment_id_17">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CYPicazo" href="?action=profile;user=CYPicazo">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901042" href="?action=profile;user=CYPicazo">CYPicazo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520663265" title="10/03/2018 a las 6:27 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="87016" href="https://identi.io/index.php?action=profile&user=educap" class="mensiones_identi">@educap</a> si amigo, ya solo restan 550 gb aprox,, están bárbaros, en una hora más se la acaban,,jajajajaja<br /><a usuario="1824956" href="https://identi.io/index.php?action=profile&user=NmLCygni" class="mensiones_identi">@NmLCygni</a> Hola compañero<br /><img id="img_post" src="https://1.bp.blogspot.com/-xg2I2Q4tlso/Wo5S5wQ2hSI/AAAAAAAADfs/S_CuZo77vyw5Y1Atr9qt3SpX64O0DRKnACLcBGAs/s1600/Rafadeth1-iloveimg-compressed.gif" border="0">
+</div>
+</div>
+</div>
+</div><div id="comment_5229682" class="comentario coment_id_18">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rugal2015" href="?action=profile;user=rugal2015">
+<img id="error_avatar" src="http://imagenti.li/zZq.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1893535" href="?action=profile;user=rugal2015">rugal2015</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520663611" title="10/03/2018 a las 6:33 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+funciona muchas gracias <a usuario="1901042" href="https://identi.io/index.php?action=profile&user=CYPicazo" class="mensiones_identi">@CYPicazo</a> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229684" class="comentario coment_id_19">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CYPicazo" href="?action=profile;user=CYPicazo">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901042" href="?action=profile;user=CYPicazo">CYPicazo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520663819" title="10/03/2018 a las 6:36 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1893535" href="https://identi.io/index.php?action=profile&user=rugal2015" class="mensiones_identi">@rugal2015</a> si compañero, esta jalando perfecto, solo le quedan 476gb por compartir,, esperemos logres descargar lo que necesites <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229685" class="comentario coment_id_20">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="educap" href="?action=profile;user=educap">
+<img id="error_avatar" src="https://k60.kn3.net/B0D204CA0.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="87016" href="?action=profile;user=educap">educap</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520663910" title="10/03/2018 a las 6:38 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+no sé eh, fijate que fue creada el 20 del mes pasado, ya pasó 20 días, faltan 10 más, si recién se descargó poco más de 500 gb, no creo que en 10 dias se descargen otros 500. <br />Eso sí, todavía no había sido compartida en esta página de pirañas y que además es más masiva &nbsp;<img src="https://identi.io/Smileys/default/icon_baba.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_baba.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229686" class="comentario coment_id_21">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="educap" href="?action=profile;user=educap">
+<img id="error_avatar" src="https://k60.kn3.net/B0D204CA0.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="87016" href="?action=profile;user=educap">educap</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520664024" title="10/03/2018 a las 6:40 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+yo creo que habría que pedir que las cosas que se pueden descargar con la cuenta gratis no la usen con la lite porque gastan cuota. Pero bueno, no creo que hagan caso &nbsp;<img src="https://identi.io/Smileys/default/icon_baba.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_baba.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229691" class="comentario coment_id_22">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CYPicazo" href="?action=profile;user=CYPicazo">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901042" href="?action=profile;user=CYPicazo">CYPicazo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520664405" title="10/03/2018 a las 6:46 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="87016" href="https://identi.io/index.php?action=profile&user=educap" class="mensiones_identi">@educap</a> ya la bajaron de 663.8 a 448gb en poco más de una hora, en unas cuantas horas más se habrá agotado, que pues para eso era,jajaja, <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229694" class="comentario coment_id_23">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="vicrick" href="?action=profile;user=vicrick">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2011506" href="?action=profile;user=vicrick">vicrick</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520664716" title="10/03/2018 a las 6:51 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229695" class="comentario coment_id_24">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="educap" href="?action=profile;user=educap">
+<img id="error_avatar" src="https://k60.kn3.net/B0D204CA0.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="87016" href="?action=profile;user=educap">educap</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520664798" title="10/03/2018 a las 6:53 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+es verdad ajajaj mañana pruebo el método, y si puedo comparto una, creo que ya entendí como hacerlo. Espero que otros se sumen a compartir &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229697" class="comentario coment_id_26">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="educap" href="?action=profile;user=educap">
+<img id="error_avatar" src="https://k60.kn3.net/B0D204CA0.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="87016" href="?action=profile;user=educap">educap</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520665179" title="10/03/2018 a las 6:59 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+jaaj sí eso es lo que tengo que ver, me pareció raro que se agregara la cuenta pero no se borraran las que ya tenía
+</div>
+</div>
+</div>
+</div><div id="comment_5229698" class="comentario coment_id_27">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CYPicazo" href="?action=profile;user=CYPicazo">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901042" href="?action=profile;user=CYPicazo">CYPicazo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520665241" title="10/03/2018 a las 7:00 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1901042" href="https://identi.io/index.php?action=profile&user=CYPicazo" class="mensiones_identi">@CYPicazo</a> este método lo hacen para que la gente no modifique usuario ni password, ya ves que como pasaba con las cuentas netflix que compartían , los trolls solían cambiar esos datos y así se perdía el sentido de &quot;compartir&quot;. Ojalá te animes y otros usuarios que puedan también lo hagan, pues hay mucho leecher &nbsp;<img src="https://identi.io/Smileys/default/icon_twisted.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229701" class="comentario coment_id_28">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="delko62" href="?action=profile;user=delko62">
+<img id="error_avatar" src="http://fc04.deviantart.net/fs71/f/2011/174/7/1/salamander_natsu_by_wingwolf_wingd-d3jqx5m.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1535979" href="?action=profile;user=delko62">delko62</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520666476" title="10/03/2018 a las 7:21 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+No creo que termine <a href="http://prntscr.com/ip7o2v" target="_blank" rel="nofollow">http://prntscr.com/ip7o2v</a>
+</div>
+</div>
+</div>
+</div><div id="comment_5229703" class="comentario coment_id_29">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CYPicazo" href="?action=profile;user=CYPicazo">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901042" href="?action=profile;user=CYPicazo">CYPicazo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520667994" title="10/03/2018 a las 7:46 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita delko62: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">No creo que termine <a href="http://prntscr.com/ip7o2v" target="_blank" rel="nofollow">http://prntscr.com/ip7o2v</a></div></blockquote><img id="img_post" src="https://3.bp.blogspot.com/-8ODF_de7yOc/WUwPNQRViuI/AAAAAAAAC4A/7X0zcb-CVWce45oLbOJGq4aiSVyHZE2ggCLcBGAs/s1600/mmmmNo.gif" border="0"><br />Lamentablemente no,jajaja, no te agüites yo también tengo un internet lento <img src="https://identi.io/Smileys/default/icon_mrgreen.png" alt="" border="0" /> , bajo max a 600kb/seg aprox <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229705" class="comentario coment_id_30">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="zatch19" href="?action=profile;user=zatch19">
+<img id="error_avatar" src="https://pbs.twimg.com/media/FIcxr0BUcAEN1jM?format=jpg&amp;name=large" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1643182" href="?action=profile;user=zatch19">zatch19</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520669081" title="10/03/2018 a las 8:04 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+ya supero el terabyte de disponibilidada ! xD
+</div>
+</div>
+</div>
+</div><div id="comment_5229709" class="comentario coment_id_31">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="seintox" href="?action=profile;user=seintox">
+<img id="error_avatar" src="https://i.gifer.com/46x7.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901244" href="?action=profile;user=seintox">seintox</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520673696" title="10/03/2018 a las 9:21 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229719" class="comentario coment_id_32">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="internal" href="?action=profile;user=internal">
+<img id="error_avatar" src="http://picfiles.alphacoders.com/155/1550.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="14123" href="?action=profile;user=internal">internal</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520678798" title="10/03/2018 a las 10:46 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Ya no puedo descargar con la cuenta... <img src="https://identi.io/Smileys/default/icon_sad.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229747" class="comentario coment_id_33">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="pedropmp2" href="?action=profile;user=pedropmp2">
+<img id="error_avatar" src="https://funkyimg.com/i/2TmTr.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1760660" href="?action=profile;user=pedropmp2">pedropmp2</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520684976" title="10/03/2018 a las 12:29 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+jojojo graciasssssssssssssssssssssssssssssssssssssss aportazo muy bueno ahora falta que alguien ponga uno para todos los demas servers jeje saluDAKOSSSSSSSSSSSSSSSSSSSSSSSSS &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229778" class="comentario coment_id_34">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="naitsirc93" href="?action=profile;user=naitsirc93">
+<img id="error_avatar" src="https://images2.alphacoders.com/697/697790.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1846916" href="?action=profile;user=naitsirc93">naitsirc93</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520688710" title="10/03/2018 a las 13:31 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias de corazón amigo!
+</div>
+</div>
+</div>
+</div><div id="comment_5229788" class="comentario coment_id_35">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="elMadmax" href="?action=profile;user=elMadmax">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1943738" href="?action=profile;user=elMadmax">elMadmax</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520690253" title="10/03/2018 a las 13:57 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+porque me sale limite de ancho de banda excedido?me podrian ayudar?
+</div>
+</div>
+</div>
+</div><div id="comment_5229800" class="comentario coment_id_36">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="HighLander" href="?action=profile;user=HighLander">
+<img id="error_avatar" src="http://vignette2.wikia.nocookie.net/highlander/images/b/b9/Highlander_game_cover.jpg/revision/latest/scale-to-width-down/277?cb=20120208222338" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1542627" href="?action=profile;user=HighLander">HighLander</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520691803" title="10/03/2018 a las 14:23 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias.
+</div>
+</div>
+</div>
+</div><div id="comment_5229812" class="comentario coment_id_37">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="earmijo" href="?action=profile;user=earmijo">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="113393" href="?action=profile;user=earmijo">earmijo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520693036" title="10/03/2018 a las 14:43 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias !!!<br /><br />&nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> &nbsp; &nbsp; <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229868" class="comentario coment_id_38">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="josejuan7" href="?action=profile;user=josejuan7">
+<img id="error_avatar" src="https://s-media-cache-ak0.pinimg.com/originals/b6/0e/08/b60e089b00c7d0b2b68653e339ab241e.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1980572" href="?action=profile;user=josejuan7">josejuan7</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520698074" title="10/03/2018 a las 16:07 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+muchas gracias ahora si a descargar vikings en 1080p te dejo +5, y esperemos que mas gente ponga este tipo de archivos nos ayuda mucho
+</div>
+</div>
+</div>
+</div><div id="comment_5229899" class="comentario coment_id_39">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="tyuiocool" href="?action=profile;user=tyuiocool">
+<img id="error_avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXrNwhQM9eJm0XnqPF2uyFkov5zRX3wvlNzCVDtJPvVheAaciU" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1550051" href="?action=profile;user=tyuiocool">tyuiocool</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520701334" title="10/03/2018 a las 17:02 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Ya se acabaron la cuenta amigo gracias.
+</div>
+</div>
+</div>
+</div><div id="comment_5229933" class="comentario coment_id_40">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="EUTOR72" href="?action=profile;user=EUTOR72">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1978910" href="?action=profile;user=EUTOR72">EUTOR72</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520704751" title="10/03/2018 a las 17:59 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+YA FUE <img src="https://identi.io/Smileys/default/icon_confused.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229943" class="comentario coment_id_41">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="raruto_n" href="?action=profile;user=raruto_n">
+<img id="error_avatar" src="https://i.pinimg.com/564x/77/a0/12/77a01202c4a718f57a972d01e9dcb98c.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2952" href="?action=profile;user=raruto_n">raruto_n</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520705913" title="10/03/2018 a las 18:18 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+exelente , alguna fora de usarlo en megadownloader??
+</div>
+</div>
+</div>
+</div><div id="comment_5229962" class="comentario coment_id_42">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CYPicazo" href="?action=profile;user=CYPicazo">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901042" href="?action=profile;user=CYPicazo">CYPicazo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520707529" title="10/03/2018 a las 18:45 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1643182" href="https://identi.io/index.php?action=profile&user=zatch19" class="mensiones_identi">@zatch19</a> <a usuario="1901244" href="https://identi.io/index.php?action=profile&user=seintox" class="mensiones_identi">@seintox</a> <a usuario="14123" href="https://identi.io/index.php?action=profile&user=internal" class="mensiones_identi">@internal</a> <a usuario="1760660" href="https://identi.io/index.php?action=profile&user=pedropmp2" class="mensiones_identi">@pedropmp2</a> <a usuario="1846916" href="https://identi.io/index.php?action=profile&user=naitsirc93" class="mensiones_identi">@naitsirc93</a> <a usuario="1943738" href="https://identi.io/index.php?action=profile&user=elMadmax" class="mensiones_identi">@elMadmax</a> <a usuario="1542627" href="https://identi.io/index.php?action=profile&user=HighLander" class="mensiones_identi">@HighLander</a> <a usuario="113393" href="https://identi.io/index.php?action=profile&user=earmijo" class="mensiones_identi">@earmijo</a> <a usuario="1980572" href="https://identi.io/index.php?action=profile&user=josejuan7" class="mensiones_identi">@josejuan7</a> <a usuario="1550051" href="https://identi.io/index.php?action=profile&user=tyuiocool" class="mensiones_identi">@tyuiocool</a> <a usuario="1978910" href="https://identi.io/index.php?action=profile&user=EUTOR72" class="mensiones_identi">@EUTOR72</a> <a usuario="2952" href="https://identi.io/index.php?action=profile&user=raruto_n" class="mensiones_identi">@raruto_n</a> gracias por sus comentarios &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> , lamentablemente ya se dreno por completo la cuenta <img src="https://identi.io/Smileys/default/icon_rolleyes.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5229964" class="comentario coment_id_43">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="xosele" href="?action=profile;user=xosele">
+<img id="error_avatar" src="https://25.media.tumblr.com/tumblr_lhrkmiPTiG1qc92kqo1_500.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="58445" href="?action=profile;user=xosele">xosele</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520707979" title="10/03/2018 a las 18:52 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5230037" class="comentario coment_id_44">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="zatch19" href="?action=profile;user=zatch19">
+<img id="error_avatar" src="https://pbs.twimg.com/media/FIcxr0BUcAEN1jM?format=jpg&amp;name=large" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1643182" href="?action=profile;user=zatch19">zatch19</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520714869" title="10/03/2018 a las 20:47 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+logre descargar almenos 35 gb gracias por el dato ! aunque se veia que la cuenta lo queria desactivar al final ya no funka
+</div>
+</div>
+</div>
+</div><div id="comment_5230057" class="comentario coment_id_45">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CYPicazo" href="?action=profile;user=CYPicazo">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901042" href="?action=profile;user=CYPicazo">CYPicazo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1520716212" title="10/03/2018 a las 21:10 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1643182" href="https://identi.io/index.php?action=profile&user=zatch19" class="mensiones_identi">@zatch19</a> &nbsp;<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> yo solo descargue poco más de 7gb ,gg, si vuelvo a encontrar otra la compartiré, Saludos
+</div>
+</div>
+</div>
+</div><div id="comment_5234925" class="comentario coment_id_46">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Grotewohl" href="?action=profile;user=Grotewohl">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-jXdD2VGAlkI/Tkk4PPkvPkI/AAAAAAAABDg/10Lt5OZXG4k/s1600/il_fullxfull_242665376.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1978252" href="?action=profile;user=Grotewohl">Grotewohl</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1521352497" title="18/03/2018 a las 5:54 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1901042" href="https://identi.io/index.php?action=profile&user=CYPicazo" class="mensiones_identi">@CYPicazo</a> incluso hoy a las 13:40 17/03 todavia descargue los ultimos 2Mb, pero en los ultimos 7 dias me chupe 52Gb, fue bonito mientras duro &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5234935" class="comentario coment_id_47">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CYPicazo" href="?action=profile;user=CYPicazo">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-K32bn1JjefE/WV_mabmipEI/AAAAAAAAC5k/JgsM1beNFjUlOhYFImK7VKShu-lpMNB2QCLcBGAs/s1600/pic.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901042" href="?action=profile;user=CYPicazo">CYPicazo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1521355928" title="18/03/2018 a las 6:52 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1978252" href="https://identi.io/index.php?action=profile&user=Grotewohl" class="mensiones_identi">@Grotewohl</a> excelente compañero <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> lamentablemente hay un usuario de aquí que empezó a reportarlas, el muy desgraciado reporto una de 14 TB que la comunidad se perdió gracias a él <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> , con el argumento de que el si paga cuenta de mega y por eso el si puede bajar piratería pero los demás no deben piratiar cuentas de mega, jaja,, en verdad un pendejo con doble moral, lamentable, pero hay gente así
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_1.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949b32dfae5dea9',t:'MTc2MTQ3OTA0Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<style>
+.spoiler-btn {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+.info_bbc {
+    word-break: break-all;
+}
+.info_bbc a {
+    color: #096FDB !important;
+    font-weight: bold;
+}
+</style>
+<script>
+(function() {
+    'use strict';
+    
+    console.log('🔐 Sistema de desencriptación automática cargado');
+    
+    // Extraer la clave del HTML
+    let DECRYPT_KEY = null;
+    const scriptTags = document.getElementsByTagName('script');
+    for (let script of scriptTags) {
+        const content = script.textContent;
+        const hashMatch = content.match(/var\s+hash\s*=\s*['"]([a-f0-9]+)['"]/);
+        if (hashMatch) {
+            DECRYPT_KEY = hashMatch[1];
+            console.log('🔑 Clave encontrada');
+            break;
+        }
+    }
+    
+    if (!DECRYPT_KEY) {
+        console.warn('⚠️ No se encontró clave de desencriptación');
+        return;
+    }
+    
+    function decrypt(encryptedText, password) {
+        try {
+            const decrypted = CryptoJS.AES.decrypt(encryptedText, password);
+            return decrypted.toString(CryptoJS.enc.Utf8) || null;
+        } catch (error) {
+            console.error('❌ Error:', error);
+            return null;
+        }
+    }
+    
+    function handleDecryptClick(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const button = event.target;
+        const spoilerDiv = button.closest('.spoiler');
+        if (!spoilerDiv) return;
+        
+        const hiddenDiv = spoilerDiv.querySelector('.info_bbc');
+        if (!hiddenDiv) return;
+        
+        const encryptedText = hiddenDiv.textContent.trim();
+        const decryptedText = decrypt(encryptedText, DECRYPT_KEY);
+        
+        if (decryptedText && decryptedText.length > 0) {
+            hiddenDiv.innerHTML = `<a href="${decryptedText}" target="_blank" rel="noopener noreferrer">${decryptedText}</a>`;
+            hiddenDiv.style.display = 'block';
+            button.style.display = 'none';
+            console.log('✅ Enlace desencriptado');
+        } else {
+            alert('❌ Error al desencriptar');
+        }
+    }
+    
+    function init() {
+        const buttons = document.querySelectorAll('.spoiler-btn, input[value*="Ver Links"], input[value*="Descarga"]');
+        
+        buttons.forEach(button => {
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+            newButton.style.cursor = 'pointer';
+            newButton.style.pointerEvents = 'auto';
+            newButton.addEventListener('click', handleDecryptClick);
+        });
+        
+        console.log('🚀 Sistema listo');
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script>
+
+</body></html>
