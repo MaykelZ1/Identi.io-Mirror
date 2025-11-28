@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Primeros pasos con la Consola GNU/Linux - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="En el Mundo GNU/Linux, la consola es una herramienta que se usa frecuentemente. Si buscamos información sobre algún problema o tuneo con nuestra distro, lo más probable es que la solución involuc..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='SWRxZXduQnRZTEdkNmRTVTJGc2RHVmtYMSt2ZTdHbGk1UndQbnRGSXA0MkFUeGR4SmpJOWdkdUQxVWxKTm1neHZHQlVvVTJuNGFPVnJGWC83T1FCTEZVNlMrbkJIa0pTZTdGSEE9PUc0MW84OG5peWNMZUlXag==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761492198;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '5eed0bd7603f6147238d0b6fe95b3a3b');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_3.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Primeros pasos con la Consola GNU/Linux" title="Identi - Primeros pasos con la Consola GNU/Linux" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '4448385cf0327d0a1d6e7d57c8c868b45763299b';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=superlogic">superlogic</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=superlogic" title="Ir al Perfil de superlogic"><img id="error_avatar" class="avatar" border="0" width="120" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" /></a>
+<div class=" rango_sidebar clearfix">Gold User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/golduser.png" title="Gold User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1533336)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1533336');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">67</b> Seguidores</li>
+<li><b>2029</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>174</b> Posts</li>
+<li><b>480</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Primeros pasos con la Consola GNU/Linux</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=336913';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=336915';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=126" alt="Linux" title="Linux">Linux</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 11 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_998941">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div style="text-align: justify;"><font size="3" style="line-height: 1.3em;"> En el Mundo GNU/Linux, la consola es una herramienta que se usa frecuentemente. Si buscamos información sobre algún problema o tuneo con nuestra distro, lo más probable es que la solución involucre usar la consola. Eso no quiere decir que la solución para nuestro problema, requiera usar siempre la consola.</font> <font size="3" style="line-height: 1.3em;"><br /><br />Por ejemplo, la consola para Opensuse con KDE se llama Konsole, la podemos buscar en nuestros programas, o presionando <b>Alt + F2</b>  y escribiendo en el cuadro de texto &quot;Konsole&quot;.</font><br /><br /><div align="center"><font size="3" style="line-height: 1.3em;"><a href="https://2.bp.blogspot.com/-9GQutGdImSM/Uz-_JZLhjwI/AAAAAAAADLM/QMunEGFqnMk/s1600/konsole.png" target="_blank" rel="nofollow"><img id="img_post" src="https://2.bp.blogspot.com/-9GQutGdImSM/Uz-_JZLhjwI/AAAAAAAADLM/QMunEGFqnMk/s1600/konsole.png" border="0"></a></font></div><br /><font size="3" style="line-height: 1.3em;">   </font></div><br /><div style="text-align: justify;"><font size="3" style="line-height: 1.3em;"> Ya hace algo de tiempo que en GNU/Linux la consola fue quedando en un segundo plano, como debe ser, si me lo preguntan. Y es que ¿a quién le gusta escribir comandos en la pantallita negra, para copiar un archivo, actualizar el sistema, etc? A muy pocos creo yo.</font></div><br />&nbsp;<br /><div style="text-align: justify;"> </div><br /><div style="text-align: justify;"><font size="3" style="line-height: 1.3em;"> Pero como nunca está de más saber usarla, por aquello que sea necesario, quiero dejar una lista de comandos muy útiles:</font></div><br /><div style="text-align: justify;"> </div><br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">1. <b>&quot;cd&quot; </b>- Es usado para navegar por los directorios.<br />Ejemplo : cd /home/opensuse -&gt; Ésto nos lleva al directorio &quot;/home/opensuse&quot;</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">2. <b>&quot;ls&quot;</b> - Nos muestra una lista con el contenido de un directorio<br />Ejemplo : ls /home/opensuse -&gt; Lista el contenido del directorio &quot;/home/opensuse&quot;</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">3. <b>&quot;mkdir&quot; </b>- Crea un directorio<br />Ejemplo : mkdir /home/nueva -&gt; Creará una carpeta con el nombre &quot;nueva&quot; &quot;/home/nueva&quot;</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">4. <b>&quot;cp&quot;</b> - Copia de archivos<br />Ejemplo : cp /home/opensuse/1.txt /home -&gt; copia el archivo 1.txt &quot;/home/opensuse/1.txt&quot; en el directorio &quot;/home&quot;</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">5. <b>&quot;mv&quot;</b> - Se utiliza para mover archivos<br />Ejemplo : mv /home/opensuse/1.txt /home -&gt; Mueve el archivo 1.txt &quot;/home/opensuse/1.txt&quot; al directorio &quot;/home&quot; </font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">6. <b>&quot;rm&quot;</b> - Se utiliza para eliminar archivos<br />Ejemplo : rm /home/opensuse/1.txt -&gt; Elimina el archivo 1.txt que se encuentra en &quot;/home/opensuse/1.txt&quot;</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">7. <b>&quot;clear&quot;</b> - Se utiliza para limpiar la pantalla </font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">8. <b>&quot;pwd&quot;</b> - Se utiliza para saber en que path estamos trabajando</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">9. <b>&quot;chmod&quot;</b> - Se utiliza para cambiar los permisos de un archivo<br />Ejemplo : chmod 755 /home/opensuse/1.txt -&gt; Este cambio da todos los permisos menos el de edición al archivo 1.txt</font></div><br /><font size="3" style="line-height: 1.3em;">  <i>Para más información de chmod y los permisos de un archivo dejo éste <a href="http://www.ite.educacion.es/formacion/materiales/85/cd/linux/m1/permisos_de_archivos_y_carpetas.html" target="_blank" rel="nofollow">link</a></i></font><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">10. <b>&quot;man&quot;</b> - Entrega informacion sobre el commando ingresado (man=manual)<br />Ejemplo : man pwd -&gt; Nos da la informacion en linea del comando &#039;pwd&#039; </font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"><b>11- &quot;ps&quot;</b> - Lista los procesos que están actualmente corriendo.</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">12. <b>&quot;find&quot;</b> - Se utiliza para localizar un archivo/directorio.<br />Ejemplo: find /home/suse -type f -name 1.txt -&gt; Busca el archivo 1.txt en el directorio /home/opensuse</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">13. <b>&quot;exit&quot;</b> - Se utiliza para salir de algun programa o del shell.</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">14. <b>&quot;su&quot;</b> - Da momentáneamente privilegios de ROOT</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">15. <b>&quot;shutdown&quot;</b> - Apaga el sistema<br />Ejemplo : shutdown -h now -&gt; Apaga el sistema en ese momento y NO lo vuelve a reinicia</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">16. <b>&quot;halt&quot;</b> - Apaga el sistema de la misma manera que el mandato anterior</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">17. <b>&quot;reboot&quot;</b> - Reinicia el sistema</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">18. <b>&quot;startx&quot;</b> - Inicia el entorno gráfico</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">19. <b>&quot;?&quot;</b> Representa un solo caracter.<br />Ejemplo : ls ?.txt (lista todos los archivos de un solo caracter con extensión txt)</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">20. <b>&quot;*&quot;</b> Representa todo.<br />Ejemplo : ls *.rpm (lista todos los archivos con extensión rpm)</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">21. <b>&quot;kill&quot;</b> - Mata el proceso<br />Ejemplo : kill -9 123 -&gt; Mata el proceso con número de PID 123 sin darle tiempo a terminar</font></div><br />&nbsp;<br />&nbsp;<br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">22. <b>&quot;hostname&quot;</b> - Devuelve el nombre de la maquina</font></div><br /><br /><br /><br /><font size="4" style="line-height: 1.3em;"><b>Bonus:</b></font><br /><font size="3" style="line-height: 1.3em;">(gentileza de @rojored, <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /> )</font><br /><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">23. <b>&quot;eject&quot;</b> - Con éste comando se conseguirá la expulsión de la unidad de CD, siempre y cuando esta no esté en uso</font></div><br /><br /><br /><br /><br /><font size="4" style="line-height: 1.3em;"><b><a href="https://mundoopensuse.blogspot.com/2014/04/primeros-pasos-con-la-consola-linux.html" target="_blank" rel="nofollow">&lt; fuente &gt;</a></b></font><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">45</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">2080</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">9</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(336914,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(336914,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(336914,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(336914,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(336914,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(336914,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(336914,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(336914,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(336914,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(336914,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/OpenSUSE_Geeko_button_bling7.svg/480px-OpenSUSE_Geeko_button_bling7.svg.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1670547" title="perfil de rezarpado1"> rezarpado1</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://pikbox.ru/img/10/201508170112158041111111111.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1741598" title="perfil de rojored"> rojored</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.fondosgratis.mx/archivos/items/th_1318128682_dragoneyejjpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1890602" title="perfil de Mentorr"> Mentorr</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://images2.imgbox.com/a0/4b/jlbC32JS_o.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1650488" title="perfil de elgamer242"> elgamer242</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.peanuts.com/wp-content/themes/desktop-theme-peanuts/images/characters/round/linus.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1604073" title="perfil de SCHISM"> SCHISM</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1589125" title="perfil de Danjes"> Danjes</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://i.imgbox.com/EVm47WlL.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1780792" title="perfil de anonimox69"> anonimox69</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://68.media.tumblr.com/c170455cc2085b446b4f46fa293344db/tumblr_mqp84zC5C01rz1p6so2_500.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1551772" title="perfil de Germlokura"> Germlokura</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-JdenLNjaPMo/VkZCuv7jI5I/AAAAAAAAAEQ/dlqU1WYvEM0/s320/Maron_S1_E7-Gif.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1879065" title="perfil de N3X97"> N3X97</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(336914);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('336914');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_22"></i>
+<a href="https://identi.io/index.php?topic=402136" title="El software de Microsoft es malware"> El software de Microsoft es malware</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=366759" title="Huayra 3, distro educativa con sello argentino"> Huayra 3, distro educativa con sello argentino</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_113"></i>
+<a href="https://identi.io/index.php?topic=365704" title="Pirate Bay: catálogo de la Biblioteca de Babel [2]"> Pirate Bay: catálogo de la Biblioteca de Babel [2]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_113"></i>
+<a href="https://identi.io/index.php?topic=365493" title="Pirate Bay: catálogo de la Biblioteca de Babel [1]"> Pirate Bay: catálogo de la Biblioteca de Babel [1]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_113"></i>
+<a href="https://identi.io/index.php?topic=364852" title="Google, imperialismo dospuntocero"> Google, imperialismo dospuntocero</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=364548" title="¿Por qué elegir openSUSE?"> ¿Por qué elegir openSUSE?</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=362530" title="El formato unificado de paquetes está por llegar"> El formato unificado de paquetes está por llegar</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=362364" title="K3b, grabación de CD y DVD"> K3b, grabación de CD y DVD</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">5</span> Comentarios</span>
+<span class="onpost"> Primeros pasos con la Consola GNU/Linux</span>
+<div class="comentario"></div><div id="comment_3602351" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rezarpado1" href="?action=profile;user=rezarpado1">
+<img id="error_avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/OpenSUSE_Geeko_button_bling7.svg/480px-OpenSUSE_Geeko_button_bling7.svg.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1670547" href="?action=profile;user=rezarpado1">rezarpado1</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410549824" title="12/09/2014 a las 19:23 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buen aporte maestro siempre viene bien estos tutos ayudan mucho a los novatos <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3602361" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rojored" href="?action=profile;user=rojored">
+<img id="error_avatar" src="http://pikbox.ru/img/10/201508170112158041111111111.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1741598" href="?action=profile;user=rojored">rojored</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410550352" title="12/09/2014 a las 19:32 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Grandiosa informaci?
+</div>
+</div>
+</div>
+</div><div id="comment_3602372" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="GundamE" href="?action=profile;user=GundamE">
+<img id="error_avatar" src="http://vignette1.wikia.nocookie.net/gundam/images/a/ab/Gundam_Epyon_EW.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1879035" href="?action=profile;user=GundamE">GundamE</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410550797" title="12/09/2014 a las 19:39 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3603168" class="comentario coment_id_4">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410576909" title="13/09/2014 a las 2:55 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1670547" href="https://identi.io/index.php?action=profile&user=rezarpado1" class="mensiones_identi">@rezarpado1</a> Recuerdo que cuando comenc?
+</div>
+</div>
+</div>
+</div><div id="comment_3643338" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Germlokura" href="?action=profile;user=Germlokura">
+<img id="error_avatar" src="https://68.media.tumblr.com/c170455cc2085b446b4f46fa293344db/tumblr_mqp84zC5C01rz1p6so2_500.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1551772" href="?action=profile;user=Germlokura">Germlokura</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1412535673" title="05/10/2014 a las 19:01 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_3.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994af43edf1edea7',t:'MTc2MTQ5MjE5OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>streamus para google chrome. - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Hola, streamus es una extención de google chrome con el cual puedes escuchar tu música favorita de youtube sin tener que entrar en ella ademas de gardar canciones y crear carpetas o listas de..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='TUNkQ2FoWHJtZUJtOW5uVTJGc2RHVmtYMStGT0V2WFlGV3JXdGxsKytYOHpET0grTEpyYUJhcml5UHN4eUs4M2FXb3hIU1ovbE1PQkpXM2JKMDg1MHJCY3lBYXVRTWExSThQNFE9PTlMcUdqbk9FNnpaU21zSw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761492198;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '5591342d08d1a54cfcc0c0821aae8349');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_5.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - streamus para google chrome." title="Identi - streamus para google chrome." align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '4a33a67f086cf2a2785b0e527eaea5812f6bc945';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Napho">Napho</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Napho" title="Ir al Perfil de Napho"><img id="error_avatar" class="avatar" border="0" width="120" src="http://i.minus.com/i9EgPeZ3BNM9h.gif"/></a>
+<div class=" rango_sidebar clearfix">Full User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/fulluser.png" title="Full User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1878233)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1878233');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">10</b> Seguidores</li>
+<li><b>262</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>15</b> Posts</li>
+<li><b>32</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">streamus para google chrome.</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=336946';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=336948';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=438" alt="Tracks / Temas sueltos" title="Tracks / Temas sueltos">Tracks / Temas sueltos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 11 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_998974">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><font size="5" style="line-height: 1.3em;">Hola, streamus es una extención de google chrome con el cual puedes escuchar tu música favorita de youtube sin tener que entrar en ella ademas de gardar canciones y crear carpetas o listas de reproducción incluso si cierran el navegador seguirá abierta esta aplicación, es muy  facil solo lo instalan desde extenciones en su navegador y listo.</font><br /><font size="5" style="line-height: 1.3em;">Ojala que les guste y adios</font><br /><br /><br /><font size="5" style="line-height: 1.3em;"><img id="img_post" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQDw8PERARFRANDRANEBAQEBASDw8PFR0XFxQRExQYHSggGBolGxQULTEhJSkrLi4uFyAzOTMsNygtLisBCgoKDQsOGhAODjckHiU3LDczNzg3Mjg3NzczODcvNzM3MSstNzAwNys4Nzc3MjI3MTcyLDI3ODc0Li80NzAxLv/AABEIAJQBVAMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAwQCBgcFAf/EADsQAAICAgAFAgQDAwoHAAAAAAABAgMEEQUSITFBBlETYXGRByKBcqHRFBUXMkJUkpOy0iQ1UlN0o7H/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAwUE/8QAIBEBAAEDBAMBAAAAAAAAAAAAAAMBAhESIVFxBRMiBP/aAAwDAQACEQMRAD8A0UAAAABlCWiUgJK5eAMwAAAAAAAYyrT8Ecsf2f3JgBUlTJePsRl8+Sin3QFEFqWOvoRyof1AhB9cWu58AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAmi9n0ii9EoAAAAAAAAAAAAAAMJUxfj7GYAryx34f3IpVteC6AKALsq0/BHLHXhgVgSSpkvH2IwAAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAABnXLwYACcGMJbMgAAAAAAAAAAAAAAAAAAABpPugAIpUL6Ecsd/UsgCjKLXdHwvmEqYvx9gKYJ5Y/s/uRyra7oDAAAAAAAAAEsaJPx9yaGIvL+wFQkhTJ+PuXYVxXZfxMwKixH5f7gWwBTAAAAAAAAAAH1PRMmQGUJaAlAAAAAAS0Y85vUItt+38S4uETVc7JSS+GpflXVtrxsjJPFHXF1+6Mn6Io64uv3ecACywAAAAAAAAAAAAAAAAAfUtgYSgn3RHLHXhlyGPJ/ImjjLz1A8h0S9t/QyjjSfjX1PajFLsg1vuB5cMReXv9yJowS7JFuVK+hHKh+OoEQPri13R8AAAAAAKYAAAAAAAAAAAACSuXgzIUSxewPp7mBwvWPK6dVr3CUoy+Da64xX9rm5eX9TwzsX4d8bxsrh/833Sip11zolXKXK7aZb1KD89Hrp16EpY/bbp11p0lLH7bdOutOmiS4lR8SDU48sYWLonpNuGl2+TI7c2udd1cJc07HNQjGMnKTfZJJdTof8ARZw7/u5P+bV/sPK4v6Ks4VviOBZ8R40ZylXkQjNxg1qU4uOt6TfTX8Dht8XFbj7rt1znhwW+Kitx91265zwep/RuPHhNN9GNNZarx5SVaslObkoqalDr7t9umjmDg98unzb5eXT5ubtrXud29Tcdvo4PDMrcVfOrGk247inZy8zUX+0zxfw74bRjYNnFshc1tquvdjScoVRb3yLw5NNt+dr2NNqOU5OFbUoysqshGe+V2Vygpa76bXUuY3p3Nsh8SGJfKDW1JVS017r3OlcJ4zTxzOoUsdxq4fGzJ1OcZKyUuWMFKKWunV62+yL/AKk9QcWqynXicPdmPVypzlFt3PSb5GpLlXXXZ9gOK21ShJxlGUZRepRknGUX7NPsXcDgeXkR5qca6yP/AFQrk4/o+zOpfijwyqzEpz5U6sonS7YN8s5UzaUqpyXlNrr46len1RxbIprWBwxVVxSUZT61uC7KClyJL59QOXZ3D7qJct1Vlcn2VkJR39N9zLA4ZfkNqimyxrv8OEpa+rXRHa/U+HbkcGsWZCtZKqU38PbhXdv8soN/Lv18tEHq/iv8zYFFeJVWm5qiPMm4x0m5TaWuaT1+8DjuZwjJplGNuPdCU3qKlXJcz9o9Or+hPb6czow+JLDyFDW+Z1T6L5rWztHoH1FPiGJK66EFZTc6pcifLLSUlJJt6epe5q/APxGysjiEKJVVfye+50xUVL4la68snLen8+gHMsTDtubjVVZY4rbVcJTaXu0l0ML6Z1ycJxlGcXqUZpxlF/NPsd8xOFV08Wturio/ynBUpqK0nZGenPXu019jlXrymP8AOea2t7tj3/YiBrs+H3xhGyVNqrnrlslXJQlvtqTWmXsP0zm3RU4Y10oPqpKuTT+nudr9RY1VkeH12pfDeZUnF/1W1CbjF/JtLoYeqbeKQlW8Gumdaj+eMluxy9tNpcuvbqBxG3h7qk4WQnGa7xnFxa/Rn1LXY3v17xyvIorruxLqcytxknZBKCX9uMZ7/NH+CNEAAAAAAAAAGEqk/H2MwBBKj2f3I5VteC2AKQLjivYAeOAAAAAAAAAAAAAGUZaMQBObj6f/AA8yM7GryYXUxjY5ajNTclytx8L5Gl1y8GwcM9X5+NVGinIcKob5Y/DplrbbfWUW+7YG0f0UZn96p/8AabpZSuG8GsryLviOrGthzy3+eU+blrin1/tJL6HLf6QOK/3t/wCTj/7DyOK8aystp5F9lnL1Sk0oJ+6gtRT/AEA6/wAf4bdlcCopohz2SxsNqKcVtRUG+reuyK1Vbj6ZnCS1KGFdCS9pRlJNfdHOOG+s+I49caqsmSrgtRjKFU+Veycot6+WyOfqzOdEsV3v4FinGVfw6uqm3KS5uXfVt+QPc/CTiUKeIOubSWVS6ot9viJqUY/qlI271Vi8eWXJ4VzeNbyuC/4dfBekpRlzx3re3vr3+RxtPXVb2ntNd0/DRtOH664rCChHIbSWlKyuuUkv2mtv9dgblxfEyqJYVefxNXV5WZRCeN/J6oxmlJSbcl15VJR8ddo9P8QFxZyphw9SVThJWOt1Kanvom5dlr2ORZ112RY7ci6dlj6c0ntpey8JfJLRsOF614jVXGuOQ3GK0nZCE5pe3NJbf67A37MqsxOCxpybXPIny1ylKbnKdtlnNyqT6y1t/pEofjJXzY2L8sl/6Wc+4lxnJyZxsuulOUHuG9KMH3/LFLS+xLxf1Dl5cYwyLueMJc8VyVx1Ltv8qXgDoH4QVqOFkJf3qX+iBonpT/mWJ/5cf/pHwn1Fl4kJV0XckJy55LkrluWkt7lF+EjzarpRmpxk1OMlOMl0akuqa/UDumRlRhxOiDaTuwrlHfmUZQel89b+xovq30bm38QusqrUqsicZKzniowWknzJvfTT7I1PifHcrJlXO66Up07+HJKMJQ3p7Tgl16LqelR654lCHIsjaS0nKuuU/wDE11/UDonrTFqvWFg2WuDvv3GUdcy+HCWnp+7cV+p52bVxrCnCGPN5dHKut0a3OMvMZPal7dds5jmZ1t1nxbbJzs6fnlJ8y1217foe3jeueIwiorI5klpOddcpf4mtv9QN+9eS5+ESnkQhC5qhqG1Lkuco80YS89Ob9NnHi/xbjOTlyUr7pT5f6qelCP0jHSX1KAAAAAAAAAAAAAAAAAHjAAAAAAAAAAAAAAAAE0JbIUS10y79vqBkfSzXjLu3v9xNGCXZAU40yfj79CaOL7v7FgAYxriuyMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPGAAAAAAAAB9UW+yJY4789AIT6lstRoivmSpaAqRok/kSxx156kwA+KKXZH0ADOuWiYrE1cvAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADxgZRrb7IljjPy/sBAZRi32RbjTFePuZgVo478vRLGiK+f1JAASAAAAAAAAAAA+pnwAWIy2fSCEtE4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVgAAAAAAAAAAAAAAAAAAAAAmqfT6AAZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//2Q==" border="0"></font><br /><br /><br /><font size="5" style="line-height: 1.3em;"><img id="img_post" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQxZafElOeVNUPj1V0UTG-V_wj5cpp-2zc9oF3uPvu7O4pgshpg7w" border="0"></font><br /><br /><br /><br /><font size="5" style="line-height: 1.3em;"><img id="img_post" src="data:image/jpeg;base64,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" border="0"></font><br /><br /><font size="5" style="line-height: 1.3em;"><img id="img_post" src="https://lh6.googleusercontent.com/-zzbegXgmq_o/AAAAAAAAAAI/AAAAAAAAABg/Yb45x4YgTl4/photo.jpg" border="0"></font><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">5</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1194</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">0</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(336947,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(336947,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(336947,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(336947,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(336947,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(336947,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(336947,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(336947,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(336947,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(336947,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="http://s9.postimg.org/ibonjji67/14075_10204942271109548_2332439892352366892_n.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1795057" title="perfil de Irfaxad"> Irfaxad</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(336947);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('336947');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=354478" title="AVG 2015 Internet Security (serial hasta 2018)"> AVG 2015 Internet Security (serial hasta 2018)</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=342525" title="typing master  practica tu mecanografía"> typing master  practica tu mecanografía</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=336819" title="ve tus series de televisión en hd con xbmc ubuntu"> ve tus series de televisión en hd con xbmc ubuntu</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=333456" title="speedfan. Monitorea la temperatura de tu laptop"> speedfan. Monitorea la temperatura de tu laptop</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=293036" title="Ventanas transparentes para windows 8.1"> Ventanas transparentes para windows 8.1</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=292192" title="Photoshop CC en español"> Photoshop CC en español</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?topic=291383" title="Tema para windows 8.1 con iconos rojos."> Tema para windows 8.1 con iconos rojos.</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">6</span> Comentarios</span>
+<span class="onpost"> streamus para google chrome.</span>
+<div class="comentario"></div><div id="comment_3602688" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="antl_79" href="?action=profile;user=antl_79">
+<img id="error_avatar" src="http://imgfz.com/i/p6hC5Yw.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="135527" href="?action=profile;user=antl_79">antl_79</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410562477" title="12/09/2014 a las 22:54 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Al menos pudiste haber dejado el link <br />a la pagina oficial:<a href="https://streamus.com/" target="_blank" rel="nofollow">https://streamus.com/</a><br />y a la extencion:<a href="https://chrome.google.com/webstore/detail/streamus-beta/jbnkffmindojffecdhbbmekbmkkfpmjd?hl=es" target="_blank" rel="nofollow">https://chrome.google.com/webstore/detail/streamus-beta/jbnkffmindojffecdhbbmekbmkkfpmjd?hl=es</a>
+</div>
+</div>
+</div>
+</div><div id="comment_3602762" class="comentario coment_id_2">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Napho" href="?action=profile;user=Napho">
+<img id="error_avatar" src="http://i.minus.com/i9EgPeZ3BNM9h.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1878233" href="?action=profile;user=Napho">Napho</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410564844" title="12/09/2014 a las 23:34 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita antl_79: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Al menos pudiste haber dejado el link <br />a la pagina oficial:<a href="https://streamus.com/" target="_blank" rel="nofollow">https://streamus.com/</a><br />y a la extencion:<a href="https://chrome.google.com/webstore/detail/streamus-beta/jbnkffmindojffecdhbbmekbmkkfpmjd?hl=es" target="_blank" rel="nofollow">https://chrome.google.com/webstore/detail/streamus-beta/jbnkffmindojffecdhbbmekbmkkfpmjd?hl=es</a></div></blockquote><br />esta en extenciones no es muy dificil ni siquiera hay que descargar nada no hay que &nbsp;ser tan intutiles
+</div>
+</div>
+</div>
+</div><div id="comment_3602779" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="antl_79" href="?action=profile;user=antl_79">
+<img id="error_avatar" src="http://imgfz.com/i/p6hC5Yw.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="135527" href="?action=profile;user=antl_79">antl_79</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410565466" title="12/09/2014 a las 23:44 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+O sea que soy inutil ok gracias Dios le pague por el comentario solo era una sugerencia
+</div>
+</div>
+</div>
+</div><div id="comment_3607658" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Irfaxad" href="?action=profile;user=Irfaxad">
+<img id="error_avatar" src="http://s9.postimg.org/ibonjji67/14075_10204942271109548_2332439892352366892_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1795057" href="?action=profile;user=Irfaxad">Irfaxad</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410802955" title="15/09/2014 a las 17:42 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+1. Vaya moditos para contestar una pregunta. No todos saben descargar extensiones para Google Chrome: ?
+</div>
+</div>
+</div>
+</div><div id="comment_3614564" class="comentario coment_id_5">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Napho" href="?action=profile;user=Napho">
+<img id="error_avatar" src="http://i.minus.com/i9EgPeZ3BNM9h.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1878233" href="?action=profile;user=Napho">Napho</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1411105211" title="19/09/2014 a las 5:40 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Irfaxad: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">1. Vaya moditos para contestar una pregunta. No todos saben descargar extensiones para Google Chrome: ?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3615292" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Irfaxad" href="?action=profile;user=Irfaxad">
+<img id="error_avatar" src="http://s9.postimg.org/ibonjji67/14075_10204942271109548_2332439892352366892_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1795057" href="?action=profile;user=Irfaxad">Irfaxad</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1411151182" title="19/09/2014 a las 18:26 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Napho: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita Irfaxad: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">1. Vaya moditos para contestar una pregunta. No todos saben descargar extensiones para Google Chrome: ?</div></blockquote></div></blockquote>
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_5.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994af43deaacdea5',t:'MTc2MTQ5MjE5OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
