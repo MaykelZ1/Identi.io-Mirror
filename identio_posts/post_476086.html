@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Vim | Algunos comandos | Linux - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Bienvenidos a un nuevo tutorial, en el cual veremos algunos comandos de nuestro magnifico editor Vim. Modo Normal Vim empieza en este modo. Se pueden emplear combinaciones de teclas para, por ejemplo..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='bWdJYUdQMTB2Q2oxMUxZVTJGc2RHVmtYMTlsRDJSd3p0UWduc1VOWUtHTnZYNk9ORXZPNE9ES1NKbzdnRldjZTBLMmhJdHh4Z09Rd3RJNFVIUERwaHNzdEhvRGx1S0o1VlAzQ1E9PWhNbnVVcGUxY2ZaanFBbQ==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761479764;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'a4e2c5993ab7f76f62b00acc1fc3031c');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_5.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Vim | Algunos comandos | Linux" title="Identi - Vim | Algunos comandos | Linux" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'a3c75758d6ff5abe80c1dd35cc7a2daeb17ef6d6';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Xmegacs">Xmegacs</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"Lo importante es compartir"
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Xmegacs" title="Ir al Perfil de Xmegacs"><img id="error_avatar" class="avatar" border="0" width="120" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" /></a>
+<div class=" rango_sidebar clearfix">Gold User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/golduser.png" title="Gold User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1961335)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1961335');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">66</b> Seguidores</li>
+<li><b>1568</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>47</b> Posts</li>
+<li><b>121</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Vim | Algunos comandos | Linux</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=476085';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=476087';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=126" alt="Linux" title="Linux">Linux</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 8 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1138117">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><img id="img_post" src="http://imagenti.li/medium/Kvc.jpg" border="0"><br /><br /><img id="img_post" src="http://imagenti.li/medium/kGc.jpg" border="0"><br /><br /><img id="img_post" src="http://imagenti.li/medium/BBc.jpg" border="0"><br /><br />Bienvenidos a un nuevo tutorial, en el cual veremos algunos comandos de nuestro magnifico editor Vim.<br /><br /><b>Modo Normal</b><br /><br />Vim empieza en este modo. Se pueden emplear combinaciones de teclas para, por ejemplo, copiar líneas y trabajar en el formato del texto. Éste es el modo central, desde el que se cambia a los otros modos. Pulsando la tecla Escape siempre se puede volver al modo normal. Por defecto, podremos mover el cursor por el archivo con hjkl (izquierda, abajo, arriba y derecha respectivamente) o con las teclas de dirección.<br /><br /><b>Modo insertar</b><br /><br />&nbsp;Es el modo en el que podemos introducir texto. Se puede entrar a este modo desde el modo normal pulsando la tecla i. Existen otros comandos que nos llevarán al modo inserción pero se diferencian uno del otro por la acción que realizan, como cambiar una palabra dentro de unas comillas, cambiar el texto hasta el final de la línea o hasta el cierre de un corchete… etc. Un usuario avanzado ahorrará mucho tiempo utilizando estos atajos.<br /><br />[/b]Modo de comandos[/b]<br /><br />Se accede pulsando :. Permite introducir diferentes comandos, como buscar y reemplazar con expresiones regulares. También podremos personalizar aspectos de Vim para esa sesión, ya que no quedarán guardados los cambios permanentemente.<br /><br />[/b]Modo visual[/b]<br /><br />Se entra pulsando la tecla v. Es como seleccionar texto con el cursor, solo que podremos escribir comandos para manipularlo.<br /><br /><b>Modo selección</b><br /><br />Se entra desde el modo visual pulsando Ctrl-G. Tiene un comportamiento similar al modo visual solo que al escribir no realizaremos comandos sino que reemplazaremos el texto, como en un editor de texto normal,<br /><br /><b>Modo Ex</b><br /><br />Este modo se asemeja al modo de comandos, con la diferencia de que tras la ejecución de una orden no se vuelve al modo normal. Se entra pulsando Q y se sale con vi.<br /><br /><br /><br /><b>Aprende algunos verbos: </b><br /><br />* v (visual)<br />* c (change/cambiar)<br />* d (delete/borrar)<br />* y (yank/copiar).<br /><br /><b>Aprende algunos modificadores: </b><br /><br />* i (inside/dentro de)<br />* a (around/alrededor)<br />* t (till../hasta que encuentra el carácter)<br />* f (find../hasta que encuentra el carácter incluyéndolo)<br />* / (buscar).<br /><br /><b>Aprende algunos objetos: </b><br /><br />* w (word/palabra)<br />* s (sentence/frase)<br />* p (paragraph/párrafo)<br />* b (block/parentesis)<br />* t (tag/ para html/xml).<br /><br /><br /><b>Opciones de Texto modo normal.</b><br /><br />* May+v =&gt; Seleccionar texto<br />* dd =&gt; Eliminar la línea actual<br />* u =&gt; Deshacer el último cambio<br />* CRTL+R =&gt; Rehacer el último cambio<br />* guu =&gt; Convertir a minúsculas la línea actual<br />* gUU =&gt; Convertir a mayúsculas la línea actual<br />* gg =&gt; Posicionarse al inicio del fichero<br />* G =&gt; Posicionarse al final del fichero<br />* :num =&gt; colocarse en la línea num<br />* ga =&gt; Muestra el código ASCII, hexadecimal y octal del carácter actual<br /><br /><br /><b>Comando</b>h<br /><div class="code">Mover el cursor a la izquierda.</div><br /><b>Comando</b>j<br /><div class="code">Mover el cursor hacia abajo.</div><br /><b>Comando</b>k<br /><div class="code">Mover el cursor hacia arriba.</div><br /><b>Comando</b>l<br /><div class="code">Mover el cursor hacia la derecha.</div><br /><b>Comando</b>i<br /><div class="code">Insertar texto en la posición actual del cursor (Insert), pasando a Modo Inserción. Se permanece en modo inserción hasta que se sale explícitamente de él.</div><br /><b>Comando</b>ESC<br /><div class="code">Salir del modo inserción y volver a modo comando. En modo comando, permite cancelar muchos de los comandos que se están ejecutando.</div><br /><b>Comando</b>x<br /><div class="code">Borrar el caracter bajo el cursor (equivale a la tecla Del/Supr).</div><br /><b>Comando</b>X<br /><div class="code">Borrar el caracter a la izquierda del cursor (equivale a la tecla Borrar/Backspace).</div><br /><b>Comando</b>J<br /><div class="code">Juntar la línea actual con la siguiente (Join), eliminando el retorno de carro entre ellas.</div><br /><b>Comando</b>u<br /><div class="code">Deshacer la última acción (Undo). Si lo pulsamos más veces desharemos acciones anteriores.</div><br /><b>Comando</b>CTRL+R<br /><div class="code">Rehacer la última acción (Redo). Si lo pulsamos más veces reharemos acciones posteriores deshechas.</div><br /><b>Comando</b>a<br /><div class="code">Insertar texto en la siguiente posición tras el cursor (Append). Es similar a i, salvo que el texto no se inserta en la posición actual del cursor sino a su derecha.</div><br /><b>Comando</b>A<br /><div class="code">Poner el cursor al final de la línea y pasar a modo inserción (añadir texto al final).</div><br /><b>Comando</b>o<br /><div class="code">Crear una línea vacía, en blanco, bajo la línea actual, y pasar a modo inserción con el cursor posicionado en dicha línea. Es mucho más cómodo que (como en otros editores) tener que pulsar FIN y ENTER para crear una línea en blanco.</div><br /><b>Comando</b>O<br /><div class="code">Crear una línea vacía, en blanco, sobre la línea actual. Sería el equivalente en otros editores a ARRIBA, ARRIBA, FIN, ENTER.</div><br /><b>Comando</b>dd<br /><div class="code">Borrar la línea actual (sobre la que está el cursor).</div><br /><b>Comando</b>D<br /><div class="code">Borrar desde la posición actual del cursor hasta el final de la línea.</div><br /><br /><br /><b>Counts o repetidores:</b><br /><br />En la mayoría de comandos de Vim podemos añadir counts, que es como se conoce a los repetidores del comando. El count es un número que se teclea antes del comando para que se repita varias veces. Unido a la potencia del modo comando nos da mucho juego para la edición.<br /><br /><b>Comando</b> 10dd <br /><div class="code">Repetir 10 veces el comando dd, es decir borrar 10 líneas empezando desde la línea actual. Es el equivalente a teclear manualmente 10 veces dd, y mucho más rápido que seleccionar 10 líneas a mano con ratón o cursores.</div><br /><b>Comando</b> 5x <br /><div class="code"> Repetir 5 veces el comando x, es decir, borrar 5 caracteres empezando desde el carácter actual. Equivale a pulsar manualmente 5 veces el comando x. </div><br /><b>Comando</b> 60i-&lt;ESC&gt;&lt;ENTER&gt; <br /><div class="code"> Insertar 60 guiones consecutivos. Este comando se teclea en modo comando pulsando 6, 0, i, guión, y pulsando la tecla ESCAPE y luego pulsar ENTER para validar el comando. Al hacerlo, estamos diciendo que se repita 60 veces la secuencia i guión ESCAPE, es decir, pasar a modo inserción, escribir un guión, y volver al modo comando pulsando ESCAPE. El 60 que hay delante lo repite 60 veces, con lo cual tenemos 60 guiones en pantalla. ¿No es mucho más cómodo al programar, para introducir separadores de comentarios, que pulsar el guión 60 veces o durante varios segundos mientras miramos la columna en la que estamos? </div><br /><br /><br /><br /><b>La manipulación del fichero (abrir, guardar, salir)</b><br /><br /><b>comando</b>:w<br /><div class="code"> Grabar los cambios del fichero actual. </div><br /><b>comando</b>:w nombre<br /><div class="code"> Grabar el contenido actual del buffer en un fichero de nombre nombre. </div><br /><b>comando</b>:q!<br /><div class="code"> Salir del editor sin grabar ningún cambio en el fichero actual (descartando cualquier cosa que hayamos hecho desde su apertura o última vez que grabamos). </div><br /><b>comando</b>ZZ<br /><div class="code"> Salir del editor grabando los cambios en el fichero actual. También sirve :x o :wq!. </div><br /><b>comando</b>CTRL + G<br /><div class="code"> Obtener información en la barra de estado del nombre del fichero que estamos editando, línea actual, número de líneas, en qué porcentaje del fichero estamos, y número de columna. </div><br /><b>comando</b>:e fichero<br /><div class="code"> Abrir un fichero en el buffer actual (si está vacío) o en uno nuevo (si tenemos el buffer actual en uso) </div><br /><br /><br /><br />En el caso de que hayamos abierto con :e más de un fichero, podemos movernos entre ellos con: <br /><br /><b>comando</b>:bn<br /><div class="code"> Siguiente buffer (fichero). </div><br /><b>comando</b>:bp<br /><div class="code"> Anterior buffer (fichero). </div><br /><b>comando</b>:bd<br /><div class="code"> Cerrar buffer (fichero) actual. </div><br /><br /><br /><br />Especificando rangos de texto<br /><br />En Vim podemos aplicar las búsquedas, borrados y modificaciones no sólo a la línea actual o a la totalidad del documento, sino que también podemos hacer referencia a porciones del texto: <br /><br /><br /><b>Comando</b>%<br /><div class="code">Todo el documento</div><br /><b>Comando</b>n,M<br /><div class="code"> Bloque de líneas desde la n a la M. </div><br /><b>Comando</b> &#039;a,&#039;b <br /><div class="code"> Bloque de líneas entre las marcas a y b. </div><br /><b>Comando</b> &#039;&lt;,&#039;&gt; <br /><div class="code"> Bloque de texto seleccionado en modo visual. </div><br /><br /><br /><br />Movimiento más avanzado<br /><br /><b>Comando</b>w<br /><div class="code"> Mueve el cursor al principio de la siguiente palabra de la línea actual, o de la siguiente línea si estamos en la última palabra de la línea. </div><br /><b>Comando</b>b<br /><div class="code"> Mueve el cursor al principio de la anterior palabra de la línea actual, o de la anterior línea si estamos en la primera palabra de la línea. </div><br /><b>Comando</b>e<br /><div class="code"> Igual que w, pero coloca el cursor en el último carácter de la siguiente palabra (al final de la palabra en lugar de al principio). </div><br /><b>Comando</b>ge<br /><div class="code"> Igual que b, pero coloca el cursor en el último carácter de la anterior palabra. </div><br /><b>Comando</b> W, B, E y gE <br /><div class="code"> Iguales que w, b, e y ge, pero con una peculiaridad. En mayúsculas, nos movemos de palabra en palabra considerando como separador de palabra sólo los espacios en blanco y retornos de carro, mientras que en minúsculas, Vim utiliza un modo inteligente con más separadores de palabras, como el guión o la barra. Por ejemplo, en el caso de tener la frase cadena1-cadena2 cadena3 o cadena1/cadena2 cadena3 con el cursor sobre el primer carácter, w avanzaría el cursor hasta primera letra de cadena2, mientras que W lo avanzaría hasta la primera letra de cadena3. </div><br /><b>Comando</b>$<br /><div class="code"> Mueve el cursor al final de la línea (equivalente a la tecla Fin). </div><br /><b>Comando</b>0<br /><div class="code"> Mueve el cursor al principio de la línea (equivalente a la tecla Inicio). </div><br /><b>Comando</b>^<br /><div class="code"> Mueve el cursor al primer carácter no blanco de la línea. Perfecto a la hora de programar, cuando queremos corregir cosas en el código, normalmente indentado con espacios o tabuladores al principio de las líneas. </div><br /><b>Comando</b>{ <br /><div class="code"> Mueve el cursor al anterior párrafo (o bloque de código). </div><br /><b>Comando</b>} <br /><div class="code"> Mueve el cursor al siguiente párrafo (o bloque de código). </div><br /><b>Comando</b> f&lt;carácter&gt; <br /><div class="code"> Realiza una búsqueda en la línea actual del carácter indicado. Por ejemplo, fx mueve el cursor a la primera aparición del carácter x desde la posición actual. Muy útil para ir rápidamente a partes concretas de una línea sin llevar la mano al ratón (por ejemplo, para corregir una h que sea un error ortográfico, pulsando fh. </div><br /><b>Comando</b> F&lt;carácter&gt; <br /><div class="code"> Igual que el comando anterior, pero realizando la búsqueda hacia atrás en la línea actual (empezando desde la posición actual del cursor). </div><br /><b>Comando</b> t&lt;carácter&gt; y T&lt;carácter&gt; <br /><div class="code"> Similares a f&lt;carácter&gt; y F&lt;carácter&gt; salvo que posicionan el cursor en el carácter anterior a la letra buscada. </div><br /><b>Comando</b>; y , <br /><div class="code"> Repiten la ejecución del último comando f, F, t o T hacia adelante (;) o hacia atrás (,). </div><br /><b>Comando</b>ESC<br /><div class="code"> En el caso de búsquedas f, F, t o T, permite cancelar la búsqueda. </div><br /><b>Comando</b>%<br /><div class="code"> Al pulsarlo sobre un paréntesis abierto o cerrado (, ), corchete abierto o cerrado [, ] , o llave abierta o cerrada {, }, mueve el cursor a la pareja de dicho elemento. Por ejemplo, si estamos programando y queremos saber cuál es el paréntesis que cierra el paréntesis sobre el cual está el cursor, pulsamos % y vim nos lleva directamente a él. Como también funciona con corchetes y llaves, podemos encontrar fácilmente qué llave cierra un bloque de código, o qué if/for/while/loquesea es el que ha abierto una determinada llave de cierre en un programa en C que estemos depurando. </div><br /><b>Comando</b> &lt;NUMERO&gt;G <div class="code"> Ir a la línea número NUMERO del documento. Por ejemplo, 100G nos llevaría a la línea número 100. Es especialmente útil a la hora de programar, cuando tenemos que ir a líneas concretas del programa donde el compilador nos ha reportado errores. </div><br /><b>Comando</b> :set number <br /><div class="code"> Activa la numeración de líneas. </div><br /><b>Comando</b> :set nonumber <br /><div class="code"> Desactiva la numeración de líneas. </div><br /><b>Comando</b> :set ruler <br /><div class="code"> Activa en la barra de estado una indicación de la columna y fila actual. </div><br /><b>Comando</b>gg <br /><div class="code"> Ir a la primera línea del documento (equivale a 1G) </div><br /><b>Comando</b>G<br /><div class="code"> Sin número delante, G nos lleva a la última línea del documento. </div><br /><b>Comando</b> &lt;NUMERO&gt;% <br /><div class="code"> Nos lleva a un porcentaje concreto del fichero. Por ejemplo 50% nos lleva a la mitad del fichero, y 95%, casi al final del mismo. </div><br /><b>Comando</b> CTRL+F <br /><div class="code"> Scrollea una pantalla completa hacia adelanta (F de Forward). </div><br /><b>Comando</b> CTRL+B <br /><div class="code"> Scrollea una pantalla completa hacia atrás (B de Backward). </div><br /><b>Comando</b> CTRL+E <br /><div class="code"> Scrollea la pantalla en una sóla línea hacia arriba. </div><br /><b>Comando</b> CTRL+Y <br /><div class="code"> Scrollea la pantalla en una sóla línea hacia abajo. </div><br /><b>Comando</b> CTRL+U <br /><div class="code"> Scrollea media pantalla de texto hacia abajo (el equivalente a hacer medio RePág). Puede sonar raro el hecho de scrollear medias pantallas, pero en determinadas situaciones puede ser útil (si no queremos perder de vista texto ya leído cuando avanzamos, por ejemplo). </div><br /><b>Comando</b> CTRL+D <br /><div class="code"> Scrollea media pantalla de texto hacia arriba (como hacer medio AvPág). Permite así avanzar el documento media página sin perder de vista el texto donde está el cursor. </div><br /><b>Comando</b>zz<br /><div class="code"> Sin modificar la posición actual del cursor, modifica la ventana de visualización del fichero de forma que la línea actual acabe centrada en pantalla y podamos ver el contexto. Por ejemplo, supongamos que estamos en la parte de abajo de la pantalla con el cursor en la última línea y necesitamos ver con facilidad y claridad qué líneas hay sobre y bajo ella. En otros editores usaríamos la tecla de Abajo hasta centrar un poco la línea en pantalla y luego subiríamos hacia arriba para volver a la línea en que estábamos. En Vim basta con pulsar zz para centrar la línea actual en pantalla sin mover la posición del cursor para nada. </div><br /><b>Comando</b>zt<br /><div class="code"> Igual que zz pero posicionando la línea en la parte superior de la pantalla (t viene de top) lo que nos permite ver con claridad la línea actual y muchas líneas posteriores. </div><br /><b>Comando</b>zb <br /><div class="code"> Igual que zt, pero posicionando la línea en la última posición de la ventana de pantalla, lo que nos permite ver la línea actual y muchas líneas anteriores. En ambos 3 comandos no se modifica la posición del cursor en el documento, sólo la manera de verlo en pantalla. </div><br /><br /><br /><br />De nuevo podemos utilizar multiplicadores en todos los comandos anteriores para evitarnos pulsaciones innecesarias de teclas:<br /><br /><b>Comando</b>20w<br /><div class="code"> Avanzar 20 palabras. </div><br /><b>Comando</b>3fx<br /><div class="code"> Avanzar el cursor a la tercera aparición de la letra x en la línea actual, desde la posición del cursor. </div><br />Existen una serie de comandos en Vim que se comportan como operadores, actuando sobre los comandos de movimiento. Por ejemplo, el operador de borrado d (delete), se puede anteponer a comandos de Vim para modificar su comportamiento. <br /><br />Como algunos modificaciones y operadores se utilizan tanto, Vim nos proporciona unos atajos de una sola letra para ejecutarlos: <br /><br /><b>Atajo</b> x <b>Equivalente</b> dl<br /><div class="code">Borrar el carácter bajo el cursor. </div><br /><br /><b>Comando</b> X <b>Equivalente</b> dh<br /><div class="code">Borrar el carácter a la izquierda del cursor. </div><br /><br /><b>Comando</b> D <b>Equivalente</b> d$<br /><div class="code">Borrar hasta el final de la línea. </div><br /><br /><b>Comando</b> C <b>Equivalente</b> c$<br /><div class="code">Cambiar el texto hasta el final de la línea. </div><br /><br /><b>Comando</b> s <b>Equivalente</b>cl<br /><div class="code">Cambiar un carácter. </div><br /><br /><b>Comando</b> S <b>Equivalente</b>cc<br /><div class="code">Cambiar la línea completa. </div><br /><br />Gracias a la potencia de Vim, entre operadores y multiplicadores podemos hacer la edición muchísimo más rápida. Veamos algunos comandos más avanzados: <br /><br /><br /><b>Comando</b>dw<br /><div class="code">Borrar desde el cursor hasta el final de la palabra actual. Por ejemplo, si estamos encima de la letra m de la palabra automóvil, ejecutando dw quedaría tan sólo la palabra auto. Recuerda que w avanza hasta el siguiente separador de palabra y W hasta el siguiente espacio entre palabras, de modo que también podemos usar dW si es lo que nos interesa. </div><br /><br /><b>Comando</b>db<br /><div class="code">Borrar desde el cursor hasta el principio de la palabra actual. Por ejemplo, si estamos encima de la letra m de la palabra automóvil, ejecutando db quedaría tan sólo la palabra móvil. </div><br /><br /><b>Comando</b>dlw<br /><div class="code">Borrar la palabra bajo el cursor (completa), desde su principio hasta su final, estemos donde estemos dentro de la palabra. </div><br /><br /><b>Comando</b>daw<br /><div class="code">Borrar la palabra bajo el cursor, igual que diw, pero en este caso si existe un espacio tras la palabra también lo borra. </div><br /><br /><b>Comando</b>dls<br /><div class="code">Borrar la frase (no línea, sino frase hasta el próximo punto) sobre la que está el cursor. </div><br /><br /><b>Comando</b>das<br /><div class="code">Igual que dis, pero si existe un espacio tras la frase también lo elimina. </div><br /><br /><b>Comando</b>dG<br /><div class="code">Borrar desde la posición actual del cursor hasta el final del fichero. </div><br /><br /><b>Comando</b>dgg<br /><div class="code">Borrar desde la posición actual del cursor hasta el principio del fichero. </div><br />Bueno eso es todo por ahora amigos, despues continuaremos descubriendo el maravilloso mundo de vim.<br /><br /><br /><br /><div align="center"><b>Dejo el Documento en PDF para aquellos que lo necesiten.</b></div><br /><img id="img_post" src="http://imagenti.li/medium/xBc.jpg" border="0"><br /><br /><div align="center">|<b>Formato:</b> PDF | <b>Peso:</b> 78 KB | <b>Servidor:</b> Mega | </div><br /><div align="center">|<b> Contraseña:</b> csoria |</div><br /><img id="img_post" src="http://imagenti.li/medium/CBc.jpg" border="0"><br /><br /><div align="center"><a href="https://mega.nz/#!8gpg2bwa!-cjIJlqduFBOvHYbuGxIfAgS7acdJDRWQSh1vUNY674" target="_blank" rel="nofollow"><img id="img_post" src="http://imagenti.li/medium/YV.gif" border="0"></a></div><br /><img id="img_post" src="http://imagenti.li/medium/yBc.jpg" border="0"><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">26</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 4.3/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1934</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">2</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(476086,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(476086,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(476086,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(476086,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(476086,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(476086,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(476086,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(476086,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(476086,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(476086,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://1.bp.blogspot.com/-99H6JkekhXo/Xi20do5oBcI/AAAAAAAAJR8/dbdhAVFfOVkxVRA81lMNCrs4lwn1zNFoACLcBGAsYHQ/s1600/a7c5b8d69402aeaa81c82b930aa51add.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1952204" title="perfil de LASZChile2"> LASZChile2</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-60HoNVJKIos/VYwhyWFKuZI/AAAAAAAAMOg/jssUTnYQNF8/s1600/1.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1544342" title="perfil de draer"> draer</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://thumbs.subefotos.com/651f8fb4144d857b58d8a5c5a453c3e4o.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1607176" title="perfil de aradillas"> aradillas</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/_ierSNQX-XaE/SUUTV7QLbTI/AAAAAAAAAHo/mcjAJfly6xo/s320/Ryu.PNG" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1616246" title="perfil de Hadoken1"> Hadoken1</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://i85.fastpic.ru/big/2016/1028/0d/74f53558202f85ff957f6a1925def50d.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=18809" title="perfil de pancram"> pancram</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-criNO0mmqu8/XRjTrqd8FDI/AAAAAAAAAq8/WGeA1Ochss4t5ObTGSuJelEOEknvH2ffgCLcBGAs/s1600/yin%2Byang%2Brojo%2By%2Bazul%2B2.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=2007836" title="perfil de dskrgand"> dskrgand</a>: <b>1 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(476086);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('476086');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=547569" title="Mangle - Queue Tree Mikrotik"> Mangle - Queue Tree Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=527410" title="Bloquear Youtube con Mikrotik"> Bloquear Youtube con Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=527397" title="Bloquear Netflix Mikrotik"> Bloquear Netflix Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=476589" title="7 Libros PDF Android | MEGA"> 7 Libros PDF Android | MEGA</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476075" title="Abreviaturas Teclado | Linux"> Abreviaturas Teclado | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476063" title="Expresiones Regulares | Linux"> Expresiones Regulares | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=475994" title="Eliminar a todos tus contactos Facebook | 2017"> Eliminar a todos tus contactos Facebook | 2017</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">7</span> Comentarios</span>
+<span class="onpost"> Vim | Algunos comandos | Linux</span>
+<div class="comentario"></div><div id="comment_5002021" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="draer" href="?action=profile;user=draer">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-60HoNVJKIos/VYwhyWFKuZI/AAAAAAAAMOg/jssUTnYQNF8/s1600/1.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1544342" href="?action=profile;user=draer">draer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1499968666" title="13/07/2017 a las 17:57 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<b>Buen aporte, gracias por compartir. </b> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5002046" class="comentario coment_id_2">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Xmegacs" href="?action=profile;user=Xmegacs">
+<img id="error_avatar" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1961335" href="?action=profile;user=Xmegacs">Xmegacs</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1499969824" title="13/07/2017 a las 18:17 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1544342" href="https://identi.io/index.php?action=profile&user=draer" class="mensiones_identi">@draer</a> Gracias a vos por pasar. Saludos.
+</div>
+</div>
+</div>
+</div><div id="comment_5002294" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="aradillas" href="?action=profile;user=aradillas">
+<img id="error_avatar" src="https://thumbs.subefotos.com/651f8fb4144d857b58d8a5c5a453c3e4o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1607176" href="?action=profile;user=aradillas">aradillas</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1499985894" title="13/07/2017 a las 22:44 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+WOW.... ya no recordaba tantos comandos y opciones... van mis puntos del día &nbsp; gracias y un saludo
+</div>
+</div>
+</div>
+</div><div id="comment_5002812" class="comentario coment_id_4">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Xmegacs" href="?action=profile;user=Xmegacs">
+<img id="error_avatar" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1961335" href="?action=profile;user=Xmegacs">Xmegacs</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1500029046" title="14/07/2017 a las 10:44 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1607176" href="https://identi.io/index.php?action=profile&user=aradillas" class="mensiones_identi">@aradillas</a> Gracias a vos colega. Saludos. &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5010892" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Askari" href="?action=profile;user=Askari">
+<img id="error_avatar" src="https://media.giphy.com/media/81mv05r09DwRi/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2005535" href="?action=profile;user=Askari">Askari</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1500615137" title="21/07/2017 a las 5:32 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Aún recuerdo los primeros comandos básicos que aprendí &quot;reboot -h (sintaxis)&quot;<br />gracias por compartir. <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5011027" class="comentario coment_id_6">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Xmegacs" href="?action=profile;user=Xmegacs">
+<img id="error_avatar" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1961335" href="?action=profile;user=Xmegacs">Xmegacs</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1500646140" title="21/07/2017 a las 14:09 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="2005535" href="https://identi.io/index.php?action=profile&user=Askari" class="mensiones_identi">@Askari</a> Gracias a vos por pasar. &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_5060798" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="dskrgand" href="?action=profile;user=dskrgand">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-criNO0mmqu8/XRjTrqd8FDI/AAAAAAAAAq8/WGeA1Ochss4t5ObTGSuJelEOEknvH2ffgCLcBGAs/s1600/yin%2Byang%2Brojo%2By%2Bazul%2B2.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2007836" href="?action=profile;user=dskrgand">dskrgand</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1504202883" title="31/08/2017 a las 18:08 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Vaya lío. Muy útil, muchas gracias por compartir. Por casualidad sabrás ¿Cómo hacer para que cuando quiera montar un hd me pida contraseña?
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_5.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949c4b13d85dea3',t:'MTc2MTQ3OTc2NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
