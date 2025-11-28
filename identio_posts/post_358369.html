@@ -1,0 +1,779 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Lista de Calidades de Películas y Videos, ordenada - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Lista de Calidades de Películas y Videos, ordenadas de menor a mejor calidad   CAM: son películas grabadas con una filmadora (ocamcorder) y pasadas a formato digital. Las obtiene alguien que gra..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='aXV1YjlaRVFnOFpnaWYxVTJGc2RHVmtYMS9zVFFudkRycUZOcno5ekkvZjQ3VXl4SnRVN1B3bXNnZjhNSkNKczBGdkF5WFBXdkNjUnZzVWtVSkVUbHRPdlRaUElzZ2tUbW10Z2c9PXBFOTBYUTFxb2RzR2cxbw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761491689;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'e07f27ddb08af8068a16c54d72ce435c');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_7.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Lista de Calidades de Películas y Videos, ordenada" title="Identi - Lista de Calidades de Películas y Videos, ordenada" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '508906d6b98489e1d16f89d61b319475ef5cba53';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=jaderpipe">jaderpipe</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"solo 3 meses duran los links de mega descarga rapido"
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=jaderpipe" title="Ir al Perfil de jaderpipe"><img id="error_avatar" class="avatar" border="0" width="120" src="https://s9.postimg.cc/6e95czlf3/identi-aqui-1684393.gif"/></a>
+<div class=" rango_sidebar clearfix">Demoni</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/es.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/demoni.png" title="Demoni" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1882965)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1882965');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">864</b> Seguidores</li>
+<li><b>35051</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>469</b> Posts</li>
+<li><b>4158</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Lista de Calidades de Películas y Videos, ordenada</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=358368';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=358370';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=94" alt="Off-Topic" title="Off-Topic">Off-Topic</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 10 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1020397">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><b><img id="img_post" src="http://s2.postimg.org/i54w5sig9/cooltext1863728109.gif" border="0"></b><br /><b><img id="img_post" src="http://s20.postimg.org/mpufgg0jh/sniper_8.jpg" border="0"></b><br /><b><img id="img_post" src="http://s7.postimg.org/8x7sdtta3/cooltext1863705704.gif" border="0"></b><br /><b><span style="color: #ff3333;"><font size="5" style="line-height: 1.3em;">Lista de Calidades de Películas y Videos, ordenadas de menor a mejor calidad</font></span></b><br /><b> </b><br /><b><span style="color: #993300;">CAM: </span>son películas grabadas con una filmadora (ocamcorder) y pasadas a formato digital. Las obtiene alguien que grabó la película en un cine y la pasa luego a una PC. Ocupan poco, pero al estar grabadas en la oscuridad del cine, siempre se ven muy mal, y según el ángulo en que se haya apuntado a la pantalla se puede perder mucha calidad.</b><br /><b> </b><br /><b><span style="color: #993300;">TELESYNC (TS):</span> un telesync tiene la misma calidad de imagen que el CAM, sólo que mejora el audio porque se obtiene de una fuente externa (generalmente un jack de auriculares en las butacas para gente que no oye bien). Sin embargo, esta conexión directa del audio no asegura una gran calidad de sonido, porque hay mucho ruido externo que puede interferir. Muchas veces se graba un telesync en un cine con poca concurrencia o mejor aún, con la sala vacía, o desde la sala de proyección con una cámara profesional, dando una mejor calidad de imagen. La calidad aumenta un poco más, pero sigue siendo mala.</b><br /><b> </b><br /><b><span style="color: #993300;">TS-HQ (TelesyncHQ ? TS Screener HQ):</span> es como el TS normal, pero grabado con una cámara de alta definición, por lo que se mejora un poco la calidad. El audio puede ser muy bueno.</b><br /><b> </b><br /><b><span style="color: #993300;">TELECINE (TC):</span> una máquina de telecine copia la película digitalmente desde el proyector, en un dispositivo conectado a éste especialmente. El sonido y la imagen deberían ser muy buenos, pero debido al equipamiento y los costos, los telecines son muy poco comunes. Generalmente la película vendrá con el tamaño correcto, porque existen telecines de 4:3. El TC no debe ser confundido con Time Code, que es un contador visible en la pantalla durante la película.</b><br /><b> </b><br /><b><span style="color: #993300;">VHSRip:</span> es una copia desde un VHS, generalmente videos que no se editaron en DVD y que son difíciles de encontrar en la TV. Si el VHS estaba en buenas condiciones, puede tener buena calidad de imagen y sonido, pero no siempre? Suelen usarse para distribuir porno y videos deportivos.</b><br /><b> </b><br /><b><span style="color: #993300;">SCREENER (SCR):</span> es una cinta pre VHS, enviada a las tiendas de video y sitios similares para uso promocional. Un screener se proporciona en una cinta VHS, y suele estar a 4:3 (pantalla completa) de razón de proporción. La contra es que incluyen la clásica &quot;advertencia? (con un mensaje que pasa por debajo de la pantalla, con el copyright, etc). También, si la cinta tiene cualquier número de serie, o cualquier otra marca que puede llevar a la fuente de la cinta, habrán de ser eliminadas, generalmente con una marca negra en esa sección. Esto suele durar unos segundos, pero lamentablemente en algunas copias esto aparecerá durante toda la película, y puede que sea bastante grande y molesto. Dependiendo del equipamiento utilizado, la calidad del screener puede ser desde excelente si se hace desde una cinta MAESTRA, hasta muy mala si se hace desde un VHS muy viejo y una cinta en muy mal estado. La mayoría de los screeners se pasan a VCD, pero a veces se ven alguno intentos de SVCD, algunos mejores que otros.</b><br /><b> </b><br /><b><span style="color: #993300;">R5:</span> en Rusia se ha masificado la piratería de películas de forma astronómica. Y para ponerle fin a esto, se optó por emitir copias legales de las películas más taquilleras con calidadTELECINE. La gran diferencia con un TELECINE normal es que estas versiones R5 están creadas con equipos profesionales, lo que les da una muy buena calidad de imagen, aunque el audio suele ser bastante pobre, incluso peor que en las versiones DVD-Screener o DVDRip. Hace unos años, varios estudios de cine están realizando lanzamientos de DVD primero en Rusia y bajo este formato R5. Y así parece que pudieron detener un poco la pirateria de DVDs que habia con telecines pirateados. Este nombre de R5 proviene de la clasificacion de regiones de DVD.</b><br /><b> </b><br /><b><span style="color: #993300;">R6:</span> es similar al R5, pero viene de un DVD Zona 6 (Chino), y usualmente trae subtitulos en Mandarín/Chino/Cantonés pegados al video.</b><br /><b> </b><br /><b><span style="color: #993300;">DVD-SCREENER (DVDscr):</span> son películas extraídas de un DVD de promoción (que se le da a los Críticos o a Jurados en los premios). A diferencia del DVDRip, éstos salen mucho antes y con buena calidad, pero con algunos elementos molestos a propósito, como ser &quot;leyendas? en la parte inferior de la pantalla, &quot;contadores? (reloj en la parte superior), y hasta en algunos casos puede contener adrede partes del film en blanco y negro.</b><br /><b> </b><br /><b><span style="color: #993300;">TVRip: </span>son episodios de TV, programas, series, y hasta alguna que otra película. La calidad suele ser bastante buena, pero nunca iguala a la de un DVDRIP. Depende de la pericia del rippeador. Generalmente se hace en formatos que luego puedan ser pasados fácilmente a SVCD o VCD.</b><br /><b> </b><br /><b><span style="color: #993300;">PDTV / SatRip: </span>capturado desde una emisión digital (por satélite). Calidad: casi la de un DVD.</b><br /><b> </b><br /><b><span style="color: #993300;">DVDRip: </span>es una copia comprimida (rippeada) de un DVD. Tienen muy buena calidad de video y de sonido. Suelen venir en formatos AVI, MP4, MKV, RMVB, y contener audio MP3, OGG, o AC3. Y la definición del video es muy buena en relación a calidad-tamaño del archivo. Gracias a los codecs hoy utilizados y sus avanzados algoritmos se logran películas de muy buena calidad.</b><br /><b> </b><br /><b><span style="color: #993300;">DVDR (DVDFull o Full-Rip)):</span> es simplemente un DVD, copia fiel de un original. En ciertos casos pueden omitir los menús, o poner los subtítulos para otro idioma. Pero la calidad es muy pero muy buena.</b><br /><b> </b><br /><b><span style="color: #993300;">Webrip: </span>descargado de Internet, suele tener calidad HD, pero es de películas que todavia no salieron a la venta en otros formatos (DVD o Bluray).</b><br /><b> </b><br /><b><span style="color: #993300;">WEB-DL:</span> como su nombre lo indica, Internet es la fuente, específicamente de iTunes o sistemas de streaming pago, como Hulu o Netflix. Se diferencian de los HDTV 720p en que los Wed DL tienen muy buena calidad de video, no tienen marcas (logo del canal, publicidad, etc) y suelen tener audio 5.1. Es lo mejor hasta encontrar un rip de bluray. También se diferencian en el tamaño de archivo, de aprox 1.1 GB por capítulo.</b><br /><b> </b><br /><b><span style="color: #993300;">BDrip:</span> es igual que el DVD-Rip, sólo que la fuente es un reproductor de Blu-RayDisc. Suelen tener calidades semejantes o iguales al Blu-Ray, y son entregados por lo general en codec x264 empaquetado en formato MKV.</b><br /><b> </b><br /><b><span style="color: #993300;">BRscr y BRrip:</span> comparables con el DVDscr y el DVDrip respectivamente, pero como la fuente es un Bluray, la calidad suele ser mejor, sobre todo si se ve en una TV de alta definición. El BRRip se obtiene del BDRip, y si bien es una fuente indirecta tiene una calidad superior al DVD, y las dimensiones pueden ir desde 720×480 a mayores y dependiendo de las dimensiones pueden ser compatibles con los reproductores caseros de Divx. Un BD/BR Rip en tamaño DVD-Rip se ve mejor que uno del mismo tamaño de un DVD, porque se hizo en base a un mejor material de origen.</b><br /><b> </b><br /><b><span style="color: #993300;">Bluray: </span>es similar a la definición de un DVDrip, pero la fuente original es un Bluray, o sea,mucho mejor calidad de imagen y sonido. El peso varia entre 4 y 12 GB (dependiendo de la calidad, 720p ó 1080p). Cuando la resolución con que fue ripeado es de 1280×720, se etiquetan como 720p. Si se ripearon a 1920×1080, entonces son 1080p.</b><br /><b> </b><br /><b><span style="color: #993300;">BRFull (BDFull)</span>Es el equivalente al DVDFull, pero con un Blu-ray como origen. Suelen ser archivos pesadísimos (más de 30 Gigas) y a medida que mejora la velocidad de Internet se empiezan a ver más seguido.</b><br /><b> </b><br /><b><span style="color: #993300;">HDTV: </span>Televisión de alta definición, con mejor calidad que un TvRip. La resolución del video es de proporción 16:9, lo que permite mostrar mejores detalles que en la television normal.<b><i>Calidades raras de encontrar, pero de mala calidad</i></b></b><br /><b> </b><br /><b><span style="color: #993300;">WORKPRINT (WP):</span> es una copia de la película que aún no ha sido terminada. Pueden faltar escenas, música, y la calidad puede ir desde excelente a muy mala. Algunos WPs son muy diferentes del producto final y otros pueden contener escenas extras. Los WPs pueden ser buenas adiciones a la colección y tienen una calidad final decente.</b><br /><b> </b><br /><b><span style="color: #993300;">DivX Re-Enc:</span> son películas tomadas desde una fuente VCD, y recodificada a un archivo DivX pequeño. Se suelen encontrar en redes P2P y se etiquetan con formatos tipo Pelicula.Nombre.Grupo(1de2), etc. Los grupos más comunes son SMR y TMD. No vale la pena descargarlas a no ser que quieras echar un vistazo rápido a la película con una copia de 200 MB.</b><br /><b> </b><br /><b><span style="color: #993300;">Watermarks ? Marca de agua:</span> un montón de películas que vienen de Asian Silvers/PDVD y son marcadas por el responsable. Generalmente le ponen las iniciales o un pequeño logo en una de las esquinas. Las marcas más famosas son las &quot;Z?, &quot;A? y &quot;Globe?.</b><br /><b> </b><br /><b><span style="color: #993300;">Asian Silvers / PDVD:</span> son películas robadas por bootleggers (contrabandistas) del este, con muy baja calidad de video porque suelen ser pre-lanzamientos, y que son compradas por algunos grupos para sacarlas como propias. Los Silvers son muy baratos y fáciles de conseguir en muchos países, y es fácil sacarla, por lo que hay tanta scene por el momento, principalmente de pequeños grupos que no duran más que unas pocas releases. Los PDVDs son lo mismo pero en DVD. Tienen subtítulos removibles, y la calidad suele ser mejor que los silvers. Estos son ripeados como un DVD normal, pero sacados como VCD. Con estos formatos también se encuentran algunas películas antiguas que nunca salieron oficialmente en DVD.<b><i>Calidades que se pueden ver en un reproductor de DVD (Aparte de los DVD-R)</i></b></b><br /><b> </b><br /><b><span style="color: #993300;">SVCD:</span> es un formato basado en mpeg2 (igual que el DVD) que permite bitrates variables hasta 2500kbits a una resolución de 480×480 (NTSC) y hasta 768×512 (PAL) que es después descomprimida a 4:3 cuando se reproduce. Debido al bitrate variable, la longitud que se puede meter en un CD-R no es fija, pero generalmente caben entre 35 y 60 minutos. Para conseguir una mejor codificación en SVCD se utiliza bitrate variable. Esto lleva mas tiempo, pero los resultados son muchísimo mejores.</b><br /><b> </b><br /><b><span style="color: #993300;">VCD:</span> es un formato basado en mpeg1, con un bitrate constante de 1150kbit a una resolución de 352×240 (NTSC) o 1150kbit a 352×288 (PAL). Los VCDs se utilizan generalmente para transferir cosas de menor calidad (CAM/TS/TC/Screener(VHS)/TVRip) para conseguir tamaños de archivo menores, y meterlos en el menor número de discos.</b><br /><b> </b><br /><b><span style="color: #993300;">CVCD:</span> el formato VCD, para ajustarse al estándar, usa tasas de bits de 1150k para video, y 224k para audio, sea cual sea el contenido del video y del audio. El CVCD no sigue esta norma y utiliza tasas de bits variables para el video. Esto permite aprovechar mejor el espacio, tal como hace el SVCD, ahorrando espacio en zonas de video más sencillas o menos prioritarias (escenas con poco o ningún movimiento, créditos, etc) en favor de otras que necesitan mayor calidad por tener escenas con mucho movimiento. Se evita en lo posible sobrepasar los 1150 kbits/s para mantener la compatibilidad, aunque esta limitación no afecta a muchos reproductores de DVD, por lo que no suele ser problemático si se supera. La resolución es igual al VCD: 352×240 a 29 fps para NTSC. El audio es almacenado a 48 Khz para que sea compatible con programas de autoría de DVD.</b><br /><b> </b><br /><b> </b><br /><b><b><i><span style="color: #ff3333;"><font size="4" style="line-height: 1.3em;">Clasificaciones de los lanzamientos o releases</font></span></i></b></b><br /><b> </b><br /><br /><b><span style="color: #993300;">NUKED: </span>se le llama así a las películas que suelen tener fallas o algún problema. Puede ser por problemas de sonido, imagen o mal Cropeada (cortada la imagen) o bien con la imagen distorsionada. Razones por las que se nukea?</b><br />[ul][li]BAD A/R = Relación de aspecto errónea, la gente sale muy ancha o muy estrecha.[/li][li]BAD IVTC = Telecine Inverso erróneo. El proceso de los framerates fue incorrecto.[/li][li]INTERLACED = Líneas negras en el movimiento debido a que el orden de campo es incorrecto.[/li][li]DUPE = El Dupe es muy simple, si algo existe ya, entonces no hay razón por la que exista otra copia.[/li][/ul]<br /><br /><b><span style="color: #993300;">PROPER:</span> es un Rip que soluciona el problema que tenia una versión anterior que haya sido calificada como Nuked. Estos Rips son lanzados por algún grupo de Rippers (ripeadores) de la competencia.</b><br /><b> </b><br /><b><span style="color: #993300;">LIMITED:</span> una película Limited significa que se ha visto en menos de 250 cines, y por ello se consideran una edición limitada.</b><br /><b> </b><br /><b><span style="color: #993300;">INTERNAL:</span> es un término utilizado en piratería para marcar una versión como orientada sólo para distribuir dentro del grupo de ripeadores. Los grupos de Classic DVD lo usan mucho para asegurarse de que no hay dupes (ver más arriba en Nuked). También los ripeos de mala calidad se marcan como internos, para no bajar la reputación del grupo, o debido a la cantidad de ripeos existentes.</b><br /><b> </b><br /><b><span style="color: #993300;">STV:</span> Straight To Video (también direct-to-video, made-for-video, straight-to-DVD). Son películas que nunca se emitieron en cine, y por lo tanto, no son admitidas por muchos grupos. Por lo general son películas malas, shows con bajo rating, o películas de cine independiente que no pueden pagarse la difusión.</b><br /><b> </b><br /><b><span style="color: #993300;">REPACK:</span> al igual que el PROPER, también soluciona el problema que tenia una edición Nukeada, pero a diferencia del otro, éste está hecho por el mismo grupo de la Nukeada. ¿Qué son esas letras con las que terminan algunos nombres de archivos de películas, tipo XOR, LOL, AFO, HiQTV, etc? Esas letras son las insignias de los grupos de rippers, encargados ellos de grabar las películas, de hacer los rips de DVD, de comprar los DVD originales y subirlos para publicar en internet?</b><br /><b> </b><br /><b><b><i><span style="color: #ff3333;"><font size="4" style="line-height: 1.3em;">¿Qué son los CODECS?</font></span></i></b></b><br /><b> </b><br /><b>Son los controladores que necesitamos tener instalados en la computadora para ver una película, tales como el DIVX, XVID, AC3, MP3, OGG, MPG. Los buenos softwares de reproducción de video suelen incluir un paquete con los más comunes (lo que se llama un codec pack). Como hay muchas versiones disponibles y la gente los busca mucho, es cada vez más común ver banners publicitarios ofreciendo algún reproductor de video o un codec pack gratis, y una de cada cuatro veces, resulta ser un virus lo que te bajaste a la compu. Para evitar esto, yo les recomiendo uno de estos dos que instalo cuando armo <span style="color: #ff3333;"><font size="5" style="line-height: 1.3em;">PCs:</font></span></b><br /><b> </b><br /><b><a href="http://codecguide.com/download_k-lite_codec_pack_full.htm" target="_blank" rel="nofollow"><span style="color: #44a1c7;">K-Lite Codec Pack</span></a>: ideal para PCs de uso hogareño.</b><br /><b> </b><br /><b><a href="http://www.videolan.org/vlc/" target="_blank" rel="nofollow"><span style="color: #44a1c7;">VLC (Video LAN Codecs)</span></a>: ideal si además se hacen trabajos de diseño gráfico o edición de video.</b><br /><b> </b><br /><b><b><i><span style="color: #ff3333;">Formatos de las Películas: Widescreen y Fullscreen</span></i></b></b><br /><b> </b><br /><b>Suelen señalarse con las ASPECT RATIO TAGS, son etiquetas para saber el tipo de resolución de video: &quot;WS? es para WideScreen (Pantallas Anchas tipo cine) y &quot;FS? para FullScreen (Pantalla Completa tipo televisión).</b><br /><b> </b><br /><b> <img id="img_post" src="http://s27.postimg.org/anlo17dwj/cooltext1863707560.gif" border="0"></b><br /><b><img id="img_post" src="http://i0.wp.com/www.marcelopedra.com.ar/blog/wp-content/uploads/2013/07/widescreen-vs-fullscreen.jpg?resize=400%2C364" border="0"></b><br /><br /><b>En las imágenes vemos la diferencia entre el formato el fullscreen (a la izquierda) y el widescreen. Es notable la pérdida de imagen en el primero, y esto se debe a que la pantalla de cine es rectangular y los televisores antiguos tienen una pantalla &quot;cuadrada?, y para adaptar una película &quot;rectangular? a una pantalla &quot;cuadrada? es necesario recortarla o reescalarla, con la consiguiente pérdida de las imágenes laterales. Nota: Los que tengan un DVD fullscreen fijense que al incio de la pelicula dice &quot;La version original de esta pelicula ha sido formateada? A primera vista lleva ventaja el widescreen, pero en televisores cuadrados, será imposible ver esta calidad sin las famosas &quot;bandas negras? superiores e inferiores o con imágenes que &quot;se ven más pequeñas?. E inversamente, las películas viejas y sobre todo las series antiguas, por lo general de antes de los años 80, vistas en una pantalla widescreen, se suelen ver con barras negras laterales, porque la imagen original es cuadrada.</b><br /><b> </b><br /><i><b><span style="color: #ff3333;"><font size="4" style="line-height: 1.3em;">¿Qué es entrelazado y progresivo?</font></span></b></i><br /><b> </b><br /><b>A veces vemos películas etiquetadas con calidad de resolución de 720p o 1080p. Esos números indican el número de líneas verticales mostradas y la letra final nos indica si es señal entrelazada (i, por Interleaved) o progresiva (p, progressive). La señal progresiva es la más difundida. Entrelazado significa que los fotogramas son mostrados con la mitad de sus líneas verticales. Primero las impares, y en el siguiente refresco de imagen las pares. Suelen ser habituales en las señales analógicas. Cuando se aprecia un parpadeo en la imagen, se dice que hay un error de sincronismo, y esto pasa cuando el tiempo transcurrido al mostrar las líneas pares y las impares es ligeramente diferente, dando una sensación de parpadeo de la imagen. En la nomenclatura de las películas que se difunden en internet, se añade una &quot;i? al final del número de resolución, 720i, 1080i, etc. Progresivo significa que las líneas de los fotogramas se muestran de forma progresivamente, una tras otra hasta completarlas todas en cada refresco de fotograma. En este caso no hay error de sincronismo, pero sí de muestreo. Cuando la velocidad a la que se muestran las líneas no es la correcta suele apreciarse lo que se denomina &quot;imagen fantasma?. En la nomenclatura de las películas que encontremos en internet, se añade una &quot;p? al final de la resolución, 720p, 1080p, etc. Esta seál es la más usada en sistemas digitales porque ofrece una mejor calidad.</b><br /><b> </b><br /><b><b><i><span style="color: #ff3333;"><font size="4" style="line-height: 1.3em;">¿Qué significa 720p y 1080p?</font></span></i></b></b><br /><b> </b><br /><b>720p y 1080p hacen referencia al número de líneas verticales que muestra cada fotograma. A mayor número de líneas, mayor calidad y definición de la imagen. El número que lo antecede hace referencia al número de pixeles por línea. Por ejemplo, 1280×720, significa que tiene 720 líneas verticales compuestas de 1280 pixeles cada una. Una resolución de 720p es de 1280×720 píxeles, algo más de 0,9 Megapíxeles. La resolución de 1080p es de 1920×1080 píxeles, que vienen a ser 2 Megapíxeles. Cuando encontramos el término FullHD, se está refiriendo a la capacidad de almacenar secuencias digitales en alta definición sin pérdidas. Hay formatos contenedores de video como el MKV, QuickTime y HD-DVD son capaces de almacenar videos en FullHD. Hay más resoluciones, pero son menos habituales. Como referencia mostramos algunas de ellas junto con su resolución completa:</b><br /><b> </b><br />[ul][li]96p: 128×96[/li][li]144p: 176×144[/li][li]240p: 320×240[/li][li]480p: 720×480[/li][li]540p: 720×540[/li][li]576p: la resolución estándar es de 720×576, pero en los sistemas PAL la resolución es de 768×576, y en DVD es de 1024×576, siendo todos ellos considerados como 576p.[/li][li]2160p: 3840×2160. También se denomina 4K y conforma el siguiente nivel en cuanto a evolución de resoluciones, conocida como UHDV (Ultra High Definition Video, Ultra Alta Definición de Video). En Youtube ya se pueden ver algunos videos con esta calidad.[/li][li]4320p: 7680×4320. También conocida como 8K y propuesta por NHK en Japón. La película de anime Dragon Ball Z: Battle of Gods fue la primer película proyectada en este formato con tecnología IMAX sólo en Japón.[/li][/ul]<br /><b><b><i><span style="color: #ff3333;"><font size="4" style="line-height: 1.3em;">¿Qué es HD y SD?</font></span></i></b></b><br /><b> </b><br /><b>SD (Standar Definition, Definición Estándar), son las señales analógicas digitales o analógicas de televisión que no pueden considerarse de Alta Definición (HDTV). Tienen una relación de aspecto 4:3 aunque a veces pueden ofrecer 16:9. Tienen una resolución de 720×576 en el formato PAL (más usado en Europa) o de 720×480 en formato NTSC (el más habitual en América). Como a toda señal que no es HDTV se la suele llamar SD, existe la confusión de denominar SD a señales EDTV (Enhanced Definition, Definición Mejorada). Las señales no HD actuales son casi enteramente EDTV, usadas por DVD, TDT, TV por satélite, cámaras miniDV o videoconsolas, dejando las emisiones SDTV solo a emisiones analógicas. La señal es entrelazada (interleaved) cuando son analógicas y progresivas cuando son digitales. HD (High Definition, Alta Definición), son señales digitales que ofrecen una calidad superior a la ofrecida por el SD o ED de las analógicas. Tiene al menos el doble de resolución de una señal SD o ED, mostrando así mejores detalles. Por eso es ideal para pantallas de TV grandes y con relación de aspecto 16:9 a pantalla completa. Aunque soporta diferentes resoluciones, los formatos más comunes de las películas en Internet son 1280×720 o 1920×1080, ambos con señal progresiva.</b><br /><b> </b><br /><b><b><i><span style="color: #ff3333;"><font size="4" style="line-height: 1.3em;">¿Qué significa x264?</font></span></i></b></b><br /><b> </b><br /><b>Esta etiqueta hace referencia al códec usado para codificar una película. Es el único códec capaz de manejar flujos de video de alta definición ofreciendo bajo peso del video final sin una pérdida apreciable de calidad. En general es superior a códecs tradicionales como DivX o Xvid, que si bien ofrecen buena calidad, no manejan videos de alta resolución con la misma desenvoltura que lo hace el x264. Cuando vemos esta etiqueta en el nombre o descripción de la película, es casi un signo de que se ha usado alta calidad de codificación.</b><br /><b> </b><br /><b> </b><br /><b><b><i><span style="color: #ff3366;"><font size="4" style="line-height: 1.3em;">¿Que significa x265?</font></span></i></b></b><br /><b> </b><br /><b>H.265 o MPEG-H Parte2 llamado de forma común como High Efficiency Video Coding (HEVC)1 es una norma que define un formato de compresión de video, sucesor de H.264/MPEG-4 AVC (Advanced Video Coding), desarrollado conjuntamente por la ISO/IEC Moving Picture Experts Group (MPEG) y ITU-T Video Coding Experts Group (VCEG) como ISO/IEC CD 23008-2 High Efficiency Video Coding.<br /><br />Se reputa que HEVC tiene una relación de compresión de datos que duplica la de H.264/MPEG-4 AVC al mismo nivel de calidad de video. Asimismo puede ser utilizado para proporcionar mejor calidad de video con la misma tasa de datos. Es compatible con la televisión en ultraalta definición y resoluciones hasta 8192x4320.<br /><br />La primera versión de la norma fue completada y publicada a principios del 2013. La segunda versión de la norma se completó en julio de 2014, y se espera que sea publicada a finales de 2014, e incluye extensiones de rango (que dan apoyo a los formatos de vídeo mejorado), extensiones de codificación escalable y extensiones multi-vista. Otras extensiones adicionales en desarrollo incluyen video en 3D.</b><br /><b>  </b><br /><b><img id="img_post" src="http://s20.postimg.org/mpufgg0jh/sniper_8.jpg" border="0"></b></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">52</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5.8/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">3689</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">15</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(358369,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(358369,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(358369,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(358369,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(358369,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(358369,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(358369,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(358369,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(358369,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(358369,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWRGsRVMCZ2Yo9cHoJ9jWJMfmDMDXOCvV961-MlmoV5uybCYyt" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1692039" title="perfil de mauri_i94"> mauri_i94</a>: <b>1 pts</b></span>  </li><li><img id="error_avatar" src="http://animationinfinity.com/wp-content/uploads/2014/07/Hunter-X-Hunter-131-13.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=151539" title="perfil de jotaturro"> jotaturro</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://imageshack.com/a/img674/5343/de18cb.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=110457" title="perfil de gambetta"> gambetta</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://s6.postimg.cc/ypajvuz8x/Mi_Logo.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1569502" title="perfil de Tortuga3"> Tortuga3</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://fdzeta.com/subir/images/o2rLH.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1630248" title="perfil de ferpochon"> ferpochon</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-0r296OGh12Q/UDK6H2YSTdI/AAAAAAAAAUQ/o6YT5gTBUcY/s1600/BetaAvatar.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1550437" title="perfil de Betancourt"> Betancourt</a>: <b>9 pts</b></span>  </li><li><img id="error_avatar" src="http://i.imgbox.com/CEkDJ1XR.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1893173" title="perfil de RobotBoy"> RobotBoy</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-kdm3EGtU5j0/UxXkCwsk9zI/AAAAAAAACzA/-cX_fVhgPrU/s1600/T-REX-REDUCIDO.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1700403" title="perfil de mariano125"> mariano125</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://img1.wikia.nocookie.net/__cb20130729214534/horadeaventura/es/images/5/55/Jake_babeando.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1751876" title="perfil de BobMarley7"> BobMarley7</a>: <b>2 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(358369);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('358369');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=659279" title="Venom el ultimo baile|2024|720p X 265 |MEGA|"> Venom el ultimo baile|2024|720p X 265 |MEGA|</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=511228" title="Tomb Raider 2018|720p x265|469Mb|Mga|Super Ligera"> Tomb Raider 2018|720p x265|469Mb|Mga|Super Ligera</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=509740" title="Red Sparrow 2018|720p x265|616 Mb|Mga|Super Ligera"> Red Sparrow 2018|720p x265|616 Mb|Mga|Super Ligera</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=509551" title="Game Night 2018|720p|485 Mb|Mga|Super Ligera  "> Game Night 2018|720p|485 Mb|Mga|Super Ligera  </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=509229" title="Black Panther 2018|720p-Bluray|582 Mb|Mg |Ltino"> Black Panther 2018|720p-Bluray|582 Mb|Mg |Ltino</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=508338" title="Winchester 2018|720p-Bluray|366 Mb|Mg |Ltino"> Winchester 2018|720p-Bluray|366 Mb|Mg |Ltino</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=506979" title="Fifty Shades Freed 2018|720p|691 Mb|Mg |Dual"> Fifty Shades Freed 2018|720p|691 Mb|Mg |Dual</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_23"></i>
+<a href="https://identi.io/index.php?topic=506843" title="Condorito the movie 2017|720p|469 Mb|Mg |ltino"> Condorito the movie 2017|720p|469 Mb|Mg |ltino</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">23</span> Comentarios</span>
+<span class="onpost"> Lista de Calidades de Películas y Videos, ordenada</span>
+<div class="comentario"></div><div id="comment_3855464" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mauri_i94" href="?action=profile;user=mauri_i94">
+<img id="error_avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWRGsRVMCZ2Yo9cHoJ9jWJMfmDMDXOCvV961-MlmoV5uybCYyt" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1692039" href="?action=profile;user=mauri_i94">mauri_i94</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423309685" title="07/02/2015 a las 11:48 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+buena info!
+</div>
+</div>
+</div>
+</div><div id="comment_3855465" class="comentario coment_id_2">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jaderpipe" href="?action=profile;user=jaderpipe">
+<img id="error_avatar" src="https://s9.postimg.cc/6e95czlf3/identi-aqui-1684393.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1882965" href="?action=profile;user=jaderpipe">jaderpipe</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423309811" title="07/02/2015 a las 11:50 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita mauri_i94: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">buena info!</div></blockquote>ok amigo <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3855475" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mpfquilmes" href="?action=profile;user=mpfquilmes">
+<img id="error_avatar" src="https://cdn.pixabay.com/photo/2016/03/31/20/27/avatar-1295773_1280.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1714218" href="?action=profile;user=mpfquilmes">mpfquilmes</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423311050" title="07/02/2015 a las 12:10 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Me parece que mucho copiar y pegar sin saber del tema. Si el titulo dice de menor a mejor calidad, como vas a poner los VCD. CVCD y SVCD en el final de la lista? Son formatos que la mayor?
+</div>
+</div>
+</div>
+</div><div id="comment_3855501" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="tonyro19" href="?action=profile;user=tonyro19">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="104960" href="?action=profile;user=tonyro19">tonyro19</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423313400" title="07/02/2015 a las 12:50 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<marquee><span style="color: red;"><b> Buena informacion pero deberias de ubicarla en otra categoria ya que ni es un progama ni se descarga nada</b> <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></span></marquee>
+</div>
+</div>
+</div>
+</div><div id="comment_3855519" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="dolvion" href="?action=profile;user=dolvion">
+<img id="error_avatar" src="https://33.media.tumblr.com/tumblr_lmxytdzLlX1qbzn92o1_500.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1595479" href="?action=profile;user=dolvion">dolvion</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423314789" title="07/02/2015 a las 13:13 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+pens?
+</div>
+</div>
+</div>
+</div><div id="comment_3855528" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jotaturro" href="?action=profile;user=jotaturro">
+<img id="error_avatar" src="http://animationinfinity.com/wp-content/uploads/2014/07/Hunter-X-Hunter-131-13.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="151539" href="?action=profile;user=jotaturro">jotaturro</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423315299" title="07/02/2015 a las 13:21 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+muy util me sirvio mucho graciaass <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3855535" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Lupincor" href="?action=profile;user=Lupincor">
+<img id="error_avatar" src="https://i.ibb.co/Lx2VfL5/myAvatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1894932" href="?action=profile;user=Lupincor">Lupincor</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423315813" title="07/02/2015 a las 13:30 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy buena info, sale de lo b?
+</div>
+</div>
+</div>
+</div><div id="comment_3855587" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="gambetta" href="?action=profile;user=gambetta">
+<img id="error_avatar" src="http://imageshack.com/a/img674/5343/de18cb.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="110457" href="?action=profile;user=gambetta">gambetta</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423319202" title="07/02/2015 a las 14:26 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Lupincor: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Muy buena info, sale de lo b?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3855655" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="_private" href="?action=profile;user=_private">
+<img id="error_avatar" src="http://imgfz.com/i/H2SesPO.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1757431" href="?action=profile;user=_private">_private</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423322347" title="07/02/2015 a las 15:19 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+muy bueno
+</div>
+</div>
+</div>
+</div><div id="comment_3855671" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ferpochon" href="?action=profile;user=ferpochon">
+<img id="error_avatar" src="http://fdzeta.com/subir/images/o2rLH.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1630248" href="?action=profile;user=ferpochon">ferpochon</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423322680" title="07/02/2015 a las 15:24 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buena info GRACIAS <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3855675" class="comentario coment_id_11">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jaderpipe" href="?action=profile;user=jaderpipe">
+<img id="error_avatar" src="https://s9.postimg.cc/6e95czlf3/identi-aqui-1684393.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1882965" href="?action=profile;user=jaderpipe">jaderpipe</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423322763" title="07/02/2015 a las 15:26 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita _private: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">muy bueno</div></blockquote><br /><blockquote><div class="cita">Cita ferpochon: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Buena info GRACIAS <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3855758" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ihsahn" href="?action=profile;user=ihsahn">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-Ivvxiu5DkwY/XM5E3as0C7I/AAAAAAAAIcs/IRaiFytVfY4cl1z8Pf92yvVYZ6xE1ZNagCK4BGAYYCw/s220/Sin%2Bt%25C3%25ADtulo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1702459" href="?action=profile;user=ihsahn">ihsahn</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423326597" title="07/02/2015 a las 16:29 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+excelente tu copy paste, eres el mejor. al menos da la fuente.
+</div>
+</div>
+</div>
+</div><div id="comment_3856095" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Badani" href="?action=profile;user=Badani">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1898736" href="?action=profile;user=Badani">Badani</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423337982" title="07/02/2015 a las 19:39 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias por la info.
+</div>
+</div>
+</div>
+</div><div id="comment_3856417" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="vr_rocker" href="?action=profile;user=vr_rocker">
+<img id="error_avatar" src="http://media.giphy.com/media/It5reHDaCLEac/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1574556" href="?action=profile;user=vr_rocker">vr_rocker</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423348136" title="07/02/2015 a las 22:28 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias me sirvio la info &nbsp;<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3857001" class="comentario coment_id_15">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jaderpipe" href="?action=profile;user=jaderpipe">
+<img id="error_avatar" src="https://s9.postimg.cc/6e95czlf3/identi-aqui-1684393.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1882965" href="?action=profile;user=jaderpipe">jaderpipe</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423364198" title="08/02/2015 a las 2:56 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Badani: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">gracias por la info.</div></blockquote><br /><blockquote><div class="cita">Cita vr_rocker: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">gracias me sirvio la info &nbsp;<img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3857482" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ukroshan" href="?action=profile;user=ukroshan">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1603125" href="?action=profile;user=ukroshan">ukroshan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423395783" title="08/02/2015 a las 11:43 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+me aclaraste muchas dudas
+</div>
+</div>
+</div>
+</div><div id="comment_3857586" class="comentario coment_id_17">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Bori_4ever" href="?action=profile;user=Bori_4ever">
+<img id="error_avatar" src="https://upload.wikimedia.org/wikipedia/commons/7/79/Animated-Flag-Puerto_Rico.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1692571" href="?action=profile;user=Bori_4ever">Bori_4ever</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423405272" title="08/02/2015 a las 14:21 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita ihsahn: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">excelente tu copy paste, eres el mejor. al menos da la fuente.</div></blockquote>Jajajaja! QHP! &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3860081" class="comentario coment_id_18">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mariano125" href="?action=profile;user=mariano125">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-kdm3EGtU5j0/UxXkCwsk9zI/AAAAAAAACzA/-cX_fVhgPrU/s1600/T-REX-REDUCIDO.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1700403" href="?action=profile;user=mariano125">mariano125</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423493564" title="09/02/2015 a las 14:52 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias! Gran informacion para entender las clases de archivos
+</div>
+</div>
+</div>
+</div><div id="comment_3861772" class="comentario coment_id_19">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jaderpipe" href="?action=profile;user=jaderpipe">
+<img id="error_avatar" src="https://s9.postimg.cc/6e95czlf3/identi-aqui-1684393.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1882965" href="?action=profile;user=jaderpipe">jaderpipe</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423538341" title="10/02/2015 a las 3:19 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita mariano125: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Muchas gracias! Gran informacion para entender las clases de archivos</div></blockquote> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3871361" class="comentario coment_id_20">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="mononeytor" href="?action=profile;user=mononeytor">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1902203" href="?action=profile;user=mononeytor">mononeytor</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1423888720" title="14/02/2015 a las 4:38 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+INFORMACI?
+</div>
+</div>
+</div>
+</div><div id="comment_4021934" class="comentario coment_id_21">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="matt_1210" href="?action=profile;user=matt_1210">
+<img id="error_avatar" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/1390652_572233939513979_1304914952_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1832840" href="?action=profile;user=matt_1210">matt_1210</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1429662160" title="22/04/2015 a las 0:22 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+buena info viejo, aprendi bastante
+</div>
+</div>
+</div>
+</div><div id="comment_4079545" class="comentario coment_id_22">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="BobMarley7" href="?action=profile;user=BobMarley7">
+<img id="error_avatar" src="http://img1.wikia.nocookie.net/__cb20130729214534/horadeaventura/es/images/5/55/Jake_babeando.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1751876" href="?action=profile;user=BobMarley7">BobMarley7</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435810031" title="02/07/2015 a las 4:07 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Este Post es una genialidad, Que bueno compartas tu sabiduria con nosotros Gracias &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4079646" class="comentario coment_id_23">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jaderpipe" href="?action=profile;user=jaderpipe">
+<img id="error_avatar" src="https://s9.postimg.cc/6e95czlf3/identi-aqui-1684393.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1882965" href="?action=profile;user=jaderpipe">jaderpipe</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1435814485" title="02/07/2015 a las 5:21 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1751876" href="https://identi.io/index.php?action=profile&user=BobMarley7" class="mensiones_identi">@BobMarley7</a> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_7.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994ae7d1c974dea3',t:'MTc2MTQ5MTY4OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
