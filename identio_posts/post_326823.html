@@ -1,0 +1,658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>OpenSUSE 13.1: Configuración básica - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="&nbsp; &nbsp; Un par de comentarios antes de proseguir: &nbsp; Si tienes o has tenido algún problema específico con la instalación de openSUSE 13.1, el mejor lugar al que acudir en busca de inform..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='SVdwTnRXcGRaN1JFbUxxVTJGc2RHVmtYMStCMW5WNUlIM0NEV1QyUStmZHpSL3c5V2dRRjZHUjdpQjJxM3VvNTlnTkN6cnh5c2RTbGVBUGtFajZucjdxVFdUZ2tsM0toVHI5Znc9PVM1bllXUWFJak9vWm5DQQ==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761493072;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '59022eac1eb30edeb4e6963f2dc9bda5');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_1.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - OpenSUSE 13.1: Configuración básica" title="Identi - OpenSUSE 13.1: Configuración básica" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '4c1ba7e56bc510d6a43ddd0bf08ba3c299f89dd5';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=superlogic">superlogic</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=superlogic" title="Ir al Perfil de superlogic"><img id="error_avatar" class="avatar" border="0" width="120" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" /></a>
+<div class=" rango_sidebar clearfix">Gold User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/golduser.png" title="Gold User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1533336)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1533336');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">67</b> Seguidores</li>
+<li><b>2029</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>174</b> Posts</li>
+<li><b>480</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">OpenSUSE 13.1: Configuración básica</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=326822';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=326824';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=126" alt="Linux" title="Linux">Linux</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 11 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_988850">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><img id="img_post" src="http://www.muylinux.com/wp-content/uploads/2013/11/opensuse131_01.png" border="0"><br />&nbsp;<br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Un par de comentarios antes de proseguir:</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Si tienes o has tenido algún problema específico con la instalación de openSUSE 13.1, el mejor lugar al que acudir en busca de información o ayuda es la <a href="http://es.opensuse.org/Portal:Wiki" target="_blank" rel="nofollow">wiki</a> o los <a href="http://forums.opensuse.org/forum.php" target="_blank" rel="nofollow">foros de openSUSE</a>.</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Este tutorial se basa en el que es la opción por defecto como entorno de escritorio en <b>openSUSE 13.1, KDE</b>, por lo que algunos detalles pueden variar si utilizas otro escritorio.</font><br /><br /><br /><br />&nbsp;<font size="5" style="line-height: 1.3em;"><b>Primeros pasos </b></font><br /><br /><a href="http://www.muylinux.com/wp-content/uploads/2013/11/opensuse131_19.png" target="_blank" rel="nofollow"><img id="img_post" src="http://www.muylinux.com/wp-content/uploads/2013/11/opensuse131_19.png" border="0"></a><br />openSUSE 13,1 te da la bienvenida<br /><br />&nbsp;<br /><a href="http://www.muylinux.com/wp-content/uploads/2013/11/opensuse131_20.png" target="_blank" rel="nofollow"><img id="img_post" src="http://www.muylinux.com/wp-content/uploads/2013/11/opensuse131_20.png" border="0"></a><br />Actualizaciones<br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Lo primero es lo primero, y <b>lo primero tras instalar un nuevo sistema operativo es mirar si hay actualizaciones pendientes</b>. En este caso, un curioso icono en el área de notificación te alertará de ello, y mucho más. Si pasas el cursor del ratón sobre él podrás instalar las actualizaciones directamente, sin la necesidad de poner la contraseña.</font><br />&nbsp;<br /><a href="http://www.muylinux.com/wp-content/uploads/2013/11/opensuse131_21.png" target="_blank" rel="nofollow"><img id="img_post" src="http://www.muylinux.com/wp-content/uploads/2013/11/opensuse131_21.png" border="0"></a><br />Plasmoide de actualizaciones<br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Si pulsas en el icono de actualizaciones, se desplegará una lista con todas las pendientes y con la posibilidad de seleccionar cuáles quieres aplicar o leer información acerca del paquete seleccionado (esto último va ?así, así?) además de, evidentemente, instalar las actualizaciones. Cuando haya paquetes adicionales, te saltará la siguiente ventana:</font><br />&nbsp;<br /><a href="http://www.muylinux.com/wp-content/uploads/2013/11/opensuse131_22.png" target="_blank" rel="nofollow"><img id="img_post" src="http://www.muylinux.com/wp-content/uploads/2013/11/opensuse131_22.png" border="0"></a><br />Cambios adicionales<br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Si no quieres preocuparte de verificar los paquetes adicionales, marca la casilla. Un paquete adicional puede ser una nueva dependencia de una aplicación que acaba de actualizarse. Es totalmente seguro.</font><br />&nbsp;<br /><a href="http://www.muylinux.com/wp-content/uploads/2013/11/opensuse131_24.png" target="_blank" rel="nofollow"><img id="img_post" src="http://www.muylinux.com/wp-content/uploads/2013/11/opensuse131_24.png" border="0"></a><br />Sistema actualizado<br /><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">El funcionamiento de este nuevo <i>widget</i> está demostrando ser efectivo, aunque un poco más lento que la actualización por terminal, lo que es normal. Además, se integra no solo con la bandeja de sistema de KDE, también con el sistema de notificaciones del escritorio.</font><br /><br /><br /><font size="3" style="line-height: 1.3em;"> <font size="4" style="line-height: 1.3em;"><b>Controladores privativos </b></font></font><br /><br /><font size="3" style="line-height: 1.3em;">Comenzando por el apartado gráfico, hay dos situaciones en las que puedes tener problemas: si tu tarjeta gráfica es una <b>NVIDIA reciente o una ATI Radeon serie 5000 o superior</b>, lo más probable es que con los controladores gráficos libres, instalados por defecto, no tengas suficiente. Y todavía no hay una camino sencillo o fiable cien por cien -dependiendo del caso- para satisfacer tus necesidades, por lo que la recomendación es esperar a que los repositorios comunitarios incluyan los controladores privativos. En otras palabras, no instales openSUSE 13.1 todavía si no quieres un poco de ?riesgo?.</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Por ejemplo, instalar el <i>driver</i> privativo de NVIDIA requiere <b>hacerlo a mano</b>, a la vieja usanza, tal y como explica <a href="http://victorhckinthefreeworld.wordpress.com/2013/11/21/opensuse-13-1-instalando-el-diver-de-nvidia/" target="_blank" rel="nofollow">Victorhck en su blog</a>.</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Los repositorios de NVIDIA ya están disponibles. <a href="http://lamiradadelreplicante.com/2013/12/13/instalar-drivers-de-nvidia-en-opensuse-13-1/" target="_blank" rel="nofollow">Todos los detalles aquí</a>.</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">El controlador privativo de ATI, conocido como <i><b>fglrx</b></i> y del que ya <a href="http://www.muylinux.com/2013/11/15/opensuse-13-1-amd-ati" target="_blank" rel="nofollow">os contamos que no estaba listo</a> para la primera línea al tratarse de una <b>versión beta</b> ? Pues sigue igual la cosa. Puedes instalar la beta, que funcionar, funciona bastante bien, hasta que llegue la versión final. La forma más sencilla de hacerlo es descargando el ejecutable según la arquitectura de tu sistema (si estás en openSUSE 13.1 no necesitas ni descargarlo, ábrelo directamente con el gestor de software e instálalo):</font><font size="3" style="line-height: 1.3em;"><a href="http://geeko.ioda.net/mirror/amd-fglrx-beta/openSUSE_13.1/i586/fglrx_xpic_SUSE131-13.25.18-2.i586.rpm" target="_blank" rel="nofollow">- fglrx 32-bit</a></font><font size="3" style="line-height: 1.3em;"><br /><a href="http://geeko.ioda.net/mirror/amd-fglrx-beta/openSUSE_13.1/x86_64/" target="_blank" rel="nofollow">- fglrx 64-bit</a></font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">O en lugar de hacer lo anterior,<b> añade el repositorio a tu sistema y así recibirás actualizaciones</b>, que tratándose de una beta, es lo más aconsejable. Esto se puede hacer gráficamente, pero ni por rapidez o simplicidad compensa hacerlo de esa forma. Vale mucho la pena abrir la aplicación de consola y lanzar los siguientes comandos:</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;"><span style="font-family: Verdana;"><span style="color: #c20cb9;"><b>sudo</b></span> zypper <span style="color: #c20cb9;"><b>ar</b></span> <span style="color: #660033;">-f</span> http:<span style="color: #000000;"><b>//</b></span>geeko.ioda.net<span style="color: #000000;"><b>/</b></span>mirror<span style="color: #000000;"><b>/</b></span>amd-fglrx-beta<span style="color: #000000;"><b>/</b></span>openSUSE_13.1<span style="color: #000000;"><b>/</b></span> fglrx_beta<br /><span style="color: #c20cb9;"><b>sudo</b></span> zypper ref</span></font><br /><br /><br /><font size="3" style="line-height: 1.3em;">Y ahora busca en el gestor de software <b><i>fglrx</i></b> e instala el correspondiente con tu arquitectura.</font><br />&nbsp;<br /><a href="http://www.muylinux.com/wp-content/uploads/2013/11/opensuse131_25.png" target="_blank" rel="nofollow"><img id="img_post" src="http://www.muylinux.com/wp-content/uploads/2013/11/opensuse131_25.png" border="0"></a><br />&nbsp;<br /><br /><font size="3" style="line-height: 1.3em;">En cuanto a tarjetas de red, si la de tu equipo es una Broadcom y tuvieses algún problema, de nuevo toca <a href="http://opensuse-guide.org/wlan.php" target="_blank" rel="nofollow">mancharse las manos</a>.</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Por contra a todo lo dicho en este apartado, cualquier supuesto no indicado debería tener una experiencia bastante buena por defecto (Intel, NVIDIA y ATI clásicas o de baja gama, chipsets Atheros, etc).</font><br /><br /><br /><font size="3" style="line-height: 1.3em;"> <font size="4" style="line-height: 1.3em;"><b>Software disponible </b></font></font><br /><br /><font size="3" style="line-height: 1.3em;">Si hay algo que es difícil que eches en falta en openSUSE, es software adicional. En los repositorios oficiales hay muchos paquetes, pero si necesitas más, existen <b>los repositorios comunitarios</b> y los repositorios que crean algunas aplicaciones. Así, solo tienes que descargar Google Chrome, por ejemplo, y una vez lo hayas instalado ya tienes el repositorio añadido y Chrome se actualizará automáticamente junto con el resto del sistema. Aunque esto dependerá del proveedor de cada aplicación.</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Por su parte, entre los repositorios comunitarios hay, digámoslo así, varios niveles de oficialidad, desde repositorios semioficiales a puramente comunitarios, de usuarios que se han abierto una cuenta y han creado sus propios paquetes. Los del primer grupo son fácilmente reconocibles, pues <b>pueden ser añadidos directamente desde YaST</b>, la herramienta de configuración gráfica más completa que encontrarás en ningún GNU/Linux. </font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">¿Qué repositorios deberías añadir? Los que necesites: con los de LibreOffice y Mozilla recibirás las actualizaciones de las últimas versiones estables, que por ejemplo en el caso de Firefox también llegan a los repositorios oficiales, pero tardan más tiempo en hacerlo; con los de KDE y GNOME tendrás más aplicaciones y/o versiones más recientes de las mismas, etc.</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Sin embargo, hay un repositorio comunitario recomendado por YaST: <b>Packman</b>. En él hay muchos paquetes privativos, como códecs multimedia, por lo que deberías añadirlo en la mayoría de casos.  Y <b>libdvdcss</b>, en el caso de que quieras reproducir DVDs protegidos.</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Pero, si necesitas aún más software, el lugar indicado para buscarlo es en el sitio de <a href="http://software.opensuse.org/find" target="_blank" rel="nofollow">búsqueda de paquetes de openSUSE</a>. Solo te hará falta dar varios clics para instalarlos y podrás decidir si mantienes el repositorio para recibir actualizaciones, o no.</font><br /><br /><br />&nbsp;<font size="4" style="line-height: 1.3em;"><b>Repositorios y prioridades </b></font><br /><br /><font size="3" style="line-height: 1.3em;">Cuando añades -y refrescas- algunos repositorios como el de Packman o KDE, aparecerán nuevas actualizaciones, y cuando intentes aplicarlas pueden surgir conflictos por paquetes repetidos con distinta versión. En la mayoría de los casos se soluciona con la primera opción que ofrece el gestor de software, reemplazar los paquetes de un repositorios -por ejemplo, el oficial- por las versiones de otro -por ejemplo, Packman-. No hay drama aquí, pero te lo puedes evitar, una vez añadas nuevos repositorios, <b>asignándoles un nivel de prioridad</b>, siendo 99 el valor por defecto y nivel más bajo.</font><br />&nbsp;<br /><img id="img_post" src="http://www.muylinux.com/wp-content/uploads/2013/11/tumbleweed2.png" border="0"><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Así, mientras que los repositorios oficiales pueden quedarse con el 99 de fábrica, al repositorio de Packman, al de KDE o a cualquier otro que tenga paquetes repetidos -o con dependencias repetidas- le puedes asignar un 98 o 97, según proceda, <b>para hacerlo valer por encima del resto</b>., ya que sus paquetes, por ser una versión más reciente, te interesan más (si es que has añadido el repositorio, claro) y evitas conflictos.</font><br /><br /><br />&nbsp;<font size="4" style="line-height: 1.3em;"><b>Instalando extras </b></font><br /><br /><font size="3" style="line-height: 1.3em;">Como extras genéricos, que casi todo el mundo querrá tener instalados, entendemos <i>unrar</i>, paquete privativo para compresión, Java, Flash Player, códecs multimedia -incluidos los privativos de Microsoft-? tal vez las fuentes tipográficas de Microsoft. Todo eso lo encontrarás en el gestor de software. Aun así, hay paquetes básicos con códecs multimedia según el escritorio, que puedes instalar con a golpe de ratón:<br /><b>- </b><a href="http://opensuse-community.org/codecs-kde.ymp" target="_blank" rel="nofollow"><b>Instalar códecs KDE</b></a><br /><b>- </b><a href="http://opensuse-community.org/codecs-gnome.ymp" target="_blank" rel="nofollow"><b>Instalar códecs GNOME</b></a></font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Y salvo necesidad específica, vas a ir servido. Porque, y este es un detalle por el que nos podríamos haber saltado lo anterior, cuando intentes reproducir un archivo para el que no tengas soporte, <b>el sistema te avisará</b> de que puedes buscar el complemento que necesites en el gestor de software e instalarlo.</font><br />&nbsp;<br /><font size="3" style="line-height: 1.3em;">Para terminar, a modo de recomendación personal, te diría que instales SMPlayer como reproductor multimedia, qBittorrent como cliente Bittorrent, KDE Connect (kdeconnect) si quieres integración entre el escritorio y tu smartphone Android? Y si te gusta jugar, Steam, que encontrarás en la búsqueda de paquete o en el repositorio comunitario de juegos.</font><br /><br /><br /><br /><a href="http://www.muylinux.com/2013/11/26/opensuse-13-1-configuracion-basica" target="_blank" rel="nofollow"><font size="4" style="line-height: 1.3em;"><b>&lt;fuente&gt;</b></font></a><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">20</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1964</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">5</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(326823,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(326823,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(326823,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(326823,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(326823,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(326823,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(326823,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(326823,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(326823,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(326823,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://static.wixstatic.com/media/6f7957_ea76666c1783426a8a04d32e56744394~mv2.jpg_256" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1659301" title="perfil de Doux91"> Doux91</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://pikbox.ru/img/10/201508170112158041111111111.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1741598" title="perfil de rojored"> rojored</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.imgur.com/SrN2Duk.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1889019" title="perfil de ricardo130"> ricardo130</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://i.minus.com/iVXYocDo5hMi3.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1686369" title="perfil de carlin_roj"> carlin_roj</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(326823);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('326823');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_22"></i>
+<a href="https://identi.io/index.php?topic=402136" title="El software de Microsoft es malware"> El software de Microsoft es malware</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=366759" title="Huayra 3, distro educativa con sello argentino"> Huayra 3, distro educativa con sello argentino</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_113"></i>
+<a href="https://identi.io/index.php?topic=365704" title="Pirate Bay: catálogo de la Biblioteca de Babel [2]"> Pirate Bay: catálogo de la Biblioteca de Babel [2]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_113"></i>
+<a href="https://identi.io/index.php?topic=365493" title="Pirate Bay: catálogo de la Biblioteca de Babel [1]"> Pirate Bay: catálogo de la Biblioteca de Babel [1]</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_113"></i>
+<a href="https://identi.io/index.php?topic=364852" title="Google, imperialismo dospuntocero"> Google, imperialismo dospuntocero</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=364548" title="¿Por qué elegir openSUSE?"> ¿Por qué elegir openSUSE?</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=362530" title="El formato unificado de paquetes está por llegar"> El formato unificado de paquetes está por llegar</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=362364" title="K3b, grabación de CD y DVD"> K3b, grabación de CD y DVD</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">16</span> Comentarios</span>
+<span class="onpost"> OpenSUSE 13.1: Configuración básica</span>
+<div class="comentario"></div><div id="comment_3486632" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rojored" href="?action=profile;user=rojored">
+<img id="error_avatar" src="http://pikbox.ru/img/10/201508170112158041111111111.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1741598" href="?action=profile;user=rojored">rojored</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405711954" title="18/07/2014 a las 19:32 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Que buena informaci?
+</div>
+</div>
+</div>
+</div><div id="comment_3486673" class="comentario coment_id_2">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405713546" title="18/07/2014 a las 19:59 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1741598" href="https://identi.io/index.php?action=profile&user=rojored" class="mensiones_identi">@rojored</a> En este momento uso ext4. Luego me fijo si tengo algo relacionado interesante para postear (seguramente en el archivo tenga, &nbsp;<img src="https://identi.io/Smileys/default/icon_razz.png" alt="" border="0" /> ) y sino veo si puedo hacer alg?
+</div>
+</div>
+</div>
+</div><div id="comment_3486731" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="peterparkr" href="?action=profile;user=peterparkr">
+<img id="error_avatar" src="https://i.ytimg.com/vi/fcGtbJKlip0/maxresdefault.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1591438" href="?action=profile;user=peterparkr">peterparkr</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405715428" title="18/07/2014 a las 20:30 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+muy bueno en este momento uso OpenSuse 13.1 &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3486801" class="comentario coment_id_4">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405717942" title="18/07/2014 a las 21:12 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita peterparkr: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">muy bueno en este momento uso OpenSuse 13.1 &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> Yo tambi?
+</div>
+</div>
+</div>
+</div><div id="comment_3486833" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="shamamoto" href="?action=profile;user=shamamoto">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-0FN_MpqtGxI/UXB4S5yan8I/AAAAAAAAOFI/qNIrvsfJBLo/s1600/1291405956_2c9bb98b39a6.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1649201" href="?action=profile;user=shamamoto">shamamoto</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405718883" title="18/07/2014 a las 21:28 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1533336" href="https://identi.io/index.php?action=profile&user=superlogic" class="mensiones_identi">@superlogic</a> he leido su anterior tuto y queria pedirle que me oriente sobre cual de estos 2 me conviene <br />GNOME o KDE Llive-CD)
+</div>
+</div>
+</div>
+</div><div id="comment_3486921" class="comentario coment_id_6">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405721939" title="18/07/2014 a las 22:18 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1649201" href="https://identi.io/index.php?action=profile&user=shamamoto" class="mensiones_identi">@shamamoto</a> <br />Tanto GNOME como KDE son buenos entornos de escritorio, si es por probar lo ideal ser?
+</div>
+</div>
+</div>
+</div><div id="comment_3487160" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Danjes" href="?action=profile;user=Danjes">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1589125" href="?action=profile;user=Danjes">Danjes</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405729779" title="19/07/2014 a las 0:29 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Siempre es bueno tener varios S.O en una misma PC, si se da?
+</div>
+</div>
+</div>
+</div><div id="comment_3487167" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="shamamoto" href="?action=profile;user=shamamoto">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-0FN_MpqtGxI/UXB4S5yan8I/AAAAAAAAOFI/qNIrvsfJBLo/s1600/1291405956_2c9bb98b39a6.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1649201" href="?action=profile;user=shamamoto">shamamoto</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405729858" title="19/07/2014 a las 0:30 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Ok muy agradecido por su ayuda superlogic que siga bien.
+</div>
+</div>
+</div>
+</div><div id="comment_3487358" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="chicacec" href="?action=profile;user=chicacec">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="94006" href="?action=profile;user=chicacec">chicacec</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1405735704" title="19/07/2014 a las 2:08 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias!! justo voy a instalar el openSUSE &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3497147" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rodzort25" href="?action=profile;user=rodzort25">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1543502" href="?action=profile;user=rodzort25">rodzort25</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406170807" title="24/07/2014 a las 3:00 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Amigo fijate que instale openSuse y no cuento con internet, me marca un error de incompatibilidad me gustaria que me ayudes con ese detalle &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3497490" class="comentario coment_id_11">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406182193" title="24/07/2014 a las 6:09 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Danjes: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Siempre es bueno tener varios S.O en una misma PC, si se da?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3499166" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rodzort25" href="?action=profile;user=rodzort25">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1543502" href="?action=profile;user=rodzort25">rodzort25</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406254679" title="25/07/2014 a las 2:17 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias men le andube moviendo y lo resolvi, pero muchas gracias por tu respuesta
+</div>
+</div>
+</div>
+</div><div id="comment_3499359" class="comentario coment_id_13">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406260345" title="25/07/2014 a las 3:52 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita rodzort25: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">gracias men le andube moviendo y lo resolvi, pero muchas gracias por tu respuesta</div></blockquote>Buen?
+</div>
+</div>
+</div>
+</div><div id="comment_3499599" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rodzort25" href="?action=profile;user=rodzort25">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1543502" href="?action=profile;user=rodzort25">rodzort25</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406273661" title="25/07/2014 a las 7:34 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Amigo aqui de nuevo causandote molestias, no puedo instalar el plugin de flash player, para la reproduccion de videos y animaciones, podrias echarme una mano con eso, ya qu he investigado y no me ha ido muy bien de antemano gracias por todo &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3500720" class="comentario coment_id_17">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406325277" title="25/07/2014 a las 21:54 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1543502" href="https://identi.io/index.php?action=profile&user=rodzort25" class="mensiones_identi">@rodzort25</a> ?
+</div>
+</div>
+</div>
+</div><div id="comment_3501035" class="comentario coment_id_18">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="superlogic" href="?action=profile;user=superlogic">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_vZi2e6IebVE/SblBIhn8DPI/AAAAAAAABm4/ca8UPkoZAaA/s320/PINEAL%2Bextraterrestre.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1533336" href="?action=profile;user=superlogic">superlogic</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406334261" title="26/07/2014 a las 0:24 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1533336" href="https://identi.io/index.php?action=profile&user=superlogic" class="mensiones_identi">@superlogic</a> Sino, prob?
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_1.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994b09940c64dea9',t:'MTc2MTQ5MzA3Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
