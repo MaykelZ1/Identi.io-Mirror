@@ -1,0 +1,2354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Sistema de bloqueo de enlaces - Nueva funcion - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Hola de Nuevo! No queria escribir todas las novedades juntas implementadas en identi, como ya repasamos las nuevas implementacion de limites de los rangos, sobre todo para novatos y starter aqui: /> A..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='dkFYVDdRRmZxbm8wZjJ6VTJGc2RHVmtYMS81Zmd0VG1acGdVOFRIZEFmdEpLSjRvL2w2L0JkS1JxNmtWdEU0U2s4azIxOG51cDV4cndtQlhtMzNBQjVaTnRqamZzSmFza3RWdXc9PTlRRFMyUlVrSzRJdXdXZw==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761481483;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'd8a815f601d4c2c4a15f3b7f82724eb2');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_4.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Sistema de bloqueo de enlaces - Nueva funcion" title="Identi - Sistema de bloqueo de enlaces - Nueva funcion" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '909f6733ec78e2208bb24859db6ae12f142aedcb';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Admin">Admin</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Admin" title="Ir al Perfil de Admin"><img id="error_avatar" class="avatar" border="0" width="120" src="https://3.bp.blogspot.com/-W_tIB2WO_kY/W3x-jlOvN0I/AAAAAAAADhA/0DGpmd-ezSIyiIbz7RlauFbBb_ZI3O38QCEwYBhgL/s640/avatarkhazB.jpg"/></a>
+<div class=" rango_sidebar clearfix">Administrador</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ot.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/admin.gif" title="Administrador" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(2)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('2');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">3303</b> Seguidores</li>
+<li><b>11887</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>1.243</b> Posts</li>
+<li><b>259</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="en_reciclaje clearfix">
+<span class="cols"><img class="floatL" src="https://identi.io/images/eliminado.png"  border="0" width="128" height="128"/></span>
+<span class="left cols">
+<span class="title">Oops.. Este post tiene los enlaces eliminados! </span>
+<p>Identi revisa las denuncias de los usuarios en busca de enlaces eliminados que no dejan descargar los archivos, este mensaje te informa que este post que estas viendo <b>tiene los enlaces eliminados.</b></p>
+</span>
+<span class="right cols" >
+<span class="title">Usa el Buscador</span>
+<p>Por favor, te recomendamos que uses el buscador para encontrar m&aacute;s alternativas.</p>
+<form class="search_here" action="https://identi.io/index.php?action=buscador" method="POST">
+<input type="text" class="text-inp" name="search"/> <input type="submit" value="Buscar"/>
+</form>
+</span>
+</div><div class="header_post clearfix" >
+<h1 class="title_post">Sistema de bloqueo de enlaces - Nueva funcion</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=410614';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=410616';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=124" alt="Reciclaje" title="Reciclaje">Reciclaje</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 9 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1072643">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><font size="3" style="line-height: 1.3em;">Hola de Nuevo!</font><br /><br /><font size="3" style="line-height: 1.3em;">No queria escribir todas las novedades juntas implementadas en identi, como ya repasamos las nuevas implementacion de limites de los rangos, sobre todo para novatos y starter aqui: <a href="http://www.identi.li/index.php?topic=410583" target="_blank" rel="nofollow">http://www.identi.li/index.php?topic=410583</a></font><br /><br /><font size="3" style="line-height: 1.3em;">Ahora le toca el turno, a presentar el</font> <font size="3" style="line-height: 1.3em;"><b>SISTEMA DE BLOQUEO DE ENLACES</b></font><br /><br /><b><font size="5" style="line-height: 1.3em;">¿De que se trata este sistema?</font></b><br /><br /><font size="3" style="line-height: 1.3em;">Con este sistema se puede bloquear los enlaces de un post, para que solo lo vean ciertos usuarios que cumplan una funcion o rango especifico.</font><br /><br /><font size="3" style="line-height: 1.3em;">Ejemplo de las etiquetas (Se deben de poner sin el asterisco *)</font><br /><br /><span style="color: #66cc33;"><b><font size="5" style="line-height: 1.3em;">ETIQUETA HIDE1</font></b></span> <br /><br /><font size="3" style="line-height: 1.3em;"><b>Como se implementa en los post?</b></font><br /><font size="3" style="line-height: 1.3em;">[*hide1]Aqui los Enlaces a bloquear[/*hide1]</font><br /><br /><font size="3" style="line-height: 1.3em;"><b>Que bloquea?</b></font><br /><font size="3" style="line-height: 1.3em;">Bloquea a todos los usuarios no registrados, no logueados a que no puedan ver el contenido.</font><br /><br /><font size="3" style="line-height: 1.3em;"><b>Quien puede utilizar esta etiqueta en sus post?</b></font><br /><font size="3" style="line-height: 1.3em;">Usuarios de Rango: New Full, Full User, Mini Idento, Idento, Silver, Gold, Platinum, Viper, Marshall, Genuine y Divinity.</font><br /><br /><span style="color: #ff9933;">]<b><font size="5" style="line-height: 1.3em;">ETIQUETA HIDE2</font></b></span><br /><br /><font size="3" style="line-height: 1.3em;"><b>Como se implementa en los post?</b></font><br /><font size="3" style="line-height: 1.3em;">[*hide2]Aqui los Enlaces a bloquear[/*hide2]</font><br /><br /><font size="3" style="line-height: 1.3em;"><b>Que bloquea?</b></font><br /><font size="3" style="line-height: 1.3em;">Bloquea a todos los usuarios que no sean rango Starter (25 Puntos) o superior.</font><br /><br /><font size="3" style="line-height: 1.3em;"><b>Quien puede utilizar esta etiqueta en sus post?</b></font><br /><font size="3" style="line-height: 1.3em;">Usuarios de Rango: Idento, Silver, Gold, Platinum, Viper, Marshall, Genuine y Divinity.</font><br /><br /><span style="color: #ff3366;"><b><font size="5" style="line-height: 1.3em;">ETIQUETA HIDE3</font></b></span> <br /><br /><font size="3" style="line-height: 1.3em;"><b>Como se implementa en los post?</b></font><br /><font size="3" style="line-height: 1.3em;">[*hide3]Aqui los Enlaces a bloquear[/*hide3]</font><br /><br /><font size="3" style="line-height: 1.3em;"><b>Que bloquea?</b></font><br /><font size="3" style="line-height: 1.3em;">Bloquea a todos los usuarios que no sean rango Mini Idento (300 puntos) o superior.</font><br /><br /><font size="3" style="line-height: 1.3em;"><b>Quien puede utilizar esta etiqueta en sus post?</b></font><br /><font size="3" style="line-height: 1.3em;">Usuarios de Rango: Viper, Marshall, Genuine y Divinity.</font><br /><br /><br /><b><font size="4" style="line-height: 1.3em;">Por que este sistema nuevo?</font></b><br /><font size="3" style="line-height: 1.3em;">Queriamos dar a los usuarios la opcion de bloquear sus enlaces de varias formas, con estas etiquetas son libres de que sus enlaces los vean ciertos usuarios, y con ello seguramente duren sus enlaces mas tiempo.</font><br /><br /><b><font size="4" style="line-height: 1.3em;">Que limitaciones tiene?</font></b><br /><font size="3" style="line-height: 1.3em;">Dentro de las etiquetas hide, puede poner las etiquetas de links, pero no las JD, es decir no se puede proteger con este sistema links con el sistema de Jdownloader, solo con enlaces desde el spoiler, Ejemplo:</font><br /><br /><span style="color: #33cc33;"><b><font size="3" style="line-height: 1.3em;">Correcto</font></b></span><br />[*hide1][*links]Enlaces dentro del spoiler y ocultados con la etiqueta hide1[*/links][*/hide1]<br /><br /><span style="color: #ff3333;"><b><font size="3" style="line-height: 1.3em;">Incorrecto</font></b></span><br />[*hide1][*JD]Enlaces dentro del JD y ocultados con la etiqueta hide1[*/JD][*/hide1]<br /><br /><br /><br /><font size="4" style="line-height: 1.3em;">EJEMPLOS REALES EN ESTE POST.</font><br /><br />Contenido bloqueado por hide1<br />[hide1]Este es un contenido bloqueado por hide1 - Codigo 85783935[/hide1]<br /><br />Contenido bloqueado por hide2<br />[hide2]Este es un contenido bloqueado por hide2 - Codigo 856324423[/hide2]<br /><br />Contenido bloqueado por hide3<br />[hide3]Este es un contenido bloqueado por hide3 - Codigo 858776542[/hide3]<br /><br /><br /><br /><font size="3" style="line-height: 1.3em;"><b>Y como sabre que post visitar si no tengo rango suficiente para ver enlaces?</b></font><br /><font size="3" style="line-height: 1.3em;">Pues en la pagina de inicio de identi, se marcaran los post que tengan los distintos bloqueos de hide, para avisarte que al entrar a ese post, contiene un bloqueo.</font><br /><br /><font size="3" style="line-height: 1.3em;"><b>Si tengo el rango para ver el bloqueo que ocurre?</b></font><br /><font size="3" style="line-height: 1.3em;">Pues nada, si tiene el rango suficiente para ver el bloqueo, simplemente al entrar al post, lo vera normal, como si no se hubiese bloqueado nada.</font><br /><br /><font size="3" style="line-height: 1.3em;">Desde este momento, pueden implementar las nuevas etiquetas en sus post, recuerden en la seccion enlaces, cualquier duda la comentamos en este post.</font><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">20</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 2/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">44299</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">13</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(410615,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(410615,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(410615,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(410615,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(410615,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(410615,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(410615,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(410615,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(410615,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(410615,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://78.media.tumblr.com/c021a2446b217e13fea29ae8b9e3e8e7/tumblr_p2fpqwEmWT1vbcnq8o1_500.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=37589" title="perfil de danielillo32"> danielillo32</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=98435" title="perfil de carlosja"> carlosja</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://i.pinimg.com/236x/df/42/a9/df42a9a525b2758752e17373ee066e54.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1838647" title="perfil de Daniel_07"> Daniel_07</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-cCfs3v0RtgU/VZVMrBTbnOI/AAAAAAAAHY0/yJXJCt1RHeM/s1600/hec1891.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1691958" title="perfil de hec1891"> hec1891</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://25.media.tumblr.com/tumblr_lx56dbyo4X1qi0kfro1_500.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1618247" title="perfil de Athotis"> Athotis</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://imgfz.com/i/iW3ogA9.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1894423" title="perfil de kusanagySM"> kusanagySM</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-yj2cTzLoHO0/We7PNZKyqMI/AAAAAAAAAgM/pz3sntzHhrkaX0iYoyiAil1BHa_18hy9QCLcBGAs/s1600/Real_Madrid_logo_LOGO_touch_3D_lamp_colorful_Nightlight_lamp4_900x.JPG" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1940717" title="perfil de oajt7"> oajt7</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://lh3.googleusercontent.com/oiYvRebwHWW57Wi6eWjrtAV--f8O4HIHqzlU4lw0_HLVKNIWzQqoOAcdNLYNNFhCRhOsFg_CCQ=w1600-h900-rw-no" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=91641" title="perfil de silver15"> silver15</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=76595" title="perfil de JDMV"> JDMV</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://4.bp.blogspot.com/-J9dMYSE6giM/WO7sPo3BQFI/AAAAAAAAFag/rHlDAxQYzoEaSidr0O71ANZOFBbEFrnjwCLcB/s1600/Imagen10.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1930957" title="perfil de cjod99"> cjod99</a>: <b>2 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(410615);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('410615');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_107"></i>
+<a href="https://identi.io/index.php?topic=427124" title="Explicacion de SeRuJi0 a toda la comunidad"> Explicacion de SeRuJi0 a toda la comunidad</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_107"></i>
+<a href="https://identi.io/index.php?topic=411883" title="Reflexion despues de estos dias y opinion"> Reflexion despues de estos dias y opinion</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_107"></i>
+<a href="https://identi.io/index.php?topic=410583" title="Nuevos cambios en los rangos Novato y Starter"> Nuevos cambios en los rangos Novato y Starter</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_107"></i>
+<a href="https://identi.io/index.php?topic=409720" title="Nuevo sistema para proteger enlaces - NoRef"> Nuevo sistema para proteger enlaces - NoRef</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_107"></i>
+<a href="https://identi.io/index.php?topic=409509" title="Nueva Moderadora! Fllortv Bienvenida!"> Nueva Moderadora! Fllortv Bienvenida!</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_107"></i>
+<a href="https://identi.io/index.php?topic=396634" title="Cambiar sus contraseñas y mas informacion"> Cambiar sus contraseñas y mas informacion</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_107"></i>
+<a href="https://identi.io/index.php?topic=373745" title="Bienvenida de nuevo! Identi volvio"> Bienvenida de nuevo! Identi volvio</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_107"></i>
+<a href="https://identi.io/index.php?topic=359683" title="Nueva moderadora, Morena1212 ! Bienvenida"> Nueva moderadora, Morena1212 ! Bienvenida</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">115</span> Comentarios</span>
+<span class="onpost"> Sistema de bloqueo de enlaces - Nueva funcion</span>
+<div class="comentario"></div><div id="comment_4408351" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="sableye" href="?action=profile;user=sableye">
+<img id="error_avatar" src="http://otakuhaiku.files.wordpress.com/2011/07/1seriousharima.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="117152" href="?action=profile;user=sableye">sableye</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454515926" title="03/02/2016 a las 16:12 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+serugio tengo un probleca con los enlaces desde firefos no me habre ningun enlace sabra usted por que gracias y muy buena la nueva funcion
+</div>
+</div>
+</div>
+</div><div id="comment_4408354" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Vellenger." href="?action=profile;user=Vellenger.">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-3q_eOg84Z3w/UeubgoJk8kI/AAAAAAAABUk/rje9XAdAqMc/s1600/Black_Dexters_Laboratory3.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1940658" href="?action=profile;user=Vellenger.">Vellenger.</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454515996" title="03/02/2016 a las 16:13 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+esto lo veo mas para que el de mega mierda no robe sus post pero este metodo es inservible te lo digo con razones el tipo ese es un lokillo esto no parara su siniestro plan jamas, que hay otras formas las hay me gustaria mucho ayudarte pero volviendo al tema esto es tedioso para los nuevos users medita un poco y no seas tan grosero con los nuevos en la web &nbsp;<img src="https://identi.io/Smileys/default/icon_confused.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408356" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlosja" href="?action=profile;user=carlosja">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98435" href="?action=profile;user=carlosja">carlosja</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454516005" title="03/02/2016 a las 16:13 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Esta bueno, lo malo que para :por ej bloquear usuarios novato si o si, tengo que dejar ver los link??? o igualmente los protege..?
+</div>
+</div>
+</div>
+</div><div id="comment_4408359" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="antuan6211" href="?action=profile;user=antuan6211">
+<img id="error_avatar" src="https://ibb.co/76RzC5R" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1807639" href="?action=profile;user=antuan6211">antuan6211</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454516162" title="03/02/2016 a las 16:16 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+No me gustaria verme como new user.
+</div>
+</div>
+</div>
+</div><div id="comment_4408376" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jmrc19" href="?action=profile;user=jmrc19">
+<img id="error_avatar" src="https://i.ibb.co/N7HGC4W/dant-1.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1561622" href="?action=profile;user=jmrc19">jmrc19</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454516892" title="03/02/2016 a las 16:28 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buenas medidas. Ojal?
+</div>
+</div>
+</div>
+</div><div id="comment_4408388" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlosja" href="?action=profile;user=carlosja">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98435" href="?action=profile;user=carlosja">carlosja</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454517235" title="03/02/2016 a las 16:33 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Ahi probe uno, alguien me dice si resulto...de nuevo lo malo que dejan los link al descubierto.<a href="http://www.identi.li/index.php?topic=410619" target="_blank" rel="nofollow">http://www.identi.li/index.php?topic=410619</a>
+</div>
+</div>
+</div>
+</div><div id="comment_4408393" class="comentario coment_id_7">
+<div class="clearfix comment-box is-staff ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Admin" href="?action=profile;user=Admin">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-W_tIB2WO_kY/W3x-jlOvN0I/AAAAAAAADhA/0DGpmd-ezSIyiIbz7RlauFbBb_ZI3O38QCEwYBhgL/s640/avatarkhazB.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2" href="?action=profile;user=Admin">Admin</a> - Administrador<span> - <a rel="nofollow" class="addtipsy_s" ts="1454517360" title="03/02/2016 a las 16:36 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="98435" href="https://identi.io/index.php?action=profile&user=carlosja" class="mensiones_identi">@carlosja</a> Si miras el post desde otro navegador como visitante te saldra el mensaje de bloqueo &quot;Necesitas tener rango Starter o superior para ver los enlaces&quot;, lo pusiste bien &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408397" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlosja" href="?action=profile;user=carlosja">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98435" href="?action=profile;user=carlosja">carlosja</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454517432" title="03/02/2016 a las 16:37 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0 Si lo hice y de verdad esta bueno..me gusto..te estas poniendo las pilas,muy bueno.. <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408401" class="comentario coment_id_9">
+<div class="clearfix comment-box is-staff ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Admin" href="?action=profile;user=Admin">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-W_tIB2WO_kY/W3x-jlOvN0I/AAAAAAAADhA/0DGpmd-ezSIyiIbz7RlauFbBb_ZI3O38QCEwYBhgL/s640/avatarkhazB.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2" href="?action=profile;user=Admin">Admin</a> - Administrador<span> - <a rel="nofollow" class="addtipsy_s" ts="1454517546" title="03/02/2016 a las 16:39 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1897588" href="https://identi.io/index.php?action=profile&user=Shadow729" class="mensiones_identi">@Shadow729</a> este post no es para peticiones
+</div>
+</div>
+</div>
+</div><div id="comment_4408402" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rtavarez84" href="?action=profile;user=rtavarez84">
+<img id="error_avatar" src="https://lh3.googleusercontent.com/-NvlZorUrFfk/VjJOeYJ9WzI/AAAAAAAAAH8/3nMGMJknAKo/s268-Ic42/VASTO%252520LORDE.jpeg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1944954" href="?action=profile;user=rtavarez84">rtavarez84</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454517587" title="03/02/2016 a las 16:39 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Estoy de acuerdo con lo ante expuesto, muy bueno el esfuerzo de @SeRuJi0, pero esto afectar?
+</div>
+</div>
+</div>
+</div><div id="comment_4408410" class="comentario coment_id_11">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="animecri" href="?action=profile;user=animecri">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-lhnMW8dOmjc/VqICE624P1I/AAAAAAAAACY/aKZa7-pGdzw/s1600/0001114444.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="96288" href="?action=profile;user=animecri">animecri</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454517767" title="03/02/2016 a las 16:42 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Me gusta la idea de bloquear los enlaces a quienes no esten logeados... <b>lo demas no me gusta ni un pelo</b> xD &nbsp;<img src="https://identi.io/Smileys/default/icon_mad.png" alt="" border="0" /> (lo malo es que a los post no les podemos poner &quot;<b>dislike&quot;</b> xD o estoy seguro que este tendria muchos D:&lt;) saludos.
+</div>
+</div>
+</div>
+</div><div id="comment_4408411" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="karlosculo" href="?action=profile;user=karlosculo">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-A1UC3_pL_0E/TdsDo-vot2I/AAAAAAAAAck/0flWQgu82G0/s400/Le%25C3%25B3n+de+tu+Bandera.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1877595" href="?action=profile;user=karlosculo">karlosculo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454517801" title="03/02/2016 a las 16:43 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias capo! una peticion! borrar los post denunciados con links caidos por favor!! es una molestia!!
+</div>
+</div>
+</div>
+</div><div id="comment_4408424" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jaderpipe" href="?action=profile;user=jaderpipe">
+<img id="error_avatar" src="https://s9.postimg.cc/6e95czlf3/identi-aqui-1684393.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1882965" href="?action=profile;user=jaderpipe">jaderpipe</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454518329" title="03/02/2016 a las 16:52 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Buenas funciones gracias amigo <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408425" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlosja" href="?action=profile;user=carlosja">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98435" href="?action=profile;user=carlosja">carlosja</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454518350" title="03/02/2016 a las 16:52 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a href="http://s20.postimg.org/odgku544t/identi.png" target="_blank" rel="nofollow">http://s20.postimg.org/odgku544t/identi.png</a> asi queda el post
+</div>
+</div>
+</div>
+</div><div id="comment_4408430" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="super300" href="?action=profile;user=super300">
+<img id="error_avatar" src="https://i.ibb.co/5GD8Y2y/sasha.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="49596" href="?action=profile;user=super300">super300</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454518434" title="03/02/2016 a las 16:53 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Yo creo que una buena idea para &nbsp;evitar la denuncia de enlaces, es que solo se pueda cargar los enlaces por jdownloader, y que no se muestren los enlaces en los post. De esta menera, los enlaces duran mas tiempo, se evita la denuncia y el robo de links &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408432" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlosja" href="?action=profile;user=carlosja">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98435" href="?action=profile;user=carlosja">carlosja</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454518464" title="03/02/2016 a las 16:54 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+asi identi &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img id="img_post" src="http://s20.postimg.org/luuvtgiel/identi_2.png" border="0">
+</div>
+</div>
+</div>
+</div><div id="comment_4408436" class="comentario coment_id_17">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlosja" href="?action=profile;user=carlosja">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98435" href="?action=profile;user=carlosja">carlosja</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454518637" title="03/02/2016 a las 16:57 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+asi el post..<img id="img_post" src="http://s20.postimg.org/odgku544t/identi.png" border="0">
+</div>
+</div>
+</div>
+</div><div id="comment_4408441" class="comentario coment_id_18">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlosja" href="?action=profile;user=carlosja">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98435" href="?action=profile;user=carlosja">carlosja</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454518875" title="03/02/2016 a las 17:01 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+La verdad este sistema esta muy bueno,primero porque permite a cada uno hacerlo o no,en mi caso los link propios lo voy hacer ,link prestados no me lo permiten porque se ven..pero la verdad har?
+</div>
+</div>
+</div>
+</div><div id="comment_4408445" class="comentario coment_id_19">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ali2134" href="?action=profile;user=ali2134">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1940784" href="?action=profile;user=ali2134">ali2134</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454518979" title="03/02/2016 a las 17:02 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+1. la idea la puse yo <br />2. jamas voy a estar de acuerdo con bloquear enlaces a novatos si quieren bloquear pueden hacerlo por tiempo limitado, pero si esto va ha ser permanente muchos se van a ir de esta web
+</div>
+</div>
+</div>
+</div><div id="comment_4408449" class="comentario coment_id_20">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="MigueL.FC" href="?action=profile;user=MigueL.FC">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-Aun44Z1U66o/VIzRxTojnsI/AAAAAAAAAfk/ATf30bjAndU/s1600/ahskenny1_by_peppernote-d5nyg3m.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1897593" href="?action=profile;user=MigueL.FC">MigueL.FC</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454519114" title="03/02/2016 a las 17:05 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0 No estoy de acuerdo con esto, puesto que identi es una red para compartir contenido y gratis, y con esto, se esta obstruyendo a muchos usuarios (Muchos que solo quieren descargar) de cierto contenido y desv?
+</div>
+</div>
+</div>
+</div><div id="comment_4408464" class="comentario coment_id_21">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Vellenger." href="?action=profile;user=Vellenger.">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-3q_eOg84Z3w/UeubgoJk8kI/AAAAAAAABUk/rje9XAdAqMc/s1600/Black_Dexters_Laboratory3.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1940658" href="?action=profile;user=Vellenger.">Vellenger.</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454519483" title="03/02/2016 a las 17:11 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita MigueL.FC: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">@SeRuJi0 No estoy de acuerdo con esto, puesto que identi es una red para compartir contenido y gratis, y con esto, se esta obstruyendo a muchos usuarios (Muchos que solo quieren descargar) de cierto contenido y desv?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4408468" class="comentario coment_id_22">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Blackwater" href="?action=profile;user=Blackwater">
+<img id="error_avatar" src="http://fc07.deviantart.net/fs71/i/2011/231/5/6/pink_floyd_the_wall_pig_shirt_by_tshirtman_tshirts-d474nof.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1934671" href="?action=profile;user=Blackwater">Blackwater</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454519613" title="03/02/2016 a las 17:13 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Se podra poner un link de norelif entre las ETIQUETA HIDE?? no entiendo porque dejar el link al descubierto...
+</div>
+</div>
+</div>
+</div><div id="comment_4408472" class="comentario coment_id_23">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="super300" href="?action=profile;user=super300">
+<img id="error_avatar" src="https://i.ibb.co/5GD8Y2y/sasha.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="49596" href="?action=profile;user=super300">super300</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454519708" title="03/02/2016 a las 17:15 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+El poner esas restricciones limita a los que tengan mucho rango y no estoy deacuerdo. Los aportes deben ser para todos <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408489" class="comentario coment_id_24">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CasiOvale" href="?action=profile;user=CasiOvale">
+<img id="error_avatar" src="https://blogger.googleusercontent.com/img/a/AVvXsEj7MOguE2lyUogXsAWEm6KRl6GMgC7tX8NRI9rCc6GeydOJ4z1pDW9thsxbqLWsKWEmalSoEM9qa7Eza-pYw5MJuHHmYY0pJ702NUK66hpPs2tMJf-JgtoHljU1ei2JIgj9WZImavs-7EnnONmRaxjVztDqfypOUK6tjwedOBbO7nl0gPsTUYft-5w2" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1830230" href="?action=profile;user=CasiOvale">CasiOvale</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454520109" title="03/02/2016 a las 17:21 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Interesante. Esto obligara a registrarte y que los novatos, dejen de ser novatos.
+</div>
+</div>
+</div>
+</div><div id="comment_4408492" class="comentario coment_id_25">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Vincent85" href="?action=profile;user=Vincent85">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-W-xZbNd2Xpo/U4usxltzZ2I/AAAAAAAAAMQ/ub9t36YqK5k/s1600/Vincent85.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1723479" href="?action=profile;user=Vincent85">Vincent85</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454520206" title="03/02/2016 a las 17:23 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Hola @SeRuJi0 ... pues bueno, respecto a este punto:<br /><br /><blockquote><div class="cita">Cita: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Que limitaciones tiene?<br />Dentro de las etiquetas hide, puede poner las etiquetas de links, pero no las JD, es decir no se puede proteger con este sistema links con el sistema de Jdownloader, solo con enlaces desde el spoiler</div></blockquote><br />Pienso que s?
+</div>
+</div>
+</div>
+</div><div id="comment_4408496" class="comentario coment_id_26">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="fercho08" href="?action=profile;user=fercho08">
+<img id="error_avatar" src="http://images2.imgbox.com/f9/17/T6XHK8bK_o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="140613" href="?action=profile;user=fercho08">fercho08</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454520292" title="03/02/2016 a las 17:24 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Me parece muy buena la implementaci?
+</div>
+</div>
+</div>
+</div><div id="comment_4408499" class="comentario coment_id_27">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ThELoGaNm" href="?action=profile;user=ThELoGaNm">
+<img id="error_avatar" src="http://s24.postimg.org/visr9a039/miavatartheloganm.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1945472" href="?action=profile;user=ThELoGaNm">ThELoGaNm</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454520343" title="03/02/2016 a las 17:25 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Bueno entonces pondre con hide 3 todos mis aportes xD gracias por esta mejora <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408502" class="comentario coment_id_28">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Vincent85" href="?action=profile;user=Vincent85">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-W-xZbNd2Xpo/U4usxltzZ2I/AAAAAAAAAMQ/ub9t36YqK5k/s1600/Vincent85.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1723479" href="?action=profile;user=Vincent85">Vincent85</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454520374" title="03/02/2016 a las 17:26 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0 escribo de nuevo porque no me hab?
+</div>
+</div>
+</div>
+</div><div id="comment_4408509" class="comentario coment_id_29">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ManiatickX" href="?action=profile;user=ManiatickX">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1937704" href="?action=profile;user=ManiatickX">ManiatickX</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454520528" title="03/02/2016 a las 17:28 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+no estoy de acuerdo que nos descriminen a los novatos, ya que no se ripear ni nada de esas cosas, y para poder subir de rango solo podemos compartir cosas como Taringa. pero de aqu?
+</div>
+</div>
+</div>
+</div><div id="comment_4408518" class="comentario coment_id_30">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="_Atlas_" href="?action=profile;user=_Atlas_">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-CX90RdHI_6E/VXFtOtbGJ-I/AAAAAAAAC3k/iKFNzzZYVB4/s1600/Avatar_by_Atlas_2.8.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1839852" href="?action=profile;user=_Atlas_">_Atlas_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454520682" title="03/02/2016 a las 17:31 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Lastima que no se pueda usar con JD &nbsp;<img src="https://identi.io/Smileys/default/icon_sad.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408519" class="comentario coment_id_31">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="deijoe" href="?action=profile;user=deijoe">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-uH3OHyT5Uic/UV4Pa5mmoaI/AAAAAAAACt0/jdh32PZEJ_o/s1600/Anime+Terror.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1607740" href="?action=profile;user=deijoe">deijoe</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454520721" title="03/02/2016 a las 17:32 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Soy novato pero cuando digo novato me refiero a solo el rango porque tengo a?
+</div>
+</div>
+</div>
+</div><div id="comment_4408522" class="comentario coment_id_32">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Daniel_07" href="?action=profile;user=Daniel_07">
+<img id="error_avatar" src="https://i.pinimg.com/236x/df/42/a9/df42a9a525b2758752e17373ee066e54.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1838647" href="?action=profile;user=Daniel_07">Daniel_07</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454520741" title="03/02/2016 a las 17:32 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Esta muy bien, as?
+</div>
+</div>
+</div>
+</div><div id="comment_4408563" class="comentario coment_id_33">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="djcochikol" href="?action=profile;user=djcochikol">
+<img id="error_avatar" src="https://i.imgur.com/fmLp5.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1734115" href="?action=profile;user=djcochikol">djcochikol</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454522847" title="03/02/2016 a las 18:07 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+aver si no me rega?
+</div>
+</div>
+</div>
+</div><div id="comment_4408570" class="comentario coment_id_34">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="kkamuss" href="?action=profile;user=kkamuss">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-UVuDE27AzKw/U8gR6NdoC-I/AAAAAAAAAfE/aAETYw86cHI/s1600/camus106mt2ws.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1590412" href="?action=profile;user=kkamuss">kkamuss</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454523158" title="03/02/2016 a las 18:12 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0 espero q m puedas ayudar a recuperar mi pasword porfa, ya t habia mandado un mp y no se si lo leiste pero es q cambie mi pasword cuando estaban los robos de cuentas y lo olvide y formatie la pc q uso siempre y ahora solo m queda abierta la cuenta en esta pc vieja q nunca uso y queria ver si m ayudas a recuperar el password porfa <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408582" class="comentario coment_id_35">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Mechnos1" href="?action=profile;user=Mechnos1">
+<img id="error_avatar" src="http://fotos.subefotos.com/ac734eb64d7331ed4d4098ac8fc5d744o.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1948878" href="?action=profile;user=Mechnos1">Mechnos1</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454523647" title="03/02/2016 a las 18:20 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+S?
+</div>
+</div>
+</div>
+</div><div id="comment_4408593" class="comentario coment_id_36">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Ale6921" href="?action=profile;user=Ale6921">
+<img id="error_avatar" src="http://a11.t26.net/avatares/1/9/1/9/120_1919544.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1575399" href="?action=profile;user=Ale6921">Ale6921</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454523907" title="03/02/2016 a las 18:25 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Shadow729: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><b>Para aquellos usuarios que se quejan de tener un internet lento les recuerdo que ustedes no necesariamente deben subir archivos pesados, se puede subir archivos livianos como libros, revistas, pueden hacer tutoriales de cualquier cosa interesante y as?</b></div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4408594" class="comentario coment_id_37">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CesarAP" href="?action=profile;user=CesarAP">
+<img id="error_avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQKZoWAN5_xOvt3hD6AmTqe5P1Z1uTzMhK5w&amp;usqp=CAU" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1719809" href="?action=profile;user=CesarAP">CesarAP</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454523955" title="03/02/2016 a las 18:25 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Entonces los post con enlaces bloqueados usando (hide) no funcionan con noref verdad? <br /><br />A noref se le estar?
+</div>
+</div>
+</div>
+</div><div id="comment_4408605" class="comentario coment_id_38">
+<div class="clearfix comment-box is-staff ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Admin" href="?action=profile;user=Admin">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-W_tIB2WO_kY/W3x-jlOvN0I/AAAAAAAADhA/0DGpmd-ezSIyiIbz7RlauFbBb_ZI3O38QCEwYBhgL/s640/avatarkhazB.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2" href="?action=profile;user=Admin">Admin</a> - Administrador<span> - <a rel="nofollow" class="addtipsy_s" ts="1454524275" title="03/02/2016 a las 18:31 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1590412" href="https://identi.io/index.php?action=profile&user=kkamuss" class="mensiones_identi">@kkamuss</a> grave problema amigo, las pass de los usuarios estan encriptadas en la BD y no son visible ni para mi. <img src="https://identi.io/Smileys/default/icon_sad.png" alt="" border="0" /> <br /><br /><blockquote><div class="cita">Cita Ale6921: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><b>Parece que hay algo que no entend?</b></div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4408606" class="comentario coment_id_39">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="angelvc" href="?action=profile;user=angelvc">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1947755" href="?action=profile;user=angelvc">angelvc</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454524329" title="03/02/2016 a las 18:32 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Hace algun tiempo ubo un problema con la pagina de identi y muchos de los uploaders viejos perdimos todos los post que habiamos subido, y otros como yo perdimos el usuario y la contrase?
+</div>
+</div>
+</div>
+</div><div id="comment_4408611" class="comentario coment_id_40">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="wolfenrir" href="?action=profile;user=wolfenrir">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1686169" href="?action=profile;user=wolfenrir">wolfenrir</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454524586" title="03/02/2016 a las 18:36 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Yo me inscribi ase mucho pero no usaba mi cuenta TT
+</div>
+</div>
+</div>
+</div><div id="comment_4408615" class="comentario coment_id_41">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="xperia92.." href="?action=profile;user=xperia92..">
+<img id="error_avatar" src="http://fotos.subefotos.com/8b1969fed9cc7a928073f1385e46ca1fo.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1943997" href="?action=profile;user=xperia92..">xperia92..</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454524812" title="03/02/2016 a las 18:40 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Agregaste hide tag &nbsp;<img src="https://identi.io/Smileys/default/icon_surprised.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408626" class="comentario coment_id_42">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Sajo_New" href="?action=profile;user=Sajo_New">
+<img id="error_avatar" src="https://images2.imgbox.com/3b/f3/WjScQpxj_o.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1892897" href="?action=profile;user=Sajo_New">Sajo_New</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454525239" title="03/02/2016 a las 18:47 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0 Saludos amigo, te cuento que este nuevo metodo no sirve para que dejen de robar las aporte, ya que revise un post de aca que habia sido copiado y este tenia proteccion, y los links se pueden ver si problemas...osea que seguimos en las misma...una pinche pagina que se hace famosa robando aportes de Identi. <img src="https://identi.io/Smileys/default/icon_mad.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408629" class="comentario coment_id_43">
+<div class="clearfix comment-box is-staff ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Admin" href="?action=profile;user=Admin">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-W_tIB2WO_kY/W3x-jlOvN0I/AAAAAAAADhA/0DGpmd-ezSIyiIbz7RlauFbBb_ZI3O38QCEwYBhgL/s640/avatarkhazB.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2" href="?action=profile;user=Admin">Admin</a> - Administrador<span> - <a rel="nofollow" class="addtipsy_s" ts="1454525308" title="03/02/2016 a las 18:48 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1892897" href="https://identi.io/index.php?action=profile&user=Sajo_New" class="mensiones_identi">@Sajo_New</a> Si claro, pero ahora hace falta estar logueado en identi para ver esos post, y podemos juntar estadisticas de estos usuarios logueados para expulsar a los malos <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408631" class="comentario coment_id_44">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rino" href="?action=profile;user=rino">
+<img id="error_avatar" src="http://media3.giphy.com/media/13EgsbsNCLHXJm/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="80222" href="?action=profile;user=rino">rino</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454525367" title="03/02/2016 a las 18:49 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img id="img_post" src="http://i.imgbox.com/M6Brq6kO.jpg" border="0">
+</div>
+</div>
+</div>
+</div><div id="comment_4408635" class="comentario coment_id_45">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Mega89" href="?action=profile;user=Mega89">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1948681" href="?action=profile;user=Mega89">Mega89</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454525731" title="03/02/2016 a las 18:55 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0 <br />Si usamos el primer metodo, deberian de estar siempre abiertos los registros, hay muchas personas que se crean muchas cuentas, no se me hace mala idea, pero en ese caso preferiria que se cerraran los link y para poder verlos dejar puntos y/o comentar
+</div>
+</div>
+</div>
+</div><div id="comment_4408646" class="comentario coment_id_46">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlosja" href="?action=profile;user=carlosja">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98435" href="?action=profile;user=carlosja">carlosja</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454526038" title="03/02/2016 a las 19:00 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Hola esto es principalmente para los que dicen que es discriminar..tampoco esta bueno hacer un post y ver que tiene 800 descargas y ning?
+</div>
+</div>
+</div>
+</div><div id="comment_4408661" class="comentario coment_id_47">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlosja" href="?action=profile;user=carlosja">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98435" href="?action=profile;user=carlosja">carlosja</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454526610" title="03/02/2016 a las 19:10 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="80222" href="https://identi.io/index.php?action=profile&user=rino" class="mensiones_identi">@rino</a> amigo como lo hiciste para proteger tambi?
+</div>
+</div>
+</div>
+</div><div id="comment_4408682" class="comentario coment_id_48">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ddrahcircc" href="?action=profile;user=ddrahcircc">
+<img id="error_avatar" src="https://i.ytimg.com/vi/-lLj0de975w/hqdefault.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1899709" href="?action=profile;user=ddrahcircc">ddrahcircc</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454527543" title="03/02/2016 a las 19:25 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+pensado en los que suben pero no para los visitantes promedio...me huele a estrategia para que mega descargo tenga mas visitantes
+</div>
+</div>
+</div>
+</div><div id="comment_4408700" class="comentario coment_id_49">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rael" href="?action=profile;user=rael">
+<img id="error_avatar" src="https://es.gravatar.com/userimage/98781557/4f33d61e6c18980d3c3e75459a8893c4.jpeg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="59728" href="?action=profile;user=rael">rael</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454528289" title="03/02/2016 a las 19:38 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> Creo que es UNA GRAN PORQUERIA, en donde quedo el pensamiento &quot;Descargas Libres para Todos&quot;, creo que el tema ya no es Compartir... si no Acumular puntos y comentarios..... Tanto Ego <img src="https://identi.io/Smileys/default/icon_mrgreen.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_mrgreen.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_mrgreen.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408701" class="comentario coment_id_50">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="educap" href="?action=profile;user=educap">
+<img id="error_avatar" src="https://k60.kn3.net/B0D204CA0.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="87016" href="?action=profile;user=educap">educap</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454528324" title="03/02/2016 a las 19:38 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+2 cosas que no me gustan:<br />1) Para bloquear visitantes sin cuenta habria que habrir el registro, sino es como hacer de identi una pagina de usuarios privados.<br />2) No habria que limitar descargas por rango, no veo que se logra con eso; supuestamente identi es descargas sin limites. En tonces pasariamos a ser descargas con limites
+</div>
+</div>
+</div>
+</div><div id="comment_4408702" class="comentario coment_id_51">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rino" href="?action=profile;user=rino">
+<img id="error_avatar" src="http://media3.giphy.com/media/13EgsbsNCLHXJm/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="80222" href="?action=profile;user=rino">rino</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454528326" title="03/02/2016 a las 19:38 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="98435" href="https://identi.io/index.php?action=profile&user=carlosja" class="mensiones_identi">@carlosja</a> como dice en el post [*hide3][*links][*/links][*/hide3]
+</div>
+</div>
+</div>
+</div><div id="comment_4408711" class="comentario coment_id_52">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="educap" href="?action=profile;user=educap">
+<img id="error_avatar" src="https://k60.kn3.net/B0D204CA0.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="87016" href="?action=profile;user=educap">educap</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454528719" title="03/02/2016 a las 19:45 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Aunque el segundo caso alentar?
+</div>
+</div>
+</div>
+</div><div id="comment_4408713" class="comentario coment_id_53">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rael" href="?action=profile;user=rael">
+<img id="error_avatar" src="https://es.gravatar.com/userimage/98781557/4f33d61e6c18980d3c3e75459a8893c4.jpeg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="59728" href="?action=profile;user=rael">rael</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454528731" title="03/02/2016 a las 19:45 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="87016" href="https://identi.io/index.php?action=profile&user=educap" class="mensiones_identi">@educap</a> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408716" class="comentario coment_id_54">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlosja" href="?action=profile;user=carlosja">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98435" href="?action=profile;user=carlosja">carlosja</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454528745" title="03/02/2016 a las 19:45 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="80222" href="https://identi.io/index.php?action=profile&user=rino" class="mensiones_identi">@rino</a> amigo yo lo probe asi, pero me deja los link al descubierto.
+</div>
+</div>
+</div>
+</div><div id="comment_4408720" class="comentario coment_id_55">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="educap" href="?action=profile;user=educap">
+<img id="error_avatar" src="https://k60.kn3.net/B0D204CA0.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="87016" href="?action=profile;user=educap">educap</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454528820" title="03/02/2016 a las 19:47 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita rael: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> Creo que es UNA GRAN PORQUERIA, en donde quedo el pensamiento &quot;Descargas Libres para Todos&quot;, creo que el tema ya no es Compartir... si no Acumular puntos y comentarios..... Tanto Ego <img src="https://identi.io/Smileys/default/icon_mrgreen.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_mrgreen.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_mrgreen.png" alt="" border="0" /></div></blockquote>No creo que sea asi: esto es una idea del administrador de la pag., no de los usuarios.
+</div>
+</div>
+</div>
+</div><div id="comment_4408721" class="comentario coment_id_56">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="kkamuss" href="?action=profile;user=kkamuss">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-UVuDE27AzKw/U8gR6NdoC-I/AAAAAAAAAfE/aAETYw86cHI/s1600/camus106mt2ws.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1590412" href="?action=profile;user=kkamuss">kkamuss</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454528823" title="03/02/2016 a las 19:47 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0 alguna otra forma de solucionarlo? podria crear otra cuenta y q m des mi rango plis o algo q m pueda solucionar el problema y dar d baja esa cuenta
+</div>
+</div>
+</div>
+</div><div id="comment_4408740" class="comentario coment_id_57">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Drako365" href="?action=profile;user=Drako365">
+<img id="error_avatar" src="https://static.tvtropes.org/pmwiki/pub/images/arthur_morgan___red_dead_redemption_2.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1948713" href="?action=profile;user=Drako365">Drako365</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454529679" title="03/02/2016 a las 20:01 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Lo de registrarse para ver los links me parece muy buena opcion para que no cualquier persona entre y se robe todos los links <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /> Pero lo de bloquear los links para tal rango me parece algo tonto, ya que eso es ser discriminativo, sin ofender pero esto se vuelve un poco como taringa &nbsp;<img src="https://identi.io/Smileys/default/icon_sad.png" alt="" border="0" /> ahi necesitas tal rango para comentar,etc. Desde cuando identi se volvia un lugar discriminativo? &nbsp;<img src="https://identi.io/Smileys/default/icon_confused.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4408744" class="comentario coment_id_58">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="El_Rey12" href="?action=profile;user=El_Rey12">
+<img id="error_avatar" src="http://mineriaverde.net16.net/images/mortythemolewithshovelhjn4.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="89315" href="?action=profile;user=El_Rey12">El_Rey12</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454529854" title="03/02/2016 a las 20:04 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Siempre he subido mis enlaces protegidos con contrase?
+</div>
+</div>
+</div>
+</div><div id="comment_4408749" class="comentario coment_id_59">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="serdna1234" href="?action=profile;user=serdna1234">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1949734" href="?action=profile;user=serdna1234">serdna1234</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454529931" title="03/02/2016 a las 20:05 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0 <br />Ahora una consulta yo tenia algo de rango en mi cuenta pasada pero un dia ya no me dejo acceder a mi cuenta y hace poco cree esta nueva cuenta hay alguna solucion para rescatar mi antigua cuenta sin que me pida estar logueado
+</div>
+</div>
+</div>
+</div><div id="comment_4408800" class="comentario coment_id_60">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="999SYLAR" href="?action=profile;user=999SYLAR">
+<img id="error_avatar" src="http://heroeswiki.com/images/thumb/3/35/Sylar%27s_watch_face.jpg/250px-Sylar%27s_watch_face.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1540318" href="?action=profile;user=999SYLAR">999SYLAR</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454531952" title="03/02/2016 a las 20:39 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="89315" href="https://identi.io/index.php?action=profile&user=El_Rey12" class="mensiones_identi">@El_Rey12</a> puedes hacerlo con &nbsp;&quot;ETIQUETA HIDE2&quot; y usar &nbsp;noref.li &nbsp;ya que ahi si te deja usar a?
+</div>
+</div>
+</div>
+</div><div id="comment_4408806" class="comentario coment_id_61">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="999SYLAR" href="?action=profile;user=999SYLAR">
+<img id="error_avatar" src="http://heroeswiki.com/images/thumb/3/35/Sylar%27s_watch_face.jpg/250px-Sylar%27s_watch_face.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1540318" href="?action=profile;user=999SYLAR">999SYLAR</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454532378" title="03/02/2016 a las 20:46 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1948713" href="https://identi.io/index.php?action=profile&user=Drako365" class="mensiones_identi">@Drako365</a> tal vez es un poco discriminatorio,en lo particular, mis aportes solo lo van a poder ver usuarios registrados,pero tambien entiendo a aquellos que los bloquean a cierto rango,ya que es molesto que la mayoria solo pasen y descarguen o a?
+</div>
+</div>
+</div>
+</div><div id="comment_4408821" class="comentario coment_id_62">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Drako365" href="?action=profile;user=Drako365">
+<img id="error_avatar" src="https://static.tvtropes.org/pmwiki/pub/images/arthur_morgan___red_dead_redemption_2.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1948713" href="?action=profile;user=Drako365">Drako365</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454533566" title="03/02/2016 a las 21:06 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1540318" href="https://identi.io/index.php?action=profile&user=999SYLAR" class="mensiones_identi">@999SYLAR</a> Si eso es cierto te apoyo, yo pienso poner algunos post para usuarios no-registrados y unos para que solo los que esten registrados. Eso es una de las cosas que tiene de ventaja eso de los rangos ya que mi ultimo post ya tiene 1000 visitas creo yo o 950 algo asi, que del momento solo unos cuantos comentarios tiene que son mios, alguien solidario que me agradecio y alguien preguntandome si es buena la serie, los demas solo como que entraron, lo descargaron sin agradecerme, eso es algo malo que tiene el internet y aqui en identi, la gente no sabe valorar el trabajo de la gente <img src="https://identi.io/Smileys/default/icon_sad.png" alt="" border="0" /> , aaah pero cuando los links se caen &quot;chabon los links se cayeron una........... el post, resubilo&quot; y lo peor es cuando te roban un link sin siquiera dar creditos, lo bueno es que yo le pongo un INFO.txt al archivo aclarando que el archivo ha sido descargado unicamente desde aqui por mi, eso del bloqueo de rangos tiene su parte buena y mala.
+</div>
+</div>
+</div>
+</div><div id="comment_4408880" class="comentario coment_id_63">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="socomix2" href="?action=profile;user=socomix2">
+<img id="error_avatar" src="https://fotos.subefotos.com/82d98ca1c0e2a43bdd1e4d0c2ebbd84ao.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="52847" href="?action=profile;user=socomix2">socomix2</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454534850" title="03/02/2016 a las 21:27 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Interesante implementaci?
+</div>
+</div>
+</div>
+</div><div id="comment_4408951" class="comentario coment_id_64">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="CesarAP" href="?action=profile;user=CesarAP">
+<img id="error_avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQKZoWAN5_xOvt3hD6AmTqe5P1Z1uTzMhK5w&amp;usqp=CAU" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1719809" href="?action=profile;user=CesarAP">CesarAP</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454537203" title="03/02/2016 a las 22:06 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+les comento que mis sospechas son ciertas, en megadescargas se pasan por los hue... este &quot;sistema de seguridad&quot; pues ah?
+</div>
+</div>
+</div>
+</div><div id="comment_4408967" class="comentario coment_id_65">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="KeviN_NeiL" href="?action=profile;user=KeviN_NeiL">
+<img id="error_avatar" src="http://ist3-1.filesor.com/pimpandhost.com/1/3/5/1/135123/3/f/l/4/3fl4X/1445098660130.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1559563" href="?action=profile;user=KeviN_NeiL">KeviN_NeiL</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454537655" title="03/02/2016 a las 22:14 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1719809" href="https://identi.io/index.php?action=profile&user=CesarAP" class="mensiones_identi">@CesarAP</a> Cierto, tambi?
+</div>
+</div>
+</div>
+</div><div id="comment_4409027" class="comentario coment_id_66">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="SALAGUIN7K" href="?action=profile;user=SALAGUIN7K">
+<img id="error_avatar" src="https://i.ibb.co/5vw6tYM/56616325-2658279117532535-62362684619751424-n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1882198" href="?action=profile;user=SALAGUIN7K">SALAGUIN7K</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454539028" title="03/02/2016 a las 22:37 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+parece bien pero basta con el registro pero ni modo a esforzarse por un rango creo que yop &nbsp;no &nbsp; no hago post de calidad de los que hay que hacer para llegar a hacer starter &nbsp;seria novato para siempre hacer copypaste no va para mi de otro fue la idea en fin querian que ya no nos robaran los links a tomar lo que haiga y se permita &nbsp;<img src="https://identi.io/Smileys/default/icon_razz.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4409045" class="comentario coment_id_67">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="zamora07" href="?action=profile;user=zamora07">
+<img id="error_avatar" src="http://blogs.coventrytelegraph.net/thegeekfiles/Lobo%20artwork.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="108117" href="?action=profile;user=zamora07">zamora07</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454539711" title="03/02/2016 a las 22:48 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+soy registrado y la pagina me ha echo muy feliz, pero me entristece estas trabas ya entiendo el porque de comentarios ofensivos que lei en ciertos post....<br />lastima
+</div>
+</div>
+</div>
+</div><div id="comment_4409130" class="comentario coment_id_68">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Claudios94" href="?action=profile;user=Claudios94">
+<img id="error_avatar" src="http://funkyimg.com/i/2EEMv.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1925950" href="?action=profile;user=Claudios94">Claudios94</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454542797" title="03/02/2016 a las 23:39 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+No le veo nada de malo, esta muy bien la nueva funci?
+</div>
+</div>
+</div>
+</div><div id="comment_4409134" class="comentario coment_id_69">
+<div class="clearfix comment-box is-staff ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Admin" href="?action=profile;user=Admin">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-W_tIB2WO_kY/W3x-jlOvN0I/AAAAAAAADhA/0DGpmd-ezSIyiIbz7RlauFbBb_ZI3O38QCEwYBhgL/s640/avatarkhazB.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2" href="?action=profile;user=Admin">Admin</a> - Administrador<span> - <a rel="nofollow" class="addtipsy_s" ts="1454542924" title="03/02/2016 a las 23:42 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1925950" href="https://identi.io/index.php?action=profile&user=Claudios94" class="mensiones_identi">@Claudios94</a> Claro, cada uno es libre de proteger sus post o no, que para eso los creo su autor! &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4409186" class="comentario coment_id_70">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlosja" href="?action=profile;user=carlosja">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98435" href="?action=profile;user=carlosja">carlosja</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454544844" title="04/02/2016 a las 0:14 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@@SeRuJi0 holaaaa todavia no se puede implementar con jd?? y si no es asi,podras avisar en un comunicado a toda la sociedad de identi con un sticky, ya estoy cansado de entrar por si hay alguna novedad.. <img src="https://identi.io/Smileys/default/icon_sad.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_razz.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4409187" class="comentario coment_id_71">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlosja" href="?action=profile;user=carlosja">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98435" href="?action=profile;user=carlosja">carlosja</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454544875" title="04/02/2016 a las 0:14 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0
+</div>
+</div>
+</div>
+</div><div id="comment_4409189" class="comentario coment_id_72">
+<div class="clearfix comment-box is-staff ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Admin" href="?action=profile;user=Admin">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-W_tIB2WO_kY/W3x-jlOvN0I/AAAAAAAADhA/0DGpmd-ezSIyiIbz7RlauFbBb_ZI3O38QCEwYBhgL/s640/avatarkhazB.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2" href="?action=profile;user=Admin">Admin</a> - Administrador<span> - <a rel="nofollow" class="addtipsy_s" ts="1454544940" title="04/02/2016 a las 0:15 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="98435" href="https://identi.io/index.php?action=profile&user=carlosja" class="mensiones_identi">@carlosja</a> Estaremos metiendo cosillas aun, pero de momento no se decirte que es lo vendra.
+</div>
+</div>
+</div>
+</div><div id="comment_4409202" class="comentario coment_id_73">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlosja" href="?action=profile;user=carlosja">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="98435" href="?action=profile;user=carlosja">carlosja</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454545336" title="04/02/2016 a las 0:22 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0 Listo capo!! muchisimas gracias..esperaremos! y disculpa las molestias. &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4409301" class="comentario coment_id_74">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="floxetina" href="?action=profile;user=floxetina">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-oGzjZM3fbg0/WvAx6itz8eI/AAAAAAAABDA/TrzXn-IE-W0ZswWgqIAiijkCl6OdGiUwACLcBGAs/s1600/ibs0f_WG7kxq_Mmg.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="113532" href="?action=profile;user=floxetina">floxetina</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454547946" title="04/02/2016 a las 1:05 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0 Primero se quejan de que roban sus post y que cualquier novato nos espanea toda la tarde.Ahora implementas medidas drasticas y se lo toman como si fueses un tirano dictador...Te felicito con esto damos un paso adelante....<br />Primero las descargas!!!!!.
+</div>
+</div>
+</div>
+</div><div id="comment_4409304" class="comentario coment_id_75">
+<div class="clearfix comment-box is-staff ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Admin" href="?action=profile;user=Admin">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-W_tIB2WO_kY/W3x-jlOvN0I/AAAAAAAADhA/0DGpmd-ezSIyiIbz7RlauFbBb_ZI3O38QCEwYBhgL/s640/avatarkhazB.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2" href="?action=profile;user=Admin">Admin</a> - Administrador<span> - <a rel="nofollow" class="addtipsy_s" ts="1454548049" title="04/02/2016 a las 1:07 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="113532" href="https://identi.io/index.php?action=profile&user=floxetina" class="mensiones_identi">@floxetina</a> jeje bueno eso paso desde siempre, demasiados usuario como para que todos estemos contentos &nbsp;<img src="https://identi.io/Smileys/default/icon_razz.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4409319" class="comentario coment_id_76">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="MrPunkskap" href="?action=profile;user=MrPunkskap">
+<img id="error_avatar" src="https://bp3.blogger.com/_2CnQWIZQ3NY/Rw7R-XWmYVI/AAAAAAAAAN4/B8dnuU2mxJc/s320/Adicts.bmp" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1553169" href="?action=profile;user=MrPunkskap">MrPunkskap</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454548537" title="04/02/2016 a las 1:15 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Me parece buena la idea jeje, en parte para proteger los enlaces,<br />Yo no creo utilizarla ya que no me parece justo que usuarios de rangos bajos quieran descargar y no puedan, se supone que la idea es compartir, y con esto se crea una elite de usarios jaja, algo asi como usuarios vip. aunque si , si son usuarios de rangos altos es por algo jeje, Pero bueno , veamos como le va a esta funcion
+</div>
+</div>
+</div>
+</div><div id="comment_4409321" class="comentario coment_id_77">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ByAlbis" href="?action=profile;user=ByAlbis">
+<img id="error_avatar" src="http://fotos.subefotos.com/aba07c090af918d6220d48162d876b1bo.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1909954" href="?action=profile;user=ByAlbis">ByAlbis</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454548636" title="04/02/2016 a las 1:17 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Son muy buenas &nbsp;las nuevas carectisca!
+</div>
+</div>
+</div>
+</div><div id="comment_4409444" class="comentario coment_id_78">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="San_Martin" href="?action=profile;user=San_Martin">
+<img id="error_avatar" src="http://edant.clarin.com/diario/especiales/sanmartin/images/gr3_b.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1948409" href="?action=profile;user=San_Martin">San_Martin</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454553011" title="04/02/2016 a las 2:30 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0 campe?
+</div>
+</div>
+</div>
+</div><div id="comment_4409583" class="comentario coment_id_79">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="rino" href="?action=profile;user=rino">
+<img id="error_avatar" src="http://media3.giphy.com/media/13EgsbsNCLHXJm/giphy.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="80222" href="?action=profile;user=rino">rino</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454558329" title="04/02/2016 a las 3:58 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+puse [hide3][links] y mis link no salen protegidos en mega-mierd4 <br /><br /><img id="img_post" src="http://i.imgbox.com/0i5WhmQL.png" border="0">
+</div>
+</div>
+</div>
+</div><div id="comment_4409614" class="comentario coment_id_80">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Draghon" href="?action=profile;user=Draghon">
+<img id="error_avatar" src="https://lh3.googleusercontent.com/-Duh3f2JuKDs/VIk7Ff0Z-RI/AAAAAAAAAFM/mL_4E92xqCI/s500-no/avatar.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1686591" href="?action=profile;user=Draghon">Draghon</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454559625" title="04/02/2016 a las 4:20 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Hola, saludos a todos.<br />En mi humilde opini?
+</div>
+</div>
+</div>
+</div><div id="comment_4409628" class="comentario coment_id_81">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Ale6921" href="?action=profile;user=Ale6921">
+<img id="error_avatar" src="http://a11.t26.net/avatares/1/9/1/9/120_1919544.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1575399" href="?action=profile;user=Ale6921">Ale6921</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454560600" title="04/02/2016 a las 4:36 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="80222" href="https://identi.io/index.php?action=profile&user=rino" class="mensiones_identi">@rino</a> . . . ?
+</div>
+</div>
+</div>
+</div><div id="comment_4409639" class="comentario coment_id_82">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="16Ziner" href="?action=profile;user=16Ziner">
+<img id="error_avatar" src="https://www.imagensn.com/images/2016/03/03/12745443_1560971817554289_660467325610478853_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1812340" href="?action=profile;user=16Ziner">16Ziner</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454561149" title="04/02/2016 a las 4:45 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy buena implementacion, los que se quejan son los usuarios que no comparten nada, ellos deben creer que es tan f?
+</div>
+</div>
+</div>
+</div><div id="comment_4409701" class="comentario coment_id_83">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="abrahamrem" href="?action=profile;user=abrahamrem">
+<img id="error_avatar" src="http://thumbs.subefotos.com/aeb18aa9248c27fc4855f7ae71b161d3o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1821602" href="?action=profile;user=abrahamrem">abrahamrem</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454564413" title="04/02/2016 a las 5:40 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+se escucha interesante solo que tengo que llegar a un nivel mucho mas alto ahora &nbsp;<img src="https://identi.io/Smileys/default/icon_redface.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_rolleyes.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /> spero llegar con lo las cosas que posteare :v arriba Identi !!
+</div>
+</div>
+</div>
+</div><div id="comment_4409707" class="comentario coment_id_84">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="animus00" href="?action=profile;user=animus00">
+<img id="error_avatar" src="http://img09.deviantart.net/c45e/i/2010/333/a/4/animus_logo_by_orion1349-d33vmax.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1901428" href="?action=profile;user=animus00">animus00</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454564824" title="04/02/2016 a las 5:47 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+amigo necesito un video tutorial porque estoy haciendo los pasos y no me funciona lo estoy haciendo con un archivo mega
+</div>
+</div>
+</div>
+</div><div id="comment_4409737" class="comentario coment_id_85">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="PichoLetra" href="?action=profile;user=PichoLetra">
+<img id="error_avatar" src="https://i.imgur.com/0qVncIn.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1735443" href="?action=profile;user=PichoLetra">PichoLetra</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454566631" title="04/02/2016 a las 6:17 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0 Noo entiendo Boy a crear un post y no deja tengo que subir de rango, ?
+</div>
+</div>
+</div>
+</div><div id="comment_4409741" class="comentario coment_id_86">
+<div class="clearfix comment-box is-staff ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Admin" href="?action=profile;user=Admin">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-W_tIB2WO_kY/W3x-jlOvN0I/AAAAAAAADhA/0DGpmd-ezSIyiIbz7RlauFbBb_ZI3O38QCEwYBhgL/s640/avatarkhazB.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="2" href="?action=profile;user=Admin">Admin</a> - Administrador<span> - <a rel="nofollow" class="addtipsy_s" ts="1454566783" title="04/02/2016 a las 6:19 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="80222" href="https://identi.io/index.php?action=profile&user=rino" class="mensiones_identi">@rino</a> para eso debes usar <a href="http://noref.li/index.php" target="_blank" rel="nofollow">http://noref.li/index.php</a> y no saldran
+</div>
+</div>
+</div>
+</div><div id="comment_4409763" class="comentario coment_id_87">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="chavi_97" href="?action=profile;user=chavi_97">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1785355" href="?action=profile;user=chavi_97">chavi_97</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454569001" title="04/02/2016 a las 6:56 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Soy Novato, Pero llevo muchos a?
+</div>
+</div>
+</div>
+</div><div id="comment_4409785" class="comentario coment_id_88">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Tranaxium" href="?action=profile;user=Tranaxium">
+<img id="error_avatar" src="https://fotos.subefotos.com/0870d2b08f7e978e53c8c98f9a64a8d3o.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1553006" href="?action=profile;user=Tranaxium">Tranaxium</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454572542" title="04/02/2016 a las 7:55 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Con el perdon de todos pero a las personas como <a usuario="1785355" href="https://identi.io/index.php?action=profile&user=chavi_97" class="mensiones_identi">@chavi_97</a> y mi persona nos dejan por fuera, yo en lo personal descargo peliculas para conpartir los fines de semana con mis hijos en casa y no dispongo del tiempo para dedicarme a subir de rango y mantenerme en el mismo, seria recomendable buscaran soluciones a los problemas sin generar problemas nuevos por favor sin animos de retorica tomen esta observacion en cuenta Gracias.
+</div>
+</div>
+</div>
+</div><div id="comment_4409800" class="comentario coment_id_89">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="arman_88" href="?action=profile;user=arman_88">
+<img id="error_avatar" src="https://lh3.googleusercontent.com/-TOEV529eu28/UKJxSOzQagI/AAAAAAAAADY/3ZnePZW5-Uk/s259/da.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="103536" href="?action=profile;user=arman_88">arman_88</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454574555" title="04/02/2016 a las 8:29 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+por eso identi va en decadencia... me voy. &nbsp;<img src="https://identi.io/Smileys/default/icon_mad.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4409816" class="comentario coment_id_90">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ferboy007" href="?action=profile;user=ferboy007">
+<img id="error_avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdJQ-FBFIHd7AIz3fUPPuSdxCQoiNWv1BKcDx3JFLbH6XvG2eYS-I00QeQHeuT1QhpjzBzVAXQMkYTLAFGmZbYOAMZ-jY6jv5fLccQ5bdAhYoWmELD4KDT6EutRjU94HxNQqQOcYa0o9il0PDo5pawm1ZkxYuB5KCSoVNWNNRNZL7AeT73O1sum1e04tY/s1600/" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="35616" href="?action=profile;user=ferboy007">ferboy007</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454576804" title="04/02/2016 a las 9:06 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="103536" href="https://identi.io/index.php?action=profile&user=arman_88" class="mensiones_identi">@arman_88</a> otra vez tu x aca XDD , ya vete de una buena vez &nbsp;<img src="https://identi.io/Smileys/default/icon_mad.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_mad.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_mad.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_mad.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_mad.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_mad.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_mrgreen.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4409827" class="comentario coment_id_91">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="sitio b" href="?action=profile;user=sitio b">
+<img id="error_avatar" src="http://fotos.subefotos.com/c7503e1ea36a8f3b8b02f9af5122f55eo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="51411" href="?action=profile;user=sitio b">sitio b</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454578129" title="04/02/2016 a las 9:28 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Bloquear a todos los usuarios no registrados, no logueados se comprende (no lo respaldo) pero en lo demas estoy completamente en desacuerdo lo considero discriminatorio y no va con la naturaleza de IDENTI &nbsp;<img src="https://identi.io/Smileys/default/icon_sad.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4409888" class="comentario coment_id_92">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="gambe_2" href="?action=profile;user=gambe_2">
+<img id="error_avatar" src="http://thumbs.subefotos.com/0742903cd3a71610960eab9233137494o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1940805" href="?action=profile;user=gambe_2">gambe_2</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454596506" title="04/02/2016 a las 14:35 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+probe y no me funciona, quedan los enlaces visibles
+</div>
+</div>
+</div>
+</div><div id="comment_4409925" class="comentario coment_id_93">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Claudios94" href="?action=profile;user=Claudios94">
+<img id="error_avatar" src="http://funkyimg.com/i/2EEMv.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1925950" href="?action=profile;user=Claudios94">Claudios94</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454598036" title="04/02/2016 a las 15:00 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Se ve que todavia no entienden que esto es <b>opcional</b>, cada <b>usuario</b> elige si proteger o no sus links, esto no tiene nada que ver con identi (general), es solo una opci?
+</div>
+</div>
+</div>
+</div><div id="comment_4409928" class="comentario coment_id_94">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Janos" href="?action=profile;user=Janos">
+<img id="error_avatar" src="http://static.comicvine.com/uploads/original/11/115679/2458959-2159515-darth_malgus_armor.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="93759" href="?action=profile;user=Janos">Janos</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454598147" title="04/02/2016 a las 15:02 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias @SeRuJi0 hace a?
+</div>
+</div>
+</div>
+</div><div id="comment_4409946" class="comentario coment_id_95">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="zamora07" href="?action=profile;user=zamora07">
+<img id="error_avatar" src="http://blogs.coventrytelegraph.net/thegeekfiles/Lobo%20artwork.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="108117" href="?action=profile;user=zamora07">zamora07</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454598808" title="04/02/2016 a las 15:13 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+que cabeza los pilares de esta pagina, que mal analizaron esta decisi?
+</div>
+</div>
+</div>
+</div><div id="comment_4410018" class="comentario coment_id_96">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="davenger" href="?action=profile;user=davenger">
+<img id="error_avatar" src="http://img96.xooimage.com/files/e/a/f/daveget-3fcecfd.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="94666" href="?action=profile;user=davenger">davenger</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454601586" title="04/02/2016 a las 15:59 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+esta idea es buena, pero que creo que los nuevos deberian tener acceso por que asi comenzamos nosotros, aunke con un buen comentario y gracias seria suficiente, y les inspire a aportar y compartir sus propios archivos......otra cosa &nbsp;@SeRuJi0 &nbsp;con esta nueva modalidad se podran encriptar los enlaces en JD &nbsp;/JD ?????? &nbsp;por que me gustaria ocultar mis enlaces de otros usuarios asi como lo hacen ellos tambien ya que estan en su derecho &nbsp;por su trabajo de subirlos, ya que asi duran mas y no los publiquen en otras paginass como me ocurrio hace a?
+</div>
+</div>
+</div>
+</div><div id="comment_4410090" class="comentario coment_id_97">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ginoigno" href="?action=profile;user=ginoigno">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1679507" href="?action=profile;user=ginoigno">ginoigno</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454604203" title="04/02/2016 a las 16:43 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+ahora ya no puedo desargar que hago para ser starter, han olvidado que no en todos los pa?
+</div>
+</div>
+</div>
+</div><div id="comment_4410136" class="comentario coment_id_98">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="tute10901" href="?action=profile;user=tute10901">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1640457" href="?action=profile;user=tute10901">tute10901</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454605687" title="04/02/2016 a las 17:08 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+uhhh no voy poder ver nada
+</div>
+</div>
+</div>
+</div><div id="comment_4410779" class="comentario coment_id_99">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="cmdreamer" href="?action=profile;user=cmdreamer">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1771029" href="?action=profile;user=cmdreamer">cmdreamer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454625435" title="04/02/2016 a las 22:37 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Adi?
+</div>
+</div>
+</div>
+</div><div id="comment_4410795" class="comentario coment_id_100">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="miguel316" href="?action=profile;user=miguel316">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1555960" href="?action=profile;user=miguel316">miguel316</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454625722" title="04/02/2016 a las 22:42 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+alguien puede explicar porque no deja publicar temas nisquiera deja en la secciones q habilitaron como imagenes
+</div>
+</div>
+</div>
+</div><div id="comment_4411035" class="comentario coment_id_101">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="saga_666" href="?action=profile;user=saga_666">
+<img id="error_avatar" src="http://i.minus.com/ibaqG94tGDYdTB.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="10845" href="?action=profile;user=saga_666">saga_666</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454633000" title="05/02/2016 a las 0:43 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+hermoso deberian haber implementado esto hace a?
+</div>
+</div>
+</div>
+</div><div id="comment_4411246" class="comentario coment_id_102">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Bladeck" href="?action=profile;user=Bladeck">
+<img id="error_avatar" src="https://s-media-cache-ak0.pinimg.com/736x/79/3b/6f/793b6f2067a72866591863cc4e97aecf.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1911093" href="?action=profile;user=Bladeck">Bladeck</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454638314" title="05/02/2016 a las 2:11 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Ammm, espero que no me bannen por el comentario. Esta pagina es muy buena, demasiado buena. Como usuario &quot;nuevo&quot; no podr?
+</div>
+</div>
+</div>
+</div><div id="comment_4411666" class="comentario coment_id_103">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="casinotito" href="?action=profile;user=casinotito">
+<img id="error_avatar" src="http://i.imgur.com/qm1zmOg.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="5929" href="?action=profile;user=casinotito">casinotito</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454652608" title="05/02/2016 a las 6:10 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<b>la verdad es que hace mucho que soy usuario, tengo 56 a?</b>
+</div>
+</div>
+</div>
+</div><div id="comment_4413854" class="comentario coment_id_104">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Maxtor87" href="?action=profile;user=Maxtor87">
+<img id="error_avatar" src="http://fc07.deviantart.net/fs71/f/2010/260/7/0/dogs_of_hellsing_by_chaoshead10-d2yw6sj.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="58458" href="?action=profile;user=Maxtor87">Maxtor87</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454784681" title="06/02/2016 a las 18:51 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Como los links protegidos con JDownloader no se pueden ocultar los posts de uploaders como este servidor seguir?
+</div>
+</div>
+</div>
+</div><div id="comment_4413862" class="comentario coment_id_105">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Maxtor87" href="?action=profile;user=Maxtor87">
+<img id="error_avatar" src="http://fc07.deviantart.net/fs71/f/2010/260/7/0/dogs_of_hellsing_by_chaoshead10-d2yw6sj.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="58458" href="?action=profile;user=Maxtor87">Maxtor87</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454785108" title="06/02/2016 a las 18:58 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita Claudios94: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Se ve que todavia no entienden que esto es <b>opcional</b>, cada <b>usuario</b> elige si proteger o no sus links, esto no tiene nada que ver con identi (general), es solo una opci?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_4413900" class="comentario coment_id_106">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Enlinea" href="?action=profile;user=Enlinea">
+<img id="error_avatar" src="http://imgstocks.com/wp-content/uploads/2013/11/Fondos-de-pantalla-3d-la-estructura-la-luz-el-minimalismo-el-cubo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1898337" href="?action=profile;user=Enlinea">Enlinea</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454786705" title="06/02/2016 a las 19:25 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+@SeRuJi0 cerra el registro menos crap y mas aportes
+</div>
+</div>
+</div>
+</div><div id="comment_4413967" class="comentario coment_id_107">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ali2134" href="?action=profile;user=ali2134">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1940784" href="?action=profile;user=ali2134">ali2134</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1454789539" title="06/02/2016 a las 20:12 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+por que no puedo ver enlaces hide2 si soy starter?
+</div>
+</div>
+</div>
+</div><div id="comment_4421663" class="comentario coment_id_108">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Boleguer" href="?action=profile;user=Boleguer">
+<img id="error_avatar" src="http://www.unikgamer.com/characters/face/big-boss-264.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1781314" href="?action=profile;user=Boleguer">Boleguer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1455125949" title="10/02/2016 a las 17:39 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Con esto nos est?
+</div>
+</div>
+</div>
+</div><div id="comment_4471926" class="comentario coment_id_109">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Hitman_007" href="?action=profile;user=Hitman_007">
+<img id="error_avatar" src="http://orig00.deviantart.net/604b/f/2012/317/9/0/hitman_absolution_v4_by_griddark-d5kxdpm.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1943675" href="?action=profile;user=Hitman_007">Hitman_007</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1458036918" title="15/03/2016 a las 10:15 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Esto es lo mejor que le a pasado a identi desde que soy usuario registrado, solo por esto me dieron ganas de seguir publicando post, estaba tan arto y frustrado, ademas de enejado por todos los post que me fueron robados por esa paginuccha de mierda que roba todo lo que puede de identi, saben a quien me refiero.... Mi mas sincero reconocimiento y felicitaciones al staff de identi por hacer posible que el robo de post disminulla, aunque para mi gusto nesecita ser mas restrictivo en los rangos, pero en fin por algo se empieza y aqui han empezado con el pie derecho... <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4492811" class="comentario coment_id_110">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="lacolo256" href="?action=profile;user=lacolo256">
+<img id="error_avatar" src="http://gifsanimados.de/img-gifsanimados.de/e/estrellas/asun.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1704407" href="?action=profile;user=lacolo256">lacolo256</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1459573005" title="02/04/2016 a las 4:56 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Hola yo estoy registrada hace tiempo a la pagina ,no subo enlaces ni los robo solo descargo no entiendo nada de eso de los rangos me supongo que soy una novata que pasa con nosotros que siempre descargamos?? nos tenemos que despedir de poder disfrutar una peli o serie??? <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> me guataria una respuesta por respeto a los que elegimos esta pagina!!!
+</div>
+</div>
+</div>
+</div><div id="comment_4492813" class="comentario coment_id_111">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="T.Simpsons" href="?action=profile;user=T.Simpsons">
+<img id="error_avatar" src="http://www.aulaga.info/imagenes/Consumismo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1767796" href="?action=profile;user=T.Simpsons">T.Simpsons</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1459573186" title="02/04/2016 a las 4:59 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1704407" href="https://identi.io/index.php?action=profile&user=lacolo256" class="mensiones_identi">@lacolo256</a> muy poca gente usa este metodo. Y los que lo generalmente publ7can cosas que ya estan en identi sin esta proteccion
+</div>
+</div>
+</div>
+</div><div id="comment_4493348" class="comentario coment_id_112">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="hugogudino" href="?action=profile;user=hugogudino">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1824507" href="?action=profile;user=hugogudino">hugogudino</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1459667454" title="03/04/2016 a las 7:10 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+vueno que vueno por los que tienen $puntos lastima que muchos de nosotros no tenemos una conexion ni $recursos para comprar productos y compartir la unica opcion es darnos de baja i migrar a donde nos tomen encuenta a los de vajo rango suerte y muchas gracias por todo a todos <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4512586" class="comentario coment_id_113">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="blasthedog" href="?action=profile;user=blasthedog">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-06vct3xYefU/VkOqA7on45I/AAAAAAAAAEE/QoVR5I_owUE/s320/monsterdog.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="40693" href="?action=profile;user=blasthedog">blasthedog</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461112831" title="20/04/2016 a las 0:40 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Tiene algo que ver esto con que yo, que queria compartir la segunda temporada de Fear the Walking en Latino, no pueda compartir enlaces por no tener el rango necesario?? No entiendo, como tengo que hacer para subir de rango si no me dejan publicar nada?
+</div>
+</div>
+</div>
+</div><div id="comment_4512678" class="comentario coment_id_114">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="blasthedog" href="?action=profile;user=blasthedog">
+<img id="error_avatar" src="https://2.bp.blogspot.com/-06vct3xYefU/VkOqA7on45I/AAAAAAAAAEE/QoVR5I_owUE/s320/monsterdog.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="40693" href="?action=profile;user=blasthedog">blasthedog</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1461116755" title="20/04/2016 a las 1:45 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Tu rango no permite esto, tu rango no permite lo otro. Como voy a subir de rango si no puedo hacer nada para conseguirlo????<br />Es como cuando vas a buscar tu primer trabajo y en todos los avisos piden que seas joven y con amplia experiencia... como se supone que lograras la experiencia si no te dan la oportunidad de empezar? &nbsp;<img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_down.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4571379" class="comentario coment_id_115">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="JxAlan" href="?action=profile;user=JxAlan">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1849807" href="?action=profile;user=JxAlan">JxAlan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1468516771" title="14/07/2016 a las 17:19 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Señores necesito recuperar mi rango y puntos. Intento enviarles mensajes privados pero justo por eso mismo no me deja. Desde que se ha solucionado el tema de la pagina no he visto una recuperacion de mi cuenta (puntos y rangos) espero que se pueda solucionar. Slds
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_4.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949eea52d73dea7',t:'MTc2MTQ4MTQ4Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
