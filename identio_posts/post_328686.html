@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Conceptos básicos de Electrónica. - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Hola gente les dejo una pequeño apunte sobre electrónica que encontre en la web, que trata de los conceptos mas básicos e imprescidibles para adentrarse al mundo de los circuitos electrónicos. No..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='N2JPRk1IMVZuU0t5QTA3VTJGc2RHVmtYMStiRURTNzVVWE5zdlY3alZZc0tYYlJNdW5Vb0hXYTgwelI4b0lrNjZHMHVackZYOUxSZWlWbWU0bmEvS0pWeW56aFh1OHV1OWpUQ2c9PVUxdE9NcnFTUjk1WlVHSg==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761493029;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '41a5d632abdc3b8978f3c292374c45de');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_4.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Conceptos básicos de Electrónica." title="Identi - Conceptos básicos de Electrónica." align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '4453581f8a7f9d802bf139afb9114abb2779269f';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=RisuK90">RisuK90</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=RisuK90" title="Ir al Perfil de RisuK90"><img id="error_avatar" class="avatar" border="0" width="120" src="http://fc08.deviantart.net/fs70/f/2012/299/4/b/lok___raziel_clan_symbol_by_dasduriel-d5j25qn.png"/></a>
+<div class=" rango_sidebar clearfix">Mini Idento</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/minidento.png" title="Mini Idento" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1554726)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1554726');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">67</b> Seguidores</li>
+<li><b>433</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>55</b> Posts</li>
+<li><b>361</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Conceptos básicos de Electrónica.</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=328685';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=328687';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=427" alt="Apuntes y Educación" title="Apuntes y Educación">Apuntes y Educación</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 11 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_990713">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><font size="5" style="line-height: 1.3em;"><font size="3" style="line-height: 1.3em;">Hola gente les dejo una pequeño apunte sobre electrónica que encontre en la web, que trata de los conceptos mas básicos e imprescidibles para adentrarse al mundo de los circuitos electrónicos. No es de mi autoria, solo los dispuse en un orden para que se entendierá(o como a mi me parece mas comodo o mas claro). Hay muchisimas cosas, pero no entraría en un solo post. Vere si agrego algo mas en este espacio o sino realizaré otro post aparte(si tengo tiempo).  </font><span style="text-decoration: underline;"><b><br /><br />Teoremas y Leyes</b></span></font></div><br /><br /><div align="center"><font size="4" style="line-height: 1.3em;">Ley de Ohm<br /></font></div><br /><font size="3" style="line-height: 1.3em;">En los terminales de una batería existe la fuerza electromotriz (FEM) cuando no se toma corriente. Esta fuerza electromotriz, es considerada en ocasiones como una presión eléctrica y se debe a un sobrante de electrones en uno de los terminales, y a la falta de electrones en la otra. El sobrante y la falta de electrones, es causado por la acción química de la batería. En tanto por un lado exista exceso y por la otra falta de electrones habrá una atracción entre las cargas. </font><br /><font size="3" style="line-height: 1.3em;"><img id="img_post" src="http://laplace.us.es/wiki/images/thumb/6/69/Generador-circuito-abierto.png/400px-Generador-circuito-abierto.png" border="0"></font><br /><font size="3" style="line-height: 1.3em;"> En el momento oportuno, el exceso de electrones del terminal negativo se precipitará para combinarse con los átomos deficientes de electrones en el terminal positivo y se considera que dichos electrones están bajo presión. </font><br /><br /><font size="3" style="line-height: 1.3em;"><b>Pregunta: ¿Porqué los electrones no pasan por la batería y se combinan con los iones positivos(átomos deficientes de electrones)? </b></font><br /><br /><font size="3" style="line-height: 1.3em;">Porque los electrones y los iones se generan bajo presión y no pueden volver a la batería tanto como el agua que no puede retroceder a la bomba para igualar la presión creada por la misma. Así como el agua fluye por tuberías exteriores para neutralizar la presión de la bomba, también los electrones fluyen por los conductores para neutralizar los iones. </font><br /><br /><font size="3" style="line-height: 1.3em;"> Al recorrido que ofrecen los conductores a la corriente de la batería se le llama circuito. Cuando se conectan uno más conductores a la batería, pero sin completar el recorrido para que circulen los electrones, se le llama circuito abierto, por el contrario, si se completa el camino se le llama circuito cerrado, estos términos se aplican a cualquier fuente de fuerza electromotriz </font><br /><br /><font size="3" style="line-height: 1.3em;"> Cuando se conecta un conductor al terminal negativo de una fuente de fuerza electromotriz, el exceso de electrones se distribuye por sí mismo a los largo del conductor, y cuando se conecta al terminal positivo, los átomos se ionizan en el conductor, aunque el circuito no se complete(se cierre) los extremos de los conductores tienen exceso o falta de electrones. </font><br /><div align="center"><font size="3" style="line-height: 1.3em;"><img id="img_post" src="http://www.asifunciona.com/electrotecnia/ke_corriente_electrica/img_corriente_electrica/img_0007_01.gif" border="0"></font></div><br /><font size="3" style="line-height: 1.3em;">Si se aplica una fuente de fuerza electromotriz mayor la ionización será más completa. <br />&nbsp;La relación entre corriente y voltaje es un hecho, imaginemos nuevamente el circuito abierto. Si a una batería le conectamos un voltímetro(en paralelo con los terminales de la batería), un interruptor, un amperímetro(en serie con el circuito) y una resistencia, creamos un circuito(abierto). </font><br /><br /><font size="3" style="line-height: 1.3em;">En este caso el voltímetro indicará el voltaje de la batería, aún con el circuito abierto, en cambio el amperímetro indicará cero puesto que no circula corriente por el circuito, en tanto exista una diferencia de cargas en los terminales de la batería, existe un voltaje, esto puede definirse como una diferencia de potencial. <br />&nbsp;Ahora, cerramos el interruptor, lo cual nos da un circuito cerrado, el voltímetro seguirá indicando el voltaje y el voltaje en el interruptor será &quot;0&quot;; en este caso el amperímetro indicará la corriente que fluye por el circuito, obviamente cuando cerramos el circuito el voltaje tendrá una ligera caída por efecto de la resistencia interna de la batería, en algunos casos esta caída será insignificante. <br />&nbsp;</font><br /><br /><font size="3" style="line-height: 1.3em;">Cuando los electrones circulan por la resistencia tratan de agruparse en el lado por donde entran, esto significa que existen más electrones en el lado de la resistencia por donde entran, que por el lado donde salen existiendo en la resistencia un voltaje. </font><br /><br /><font size="3" style="line-height: 1.3em;">La polaridad del voltaje a través la resistencia se contrapone a la polaridad de la batería, dicho de otra manera, el voltaje en la resistencia se opone al voltaje de la batería, esto obedece a que el voltaje negativo de la resistencia trata de rechazar a los electrones de la batería. dado que el voltaje en la resistencia se establece por la circulación de corriente, no es posible para ese voltaje detener la circulación de corriente, si esto fuera posible, el voltaje en la resistencia sería &quot;0&quot; y la corriente de la batería no tendría oposición. </font><br /><br /><font size="3" style="line-height: 1.3em;">Si medimos el voltaje de la resistencia, el voltímetro indicaría exactamente el mismo que en los terminales de la batería. </font><br /><br /><div style="text-align: left;"><b><font size="4" style="line-height: 1.3em;">RELACION ENTRE VOLTAJE, CORRIENTE Y RESISTENCIA:</font></b></div><br />&nbsp;<font size="3" style="line-height: 1.3em;">Si se aplican 10 voltios a una resistencia de un ohmio en un circuito cerrado, fluye por el una corriente de 10 amperios los cuales se pueden medir con un amperímetro. La caída de voltaje en la resistencia es de 10 voltios, medidos con un voltímetro y es opuesto en polaridad al voltaje de la batería. <br />&nbsp;Si se aumenta el voltaje a 20 y la resistencia sigue siendo de 1 ohmio, esto es causa de una corriente de 20 amperios, mismos que fluirán por la resistencia. La caída de voltaje en la resistencia sigue siendo igual al voltaje de la batería, en este caso 20 voltios. <br />&nbsp;Otro ejemplo: Si mantenemos el voltaje en 20 voltios y aumentamos la resistencia a 5 ohmios, la corriente bajará a 4 amperios. A esta relación entre el voltaje, la corriente y la resistencia se le llama &quot;LEY DE OHM&quot;.</font><br /><div align="center"><font size="3" style="line-height: 1.3em;"><img id="img_post" src="http://www.aulataller.es/ejercicios/ley-de-ohm/leyOhm.jpg" border="0"></font></div><br /><b><font size="3" style="line-height: 1.3em;">LEY DE OHM: </font></b><br /><br /><div style="text-align: left;"> <font size="3" style="line-height: 1.3em;">En la ciencia, para producir un efecto debe existir una causa y como consecuencia, para producir un efecto la causa debe vencer la oposición presente. En electricidad esta regla se demuestra; la fuerza electromotriz es la causa, la corriente es el efecto y la oposición es la resistencia. La relación entre voltaje, corriente y resistencia se compara por analogía con un circuito eléctrico y uno hidráulico. Cuando se aumenta la fuerza electromotriz, se aumenta la corriente, entonces se dice que la corriente es directamente proporcional al voltaje(FEM), si aumentamos al doble el voltaje la corriente crecerá también el doble. También la corriente es inversamente proporcional a la resistencia, en este caso, si la resistencia se hace mayor, la corriente se hará menor. <br />&nbsp;Como se dio el ejemplo anteriormente, cuando la resistencia se aumento 5 veces la corriente bajo a una quinta parte. Resumiendo, decimos que la corriente es directamente proporcional al voltaje e inversamente proporcional a la resistencia, esta relación se expresa en la ecuación matemática siguiente:</font></div><br /><div style="text-align: left;"></div><br /><div style="text-align: left;"><b><font size="3" style="line-height: 1.3em;"> I (corriente o amperaje) es igual a E (voltaje) dividido R (resistencia en ohmios).</font></b></div><br /><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> Esta relación se conoce como ley de ohm porque fue desarrolada por el físico alemán Georg Simón Ohm ( 1787 - 1854 ). Esta ecuación fue hallada en el año de 1,827. <br />&nbsp;La ecuación anteriormente descrita nos sirve para hallar la corriente, si el voltaje y la resistencia se conocen, tomemos como ejemplo que tenemos 20 voltios ( E ) y un resistor de 5 ohmios ( R ) el resultado es 4 amperios ( I ). Si lo que queremos es hallar la resistencia, la ecuación es: R igual a E dividido I, o sea, 20 voltios dividido 4 amperios igual: 5 ohmios.</font></div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> </font></div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> Ahora bien, lo que queremos es hallar el voltaje, aquí usamos la ecuación siguiente:</font></div><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">E igual a I por R, o sea: 4 amperios por 5 ohmios igual: 20 voltios. </font></b></div><br /><div align="center"><img id="img_post" src="https://st-elf.electronicafacil.net/tutoriales/169/tabla_ohm.gif" border="0"></div><br /><div align="center"><img id="img_post" src="https://st-elf.electronicafacil.net/tutoriales/169/tabla_ohm1.gif" border="0"><br /><div style="text-align: left;"> </div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">El amperio se puede sub - dividir en: miliamperios(milésima parte de un amperio) y en microamperios(millonésima parte de un amperio). Los miliamperios se utilizan en la mayoría de los circuitos transistorizados. Los símbolos para miliamperios y microamperios son como siguen respectivamente: <b>mA - uA. </b></font></div><br /><br /><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">Los submúltiplos de intensidad de corriente pueden ser convertidos fácilmente a unidades mayores o menores. Así:</font></div><br /><br /><font size="3" style="line-height: 1.3em;"> <b>1 amperio = 1.000 miliamperios = 1.000.000 microamperios<br />&nbsp;(1 A = 1.000 ma = 1.000.000 µa)</b></font><br /><font size="3" style="line-height: 1.3em;">Por tanto para convertir de una unidad menor a otra inmediatamente mayor y viceversa, sólo hay que mover la coma decimal de 3 en 3 dígitos.</font><font size="3" style="line-height: 1.3em;">Por ejemplo, para convertir 100 miliamperios en amperios, se mueve la coma 3 lugares a la izquierda:</font><br /><br /><font size="3" style="line-height: 1.3em;"> </font><b><font size="3" style="line-height: 1.3em;">100,0 ma = 0,1 A</font></b><br /><br /><font size="3" style="line-height: 1.3em;"> Para convertir 0,5 amperios en miliamperios, se mueve la coma 3 lugares a la derecha:</font><b><font size="3" style="line-height: 1.3em;">0,5 A = 500 ma</font></b><br /><br /><font size="3" style="line-height: 1.3em;"> Para convertir 100 microamperios en miliamperios, se mueve la coma 3 lugares a la izquierda:</font><font size="3" style="line-height: 1.3em;"> <b>100,0 µa. = 0,1 ma</b></font><br /><br /><font size="3" style="line-height: 1.3em;"> Para convertir 2 miliamperios en microamperios, se mueve la coma 3 lugares a la derecha:</font><b><font size="3" style="line-height: 1.3em;">2,0 ma = 2.000 µa</font></b><br /><br /><font size="3" style="line-height: 1.3em;"> También podemos pasar de microamperios a amperios y viceversa, por ejemplo: para convertir 100 microamperios en amperios, se mueve la coma 6 lugares a la izquierda:</font><b><font size="3" style="line-height: 1.3em;">100,0 µa = 0,0001 A</font></b><br /><br /><font size="3" style="line-height: 1.3em;"> Para convertir 2 amperios en microamperios, se mueve la coma 6 lugares a la derecha:</font><b><font size="3" style="line-height: 1.3em;">2 A = 2.000.000 µa</font></b><br /><br /><font size="3" style="line-height: 1.3em;"> </font><font size="3" style="line-height: 1.3em;">Con el siguiente cuadro se puede hacer rápidamente una conversión de unidades de intensidad. Si deseamos convertir amperios en miliamperios, movemos la coma 3 lugares hacia la derecha; microamperios en miliamperios movemos 3 lugares hacia la izquierda; amperios en microamperios movemos 6 lugares hacia la derecha, etc.</font><br /><br /><br /><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> La resistencia es expresada en ohmios, un ohmio es la resistencia que presenta un circuito X donde un voltio hace circular un amperio de corriente. La otra forma de definir un ohmio está r una columna de mercurio puro de una sección transversal (grueso) de un milímetro cuadrado y de 106.3 centímetros de largo, a la temperatura de cero grados centígrados. En ohmio es muy pequeño para muchas mediciones en electrónica, por lo mismo en algunas resistencias se utilizan las palabras kilo (1000 ) y Mega ( 1,000,000 ). </font></div><br /><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">Medidas de resistencia</font></div><br /><br />&nbsp;<br /><div style="text-align: left;"> <font size="3" style="line-height: 1.3em;">La resistencia, u oposición al flujo de electrones en un conductor se puede medir. La unidad de resistencia eléctrica (R) es el ohmio, representada por la letra griega ?.</font></div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">Cuando estudiemos más adelante la ley de Ohm, trabajaremos con circuitos resistivos, donde los valores de resistencia, corriente y voltaje serán parámetros fundamentales en la resolución de problemas, tanto de corriente continua como de corriente alterna.</font></div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">Para entender qué es un ohmio, podemos relacionar su unidad con las otras dos unidades fundamentales en un circuito cerrado, el voltio y el amperio. Cuando un voltio produce una intensidad de corriente de un amperio, la resistencia es de un ohmio. Es decir, si a un circuito aplicamos una fuerza electromotriz de un voltio, y en el conductor se mide una corriente de 1 amperio, significa que el flujo de corriente está sufriendo una resistencia a su paso de 1 ohmio.</font></div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> </font></div><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">Unidades de resistencia</font></div><br /><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">En la mayoría de ocasiones los valores de resistencia se pueden medir y expresar en ohmios, pero en algunos casos es probable que se tengan que emplear múltiplos para medir resistencias de hasta varios millones de ohmios. En algunas aplicaciones especiales también puede ser necesario utilizar valores inferiores al ohmio, por lo que será necesario recurrir a submúltiplos.</font></div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">Los múltiplos utilizados en las medidas son el Kilohmio (K?, abreviado K), equivalente a 1.000 ohmios; y el megohmio (M?, abreviado M), equivalente a 1.000.000 de ohmios. Para valores inferiores a 1 ohmio se emplea el microhmio (µ?), equivalente a la millonésima parte de un ohmio.</font></div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> Para medir resistencias comprendidas entre 1.000 ohmios (1 K) y 1.000.000 de ohmios (1 M) se emplea el kilohmio.</font></div><br /><font size="3" style="line-height: 1.3em;"><br /><b>1 M? = 1.000.000 ? = 1.000 K?</b></font><b><font size="3" style="line-height: 1.3em;"><br />1 K? = 1.000 ? = 0,001 M?</font><font size="3" style="line-height: 1.3em;"><br />1 µ?= 0,000.001 ?</font></b><font size="3" style="line-height: 1.3em;"> </font><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">Conversión de unidades de resistencia</font></div><br /><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">En numerosas ocasiones, cuando se realizan las medidas, durante el diseño de circuitos o la resolución de problemas, nos veremos en la necesidad de realizar conversiones de unidades de resistencia:</font></div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> Para convertir kilohmios en ohmios, se mueve la coma decimal tres lugares a la derecha.</font></div><br /><font size="3" style="line-height: 1.3em;"> </font><font size="3" style="line-height: 1.3em;"> <b>10 K = 10.000 ?</b></font><br /><font size="3" style="line-height: 1.3em;"> </font><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> Para convertir ohmios en megohmios, se mueve la coma decimal seis lugares a la izquierda.</font></div><br /><font size="3" style="line-height: 1.3em;"> </font><font size="3" style="line-height: 1.3em;"> <b>500.000 ? = 0,5 M</b></font><br /><font size="3" style="line-height: 1.3em;"> </font><font size="3" style="line-height: 1.3em;"> Para convertir megohmios en ohmios, se mueve la coma decimal seis lugares a la derecha:</font><br /><font size="3" style="line-height: 1.3em;"> </font><font size="3" style="line-height: 1.3em;"> <b>1,5 M = 1.500.000 ?</b></font><br /><font size="3" style="line-height: 1.3em;"> </font><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> Para convertir ohmios en microhmios, se mueve la coma decimal seis lugares a la derecha.</font></div><br /><font size="3" style="line-height: 1.3em;"> </font><font size="3" style="line-height: 1.3em;"> <b>2,5 ? = 2.500.000 µ?</b></font><br /><font size="3" style="line-height: 1.3em;"> </font><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> Para convertir microhmios en ohmios, se mueve la coma decimal seis lugares a la izquierda.</font></div><br /><font size="3" style="line-height: 1.3em;"> </font><b><font size="3" style="line-height: 1.3em;">1.500.000 µ? = 1,5 ?</font></b><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> Para convertir ohmios en kilohmios, se mueve la coma decimal tres lugares a la izquierda:</font></div><br /><font size="3" style="line-height: 1.3em;"> </font><font size="3" style="line-height: 1.3em;"> <b>6500 ? = 6,5 K</b></font><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"><img id="img_post" src="https://3.bp.blogspot.com/_xpD6FLT6EaI/TAWhFd-SK2I/AAAAAAAAAB8/EuQDfl3IKM8/s1600/codigoc.png" border="0"></font></div><br /><font size="3" style="line-height: 1.3em;">Sitios Para calcular resistencias.</font><br /><font size="3" style="line-height: 1.3em;"><a href="http://www.pagaelpato.com/tecno/resistencias/resistencia.htm" target="_blank" rel="nofollow">1</a></font><br /><font size="3" style="line-height: 1.3em;"><a href="http://www.csgnetwork.com/resistcolcalc.html" target="_blank" rel="nofollow">2</a></font><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">Además se utiliza un código de colores para identificar el valor de estas, ya que un valor muy grande no cabría en el cuerpo de la resistencia, por ejemplo una resistencia de 1,000,000 ohmios (1 Mega-ohmio)tendría los colores: marrón - negro - verde.</font></div><br /></div><br /><img id="img_post" src="http://i2.minus.com/iKSMpSYh2NC5C.png" border="0"><br /><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">CIRCUITOS EN SERIE:</font></div><br /><div style="text-align: left;"> </div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">Hasta aquí se han hecho cálculos con una resistencia conectada en los terminales de la batería, en este caso nos preguntamos, ¿si hay más de una resistencia, como se aplica la ley de ohm?. Hay 3 maneras de conectar un resistor a un circuito: en serie, en paralelo y en serie - paralelo. Cada uno de estos métodos de conexión se usa en la práctica y depende del resultado deseado. En esta oportunidad se hablará del circuito en serie, cuando hablamos de un circuito en serie significa que las resistencias u otros componentes se conectan uno tras otro, para decirlo de otra forma, en fila.</font></div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> </font></div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> En la figura inferior se pueden ver 3 resistencias en serie conectados a una batería. En este caso la corriente que circula por una resistencia en serie debe circular por todos los demás, definido de esta forma se obtiene una regla importante: LA CORRIENTE DE TODAS LAS PARTES DE UN CIRCUITO EN SERIE ES IGUAL. Si se coloca un amperímetro entre R1 y R2, o bien R2 y R3, o entre la batería y R1, el instrumento indicará el mismo amperaje. <br />&nbsp;Como ya se dijo, la corriente eléctrica se mide en electrones por segundo, la corriente será siempre la misma en cualquier parte del circuito; aún puede existir alguna duda del lado por donde entran los electrones en la resistencia. Dada la oposición de la resistencia, los electrones se acumularán y su paso será lento, por lo mismo la proporción de la circulación de estos es la misma cantidad de electrones por segundo. En la figura se puede observar que la resistencia <b>total(Rt) es igual a: 500 + 200 + 300 = 1000 ohmios</b>. La corriente que circula y que está limitada por la resistencia total, según la ley de ohm, deducimos:<b> I = E dividido Rt = 100 dividido 1000 = a 0.1 amperio</b>. Esta es la corriente que circula en cada resistencia, Como cada resistencia tiene diferente valor, el voltaje en cada uno es diferente. En los siguiente cálculos se notará que se usa el símbolo &quot;V&quot; que equivale a la caída de voltaje, en otras palabras &quot;E&quot; lo definimos como el voltaje de la fuente(batería) y &quot;V&quot;, como la caída de voltaje. </font></div><br /><img id="img_post" src="https://st-elf.electronicafacil.net/tutoriales/169/serie%20ohm.gif" border="0"><br /><img id="img_post" src="https://st-elf.electronicafacil.net/tutoriales/169/voltajes%20ohm.gif" border="0"><br /><br /><div style="text-align: left;"> <font size="3" style="line-height: 1.3em;">Si observan los cálculos, notaremos que, aunque son diferentes los voltajes en cada resistencia, la suma de los voltajes de caída es igual al voltaje aplicado(E), ahora veamoslo en una ecuación matemática: E = V1 + V2 + V3, en números: 50 + 20 + 30 = 100 voltios.</font></div><br /><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">CIRCUITOS EN PARALELO</font></div><br /><div style="text-align: left;"> <font size="3" style="line-height: 1.3em;">Se ha explicado ya el cálculo de los circuitos en serie, ahora se hablará sobre los circuitos en paralelo, en estos como se podrá notar que existen algunas variantes con respecto a los circuitos en serie.</font></div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">En la figura se puede observar un circuito con 2 resistencias en paralelo. Los electrones que parten de la batería se dividen en 2 grupos, uno de los cuales circula por R1 y el otro por R2 pero, los 2 grupos se juntan nuevamente al otro extremo de la unión y regresan a la batería. Dado que existen caminos paralelos para la circulación de la corriente, la combinación de resistencias de dicha figura se llama circuito paralelo. <br />&nbsp;Como puede notarse en este circuito, ambas resistencias se conectan directamente a los terminales de la batería, y la teoría indica que no existe resistencia en los alambres conductores. Para estos circuitos existe la regla: EL VOLTAJE EN TODAS LAS PARTES DE UN CIRCUITO EN PARALELO ES EL MISMO. La corriente en R1 puede encontrarse por la ley de ohm. Ya que dicha corriente es diferente de la corriente en R2. </font></div><br /><br /><img id="img_post" src="https://st-elf.electronicafacil.net/tutoriales/169/paralelo%20ohm.gif" border="0"><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">El último cálculo está basado en una importante ley. La corriente total (It) se encontró sumando las corrientes en cada ramal, esto hace pensar que no puede circular más corriente de la que entrega la batería, esto está expresado en una ley fundamental que se conoce como LEY DE KIRCHHOFF, misma que determina que LA SUMA DE LAS CORRIENTES QUE ENTRAN A UN PUNTO ES IGUAL A LA SUMA DE LAS CORRIENTES QUE SALEN DE DICHO PUNTO. </font></div><br /><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">Por lo mismo, la corriente total que circula por las 2 resistencias en paralelo es de 1.5 amperios. Puede conectarse una sola resistencia en los terminales de la batería lo que causa que circule el mismo valor de corriente; ¿que valor tendrá esta resistencia?. Tanto la corriente (1.5 A) como el voltaje (10 V) se conocen, aquí aplicamos la ecuación: R = E dividido I, o sea, 10 dividido 1.5 igual 6.66 ohmios, esto quiere decir que este valor es equivalente a las 2 resistencias de la figura ya que por este también circulan 1.5 amperios, de este hecho se deriva su nombre: Resistencia equivalente (Req), abajo se indica como obtener directamente la resistencia equivalente </font></div><br /><br /><img id="img_post" src="https://st-elf.electronicafacil.net/tutoriales/169/voltajes%20ohm2.gif" border="0"><br /><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">Como puede notarse, aquí también el valor de la resistencia es 6.66 ohmios. Ya se sabe como encontrar el valor equivalente de 2 resistencias en paralelo, lo que se verá en adelante es como se encuentra este valor de 3 o más resistencias en paralelo. En el caso de encontrar la resistencia total de 2 o más resistencias en serie, fue solo sumar el valor de cada una; para una combinación en paralelo, esto se calcula de diferente forma dado que la resistencia equivalente resulta siempre menor que el valor más bajo de combinación en paralelo. Las dos fórmulas empleadas para las 2 resistencias en paralelo se aplican para 3 o más resistencias, siendo necesaria una pequeña modificación en el procedimiento para usar la fórmula de la resistencia equivalente. Se demostrará nuevamente los 2 métodos. <br />&nbsp;En la figura se observa un circuito con un voltaje de 80 voltios, el cual circula por las 3 resistencias, ahora se debe encontrar la corriente que circula por cada una de ellas, veamos las fórmulas: </font></div><br /><br /><img id="img_post" src="https://st-elf.electronicafacil.net/tutoriales/169/paralelo%20ohm2.gif" border="0"><br /><img id="img_post" src="https://st-elf.electronicafacil.net/tutoriales/169/voltajes%20ohm3.gif" border="0"><br /><br /><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">Como puede notarse la resistencia equivalente es de menor valor que la resistencias de menor valor de la combinación de resistencias. Al aplicar la fórmula para resistencias en paralelo se debe recordar que sirve solamente para 2 resistencias únicamente; por lo mismo, R2 y R3 pueden ser subsituidas en la fórmula y encontrar la resistencia equivalente de las 2. Dicha resistencia equivalente puede luego combinarse con R1 para encontrar la resistencia de la combinación. Por supuesto que, R1 se puede combinar primero con R2, y la resistencia equivalente del par se combina con R3, o se pueden combinar primero R1 y R3 y la resistencia que resulte como equivalente se combina con R2; de cualquier manera, el resultado sera el mismo. Veamos un ejemplo: </font></div><br /><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">R1eq = R2 X R3 dividido R2 + R3, que es lo mismo, &quot;0 X 40 dividido 20 + 40 = 800 dividido 60 = 13.3 ohmios. </font></div><br /><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> No hay que confundir Req con R1eq, en este caso se refiere a encontrar la resistencia equivalente de R2 y R3. Req = R1 X R1eq dividido R1 + R1eq = 10 X 13.3 dividido 10 + 13.3 = 133 dividido 23.3 = 5.7 ohmios. El resultado es el mismo obtenido por el método directo. </font></div><br /><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"> Por lo general no todos los resultados coinciden exactamente como se ha descrito, esto se debe al hecho de que la operación se forzó nada más que hasta una fracción decimal, y para demostrarlo, se puede forzar la operación de arriba para obtener tres lugares después del punto decimal lo que cambiaría ligeramente el resultado. Normalmente se efectúan las operaciones hasta conseguir los 3 lugares para las fracciones. <br />&nbsp;Si se diera el caso que dos o más resistencias están conectadas en paralelo pero no se conoce el voltaje, se puede suponer sin que importe el voltaje que se suponga. <br />&nbsp;Cuando se calcule la corriente resulta de un valor X, que, dividiendo el voltaje entre la corriente dará el valor de la resistencia. Lo cual se puede demostrar cambiando el voltaje aplicado a 100 voltios en el problema que recién se resolvió y usando el método indirecto para la resistencia. El valor de la resistencia obtenido será el mismo (5.7 ohmios).</font></div><br /><br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;">CIRCUITOS SERIE - PARALELO </font></div><br /><div style="text-align: left;"> <font size="3" style="line-height: 1.3em;">En la práctica de electrónica nos encontraremos que las resistencias no siempre se conectarán en serie o en paralelo únicamente, también se conectarán en una combinación de estos o sea, serie - paralelo. En la figura se muestra un circuito de este tipo. Para el cálculo de un circuito serie - paralelo, la combinación el paralelo se substituye con la resistencia equivalente (Req), luego el circuito se convierte en simples resistencias en serie cuyo valor óhmico se puede encontrar con una simple suma de ellas. </font></div><br /><br /><img id="img_post" src="https://st-elf.electronicafacil.net/tutoriales/169/serieparalelo%20ohm.gif" border="0"><br /><br /><img id="img_post" src="http://i2.minus.com/iKSMpSYh2NC5C.png" border="0"><br /><div align="center"><font size="5" style="line-height: 1.3em;">Leyes de Kirchoff </font></div><br /><font size="3" style="line-height: 1.3em;">La ley de Ohm se aplica a cualquier parte del circuito tanto como al circuito completo. Puesto que la corriente es la misma en las tres resistencias de la figura 1, la tensión total se divide entre ellas.</font><br /><font size="3" style="line-height: 1.3em;">La tensión que aparece a través de cada resistencia (la caída de tensión) puede obtenerse de la ley de Ohm.</font><br /><font size="3" style="line-height: 1.3em;">Ejemplo: Si la tensión a través de Rl la llamamos El, a través de R2, E2, y a través de R3, E3, entonces</font><br /><br /><div align="center"><img id="img_post" src="https://st-elf.electronicafacil.net/tutoriales/168/ley%20de%20kirchoff.gif" border="0"><br /><font size="4" style="line-height: 1.3em;"><b>figura1</b></font></div><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">El = IxRI = 0,00758 X 5000 = 37,9 V</font></b></div><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">E2 = IxR2 = 0,00758 X 20.000 = 151,5 V</font></b></div><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">E3 = IxR3 = 0,00758 X 8000 = 60,6 V</font></b></div><br /><br /><font size="3" style="line-height: 1.3em;">La primera ley de Kirchhoff describe con precisión la situación del circuito: La suma de las tensiones en un bucle de corriente cerrado es cero. Las resistencias son sumideros de potencia, mientras que la batería es una fuente de potencia, por lo que la convención de signos descrita anteriormente hace que las caídas de potencial a través de las resistencias sean de signo opuesto a la tensión de la batería. La suma de todas las tensiones da cero. En el caso sencillo de una única fuente de tensión, una sencilla operación algebraica indica que la suma de las caídas de tensión individuales debe ser igual a la tensión aplicada.</font><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">E= El + E2 + E3</font></b></div><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">E= 37,9 + 151,5 + 60,6</font></b></div><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">E= 250 V</font></b></div><br /><font size="3" style="line-height: 1.3em;">En problemas como éste, cuando la corriente es suficientemente pequeña para ser expresada en miliamperios, se puede ahorrar cantidad de tiempo y problemas expresando la resistencia en kilohms mejor que en ohms. Cuando se sustituye directamente la resistencia en kilohms en la ley de Ohm, la corriente será en miliamperios si la FEM está en voltios.</font><br /><br /><font size="3" style="line-height: 1.3em;"> <font size="4" style="line-height: 1.3em;">Resistencias en paralelo </font></font><br /><font size="3" style="line-height: 1.3em;">En un circuito con resistencias en paralelo, la resistencia total es menor que la menor de las resistencias presentes. Esto se debe a que la corriente total es siempre mayor que la corriente en cualquier resistencia individual. La fórmula para obtener la resistencia total de resistencias en paralelo es</font><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">R=1 / (1/R1)+(1/R2)+(1/R3)+...</font></b></div><br /><font size="3" style="line-height: 1.3em;">donde los puntos suspensivos indican que cualquier número de resistencias pueden ser combinadas por el mismo método.</font><br /><font size="3" style="line-height: 1.3em;"> En el caso de dos resistencias en paralelo (un caso muy común), la fórmula se convierte en</font><br /><div align="center"><font size="3" style="line-height: 1.3em;"> <b>R= R1xR2 / R1+R2</b></font></div><br /><font size="3" style="line-height: 1.3em;">Ejemplo: Si una resistencia de 500 O está en paralelo con una de 1200 O, la resistencia total es:</font><br /><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">R = 500x1200/500+1200=600000 / 1700 =353</font></b></div><br />&nbsp;<font size="4" style="line-height: 1.3em;">Segunda ley de Kirchhoff </font><font size="3" style="line-height: 1.3em;">Hay otra solución para el problema. Suponga que las tres resistencias del ejemplo anterior se conectan en paralelo como se muestra en la figura 2.</font><br /><div align="center"><img id="img_post" src="https://st-elf.electronicafacil.net/tutoriales/168/image002.gif" border="0"><br /><b>figura2</b></div><br /><font size="3" style="line-height: 1.3em;">La misma FEM, 250 V, se aplica a todas las resistencias.</font><br /><font size="3" style="line-height: 1.3em;">La corriente en cada una puede obtenerse de la ley de Ohm como se muestra más abajo, siendo I1 la corriente a través de Rl, I2 la corriente a través de R2, e I3 la corriente a través de R3.</font><br /><font size="3" style="line-height: 1.3em;">Por conveniencia, la resistencia se expresará en kilohms, por tanto la corriente estará en miliamperios.</font><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">I1=E / R1=250 / 5 = 50mA</font></b></div><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">I2 = E / R2 = 250 / 20 =12,5mA</font></b></div><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">I3 = E / R3 = 250 / 8 = 31,25 mA</font></b></div><br /><font size="3" style="line-height: 1.3em;">La corriente total es</font><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">I total =I1 + 12 + 13 = 50 + 12,5 + 31,25 = 93,75 mA</font></b></div><br /><font size="3" style="line-height: 1.3em;">Este ejemplo ilustra la ley de corriente de Kirchhoff. </font><br /><font size="3" style="line-height: 1.3em;">&quot;La corriente que circula hacia un nodo o punto de derivación es igual a la suma de las corrientes que abandonan el nodo o derivación.&quot;</font><br /><font size="3" style="line-height: 1.3em;">Por tanto, la resistencia total del circuito es</font><br /><div align="center"><b><font size="3" style="line-height: 1.3em;">Rtotal= E / I = 250 / 93,75 = 2,667 KO</font></b></div><br /><br /><br /><div align="center"><font size="5" style="line-height: 1.3em;">Un Ejercicio sencillo</font> <br /><div style="text-align: left;"><font size="4" style="line-height: 1.3em;"> Como conectar un led </font></div><br />  <br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;">Uno de los problemas clásicos cuando se conecta un led es calcular el valor de la resistencia. Sin resistencia el led se quema por exceso de corriente. Hoy en día, los leds comunes son muy eficientes y por lo tanto la corriente necesaria para encenderlos es bastante baja: 5mA o menos para los leds indicadores y 20mA para los leds de alta luminosidad. Los leds son relativamente tolerantes en materia de corriente por lo que se puede variar entre 5mA y 15mA para los led indicadores y entre 15mA y 30mA para led de alta luminosidad (entre estos últimos los blancos y los azules).</font></div><br /><div style="text-align: left;"> </div><br /><br />&nbsp;<br /><img id="img_post" src="http://inventable.eu/files/2010/08/calcolo-resistenza-led-3.jpg" border="0"><br />&nbsp;<br /><div style="text-align: justify;"><font size="3" style="line-height: 1.3em;">La fórmula para calcular la resistencia se obtiene de la ley de Ohm y es la siguiente:</font></div><br /><font size="3" style="line-height: 1.3em;"> </font><div style="text-align: left;"><b><font size="3" style="line-height: 1.3em;">R = (V ? Vled) / I<br /><br />    donde:<br /><br />    R = resistencia<br /><br />    V = tensión de alimentación<br /><br />    Vled = tensión típica del led (cambia según el modelo)<br /><br />    I: corriente que pasa por el led</font></b></div><br /><br />&nbsp;<font size="3" style="line-height: 1.3em;"></font><div style="text-align: justify;"><font size="3" style="line-height: 1.3em;">Por ejemplo, si tenemos un led rojo alimentado con 12V y hacemos pasar una corriente de 5mA:</font><br /><font size="3" style="line-height: 1.3em;"><br /><b>R = (12V ? 1,2V) / 5mA = 2.160 ohm (usando valores estándar de las resistencias: 2.200 ohm)</b></font><br /></div><br /><font size="3" style="line-height: 1.3em;"> </font><div style="text-align: justify;"><font size="3" style="line-height: 1.3em;">Para simplificar los cálculos, he preparado dos tablas donde podemos encontrar los valores de resistencia necesarios con distintos tipos de leds y distintas tensiones de alimentación.</font></div><br />&nbsp;<br /><img id="img_post" src="http://inventable.eu/files/2010/08/calcolo-resistenza-led-1.jpg" border="0"><br />&nbsp;<br /><div style="text-align: justify;"><font size="3" style="line-height: 1.3em;">Como podemos observar en las dos tablas no obstante la caída de tensión típica de los leds es distinta para los leds verdes, amarillos y rojos, esta variación es poco significativa y por lo tanto podemos usar los mismos valores de resistencia. Esto no es así con los leds blancos y los azules de alta luminosidad ya que en estos últimos la caída de tensión es bastante alta (generalmente 3,7V)</font></div><br />&nbsp;<br /><img id="img_post" src="http://inventable.eu/files/2010/08/calcolo-resistenza-led-2.jpg" border="0"><br />&nbsp;<br /><div style="text-align: justify;"><font size="3" style="line-height: 1.3em;">La tolerancia de corriente de los leds nos permite usar valores genéricos de resistencia (ad excepción de los leds rojos de alta luminosidad alimentados con 5V):</font></div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"></font></div><br /></div><br /><div style="text-align: left;"><font size="3" style="line-height: 1.3em;"><b>    Para los indicadores: 5V =&gt; 680 ohm, 12V =&gt; 2K2</b><br /><br /><b>    Para los leds de alta luminosidad (incluidos los rojos): 12V =&gt; 390 ohm, 5V = 68 ohm (leds azules y blancos) y 5V = 180 ohm (rojos)</b></font></div><br /><br /><br /><img id="img_post" src="http://i2.minus.com/iKSMpSYh2NC5C.png" border="0"><br /><div align="center"><font size="5" style="line-height: 1.3em;">Videos Complementarios.</font><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/zg9XeFMHew0" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/E93UEE8Lyhs" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/Va6nhxabCz0" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">6</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 2/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">8178</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">20</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(328686,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(328686,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(328686,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(328686,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(328686,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(328686,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(328686,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(328686,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(328686,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(328686,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://i.pinimg.com/originals/7b/3c/56/7b3c56dbf32d3de9516cfcf12fb354bd.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1885011" title="perfil de RockMartz"> RockMartz</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-OoA7ULJwfwM/ViLjypuf23I/AAAAAAAAAHA/DnBNUh7AcX0/s1600/ie9ZpNlqo8nb0.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1766241" title="perfil de TigreBlanc"> TigreBlanc</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://68.media.tumblr.com/c170455cc2085b446b4f46fa293344db/tumblr_mqp84zC5C01rz1p6so2_500.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1551772" title="perfil de Germlokura"> Germlokura</a>: <b>2 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(328686);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('328686');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_427"></i>
+<a href="https://identi.io/index.php?topic=380532" title="Aprende a usar git y github de una vez por todas"> Aprende a usar git y github de una vez por todas</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_427"></i>
+<a href="https://identi.io/index.php?topic=355395" title="Lo indispensable para manejar Linux por Consola."> Lo indispensable para manejar Linux por Consola.</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_427"></i>
+<a href="https://identi.io/index.php?topic=355342" title="Conceptos básicos sobre MS-DOS"> Conceptos básicos sobre MS-DOS</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_427"></i>
+<a href="https://identi.io/index.php?topic=355013" title="Que es un fotocontrol y como instalarlo."> Que es un fotocontrol y como instalarlo.</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_127"></i>
+<a href="https://identi.io/index.php?topic=353584" title="Aprende a jugar al ping pong con tus amigos."> Aprende a jugar al ping pong con tus amigos.</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=350419" title="Libros para pasar el Rato. Compilado."> Libros para pasar el Rato. Compilado.</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_427"></i>
+<a href="https://identi.io/index.php?topic=321716" title="Instalar samba en UbuntuServer"> Instalar samba en UbuntuServer</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">9</span> Comentarios</span>
+<span class="onpost"> Conceptos básicos de Electrónica.</span>
+<div class="comentario"></div><div id="comment_3509034" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="matt_1210" href="?action=profile;user=matt_1210">
+<img id="error_avatar" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/1390652_572233939513979_1304914952_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1832840" href="?action=profile;user=matt_1210">matt_1210</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406669522" title="29/07/2014 a las 21:32 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+buen aporte viejo <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3509104" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="NauTiluS1" href="?action=profile;user=NauTiluS1">
+<img id="error_avatar" src="https://http2.mlstatic.com/logo-thundercats-para-armar-en-papermodel-D_NQ_NP_972342-MLA26255399967_102017-F.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1628548" href="?action=profile;user=NauTiluS1">NauTiluS1</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406671282" title="29/07/2014 a las 22:01 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias por la peque?
+</div>
+</div>
+</div>
+</div><div id="comment_3509915" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="radamez69" href="?action=profile;user=radamez69">
+<img id="error_avatar" src="http://thumbs.dreamstime.com/z/ojo-de-horus-aislado-en-el-fondo-blanco-29725477.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1723023" href="?action=profile;user=radamez69">radamez69</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406691763" title="30/07/2014 a las 3:42 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+y llegue aqu?
+</div>
+</div>
+</div>
+</div><div id="comment_3510126" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Targaryen7" href="?action=profile;user=Targaryen7">
+<img id="error_avatar" src="http://images.teinteresa.es/cine/dragon-Smaug_TINIMA20131207_0323_18.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1894851" href="?action=profile;user=Targaryen7">Targaryen7</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406698472" title="30/07/2014 a las 5:34 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias por el post amigo ?
+</div>
+</div>
+</div>
+</div><div id="comment_3510450" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="effs777" href="?action=profile;user=effs777">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1892870" href="?action=profile;user=effs777">effs777</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406731300" title="30/07/2014 a las 14:41 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy bueno...
+</div>
+</div>
+</div>
+</div><div id="comment_3537388" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="carlanga00" href="?action=profile;user=carlanga00">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-mZbs7hGr4Dg/U9ZdKt4m3II/AAAAAAAAGOs/27HZyHo7Svg/s1600/tbagtb4.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1834897" href="?action=profile;user=carlanga00">carlanga00</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1407798245" title="11/08/2014 a las 23:04 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Excelente, muchas gracias por entregar conocimientos a quienes tratamos de seguir estudiando un poco mas <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /><br />Saludos
+</div>
+</div>
+</div>
+</div><div id="comment_3554796" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="YAZUME" href="?action=profile;user=YAZUME">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-_nk-SII5I48/T702dRnA7rI/AAAAAAAAADY/lD6SHHUOsKY/s1600/rasta+girl.jpeg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="35899" href="?action=profile;user=YAZUME">YAZUME</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408502233" title="20/08/2014 a las 2:37 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3663592" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Germlokura" href="?action=profile;user=Germlokura">
+<img id="error_avatar" src="https://68.media.tumblr.com/c170455cc2085b446b4f46fa293344db/tumblr_mqp84zC5C01rz1p6so2_500.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1551772" href="?action=profile;user=Germlokura">Germlokura</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1413385207" title="15/10/2014 a las 15:00 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3728784" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Mirco" href="?action=profile;user=Mirco">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1551673" href="?action=profile;user=Mirco">Mirco</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1416291287" title="18/11/2014 a las 6:14 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Excelente che.
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_4.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994b08870fa8dea6',t:'MTc2MTQ5MzAyOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
