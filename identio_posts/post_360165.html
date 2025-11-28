@@ -1,0 +1,757 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Videocurso base de datos Mysql Workbench  - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Videocurso base de datos Mysql Workbench  - desde cero Contenido 1 Bienvenido 2 Introducción a base de datos, tablas y SQL 3 Introducción a tipo de datos 4 Creando tu primera tabla 5 Ingresando dat..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='ZnBtOElIWWIxUXdmbTFWVTJGc2RHVmtYMS9RZ1RFSUxtdG1Sc0NwakM2Q2V6aHdwNUJFeHlCNVFiUm9ueUZDN285azhWMUJUSndXOFRZajBxckszOVFubFc2NkpKQk41VWRnTFE9PTV1c2xOa1lFTHNNV3NqcQ==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761491651;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'b5987319dcb6b471b3d9e9cacb561472');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_1.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Videocurso base de datos Mysql Workbench " title="Identi - Videocurso base de datos Mysql Workbench " align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'ce31ee097a2b03de0bc0336b99a99195a9b50065';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Eyma">Eyma</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Eyma" title="Ir al Perfil de Eyma"><img id="error_avatar" class="avatar" border="0" width="120" src="https://3.bp.blogspot.com/-XLX8lFagobs/UXXhgMPJt6I/AAAAAAAAPKo/69A4ZSXfZuU/s1600/208832_10200783651491593_1110602161_n.jpg" /></a>
+<div class=" rango_sidebar clearfix">Idento</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ec.png" /><img class="addtipsy_s" src="/images/fem.png" title="Femenino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/idento.png" title="Idento" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1897976)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1897976');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">19</b> Seguidores</li>
+<li><b>545</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>11</b> Posts</li>
+<li><b>103</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Videocurso base de datos Mysql Workbench </h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=360164';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=360166';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 10 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1022193">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><b><span style="color: #333399;"><font size="7" style="line-height: 1.3em;"><span style="font-family: Arial Black;">Videocurso base de datos Mysql Workbench  - desde cero</span></font></span></b><br /><b><span style="color: #333399;"><font size="7" style="line-height: 1.3em;"></font></span></b><span style="color: #141823;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;"></span></span><br /><span style="color: #141823;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;"></span></span><br /><span style="color: #141823;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;"><font size="2" style="line-height: 1.3em;"><img id="img_post" src="data:image/jpeg;base64,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" border="0"></font></span></span><br /><span style="color: #141823;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;"><font size="2" style="line-height: 1.3em;"><img id="img_post" src="https://scontent-mia.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10997009_410925065750904_529016325238217062_n.jpg?oh=8596ddc39d9329edbe9f985867e3c07a&amp;oe=559052D1" border="0"></font></span></span><br /><span style="color: #336633;"><font size="6" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;"><b>Contenido</b></span></font></span><br /><span style="color: #141823;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;"></span></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">1 Bienvenido</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">2 Introducción a base de datos, tablas y SQL</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">3 Introducción a tipo de datos</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">4 Creando tu primera tabla</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">5 Ingresando datos</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">6 Introducción a MySQL workbench y server</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">7 Instalando MySQL workbench y server</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">8 Corriendo MySQL Server y conociendo la interfaz</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">9 Corriendo tu primer script</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">10 Introducción a CRUD</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">11 Obteniendo información con SELECT</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">12 Haciendo queries para manejar la base de datos</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">13 Ordenando los resultados</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">14 Limitando los resultados</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">15 Manejando los datos NULL</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">16 Diferencia entre datos y estructuras</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">17 Creando una base de datos</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">18 Creando tablas en la base de datos</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">19 Insertando, actualizando y eliminando datos</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">20 Modificando tablas en la base de datos</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">21 Modificando columnas de una tabla</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">22 Eliminando base de datos</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">23 Normalización de una base de datos</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">24 Claves y el atributo de autoincrementación</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">25 Relacionando tablas e introducción a los alias</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">26 Funciones numéricas</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">27 Agrupando, uniendo y limpiando queries</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">28 Funciones de cadenas</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">29 Indexación de columnas en SQL</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">30 Creando multiples usuarios</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">31 Creando respaldo e importando base de datos</span></font></span><br /><span style="color: #141823;"><font size="2" style="line-height: 1.3em;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;">32 Conclusión</span></font></span><br /><span style="color: #141823;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;"></span></span><br /><span style="color: #141823;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;"></span></span><br /><span style="color: #141823;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;"><font size="2" style="line-height: 1.3em;"><style>.myjdownloader{background: url(https://www.identi.io/images/jdownloader.png) no-repeat;}</style><div align="center"><div class="clearfix spoiler"><div class="spoiler_cont" id="hide"><a style="font-size:14px; display:block; color:#D0B310;" href="?topic=78787" target="_blank"><img style="vertical-align:middle; margin-right:10px;" src="https://www.identi.io/images/jdownloader.png" width="50" height="50"/><b>Tutorial para descargar con Jdownloder</b></a><div class="clearfix spoiler"><form action="http://127.0.0.1:9666/flash/addcrypted2" target="hidden" class="jd" method="POST"><input type="hidden" name="passwords" value="myPassword"/><input type="hidden" name="source" value="http://jdownloader.org/spielwiese" /><input type="hidden" name="jk" value="function f(){ return '31323334353636373730393837363534';}" /><input type="hidden" name="crypted" value="fQHMbPtZdlEQbynZbT2tWFvXzPKnin5DTlytvySmqmRcsl4Vs1Y1rOEQDE1E1uGXevAu6Eqxsp8zAC1jzSg2DpalOSacFQ/oz3p77sZ5eAKVQihOb4p62pfi2JAVK5To5fQ+kfDEjmNb7rCKC/XYIWn+Te8wyuDzh/TpyYPq5FF9GAu1L5daJKJHmoIrDhmkiE/hHaScvi2c3Ao19AVQWBQrZUGpfgUc5Ek5ZRJbHu6LuhOE+xmWzvA0a21e0qY5bbU8j4bx3oUpisQJ05afiWqf6TbHHOyzcDi4ivGUn/M="><input type="SUBMIT" name="submit" style="padding-left: 45px !important;" class="spoiler-btn myjdownloader" id="decrypt" value="Agregar enlaces a Jdownloader" class="gestor_descargas"/></form></div></div></div></div></font></span></span><br /><span style="color: #141823;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;"></span></span><br /><span style="color: #141823;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;"><font size="2" style="line-height: 1.3em;"><img id="img_post" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSMnmbkfj-CYNQy5JQW2Y_QKvjYrKQ2JK9pOIrwzBlbGVjtVh0X0Q" border="0"></font></span></span><br /><span style="color: #141823;"><span style="font-family: Helvetica, Arial, lucida grande, tahoma, verdana, arial, sans-serif;"></span></span><br /><span style="font-family: Tahoma, sans-serif;"><span style="color: #ff3333;"><font size="5" style="line-height: 1.3em;">Agradecer solo cuesta puntos. Gracias:up:</font></span></span></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">66</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 4.7/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">3341</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">16</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(360165,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(360165,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(360165,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(360165,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(360165,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(360165,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(360165,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(360165,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(360165,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(360165,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://2.bp.blogspot.com/_HBp34lRBCVQ/S8NHtWYvvVI/AAAAAAAAAPA/RATYCOBR0mI/s1600/Ichigo+5.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=46038" title="perfil de juan087"> juan087</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-lsnBac7njMs/UzJT_3ZddXI/AAAAAAAAAY8/f6dCWvdGK0w/s1600/cARLL1111.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=1685456" title="perfil de libardomm"> libardomm</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.pinimg.com/originals/6a/78/e3/6a78e3fae3a303d67145a86bfacb3ba1.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=1529216" title="perfil de onyx018"> onyx018</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://i.minus.com/ihWl6wzSRsgGa.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=50372" title="perfil de ofdeath"> ofdeath</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://files.myopera.com/jakotsu97989798/albums/672600/2Rise_Tenshagaigyaku_Zangetsu_by_vinrylgrave.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=1551589" title="perfil de jul357"> jul357</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/_9HUfkyD2T5Y/TOrnI7Dl6yI/AAAAAAAAI30/p1jsgvHPXOE/s400/internet_anonimo.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=1695107" title="perfil de anonimo55"> anonimo55</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://i1227.photobucket.com/albums/ee440/koni326/dilo.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=77901" title="perfil de dilo211"> dilo211</a>: <b>1 pts</b></span>  </li><li><img id="error_avatar" src="https://i.ibb.co/5vw6tYM/56616325-2658279117532535-62362684619751424-n.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=1882198" title="perfil de SALAGUIN7K"> SALAGUIN7K</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://fotos.subefotos.com/9e6484f56f7f245d4cf085420c6c615co.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=1530950" title="perfil de holger0710"> holger0710</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://lh5.googleusercontent.com/-S7fP-IzjXyo/UuEkVJxznQI/AAAAAAAAANI/e7YFXeTPYqM/s180/soolrak.png" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=1758749" title="perfil de Soolrak"> Soolrak</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdJQ-FBFIHd7AIz3fUPPuSdxCQoiNWv1BKcDx3JFLbH6XvG2eYS-I00QeQHeuT1QhpjzBzVAXQMkYTLAFGmZbYOAMZ-jY6jv5fLccQ5bdAhYoWmELD4KDT6EutRjU94HxNQqQOcYa0o9il0PDo5pawm1ZkxYuB5KCSoVNWNNRNZL7AeT73O1sum1e04tY/s1600/" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=35616" title="perfil de ferboy007"> ferboy007</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://4.bp.blogspot.com/-mys47GJddkk/VA0DDqSHXEI/AAAAAAAAA3Y/SWKMmTyUPao/s1600/avatarEvolutionpixv2.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=1892321" title="perfil de user.xD"> user.xD</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://scontent.fgdl9-1.fna.fbcdn.net/v/t39.30808-6/331417420_1152811348750463_4212461183567970995_n.jpg?_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=9534ce&amp;_nc_eui2=AeEwjeX4H7e05TWoRDutunkc8Mj7_BjCGX3wyPv8GMIZfdxokeclsqfP1h_IUJ6DOAYNZHbrFPTOXcrsTrqNkXmT&amp;" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=1809876" title="perfil de hites___"> hites___</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://image.cdn2.seaart.me/static/images/20240709/80994cefcb6d8ec95c73a6f2ef5b7612_high.webp" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile;u=149471" title="perfil de estebarive"> estebarive</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(360165);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('360165');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_25"></i>
+<a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;topic=359452" title="Tu Privacidad A Salvo Con Limpieza Segura"> Tu Privacidad A Salvo Con Limpieza Segura</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_96"></i>
+<a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;topic=358684" title="Remueve Licencias Y Publicidad de Android"> Remueve Licencias Y Publicidad de Android</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_22"></i>
+<a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;topic=358191" title="Windows 10 Enterprise Technical Preview Español"> Windows 10 Enterprise Technical Preview Español</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;topic=357969" title="Aprendiendo Java y Poo"> Aprendiendo Java y Poo</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;topic=357964" title="Trilogia Tierra Magica"> Trilogia Tierra Magica</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_22"></i>
+<a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;topic=357950" title="Windows 7 - Windows 8. Recovery Disc x86 - x64"> Windows 7 - Windows 8. Recovery Disc x86 - x64</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_22"></i>
+<a href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;topic=357482" title="Windows 7 Edition 2015 Español TEU"> Windows 7 Edition 2015 Español TEU</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">22</span> Comentarios</span>
+<span class="onpost"> Videocurso base de datos Mysql Workbench </span>
+<div class="comentario"></div><div id="comment_3874550" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="juan087" href="?action=profile;user=juan087">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_HBp34lRBCVQ/S8NHtWYvvVI/AAAAAAAAAPA/RATYCOBR0mI/s1600/Ichigo+5.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="46038" href="?action=profile;user=juan087">juan087</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424022624" title="15/02/2015 a las 17:50 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+la falla que ya tengo conocimineto sobre todos esos temas, me hubiera servido hace un a?
+</div>
+</div>
+</div>
+</div><div id="comment_3874551" class="comentario coment_id_2">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Eyma" href="?action=profile;user=Eyma">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-XLX8lFagobs/UXXhgMPJt6I/AAAAAAAAPKo/69A4ZSXfZuU/s1600/208832_10200783651491593_1110602161_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1897976" href="?action=profile;user=Eyma">Eyma</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424022749" title="15/02/2015 a las 17:52 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+saludos desde Vinces. FELICES CARNAVALES. Ecuador
+</div>
+</div>
+</div>
+</div><div id="comment_3874562" class="comentario coment_id_3">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Eyma" href="?action=profile;user=Eyma">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-XLX8lFagobs/UXXhgMPJt6I/AAAAAAAAPKo/69A4ZSXfZuU/s1600/208832_10200783651491593_1110602161_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1897976" href="?action=profile;user=Eyma">Eyma</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424023056" title="15/02/2015 a las 17:57 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="46038" href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile&user=juan087" class="mensiones_identi">@juan087</a>
+</div>
+</div>
+</div>
+</div><div id="comment_3874585" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="juan087" href="?action=profile;user=juan087">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_HBp34lRBCVQ/S8NHtWYvvVI/AAAAAAAAAPA/RATYCOBR0mI/s1600/Ichigo+5.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="46038" href="?action=profile;user=juan087">juan087</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424023590" title="15/02/2015 a las 18:06 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+tu eres ing desarroladora o a?
+</div>
+</div>
+</div>
+</div><div id="comment_3874639" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="libardomm" href="?action=profile;user=libardomm">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-lsnBac7njMs/UzJT_3ZddXI/AAAAAAAAAY8/f6dCWvdGK0w/s1600/cARLL1111.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1685456" href="?action=profile;user=libardomm">libardomm</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424025357" title="15/02/2015 a las 18:35 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3874700" class="comentario coment_id_6">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Eyma" href="?action=profile;user=Eyma">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-XLX8lFagobs/UXXhgMPJt6I/AAAAAAAAPKo/69A4ZSXfZuU/s1600/208832_10200783651491593_1110602161_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1897976" href="?action=profile;user=Eyma">Eyma</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424027395" title="15/02/2015 a las 19:09 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+programador...
+</div>
+</div>
+</div>
+</div><div id="comment_3874715" class="comentario coment_id_7">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Eyma" href="?action=profile;user=Eyma">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-XLX8lFagobs/UXXhgMPJt6I/AAAAAAAAPKo/69A4ZSXfZuU/s1600/208832_10200783651491593_1110602161_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1897976" href="?action=profile;user=Eyma">Eyma</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424028024" title="15/02/2015 a las 19:20 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="46038" href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile&user=juan087" class="mensiones_identi">@juan087</a> programador
+</div>
+</div>
+</div>
+</div><div id="comment_3874723" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="juan087" href="?action=profile;user=juan087">
+<img id="error_avatar" src="https://2.bp.blogspot.com/_HBp34lRBCVQ/S8NHtWYvvVI/AAAAAAAAAPA/RATYCOBR0mI/s1600/Ichigo+5.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="46038" href="?action=profile;user=juan087">juan087</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424028254" title="15/02/2015 a las 19:24 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+cada vez veo mas ecuatorianos en esta comunidad... tal vez si tienes dw para mac q lo compratas. saludos
+</div>
+</div>
+</div>
+</div><div id="comment_3874944" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jul357" href="?action=profile;user=jul357">
+<img id="error_avatar" src="http://files.myopera.com/jakotsu97989798/albums/672600/2Rise_Tenshagaigyaku_Zangetsu_by_vinrylgrave.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1551589" href="?action=profile;user=jul357">jul357</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424036379" title="15/02/2015 a las 21:39 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+ufff buenisimo aporte que por mas que habia buscado no habia encontrado uno donde trabajaran con workbench &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3875296" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="matt_1210" href="?action=profile;user=matt_1210">
+<img id="error_avatar" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/1390652_572233939513979_1304914952_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1832840" href="?action=profile;user=matt_1210">matt_1210</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424046569" title="16/02/2015 a las 0:29 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+buen aporte viejo <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3875397" class="comentario coment_id_11">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Eyma" href="?action=profile;user=Eyma">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-XLX8lFagobs/UXXhgMPJt6I/AAAAAAAAPKo/69A4ZSXfZuU/s1600/208832_10200783651491593_1110602161_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1897976" href="?action=profile;user=Eyma">Eyma</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424049265" title="16/02/2015 a las 1:14 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias por los puntos a todos.... y &nbsp;es verdad es dificil encontrar videos tutoriales sobre workbench
+</div>
+</div>
+</div>
+</div><div id="comment_3875629" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="dilo211" href="?action=profile;user=dilo211">
+<img id="error_avatar" src="http://i1227.photobucket.com/albums/ee440/koni326/dilo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="77901" href="?action=profile;user=dilo211">dilo211</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424055885" title="16/02/2015 a las 3:04 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias por compartir, yo tambi?
+</div>
+</div>
+</div>
+</div><div id="comment_3875655" class="comentario coment_id_13">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Eyma" href="?action=profile;user=Eyma">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-XLX8lFagobs/UXXhgMPJt6I/AAAAAAAAPKo/69A4ZSXfZuU/s1600/208832_10200783651491593_1110602161_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1897976" href="?action=profile;user=Eyma">Eyma</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424056500" title="16/02/2015 a las 3:15 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Crear?
+</div>
+</div>
+</div>
+</div><div id="comment_3876306" class="comentario coment_id_14">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="desabi" href="?action=profile;user=desabi">
+<img id="error_avatar" src="http://www.radiatedpixel.com/wordpress/wp-content/uploads/Nico_Avatar_500px.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1900255" href="?action=profile;user=desabi">desabi</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424095489" title="16/02/2015 a las 14:04 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias por compartir.
+</div>
+</div>
+</div>
+</div><div id="comment_3876310" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="_Stone_" href="?action=profile;user=_Stone_">
+<img id="error_avatar" src="http://thumbs.subefotos.com/2677f1e28b8f9ee4b4c3350fb963ef73o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1534127" href="?action=profile;user=_Stone_">_Stone_</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424095561" title="16/02/2015 a las 14:06 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Mil gracias....excelente aporte!! <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3876318" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jluis201" href="?action=profile;user=jluis201">
+<img id="error_avatar" src="https://yt3.ggpht.com/-8bs6V9jUs6g/AAAAAAAAAAI/AAAAAAAAAAA/44554uOUfRc/s88-c-k-no-rj-c0xffffff/photo.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="73634" href="?action=profile;user=jluis201">jluis201</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424096226" title="16/02/2015 a las 14:17 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+muchas gracias. &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3878498" class="comentario coment_id_17">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="huamancha" href="?action=profile;user=huamancha">
+<img id="error_avatar" src="https://t2.gstatic.com/images?q=tbn:ANd9GcQ9A0qFX4wPkev_3BJSN04l1_u6WsBEX1ybxSrOHYXtIDIqeqmshQ" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1729141" href="?action=profile;user=huamancha">huamancha</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1424154529" title="17/02/2015 a las 6:28 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+buen aporte!!! <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3914341" class="comentario coment_id_18">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ferboy007" href="?action=profile;user=ferboy007">
+<img id="error_avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdJQ-FBFIHd7AIz3fUPPuSdxCQoiNWv1BKcDx3JFLbH6XvG2eYS-I00QeQHeuT1QhpjzBzVAXQMkYTLAFGmZbYOAMZ-jY6jv5fLccQ5bdAhYoWmELD4KDT6EutRjU94HxNQqQOcYa0o9il0PDo5pawm1ZkxYuB5KCSoVNWNNRNZL7AeT73O1sum1e04tY/s1600/" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="35616" href="?action=profile;user=ferboy007">ferboy007</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1425451928" title="04/03/2015 a las 6:52 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+bien locoo , buen cursooo , me saludas a la gente x alla jeje &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3927761" class="comentario coment_id_19">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Eyma" href="?action=profile;user=Eyma">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-XLX8lFagobs/UXXhgMPJt6I/AAAAAAAAPKo/69A4ZSXfZuU/s1600/208832_10200783651491593_1110602161_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1897976" href="?action=profile;user=Eyma">Eyma</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1426047939" title="11/03/2015 a las 4:25 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> Listo <a usuario="35616" href="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=profile&user=ferboy007" class="mensiones_identi">@ferboy007</a> saludo te envio mi tia Maria..... desde aca!... &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4165861" class="comentario coment_id_20">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="estebarive" href="?action=profile;user=estebarive">
+<img id="error_avatar" src="https://image.cdn2.seaart.me/static/images/20240709/80994cefcb6d8ec95c73a6f2ef5b7612_high.webp" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="149471" href="?action=profile;user=estebarive">estebarive</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1440527960" title="25/08/2015 a las 18:39 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4994804" class="comentario coment_id_21">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="angeldark8" href="?action=profile;user=angeldark8">
+<img id="error_avatar" src="https://media.tenor.com/7aE8pfcGofwAAAAM/bl-kiss.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1906724" href="?action=profile;user=angeldark8">angeldark8</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1499447069" title="07/07/2017 a las 17:04 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+ya no esta :-( &nbsp;<img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> resubir por favor!
+</div>
+</div>
+</div>
+</div><div id="comment_5035156" class="comentario coment_id_22">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="locoto1258" href="?action=profile;user=locoto1258">
+<img id="error_avatar" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT3vAbXUsq7K1UgdptXe7pawJj9vhxhWDOSqL3zAmX2O2DC_IvE" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1641990" href="?action=profile;user=locoto1258">locoto1258</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1502380120" title="10/08/2017 a las 15:48 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+No se puede descargar si pudieras volverlo a subir Grascias ^^
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?fObj=pc52ehhjhk5lnuactp0slf9ge5&amp;action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_1.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994ae6e1c889dea6',t:'MTc2MTQ5MTY1MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
