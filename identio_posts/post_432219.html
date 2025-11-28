@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Mikrotik - Configuracion DHCP  - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="Bueno amigo en esta ocacion les traigo un tutorial y teoria de como configurar el DHCP en nuestro Mikrotik, espero que les sea de utilidad.. El Protocolo de Configuración Dinámica de Host (Dynamic..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='WE9ESWF5bWtYN0JuZm85VTJGc2RHVmtYMS9KaEpYdmx5UWpKZXRyUDNaL3JScXdzWm9EbEZZeFRyUlBGZG1GVGNIR040S3pNbjEyVFVtQWR4OEd2QmRoaUZrZXMrVmpOekhsSWc9PTlBMFN3bU9TZWhaNExrdA==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761480899;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'f5eba2e646f6b07925a534303e632bf3');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_3.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Mikrotik - Configuracion DHCP " title="Identi - Mikrotik - Configuracion DHCP " align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '7939e1d36fb19aedb12c4218daf4c862cd216a75';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Xmegacs">Xmegacs</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"Lo importante es compartir"
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Xmegacs" title="Ir al Perfil de Xmegacs"><img id="error_avatar" class="avatar" border="0" width="120" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" /></a>
+<div class=" rango_sidebar clearfix">Gold User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/golduser.png" title="Gold User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1961335)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1961335');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">66</b> Seguidores</li>
+<li><b>1568</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>47</b> Posts</li>
+<li><b>121</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Mikrotik - Configuracion DHCP </h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=432218';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=432220';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 9 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1094250">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><img id="img_post" src="https://lh3.googleusercontent.com/rDX1oUdUBwdDPydUHh90unfOf7dlX1cYqp35p5VZdafNj3udJDJiGXRVQXD97oP9_GrtNLlmLK41pXLcBXhpkLBaQwwZy28g-BqkGlXHr4KRy-nzMA1uA8HnkgL_2-G6nepLdeuEpORNjwLQ-EJLbPMFMymY0OgH4YPrC521zx-O_-wwM4DMa5_I84LlwcmuAMABBOPCumT2Hhh1DWg9IQ0fYiU7rBXPG_Xap-xPbDB5S3PLadS_MOjStyYixnM_prF4YsRqpNI3KUdM7lYnYYNqekvZEG1LF4LdjGjBwSgqMYFv7AYmcc6MqjhN6evz8_kI6sTXx4xOf_9DjR-5mXRB5PRPPs5ig527iQQk0y6rvmpCmivenixD9uXAVtsx_szHnAerT_ED6sEYxXTLJqVzJiDhVolCKQs1pqzNE2SwpWQUvUWgMDiG0SWc9G5bP1oZa1FDL-NV24lTOWo_1fOqU_C6k1FrRWtoO7E3mUNW1P3cNXPCgaZ66_YSot39hYL_ugkRe7tmEikEj7Vp1xiNBq-hvTFAhjKmy3wNw0PLiT0Bby4SYtWZyQie-3t3R8TYkA7GPr6fVX_g179JjxD71ukdOKfelnf8cdfLb4N6LJ9z=w718-h269-no" border="0"><br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/sRbXL7llBYMot2ttl7H6dZa307LLT5ycOFasC62bWSRbLGqtGbloQI-X5GqcMVknbphlR3P6fo4qE9RbB5-5rjUKkywRb7eQMBPKa5yAprvJ4v83-RLPEolZvPZjF26M_qpWYwl-5TAEGK0lAiyJ_3XNisYRPzhx5p4PzHMcRsaLqA-QOpV3FNt5mpYCdjwZLNS60KkoJSLZX3WKxSMxpMTTbYpFLka3iFW1RfpBJjjE4Bb-kYrx5x0Qj4dKiVQtuoCiIrnly9CKCTm5n_I7qJ5JnVpZEiPB9DSoHRhXunV6U8q6E3onh5hMHyAEoJxRQDj7mqAy5nLcsaCdFR768D7E2LpCTqNMxFq_kKYmB--L1ngPHE0RmyuE42vg_mnB7Fz4rxgl8WoXes0D6TzDiWCG6D1cRvlQBtEk6BxXOUrc5ThJvaBZxnEZqTVkJKVUYk9d3IQU2N-i-mBQRLhzF7Ij-pS1a5Z5hv_H6oIM5Tcjnl5EyAQdCTLnjTEk8fuASqdsY8ThYUkMRGeB1gcCzuVneGYuSaLCqpcEQWxXMbgtGcZXSzyi5lmO2TVgyXbYu04axoc8Wk0ldSflQWJGRrlHYGWhOB3XSTEe59-GGYOGF2ur=w800-h300-no" border="0"><br /><br /><br />Bueno amigo en esta ocacion les traigo un tutorial y teoria de como configurar el DHCP en nuestro Mikrotik, espero que les sea de utilidad..<br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/yKpPyeoXBpLb2R_bXveUtGBn1CZQssGFL3DgNW5_7cgjAvY4et4mE2u7f9dVeHniykauTJxynkMXgkYY5p3PUHis3HeoF4kGI3IKVclaj236fx8mgcrZ3EFhgrBtskhoFvPn6hb0dh_iAGSe22gIk6erSo0RPU28vIKAkKMXJFZdeFO0vnSFHxZogJd91VhZsKK5ytxG7Ee-FRf0Bn5WFlv3r6Hl3SrovAxMbZnhJmf9-QW3OW__ebIGpjjpe46UmYLhqbO5A35F-C0yG_bHfU4A8NdHqJPwCOhZLzxFV2B8CpQSwu8lLARTGMZhjGZ3WTDKYds0BqimODUFHXnsX_tDmdRx5sHjzvey0FAQYDkJc1vjxUdivtpfdt4TYqJewz6LVruU-qOWsupMHikgSqI62mLm_YEESwZUrkrHyyKvk5advM2d_nzujvxJNVybZf9YVXnefW4SZfags-iUXqoy7dH7KdtZq5xQTHRUBF2hxwe-8Wqxonm4M4GIDHcUcs1NPfKSEFc1gqN4og2Td2ZKdeA6eRGE-LUOOb3PPnWzQ5d9X8mOLxKlcjKbGb3bIhjmCIWlstXU2woU7-06ZjzO1RH7aJEcTDzKKPEnCAe-v09y=w800-h100-no" border="0"><br /><br />El Protocolo de Configuración Dinámica de Host (Dynamic Host Configuration Protocol) se usa para la fácil distribución de direcciones IP en una red. La implementación de MikroTik RouterOS incluye las partes Server y Cliente, y es compatible con el RFC2131.<br /><br />El router soporta un servidor individual para cada interface tipo Ethernet. El servidor DHCP de MikroTik RouterOS soporta las funciones básicas de proveer a cada cliente que solicita los siguientes valores:<br /><br />• Reserva (lease) de dirección IP/máscara (mask)<br />• Default gateway<br />• Nombre de dominio<br />• Servidor(es) DNS<br />• Servidor(es) WINS, para clientes Windows<br /><br />Para que el servidor DHCP trabaje, se debe configurar también un Pool de direcciones IP y las redes DHCP (DHCP networks). Se debe tener cuidado de no incluir la dirección IP del propio servidor DHCP.<br /><br />• DHCP es inseguro y debería ser usado únicamente en redes confiables<br /><br />También se puede repartir las direcciones IP a los clientes DHCP usando el servidor RADIUS. Los parámetros soportados por un servidor RADIUS son los siguientes:<br /><br />Access-Request:<br /><br />• NAS-Identifier – Identidad del Router<br />• NAS-IP-Address – Dirección IP del mismo router<br />• NAS-Port – ID de sesión única<br />• NAS-Port-Type – Ethernet<br />• Calling-Station-Id – Identificador del Cliente (active-client-id)<br />• Framed-IP-Address – Dirección IP del Cliente (active-address)<br />• Called-Station-Id – Nombre del servidor DHCP<br />• User-Name – Dirección MAC del Cliente (active-mac-address)<br /><br />Access-Accept:<br /><br />• Framed-IP-Address – Dirección IP que será asignada al cliente<br />• Framed-Pool – Pool de direcciones IP desde la cual se asignará la dirección IP al Cliente<br />• Rate-Limit – Limitación de la tasa de datos (datarate) para clientes DHCP. El formato es:<br /><br />? rx-rate[/tx-rate] [rx-burst-rate[/tx-burst-rate] [rx-burst-threshold[/txburst-threshold] [rx-burst-time[/tx-burst-time][priority] [rx-rate-min[/txrate-min]]]].<br />? Todas las tasas deben ser números con &#039;k&#039; (1,000s) o &#039;M&#039; (1,000,000s).<br />? Si no se especifica el tx-rate, rx-rate es como tx-rate.<br />? Lo mismo para tx-burst-rate y tx-burst-threshold y tx-burst-time. Si ambos rx-burstthreshold<br />y tx-burst-threshold no se especifican (pero se especifica burst-rate), rx-rate y tx-rate se usan como burst thresholds.<br />? Si ambos rx-burst-time y tx-burst-time no se especifican, se usa 1s como default.<br />? La prioridad toma valores entre 1..8, donde 1 es la más alta prioridad y 8 la más baja.<br />? Si rx-rate-min y tx-rate-min no se especifican, se usan los valores de rx-rate y tx-rate<br />values.<br />? Los valores de rx-rate-min y tx-rate-min no pueden exceder los valores rx-rate y tx-rate.<br /><br />• Ascend-Data-Rate – Limitación de la tasa de datos tx/rx si se proveen múltiples atributos<br /><br />? Primero limita la tasa de datos tx<br />? Segundo la tasa de datos rx<br />? Si se usa junto con Ascend-Xmit-Rate, se especifica una tasa rx.<br />? si es ilimitado<br /><br />• Ascend-Xmit-Rate – Limitación de la tasa de datos tx. Puede ser usada para especificar únicamente el límite tx en lugar de enviar dos atributos secuenciales Ascend-Data-Rate (en ese caso Ascend-Data-Rate especificará la tasa de recepción). 0 si es ilimitado.<br /><br />• Session-Timeout – Tiempo reserva (lease) máximo (lease-time)<br /><br /><font size="4" style="line-height: 1.3em;"><b>Nota importante</b></font>• El servidor DHCP requiere una interface real para recibir los paquetes Ethernet crudos. Si la interface es una interface bridge, entonces el bridge debe tener una interface real anexada como un puerto a ese bridge en el cual recibirá los paquetes crudos. El servidor DHCP no puede funcionar correctamente en una interface tonta (dummy) o bridge vacío (empty bridge)<br /><br /><font size="4" style="line-height: 1.3em;"><b>Escenario de comunicación DHCP</b></font><br /><br />• DHCP Server siempre escucha en UDP 67<br />• DHCP Cliente escucha en UDP 68<br />• La negociación inicial involucra la comunicación entre direcciones broadcast.<br />• En algunas fases el “sender” usa dirección origen 0.0.0.0 y/o direcciones destino 255.255.255.255<br />• Se debe tener cuidado de esto cuando se construye un firewall<br /><br />Proceso DHCP<br /><br />• DHCP Discovery<br />src-mac=&lt;client&gt;, dst-mac=&lt;broadcast&gt;, protocol=udp, src-ip=0.0.0.0:68, dst-ip=255.255.255.255:67<br /><br />• DHCP Offer<br />src-mac=&lt;DHCP-server&gt;, dst-mac=&lt;broadcast&gt;, protocol=udp, src-ip=&lt;DHCP-server&gt;:67, dstip=<br />255.255.255.255:67<br /><br />• DHCP Request<br />src-mac=&lt;client&gt;, dst-mac=&lt;broadcast&gt;, protocol=udp, src-ip=0.0.0.0:68, dst-ip=255.255.255.255:67<br /><br />• DHCP Acknowledgment<br />src-mac=&lt;DHCP-server&gt;, dst-mac=&lt;broadcast&gt;, protocol=udp, src-ip=&lt;DHCP-server&gt;:67, dstip=<br />255.255.255.255:67<br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/sCUCYgxSsbpiuSevzKjH0ZY1qj3yxRR-oNXHmFBaXNPF1sW7P8_jdqSndLd9cFmLLx-SAyG3BJ5_Bf_tXkLJy1pMAXVde6fwftsh7ox5VdGccVxoTs8N3DYlstfQr09uQJacwpKI7p9WDYEKj-bZdxpeTrOL8q8VeqoNFjxu7cRa0-K7UJGSHCp9tx_gR8oDJUc0blFoiMNE8OHpfuuC7iMocgKppvP_3aljZhhSwNlQ_9rxSdLXG8HWlQ564uYdzp2MNfzhQ3E69yt-_ta85rJrkwPSBeFKptSblFkVlSNbUqk236GRX0SASW-_a20Pk9Of8ww1-jfN_sAhM3R8fATZRrUM3ZgxRfyLE62OsBoo9VhvqFPfhO8dXU7LFf2D1EdZdDpTuF3ygMc3mxD01td732C_VksRf1wzMbxVgFo0YS5AURGBWcjn8upRMXpY0tTdVps4SIJLF4nPEeL2tb8DIPYBJa031J7fHhx6cLZRgAMYAm60ddHp3eKBYRI6i0wuzwQzLvMTBtek4-sNCVfi3FvOWzxk67fwhuovP0lVgSJ0NTLZ-H0tvshZVFs_SbicKOgtD-Y3WiBAvyCaa8b0YQSGp9CRLcfrIABnt5V1aoHd=w620-h688-no" border="0"><br /><br />1 - El cliente descubre un servidor DHCP mediante la difusión de un mensaje de descubrimiento a la dirección de broadcast limitada (255.255.255.255) por la máscara de subred local. Si un router está presente y configurado para comportarse como un agente de reenvío de BOOTP, la solicitud se pasa a otros servidores DHCP en diferentes subredes. La emisión del cliente incluye su identificador único, que es la dirección MAC del cliente. Los servidores DHCP que reciben el mensaje de descubrir pueden determinar la red del cliente al ver la siguiente información:<br /><br />? <b>Por cuál de las interfaces de red del servidor llegó la solicitud? </b>Esto le dice al servidor que el cliente está en la red a la que dicha interfaz<br /><br />? <b>Incluye la solicitud la dirección IP de un agente de retransmisión (relay) BOOTP? </b>Cuando un requerimiento pasa a través de un agente relay, el agente relay inserta su dirección en la cabecera del requerimiento. Cuando el server detecta la dirección de un agente relay, conoce que la porción de la dirección indica la dirección de red del cliente ya que el agente relay debe estar conectado a la red del cliente.<br /><br />? <b>Está subneteada la red del cliente? </b>El servidor consulta la tabla de netmasks, enfocándose en la dirección del agente relay o la dirección de la interface de red que recibe el requerimiento. Una vez que el servidor conoce la mascara de subred utilizada, puede determinar qué porción de la dirección de red es la parte del host, y entonces seleccionar la dirección IP apropiada para el cliente.<br /><br />2 - Después de determinar la red del cliente, los servidores DHCP, seleccionan una dirección IP adecuada y verifican que la dirección ya no esté en uso. Los servidores DHCP entonces responden al cliente emitiendo un mensaje de oferta que incluye la dirección IP seleccionada e información acerca de los servicios que se pueden configurar para el cliente. Cada servidor reserva temporalmente la dirección IP ofrecida hasta que se pueda determinar si el cliente<br />la va a usar.<br /><br />3 - El cliente selecciona la mejor oferta (en función del número y tipo de los servicios ofrecidos) y difunde una solicitud, especificando la dirección IP del servidor que hizo la mejor oferta. El broadcast asegura de que todos los servidores DHCP que responden saben que el cliente ha elegido un servidor, y esos servidores sin elegir pueden cancelar las reservas de las direcciones IP que habían ofrecido.<br /><br />4 - El servidor seleccionado asigna la dirección IP para el cliente, el almacenamiento de la información en el área de almacenamiento de datos DHCP, y envía un acuse de recibo al cliente. El mensaje de reconocimiento contiene los parámetros de configuración de red para el cliente. El cliente comprueba la dirección IP para asegurarse de que ningún otro sistema lo está utilizando, y continúa el arranque para unirse la red.<br /><br />5 - El cliente controla el tiempo de concesión, y cuando ha transcurrido un período de tiempo determinado, el cliente envía un nuevo mensaje al servidor elegido para aumentar su tiempo de concesión.<br /><br />6 - El servidor DHCP que recibe la solicitud extiende el tiempo de concesión si todavía se adhiere a la política de arrendamiento de local establecido por el administrador. Si el servidor no responde dentro de los 20 segundos, el cliente emite un pedido, por lo que uno de los otros servidores DHCP puede extender el contrato de arrendamiento<br /><br />Cuando el cliente ya no necesita la dirección IP, envía un mensaje de notificación al servidor que se está liberando la dirección IP. Esto puede suceder durante un cierre ordenado y también se puede hacer manualmente.<br /><br /><font size="4" style="line-height: 1.3em;"><b>Identificación del Cliente DHCP</b></font>El Servidor DHCP puede rastrear la asociación con un cliente particular basado en su identificación. La identificación puede ser ejecutada en 2 formas<br /><br />• Basado en la opción “client-id” (RFC2132)<br />• Basado en la MAC address, si la opción “client-id” no está disponible<br />La opción “hostname” permite a los clientes RouterOS enviar identificación adicional al server<br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/weC3YwQeg1aQrxQVT4VOTVmsN52lNVQyxUAYSlErsx4IvBce4r4oha2TwWR91jIJRivjzr2iAhZa1jb3y20r3Ge8KcurOIbPSu8oBcirf-GrjdS3ULJZJzYVi5Ae7CTgizEj5L4tTcDM2_wr37pDFNzVxLArcOhizyaceuDs1AFMtpYfy6pY3HRIQw4HObBPgeaRL-cUWrbZiQM7YJjbJexgiB6SWHCozG7QjxI4cstG7D5VCX0oQP0eX8XjPDIUdIWaB_OGqH9jZxFLfLQiwVNumBaljp8hwJMmzaV4bJ2W0DVCp--i9YLBZ-ippH1pFgZ_hcHWT9Z0Xv1O_c5lYFOXrS0uG80iLd8BdGcENSIuB0ZwKxp9qEtSE1NaJGjZu8hzm81yEktClhSc9rE3YsEcTULEC30YG3TG1CDLCJ2s2c8saXiJE1PoR4BaDvDMe6wWgMFZGujjKIw4ksoJA2BhFsEnESjoUS4pZcVVFTvKHFXO-7zK5cXi8o6WyZGkVFXD6i5y1qydJK8oO3qDKQz-utCwkSr50p6NKjjZLMdLgYtB9x9hVq1m56UoPOxOwxXCnA4p9CAa_nUjXv-zHwq8pIw8bn5MunfNiwfIJmhcyXFp=w551-h273-no" border="0"><br /><br /><font size="4" style="line-height: 1.3em;"><b>RouterOS y DHCP Cliente</b></font>Solo puede haber un cliente DHCP activo por interface. El cliente aceptará:<br /><br />• 1 dirección<br />• 1 netmask<br />• 1 default gateway<br />• 2 direcciones DNS server<br />• 2 direcciones NTP server<br /><br />La IP recibida con el netmask será añadido a la interfaz correspondiente<br /><br />El default gateway será añadido a la tabla de ruteo como una entrada dinámica<br /><br /><b>Nota Importante:</b> <br />Si ya existe una ruta por default instalada antes de que el cliente DHCP obtenga una, la ruta obtenida por el cliente DHCP se mostrará como inválida<br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/hFp9qHXApAn4nkT1clhI6rRKbxP0SQ8Z4psky6vu2uxXLNVsTiihERBOsYVRxCCaLbSLJ3qkpLklzpkkwkb9OW-cyu_d7ex6aJhn8JjNKHTKNobPCUiMDUCtZG7b2s5upM3JUlxdk5BJmezaYA5o6zZFuQxeR1YbhpwDl3g0X-yYNELD2b1r6DZY-mMfpQrDpfQTD6MwMSdwIG19hjr83FKMCWMTPeuGt93gf8WX2lHPfiU1Q-lnhQ9tw3XRoCVL6g97-DU9a0FPNHvLIRHG_8PXJ9HqgoCCpWr42PLhEnf5RFUiDeLpBtX4m7EI_N3fR_EvGmzMlW0VI4kCdR9aXpsAjkIUJGPc4VZTVAlkfvzjnYbQps7Hxw2Y2UhrEw_cZ_sBOL3QkKUPHQxelIePu8OxXNObmEcAJ9mq4gNOVapoAxG5UovIeiYw8Hc2q3w0a23j24DBbSvYOaOCt7krz4Qr8PhCKZ10F1dP_2EK_Ho0oLLLGjE6TfW8NoEPf2-YrhIiJ6NT1ziTs_rt7cWXsEG_eSMkF33IwMOSWa3nwcMUuUqlNbsy3TNu2DUFunI2-T5g0m716qYS6s2A_EGHSs2LLMyNIbxg4Z3CX0WPH0gBoC0N=w601-h466-no" border="0"><br /><br /><font size="4" style="line-height: 1.3em;"><b><br /><br />Configuración Rápida (Quick Setup)</b></font><br /><br />RouterOS posee un comando que permite configurar fácilmente un servidor DHCP. Supongamos que se quiere configurar un servidor DHCP en la interface ether1 para asignar direcciones desde la 192.168.0.2 hasta la 192.168.0.254, las mismas que pertenecen a la red 192.168.0.0/24. El gateway y server DNS es 192.168.0.1<br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/kcFpmt4yq4Uc226iLJrpyMHeORq2t9eu_BEnij8PddA7n3nWhZpM1oiU519PX-bY5p9zYUGw82bFdiiUNUBSIpFjjZ3HqPSaM65R3965DQaoSfx2_uzct7w3XjL-AI47T3tff0Um_tyX9VAdygPnsaXoGTBe1tY_7t5LuzRMXBPeOijiB8QKpUnUfN9wRZcYh3cyNB-pys1u5GFSMqv5r0MYNmx6p_2pfePHa5GMEG7q7P2NVD_SM91ytECVyUrvg4ISdwuWe-wXDaownF6sp9lBRCGP8yDYalpi6mEXMNIof02g4-t5qisiqb9AHHDGRnWTCmWYHZnDgNtKvo_j_4b33KvqpRjNXxs-ZIbOyJTT5Cl7XITjRQ4-DWVLaR6HzXxn6YccRMvcv4UZTmP-DlDhXFKFEBsCD4JCEetMJ_mryh3lBAXBYMLcSlVd3UxYLJk3HGcPF5wf_l1DkW78U3SF9-ej0vDPH0H0bVxkcGJPTpVLG24qOVDmwtwJno74rLkXJS3UK-GR0uTa0WP3-Dl-VKxa888GwZFHI_W_2KavZ2cpFXE8KD6EWKh8G2wxjOhJMekDmZReucVRbg2KLVQLbDDBUzAzj-k6eJdJnyOhBsoN=w760-h258-no" border="0"><br /><br /><br />Desde el menú /ip dhcp-server se debe ejecutar el comando setup y seguir las instrucciones<br /><br /><div class="code">/ip dhcp-server&gt; setup<br />Select interface to run DHCP server on<br /><br />dhcp server interface: ether1<br />Select network for DHCP addresses<br /><br />dhcp address space: 192.168.0.0/24<br />Select gateway for given network<br />gateway for dhcp network: 192.168.0.1<br /><br />Select pool of ip addresses given out by DHCP server<br />addresses to give out: 192.168.0.2-192.168.0.254<br /><br />Select DNS servers<br />dns servers: 192.168.0.1<br /><br />Select lease time<br />lease time: 3d</div><br />El asistente de configuración habrá creado la siguiente configuración basado en las respuestas de arriba:<br /><br /><div class="code">/ip dhcp-server&gt; print<br /><br />Flags: X - disabled, I - invalid<br /><br /># NAME &nbsp; &nbsp; INTERFACE &nbsp; RELAY &nbsp; &nbsp; ADDRESS-POOL &nbsp;LEASE-TIME ADD-ARP<br />0 dhcp1 &nbsp; &nbsp;ether1 &nbsp; &nbsp; &nbsp;0.0.0.0 &nbsp; dhcp_pool1 &nbsp; &nbsp;3d &nbsp; &nbsp; &nbsp; &nbsp; no<br /><br />/ip dhcp-server network print<br /># ADDRESS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;GATEWAY &nbsp; &nbsp; &nbsp; DNS-SERVER WINS-SERVER DOMAIN<br />0 192.168.0.0/24 &nbsp; 192.168.0.1 &nbsp; 192.168.0.1<br /><br />/ip pool print<br /># NAME &nbsp; &nbsp; &nbsp; &nbsp; RANGES<br />0 dhcp_pool1 &nbsp; 192.168.0.2-192.168.0.254</div><br /><font size="4" style="line-height: 1.3em;"><b>IPv6</b></font>• A partir de la v5.8 el RouterOS soporta la delegación de prefijo IPv6 acorde a RFC3315 y RFC3633<br />• A partir de la v5.9, la configuración del server DHCPv6 se movió al menú /ipv6 sub-menu<br /><br /><font size="4" style="line-height: 1.3em;"><b>DHCP-Server</b></font><br /><br />Solo puede haber un DHCP Server por combinación interface/relay<br /><br />Para crear un DHCP Server se debe tener<br /><br />• Dirección IP en la interface DHCP Server deseada<br />• Pool de direcciones (address pool) para los clientes<br />• Información sobre la red DHCP<br /><br />Los 3 requerimientos deben corresponder<br /><br />“Lease on Disk” debería ser usado para reducir el número de escrituras en el drive (útil con flash drives)<br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/mTPztYCfDx92UCedpu176dSUudGX_nWbvG6m6cJJ3NlN00Lo78tcKdOx9T8qNijJT2G__n6DlpypN1noNOpQ-khfa8L2AzBrETSGDWWO_rBEpc9UTSYvk1qOD2QYPm5u16dFbP-o2ZF3mo-HROCj1P2pwV5XbtzND7Gpql5Grond81sSZHU971WQxXP8F_uTm9o-6amQtf3NwwLA92VQHfbXYrfLsBQkc4arK3ztxus5Kbs_YhxS62P7vgPi_BkH_GzGI907dPhGoQV55ifUixQzXr9Fudrzs27qLxYjL8ZlcJRA8m2UU5h_36LZ6z0ptxc_MPg5CsrDPzbfuhf64xHLA0UrOMl90HMuabJRtFPNX8zEkR5U-nwngYSLlGgp6vA-rzgibKZqeWR0zKjmzvSAZQfyNVzZwlBDdoZXVrDWAYzsdhykLuB5vaKWjPRq_Y4qRuv-hGwLOBK4gd8uCzffAiRmOy1i_bQLjvGOfHA41ZvFpqekKh6sbv1oJ1A2uo7cZDJbIEmWXKApjxK2K4LUtdBS6QWKSVsjrGnWBLD5Z9MiLTTdC3lot_x7BAn1tQMkIXOcDtj4UcIk-VBdcwwD3-qnkRz1ZP2TBYF4QGPmH6YG=w850-h682-no" border="0"><br /><br /><br />Parámetros<br /><br />• add-arp (yes | no; Default: no) – Define si se agrega una entrada dinámica ARP. Si se configura add-arp=no, se debería habilitar en esa interface ya sea el modo ARP, o las entradas estáticas ARP deberían ser definidas administrativamente en el sub menú /ip arp<br />• address-pool (string | static-only; Default: static-only) – Pool de direcciones IP desde la cual tomará las direcciones IP para los clientes.<br /><br />? Si se configura address-pool=static-only, entonces únicamente se permitirá a los clientes<br />que tienen una reserva (lease) estática (agregada en el submenú lease).<br /><br />• always-broadcast (yes | no; Default: no) – Siempre envía respuestas (replies) como broadcasts<br />• authoritative (after-10sec-delay | after-2sec-delay | yes | no; Default: after-2sec-delay) – Esta opción cambia la forma como el server responde a los requerimientos DHCP<br /><br />yes – Responde a los clientes que solicitan una dirección que no está disponible en este servidor.<br />El servidor DHCP enviará un reconocimiento negativo (negative acknowledgment DHCPNAK)<br /><br />? no – El servidor DHCP ignora los requerimientos de los clientes de direcciones que no están<br />disponibles en este servidor<br /><br />? after-10sec-delay – Los requerimientos con “segundos&lt;10” serán procesados como<br />authoritative=no. Los requerimientos con “segundos&gt;=10” será procesados como authoritative=yes.<br /><br />? after-2sec-delay – Los requerimientos con “segundos&lt;2” serán procesados como<br />authoritative=no. Los requerimientos con “segundos&gt;=2” será procesados como authoritative=yes.<br /><br />Si todos los requerimientos con &quot;secs &lt; x&quot; deben ser ignorados, entonces se debería usar la configuración delay-threshold=x.<br /><br />• bootp-support (none | static | dynamic; Default: static) – Soporte para clientes BOOTP<br /><br />? none – No responde a requerimientos BOOTP<br />? static – Ofrece únicamente reservas (leases) estáticas para clientes BOOTP<br />? dynamic – Ofrece reservas (leases) estáticas y dinámicas para clientes BOOTP<br /><br />• delay-threshold (time | none; Default: none) – Si el campo de segundos (sec) en el paquete DHCP es más pequeño que el delay-threshold, entonces este paquete es ignorado. Si se configura delay-threshold=none, entonces no hay threshold, es decir que se procesarán todos los paquetes.<br />• interface (string; Default: ) – Especifica la interface en la cual el server estará corriendo<br />• lease-script (string; Default: ) – Script que será ejecutado después que la reserva (lease) es asignada o deasignada. Las siguientes son variables “globales” internas que pueden ser usadas en el script:<br /><br />? leaseBound - Configurado como “1” si está confinado, si no configurado como &quot;0&quot;<br />? leaseServerName – Nombre del server DHCP<br />? leaseActMAC – Dirección MAC activa<br />? leaseActIP – Dirección IP activa<br /><br />• lease-time (time; Default: 72h) – Especifica el tiempo que un cliente puede utilizar la dirección asignada. El cliente intentará renovar esta dirección después de que haya transcurrido la mitad de este tiempo (lease-time) y requerirá una nueva dirección después de que el tiempo límite expira.<br />• name (string; Default:) – Nombre de referencia<br />• relay (IP; Default: 0.0.0.0) – La dirección IP del relay desde el que este server DHCP debería procesar los requerimientos:<br /><br />? 0.0.0.0 – El server DHCP se utilizará únicamente para las solicitudes directas de los clientes<br />(no DHCP realmente permitido)<br />? 255.255.255.255 – El servidor DHCP debería ser usado para cualquier requerimiento entrante<br />de un DHCP relay excepto para aquellos que son procesados por otro servidor DHCP que existe en /ip dhcp-server<br /><br />• src-address (IP; Default: 0.0.0.0) – La dirección con la cual el cliente DHCP debe enviar las solicitudes a fin de renovar una reserva (lease) de dirección IP. Si existe únicamente una dirección estática en la interface del servidor DHCP y el src-address=0.0.0.0, entonces se usará la dirección estática. Si existen múltiples direcciones en la interface, una dirección en la misma subred que el rango de direcciones dada se debe utilizar.<br />• use-radius (yes | no; Default: no) - Especifica si se utiliza un servidor RADIUS para las asignaciones dinámicas (dynamic leases)<br /><br /><font size="4" style="line-height: 1.3em;"><b>Comando específico del menú</b></font>• setup () – Inicia el asistente de configuración del server DHCP, el cual lo guía a través de los pasos necesarios para fácilmente crear toda la configuración necesaria.<br /><br /><font size="4" style="line-height: 1.3em;">Configuración del almacenamiento de reservas (leases)</font>/ip dhcp-server config<br /><br />Este submenú permite configurar cuan frecuente las reservas DHCP serán almacenadas en disco. Si estas reservas deberían ser grabadas en disco en cada cambio de lease, entonces debería ocurrir una gran cantidad de escrituras en disco, lo cual es muy malo para la Compact Flash (especialmente si los tiempos de reserva son muy cortos). Para minimizar las escrituras<br />a disco, todos los cambios se almacenan en disco cada store-leases-disk segundos. Adicionalmente las reservas siempre se graban en disco cuando se realiza el shutdown y reboot de forma adecuada.<br /><br /><font size="4" style="line-height: 1.3em;"><b>Nota Importante</b></font>• Los cambios manuales a las reservas (leases), adición/remoción de leases estáticos, la remoción de las reservas (leases) dinámicas, ocasionarán que los cambios empujen a que las reservas sean almacenadas<br /><br />Bueno amigos eso es todo por ahora.. espero que les sea de gran utilidad... <br /><br /><img id="img_post" src="https://lh5.googleusercontent.com/-FiVvvHZa8Ng/V6xXMjwJc_I/AAAAAAAADkg/NEqhsUebr08WQbZvuOghVz1HFnE3MejNgCLcB/w800-h300-no/Fin%2B01.jpg" border="0"><br /><br /><br /><div align="center"><img id="img_post" src="https://lh3.googleusercontent.com/M3vw1vIN26dLsoZAn3fk84rMAHZqnNbfjxfBSfilRox_6PTgxOrxGE0q-vNox51_paq2OrY8SWepFysQmdve7ZlpOSP5QuVU_hVKvDqxzhpqav1nYjmrwHBnTa0n3cspLURmvh1Mt7Mv0_gg0NBKJKCLy0rISHgA7mhZPXqYQhiolKDZ8ZE5GcOBDubdOgjebv5YlPM-lza0PjmmkOmLc__H8VfreyOs3Xr9KUTMQtRfz-EkqnP50iShBwTt-saM4eCTYE8bt0Psvxy6Q2IF-Lz5MklLgblb9aOVpoqgB1bP3jHm3K05rdO0497gtPuLYRH-WqhOLUpFop_5PahU9y1Vk4bGT8Z70XX1Pcogog4V1UFGMyXj1q-YOeJ-EoXGeHetuslQ_j1KM8l53-tkIVLz_Ebuz4nMATao6H6aerLuev4NVt66UhbBtp9SCdVldlvHN96-c85u7ygez89f_bUBqTUgj45HwLGxO__PQzcvgW4QxGqDBz2cXe8kbNcKmod7C2_DOFcSIrDL0dHRVuJ3acGAgYZ9y0899Plm2fRVTrM-G66HiRwvRrwQe9JGDP57j19qJ3EYBwwIi2DS3G5KRw3ZxLZitWtdd0yoZWaJgZXq=w391-h220-no" border="0"></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">15</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1680</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">5</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(432219,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(432219,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(432219,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(432219,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(432219,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(432219,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(432219,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(432219,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(432219,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(432219,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1694586" title="perfil de Taykun7000"> Taykun7000</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://images.wikia.com/sonicthehedgehoges/es/images/d/de/SonicBigAni.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=26763" title="perfil de sabueso08"> sabueso08</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.identi.io/images/def/avatar.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1695889" title="perfil de AlonsoSant"> AlonsoSant</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(432219);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('432219');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=547569" title="Mangle - Queue Tree Mikrotik"> Mangle - Queue Tree Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=527410" title="Bloquear Youtube con Mikrotik"> Bloquear Youtube con Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=527397" title="Bloquear Netflix Mikrotik"> Bloquear Netflix Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=476589" title="7 Libros PDF Android | MEGA"> 7 Libros PDF Android | MEGA</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476086" title="Vim | Algunos comandos | Linux"> Vim | Algunos comandos | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476075" title="Abreviaturas Teclado | Linux"> Abreviaturas Teclado | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476063" title="Expresiones Regulares | Linux"> Expresiones Regulares | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=475994" title="Eliminar a todos tus contactos Facebook | 2017"> Eliminar a todos tus contactos Facebook | 2017</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">5</span> Comentarios</span>
+<span class="onpost"> Mikrotik - Configuracion DHCP </span>
+<div class="comentario"></div><div id="comment_4616070" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="dingorefeo" href="?action=profile;user=dingorefeo">
+<img id="error_avatar" src="http://thumbs.subefotos.com/6c241aa7834b2ae6b4cfe72a78baeac6o.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1729483" href="?action=profile;user=dingorefeo">dingorefeo</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1473746608" title="13/09/2016 a las 6:03 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias!!! mas tutoriales de mikrotik please
+</div>
+</div>
+</div>
+</div><div id="comment_4616123" class="comentario coment_id_2">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Xmegacs" href="?action=profile;user=Xmegacs">
+<img id="error_avatar" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1961335" href="?action=profile;user=Xmegacs">Xmegacs</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1473764074" title="13/09/2016 a las 10:54 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1783806" href="https://identi.io/index.php?action=profile&user=pedretti" class="mensiones_identi">@pedretti</a> <a usuario="1729483" href="https://identi.io/index.php?action=profile&user=dingorefeo" class="mensiones_identi">@dingorefeo</a> Gracias por comentar, estaré publicando mas tutoriales de Mikrotik. Saludos &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4616161" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Taykun7000" href="?action=profile;user=Taykun7000">
+<img id="error_avatar" src="" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1694586" href="?action=profile;user=Taykun7000">Taykun7000</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1473771344" title="13/09/2016 a las 12:55 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias por el tuto amigo &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4616184" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="sabueso08" href="?action=profile;user=sabueso08">
+<img id="error_avatar" src="http://images.wikia.com/sonicthehedgehoges/es/images/d/de/SonicBigAni.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="26763" href="?action=profile;user=sabueso08">sabueso08</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1473773051" title="13/09/2016 a las 13:24 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias.
+</div>
+</div>
+</div>
+</div><div id="comment_5278759" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="berkuth" href="?action=profile;user=berkuth">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1626492" href="?action=profile;user=berkuth">berkuth</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1527203426" title="24/05/2018 a las 23:10 ">hace m&aacute;s de 7 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+tendras un tutorial para configurar pppoe y poder conectar a usuario y controlarles el internet <br /><blockquote><div class="cita">Cita Xmegacs: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><a usuario="1783806" href="https://identi.io/index.php?action=profile&user=pedretti" class="mensiones_identi">@pedretti</a> <a usuario="1729483" href="https://identi.io/index.php?action=profile&user=dingorefeo" class="mensiones_identi">@dingorefeo</a> Gracias por comentar, estaré publicando mas tutoriales de Mikrotik. Saludos &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /></div></blockquote>
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_3.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949e062e90bdea5',t:'MTc2MTQ4MDg5OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Webmin Ubuntu 14.04 (Web) - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="En esta ocacion les traigo como instalar una gran herramienta llamada Webmin que nos sera de gran utilidad a la hora de administrar nuestro servidor Linux. Webmin es una herramienta de configuración..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='U0g1QnV2V1VoMU56WkNLVTJGc2RHVmtYMS94VnRlM2hzWnRTMSs3WnVyeEU0eW9oZWhMS1RmdkxYUHd6WjVkZTZ0ckFpbEtyQjlKRXZVYzkzeUM2UkxqMVVZUWN4SEhFMmluTlE9PTRBY3hHMDF3VTNvZEV3MA==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761480898;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '0698d1f50d7f33d9fa2fe664cedb9b6f');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_4.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Webmin Ubuntu 14.04 (Web)" title="Identi - Webmin Ubuntu 14.04 (Web)" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '03dbf83a79cb7ebf64c31a9fe175a9cc4a0b4570';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Xmegacs">Xmegacs</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"Lo importante es compartir"
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Xmegacs" title="Ir al Perfil de Xmegacs"><img id="error_avatar" class="avatar" border="0" width="120" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" /></a>
+<div class=" rango_sidebar clearfix">Gold User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/golduser.png" title="Gold User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1961335)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1961335');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">66</b> Seguidores</li>
+<li><b>1568</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>47</b> Posts</li>
+<li><b>121</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Webmin Ubuntu 14.04 (Web)</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=432226';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=432228';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=126" alt="Linux" title="Linux">Linux</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 9 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1094258">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><img id="img_post" src="https://lh3.googleusercontent.com/rDX1oUdUBwdDPydUHh90unfOf7dlX1cYqp35p5VZdafNj3udJDJiGXRVQXD97oP9_GrtNLlmLK41pXLcBXhpkLBaQwwZy28g-BqkGlXHr4KRy-nzMA1uA8HnkgL_2-G6nepLdeuEpORNjwLQ-EJLbPMFMymY0OgH4YPrC521zx-O_-wwM4DMa5_I84LlwcmuAMABBOPCumT2Hhh1DWg9IQ0fYiU7rBXPG_Xap-xPbDB5S3PLadS_MOjStyYixnM_prF4YsRqpNI3KUdM7lYnYYNqekvZEG1LF4LdjGjBwSgqMYFv7AYmcc6MqjhN6evz8_kI6sTXx4xOf_9DjR-5mXRB5PRPPs5ig527iQQk0y6rvmpCmivenixD9uXAVtsx_szHnAerT_ED6sEYxXTLJqVzJiDhVolCKQs1pqzNE2SwpWQUvUWgMDiG0SWc9G5bP1oZa1FDL-NV24lTOWo_1fOqU_C6k1FrRWtoO7E3mUNW1P3cNXPCgaZ66_YSot39hYL_ugkRe7tmEikEj7Vp1xiNBq-hvTFAhjKmy3wNw0PLiT0Bby4SYtWZyQie-3t3R8TYkA7GPr6fVX_g179JjxD71ukdOKfelnf8cdfLb4N6LJ9z=w718-h269-no" border="0"><br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/P_OBMB1WFimZPlI0JWBh-ZvfVbnnK4AgLXFuydUrE7onAKAoYlKs_NtLw189M_E5eRi2gWRPD_JE_o47yNhIWZ9MmKUcJxB-ewU7N7v-G6et5IrJ7_Bes43P6NvyWpiGInrctFYWMuA9YP74oR-TI5UTlNoNYITr7M3Fl1HUWdZwzekev59bZdmZkOSpSmCIn4RufM4uOHLtxMFRpK0U4MMcwOnSUkXbiRG5_u5BPSf3xr_lY5hqg975R_ZiNGn8SPYipEQSuuWWdKMQV4DgAxWDw0RSGj7ldmmBIzv8MlW6kwCV33R28Ict9Z1Ze2l9pROXI86m3X8zZLFvrbT_AmJBbnkfZ3YWzUcrlfWuJ06iAZrsbnrbNpXQ2gsgoKr3JSD9Iy7TEy03-dbQqVnqVnJpkxk5SPq8lxaql4KeNHY53_ZNf1RmgLe9FoGKrnZqPjkPD-rd9b3rvIBYGDRdWYfSdqF4gp5AHMl9kLFNakgpfrMZfGsOT00HRQdetkKJA6R8n8eImMifs05qu2j1ULCtC7M2Ow3-kHNhQxAQCyzRUmochQnPrsG_d3wqnFEopjwOnQgGnAy2VWWPZAARaM6tzJw27CcKkdCRTzX6UoSlreQ_=w800-h300-no" border="0"><br /><img id="img_post" src="https://lh3.googleusercontent.com/yKpPyeoXBpLb2R_bXveUtGBn1CZQssGFL3DgNW5_7cgjAvY4et4mE2u7f9dVeHniykauTJxynkMXgkYY5p3PUHis3HeoF4kGI3IKVclaj236fx8mgcrZ3EFhgrBtskhoFvPn6hb0dh_iAGSe22gIk6erSo0RPU28vIKAkKMXJFZdeFO0vnSFHxZogJd91VhZsKK5ytxG7Ee-FRf0Bn5WFlv3r6Hl3SrovAxMbZnhJmf9-QW3OW__ebIGpjjpe46UmYLhqbO5A35F-C0yG_bHfU4A8NdHqJPwCOhZLzxFV2B8CpQSwu8lLARTGMZhjGZ3WTDKYds0BqimODUFHXnsX_tDmdRx5sHjzvey0FAQYDkJc1vjxUdivtpfdt4TYqJewz6LVruU-qOWsupMHikgSqI62mLm_YEESwZUrkrHyyKvk5advM2d_nzujvxJNVybZf9YVXnefW4SZfags-iUXqoy7dH7KdtZq5xQTHRUBF2hxwe-8Wqxonm4M4GIDHcUcs1NPfKSEFc1gqN4og2Td2ZKdeA6eRGE-LUOOb3PPnWzQ5d9X8mOLxKlcjKbGb3bIhjmCIWlstXU2woU7-06ZjzO1RH7aJEcTDzKKPEnCAe-v09y=w800-h100-no" border="0"><br /><br />En esta ocacion les traigo como instalar una gran herramienta llamada Webmin que nos sera de gran utilidad a la hora de administrar nuestro servidor Linux.<br /><br />Webmin es una herramienta de configuración de sistemas accesible vía web para sistemas Unix, como GNU/Linux y OpenSolaris, GNU/Linux. Con él se pueden configurar aspectos internos de muchos sistemas operativos, como usuarios, cuotas de espacio, servicios, archivos de configuración, apagado del equipo, etcétera, así como modificar y controlar muchas aplicaciones libres, como el servidor web Apache, PHP, MySQL, DNS, Samba, DHCP, entre otros.<br /><br />Webmin está escrito en Perl, versión 5, ejecutándose como su propio proceso y servidor web. Por defecto se comunica mediante TCP a través del puerto 10000, y puede ser configurado para usar SSL si OpenSSL está instalado con módulos de Perl adicionales requeridos.<br /><br />Está construido a partir de módulos, los cuales tienen una interfaz a los archivos de configuración y el servidor Webmin. Esto hace fácil la adición de nuevas funcionalidades sin mucho esfuerzo. Debido al diseño modular de Webmin, es posible para cualquier interesado escribir extensiones para configuración de escritorio.<br /><br />Webmin también permite controlar varias máquinas a través de una interfaz simple, o iniciar sesión en otros servidores webmin de la misma subred o red de área local.<br /><br />Codificado por el australiano Jamie Cameron, Webmin está liberado bajo Licencia BSD. Existe también Usermin que es la versión reducida del Webmin.<br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/jokNOKiXhNqD0kLCVr7jahSp605x_evEAdd4s3BJWn9kB3jXF6abWRJyFJTZDXoyPuCu5NTP1l3jTNnBw0ykJIo6dxjB0s2o2z_uXbGsVzpu4Rj1LOkwsY6Xhy1kDnouYBfLAVG9YyCtGTbU46YN6xZc1jK7zuKuPZkpK00v0vVMFwdJzObDz5bZ8FQuneEuGjpMMD3ak1zhzMPnh-xQH4FtEitXZ7gMS70_8VkWqR4GxrQ4APMY041PONjq5uEUHSyUGPpiyOL-48uk-r2oaePjBXNoUl6H8wvWr1TmexBhss8DkwQL1NmwgMVWnXI6zcgiOLowGgVGSTTjyQNNYbk2C5FATqSUJrn6e1pespOhwo5jI4jDMMur5QXPjrbRRRvfy4bwPdoo5HCNQap5o3u3gD0gRQRNCrX1rKJYNZDO6CZMVyD-lZXv33fqeQ8SjueYlgMFZtniH5sHjiTk6rkBVBtleuLi_OuKbMVqb7Vhe4JfWhO5sG668VOcy8R_wXQxzR5kzVcnA44liZulOeSCLS-U1L2h1WcATSlBgxhY-UE7-ah0Fp2mYAW0bA4lS1wylWeWS4jUyMmQWLrCCoxgB_mv78rwJPaU2lB5TqggWXzc=w800-h100-no" border="0"><br /><br />01 - Nos dirigimos a la web de Webmin para descargarlo.<br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/7LLoOeveupMg9E9FyjlseHT30oIFly63UvYdbIcJyKZMth42m9-5g5JuSyxkrpEgrbAvryF798qmYV01aPXG3pT66v7OI-as7hnQ2Ii6a50QVqh8aciYCc7HVuI7bNJwQs5PGTaok8zaMOgIv58S3ZqiniDkyEeZRJskOZxkeyNkA9lj69u-lrVr5FrkGNragcXKjD3Gzvsi2Fj3R6MAixNN2oIXeAHxULiQZbzcVviuBiu43PRa2q_9cOhB1PIxi3U9HokJNCmF6F9_BGOQRDwFtx8cmBXXF_qHI4XnYhtaoHxnyO_R5YowKrHeNLWJS1rOwvh2E_-IHW1ypqj094cUFMUvwecbeDGr7ytNTveS_4UFFUpV6n6L1ot3LLO-_DoUMNAByKqsQsq4fGaj3lIHR6LvMLMp6s4MhYNG4mIX7enMiUpKe3YYaAUXCV5b8g2-iuJO0mhL8wFK2OrXp2Lv-HD1Tmr29HbnDPDYp-a-nVajF-9mguAOrpd6bnDkVdHcvnRIfCi6pOEMjQyFPqbjhVyeHxcHcRl7F-5-_7QLoS3spJdgq0CcQYq2U8kCDFKSvUNHB2PLBQGN5uutjs3iKofmuSYx7UsHo3uytRxDl9xl=w1192-h891-no" border="0"><br /><br /><br />02 - Seleccionamos dependiendo de nuestro servidor, como podemos observar hay diferentes plataformas. <br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/e5cYUu2g4yBBkETZECzk0RhfTERTE0W90bSxAS_OeNVYngKfGE6KMtCjG5MAXJTQ4sZscEqU-H4OFqwfeZpvQlBy1N5IEG-I9QPWZckK_18vnCq28ZsJbrLFrSSe34D-TUGsqnMMj6r-6cohJRb4VosOP1ys1PQu7X5jxQjXiZOASuLhErGUzalXN3kHvsGB_ApNdgeVIuEznd14pzKV4Arau5mgQtfPgBD2FByfH3IV6X0i1J2yhOUNSnQmSA5em_XpAkTuAXorgjdkB7geVTVT5vZ8d8NiKyofW2SxM1Z-0cp-IGOh1i9-GcMLKHEhPCcRcQfsYdhouBn1l302CzlRtUls1Dnz2_kxGjZU-nnckW6EFJybUSQApUk5UORW8nMi0V_Qe7dYjQyanjh_7PQBUuzl5fTPVNWf79VnK95ZB_mln3f9HE_K7_kGahapHeZYdnezu4zKiz0Et_nFBsTImYerVeh5kzKu2sZMQI8877CHj46Ofu5iQdsJuf48ps3sg_CA1CGTX90i7eS7sZ4LMW-zaVACXBC--nnXxwVCRcuPUg2tIcINZbHxhxd1yNxObQYXMLSOq2QWbF6wTiwB6pLRzTFoZ2cvJgdnP_E4MVU2=w1194-h891-no" border="0"><br /><br /><br />03 - Ejecutamos el archivo descargado. <br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/P8_uwJibNP0l7wL9LONOXPuzXmy5rYPVFHrTzMVRO2NBg3BOFPUrvNJfOTnJAHYLlqvXzU24iFtydpvVq2rtm2Y6-SA863PeRtDybXQjsJAkyM2-0Kt7_AxqgRlYKAm-gzPp1LkXLmWf9qhsJfXD66p7TfZpzCQIs-U1XBd5eVfssdq2cuse39QXodELnmrx7DgKDknohUELkTuCLJ0U1C743j3MOgsCXQcxN9ijOz1h1mvXseRTIE9MhEm_MSEtDKfIEVwi9JzRQjddJd24TUv63C8yw6ZelD7LY72BEK55oJorO5lyogHGuPOjxlHXS828X3Mbe7_dAgnm09acgkB42Y8ILHqd3wUPvdIq4QroIgb9SZzEQJ4TicqOzKomqRzPxtffE4tJRKTI-djAM3pVoqRmqORmgdDPvLnmp1F1VfXaGHZ7eFf7WTCTujxwEHsqbRhL2kaP1_NlZbr_vDLZg2cLE1_RchbKrNDlDHyz73zI2mb5Hzu3T8UWHUw-l3k9tVV-971sF3UjGPpmzWKck6eSEMZWW6TVg2rHdVHDpDlGGUUR30icyjLd9RzPsNRUW7vBqxDDWfTIadV44H3dkmqEwU4qSuswkRQoJgRUhmIn=w1191-h891-no" border="0"><br /><br /><br />04 - Ingresamos nuestra contraseña para poder instalarlo.<br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/1_R-x2b1ic42x4TKLe5JeqxiLcRirvXO6S9SkoNpEsUu8E-ZgGcNDOnJfZaO92B-b4j4ZiXd77Bn3ccW_dc3Zeo2kNTRfF8J9vBZcrcxdpoyHkayerSucDMxjIO71oC5pZByJHg4XqxebDZTH3xfS1pPGZb8o-xMu9LfCO2eM4rL7CM3FDSAaFanlnt6pq_I6JZRdx6ryAXg-pnAMEV7Tf5ILfOMhBA70Q8GbNJPKRQoIP9H78IPSohXfT9rAzm4WhLnpPei_PWw2DlOYdcstwZZXqNydPVnHXanFOS3ksJ57ZW59-OIIQUqontO4NF9vox2iHNC4xfuw9zW5ayQGco3_pQhIX0K_yF4ythZy5235SApEe2y5AAYR0OgstyQop5nBnRjDZMi_vDSm2t7BetxLLtvHW48eQ4hjO5N06DTByMABEK4YgiogQOQs6iZnU4hKKJa8n0TrJQ4LPgtNg5sbauE7Pxw0mqXt5lMeapTAolPZGZr3Z4nCxh0tzjPfL6JjM6a14vczYKYET029KRk8tWK4YVbhWwQ8wK4f5zO9RhNZ4K-u5TcK1S-UCLKtpLJ-AloO9Xe_3JI4jSF58TXGVgsQYPaidFa3oyXqi3A-mcc=w1184-h891-no" border="0"><br /><br /><br />05 - Una ves finalizada la instalacion nos dirigimos a nuestro navegador e ingresamos a nuestro Webmin medieante la siguiente direccion ( <a href="http://nuestroservidor.local:10000" target="_blank" rel="nofollow">http://nuestroservidor.local:10000</a> )<br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/-cAF3_ij6iubKup-kABIFYEqLSWTCW0OSiri39yk8E4h8Ldz-efBP6ri1wAXFkeZ98JCAK4xMwG9zMalhRcxHDHYD_XnxSiGVcmKLf1s2oVC8u3m3Tq0k951qdBgsMi3h_QkPCxhk6gVnPWm53JgYR_sJkXVsfViQiJu4eTlZd0OuRtHbsr_0bxw7aBBHNK9VuWuGtzPKUMyeVRxnAuO3sEXajObWw-NhoVBf2CYcYFqAOAa2RIVSXePfuMjXoRVgVYY69pZwAnvMVbMFn2m_Ixjw2Dg6EkH6ZOdyDjjq3U6CizzX9X4Qw4_PeTM4yCqUCGBtfyAq9dOBVycx38NWHL7JyYMVnkHhWqijUS6lZ_rJdQtGe8KWU4quJARePybhX20XimvfP6H1V8u2y7Uq2T_Rw3kb5fs_rDJO8WaYtSosgyhSu2LKkgHO6hshNJRc0fBOmo2oljrr-KFekQuxSA5bH-sZTXh5GaE4Zgzv97QDgB17IMByCCv3iCv01_Oh6t-A1HioQCy7edSsXA09V8y9sJtD-csisaQ-NSPkuJI5JwT1Hz5i1hBXMvmuZyug56mnQ9LoZ1kOq7Vkl4dFFU0XCpgTOI1ukjHuyZzhRhh-cCL=w1191-h891-no" border="0"><br /><br /><br />06 - Tambien podemos ingresar de una pc en red que cuente con el S.O Windows. Debemos realizar el mismo procedimiento y confirmas la excepcion. <br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/RxqA94v_BMKV5nzDf9fXZz7Kr6pnwlO5thMN42CoLbJfPmjsIVU2WxA-iKVkN8ZiLBOuQgWpTyb6blunTCoel5-RiiAUWn-ZSJmjV_KPlz6DaHTux6obUMARifzr-TQEVR2EFLcGckvLtb4DkKeVu8oPahjgmGsmkjPA1NW-CxYDoeK9wTJE1eKhxMujNl_EyQxfa8UeeZUQVeH9XaTvlTKQeyi5HFvMSuoP3JP9h6djjMpp7SNvRL3_cq2884-7ffUzD0-Tq6aF9vNqwT66T8EOhpxlxclfejKgNKVPdwWrl_5WEhcLPtkAjQ14PyYpVlceCTAaIxbC1-Ik_EQmspqn65aSQD0S9pwJpEJj-fMy_ljl-DyR79KTIa2vVa--GjOeTVNLn_CLj2hl7FuFy6r4koo8S5ujHh-thJQYUmMqiXrtYcSKBecZjgbmEiNcHJqunUxCHawYBa-gDIkw0hgiLUAPvSTs3ScCCFv8r4KOFN7KVKWJyVQRTg0H0SR78hMCOdFoOddSV9kYZBQvMx0ytsQ9mHABWutq6uDwbPv1LB-ZTUyksT0ClqM_0DNfRIXS9i7JRHySc_LMDITlt63718_O2sDtpeHTQBFcF3SLJ2xn=w1584-h891-no" border="0"><br /><br /><br /><img id="img_post" src="https://lh3.googleusercontent.com/xUYuVpdfYqvf4E0XIQ27XyOnj0l5Q6RuZxpAiS9ksOI0gYxXFKmRFIM9JfNVK-QupKCgaZkRzVTynv9Txq73SEmgL4XAS8f3yEDwPFhKbVfkptuoH9_VrrNpgNa8TTl4yNc_dJanTK8dntPIMZjiYQIP_wyclYCRUjgyYCvGO-Pt3mTiR0rj8ZPhU-PVVY3b2F5Ai6touSwCExKiYd6vBiVHHrtXq2-65PNZ2LGfStUPbWt0QBaFgzJW4H9tccg_kyDjBMP6wZ2B8To8DkBAcRtNT-lGs8-vi-jGUG9s23TAJtAh6QTCBNEsv5JKgxAD06BdwjMmft87XN5Fj9NHumaI2_pwyJittWQcjZWNjOgTZZ9dOo6lx4AudQJbX6Mm8lzfp3UfMWkrNmNpPO7iO6vunPh3oMf_s1jWEXSocXsZ5pacxl4nXXMQlISpRyq38_axDKgdQ4RNGROnPWJb01gDMlY650EzaaaZIOLVt-PYSfUJb-xoYRLIMPcF9WXb1G_UBGGk_CYOlHIxnCoQGDNHZKvQyRGh3nWCPV676u9jfYn6tw62miFdg_nXKzKx8skeQ_I3axm1oFeY4_kdkX6c-EuU_EOF5yW_D8HbhuTlvA4W=w1584-h891-no" border="0"><br /><br /><br />Bueno amigos eso es todo por ahora... espero que les sea de utilidad..<br /><br /><img id="img_post" src="https://lh5.googleusercontent.com/-FiVvvHZa8Ng/V6xXMjwJc_I/AAAAAAAADkg/NEqhsUebr08WQbZvuOghVz1HFnE3MejNgCLcB/w800-h300-no/Fin%2B01.jpg" border="0"><br /><br /><br /><div align="center"><img id="img_post" src="https://lh3.googleusercontent.com/M3vw1vIN26dLsoZAn3fk84rMAHZqnNbfjxfBSfilRox_6PTgxOrxGE0q-vNox51_paq2OrY8SWepFysQmdve7ZlpOSP5QuVU_hVKvDqxzhpqav1nYjmrwHBnTa0n3cspLURmvh1Mt7Mv0_gg0NBKJKCLy0rISHgA7mhZPXqYQhiolKDZ8ZE5GcOBDubdOgjebv5YlPM-lza0PjmmkOmLc__H8VfreyOs3Xr9KUTMQtRfz-EkqnP50iShBwTt-saM4eCTYE8bt0Psvxy6Q2IF-Lz5MklLgblb9aOVpoqgB1bP3jHm3K05rdO0497gtPuLYRH-WqhOLUpFop_5PahU9y1Vk4bGT8Z70XX1Pcogog4V1UFGMyXj1q-YOeJ-EoXGeHetuslQ_j1KM8l53-tkIVLz_Ebuz4nMATao6H6aerLuev4NVt66UhbBtp9SCdVldlvHN96-c85u7ygez89f_bUBqTUgj45HwLGxO__PQzcvgW4QxGqDBz2cXe8kbNcKmod7C2_DOFcSIrDL0dHRVuJ3acGAgYZ9y0899Plm2fRVTrM-G66HiRwvRrwQe9JGDP57j19qJ3EYBwwIi2DS3G5KRw3ZxLZitWtdd0yoZWaJgZXq=w391-h220-no" border="0"></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">12</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 4/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">1426</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">3</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(432227,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(432227,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(432227,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(432227,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(432227,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(432227,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(432227,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(432227,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(432227,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(432227,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://2.bp.blogspot.com/_ierSNQX-XaE/SUUTV7QLbTI/AAAAAAAAAHo/mcjAJfly6xo/s320/Ryu.PNG" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1616246" title="perfil de Hadoken1"> Hadoken1</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.subdivx.com/avatar/1802596.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1590606" title="perfil de steampunk"> steampunk</a>: <b>2 pts</b></span>  </li><li><img id="error_avatar" src="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Ftwitter.com%2F_kiiviik_%2Fstatus%2F1320539360392060930&amp;psig=AOvVaw3StvsQCMtPb-LlxfXE0ynS&amp;ust=1693879592281000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBAQjRxqFwoTCJjk863vj4EDFQAA" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1520945" title="perfil de neo_geo"> neo_geo</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(432227);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('432227');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=547569" title="Mangle - Queue Tree Mikrotik"> Mangle - Queue Tree Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=527410" title="Bloquear Youtube con Mikrotik"> Bloquear Youtube con Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=527397" title="Bloquear Netflix Mikrotik"> Bloquear Netflix Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=476589" title="7 Libros PDF Android | MEGA"> 7 Libros PDF Android | MEGA</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476086" title="Vim | Algunos comandos | Linux"> Vim | Algunos comandos | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476075" title="Abreviaturas Teclado | Linux"> Abreviaturas Teclado | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476063" title="Expresiones Regulares | Linux"> Expresiones Regulares | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=475994" title="Eliminar a todos tus contactos Facebook | 2017"> Eliminar a todos tus contactos Facebook | 2017</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">4</span> Comentarios</span>
+<span class="onpost"> Webmin Ubuntu 14.04 (Web)</span>
+<div class="comentario"></div><div id="comment_4615459" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="gaopino" href="?action=profile;user=gaopino">
+<img id="error_avatar" src="http://www.subeimagenes.com/thumb/nena-1345751.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1935040" href="?action=profile;user=gaopino">gaopino</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1473715683" title="12/09/2016 a las 21:28 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4615995" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Mantikor" href="?action=profile;user=Mantikor">
+<img id="error_avatar" src="http://t01.deviantart.net/zskfiS4yeUdliyxkljLKsDn8Qnc=/fit-in/150x150/filters:no_upscale():origin()/pre00/94e9/th/pre/f/2012/362/0/3/slackware_badge_by_amai_biscuit-d5phf2e.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1951702" href="?action=profile;user=Mantikor">Mantikor</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1473740342" title="13/09/2016 a las 4:19 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias por el aporte. Ya que estamos en esto, te comento un asunto a ver si me puedes dar una sugerencia: Estoy a cargo de 39 portátiles, que se conectan al wifi del sitio donde trabajo. Instalé linux en estos equipos, pues el windows está congelado y no tengo contraseña de administrador. Lo que quiero es poder tener un software (en linux) que me permita, desde mi equipo, ver los procesos que usan los usuarios en tiempo real. Además, no he podido conectarlos a internet porque no he podido bloquear el acceso a las configuraciones de ip de internet, ¿conoces algún programa que me ayude con esto? El que posteas acá sirve para eso? Es psible hallar un software que me permita un chat interno, o compartir información con todos los equipos a la vez, o dar orden para instalar software a la vez, que no deba hacerlo uno por uno. De antemano muchas gracias.
+</div>
+</div>
+</div>
+</div><div id="comment_4616120" class="comentario coment_id_3">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Xmegacs" href="?action=profile;user=Xmegacs">
+<img id="error_avatar" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1961335" href="?action=profile;user=Xmegacs">Xmegacs</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1473763771" title="13/09/2016 a las 10:49 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1951702" href="https://identi.io/index.php?action=profile&user=Mantikor" class="mensiones_identi">@Mantikor</a> buenos días te comento, Si no tienes la contraseña de windows podrías quitarla con una de las herramientas de Hirines. Con respecto al tema de los usuarios te recomendaría que montes un servidor, si no tienes mucha experiencia en Linux personalmente te recomendaría un Ubuntu ya que hay una gran cantidad de tutoriales de como instalarlo. Una ves instalado instalar el proxy Squid, complementado con el Sarg que te servirá para ver los reportes de navegación de tus clientes. Te consulto a que te refieres con bloquear el acceso a las configuraciones IP?aunque si es el acceso a un equipo por su dirección ip podrías cortarlo por Firewall . Lo de compartir archivos entre todos no se si te servira pero donde trabajo algunos sectores usan el Groove de Office. Bueno amigo espero que te sirva. Saludos. &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4616122" class="comentario coment_id_4">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Xmegacs" href="?action=profile;user=Xmegacs">
+<img id="error_avatar" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1961335" href="?action=profile;user=Xmegacs">Xmegacs</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1473764018" title="13/09/2016 a las 10:53 ">hace m&aacute;s de 9 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1951702" href="https://identi.io/index.php?action=profile&user=Mantikor" class="mensiones_identi">@Mantikor</a> Me olvide de comentarte el programa del cual hablo en este post es un gestor que se ingresa mediante web de las direcciones ip que tu permitas para gestionar las distintas herramientas que puedas tener instalada en tu server.
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_4.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949e05f3c16dea6',t:'MTc2MTQ4MDg5OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
