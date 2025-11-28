@@ -1,0 +1,600 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>como hacer sitio web php para principiantes - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="El siguiente es un tutorial en donde se enseña a hacer un sitio web con codigo php, conforme se avance en los videos subiré más hasta que el sitio tenga un carrito de compra, login y registro de us..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='NGg5akJPVncySGJsN1FTVTJGc2RHVmtYMStFTnh1K0tBK1FVZUVtbktyQmNUemdjV1JySlRhZmJFZ2w4RSsrcXFXQ3F6U2NYUG9DZ2VkVjZVSnZaV1MrQk5HNElLVVUrY1IyUGc9PVpVdkplRHhjbGVhbkpaeg==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761482092;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '7dfa99dd08d4464c4d52fdb7464c9fdd');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_2.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - como hacer sitio web php para principiantes" title="Identi - como hacer sitio web php para principiantes" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'ce9c0b64356be636f3fa6085c71c19dfc03d56bc';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=anmajara">anmajara</a>
+<a title="Desconectado" class="addtipsy_s offline"></a></div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=anmajara" title="Ir al Perfil de anmajara"><img id="error_avatar" class="avatar" border="0" width="120" src="https://t0.gstatic.com/images?q=tbn:ANd9GcSjG5KfpFSCm5OpdJRUbII6mRvIvP57gi5Zu7BbZHeK-CceFAUw" /></a>
+<div class=" rango_sidebar clearfix">Idento</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/mx.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/idento.png" title="Idento" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(14455)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('14455');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">27</b> Seguidores</li>
+<li><b>709</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>245</b> Posts</li>
+<li><b>228</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">como hacer sitio web php para principiantes</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=387314';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=387316';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=74" alt="Tutoriales / Cursos" title="Tutoriales / Cursos">Tutoriales / Cursos</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 10 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1049343">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center">El siguiente es un tutorial en donde se enseña a hacer un sitio web con codigo php, conforme se avance en los videos subiré más hasta que el sitio tenga un carrito de compra, login y registro de usuario todo funcionando.<br /><br />notas:<br />*son 26 partes en videos, abajo dejos las descargas correspondientes al sitio. <br />&nbsp;&nbsp;&nbsp;&nbsp; * si no se alcanza a ver la letra metete al link de youtube y cambiale la calidad a 720p en configuraciòn.<br />&nbsp;&nbsp;&nbsp;&nbsp; *una disculpa en caso de que el vocabulario empleado en los videos siguientes ofenda a alguien.<br /><br />&nbsp;&nbsp;&nbsp;&nbsp; *POR QUE NO PUEDO INICIAR SESIÓN A PESAR DE QUE TODO MI CÓDIGO ESTA BIEN?: Tal vez no todo tu código este bien, revisalo de nuevo, además te conviene tener instalado APP SERV en vez de WAMP O XAMP<br />&nbsp;&nbsp;&nbsp;&nbsp; <br />Ya aclarado esto empecemos con los videos:<br /><br />parte 1 <a href="https://www.youtube.com/watch?v=lOQv4on88ds" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=lOQv4on88ds</a><br />&nbsp;<div class="clearfix youtube"><embed src="https://www.youtube.com/embed/lOQv4on88ds" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 2 <a href="https://www.youtube.com/watch?v=XgHo8Jho8T8" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=XgHo8Jho8T8</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/XgHo8Jho8T8" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 3 <a href="https://www.youtube.com/watch?v=V1vi60kkfKQ" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=V1vi60kkfKQ</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/V1vi60kkfKQ" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 4 <a href="https://www.youtube.com/watch?v=pUwSINkAdIM" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=pUwSINkAdIM</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/pUwSINkAdIM" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 5 <a href="https://www.youtube.com/watch?v=hjd4NCn7SgA" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=hjd4NCn7SgA</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/hjd4NCn7SgA" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 5.5 <a href="https://www.youtube.com/watch?v=1qzssoKrYNM" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=1qzssoKrYNM</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/1qzssoKrYNM" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 6 <a href="https://www.youtube.com/watch?v=q95N9K7hULs" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=q95N9K7hULs</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/q95N9K7hULs" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 7 <a href="https://www.youtube.com/watch?v=MC1nL6YF1Mg" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=MC1nL6YF1Mg</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/MC1nL6YF1Mg" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 8 <a href="https://www.youtube.com/watch?v=HT28zk9fkjA" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=HT28zk9fkjA</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/HT28zk9fkjA" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 9 <a href="https://www.youtube.com/watch?v=eXggNe7_5i4" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=eXggNe7_5i4</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/eXggNe7_5i4" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 10 <a href="https://www.youtube.com/watch?v=0F_KgM5OjW4" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=0F_KgM5OjW4</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/0F_KgM5OjW4" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 11 <a href="https://www.youtube.com/watch?v=0HtYDf-tqdc" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=0HtYDf-tqdc</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/0HtYDf-tqdc" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 12 <a href="https://www.youtube.com/watch?v=AgsImigLXM8" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=AgsImigLXM8</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/AgsImigLXM8" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 13 <a href="https://www.youtube.com/watch?v=bfUy49rE4IQ" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=bfUy49rE4IQ</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/bfUy49rE4IQ" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 14 <a href="https://www.youtube.com/watch?v=axqZKh2gjHU" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=axqZKh2gjHU</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/axqZKh2gjHU" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 15 <a href="https://www.youtube.com/watch?v=E9fWV03aPjk" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=E9fWV03aPjk</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/E9fWV03aPjk" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 16 <a href="https://www.youtube.com/watch?v=xDsl59ya1Yg" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=xDsl59ya1Yg</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/xDsl59ya1Yg" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 17 <a href="https://www.youtube.com/watch?v=KjBRPezPZLY" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=KjBRPezPZLY</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/KjBRPezPZLY" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 18 <a href="https://www.youtube.com/watch?v=h02e2thltmE" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=h02e2thltmE</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/h02e2thltmE" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 19 <a href="https://www.youtube.com/watch?v=jABeUDlBciE" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=jABeUDlBciE</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/jABeUDlBciE" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 20 <a href="https://www.youtube.com/watch?v=ChkgWpBSof4" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=ChkgWpBSof4</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/ChkgWpBSof4" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 21 <a href="https://www.youtube.com/watch?v=k8awvCBvBBg" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=k8awvCBvBBg</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/k8awvCBvBBg" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 22 <a href="https://www.youtube.com/watch?v=yccLSB7R0l0" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=yccLSB7R0l0</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/yccLSB7R0l0" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 23 <a href="https://www.youtube.com/watch?v=oANGy2zEU40" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=oANGy2zEU40</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/oANGy2zEU40" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 24 <a href="https://www.youtube.com/watch?v=E0-wh_lk3Ng" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=E0-wh_lk3Ng</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/E0-wh_lk3Ng" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 25 <a href="https://www.youtube.com/watch?v=VKwYMc8Mp24" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=VKwYMc8Mp24</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/VKwYMc8Mp24" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />parte 26 <a href="https://www.youtube.com/watch?v=MmMiFpxB290" target="_blank" rel="nofollow">https://www.youtube.com/watch?v=MmMiFpxB290</a><br /><div class="clearfix youtube"><embed src="https://www.youtube.com/embed/MmMiFpxB290" allowFullScreen="true" allownetworking="internal" allowScriptAccess="never" wmode="opaque" width="640" height="390"></embed></div><br /><br />para finalizar pongo parte del codigo fuente usado:<br /><div class="clearfix spoiler"><span style="display:block; margin:10px 0 10px; font-size:20px; font-weight:bold; color:#096FDB;">Enlaces De Descarga</span><div><div class="spoiler_cont" id="hide">Los numeros que tiene son el numero del video correspondiente para cada codigo fuente o parte de el:<br /><br /> 1 AL 5.5: <div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX186sa3xLIWJQOLAJ87fH9T0+qnX5A4r2LaQsacEjCsOD/GuJm9iAg/8uz89dOnO+lpJJE/z1dtgqNkxyNtU7irKdwWRapB8dJzXUyYsfCGeNY7ys6ucaF7i</div></div></div><br />1 AL 9: <div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX19K3HiCL5ALBVmoFNrs+mzFRfRLzxNNCWgbg2ry0IMEajotNtAEnDWbY18cDr1PJseZ/lNegibpqBBH5rxY+5weqMogjO7N61Ss6KUPnZI1/c0sgZN3Sgsz</div></div></div><br />1 AL 13: <div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX18BRDedM+i94wamC8uQpE9jx0GJbIb6rXc8gbuzZZnN59a0u9NrPbJwfcFl0QxPrYoJVJ3PL+0b1ChiD4GjmZ5yxT9PWqP9YOXlJcHieTSFQ2burb3hM/fD</div></div></div><br />1 AL 16: <div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX1/Ejdmf9jYXD7osUuhxsQQSxkSRQGl1YMUZuRtvYfbU61dvEHbQhpqwEgmo3bm27Fm9FRnqOIZyNKUhEf/rzxfLA3P3Z1DNWc0rDc5bCVgyeCzZH4QVi/Td</div></div></div><br />1 AL 22: <div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX1/eGwWZ47CuZUXihSaeBCVwhSkp8tX/WySYwWdg8fuliMoaUUwrzTmZXUoYIVCpz88dB2MtlE96OH/IMYVPkYDhVeWUOb+QPtb+7kLIbgiugEsTuu97M3iy</div></div></div><br />1 AL 23: <div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX1/2wOcScoLDBxlpgeT4XAbZa8DwfmoQ59gUUsyVR/lCr4SFIH57HavD444dLdF/2A4d5/7qzoh2roKlLmtIDRH3mjWkue+o2RmnVHQhuaLcUVYPqUY8U7NL</div></div></div><br />1 AL 26: <div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX19tZ/85LPOOAd4sx0hEa37vhEObfF/CkStxnVEkoIWuuPIHH1YB0kVW0Ct94XOmEODEnRJg8Ccq5EJ/l5DUnXVgz2kvf1h1jqQSzu7aFpdu94runbg7iMxq</div></div></div><br /><br />DESCARGAS EXTRAS:<br /><br />CÁMARA WEB FLASH: <div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX1+kutSjzr6Fm5y2ovT7ZbKkSCATgJ38xqE1vvyb0RFHZTJKZDCVpIodSnFvhT/PKHnvhjNPswzIoDBY0B6ioqiM2poZNLwTlJMzaHSHuBjWNYkusImQLHS7</div></div></div><br />OTRO SITIO WEB DE EJEMPLO: <div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX1/ujUAVBVDx1e0ffxnZk8dr4aAEbN6moyx0UYJfcR/lrdfiQC1xQWLNR+DC5FFTrBWCk1u9/HrKmcO9zAQqsb9Lyyog4X+PHgvnpY5dBg0RC73u+HgL3OxO</div></div></div><br />ARCHIVOS DE MANTENIMIENTO: <div class="clearfix spoiler"><input type="button" class="spoiler-btn" id="decrypt" value="Ver Links de Descarga" /><div><div  style="display:none" class="info_bbc" id="hide">U2FsdGVkX184PTtOW0TAlbhrthgWBfd1PALFbQ0nnQ6/wDOjZlHMHgevu/+Gq4uO+v/mB0YQBu+lJpQ7SENBt4aAK+F/wUamQOCaTZ0rmAJCAe6mV1h2VoUhZthJOnSu</div></div></div><br /></div></div></div><br /><br />Gracias por visitar el post.</div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">65</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">2498</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">21</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(387315,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(387315,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(387315,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(387315,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(387315,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(387315,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(387315,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(387315,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(387315,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(387315,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://s6.postimg.cc/ypajvuz8x/Mi_Logo.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1569502" title="perfil de Tortuga3"> Tortuga3</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://s5.postimg.org/pdhqv1z05/544.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1716379" title="perfil de luis544"> luis544</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://3.bp.blogspot.com/-yQrhBH65jhM/UlRusLwnPFI/AAAAAAAARtA/LBb9PFVple8/s1600/yochik.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=90677" title="perfil de parrax"> parrax</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://pregonando.com/wp-content/uploads/2010/09/the-last-airbender-movie.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1931621" title="perfil de Sparta777"> Sparta777</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://www.blogger.com/blog/post/edit/3045041004702165590/6979899115249934696#" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=10383" title="perfil de romalar777"> romalar777</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://media.tenor.com/vPdy3tkHnDcAAAAM/walter-white-i-am-the-danger.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1883267" title="perfil de _xilensis"> _xilensis</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBDEgGzLrs0XGQT2RM_Blbd01fcNBudQ_zGdj0-2cZN2dTUYmmqQ" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1849758" title="perfil de ReivV"> ReivV</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-AwgIAaZ4d2M/VM3YWQv7rlI/AAAAAAAADJg/-liofc_HbPQ/s1600/pinguinito.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1887859" title="perfil de agordillob"> agordillob</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://t0.gstatic.com/images?q=tbn:ANd9GcQY5358sJSrnXixNFEAmH5MWaZ3tOnNGKqisS7Oka5S5Ft-A9HfGQ" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1899399" title="perfil de TomasCabj7"> TomasCabj7</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-GTOY5zfJVc8/VirjXBLQSII/AAAAAAAAAwo/PKSO9slDGck/s1600/SKID2.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1687855" title="perfil de Fixedgear"> Fixedgear</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://t1.gstatic.com/images?q=tbn:ANd9GcTTJT_6vd80a65PZd_Ne2PPSOXMyhy0xBXAiP9zc21IRhNDvUDu" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=10951" title="perfil de narriagadac"> narriagadac</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.postimg.cc/KjvXhr8b/madmonq-wallpapers-header.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1759534" title="perfil de vector7743"> vector7743</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.imagenestop.com/dibujos2/dibujos-de-osos-14809.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1540067" title="perfil de elmana"> elmana</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(387315);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('387315');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_428"></i>
+<a href="https://identi.io/index.php?topic=470002" title="cronología del avatar korra"> cronología del avatar korra</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_428"></i>
+<a href="https://identi.io/index.php?topic=468973" title="cronología de itachi uchiha "> cronología de itachi uchiha </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_428"></i>
+<a href="https://identi.io/index.php?topic=466040" title="cronologia del tarot"> cronologia del tarot</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_428"></i>
+<a href="https://identi.io/index.php?topic=462891" title="el tarot y los 21 arcanos mayores "> el tarot y los 21 arcanos mayores </a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_428"></i>
+<a href="https://identi.io/index.php?topic=462809" title="lo bueno, malo club de la pelea y libro vs peli"> lo bueno, malo club de la pelea y libro vs peli</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_428"></i>
+<a href="https://identi.io/index.php?topic=461883" title="cronología de gravity falls"> cronología de gravity falls</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_428"></i>
+<a href="https://identi.io/index.php?topic=461492" title="recorrido kidzania santa fe"> recorrido kidzania santa fe</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_428"></i>
+<a href="https://identi.io/index.php?topic=460018" title="cronología del avatar, el ultimo maestro aire"> cronología del avatar, el ultimo maestro aire</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">7</span> Comentarios</span>
+<span class="onpost"> como hacer sitio web php para principiantes</span>
+<div class="comentario"></div><div id="comment_4169289" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="shenmue2" href="?action=profile;user=shenmue2">
+<img id="error_avatar" src="http://applediario.com/wp-content/uploads/2011/03/steve-jobs-a-lo-simpson.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1909672" href="?action=profile;user=shenmue2">shenmue2</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1440717190" title="27/08/2015 a las 23:13 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas Gracias por el aporte, siempre he tenido curiosidad si hacer una pagina web tiene algun costo?
+</div>
+</div>
+</div>
+</div><div id="comment_4169334" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="jalg1969" href="?action=profile;user=jalg1969">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1564860" href="?action=profile;user=jalg1969">jalg1969</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1440718555" title="27/08/2015 a las 23:35 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias
+</div>
+</div>
+</div>
+</div><div id="comment_4169382" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="_xilensis" href="?action=profile;user=_xilensis">
+<img id="error_avatar" src="https://media.tenor.com/vPdy3tkHnDcAAAAM/walter-white-i-am-the-danger.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1883267" href="?action=profile;user=_xilensis">_xilensis</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1440720515" title="28/08/2015 a las 0:08 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita shenmue2: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Muchas Gracias por el aporte, siempre he tenido curiosidad si hacer una pagina web tiene algun costo?</div></blockquote>NO EXISTE NINGUN COSTO EN HACERLA, PHP ES GRATIS, LO QUE TE COSTARA ES EL DOMINIO Y EL HOST
+</div>
+</div>
+</div>
+</div><div id="comment_4169528" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="saurienrik" href="?action=profile;user=saurienrik">
+<img id="error_avatar" src="http://a10.t26.net/avatares/5/7/9/3/120_579382.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1881395" href="?action=profile;user=saurienrik">saurienrik</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1440725779" title="28/08/2015 a las 1:36 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy interesante, lo leer?
+</div>
+</div>
+</div>
+</div><div id="comment_4180899" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="K4naK" href="?action=profile;user=K4naK">
+<img id="error_avatar" src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-snc6/p206x206/282034_2204816810268_419749_n.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1544279" href="?action=profile;user=K4naK">K4naK</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1441412601" title="05/09/2015 a las 0:23 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita _xilensis: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita shenmue2: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Muchas Gracias por el aporte, siempre he tenido curiosidad si hacer una pagina web tiene algun costo?</div></blockquote>NO EXISTE NINGUN COSTO EN HACERLA, PHP ES GRATIS, LO QUE TE COSTARA ES EL DOMINIO Y EL HOST</div></blockquote><br />Incluso puede practicar haciendo sus paginas y subiendolas a hostings gratuitos. Una gran alternativa es <a href="http://vzpla.net" target="_blank" rel="nofollow">http://vzpla.net</a>, uno de los mejores hosting gratuitos a mi parecer, ademas de darte la posibilidad de quitar la minima publicidad que ponen al final de la pagina &nbsp;<img src="https://identi.io/Smileys/default/icon_ojitos.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4193684" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ciscoit" href="?action=profile;user=ciscoit">
+<img id="error_avatar" src="https://lh6.googleusercontent.com/_2Rqc_l--Cds/TdHCpFr8DZI/AAAAAAAAAW8/K3alX75Np-U/54njebp.jpg.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1812279" href="?action=profile;user=ciscoit">ciscoit</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442212811" title="14/09/2015 a las 6:40 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Quiero hacer un pque?
+</div>
+</div>
+</div>
+</div><div id="comment_4193686" class="comentario coment_id_7">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ciscoit" href="?action=profile;user=ciscoit">
+<img id="error_avatar" src="https://lh6.googleusercontent.com/_2Rqc_l--Cds/TdHCpFr8DZI/AAAAAAAAAW8/K3alX75Np-U/54njebp.jpg.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1812279" href="?action=profile;user=ciscoit">ciscoit</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1442212965" title="14/09/2015 a las 6:42 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+por ahora <img src="https://identi.io/Smileys/default/icon_confused.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />.
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_2.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949fd858be1deab',t:'MTc2MTQ4MjA5Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<style>
+.spoiler-btn {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+.info_bbc {
+    word-break: break-all;
+}
+.info_bbc a {
+    color: #096FDB !important;
+    font-weight: bold;
+}
+</style>
+<script>
+(function() {
+    'use strict';
+    
+    console.log('🔐 Sistema de desencriptación automática cargado');
+    
+    // Extraer la clave del HTML
+    let DECRYPT_KEY = null;
+    const scriptTags = document.getElementsByTagName('script');
+    for (let script of scriptTags) {
+        const content = script.textContent;
+        const hashMatch = content.match(/var\s+hash\s*=\s*['"]([a-f0-9]+)['"]/);
+        if (hashMatch) {
+            DECRYPT_KEY = hashMatch[1];
+            console.log('🔑 Clave encontrada');
+            break;
+        }
+    }
+    
+    if (!DECRYPT_KEY) {
+        console.warn('⚠️ No se encontró clave de desencriptación');
+        return;
+    }
+    
+    function decrypt(encryptedText, password) {
+        try {
+            const decrypted = CryptoJS.AES.decrypt(encryptedText, password);
+            return decrypted.toString(CryptoJS.enc.Utf8) || null;
+        } catch (error) {
+            console.error('❌ Error:', error);
+            return null;
+        }
+    }
+    
+    function handleDecryptClick(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        const button = event.target;
+        const spoilerDiv = button.closest('.spoiler');
+        if (!spoilerDiv) return;
+        
+        const hiddenDiv = spoilerDiv.querySelector('.info_bbc');
+        if (!hiddenDiv) return;
+        
+        const encryptedText = hiddenDiv.textContent.trim();
+        const decryptedText = decrypt(encryptedText, DECRYPT_KEY);
+        
+        if (decryptedText && decryptedText.length > 0) {
+            hiddenDiv.innerHTML = `<a href="${decryptedText}" target="_blank" rel="noopener noreferrer">${decryptedText}</a>`;
+            hiddenDiv.style.display = 'block';
+            button.style.display = 'none';
+            console.log('✅ Enlace desencriptado');
+        } else {
+            alert('❌ Error al desencriptar');
+        }
+    }
+    
+    function init() {
+        const buttons = document.querySelectorAll('.spoiler-btn, input[value*="Ver Links"], input[value*="Descarga"]');
+        
+        buttons.forEach(button => {
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+            newButton.style.cursor = 'pointer';
+            newButton.style.pointerEvents = 'auto';
+            newButton.addEventListener('click', handleDecryptClick);
+        });
+        
+        console.log('🚀 Sistema listo');
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script>
+
+</body></html>
