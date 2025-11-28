@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador Identi.io</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .stats {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .results {
+            display: grid;
+            gap: 20px;
+        }
+
+        .post-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .post-title {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .post-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .post-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+        }
+
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+            padding: 40px;
+        }
+
+        .no-results {
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+            padding: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .error {
+            background: #ff6b6b;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Buscador Identi.io</h1>
+            <div class="stats" id="stats">
+                <p>Cargando estadísticas...</p>
+            </div>
+        </header>
+
+        <div class="search-box">
+            <input 
+                type="text" 
+                class="search-input" 
+                id="searchInput" 
+                placeholder="Buscar posts por título, categoría, autor..."
+                autocomplete="off"
+            >
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="downloaded">Descargados</button>
+                <button class="filter-btn" data-filter="recent">Recientes</button>
+            </div>
+        </div>
+
+        <div id="error-container"></div>
+        <div id="results" class="results"></div>
+    </div>
+
+    <script>
+        let postsData = null;
+        let currentFilter = 'all';
+
+        // Cargar índice JSON
+        async function loadIndex() {
+            try {
+                const response = await fetch('identio_index.json');
+                if (!response.ok) throw new Error('No se pudo cargar identio_index.json');
+                
+                postsData = await response.json();
+                
+                // Mostrar estadísticas
+                const stats = document.getElementById('stats');
+                const postsCount = Object.keys(postsData.posts_index || {}).length;
+                const downloadedCount = postsData.posts_downloaded?.length || 0;
+                const lastUpdated = postsData.last_updated || 'Desconocido';
+                
+                stats.innerHTML = `
+                    <p>📊 <strong>${postsCount.toLocaleString()}</strong> posts indexados | 
+                    <strong>${downloadedCount.toLocaleString()}</strong> descargados | 
+                    Actualizado: ${lastUpdated}</p>
+                `;
+                
+                // Mostrar todos los posts inicialmente
+                displayResults(Object.values(postsData.posts_index || {}));
+                
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('error-container').innerHTML = `
+                    <div class="error">
+                        <strong>⚠️ Error:</strong> No se pudo cargar identio_index.json. 
+                        Asegúrate de que el archivo esté en la misma carpeta.
+                    </div>
+                `;
+            }
+        }
+
+        // Buscar posts
+        function searchPosts(query) {
+            if (!postsData || !postsData.posts_index) return [];
+            
+            query = query.toLowerCase().trim();
+            if (!query) return Object.values(postsData.posts_index);
+            
+            return Object.values(postsData.posts_index).filter(post => {
+                return (
+                    post.title?.toLowerCase().includes(query) ||
+                    post.category?.toLowerCase().includes(query) ||
+                    post.author?.toLowerCase().includes(query)
+                );
+            });
+        }
+
+        // Filtrar posts
+        function filterPosts(posts) {
+            if (currentFilter === 'all') return posts;
+            
+            if (currentFilter === 'downloaded') {
+                const downloaded = new Set(postsData.posts_downloaded || []);
+                return posts.filter(post => downloaded.has(post.id));
+            }
+            
+            if (currentFilter === 'recent') {
+                return posts.sort((a, b) => b.id - a.id).slice(0, 50);
+            }
+            
+            return posts;
+        }
+
+        // Mostrar resultados
+        function displayResults(posts) {
+            const container = document.getElementById('results');
+            
+            if (posts.length === 0) {
+                container.innerHTML = '<div class="no-results">No se encontraron resultados</div>';
+                return;
+            }
+            
+            container.innerHTML = posts.slice(0, 100).map(post => {
+                const isDownloaded = postsData.posts_downloaded?.includes(post.id);
+                const postPath = `identio_posts/post_${post.id}.html`;
+                
+                return `
+                    <div class="post-card">
+                        <div class="post-title">${post.title || 'Sin título'}</div>
+                        <div class="post-meta">
+                            📁 ${post.category || 'Sin categoría'} | 
+                            👤 ${post.author || 'Anónimo'} | 
+                            🆔 ${post.id}
+                            ${isDownloaded ? ' | ✅ Descargado' : ''}
+                        </div>
+                        <div class="post-actions">
+                            ${isDownloaded ? 
+                                `<a href="${postPath}" class="btn btn-primary" target="_blank">Ver Post</a>` : 
+                                `<span style="color: #999;">Post no descargado</span>`
+                            }
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            if (posts.length > 100) {
+                container.innerHTML += `
+                    <div class="no-results">
+                        Mostrando 100 de ${posts.length} resultados. Refina tu búsqueda.
+                    </div>
+                `;
+            }
+        }
+
+        // Event listeners
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const results = searchPosts(e.target.value);
+            const filtered = filterPosts(results);
+            displayResults(filtered);
+        });
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                currentFilter = e.target.dataset.filter;
+                
+                const query = document.getElementById('searchInput').value;
+                const results = searchPosts(query);
+                const filtered = filterPosts(results);
+                displayResults(filtered);
+            });
+        });
+
+        // Inicializar
+        loadIndex();
+    </script>
+</body>
+</html>
