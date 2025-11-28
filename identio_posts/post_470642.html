@@ -1,0 +1,490 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Comandos basicos de linux que deberias saber - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="En esta ocasión les traigo un listado de comandos básicos que todo usuario que se este adentrando al hermoso mundo de linux debería de conocer. En cualquier GNU/Linux tenemos la llamada terminal o..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='QXd4UWk2ajNLRzZsejk1VTJGc2RHVmtYMStncFU1cE13MXRma0VWSndzck4vRHFiRzF6b05ha0ZnanQ4N0xxZWtZRDdCb1N1SXQ5MlFlME5nTkZhSXVVVTUybUQzR3hJTG1UZEE9PVhlTG44UmhtSjl4b2x0Ng==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761479909;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, '9a1c2bb0233718393f357b76e7d1507f');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_7.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Comandos basicos de linux que deberias saber" title="Identi - Comandos basicos de linux que deberias saber" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = 'f211950b22f9bd5358058dc4d1356c5036d26dd3';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=Xmegacs">Xmegacs</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"Lo importante es compartir"
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=Xmegacs" title="Ir al Perfil de Xmegacs"><img id="error_avatar" class="avatar" border="0" width="120" src="https://3.bp.blogspot.com/_CpVlf6p-G4c/SqoFlQ7RfdI/AAAAAAAAHns/a5sckqnk910/s400/chozo-mj-tux-gandalf-le-gris-1887.png" /></a>
+<div class=" rango_sidebar clearfix">Gold User</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/golduser.png" title="Gold User" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(1961335)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('1961335');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">66</b> Seguidores</li>
+<li><b>1568</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>47</b> Posts</li>
+<li><b>121</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Comandos basicos de linux que deberias saber</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=470641';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=470643';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=126" alt="Linux" title="Linux">Linux</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 8 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_1132673">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><img id="img_post" src="https://s19.postimg.org/z4pa2jd43/Selecci_n_004.png" border="0"><br /><br /><br /><br />En esta ocasión les traigo un listado de comandos básicos que todo usuario que se este adentrando al hermoso mundo de linux debería de conocer. <br /><br />En cualquier GNU/Linux tenemos la llamada terminal o consola que abre un shell o intérprete de comandos. En Ubuntu la abrimos buscando en en el Dash o tablero de Unity: &quot;Terminal&quot; o pulsando la combinación de teclas <b>Ctrl+Alt+T</b><br /><br /><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>Permisos administrativos </b><br /><br /><b>SUDO</b> Para la instalación de aplicaciones vamos a tener que dar permisos administrativo con el comando sudo.<br /><br /><b>SU</b> Si tenemos definido el Superusuario accederemos a el con el comando su.<br /><br /><b>APT-GET</b> Nos sirve para la instalación de aplicaciones desde consola, asi como también la desintalacion de programas.<br /><br />Ejemplos:<br /><br /><div class="code">sudo apt.get install firefox </div><br />De esta manera instalaremos el navegador firefox o cualquier otro programa que necesitemos en nuestro equipo.<br /><br /><div class="code">sudo apt.get remove firefox</div><br />De esta manera desintalaremos el software que necesitemos de nuestro sistema.<br /><br /><div class="code">sudo apt.get remove --purge firefox</div><br />De esta manera desintalamos y eliminamos todos los datos del programa para que no queden rastros en nuestro sistema.<br /><br /><br /><b><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br />REPOSITORIOS</b><br /><br />Los repositorios son paquetes de archivos que se encuentran disponibles en linea y que podemos descargar e instalar en nuestro sistema operativo. Cuando un programa se encuentra en los repositorios oficiales de tu distribución, cómo por ejemplo: Firefox, qué está en todos los repositorios oficiales de Ubuntu, para instalarlo solo debemos usar el comando apt-get cómo explicamos arriba.<br /><br />Si el programa que deseamos instalar, está en un repositorio de un tercero, antes de poder instalar el paquete debemos añadir el PPA (Personal Package Archive) a nuestros repositorios locales.<br /><br />Todos los repositorios tienen la misma estructura: ppa:nombredelpaquete. Para añadir un repositorio usamos el comando: <br /><br /><b>sudo add-apt-repository</b><br /><br />Ejemplo Gimp:<br /><br /><div class="code">sudo add-apt-repository ppa:otto-kesselgulasch/gimp</div><br /><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>Actualizar la lista de paquetes de tu sistema</b><br /><br />Cada vez que deseemos comprobar actualizaciones usaremos el comando sudo apt-get update. Lo mismo debemos hacer cada vez que añadimos un nuevo repositorio, para que el sistema pueda obtener los paquetes que este contiene, antes de poder instalarlos.<br /><br />Por ejemplo si añadimos el repositorio de Gimp como lo muestra la imagen anterior, deberíamos hacer lo siguiente.<br /><br />(Añadimos repositorio)<br /><br /><div class="code">sudo add-apt-repository ppa:otto-kesselgulasch/gimp </div><br />(Actualizamos el sistema para obtener los paquetes)<br /><br /><div class="code">sudo apt-get update </div><br />(Instalamos el software)<br /><br /><div class="code">sudo apt-get install gimp </div><br /><br />Si lo que queremos es actualizar todos nuestros programas a sus últimas versiones, e instalar las actualizaciones del sistema de manera fácil y rapida, usamos el comando upgrade.<br /><br /><div class="code">sudo apt-get update </div><br /><div class="code">sudo apt-get upgrade</div><br /><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>Comandos de directorios.</b><br /><br />ls ? (list: listar)<br /><br />La sinapsis del comando sería:<br /><br /><b>ls [opciones] [ruta]</b><br /><br />Opciones:<br /><br /><b>-a ? </b>Muestra todos los ficheros incluyendo algunos que ordinariamente están ocultos para el usuario (aquellos que comienzan por un punto). Recordemos que el fichero punto . indica el directorio actual y el doble punto .. el directorio padre, que contiene, al actual.<br /><br /><b>-l ? </b>Esta es la opción de lista larga: muestra toda la información de cada fichero incluyendo: protecciones, tamaño y fecha de creación o del último ambio introducido,...<br /><br /><b>-c ? </b>Muestra ordenando por día y hora de creación.<br /><br /><b>-t ? </b>Muestra ordenando por día y hora de modificación.<br /><br /><b>-r ? </b>Muestra el directorio y lo ordena en orden inverso.<br /><br /><b>-R ? </b>Lista también subdirectorios.<br /><br /><b>ls subdir ? </b>Muestra el contenido del subdirectorio subdir.<br /><br /><b>-l filename ? </b>Muestra toda la información sobre el fichero filename.<br /><br /><b>--color ? </b>Muestra el contenido del directorio coloreado.<br /><br />Ejemplos:<br /><br />Si queremos que nos muestre lo que contiene el directorio o carpeta &quot;/etc&quot;:<br /><br /><div class="code">ls /etc</div><br /><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>cd ? (change directory: cambiar directorio)</b><br /><br />Lo utilizamos para cambiar de directorio o carpeta en la terminal.<br /><br />Podemos usarlo con rutas absolutas o relativas.<br /><br />En las absolutas le indicamos toda la ruta desde la raíz (/). Por ejemplo, estemos donde estemos, si escribimos en consola …<br /><br /><div class="code">cd /etc/apt</div><br /><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>mkdir ? (make directory: hacer directorio)</b><br /><br />Crea una carpeta o directorio con el nombre que le indiquemos.<br /><br />Nuevamente podemos usar rutas absolutas y relativas. Podemos indicarle toda la ruta que le precede al directorio que queremos crear:<br /><br /><div class="code">mkdir /home/carpeta_personal/nueva_carpeta</div><br /><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>rm ? (remove: borrar)</b><br /><br />Borra el archivo o la carpeta que le indiquemos.<br /><br />Como antes se puede indicar la ruta completa o el nombre del archivo. Esto a partir de ahora lo vamos a obviar, creo que ya ha quedado claro con los dos comandos anteriores.<br /><br />Para borrar un archivo:<br /><br /><div class="code">rm nombre_archivo</div><br />Otras opciones:<br /><br />&quot;-f&quot;, no te pide una confirmación para eliminar.<br />&quot;-v&quot;, va mostrando lo que va borrando.<br /><br /><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>cp ? (copy: copiar)</b><br /><br />Copia el archivo o directorio indicado donde le digamos.<br /><br />Aquí podemos también jugar con las rutas, tanto para el fichero origen, como en el del destino. También podéis cambiar el nombre que le queréis poner a la copia.<br /><br />La sinapsis del comando sería:<br /><br /><div class="code">cp [/ruta/de/original...] [/ruta/de/copia...]</div><br />Por ejemplo, en nuestra carpeta personal vamos a crear una copia de seguridad &quot;sources.list.backup&quot;, de nuestros repositorios &quot;/etc/apt/sources.list&quot;. Lo voy a explicar según donde estemos colocados en la terminal, para comprender lo primordial que es saber en todo momento el directorio donde estamos colocados en la terminal:<br /><br />- Si estamos colocados en nuestra carpeta personal, debemos de poner la ruta absoluta del original y la ruta relativa de la copia:<br /><br /><div class="code">cp /etc/apt/sources.list sources.list.backup</div><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>mv ? (move: mover)</b><br /><br />Es igual que el anterior, sólo que en lugar de hacer una copia, mueve directamente el archivo con el nombre que le indiquemos, pudiendo ser otro distinto al original:<br /><br />La sinapsis del comando sería idéntica a copiar:<br /><br /><div class="code">mv [/ruta/de/original...] [/ruta/de/destino...]</div><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>find ? (find: encontrar)</b><br /><br />Busca archivos o carpetas en la ruta que le indiques:<br /><br />La sinapsis del comando sería:<br /><br /><div class="code">find [/directorio/donde/buscar...] [-expresión] [búsqueda]</div><br />Donde &quot;expresión&quot; es el tipo de búsqueda y siempre se le antepone el signo &quot;-&quot;<br /><br />La expresión &quot;-name&quot; sería para realizar una búsqueda por nombre. Por ejemplo, para buscar en todo el sistema de archivos o raíz &quot;/&quot; las carpetas y archivos que se llamen &quot;pepino&quot;. Sería:<br /><br /><div class="code">find / -name pepino</div><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>grep ? (localizar)</b><br /><br />El comando grep localiza una palabra, clave o frase en un conjunto de directorios, indicando en cuáles de ellos la ha encontrado. Este comando rastrea fichero por fichero, por turno, imprimiendo aquellas líneas que contienen el conjunto de caracteres buscado. Si el conjunto de caracteres a buscar está compuesto por dos o más palabras separadas por un espacio, se colocará el conjunto de caracteres entre apóstrofes (&#039;). S<br /><br />La sinapsis del comando sería:<br /><br /><div class="code">grep [OPCIÓN] &#039;conjuntocaracteres&#039; [ARCHIVOS...]</div><br />Las opciones principales del comando son:<br /><br /><b>-c ? </b>lo único que se hace es escribir el número de las líneas que satisfacen la condición.<br /><b>-i ? </b>no se distinguen mayúsculas y minúsculas.<br /><b>-l ? </b>se escriben los nombres de los ficheros que contienen líneas buscadas.<br /><b>-n ? </b>cada línea es precedida por su número en el fichero.<br /><b>-s ? </b>no se vuelcan los mensajes que indican que un fichero no se puede abrir.<br /><b>-v ? </b>se muestran sólo las líneas que no satisfacen el criterio de selección.<br /><br />A continuación se muestra una serie de ejemplos.<br /><br /><b>grep ‘ˆd’ text ? </b>líneas que comienzan por d.<br /><b>grep ‘</b>líneas que no comienzan por d.<br /><b>grep -v ‘ˆC’ file1 &gt; file2 ? </b>quita las líneas de file1 que comienzan por C y lo copia en file2.<br /><br /><b>cat ? (Visualización sin formato de un fichero)</b><br /><br />Este comando permite visualizar el contenido de uno o más ficheros de forma no formateada. También permite copiar uno o más ficheros<br />como apéndice de otro ya existente. Algunas formas de utilizar este comando son las siguientes:<br /><br />Sacar por pantalla el contenido del fichero filename:<br /><br /><div class="code">cat filename</div><br /><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>COMANDOS RELACIONADOS CON SISTEMA Y ADMINISTRACIÓN</b><br /><br /><b>ps ? (process status: estado de los procesos)</b><br /><br />Nos muestra lo que queramos saber de los procesos que están corriendo en nuestro sistema. Cada proceso está identificado con un número llamado PID. Si hacemos…<br /><br /><div class="code">ps -A</div><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>kill ? (kill: matar)</b><br /><br />Permite enviar señales a uno o varios procesos del sistema. Las más utilizadas suelen ser la de matar un proceso (9 o SIGKILL), pararlo (TERM) o reiniciarlo (1 o HUP) pero hay muchas más que pueden ser útiles en ocasiones. El listado completo de señales disponibles puede visualizarse ejecutando:<br /><br /><div class="code">kill -l</div><br />Por ejemplo para solicitar que termine un proceso cuyo PID es &quot;3760&quot;, se utiliza la señal TERM (15), que es la señal por defecto si no se escribe otra. Así que para solicitar el fin de ejecución de uno basta con ejecutar kill seguido del PID correspondiente:<br /><br /><div class="code">kill 3760</div><br />Para forzar que uno o varios procesos terminen de forma inmediata (sin solicitar ni preguntar…) usamos la señal SIGKILL (9). Hay que ser cautos al usar esta señal porque fuerza a los procesos a terminar inmediatamente sin permitirles terminar de forma limpia, es decir, puede que no borre los PID, que no deje terminar las peticiones pendientes, etc:<br /><br /><div class="code">kill -9 3760</div><br />Si quisieramos forzar que todos los procesos con un determinado nombre finalicen inmediatamente usaríamos &quot;killall&quot; en lugar de kill. Por ejemplo para cerrar varios conkys que tengamos en el escritorio:<br /><br /><div class="code">killall -9 conky</div><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>passwd ? (password: contraseña)</b><br /><br />Cambia las contraseñas de cuentas de usuario.<br /><br />Los usuarios normales solo pueden cambiar la contraseña de su propia cuenta y el superusuario puede cambiar todas.<br /><br />La sinapsis del comando sería:<br /><br /><div class="code">passwd [opciones] [USUARIO]</div><br />Opciones:<br /><br /><b>-a, --all ? </b>informa del estado de las contraseñas de todas las cuentas<br /><b>-d, --delete ? </b>borra la contraseña para la cuenta indicada<br /><b>-e, --expire ? </b>fuerza a que la contraseña de la cuenta caduque<br /><b>-h, --help ? </b>muestra este mensaje de ayuda y termina<br /><b>-k, --keep-tokens ? </b>cambia la contraseña sólo si ha caducado<br /><b>-i, --inactive INACTIVO ? </b>establece la contraseña inactiva después de caducar a INACTIVO<br /><b>-l, --lock ? </b>bloquea la contraseña de la cuenta indicada<br /><b>-n, --mindays DÍAS_MIN ? </b>establece el número mínimo de días antes de que se cambie la contraseña a DÍAS_MIN<br /><b>-q, --quiet ? </b>modo silencioso<br /><b>-r, --repository REP ? </b>cambia la contraseña en el repositorio REP<br /><b>-R, --root CHROOT_DIR ? </b>directory to chroot into<br /><b>-S, --status ? </b>informa del estado de la contraseña la cuenta indicada<br /><b>-u, --unlock ? </b>desbloquea la contraseña de la cuenta indicada<br /><b>-w, --warndays DÍAS_AVISO ? </b>establece el aviso de caducidad a DÍAS_AVISO<br /><b>-x, --maxdays DÍAS_MAX ? </b>establece el número máximo de días antes de cambiar la contraseña a DÍAS_MAX<br /><br /><br />Si se especifica nombre-usuario, se cambiará la contraseña de dicho usuario (para esto se debe ser root), sino, la del usuario que ejecuta el comando. La mecánica de cambio de contraseña tiene 3 pasos:<br /><br />- Ingresar la contraseña antigua.<br />- Ingresar la contraseña nueva.<br />- Repetir la contraseña nueva para confirmar.<br /><br /><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>dpkg ? (depackage: despaquetar)</b><br /><br />Los paquetes cuando se instalan sufren un proceso de despaquetaje. En el fondo un paquete .deb contiene una serie de scripts de pre-instalación, post-instalación y los archivos en cuestión del paquete.<br /><br />Este comando lo usaremos para instalar un paquete .deb que ya tengamos descargado en nuestro sistema. En muchas ocasiones hay una aplicación que no está en los repositorios y nos hemos bajado el .deb para instalarlo con el interfaz gráfico que corresponda (GDebi en el caso de GNOME). En el fondo estas interfaces gráficas están basadas en dpkg.<br /><br />Si queremos instalar un paquete ya descargado mediante consola usaremos el argumento ‘-i’ (i=install):<br /><br /><div class="code">dpkg -i nombre_paquete</div><br />Para desinstalarlo ‘-r’ (r=remove):<br /><br /><div class="code">dpkg -r nombre_paquete</div><br />Para desinstalar el paquete y los ficheros de configuración “–purge” (purgar):<br /><br /><div class="code">dpkg -r –purge nombre_paquete</div><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>date ? (date: fecha)</b><br /><br />Muestra por pantalla el día y la hora, permitiendo, además, el cambio de la misma.<br /><br />La sinapsis del comando sería:<br /><br /><div class="code">date [OPCIÓN]... [+FORMATO]</div><br /><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>cal ? (calender: calendario)</b><br /><br />Muestra el calendario del mes o año actual actual.<br /><br />La sinapsis del comando sería:<br /><br /><div class="code">cal [mes] [año]</div><br />Por ejemplo,<br /><br />cal ? muestra el calendario del mes actual.<br />cal 2014 ? muestra el calendario del año 2014.<br />cal 05 2015 ? muestra el calendario de Mayo de 2015<br /><br /><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><b>clear</b><br /><br />Este comando se utiliza para limpiar la pantalla de la terminal.<br /><br />La sinapsis del comando sería:<br /><br /><div class="code">clear</div><img id="img_post" src="http://imagenti.li/medium/yM.png" border="0"><br /><br /><br /><b>ACCESO A UNIDADES DE DISCO: MONTAJE Y DESMONTAJE</b><br /><br />Linux a diferencia de Windows no utiliza letras (&quot;C:&quot;, &quot;D:&quot;, ...) para acceder a las distintas unidades de disco de un ordenador. Para acceder al contenido de una unidad de disco o de un CD-ROM este tiene que haber sido previamente &quot;montado&quot;. El montado se realiza mediante el comando mount, con lo que el contenido de la unidad se pone a disposición del usuario en el directorio de Linux que se elija.<br /><br />La sinapsis del comando sería:<br /><br /><div class="code">mount [-t tipo_de_sistema_ficheros] [dispositivo] [directorio_de_montaje]</div><br />Por ejemplo para acceder al CD-ROM se teclearía el siguiente comando:<br /><br /><div class="code">mount -t iso9660 /dev/cdrom /mnt/cdrom</div><br />Donde:<br /><br />&quot;-t iso9660&quot; indica el tipo de sistema que usa la unidad de disco para guardar los ficheros (las más usuales son: iso9660 en el caso de un CD-ROM, vfat en el caso de Windows, y ext2 (3 o 4) en el caso de Linux),<br />&quot;/dev/cdrom&quot; indica el dispositivo que se va a montar. Todos los dispositivos están representados por un fichero del directorio /dev; por ejemplo, en el caso de un disquete será seguramente /dev/fd0,<br />&quot;/mnt/cdrom&quot; es el directorio en el que se pondrá a disposición del usuario el contenido del CD-ROM. Para montar disquetes se suele utilizar el directorio /mnt/floppy (aunque esto depende de la versión de Linux que utilicemos).<br /><br /><br />Cuando el usuario haya dejado de usar ese disco deberá &quot;desmontarlo&quot; mediante el comando umount antes de sacar el disquete o el CD-ROM. Siguiendo con el ejemplo de la disquetera en Ubuntu, debería escribir:<br /><br /><div class="code">umount /cdrom</div><br />Bueno amigos, creo que eso seria todo por ahora.. espero que les sea de utilidad...<br /><br /><img id="img_post" src="https://lh5.googleusercontent.com/-FiVvvHZa8Ng/V6xXMjwJc_I/AAAAAAAADkg/NEqhsUebr08WQbZvuOghVz1HFnE3MejNgCLcB/w800-h300-no/Fin%2B01.jpg" border="0"><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">70</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 5/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">3408</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">17</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(470642,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(470642,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(470642,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(470642,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(470642,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(470642,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(470642,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(470642,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(470642,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(470642,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://i109.fastpic.ru/big/2019/0312/d3/6473b4e52855a66ada0b689b659355d3.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1794856" title="perfil de Rasta_"> Rasta_</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://media.tumblr.com/24df53368db459ed9c0e2bc19d14c236/tumblr_inline_mfcy1pXnSg1rxqiz0.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=79125" title="perfil de survivor"> survivor</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/_XyaO697glM8/SbAAJTOarCI/AAAAAAAAARc/72DvOxfzJ00/S1600-R/caballero%20templario.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=88892" title="perfil de Booster"> Booster</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://tranccuilo.files.wordpress.com/2012/10/mono.jpeg?w=60" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1547015" title="perfil de illukki"> illukki</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/_ierSNQX-XaE/SUUTV7QLbTI/AAAAAAAAAHo/mcjAJfly6xo/s320/Ryu.PNG" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1616246" title="perfil de Hadoken1"> Hadoken1</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-R3vnSn8TO48/WIoJbW5tBPI/AAAAAAAACEY/i-sEYK0BQpA3rZG3J0N1xtG8VJi8vkXvQCLcB/s320/giphy.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1840236" title="perfil de dnite"> dnite</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://s-media-cache-ak0.pinimg.com/originals/b5/55/21/b55521725c6009ffeae67fffc1c25f30.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1998208" title="perfil de NEL1986"> NEL1986</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://2.bp.blogspot.com/-NUsiCDaH_cc/VV0aKjbkLFI/AAAAAAAAAAM/oGhAU3At1Eg/s1600/Spider.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1886049" title="perfil de ident0"> ident0</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://a.pfcdn.net/site/t/profile/image/88/94/889490.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1892192" title="perfil de cdgp_89"> cdgp_89</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://www.movieactors.com/freezes1/goodbad254.jpeg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1885725" title="perfil de juancho987"> juancho987</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="http://i85.fastpic.ru/big/2016/1028/0d/74f53558202f85ff957f6a1925def50d.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=18809" title="perfil de pancram"> pancram</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-ZP8kxgy268w/T6LmYZDhpkI/AAAAAAAAAIM/aQNxLSBf1aI/s1600/mint_linux_logo.png" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1534814" title="perfil de Javinocho"> Javinocho</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-60HoNVJKIos/VYwhyWFKuZI/AAAAAAAAMOg/jssUTnYQNF8/s1600/1.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1544342" title="perfil de draer"> draer</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://t0.gstatic.com/images?q=tbn:ANd9GcQY5358sJSrnXixNFEAmH5MWaZ3tOnNGKqisS7Oka5S5Ft-A9HfGQ" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1899399" title="perfil de TomasCabj7"> TomasCabj7</a>: <b>5 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(470642);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('470642');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=547569" title="Mangle - Queue Tree Mikrotik"> Mangle - Queue Tree Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=527410" title="Bloquear Youtube con Mikrotik"> Bloquear Youtube con Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=527397" title="Bloquear Netflix Mikrotik"> Bloquear Netflix Mikrotik</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_108"></i>
+<a href="https://identi.io/index.php?topic=476589" title="7 Libros PDF Android | MEGA"> 7 Libros PDF Android | MEGA</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476086" title="Vim | Algunos comandos | Linux"> Vim | Algunos comandos | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476075" title="Abreviaturas Teclado | Linux"> Abreviaturas Teclado | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_126"></i>
+<a href="https://identi.io/index.php?topic=476063" title="Expresiones Regulares | Linux"> Expresiones Regulares | Linux</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_74"></i>
+<a href="https://identi.io/index.php?topic=475994" title="Eliminar a todos tus contactos Facebook | 2017"> Eliminar a todos tus contactos Facebook | 2017</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">6</span> Comentarios</span>
+<span class="onpost"> Comandos basicos de linux que deberias saber</span>
+<div class="comentario"></div><div id="comment_4948030" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="arturogr25" href="?action=profile;user=arturogr25">
+<img id="error_avatar" src="https://www.google.co.ve/url?sa=i&amp;rct=j&amp;q=&amp;esrc=s&amp;source=images&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwjX3PXm9JHiAhWJsBQKHQEqArcQjRx6BAgBEAU&amp;url=https%3A%2F%2Fwww.amazon.it%2FBandai-Netaddiction-Model-Kit-Silhouette%2Fdp%2FB07HJ" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1645016" href="?action=profile;user=arturogr25">arturogr25</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1496231938" title="31/05/2017 a las 11:58 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Excelente ...gracias........... <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4948092" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="guille69" href="?action=profile;user=guille69">
+<img id="error_avatar" src="/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="48007" href="?action=profile;user=guille69">guille69</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1496238215" title="31/05/2017 a las 13:43 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4948182" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="diegol18" href="?action=profile;user=diegol18">
+<img id="error_avatar" src="https://encrypted-tbn2.google.com/images?q=tbn:ANd9GcQao4upJoLcd80A3QVHiKUfHAQK8HRgEfzM6uT_UIf2vPcyucI6" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="129858" href="?action=profile;user=diegol18">diegol18</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1496243619" title="31/05/2017 a las 15:13 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy bueno tu aporte. Si bien la mayoria de los comandos son iguales para todas las distribuciones, tendrias que aclarar que algunos como los de instalar y desinstalar aplicaciones y para actualizar son para las que estan basadas en Debian.
+</div>
+</div>
+</div>
+</div><div id="comment_4949932" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="NEL1986" href="?action=profile;user=NEL1986">
+<img id="error_avatar" src="https://s-media-cache-ak0.pinimg.com/originals/b5/55/21/b55521725c6009ffeae67fffc1c25f30.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1998208" href="?action=profile;user=NEL1986">NEL1986</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1496366505" title="02/06/2017 a las 1:21 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Espectacular aporte y muy fácil de entender. Si no es mucho pedir podrias hacer un post similar para OpenSuSE. Es que empece a usarlo hace poco y todavia no le agarré la mano. <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4959449" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="MrZombe" href="?action=profile;user=MrZombe">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1542624" href="?action=profile;user=MrZombe">MrZombe</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1497016270" title="09/06/2017 a las 13:51 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_4967879" class="comentario coment_id_6">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="draer" href="?action=profile;user=draer">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-60HoNVJKIos/VYwhyWFKuZI/AAAAAAAAMOg/jssUTnYQNF8/s1600/1.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1544342" href="?action=profile;user=draer">draer</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1497594930" title="16/06/2017 a las 6:35 ">hace m&aacute;s de 8 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<b>Buen aporte, gracias por compartir.</b> &nbsp; <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_7.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9949c8343dc5dea5',t:'MTc2MTQ3OTkwOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
