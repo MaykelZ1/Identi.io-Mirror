@@ -1,0 +1,949 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+<head>
+<base href="https://identi.io/">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Isidoro (parte 1) - Identi</title>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta name="referrer" content="always">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="msvalidate.01" content="C5D8F90264E49CBCC53E16C4A4783DB0" />
+<meta name="p:domain_verify" content="2ce1158220194154bfc7925e0aa151f2"/>
+<meta name="keywords" content="Identi, Mega, Copiapop, Zippyshare, Mediafire, Descargas, Gratis, Identili, Full, serial, completo, programas, antivirus, seriales, licencias, peliculas, series, android, iphone, Links, Descarga Mega, Descargar Gratis, pelis24, cuevana" /><meta name="description" content="ISIDORO (parte 1) Isidoro Cañones es un personaje de historietas de Argentina, creado por Dante Quinterno. Originalmente fue creado como personaje secundario de Patoruzú, pero con el tiempo ganó s..." /><link rel="stylesheet" type="text/css" href="/css/identix1.css?v=1.1"/><link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/><script type="text/javascript">
+var global = {
+noavatar : "https://identi.io//images/def/avatar.png",
+images_dir : "https://identi.io/Themes/Identiz/images",
+scripturl : "https://identi.io/index.php",
+is_logged : false,
+boardurl : "https://identi.io",
+images_url : "https://identi.io/Themes/Identiz/images",
+id_member: "0",
+sources_directorio : "https://identi.io/Sources",
+pauth: 0,
+simg:new RegExp(),
+sdown:new RegExp(),
+slinks:new RegExp()}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXW04CWGVY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GXW04CWGVY');
+</script>
+<script type="text/javascript" src="/js/jquery.1.7.min.js"></script><script src='https://www.google.com/recaptcha/api.js?render=6Le3g7IUAAAAANx7-80AckUlqLrX8tA1JIneAIEE'></script><script>var guest=true;</script><script type="text/javascript" src="/dev/developstone.js?99" defer="defer"></script>
+<script type="text/javascript">var approval = true;</script>
+<script type="text/javascript" src="/js/adframe.js?v=1" defer="defer"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/lazy.js?v=1.2" defer="defer"></script>
+<script type="text/javascript" src="/js/aes/aes2.min.js" defer="defer"></script>
+<script type="text/javascript" src="/js/acciones.js?v=13"></script>			<script>
+				var tokens='S3V1M1M1dG5mcHhrOVZzVTJGc2RHVmtYMTkvTDJQU0w3UCt4dEpTWGxGUFc4WVRVU3BVVW54ekc0Qkk2aFUvN3JhRmtMeWl3WTRtU3JZVFBYd3lQQThIaWxZYkxoTXRlN2huZmc9PVdreENIeWFkRDBHZ1VkZA==';
+			</script>
+			<script type="text/javascript" src="/js/display15.js?v=70"></script>		<script>
+function loadReca(obj){
+toopen = obj.attr('toopen');
+checkf = obj.parent().find('.spoiler-btn');
+placeT = obj.parent().find('.info_bbc');
+if(toopen != 'jd'){
+linkG = placeT.html();} else {
+linkG = obj.parent().find('.myjdownloader').attr('datacr');}
+captchaT = obj.attr('captchaID');
+$.ajax({
+url: '/ajax/recaptcha.php',
+data: 'response='+grecaptcha.getResponse(window[captchaT])+'&link='+encodeURIComponent(linkG)+'&type='+toopen,
+type: 'POST',
+success: function(h){
+if(h.charAt(0) != '0'){
+obj.hide();
+obj.parent().find('.in-reca').hide();
+if(toopen == 'spoiler'){
+placeT.html(h);
+checkf.show();} else {
+obj.parent().find('.myjdownloader').show();
+obj.parent().find('.myjdownloader').attr('href', obj.parent().find('.myjdownloader').attr('href')+h);}}}});}
+</script>
+<script data-cfasync="true" id="mensiones_tmp" type="text/html">
+<div class="tooltip-c compact clearfix">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img id="error_avatar" alt="imagen avatar identi" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%=name%>"><%= name %></a>
+<img alt="hombre o mejor identi" src="/images/<%= sexo %>.png" /> <img alt="pais" src="/images/paises/16/<%= pais %>.png"/>
+<span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="view-more"><a>M&aacute;s informaci&oacute;n</a></div>
+</div>
+<div class="tooltip-c extended clearfix" style="word-wrap:break-word; overflow:hidden">
+<span class="pick"></span>
+<div class="clearfix data-tip">
+<a href="?action=profile;user=<%= name %>" class="avatar-tip"><img alt="identi avatar 2" id="errora_avatar" width="50" height="50" src="<%= avatar %>"></a>
+<div class="user-tip">
+<a class="nick" href="https://identi.io/index.php?action=profile;user=<%= name %>"><%= name %></a>
+<img alt="m o f identi.io" src="/images/<%= sexo %>.png" /> <img alt="nacionalidad" src="/images/paises/16/<%= pais %>.png" /> <span class="trango"> <%= rango %> </span>
+</div>
+</div>
+<div class="more-data">
+<b><%= posts %> Posts</b>
+<b><%= pts %> Puntos</b>
+<span><%= personalText %></span>
+</div>
+<div class="view-more">
+</div>
+</div>
+</script>
+<script type="text/javascript">
+var RecaptchaOptions = {
+theme : 'clean',
+lang : 'es'}
+dialog_conf = {
+autoOpen: false,
+width: 300,
+modal: true,
+resizable: false,
+draggable: false,
+buttons: [{
+text: "Ok",
+"class": 'floatR',
+click: function() {
+$(this).dialog("close");}}]}
+$(document).ready(function(){
+$('#my-dialog, #vprevia, #ui-alert').dialog(dialog_conf);
+timelib.current = 1761493032;
+timelib.upd();});
+</script>
+<script type="text/javascript"><!--
+   if(top.location!=this.location) top.location=this.location;
+   //--></script>
+</head>
+<body>
+<div id="mask" style="display:none;"></div>
+<div id="mydialog" style="display:none;"></div>
+<div id="my-dialog" style="display:none;"></div>
+<div id="ui-alert" style="display:none;"></div>
+<div id="mypopup" style="display: none;"></div>
+<span id="scroll-up" style="display: none; "></span>
+<div class="tooltip-anonimo clearfix box-shadow-soft" style="display: none;">
+<span class="pico"></span>
+<p><b>&Uacute;nete a Identi!</b></p>
+<p>Esta acci&oacute;n es s&oacute;lo para usuarios de Identi</p>
+<button onclick="./index.php?action=registrarse" class="ui-button-positive">Reg&iacute;strate</button>
+<button onclick="./index.php?action=login" >Ya tienes una cuenta?</button>
+</div>
+<div class="menu">
+<div class="bar clearfix">
+<ol class="menuTabs">
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=23" title="Peliculas en Espa&ntilde;ol latino">Peliculas</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=45" title="Series en Espa&ntilde;ol latino">Series</a>
+</li>
+<li class="tabbed">
+<a href="https://www.identi.io/index.php?cat=11" title="Juegos para PC">Juegos PC</a>
+</li><li class="tabbed  registrate"><a style="color:#01DF01" href="https://www.identi.io/index.php?action=registrarse">Registrate</a></li></ol>
+<div class="opciones_usuario anonimo">
+<div class="identificarme">
+	<a class="iniciar_sesion" id="login_button">Accede
+	<span class="logintab_overlay" style="display:none">Accede</span>
+	</a>
+</div>
+<div id="main_login">
+<div class="tabs">
+<ul class="clearfix"><li id="login_close" onclick="close_login()"></li></ul>
+
+<div class="login_cuerpo">
+
+ <div class="login_form">
+    <form action="https://identi.io/index.php?action=login2" method="post" accept-charset="ISO-8859-1" name="frmLogin" id="frmLogin" onsubmit="hashLoginPassword(this, 'a3aa47f5fe6041826fff7c5edc102be5');"><label></label>
+      <input maxlength="64" id="user" name="user" class="login_mf " placeholder="Email o Usuario" type="text">
+      <label>
+      <input maxlength="64" id="passwrd" name="passwrd" class="login_mf " placeholder="Contrase&ntilde;a" type="password">
+      </label>
+<a href="https://www.identi.io" onMouseDown="return contrasena(this);">Olvidaste tu contrase&ntilde;a?</a>
+	    <!----<input type="checkbox" id="login_remember"/> <p id="login_remember_p">Recordarme</p>--->
+   <input class="primary-mf-button" type="submit" value="Acceder a Identi"/>
+    <input class="secondary-mf-button" onclick="location.href='https://identi.io/index.php?action=registrarse'" type="button" value="Crear un usuario"/>
+    </form>
+	</div>
+	</div>
+  </div>
+</div>
+	</div></div></div>
+<div style="background: #004CA0 url(/images/head/head_7.png) repeat-x;" class="art-Header-gif">
+<div class="art-Header">
+<div class="art-Logo">
+<div id="logo">
+<a href="https://identi.io" title="Identi - Descargar Peliculas, Juegos, Series..." id="logo-img">
+<img src="/images/espacio.png" width="1" height="16" alt="Identi - Isidoro (parte 1)" title="Identi - Isidoro (parte 1)" align="top" border="0"/></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="art-main">
+<div class="art-Sheet"><div class="subMenuContent">
+<div class="subMenu clearfix" id="subMenuPosts">
+<ul class="floatL clearfix tabsMenu">
+<li  class="here"  ><a  href="https://identi.io" title="Post de Inicio - Identi"><i class="sprite_i inicio"></i><img src="/images/espacios.png" alt="identi" width="4" height="1" />Posts</a></li>
+<li><a href="https://identi.io/index.php?action=comunidades" title="Entra y participa..."><i class="sprite_i comunidades"></i><img src="/images/espacios.png" alt="descargar peliculas" width="4" height="1" />Comunidades</a></li><li> <a href="https://identi.io/index.php?action=TOPs" title="Ranking"><i class="sprite_i top"></i><img src="/images/espacios.png" alt="peliculas identi" width="4" height="1" />Tops</a></li>
+<li><a href="https://identi.io/index.php?action=buscador" rel="search" title="Busca en Identi un post o tema..."><i class="sprite_i busqueda"></i><img src="/images/espacios.png" alt="programas" width="4" height="1" />Buscador</a></li></ul>
+<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+<div class="search_top" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div></div>
+<div class="art-Sheet-body">
+<div class="div_control"><style>
+.linkhidder {
+    padding: 8px;
+    font-size: 14px!important;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #68B4F1;
+    color: #096FDB!important;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none!important;
+}
+.linkhidder:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 42px;
+}
+.linkhidder:hover:before {
+ width: 100%;
+}
+</style>
+<script>
+var hash = '1c0ed077b932e755b2c4920a77660373eca043a9';
+
+$(document).ready(function(){
+comments.hideQuotes();
+comments.iconsHover();
+$('.com_opt a').tipsy({fade: true,gravity:'s'});});
+</script>
+<div class="display_izq_col">
+<div class="display_sidebar clearfix">
+<div class="nick_sidebar clearfix">
+<a rel="nofollow" href="?action=profile;user=heborlan">heborlan</a>
+<a title="Desconectado" class="addtipsy_s offline"></a><div class="mpersonal_sidebar">
+"Nadie se salva solo"
+</div>	</div>
+<div class="sidebar_superior clearfix">
+<div class="avatar_sidebar">
+<a rel="nofollow" href="?action=profile;user=heborlan" title="Ir al Perfil de heborlan"><img id="error_avatar" class="avatar" border="0" width="120" src="https://i.postimg.cc/3xHFZn6H/pf-heborlan.gif"/></a>
+<div class=" rango_sidebar clearfix">Viper</div>
+</div>
+<div class="sidebar_right">
+<div class="extra"><img class="addtipsy_s" title="" src="/images/paises/24/ar.png" /><img class="addtipsy_s" src="/images/male.png" title="Masculino" width="24" height="24" border="0" /><img class="addtipsy_s" width="32" height="32" src="/images/rangos/viper.png" title="Viper" border="0" />
+</div>
+</div>
+</div><div class="clearfix">
+<div class="clearfix boton_seguir">
+<span class="button require-login " accion="seguir" id="seguir" onclick="seguir.user(65393)"  >Seguir Usuario</span>
+</div>
+<div class="clearfix boton_MP">
+<span class="button enviar_mp addtipsy_s require-login" onclick="javascript:mp.enviar_mensaje('65393');" title="Enviar Mensaje Privado (Desconectado)"><i class="ui-icon ui-icon-mail-closed"></i>MP</span>
+</div>
+</div>
+<div class="sidebar_inferior clearfix">
+<span class="clearfix stats">
+<ul class="floatL">
+<li><b id="num_seguir">126</b> Seguidores</li>
+<li><b>4150</b> Puntos</li></ul>
+<ul class="floatR">
+<li><b>50</b> Posts</li>
+<li><b>568</b> Comentarios</li>
+</ul>
+</span>
+
+</div></div>
+</div>
+<div class="display_der_col"><div class="header_post clearfix" >
+<h1 class="title_post">Isidoro (parte 1)</h1>
+<div class="botones">
+<ul id="icons" class="ui-widget ui-helper-clearfix">
+<li onclick="location.href='https://identi.io/index.php?topic=328508';" class="ui-state-default ui-corner-all" title="Post Anterior" ><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+<li onclick="location.href='https://identi.io/index.php?topic=328510';" class="ui-state-default ui-corner-all" title="Siguiente Post"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+</ul>
+</div>
+</div>
+<div class="extra_info clearfix">
+<ul>
+<li class="floatL"><!--sse-->Categor&iacute;a: <a href="https://identi.io/index.php?cat=49" alt="Comic" title="Comic">Comic</a><!--/sse--></li>
+<li class="floatR">Publicado  hace m&aacute;s de 11 a&ntilde;os </li>
+</ul>
+</div>
+<div class="post_body" id="post_990536">
+<div style="width:728px; margin: -10px 0 10px -15px;" class="clearfix"></div><script type="text/javascript">var onloadCallback = function() {};</script><div align="center"><b><span style="color: #333399;"><font size="6" style="line-height: 1.3em;"><br />ISIDORO<br />(parte 1)</font></span></b><br /><br /><img id="img_post" src="http://archivo.lavoz.com.ar/anexos/imagen/07/62165.JPG" border="0"><br /><br /><b>Isidoro Cañones es un personaje de historietas de Argentina, creado por Dante Quinterno. Originalmente fue creado como personaje secundario de Patoruzú, pero con el tiempo ganó suficiente popularidad como para tener su historieta propia. El personaje refleja al &quot;playboy mayor de Buenos Aires&quot; y su vida conviviendo con la barra, su bella joven cómplice Cachorra, entre el coronel Cañones (tío autoritario aunque bastante ignorante de la realidad, substitutivo anticuado de un padre), y otros personajes que se suman en cada &quot;locura&quot; de Isidoro.</b><br /><br />FORMATO CBR<br />READER : <a href="http://www.cdisplayex.com/" target="_blank" rel="nofollow">http://www.cdisplayex.com/</a><br /><br /><img id="img_post" src="https://3.bp.blogspot.com/-a3zORU1gSKo/VAtZo4XebmI/AAAAAAAAAJ4/VmaGSKihkjc/s1600/0+-+LOCURAS+DE+ISIDORO+(124%C2%BA)+VO.jpg" border="0"><br /><br /><div class="clearfix spoiler"><span style="display:block; margin:10px 0 10px; font-size:20px; font-weight:bold; color:#096FDB;">Enlaces De Descarga</span><div><div class="spoiler_cont" id="hide"><br />Solo &quot;Tapas&quot; - Locuras de Isidoro 1 - 124 V.O.<br /><style>.myjdownloader{background: url(https://www.identi.io/images/jdownloader.png) no-repeat;}</style><div align="center"><div class="clearfix spoiler"><div class="spoiler_cont" id="hide"><a style="font-size:14px; display:block; color:#D0B310;" href="?topic=78787" target="_blank"><img style="vertical-align:middle; margin-right:10px;" src="https://www.identi.io/images/jdownloader.png" width="50" height="50"/><b>Tutorial para descargar con Jdownloder</b></a><div class="clearfix spoiler"><form action="http://127.0.0.1:9666/flash/addcrypted2" target="hidden" class="jd" method="POST"><input type="hidden" name="passwords" value="myPassword"/><input type="hidden" name="source" value="http://jdownloader.org/spielwiese" /><input type="hidden" name="jk" value="function f(){ return '31323334353636373730393837363534';}" /><input type="hidden" name="crypted" value="fo7c1PqmSwFOlxAL54NRBddT+t7R9+etA1Cd7SJas0px+q92fDqQU94WrW1p7Q7/2feReZsKLfptmAroAnpXT56ebiCAPHjCzuqwN16fkLBw2PrlIRytUB4xta4LuJuh"><input type="SUBMIT" name="submit" style="padding-left: 45px !important;" class="spoiler-btn myjdownloader" id="decrypt" value="Agregar enlaces a Jdownloader" class="gestor_descargas"/></form></div></div></div></div><br /></div></div></div><br /><br /><br /><div class="clearfix spoiler"><span style="display:block; margin:10px 0 10px; font-size:20px; font-weight:bold; color:#096FDB;">Enlaces De Descarga</span><div><div class="spoiler_cont" id="hide"><br /><b>Locuras de Isidoro</b><br /><br />?001    ?002    ?003    ?004    ?005    ?006    ?007    ?008    ?009    ?010<br />?011    ?012    ?013    ?014    ?015    ?016    ?017    ?018    ?019    ?020<br />?021    ?022    ?023    ?024    ?025    ?026    ?027    ?028    ?029    ?030<br />?031    ?032    ?033    ?034    ?035    ?036    ?037    ?038    ?039    ?040<br />?041    ?042    ?043    ?044    ?045    ?046    ?047    ?048    ?049    ?050<br /><br />(?) online<br />(?) faltante<br /><br /><style>.myjdownloader{background: url(https://www.identi.io/images/jdownloader.png) no-repeat;}</style><div align="center"><div class="clearfix spoiler"><div class="spoiler_cont" id="hide"><a style="font-size:14px; display:block; color:#D0B310;" href="?topic=78787" target="_blank"><img style="vertical-align:middle; margin-right:10px;" src="https://www.identi.io/images/jdownloader.png" width="50" height="50"/><b>Tutorial para descargar con Jdownloder</b></a><div class="clearfix spoiler"><form action="http://127.0.0.1:9666/flash/addcrypted2" target="hidden" class="jd" method="POST"><input type="hidden" name="passwords" value="myPassword"/><input type="hidden" name="source" value="http://jdownloader.org/spielwiese" /><input type="hidden" name="jk" value="function f(){ return '31323334353636373730393837363534';}" /><input type="hidden" name="crypted" value="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"><input type="SUBMIT" name="submit" style="padding-left: 45px !important;" class="spoiler-btn myjdownloader" id="decrypt" value="Agregar enlaces a Jdownloader" class="gestor_descargas"/></form></div></div></div></div><br /></div></div></div><br /><br /><b>INFO : DANTE QUINTERNO</b><br /><br /><img id="img_post" src="http://www.tebeosfera.com/1/Seccion/IM/pics/00foto.jpg" border="0"><br /><font size="2" style="line-height: 1.3em;">Los Quinterno eran hombres de campo, pero Dante tenía una inclinación? ¡por las ilustraciones! Con el apoyo de sus padres, desde chico comenzó a crear diversas historietas: Panitruco, Andanzas y desventuras de Manolo Quaranta, Don Fermín y Un porteño optimista, que pasó a llamarse Las aventuras de Don Gil Contento.</font> <br />&nbsp;<font size="2" style="line-height: 1.3em;">Con el tiempo, los personajes de Quinterno comenzaron a pasarse de un diario a otro (¡como si fueran futbolistas!). Esto fue posible gracias a Quinterno, que luchó por los derechos de autor, formó un sindicato y logró que los diarios resolvieran: ?Los dueños de las tiras y de sus personajes son los autores?.</font><br />&nbsp;<font size="2" style="line-height: 1.3em;">Pero hubo un personaje en particular que trascendió el papel: Patoruzú.</font><br /><font size="2" style="line-height: 1.3em;">En la década del 30, Dante Quinterno viajó a los Estados Unidos para estudiar producción de dibujos animados (para tele y para cine) con los hermanos Max y Dave Fleischer. También conoció en sus estudios a Walt Disney, con quien entablaría una amistad que continuaría a través de los años.</font> <br />&nbsp;<font size="2" style="line-height: 1.3em;">El 20 de noviembre de 1942, Quinterno estrenó el primer dibujo animado argentino a color, llamado Upa en apuros, al mejor estilo Hollywood. Por supuesto, obtuvo numerosos reconocimientos de diversas instituciones y fue elogiado por el propio Walt Disney.</font><br /><font size="2" style="line-height: 1.3em;">Todo indicaba que Quinterno llenaría los cines con películas animadas, sin embargo, continuó realizando grandes trabajos en el mundo de las historietas, como Correrías de Patoruzito y Locuras de Isidoro.</font> <br />&nbsp;<font size="2" style="line-height: 1.3em;">En los años de mayor furor de Patoruzú, Quinterno trabajó de sol a sol hasta crear una empresa en la que llegaron a trabajar más de cien personas. A pesar del ejército de guionistas y dibujantes que desfilaron por su editorial, Quinterno siempre estaba hasta en el último detalle.</font><br /><font size="2" style="line-height: 1.3em;">En los años 50, siempre a gusto con su bajo perfil, decidió pasar más tiempo en familia y se dedicó a la actividad rural y ganadera. Seguramente, en ese contexto de naturaleza, podamos entender por qué se transformó en un hábil jinete y en jugador de golf.</font> <br />&nbsp;<font size="2" style="line-height: 1.3em;">¿Le quedaba algo más por hacer? ¡Por supuesto! Dante trabajó mucho para construir un modelo de auto deportivo, ¡casi idéntico a los que conduce Isidoro Cañones!</font><br />&nbsp;<font size="2" style="line-height: 1.3em;">Pasaron los años y llegó el tiempo de recoger los frutos. Muchos premios, reconocimientos y el amor de muchas generaciones que se criaron junto a Patoruzú (¡y compañía!). Dante Raúl Quinterno falleció el 14 de mayo de 2003 a los 93 años. Sin embargo, su legado continuará? ¡para siempre! </font>(info:INTERCOLE)<br /><br />PATORUZÚ - 1936 (150º)<br />SEMANARIO PATURUZITO (892º semanales + 95º mensuales) 1945-1962<br />ANDANZAS DE PATORUZÚ (293º) V.O.<br />LIBROS DE ORO (48º) 1938 - 1985<br />LOCURAS DE ISIDORO (124º) V.O.<br />CORRERÍAS DE PATORUZITO - 1957 (295º) V.O.<br /><br /><img id="img_post" src="https://2.bp.blogspot.com/-fZmy0VBaGFA/VBEuBFKjCvI/AAAAAAAAAKs/FO0ExBb41zo/s1600/imagen22.gif" border="0"><br /><br /><img id="img_post" src="https://1.bp.blogspot.com/-oCy-Akgh4-w/VBEuy1Owp5I/AAAAAAAAALA/ncf0FHfLhBs/s1600/deja.gif" border="0"></div><script src="https://www.google.com/recaptcha/api.js?hl=es&onload=onloadCallback&render=explicit" async defer></script><div style="width:728px; margin: 10px 0 10px -15px;" class="clearfix"></div><center><a href="https://www.identi.io/">descargar peliculas</a> - <a href="https://www.identi.io/index.php?cat=25">descargar programas</a></center>
+<div id="tipsy_bottom">
+</div>
+</div>
+<div class="clearfix info_post">
+<div class="general_stats floatL">
+<div class="clearfix" style="margin:0 0 8px;">
+<span class="stats points" ><img width="16" height="16" src="/images/coins.png"> <b id="cant_pts_post">90</b> Puntos</span>
+<span class="stats"><img width="16" height="16" src="/images/if16.png"> Score:<b> 9/10</b></span>
+</div>
+<div class="clearfix">
+<span class="stats"><img width="16" height="16" src="/images/visitas.png"> Visitas: <b class="icons visitas">6316</b> </span>
+<span class="stats"><img width="16" height="16" src="/images/star.png"> Favoritos: <b class="icons fav" id="cant_favs_post">9</b> </span></div>
+</div><div class="floatR clearfix dar_puntos"><div class="clearfix" id="contenedor"><span class="titulo"> Califica este Post:</span><span><a class="puntos require-login pts-1" onclick="darpuntos.post(328509,1);return false"> 1 </a><a class="puntos require-login pts-2" onclick="darpuntos.post(328509,2);return false"> 2 </a><a class="puntos require-login pts-3" onclick="darpuntos.post(328509,3);return false"> 3 </a><a class="puntos require-login pts-4" onclick="darpuntos.post(328509,4);return false"> 4 </a><a class="puntos require-login pts-5" onclick="darpuntos.post(328509,5);return false"> 5 </a><a class="puntos require-login pts-6" onclick="darpuntos.post(328509,6);return false"> 6 </a><a class="puntos require-login pts-7" onclick="darpuntos.post(328509,7);return false"> 7 </a><a class="puntos require-login pts-8" onclick="darpuntos.post(328509,8);return false"> 8 </a><a class="puntos require-login pts-9" onclick="darpuntos.post(328509,9);return false"> 9 </a><a class="puntos require-login pts-gold" onclick="darpuntos.post(328509,10);return false"> 10 </a></span>
+</div></div></div><!---fin info post ---><div class="votaron"><span id="mostrar_lista" onclick="$('#lista').slideToggle('fast');">Ver los usuarios que votaron...</span>
+<span id="lista" style="display:none;" class="clearfix lista_votos" ">
+<ul><center><li><img id="error_avatar" src="https://pbs.twimg.com/media/EwB5GVyXEAYi-uf.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1727617" title="perfil de RAYDEN1987"> RAYDEN1987</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://4.bp.blogspot.com/-IN2nMuo42qY/WRxLd_Y0FRI/AAAAAAAACMU/K1tcgdNvXME7raaIJMTD9IUp1lIP0ztDACLcB/s320/456t45y5y.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1556129" title="perfil de menteinfec"> menteinfec</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://tranccuilo.files.wordpress.com/2012/10/mono.jpeg?w=60" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1547015" title="perfil de illukki"> illukki</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://s-media-cache-ak0.pinimg.com/originals/0f/de/6a/0fde6acd820f480aaa54e11f1e6ae591.jpg" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=79818" title="perfil de elbilly"> elbilly</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://images1.wikia.nocookie.net/__cb20110903151324/vampirewars/images/thumb/4/49/Golem_Shadow_reward.png/137px-Golem_Shadow_reward.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1676962" title="perfil de kaylamicae"> kaylamicae</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://images.meez.com/user/4/6/2/0/5/3/6/4620536_bodyshot_300x400.gif" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=92547" title="perfil de takken"> takken</a>: <b>5 pts</b></span>  </li><li><img id="error_avatar" src="https://i.postimg.cc/Vs3dgdSz/zoDphx4.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1552017" title="perfil de miguelenam"> miguelenam</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://1.bp.blogspot.com/-KYtTSillgE0/VGp9dxBbQPI/AAAAAAAAA0Q/B75Se4Q6HAk/s0/gifgearladrian.gif" width="24" height="24" /><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1736783" title="perfil de LAdrian"> LAdrian</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="https://m.media-amazon.com/images/M/MV5BMTY5Mjc4NDgwMl5BMl5BanBnXkFtZTgwNDgzMzExNzE@._V1_SY100_SX100_.jpg" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1558386" title="perfil de Faria"> Faria</a>: <b>10 pts</b></span>  </li><li><img id="error_avatar" src="http://imgfz.com/i/82LwGNe.png" width="24" height="24"/><span class="text"> <a href="https://identi.io/index.php?action=profile;u=1540843" title="perfil de Angelkaido"> Angelkaido</a>: <b>10 pts</b></span>  </li></center></ul></span></div>
+<div class="clearfix opciones_post">
+<!---<div>Opciones </div>---><div class="clearfix interact_post">
+<span id="favs" class="button ui-favs require-login" onclick="favs.add(328509);">Agregar a Favoritos</span>
+<span  id="denun" class="button ui-flag require-login" title="Denunciar post" onclick="denunciar.post.load('328509');" >Denunciar</span>
+</div><div class="clearfix accion_post">
+</div>
+</div>
+<div class="clearfix sugerencias">
+<div class="clearfix sugerir-post floatL">
+<span class="titulo">M&aacute;s del Autor...</span>
+<ul class="zebra post_rel"><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_4"></i>
+<a href="https://identi.io/index.php?topic=684406" title="Michael Jackson Thriller Japan 35 8P 11 DSD"> Michael Jackson Thriller Japan 35 8P 11 DSD</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_45"></i>
+<a href="https://identi.io/index.php?topic=682740" title="Dexter Resurrection Temp. 1 Dual 1080 H264 3.xGb"> Dexter Resurrection Temp. 1 Dual 1080 H264 3.xGb</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_45"></i>
+<a href="https://identi.io/index.php?topic=682728" title="Dexter Resurrection Cap.10/10 Dual 1080 H264 3.xGb"> Dexter Resurrection Cap.10/10 Dual 1080 H264 3.xGb</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_45"></i>
+<a href="https://identi.io/index.php?topic=681966" title="DEXTER RESURRECTION cap.10 (1x10) Final T.Filtrado"> DEXTER RESURRECTION cap.10 (1x10) Final T.Filtrado</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_45"></i>
+<a href="https://identi.io/index.php?topic=681820" title="Dexter Resurrection Cap.9/10 Dual 1080 H264 3.xGb"> Dexter Resurrection Cap.9/10 Dual 1080 H264 3.xGb</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_45"></i>
+<a href="https://identi.io/index.php?topic=681112" title="Dexter Resurrection Cap.8/10 Dual 1080 H264 3.xGb"> Dexter Resurrection Cap.8/10 Dual 1080 H264 3.xGb</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_45"></i>
+<a href="https://identi.io/index.php?topic=680639" title="Dexter Resurrection Cap.7/10 Dual 1080 H264 3.xGb"> Dexter Resurrection Cap.7/10 Dual 1080 H264 3.xGb</a></span></span></li><li class="clearfix">
+<span style="width:300px;" id="margen"><span id="over_fix">
+<i class="sprite icono_45"></i>
+<a href="https://identi.io/index.php?topic=679972" title="Dexter Resurrection Cap.6/10 Dual 1080 H264 3.xGb"> Dexter Resurrection Cap.6/10 Dual 1080 H264 3.xGb</a></span></span></li></ul></div>
+<div class="clearfix floatR" style="margin:0 30px;" >
+
+</div>
+</div><div id="all_coments" class="all_coments clearfix">
+<span class="num_comments "> <span id="num_com_add">33</span> Comentarios</span>
+<span class="onpost"> Isidoro (parte 1)</span>
+<div class="comentario"></div><div id="comment_3506765" class="comentario coment_id_1">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="TroyMcClue" href="?action=profile;user=TroyMcClue">
+<img id="error_avatar" src="https://thumbs.subefotos.com/b5dbf0ea5c53129780595e22f786fa9co.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="122688" href="?action=profile;user=TroyMcClue">TroyMcClue</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406582719" title="28/07/2014 a las 21:25 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+genialllllllllllllllllll lo tuyo amigo, tengo algunas revistas viejas que guardo con mucho afecto,tenes todas ?si las tenes sos un campeon si las subis ,un abrazo Master ! <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3506780" class="comentario coment_id_2">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="danwro" href="?action=profile;user=danwro">
+<img id="error_avatar" src="http://www.elcineenlasombra.com/wp-content/uploads/2012/12/clint-eastwood-1024x819.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="44591" href="?action=profile;user=danwro">danwro</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406583191" title="28/07/2014 a las 21:33 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias. Soy adicto a Isidoro Patoruz?
+</div>
+</div>
+</div>
+</div><div id="comment_3506782" class="comentario coment_id_3">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="shamamoto" href="?action=profile;user=shamamoto">
+<img id="error_avatar" src="https://3.bp.blogspot.com/-0FN_MpqtGxI/UXB4S5yan8I/AAAAAAAAOFI/qNIrvsfJBLo/s1600/1291405956_2c9bb98b39a6.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1649201" href="?action=profile;user=shamamoto">shamamoto</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406583214" title="28/07/2014 a las 21:33 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<img id="img_post" src="https://2.bp.blogspot.com/_94HV8-1qlHk/RtRkypjtJ2I/AAAAAAAAAD0/kf1zWLqhgLM/s320/kiling126001af9.jpg" border="0"><br />a que no tiene de esta
+</div>
+</div>
+</div>
+</div><div id="comment_3506788" class="comentario coment_id_4">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="RAYDEN1987" href="?action=profile;user=RAYDEN1987">
+<img id="error_avatar" src="https://pbs.twimg.com/media/EwB5GVyXEAYi-uf.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1727617" href="?action=profile;user=RAYDEN1987">RAYDEN1987</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406583497" title="28/07/2014 a las 21:38 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muy buenas las revistas de Hinodoro, Eh jejejejejeje, es broma, buen post Compi +10
+</div>
+</div>
+</div>
+</div><div id="comment_3506791" class="comentario coment_id_5">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="RAYDEN1987" href="?action=profile;user=RAYDEN1987">
+<img id="error_avatar" src="https://pbs.twimg.com/media/EwB5GVyXEAYi-uf.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1727617" href="?action=profile;user=RAYDEN1987">RAYDEN1987</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406583627" title="28/07/2014 a las 21:40 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Se me fue una h de mas, disculpame &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3506795" class="comentario coment_id_6">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="heborlan" href="?action=profile;user=heborlan">
+<img id="error_avatar" src="https://i.postimg.cc/3xHFZn6H/pf-heborlan.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="65393" href="?action=profile;user=heborlan">heborlan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406583864" title="28/07/2014 a las 21:44 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita TroyMcClue: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">genialllllllllllllllllll lo tuyo amigo, tengo algunas revistas viejas que guardo con mucho afecto,tenes todas ?si las tenes sos un campeon si las subis ,un abrazo Master ! <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote>gracias que lo disfrutes &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />, ... de Isidoro creo tener practicamente todas y unas cuatrocientas digitalizadas. Y en realidad no son tantos miles como se cree ya q hay muchisimas reediciones con las seleccion de las mejores pero la coleccion original entre andanzas correrias y locuras rondaran los 700 ejemplares, sin contar semanarios ptrzito ni tiradas en diarios ni libros de oro, saludos &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3506838" class="comentario coment_id_7">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="heborlan" href="?action=profile;user=heborlan">
+<img id="error_avatar" src="https://i.postimg.cc/3xHFZn6H/pf-heborlan.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="65393" href="?action=profile;user=heborlan">heborlan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406585350" title="28/07/2014 a las 22:09 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+gracias &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <a usuario="1727617" href="https://identi.io/index.php?action=profile&user=RAYDEN1987" class="mensiones_identi">@RAYDEN1987</a>
+</div>
+</div>
+</div>
+</div><div id="comment_3506956" class="comentario coment_id_8">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="illukki" href="?action=profile;user=illukki">
+<img id="error_avatar" src="https://tranccuilo.files.wordpress.com/2012/10/mono.jpeg?w=60" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1547015" href="?action=profile;user=illukki">illukki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406587828" title="28/07/2014 a las 22:50 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+ohhhhhhhhhh!!! Que recuerdos. Una vez a la semana ibamos a la libreria y alquilabamos 3 o 4. Despues las cambiabamos por otras &nbsp;<img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_cry.png" alt="" border="0" /> <br />Me llevo algunas. &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3506984" class="comentario coment_id_9">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="TroyMcClue" href="?action=profile;user=TroyMcClue">
+<img id="error_avatar" src="https://thumbs.subefotos.com/b5dbf0ea5c53129780595e22f786fa9co.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="122688" href="?action=profile;user=TroyMcClue">TroyMcClue</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406588477" title="28/07/2014 a las 23:01 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita heborlan: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita TroyMcClue: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">genialllllllllllllllllll lo tuyo amigo, tengo algunas revistas viejas que guardo con mucho afecto,tenes todas ?si las tenes sos un campeon si las subis ,un abrazo Master ! <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /></div></blockquote>gracias que lo disfrutes &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />, ... de Isidoro creo tener practicamente todas y unas cuatrocientas digitalizadas. Y en realidad no son tantos miles como se cree ya q hay muchisimas reediciones con las seleccion de las mejores pero la coleccion original entre andanzas correrias y locuras rondaran los 700 ejemplares, sin contar semanarios ptrzito ni tiradas en diarios ni libros de oro, saludos &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /></div></blockquote>GENEOOOOOOOOOOOOOOOOOOOOOOOO !!! &nbsp;<img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3507032" class="comentario coment_id_10">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ferja1" href="?action=profile;user=ferja1">
+<img id="error_avatar" src="http://farm4.staticflickr.com/3118/3197352480_8dae940f3e.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1888344" href="?action=profile;user=ferja1">ferja1</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406589616" title="28/07/2014 a las 23:20 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Che, me sale &quot;error de descarga&quot; ?
+</div>
+</div>
+</div>
+</div><div id="comment_3507045" class="comentario coment_id_11">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="heborlan" href="?action=profile;user=heborlan">
+<img id="error_avatar" src="https://i.postimg.cc/3xHFZn6H/pf-heborlan.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="65393" href="?action=profile;user=heborlan">heborlan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406589977" title="28/07/2014 a las 23:26 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita ferja1: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Che, me sale &quot;error de descarga&quot; ?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3507396" class="comentario coment_id_12">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="earl70" href="?action=profile;user=earl70">
+<img id="error_avatar" src="http://www.identi.li/images/def/avatar.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1847756" href="?action=profile;user=earl70">earl70</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406598595" title="29/07/2014 a las 1:49 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Fu?
+</div>
+</div>
+</div>
+</div><div id="comment_3509138" class="comentario coment_id_13">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ferja1" href="?action=profile;user=ferja1">
+<img id="error_avatar" src="http://farm4.staticflickr.com/3118/3197352480_8dae940f3e.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1888344" href="?action=profile;user=ferja1">ferja1</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406672307" title="29/07/2014 a las 22:18 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita FabianJes: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Una l?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3510060" class="comentario coment_id_14">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="heborlan" href="?action=profile;user=heborlan">
+<img id="error_avatar" src="https://i.postimg.cc/3xHFZn6H/pf-heborlan.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="65393" href="?action=profile;user=heborlan">heborlan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406696036" title="30/07/2014 a las 4:53 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="1888344" href="https://identi.io/index.php?action=profile&user=ferja1" class="mensiones_identi">@ferja1</a> <a usuario="1807135" href="https://identi.io/index.php?action=profile&user=FabianJes" class="mensiones_identi">@FabianJes</a> me quede pensando ... y arme los links en carpetas dentro del shared deberian de funcionar , avisen a ver que sapa, saludos &nbsp;<img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3511885" class="comentario coment_id_15">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="pluma007" href="?action=profile;user=pluma007">
+<img id="error_avatar" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTUHhCTLQB2W-9SafNW8EWt7ZjVN41cmHYUGd-LohQ643pEfojm" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="108717" href="?action=profile;user=pluma007">pluma007</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406773773" title="31/07/2014 a las 2:29 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Impresionante aporte maestro!!! las horas que pase leyendo estas y otras historietas en mi infancia y preadolescencia son incontables!!! cuanto nostalgia!!! gracias por compartir!!! &nbsp; <img src="https://identi.io/Smileys/default/icon_cool.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3511959" class="comentario coment_id_16">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="pluma007" href="?action=profile;user=pluma007">
+<img id="error_avatar" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTUHhCTLQB2W-9SafNW8EWt7ZjVN41cmHYUGd-LohQ643pEfojm" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="108717" href="?action=profile;user=pluma007">pluma007</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406775918" title="31/07/2014 a las 3:05 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+L?
+</div>
+</div>
+</div>
+</div><div id="comment_3511994" class="comentario coment_id_17">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="heborlan" href="?action=profile;user=heborlan">
+<img id="error_avatar" src="https://i.postimg.cc/3xHFZn6H/pf-heborlan.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="65393" href="?action=profile;user=heborlan">heborlan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406776761" title="31/07/2014 a las 3:19 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita pluma007: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">L?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3513602" class="comentario coment_id_18">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="heborlan" href="?action=profile;user=heborlan">
+<img id="error_avatar" src="https://i.postimg.cc/3xHFZn6H/pf-heborlan.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="65393" href="?action=profile;user=heborlan">heborlan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406844856" title="31/07/2014 a las 22:14 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+mega on &nbsp;<img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3515191" class="comentario coment_id_19">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="MrFusion" href="?action=profile;user=MrFusion">
+<img id="error_avatar" src="http://media.steampowered.com/steamcommunity/public/images/avatars/b8/b84ba3285be1dd86dd09078827f5331621641d22_full.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1553174" href="?action=profile;user=MrFusion">MrFusion</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406908857" title="01/08/2014 a las 16:00 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Un Genio Isidoro Ca?
+</div>
+</div>
+</div>
+</div><div id="comment_3515378" class="comentario coment_id_20">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="ferja1" href="?action=profile;user=ferja1">
+<img id="error_avatar" src="http://farm4.staticflickr.com/3118/3197352480_8dae940f3e.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1888344" href="?action=profile;user=ferja1">ferja1</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406915167" title="01/08/2014 a las 17:46 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita heborlan: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><blockquote><div class="cita">Cita pluma007: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">L?</div></blockquote></div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3516356" class="comentario coment_id_21">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="pluma007" href="?action=profile;user=pluma007">
+<img id="error_avatar" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTUHhCTLQB2W-9SafNW8EWt7ZjVN41cmHYUGd-LohQ643pEfojm" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="108717" href="?action=profile;user=pluma007">pluma007</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406944460" title="02/08/2014 a las 1:54 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Ahora si maestro!!! de 10, mil gracias por las molestias que se tom?
+</div>
+</div>
+</div>
+</div><div id="comment_3516369" class="comentario coment_id_22">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="heborlan" href="?action=profile;user=heborlan">
+<img id="error_avatar" src="https://i.postimg.cc/3xHFZn6H/pf-heborlan.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="65393" href="?action=profile;user=heborlan">heborlan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1406944876" title="02/08/2014 a las 2:01 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita pluma007: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Ahora si maestro!!! de 10, mil gracias por las molestias que se tom?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3519029" class="comentario coment_id_23">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="danwro" href="?action=profile;user=danwro">
+<img id="error_avatar" src="http://www.elcineenlasombra.com/wp-content/uploads/2012/12/clint-eastwood-1024x819.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="44591" href="?action=profile;user=danwro">danwro</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1407067285" title="03/08/2014 a las 12:01 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Muchas gracias. Temendo aporte. ?
+</div>
+</div>
+</div>
+</div><div id="comment_3523168" class="comentario coment_id_24">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="TroyMcClue" href="?action=profile;user=TroyMcClue">
+<img id="error_avatar" src="https://thumbs.subefotos.com/b5dbf0ea5c53129780595e22f786fa9co.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="122688" href="?action=profile;user=TroyMcClue">TroyMcClue</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1407236380" title="05/08/2014 a las 10:59 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+GRACIASSS &nbsp;CAMPEON ,estoy bajando todas las que posteas &nbsp;GRACIAS un abrazo ! <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3555199" class="comentario coment_id_25">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="memphis" href="?action=profile;user=memphis">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-F6i6b4BB3Kk/T1xOhVXk6oI/AAAAAAAACpg/CgJLRu3hrVg/s1600/Superman-Logo-psd9639.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="24465" href="?action=profile;user=memphis">memphis</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408526130" title="20/08/2014 a las 9:15 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<a usuario="65393" href="https://identi.io/index.php?action=profile&user=heborlan" class="mensiones_identi">@heborlan</a> +10 tremendo aporte que te mandaste a la espera que ojala subas mas de isidoro que cuesta encontrar gracias
+</div>
+</div>
+</div>
+</div><div id="comment_3555591" class="comentario coment_id_26">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="heborlan" href="?action=profile;user=heborlan">
+<img id="error_avatar" src="https://i.postimg.cc/3xHFZn6H/pf-heborlan.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="65393" href="?action=profile;user=heborlan">heborlan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408552884" title="20/08/2014 a las 16:41 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita memphis: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo"><a usuario="65393" href="https://identi.io/index.php?action=profile&user=heborlan" class="mensiones_identi">@heborlan</a> +10 tremendo aporte que te mandaste a la espera que ojala subas mas de isidoro que cuesta encontrar gracias</div></blockquote>gracias amigo que lo disfrutes en cuanto pueda subo los otros 111 que tengo
+</div>
+</div>
+</div>
+</div><div id="comment_3556792" class="comentario coment_id_27">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="memphis" href="?action=profile;user=memphis">
+<img id="error_avatar" src="https://4.bp.blogspot.com/-F6i6b4BB3Kk/T1xOhVXk6oI/AAAAAAAACpg/CgJLRu3hrVg/s1600/Superman-Logo-psd9639.png" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="24465" href="?action=profile;user=memphis">memphis</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408614431" title="21/08/2014 a las 9:47 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Los otros 111 que modestia que tienes ojala y lo subas estare atento gracias y abrazos y saludos
+</div>
+</div>
+</div>
+</div><div id="comment_3558285" class="comentario coment_id_28">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="heborlan" href="?action=profile;user=heborlan">
+<img id="error_avatar" src="https://i.postimg.cc/3xHFZn6H/pf-heborlan.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="65393" href="?action=profile;user=heborlan">heborlan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1408667340" title="22/08/2014 a las 0:29 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita memphis: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">Los otros 111 que modestia que tienes ojala y lo subas estare atento gracias y abrazos y saludos</div></blockquote> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_biggrin.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_razz.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3589611" class="comentario coment_id_29">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="marcenikki" href="?action=profile;user=marcenikki">
+<img id="error_avatar" src="https://upload.wikimedia.org/wikipedia/ang/d/d7/Ergo_proxy.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1819189" href="?action=profile;user=marcenikki">marcenikki</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1409995989" title="06/09/2014 a las 9:33 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+?
+</div>
+</div>
+</div>
+</div><div id="comment_3590262" class="comentario coment_id_30">
+<div class="clearfix comment-box is-user ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="heborlan" href="?action=profile;user=heborlan">
+<img id="error_avatar" src="https://i.postimg.cc/3xHFZn6H/pf-heborlan.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="65393" href="?action=profile;user=heborlan">heborlan</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410029389" title="06/09/2014 a las 18:49 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+<blockquote><div class="cita">Cita marcenikki: <span style="cursor:pointer;" class="mostrarcitaas" ><span class="mas_c">Mostrar</span></span></div><div style="display:none;" class="citacuerpo">?</div></blockquote>
+</div>
+</div>
+</div>
+</div><div id="comment_3600766" class="comentario coment_id_31">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="danwro" href="?action=profile;user=danwro">
+<img id="error_avatar" src="http://www.elcineenlasombra.com/wp-content/uploads/2012/12/clint-eastwood-1024x819.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="44591" href="?action=profile;user=danwro">danwro</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410477784" title="11/09/2014 a las 23:23 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias.
+</div>
+</div>
+</div>
+</div><div id="comment_3600989" class="comentario coment_id_32">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="LAdrian" href="?action=profile;user=LAdrian">
+<img id="error_avatar" src="https://1.bp.blogspot.com/-KYtTSillgE0/VGp9dxBbQPI/AAAAAAAAA0Q/B75Se4Q6HAk/s0/gifgearladrian.gif" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1736783" href="?action=profile;user=LAdrian">LAdrian</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1410484749" title="12/09/2014 a las 1:19 ">hace m&aacute;s de 11 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias, 5 por el por de Gustavo Cerati y +5 por este <img src="https://identi.io/Smileys/default/icon_smile.png" alt="" border="0" /> <img src="https://identi.io/Smileys/default/icon_up.png" alt="" border="0" />
+</div>
+</div>
+</div>
+</div><div id="comment_3791223" class="comentario coment_id_33">
+<div class="clearfix comment-box is-normal ">
+<div class="floatL fondoavatar">
+<a  rel="nofollow" title="Faria" href="?action=profile;user=Faria">
+<img id="error_avatar" src="https://m.media-amazon.com/images/M/MV5BMTY5Mjc4NDgwMl5BMl5BanBnXkFtZTgwNDgzMzExNzE@._V1_SY100_SX100_.jpg" width="70" height="70" />
+</a>
+</div>
+<div class="floatR comment-body">
+<div class="clearfix comment-info">
+<div class="floatL">
+<a class="nick mensiones_identi" rel="nofollow" usuario="1558386" href="?action=profile;user=Faria">Faria</a><span> - <a rel="nofollow" class="addtipsy_s" ts="1419687701" title="27/12/2014 a las 13:41 ">hace m&aacute;s de 10 a&ntilde;os</a>  </span>
+</div>
+<div class="com_opt" id="com_opt" style="display:none;"></div></div><div class="comment-content clearfix">
+Gracias.
+</div>
+</div>
+</div>
+</div><div class="paginater" style="border-top: 3px solid #EEE;padding: 10px;padding-bottom: 32px;height: 22px;"></div><div id="error_com"></div><div class="aviso_registrar">Para dejar un comentario <a rel="nofollow" href="?action=registrarse"> Registrate!</a> o.. eres ya usuario? <a href="?action=login" rel="nofollow" > Accede!</a></div></div></div>
+<div id="ads_1"></div>
+</div>
+<div class="clearfix small-footer">	 <div class="" id="search">
+<form id="ajaxSearch_form" action="https://identi.io/index.php?action=buscador" method="post" accept-charset="UTF-8">
+<input style="width:200px;" placeholder="Buscar..." id="searchbar" type="text" name="search" />
+<input id="searchbtn" type="submit" value=""/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix art-Footer" >
+<div class="clearfix footer-info ">
+<div class="clearfix">
+<ul>
+<li>Ayuda (Proximamente)</li>
+<li><a href="https://www.identi.io/index.php?action=contactenos">Contacto</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/index.php?action=protocolo">Protocolo</a></li>
+<li><a href="https://www.identi.io/index.php?action=terminos-y-condiciones">Terminos y Condiciones</a></li>
+</ul>
+<ul>
+<li><a href="https://www.identi.io/tutoriales/sobreidenti.html">Sobre Identi</a></li>
+<li><a href="https://www.identi.io/index.php?action=reminder">Cambiar la contrase&ntilde;a</a></li>
+</ul>
+</div>
+<div class="clearfix copy "style="background :#1D468C url(/images/head/head_7.png) repeat-x;" >
+
+Identi - Todos los derechos reservados
+</div>
+</div>
+</div>
+<div style="display:none"><span itemscope itemtype="https://schema.org/Organization">
+  <link itemprop="url" href="https://www.identi.io">
+  <a itemprop="sameAs" href="https://www.facebook.com/Identi-Tus-descargas-sin-limites-478906072189600/?ref=br_rs">Facebook Identi</a>
+</span>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'994b089c9e96dea5',t:'MTc2MTQ5MzAzMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
